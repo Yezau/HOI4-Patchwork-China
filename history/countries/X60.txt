@@ -1,0 +1,49 @@
+
+
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.25
+add_ideas = pwc_law_conscription_1
+add_ideas = pwc_law_economy_mobilization_2
+add_ideas = pwc_law_trade_control_3
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2026.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	communism = 0
+	fascism = 0
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "PWC_X60_COUNCIL"
+	ideology = centrism
+	picture = PWC_GFX_city_council_portrait
+}
+
+oob = "PWC_X60_36"
+
+recruit_character = PWC_X60_GENERAL_01
+
+capital = 511
+
+set_technology = {
+	pwc_tech0_basic_industry = 1
+	pwc_tech0_basic_infantry = 1
+	pwc_tech0_communications = 1
+	pwc_tech0_engineers = 1
+	pwc_tech0_transport = 1
+}
+
+set_country_flag = pwc_geo_coastal
+set_country_flag = pwc_ai_coastal
+
+
+set_country_flag = pwc_flag_market_seeded

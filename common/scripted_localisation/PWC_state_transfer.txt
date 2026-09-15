@@ -1,0 +1,26 @@
+defined_text = {
+    name = PWC_TRANSFER_SOURCE
+    text = {
+        trigger = { has_variable = ROOT.pwc_transfer_source }
+        localization_key = PWC_TRANSFER_SOURCE_VALUE
+    }
+    text = { localization_key = PWC_TRANSFER_SOURCE_EMPTY }
+}
+defined_text = {
+    name = PWC_TRANSFER_TARGET
+    text = {
+        trigger = { has_variable = ROOT.pwc_transfer_target }
+        localization_key = PWC_TRANSFER_TARGET_VALUE
+    }
+    text = { localization_key = PWC_TRANSFER_TARGET_EMPTY }
+}
+defined_text = {
+    name = PWC_TRANSFER_MARK_CAPTION
+    text = {
+        trigger = {
+            is_in_array = { array = ROOT.pwc_transfer_states value = THIS }
+        }
+        localization_key = PWC_TRANSFER_MARKED
+    }
+    text = { localization_key = PWC_TRANSFER_MARK }
+}

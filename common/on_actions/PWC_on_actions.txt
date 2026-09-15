@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+
+
+
+on_actions = {
+	on_startup = {
+		effect = {
+			NTR = {
+				pwc_se_init_world_runtime = yes
+				pwc_se_init_war_reports = yes
+				pwc_se_init_adjacency_flags = yes
+				pwc_se_init_ntr_isolation = yes
+			}
+			every_country = {
+				limit = { pwc_st_is_city_country = yes }
+				pwc_se_reconcile_cabinet = yes
+				pwc_se_reconcile_research_infrastructure = yes
+				pwc_se_arm_war_phase = yes
+				pwc_se_refresh_regional_identity = yes
+				pwc_se_reconcile_war_warnings = yes
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = { pwc_st_is_city_country = yes }
+				pwc_se_on_surrender_settle_entry = yes
+			}
+		}
+	}
+on_peaceconference_ended = {
+    effect = { pwc_se_reconcile_conference_results = yes }
+}
+on_annex = {
+    effect = {
+        if = {
+            limit = { FROM = { pwc_st_is_city_country = yes } }
+            FROM = { pwc_se_clear_eliminated_war_warnings = yes }
+        }
+        if = {
+            limit = {
+                has_game_rule = { rule = pwc_peace_conference option = ON }
+                FROM = { pwc_st_is_city_country = yes }
+            }
+            
+            FROM = { set_variable = { pwc_report_winner = ROOT } }
+            add_to_variable = { global.pwc_war_reports_dirty = 1 }
+            NTR = { country_event = { id = pwc_ev_conference_reconcile.1 hours = 1 } }
+        }
+    }
+}
+on_state_control_changed = {
+    effect = {
+        pwc_se_refresh_setup_country = yes
+        FROM = { pwc_se_refresh_setup_country = yes }
+    }
+}
+on_daily = {
+    effect = { pwc_se_ensure_integration_tick = yes }
+}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { pwc_st_is_city_country = yes }
+				pwc_se_monthly_gate_latch = yes
+				pwc_se_monthly_ai_difficulty = yes
+				pwc_se_monthly_general_growth = yes
+				pwc_se_refresh_setup_country = yes
+				pwc_se_reconcile_war_warnings = yes
+			}
+		}
+	}
+}

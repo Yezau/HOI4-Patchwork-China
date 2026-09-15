@@ -1,0 +1,87 @@
+
+
+
+
+
+
+
+
+PWC_diplomacy_category = {
+
+	pwc_dec_send_envoys = {
+		icon = GFX_decision_PWC_envoys
+		cost = 25
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		target_root_trigger = {
+			hidden_trigger = {
+				exists = yes
+				pwc_st_is_city_country = yes
+				pwc_st_city_alive = yes
+				has_country_flag = pwc_flag_diplomatic_corps
+				NOT = { pwc_st_protection_active = yes }
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = {
+			hidden_trigger = {
+				FROM = {
+					exists = yes
+					pwc_st_is_city_country = yes
+					pwc_st_city_alive = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+				}
+				NOT = { has_war_with = FROM }
+			}
+		}
+		visible = {
+			hidden_trigger = {
+				exists = yes
+				pwc_st_is_city_country = yes
+				pwc_st_city_alive = yes
+				has_country_flag = pwc_flag_diplomatic_corps
+				FROM = {
+					exists = yes
+					pwc_st_is_city_country = yes
+					pwc_st_city_alive = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+				}
+				NOT = { pwc_st_protection_active = yes }
+				NOT = { has_war_with = FROM }
+			}
+		}
+		available = {
+			hidden_trigger = {
+				exists = yes
+				pwc_st_is_city_country = yes
+				pwc_st_city_alive = yes
+				has_country_flag = pwc_flag_diplomatic_corps
+				FROM = {
+					exists = yes
+					pwc_st_is_city_country = yes
+					pwc_st_city_alive = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PWC_WAR_PROTECTION_READY_TT
+				NOT = { pwc_st_protection_active = yes }
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		ai_will_do = { factor = 2 }
+	}
+}

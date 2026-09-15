@@ -1,0 +1,15 @@
+
+pwc_dm_administrative_pressure = {
+    enable = { pwc_st_is_city_country = yes }
+    consumer_goods_factor = pwc_administrative_pressure
+}
+pwc_dm_unit_capacity = {
+    enable = { pwc_st_unit_limit_applies = yes }
+    army_morale_factor = pwc_unit_penalty_negative
+    supply_consumption_factor = pwc_unit_penalty
+    ai_desired_divisions_factor = pwc_unit_ai_limit
+}
+pwc_dm_regional_supply = {
+    enable = { NOT = { is_owned_by = NTR } }
+    local_supplies = 1
+}

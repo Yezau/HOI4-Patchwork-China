@@ -1,0 +1,88 @@
+
+
+pwc_doctrine_littoral = {
+    track = screens
+    name = pwc_doctrine_littoral
+    description = pwc_doctrine_littoral_desc
+    icon = GFX_PWC_subdoctrine_littoral
+    xp_cost = 100
+    xp_type = navy
+    available = {
+        has_completed_focus = mil_littoral_denial
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_coastal
+        }
+    }
+    naval_detection = 0.09
+    convoy_escort_efficiency = -0.05
+    rewards = {
+        watch = {
+            naval_coordination = 0.05
+        }
+        ambush = {
+            pwc_unit_destroyer = {
+                torpedo_attack = 0.1
+            }
+        }
+        crews = {
+            pwc_unit_destroyer = {
+                max_organisation = 10
+            }
+        }
+        raiding = {
+            convoy_raiding_efficiency_factor = 0.09
+        }
+        withdrawal = {
+            naval_retreat_speed = 0.1
+        }
+    }
+}
+
+pwc_doctrine_sea_lanes = {
+    track = screens
+    name = pwc_doctrine_sea_lanes
+    description = pwc_doctrine_sea_lanes_desc
+    icon = GFX_PWC_subdoctrine_sea_lanes
+    xp_cost = 100
+    xp_type = navy
+    available = {
+        has_completed_focus = mil_sea_control
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_balanced
+        }
+    }
+    convoy_escort_efficiency = 0.1
+    convoy_raiding_efficiency_factor = -0.05
+    rewards = {
+        sweep = {
+            pwc_unit_destroyer = {
+                sub_detection = 0.1
+            }
+        }
+        stations = {
+            pwc_unit_destroyer = {
+                max_organisation = 10
+            }
+        }
+        retreat = {
+            convoy_retreat_speed = 0.1
+        }
+        screen = {
+            pwc_unit_destroyer = {
+                anti_air_attack = 0.1
+            }
+        }
+        coordination = {
+            naval_coordination = 0.05
+        }
+    }
+}
+

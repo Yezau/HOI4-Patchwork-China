@@ -1,0 +1,21 @@
+PWC_setup_rules_category = {
+    pwc_demobilization_grace = {
+        icon = generic_prepare_civil_war
+        allowed = { always = no }
+        activation = { always = no }
+        is_good = no
+        fire_only_once = no
+        days_mission_timeout = 90
+        cancel_trigger = {
+            OR = {
+                has_war = yes
+                pwc_st_demobilization_applies = no
+                AND = {
+                    check_variable = { pwc_law_conscription < 4 }
+                    check_variable = { pwc_law_economy_mobilization < 4 }
+                }
+            }
+        }
+        timeout_effect = { pwc_se_demobilize = yes }
+    }
+}

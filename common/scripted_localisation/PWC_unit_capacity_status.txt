@@ -1,0 +1,58 @@
+defined_text = {
+    name = PWCGetUnitCapacityCount
+    text = {
+        trigger = { NOT = { pwc_st_unit_limit_applies = yes } }
+        localization_key = PWC_UI_UNIT_CAPACITY_COUNT_DISABLED
+    }
+    text = {
+        trigger = { check_variable = { num_divisions > pwc_unit_capacity } }
+        localization_key = PWC_UI_UNIT_CAPACITY_COUNT_ABOVE
+    }
+    text = {
+        trigger = { check_variable = { num_divisions = pwc_unit_capacity } }
+        localization_key = PWC_UI_UNIT_CAPACITY_COUNT_EQUAL
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWC_UI_UNIT_CAPACITY_COUNT_BELOW
+    }
+}
+defined_text = {
+    name = PWCGetUnitCapacityStatus
+    text = {
+        trigger = { NOT = { pwc_st_unit_limit_applies = yes } }
+        localization_key = PWC_UI_UNIT_CAPACITY_STATUS_DISABLED
+    }
+    text = {
+        trigger = { check_variable = { num_divisions > pwc_unit_capacity } }
+        localization_key = PWC_UI_UNIT_CAPACITY_STATUS_ABOVE
+    }
+    text = {
+        trigger = { check_variable = { num_divisions = pwc_unit_capacity } }
+        localization_key = PWC_UI_UNIT_CAPACITY_STATUS_EQUAL
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWC_UI_UNIT_CAPACITY_STATUS_BELOW
+    }
+}
+defined_text = {
+    name = PWCGetUnitCapacityBreakdown
+    text = {
+        trigger = { pwc_st_unit_limit_applies = yes }
+        localization_key = PWC_UI_UNIT_CAPACITY_BREAKDOWN
+    }
+    text = {
+        localization_key = PWC_UI_UNIT_CAPACITY_BREAKDOWN_DISABLED
+    }
+}
+defined_text = {
+    name = PWCGetUnitCapacityBreakdownDesc
+    text = {
+        trigger = { pwc_st_unit_limit_applies = yes }
+        localization_key = PWC_UI_UNIT_CAPACITY_BREAKDOWN_DESC
+    }
+    text = {
+        localization_key = PWC_UI_UNIT_CAPACITY_BREAKDOWN_DESC_DISABLED
+    }
+}

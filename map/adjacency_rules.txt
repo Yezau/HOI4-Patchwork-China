@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+adjacency_rule = {
+
+	name = "CHANGJIANGKOU_NORTH"	
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1271 3800 }
+	
+	icon = 4642
+
+	offset = { -20 0 26 }		
+}
+
+adjacency_rule = {
+
+	name = "CHANGJIANGKOU_SOUTH"	
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 3285 3310 3815 }
+
+	icon = 4717
+
+	offset = { 55 0 -16 }
+
+}
+
+
+
+adjacency_rule = {
+
+	name = "ZHUJIANGKOU"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+
+	is_disabled = {
+		has_global_flag = Zhujiangkou_Blocked		
+	}
+	
+	required_provinces = { 2724 2877 }
+	
+	icon = 4649
+	offset = { 0 0 0 }
+}

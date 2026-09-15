@@ -1,0 +1,23 @@
+
+defined_text = {
+	name = PWC_never_used
+	text = {
+		trigger = { always = no }
+		localization_key = PWC_NEVER_SELECTED
+	}
+}
+
+defined_text = {
+    name = PWCGetWarProtectionRequirement
+    text = {
+        trigger = { has_game_rule = { rule = pwc_protection_period option = DAYS_90 } }
+        localization_key = PWC_WAR_PROTECTION_DAYS_90_TT
+    }
+    text = {
+        trigger = { has_game_rule = { rule = pwc_protection_period option = NONE } }
+        localization_key = PWC_WAR_PROTECTION_NONE_TT
+    }
+    text = {
+        localization_key = PWC_WAR_PROTECTION_DAYS_180_TT
+    }
+}

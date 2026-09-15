@@ -1,0 +1,856 @@
+
+
+
+
+
+
+PWC_ai_template_armored_combined = {
+	role = pwc_role_armored_combined
+	upgrade_prio = {
+		base = 1
+		modifier = {
+			factor = 3
+			num_of_military_factories > 11
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+		}
+	}
+	pwc_template_armored_36w_project_assault_engineer_armored_recovery = {
+		upgrade_prio = {
+			base = 6
+		}
+		enable = {
+			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_infantry_t2
+			has_tech = pwc_tech_army_mobility_t2
+			has_tech = pwc_tech_army_t1
+			has_tech = pwc_tech_army_t2
+			has_tech = pwc_tech_logistics_support_t1
+			has_tech = pwc_tech_logistics_t1
+			is_special_project_completed = sp:pwc_project_field_recovery
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			pwc_st_ai_recruitment_heavy_armor_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_assault_engineer = 1
+				pwc_unit_logistics = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_armored_anti_air = 1
+				pwc_unit_regimental_motorized_fire = 2
+				pwc_unit_regimental_tank_destroyer = 1
+			}
+			regiments = {
+				pwc_unit_heavy_tank = 2
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 8
+				pwc_unit_tank_destroyer = 2
+			}
+		}
+	}
+	pwc_template_armored_36w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_infantry_t2
+			has_tech = pwc_tech_army_mobility_t2
+			has_tech = pwc_tech_army_t1
+			has_tech = pwc_tech_army_t2
+			has_tech = pwc_tech_logistics_support_t1
+			has_tech = pwc_tech_logistics_t1
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			pwc_st_ai_recruitment_heavy_armor_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_36w_project_assault_engineer_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_logistics = 1
+				pwc_unit_maintenance = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_armored_anti_air = 1
+				pwc_unit_regimental_motorized_fire = 2
+				pwc_unit_regimental_tank_destroyer = 1
+			}
+			regiments = {
+				pwc_unit_heavy_tank = 2
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 8
+				pwc_unit_tank_destroyer = 2
+			}
+		}
+	}
+	pwc_template_armored_36w_project_armored_recovery = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_mobility_t2
+			has_tech = pwc_tech_army_t1
+			has_tech = pwc_tech_army_t2
+			has_tech = pwc_tech_logistics_support_t1
+			has_tech = pwc_tech_logistics_t1
+			is_special_project_completed = sp:pwc_project_field_recovery
+			pwc_st_ai_recruitment_heavy_armor_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_36w_project_armored_recovery_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_engineer = 1
+				pwc_unit_logistics = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_armored_anti_air = 1
+				pwc_unit_regimental_motorized_fire = 2
+				pwc_unit_regimental_tank_destroyer = 1
+			}
+			regiments = {
+				pwc_unit_heavy_tank = 2
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 8
+				pwc_unit_tank_destroyer = 2
+			}
+		}
+	}
+	pwc_template_armored_36w_default = {
+		upgrade_prio = {
+			base = 2
+		}
+		enable = {
+			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_mobility_t2
+			has_tech = pwc_tech_army_t1
+			has_tech = pwc_tech_army_t2
+			has_tech = pwc_tech_logistics_support_t1
+			has_tech = pwc_tech_logistics_t1
+			pwc_st_ai_recruitment_heavy_armor_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_36w_default_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_logistics = 1
+				pwc_unit_maintenance = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_armored_anti_air = 1
+				pwc_unit_regimental_motorized_fire = 2
+				pwc_unit_regimental_tank_destroyer = 1
+			}
+			regiments = {
+				pwc_unit_heavy_tank = 2
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 8
+				pwc_unit_tank_destroyer = 2
+			}
+		}
+	}
+	pwc_template_armored_18w_default = {
+		upgrade_prio = {
+			base = 1
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_mobility_t1
+			has_tech = pwc_tech_army_t1
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_36w_default_field_ready = yes
+		}
+		replace_with = pwc_template_armored_36w_default
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+				pwc_unit_regimental_tank_destroyer = 1
+			}
+			regiments = {
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 3
+			}
+		}
+	}
+	pwc_template_armored_entry_18w_default = {
+		upgrade_prio = {
+			base = 1
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_mobility_t1
+			has_tech = pwc_tech_army_t1
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_armored_18w_default_field_ready = yes
+		}
+		replace_with = pwc_template_armored_18w_default
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+				pwc_unit_signal = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_mechanized = 6
+				pwc_unit_tank = 3
+			}
+		}
+	}
+}
+PWC_ai_template_infantry_city_defense = {
+	role = pwc_role_infantry_city_defense
+	upgrade_prio = {
+		base = 1
+	}
+	pwc_template_infantry_12w_project_assault_engineer_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 3
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t3
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			is_special_project_completed = sp:pwc_project_precision_production
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_12w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 2
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_12w_project_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 2
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t3
+			is_special_project_completed = sp:pwc_project_precision_production
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_support_heavy_mortar
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_12w_default = {
+		upgrade_prio = {
+			base = 1
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_default
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 12
+		}
+		enable = {
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_firepower_t3
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			is_special_project_completed = sp:pwc_project_precision_production
+			num_of_military_factories > 11
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_reinforced_18w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 8
+		}
+		enable = {
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			num_of_military_factories > 11
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_reinforced_18w_project_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 8
+		}
+		enable = {
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_firepower_t3
+			is_special_project_completed = sp:pwc_project_precision_production
+			num_of_military_factories > 11
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_reinforced_18w_default = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t1
+			num_of_military_factories > 11
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+}
+PWC_ai_template_mobility_mountain = {
+	role = pwc_role_mobility_mountain
+	upgrade_prio = {
+		base = 1
+		modifier = {
+			factor = 3
+			num_of_military_factories > 11
+			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+		}
+	}
+	pwc_template_mobile_18w_project_assault_engineer_armored_recovery = {
+		upgrade_prio = {
+			base = 12
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_infantry_t2
+			has_tech = pwc_tech_army_mobility_t2
+			is_special_project_completed = sp:pwc_project_field_recovery
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			OR = {
+			    has_country_flag = pwc_geo_coastal
+			    has_country_flag = pwc_geo_inland
+			    pwc_st_ai_recruitment_motorization_ready = yes
+			}
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_field_ready = yes
+		}
+		replace_with = pwc_template_mechanized_18w_project_assault_engineer_armored_recovery
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_motorized = 6
+			}
+		}
+	}
+	pwc_template_mobile_18w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 8
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			OR = {
+			    has_country_flag = pwc_geo_coastal
+			    has_country_flag = pwc_geo_inland
+			    pwc_st_ai_recruitment_motorization_ready = yes
+			}
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_field_ready = yes
+		}
+		replace_with = pwc_template_mechanized_18w_project_assault_engineer
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_motorized = 6
+			}
+		}
+	}
+	pwc_template_mobile_18w_project_armored_recovery = {
+		upgrade_prio = {
+			base = 8
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_mobility_t2
+			is_special_project_completed = sp:pwc_project_field_recovery
+			OR = {
+			    has_country_flag = pwc_geo_coastal
+			    has_country_flag = pwc_geo_inland
+			    pwc_st_ai_recruitment_motorization_ready = yes
+			}
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_field_ready = yes
+		}
+		replace_with = pwc_template_mechanized_18w_project_armored_recovery
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_motorized = 6
+			}
+		}
+	}
+	pwc_template_mobile_18w_default = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			OR = {
+			    has_country_flag = pwc_geo_coastal
+			    has_country_flag = pwc_geo_inland
+			    pwc_st_ai_recruitment_motorization_ready = yes
+			}
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_default_field_ready = yes
+		}
+		replace_with = pwc_template_mechanized_18w_default
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_motorized = 6
+			}
+		}
+	}
+	pwc_template_mountain_18w_project_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 2
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t3
+			has_tech = pwc_tech_sf_mountain_t1
+			is_special_project_completed = sp:pwc_project_precision_production
+			OR = {
+			    has_country_flag = pwc_geo_frontier
+			    has_country_flag = pwc_geo_island
+			}
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_anti_tank = 1
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_mountain = 9
+			}
+		}
+	}
+	pwc_template_mountain_18w_default = {
+		upgrade_prio = {
+			base = 1
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_sf_mountain_t1
+			OR = {
+			    has_country_flag = pwc_geo_frontier
+			    has_country_flag = pwc_geo_island
+			}
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_anti_tank = 1
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_mountain = 9
+			}
+		}
+	}
+	pwc_template_mechanized_18w_project_assault_engineer_armored_recovery = {
+		upgrade_prio = {
+			base = 48
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_infantry_t2
+			has_tech = pwc_tech_army_mobility_t1
+			has_tech = pwc_tech_army_mobility_t2
+			is_special_project_completed = sp:pwc_project_field_recovery
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			pwc_st_ai_recruitment_mechanization_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_mechanized = 6
+			}
+		}
+	}
+	pwc_template_mechanized_18w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 32
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_infantry_t2
+			has_tech = pwc_tech_army_mobility_t1
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			pwc_st_ai_recruitment_mechanization_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_mechanized = 6
+			}
+		}
+	}
+	pwc_template_mechanized_18w_project_armored_recovery = {
+		upgrade_prio = {
+			base = 32
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_mobility_t1
+			has_tech = pwc_tech_army_mobility_t2
+			is_special_project_completed = sp:pwc_project_field_recovery
+			pwc_st_ai_recruitment_mechanization_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_armored_recovery = 1
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_mechanized = 6
+			}
+		}
+	}
+	pwc_template_mechanized_18w_default = {
+		upgrade_prio = {
+			base = 16
+		}
+		enable = {
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_communications
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech0_transport
+			has_tech = pwc_tech_army_firepower_t1
+			has_tech = pwc_tech_army_mobility_t1
+			pwc_st_ai_recruitment_mechanization_ready = yes
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_mechanized_18w_default_field_ready = yes
+		}
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_recon = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_motorized_fire = 2
+			}
+			regiments = {
+				pwc_unit_artillery = 2
+				pwc_unit_mechanized = 6
+			}
+		}
+	}
+}

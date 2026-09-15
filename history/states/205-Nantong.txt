@@ -1,0 +1,30 @@
+state={
+	id = 205
+	name = STATE_205
+	provinces = { 2944 3264 3791 3795 3800 3804 }
+	manpower = 7744000
+	state_category = large_city
+	resources = {
+		steel = 13
+		coal = 9
+	}
+	history = {
+		add_core_of = V79
+		owner = V79
+		victory_points = { 3804 5 }
+		victory_points = { 2944 1 }
+		victory_points = { 3791 1 }
+		victory_points = { 3800 1 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			arms_factory = 1
+			dockyard = 2
+			3804 = {
+				naval_base = 3
+			}
+			pwc_building_tech_center = 1
+		}
+	}
+	local_supplies = 0.0
+}

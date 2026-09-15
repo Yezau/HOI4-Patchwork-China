@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+types = {
+	pwc_raid_facility_detection = {
+		category = pwc_raid_category_facility
+		days_to_prepare = 3650
+		command_power = 100
+		
+		target_type = {
+			building = {
+				tags = facility
+			}
+		}
+		target_icon = GFX_facility_icon
+		custom_map_icon = GFX_raid_type_icon_facility_raid
+		launch_sound = raid_launch_air
+		arrow = {
+			type = air
+		}
+		ai_will_do = {
+			base = 0
+		}
+		
+		unit_requirements = {
+			battalion_types = {
+				pwc_unit_infantry = {
+					min = 1
+				}
+			}
+		}
+		starting_point = {
+			types = {
+				air_base
+			}
+		}
+		success_factors = {
+			success = {
+				base = 0.01
+			}
+		}
+		success_levels = {
+			failure = {
+				actor_effects = {
+					var:actor_country = {
+						add_political_power = 0
+					}
+				}
+			}
+			limited_success = {
+				actor_effects = {
+					var:actor_country = {
+						add_political_power = 0
+					}
+				}
+			}
+			success = {
+				actor_effects = {
+					var:actor_country = {
+						add_political_power = 0
+					}
+				}
+			}
+			critical_success = {
+				actor_effects = {
+					var:actor_country = {
+						add_political_power = 0
+					}
+				}
+			}
+		}
+		
+		visible = {
+			always = no
+		}
+		show_target = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		launchable = {
+			always = no
+		}
+	}
+}

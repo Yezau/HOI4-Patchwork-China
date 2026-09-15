@@ -1,0 +1,335 @@
+
+pwc_ai_difficulty = {
+    name = "PWC_RULE_AI_DIFFICULTY"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "TIER_0"
+        text = "PWC_RULE_AI_DIFFICULTY_T0"
+        desc = "PWC_RULE_AI_DIFFICULTY_T0_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "TIER_10"
+        text = "PWC_RULE_AI_DIFFICULTY_T10"
+        desc = "PWC_RULE_AI_DIFFICULTY_T10_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "TIER_20"
+        text = "PWC_RULE_AI_DIFFICULTY_T20"
+        desc = "PWC_RULE_AI_DIFFICULTY_T20_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "TIER_30"
+        text = "PWC_RULE_AI_DIFFICULTY_T30"
+        desc = "PWC_RULE_AI_DIFFICULTY_T30_DESC"
+        allow_achievements = no
+    }
+}
+pwc_protection_period = {
+    name = "PWC_RULE_PROTECTION_PERIOD"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "DAYS_180"
+        text = "PWC_RULE_PROTECTION_PERIOD_DAYS_180"
+        desc = "PWC_RULE_PROTECTION_PERIOD_DAYS_180_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "DAYS_90"
+        text = "PWC_RULE_PROTECTION_PERIOD_DAYS_90"
+        desc = "PWC_RULE_PROTECTION_PERIOD_DAYS_90_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "NONE"
+        text = "PWC_RULE_PROTECTION_PERIOD_NONE"
+        desc = "PWC_RULE_PROTECTION_PERIOD_NONE_DESC"
+        allow_achievements = no
+    }
+}
+pwc_unit_limit = {
+    name = "PWC_RULE_UNIT_LIMIT"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "STANDARD"
+        text = "PWC_RULE_UNIT_LIMIT_STANDARD"
+        desc = "PWC_RULE_UNIT_LIMIT_STANDARD_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "AI_ONLY"
+        text = "PWC_RULE_UNIT_LIMIT_AI_ONLY"
+        desc = "PWC_RULE_UNIT_LIMIT_AI_ONLY_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_UNIT_LIMIT_OFF"
+        desc = "PWC_RULE_UNIT_LIMIT_OFF_DESC"
+        allow_achievements = no
+    }
+}
+pwc_demobilization = {
+    name = "PWC_RULE_DEMOBILIZATION"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "STANDARD"
+        text = "PWC_RULE_DEMOBILIZATION_STANDARD"
+        desc = "PWC_RULE_DEMOBILIZATION_STANDARD_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "AI_ONLY"
+        text = "PWC_RULE_DEMOBILIZATION_AI_ONLY"
+        desc = "PWC_RULE_DEMOBILIZATION_AI_ONLY_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_DEMOBILIZATION_OFF"
+        desc = "PWC_RULE_DEMOBILIZATION_OFF_DESC"
+        allow_achievements = no
+    }
+}
+pwc_peace_conference = {
+    name = "PWC_RULE_PEACE_CONFERENCE"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_PEACE_CONFERENCE_OFF"
+        desc = "PWC_RULE_PEACE_CONFERENCE_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_PEACE_CONFERENCE_ON"
+        desc = "PWC_RULE_PEACE_CONFERENCE_ON_DESC"
+        allow_achievements = no
+    }
+}
+pwc_state_transfer = {
+    name = "PWC_RULE_STATE_TRANSFER"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_STATE_TRANSFER_OFF"
+        desc = "PWC_RULE_STATE_TRANSFER_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_STATE_TRANSFER_ON"
+        desc = "PWC_RULE_STATE_TRANSFER_ON_DESC"
+        allow_achievements = no
+    }
+}
+pwc_war_warning = {
+    name = "PWC_RULE_WAR_WARNING"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "ON"
+        text = "PWC_RULE_WAR_WARNING_ON"
+        desc = "PWC_RULE_WAR_WARNING_ON_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_WAR_WARNING_OFF"
+        desc = "PWC_RULE_WAR_WARNING_OFF_DESC"
+        allow_achievements = no
+    }
+}
+pwc_integration_speed = {
+    name = "PWC_RULE_INTEGRATION_SPEED"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "STANDARD"
+        text = "PWC_RULE_INTEGRATION_SPEED_STANDARD"
+        desc = "PWC_RULE_INTEGRATION_SPEED_STANDARD_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "FAST"
+        text = "PWC_RULE_INTEGRATION_SPEED_FAST"
+        desc = "PWC_RULE_INTEGRATION_SPEED_FAST_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "STRICT"
+        text = "PWC_RULE_INTEGRATION_SPEED_STRICT"
+        desc = "PWC_RULE_INTEGRATION_SPEED_STRICT_DESC"
+        allow_achievements = no
+    }
+}
+pwc_ai_war_tendency = {
+    name = "PWC_RULE_AI_WAR_TENDENCY"
+    group = "PWC_RULE_GROUP_COMMON"
+    option = {
+        name = "STEADY"
+        text = "PWC_RULE_AI_WAR_TENDENCY_STEADY"
+        desc = "PWC_RULE_AI_WAR_TENDENCY_STEADY_DESC"
+        allow_achievements = no
+    }
+    default = {
+        name = "STANDARD"
+        text = "PWC_RULE_AI_WAR_TENDENCY_STANDARD"
+        desc = "PWC_RULE_AI_WAR_TENDENCY_STANDARD_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "AGGRESSIVE"
+        text = "PWC_RULE_AI_WAR_TENDENCY_AGGRESSIVE"
+        desc = "PWC_RULE_AI_WAR_TENDENCY_AGGRESSIVE_DESC"
+        allow_achievements = no
+    }
+}
+pwc_ai_war_pacing = {
+    name = "PWC_RULE_AI_WAR_PACING"
+    group = "PWC_RULE_GROUP_COMMON"
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_AI_WAR_PACING_OFF"
+        desc = "PWC_RULE_AI_WAR_PACING_OFF_DESC"
+        allow_achievements = no
+    }
+    default = {
+        name = "STAGGERED"
+        text = "PWC_RULE_AI_WAR_PACING_STAGGERED"
+        desc = "PWC_RULE_AI_WAR_PACING_STAGGERED_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "SLOW"
+        text = "PWC_RULE_AI_WAR_PACING_SLOW"
+        desc = "PWC_RULE_AI_WAR_PACING_SLOW_DESC"
+        allow_achievements = no
+    }
+}
+pwc_archetype_seed = {
+    name = "PWC_RULE_ARCHETYPE_SEED"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "FIXED"
+        text = "PWC_RULE_ARCHETYPE_SEED_FIXED"
+        desc = "PWC_RULE_ARCHETYPE_SEED_FIXED_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "RANDOM"
+        text = "PWC_RULE_ARCHETYPE_SEED_RANDOM"
+        desc = "PWC_RULE_ARCHETYPE_SEED_RANDOM_DESC"
+        allow_achievements = no
+    }
+}
+pwc_geographic_supply = {
+    name = "PWC_RULE_GEOGRAPHIC_SUPPLY"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "KEEP"
+        text = "PWC_RULE_GEOGRAPHIC_SUPPLY_KEEP"
+        desc = "PWC_RULE_GEOGRAPHIC_SUPPLY_KEEP_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "REMOVE"
+        text = "PWC_RULE_GEOGRAPHIC_SUPPLY_REMOVE"
+        desc = "PWC_RULE_GEOGRAPHIC_SUPPLY_REMOVE_DESC"
+        allow_achievements = no
+    }
+}
+pwc_administrative_pressure = {
+    name = "PWC_RULE_ADMINISTRATIVE_PRESSURE"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "KEEP"
+        text = "PWC_RULE_ADMINISTRATIVE_PRESSURE_KEEP"
+        desc = "PWC_RULE_ADMINISTRATIVE_PRESSURE_KEEP_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "REMOVE"
+        text = "PWC_RULE_ADMINISTRATIVE_PRESSURE_REMOVE"
+        desc = "PWC_RULE_ADMINISTRATIVE_PRESSURE_REMOVE_DESC"
+        allow_achievements = no
+    }
+}
+pwc_industry_calibration = {
+    name = "PWC_RULE_INDUSTRY_CALIBRATION"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "KEEP"
+        text = "PWC_RULE_INDUSTRY_CALIBRATION_KEEP"
+        desc = "PWC_RULE_INDUSTRY_CALIBRATION_KEEP_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "NORMALIZE"
+        text = "PWC_RULE_INDUSTRY_CALIBRATION_NORMALIZE"
+        desc = "PWC_RULE_INDUSTRY_CALIBRATION_NORMALIZE_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "BALANCE"
+        text = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE"
+        desc = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE_DESC"
+        allow_achievements = no
+    }
+}
+pwc_geography_mode = {
+    name = "PWC_RULE_GEOGRAPHY_MODE"
+    group = "PWC_RULE_GROUP_GEOGRAPHY"
+    default = {
+        name = "CURRENT"
+        text = "PWC_RULE_GEOGRAPHY_MODE_CURRENT"
+        desc = "PWC_RULE_GEOGRAPHY_MODE_CURRENT_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "GENERIC"
+        text = "PWC_RULE_GEOGRAPHY_MODE_GENERIC"
+        desc = "PWC_RULE_GEOGRAPHY_MODE_GENERIC_DESC"
+        allow_achievements = no
+    }
+}
+allow_guarantees = {
+    name = "PWC_RULE_ALLOW_GUARANTEES"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "BLOCKED"
+        text = "PWC_RULE_FIXED"
+        desc = "PWC_RULE_ALLOW_GUARANTEES_DESC"
+        allow_achievements = no
+    }
+}
+allow_revoke_guarantees = {
+    name = "PWC_RULE_ALLOW_REVOKE_GUARANTEES"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "BLOCKED"
+        text = "PWC_RULE_FIXED"
+        desc = "PWC_RULE_ALLOW_REVOKE_GUARANTEES_DESC"
+        allow_achievements = no
+    }
+}
+allow_release_nations = {
+    name = "PWC_RULE_ALLOW_RELEASE_NATIONS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "BLOCKED"
+        text = "PWC_RULE_FIXED"
+        desc = "PWC_RULE_ALLOW_RELEASE_NATIONS_DESC"
+        allow_achievements = no
+    }
+}
+allow_wargoals = {
+    name = "PWC_RULE_ALLOW_WARGOALS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "FOCUSES_ONLY"
+        text = "PWC_RULE_FIXED"
+        desc = "PWC_RULE_ALLOW_WARGOALS_DESC"
+        allow_achievements = no
+    }
+}

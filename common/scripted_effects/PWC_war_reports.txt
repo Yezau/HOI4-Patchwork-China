@@ -1,0 +1,211 @@
+
+pwc_se_init_war_reports = {
+    if = {
+        limit = { NOT = { has_global_flag = pwc_flag_war_reports_initialized } }
+        set_global_flag = pwc_flag_war_reports_initialized
+        clear_array = global.pwc_war_report_header
+        NTR = { add_to_array = { array = global.pwc_war_report_header value = THIS } }
+        if = {
+            limit = { check_variable = {
+                var = global.pwc_alive_count value = 50
+                compare = less_than_or_equals
+            } }
+            set_global_flag = pwc_flag_war_milestone_50
+        }
+        if = {
+            limit = { check_variable = {
+                var = global.pwc_alive_count value = 10
+                compare = less_than_or_equals
+            } }
+            set_global_flag = pwc_flag_war_milestone_10
+        }
+        if = {
+            limit = { check_variable = {
+                var = global.pwc_alive_count value = 3
+                compare = less_than_or_equals
+            } }
+            set_global_flag = pwc_flag_war_milestone_3
+        }
+        add_to_variable = { global.pwc_war_reports_dirty = 1 }
+    }
+}
+
+
+pwc_se_add_war_report_reader = {
+    if = {
+        limit = { is_ai = no pwc_st_is_city_country = yes pwc_st_city_alive = yes }
+        event_target:pwc_report_loser = {
+            if = {
+                limit = {
+                    NOT = { is_in_array = { array = pwc_report_readers value = PREV } }
+                }
+                add_to_array = { array = pwc_report_readers value = PREV }
+            }
+        }
+    }
+}
+
+
+pwc_se_capture_war_report = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_city_eliminated }
+        }
+        save_event_target_as = pwc_report_loser
+        clear_array = pwc_report_readers
+        clear_variable = pwc_report_winner
+        clr_country_flag = pwc_flag_report_transfer
+        every_enemy_country = { pwc_se_add_war_report_reader = yes }
+        every_owned_state = {
+            every_neighbor_state = {
+                owner = { pwc_se_add_war_report_reader = yes }
+            }
+        }
+    }
+}
+
+
+pwc_se_record_settlement_report_winner = {
+    if = {
+        limit = {
+            NOT = { event_target:pwc_capital_controller = { tag = ROOT } }
+        }
+        set_variable = { pwc_report_winner = event_target:pwc_capital_controller }
+    }
+    else_if = {
+        limit = { NOT = { event_target:pwc_claimant = { tag = ROOT } } }
+        set_variable = { pwc_report_winner = event_target:pwc_claimant }
+    }
+}
+
+
+pwc_se_publish_war_report = {
+    save_event_target_as = pwc_report_loser
+    set_variable = { pwc_report_remaining = global.pwc_alive_count }
+    if = {
+        limit = { has_variable = pwc_report_winner }
+        var:pwc_report_winner = { pwc_se_add_war_report_reader = yes }
+    }
+    if = {
+        limit = { check_variable = { pwc_report_readers^num > 0 } }
+        for_each_scope_loop = {
+            array = pwc_report_readers
+            if = {
+                limit = { is_ai = no exists = yes pwc_st_city_alive = yes }
+                add_to_array = {
+                    array = pwc_war_reports value = event_target:pwc_report_loser
+                    index = 0
+                }
+                if = {
+                    limit = { check_variable = { pwc_war_reports^num > 30 } }
+                    remove_from_array = { array = pwc_war_reports }
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwc_flag_war_reports_open } }
+                    set_country_flag = pwc_flag_war_reports_unread
+                }
+            }
+        }
+    }
+    clear_array = pwc_report_readers
+    add_to_variable = { global.pwc_war_reports_dirty = 1 }
+}
+
+pwc_se_toggle_war_reports = {
+    pwc_se_init_war_reports = yes
+    if = {
+        limit = { has_country_flag = pwc_flag_war_reports_open }
+        clr_country_flag = pwc_flag_war_reports_open
+    }
+    else = {
+        set_country_flag = pwc_flag_war_reports_open
+        clr_country_flag = pwc_flag_war_reports_unread
+    }
+    add_to_variable = { global.pwc_war_reports_dirty = 1 }
+}
+pwc_se_close_war_reports = {
+    clr_country_flag = pwc_flag_war_reports_open
+    clr_country_flag = pwc_flag_war_reports_unread
+    add_to_variable = { global.pwc_war_reports_dirty = 1 }
+}
+
+
+pwc_se_check_war_milestones = {
+    pwc_se_init_war_reports = yes
+    if = {
+        limit = { check_variable = { global.pwc_alive_count > 1 } }
+        if = {
+            limit = {
+                NOT = { has_global_flag = pwc_flag_war_milestone_3 }
+                check_variable = {
+                    var = global.pwc_alive_count value = 3
+                    compare = less_than_or_equals
+                }
+            }
+            set_global_flag = pwc_flag_war_milestone_3
+            every_country = {
+                limit = {
+                    is_ai = no pwc_st_is_city_country = yes
+                    pwc_st_city_alive = yes
+                }
+                news_event = { id = pwc_war_milestone.3 }
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = { has_global_flag = pwc_flag_war_milestone_10 }
+                check_variable = {
+                    var = global.pwc_alive_count value = 10
+                    compare = less_than_or_equals
+                }
+            }
+            set_global_flag = pwc_flag_war_milestone_10
+            every_country = {
+                limit = {
+                    is_ai = no pwc_st_is_city_country = yes
+                    pwc_st_city_alive = yes
+                }
+                news_event = { id = pwc_war_milestone.2 }
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = { has_global_flag = pwc_flag_war_milestone_50 }
+                check_variable = {
+                    var = global.pwc_alive_count value = 50
+                    compare = less_than_or_equals
+                }
+            }
+            set_global_flag = pwc_flag_war_milestone_50
+            every_country = {
+                limit = {
+                    is_ai = no pwc_st_is_city_country = yes
+                    pwc_st_city_alive = yes
+                }
+                news_event = { id = pwc_war_milestone.1 }
+            }
+        }
+    }
+    if = {
+        limit = { check_variable = {
+            var = global.pwc_alive_count value = 50
+            compare = less_than_or_equals
+        } }
+        set_global_flag = pwc_flag_war_milestone_50
+    }
+    if = {
+        limit = { check_variable = {
+            var = global.pwc_alive_count value = 10
+            compare = less_than_or_equals
+        } }
+        set_global_flag = pwc_flag_war_milestone_10
+    }
+    if = {
+        limit = { check_variable = {
+            var = global.pwc_alive_count value = 3
+            compare = less_than_or_equals
+        } }
+        set_global_flag = pwc_flag_war_milestone_3
+    }
+}

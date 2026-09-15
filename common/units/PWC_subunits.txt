@@ -1,0 +1,2593 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sub_units = {
+
+	pwc_unit_infantry = {
+		abbreviation = "INF"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 600
+		ai_priority = 200
+		active = no
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		combat_width = 2
+		manpower = 1000
+		max_strength = 25
+		max_organisation = 60
+		default_morale = 0.3
+		training_time = 90
+		weight = 0.5
+		supply_consumption = 0.06
+		suppression = 1.5
+		need = {
+			pwc_equipment_infantry = 100
+		}
+	}
+
+	pwc_unit_motorized = {
+		abbreviation = "MOT"
+		sprite = motorized
+		map_icon_category = infantry
+		priority = 599
+		ai_priority = 200
+		active = no
+		type = {
+			motorized
+		}
+		group = mobile
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_vehicle_infantry
+			category_mobile_and_mobile_combat_sup
+		}
+		combat_width = 2
+		manpower = 1200
+		max_strength = 25
+		max_organisation = 60
+		default_morale = 0.3
+		training_time = 90
+		weight = 0.75
+		supply_consumption = 0.065
+		suppression = 2.2
+		transport = pwc_equipment_motorized
+		need = {
+			pwc_equipment_infantry = 100
+			pwc_equipment_motorized = 35
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.5
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.2
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.3
+		}
+		urban = {
+			attack = -0.1
+		}
+		river = {
+			attack = -0.1
+			movement = -0.1
+		}
+		amphibious = {
+			attack = -0.2
+		}
+	}
+
+	pwc_unit_mechanized = {
+		abbreviation = "MEC"
+		sprite = mechanized
+		map_icon_category = infantry
+		priority = 610
+		ai_priority = 200
+		active = no
+		type = {
+			mechanized
+		}
+		group = mobile
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_vehicle_infantry
+			category_mobile_and_mobile_combat_sup
+		}
+		combat_width = 2
+		manpower = 1200
+		max_strength = 28
+		max_organisation = 58
+		default_morale = 0.3
+		training_time = 120
+		weight = 1
+		supply_consumption = 0.14
+		suppression = 2
+		transport = pwc_equipment_mechanized
+		essential = {
+			pwc_equipment_infantry
+			pwc_equipment_mechanized
+		}
+		need = {
+			pwc_equipment_infantry = 100
+			pwc_equipment_mechanized = 40
+		}
+		forest = {
+			attack = -0.2
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.3
+		}
+		marsh = {
+			attack = -0.1
+		}
+		urban = {
+			attack = -0.2
+			defence = -0.05
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_mountain = {
+		abbreviation = "MTN"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 601
+		ai_priority = 200
+		active = no
+		special_forces = yes
+		mountaineers = yes
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_mountaineers
+			category_special_forces_leg_infantry
+		}
+		combat_width = 2
+		manpower = 1000
+		max_strength = 20
+		max_organisation = 70
+		default_morale = 0.4
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.05
+		suppression = 1
+		need = {
+			pwc_equipment_infantry = 140
+			pwc_equipment_special_forces = 20
+		}
+		breakthrough = 0.3
+		hills = {
+			attack = 0.2
+			defence = 0.05
+			movement = 0.1
+		}
+		mountain = {
+			attack = 0.35
+			defence = 0.1
+			movement = 0.2
+		}
+	}
+
+	pwc_unit_tank = {
+		abbreviation = "TNK"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = no
+		type = {
+			armor
+		}
+		group = armor
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+		combat_width = 2
+		manpower = 500
+		max_strength = 8
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 180
+		weight = 1
+		supply_consumption = 0.22
+		suppression = 2.5
+		need = {
+			pwc_platform_medium_tank = 50
+		}
+		forest = {
+			attack = -0.3
+			movement = -0.4
+		}
+		hills = {
+			attack = -0.1
+		}
+		mountain = {
+			attack = -0.2
+		}
+		jungle = {
+			attack = -0.4
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.8
+		}
+	}
+
+	pwc_unit_light_tank = {
+		abbreviation = "LTK"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = no
+		type = {
+			armor
+		}
+		group = armor
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+		combat_width = 2
+		manpower = 500
+		max_strength = 6
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 180
+		weight = 1
+		supply_consumption = 0.22
+		suppression = 2.5
+		need = {
+			pwc_platform_light_tank = 60
+		}
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_heavy_tank = {
+		abbreviation = "HTK"
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 2503
+		ai_priority = 2503
+		active = no
+		type = {
+			armor
+		}
+		group = armor
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+		combat_width = 2
+		manpower = 500
+		max_strength = 10
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.32
+		suppression = 2.5
+		need = {
+			pwc_platform_heavy_tank = 40
+		}
+		forest = {
+			attack = -0.4
+			movement = -0.4
+		}
+		hills = {
+			attack = -0.2
+		}
+		mountain = {
+			attack = -0.3
+		}
+		jungle = {
+			attack = -0.6
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.4
+			movement = -0.2
+		}
+		urban = {
+			attack = -0.5
+			defence = -0.2
+		}
+		river = {
+			attack = -0.4
+			movement = -0.4
+		}
+		amphibious = {
+			attack = -0.9
+		}
+		fort = {
+			attack = 0.1
+		}
+	}
+
+	pwc_unit_tank_destroyer = {
+		abbreviation = "TD"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = no
+		type = {
+			armor
+			anti_tank
+		}
+		group = mobile_combat_support
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+		}
+		combat_width = 2
+		manpower = 500
+		max_strength = 5
+		max_organisation = 15
+		default_morale = 0.3
+		training_time = 180
+		weight = 1.25
+		supply_consumption = 0.22
+		suppression = 1.25
+		need = {
+			pwc_platform_tank_destroyer = 40
+		}
+		forest = {
+			attack = -0.3
+			movement = -0.4
+		}
+		hills = {
+			attack = -0.1
+		}
+		mountain = {
+			attack = -0.2
+		}
+		jungle = {
+			attack = -0.4
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.7
+		}
+	}
+
+	pwc_unit_artillery = {
+		abbreviation = "ART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+		active = no
+		is_artillery_brigade = yes
+		type = {
+			motorized
+			artillery
+		}
+		group = mobile_combat_support
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+			category_mobile_and_mobile_combat_sup
+		}
+		combat_width = 3
+		manpower = 500
+		max_strength = 3
+		max_organisation = 10
+		default_morale = 0.1
+		training_time = 120
+		weight = 1
+		supply_consumption = 0.32
+		need = {
+			pwc_equipment_artillery = 24
+		}
+		forest = {
+			attack = -0.2
+			movement = -0.5
+		}
+		hills = {
+			movement = -0.05
+		}
+		mountain = {
+			movement = -0.2
+		}
+		jungle = {
+			attack = -0.25
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+		fort = {
+			attack = 0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_anti_tank = {
+		abbreviation = "ANT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 1197
+		ai_priority = 100
+		active = no
+		type = {
+			infantry
+			anti_tank
+		}
+		group = combat_support
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+			category_anti_tank
+		}
+		combat_width = 2
+		manpower = 400
+		max_strength = 3
+		max_organisation = 10
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.1
+		need = {
+			pwc_equipment_anti_tank = 36
+		}
+		forest = {
+			attack = -0.2
+			movement = -0.2
+		}
+		hills = {
+			movement = -0.05
+		}
+		mountain = {
+			movement = -0.2
+		}
+		jungle = {
+			attack = -0.25
+			movement = -0.2
+		}
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+		fort = {
+			attack = 0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_anti_air = {
+		abbreviation = "ANA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = no
+		type = {
+			motorized
+			anti_air
+		}
+		group = mobile_combat_support
+		categories = {
+			category_army
+			category_line_artillery
+			category_anti_air
+			category_mobile_and_mobile_combat_sup
+		}
+		combat_width = 2
+		manpower = 400
+		max_strength = 3
+		max_organisation = 10
+		default_morale = 0.1
+		training_time = 120
+		weight = 1
+		supply_consumption = 0.16
+		need = {
+			pwc_equipment_anti_air = 36
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.5
+		}
+		jungle = {
+			attack = -0.2
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.2
+			movement = -0.2
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_rocket_artillery = {
+		abbreviation = "RRT"
+		sprite = motorized
+		map_icon_category = infantry
+		priority = 1199
+		ai_priority = 100
+		active = no
+		is_artillery_brigade = yes
+		type = {
+			artillery
+			motorized
+			rocket
+		}
+		group = mobile_combat_support
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+			category_rocket_artillery
+			category_mobile_and_mobile_combat_sup
+		}
+		combat_width = 3
+		manpower = 500
+		max_strength = 3
+		max_organisation = 10
+		default_morale = 0.1
+		training_time = 120
+		weight = 1
+		supply_consumption = 0.4
+		need = {
+			pwc_equipment_rocket = 24
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.5
+		}
+		hills = {
+			movement = -0.05
+		}
+		mountain = {
+			movement = -0.2
+		}
+		jungle = {
+			attack = -0.25
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.2
+			movement = -0.5
+		}
+		fort = {
+			attack = 0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	pwc_unit_engineer = {
+		abbreviation = "ENG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		same_support_type = pwc_unit_engineer
+		combat_width = 0
+		manpower = 400
+		max_strength = 10
+		max_organisation = 0
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.02
+		essential = {
+			pwc_equipment_support
+		}
+		need = {
+			pwc_equipment_support = 30
+			pwc_equipment_infantry = 10
+		}
+		entrenchment = 5
+		forest = {
+			defence = 0.25
+			movement = 0.05
+		}
+		hills = {
+			defence = 0.1
+		}
+		jungle = {
+			defence = 0.25
+		}
+		marsh = {
+			defence = 0.25
+			movement = 0.2
+		}
+		fort = {
+			attack = 0.1
+			defence = 0.25
+		}
+		river = {
+			defence = 0.25
+			movement = 0.1
+		}
+		amphibious = {
+			attack = 0.15
+		}
+	}
+
+	pwc_unit_recon = {
+		abbreviation = "REC"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_recon
+		}
+		regimental = no
+		combat_width = 0
+		manpower = 300
+		max_strength = 10
+		max_organisation = 0
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.02
+		essential = {
+			pwc_equipment_support
+			pwc_equipment_infantry
+		}
+		need = {
+			pwc_equipment_support = 10
+			pwc_equipment_motorized = 10
+			pwc_equipment_infantry = 40
+		}
+		recon = 2
+		forest = {
+			movement = 0.05
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		jungle = {
+			movement = 0.05
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.15
+		}
+		desert = {
+			movement = 0.2
+		}
+		river = {
+			movement = 0.1
+		}
+	}
+
+	pwc_unit_military_police = {
+		abbreviation = "MP"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		combat_width = 0
+		manpower = 300
+		max_strength = 10
+		max_organisation = 0
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.02
+		essential = {
+			pwc_equipment_support
+			pwc_equipment_infantry
+		}
+		need = {
+			pwc_equipment_support = 10
+			pwc_equipment_infantry = 40
+		}
+		suppression = 8
+	}
+
+	pwc_unit_logistics = {
+		abbreviation = "LOG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		same_support_type = pwc_unit_logistics
+		combat_width = 0
+		manpower = 500
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		essential = {
+			pwc_equipment_support
+			pwc_equipment_motorized
+		}
+		need = {
+			pwc_equipment_support = 20
+			pwc_equipment_motorized = 10
+		}
+		fuel_consumption_factor = -0.05
+		own_equipment_fuel_consumption_mult = 0
+		supply_consumption_factor = -0.1
+	}
+
+	pwc_unit_signal = {
+		abbreviation = "SIG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		same_support_type = pwc_unit_signal
+		combat_width = 0
+		manpower = 500
+		max_strength = 1
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.02
+		essential = {
+			pwc_equipment_support
+			pwc_equipment_motorized
+		}
+		need = {
+			pwc_equipment_support = 20
+			pwc_equipment_motorized = 10
+		}
+		initiative = 0.1
+		own_equipment_fuel_consumption_mult = 0
+	}
+
+	pwc_unit_maintenance = {
+		abbreviation = "MAIN"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		same_support_type = pwc_unit_maintenance
+		combat_width = 0
+		manpower = 500
+		max_strength = 1
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.03
+		essential = {
+			pwc_equipment_support
+		}
+		need = {
+			pwc_equipment_support = 25
+		}
+		equipment_capture_factor = 0.05
+		reliability_factor = 0.05
+	}
+
+	pwc_unit_field_hospital = {
+		abbreviation = "HOS"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		same_support_type = pwc_unit_field_hospital
+		combat_width = 0
+		manpower = 500
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.05
+		essential = {
+			pwc_equipment_support
+			pwc_equipment_motorized
+		}
+		need = {
+			pwc_equipment_support = 30
+			pwc_equipment_motorized = 20
+		}
+		casualty_trickleback = 0.2
+		experience_loss_factor = -0.15
+		own_equipment_fuel_consumption_mult = 0
+	}
+
+	pwc_unit_support_artillery = {
+		abbreviation = "SART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		is_artillery_brigade = yes
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+		regimental = no
+		same_support_type = pwc_unit_support_artillery
+		combat_width = 0
+		manpower = 300
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.16
+		essential = {
+			pwc_equipment_artillery
+		}
+		need = {
+			pwc_equipment_artillery = 12
+		}
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.4
+	}
+
+	pwc_unit_support_anti_air = {
+		abbreviation = "SAA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_anti_air
+		}
+		regimental = no
+		same_support_type = pwc_unit_support_anti_air
+		combat_width = 0
+		manpower = 300
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.1
+		essential = {
+			pwc_equipment_anti_air
+		}
+		need = {
+			pwc_equipment_anti_air = 20
+		}
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.4
+		air_attack = -0.2
+	}
+
+	pwc_unit_support_anti_tank = {
+		abbreviation = "SAT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_anti_tank
+			category_mobile_anti_tank
+		}
+		regimental = no
+		same_support_type = pwc_unit_support_anti_tank
+		combat_width = 0
+		manpower = 300
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.08
+		essential = {
+			pwc_equipment_anti_tank
+		}
+		need = {
+			pwc_equipment_anti_tank = 24
+		}
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.5
+		ap_attack = -0.15
+	}
+
+	pwc_unit_assault_engineer = {
+		abbreviation = "AENG"
+		sprite = assault_engineer
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			armor
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_tanks
+			category_all_armor
+		}
+		regimental = no
+		same_support_type = pwc_unit_engineer
+		combat_width = 0
+		manpower = 450
+		max_strength = 2
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.2
+		supply_consumption = 0.06
+		essential = {
+			pwc_equipment_assault_engineer_vehicle
+			pwc_equipment_support
+		}
+		need = {
+			pwc_equipment_assault_engineer_vehicle = 12
+			pwc_equipment_support = 20
+			pwc_equipment_infantry = 10
+		}
+		entrenchment = 2
+		soft_attack = -0.4
+		hard_attack = -0.4
+		defense = -0.4
+		breakthrough = -0.4
+		fort = {
+			attack = 0.25
+		}
+		river = {
+			attack = 0.15
+			movement = 0.25
+		}
+		urban = {
+			attack = 0.1
+		}
+	}
+
+	pwc_unit_armored_recovery = {
+		abbreviation = "ARCV"
+		sprite = armored_maintenance
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			armor
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_tanks
+			category_all_armor
+		}
+		regimental = no
+		same_support_type = pwc_unit_maintenance
+		combat_width = 0
+		manpower = 500
+		max_strength = 1
+		max_organisation = 20
+		default_morale = 0.3
+		training_time = 120
+		weight = 0.2
+		supply_consumption = 0.05
+		essential = {
+			pwc_equipment_armored_recovery_vehicle
+			pwc_equipment_support
+		}
+		need = {
+			pwc_equipment_armored_recovery_vehicle = 15
+			pwc_equipment_support = 15
+		}
+		equipment_capture_factor = 0.1
+		recovery = 0.1
+		reliability_factor = 0.02
+		soft_attack = -0.4
+		hard_attack = -0.4
+		defense = -0.4
+		breakthrough = -0.4
+	}
+
+	pwc_unit_support_heavy_mortar = {
+		abbreviation = "HMOR"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		is_artillery_brigade = yes
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+		regimental = no
+		same_support_type = pwc_unit_support_artillery
+		combat_width = 0
+		manpower = 350
+		max_strength = 0.4
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.2
+		supply_consumption = 0.12
+		essential = {
+			pwc_equipment_heavy_mortar
+			pwc_equipment_support
+		}
+		need = {
+			pwc_equipment_heavy_mortar = 12
+			pwc_equipment_support = 5
+		}
+		soft_attack = -0.2
+		hard_attack = -0.4
+		defense = -0.4
+		breakthrough = -0.4
+		urban = {
+			attack = 0.1
+		}
+		forest = {
+			attack = 0.1
+		}
+	}
+
+	pwc_unit_hq_infantry = {
+		abbreviation = "HINF"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 3
+		combat_width = 2
+		manpower = 600
+		max_strength = 15
+		max_organisation = 60
+		default_morale = 0.3
+		training_time = 90
+		weight = 0.5
+		suppression = 1.5
+		need = {
+			pwc_equipment_infantry = 60
+		}
+	}
+
+	pwc_unit_hq_motorized = {
+		abbreviation = "HMOT"
+		sprite = motorized
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		type = {
+			motorized
+		}
+		group = mobile
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_vehicle_infantry
+		}
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 3
+		combat_width = 2
+		manpower = 600
+		max_strength = 15
+		max_organisation = 60
+		default_morale = 0.3
+		training_time = 90
+		weight = 0.75
+		suppression = 2.2
+		transport = pwc_equipment_motorized
+		need = {
+			pwc_equipment_infantry = 60
+			pwc_equipment_motorized = 20
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.5
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.2
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.3
+		}
+		urban = {
+			attack = -0.1
+		}
+		river = {
+			attack = -0.1
+			movement = -0.1
+		}
+		amphibious = {
+			attack = -0.2
+		}
+	}
+
+	pwc_unit_hq_command = {
+		abbreviation = "HQ"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		division_3d_model_priority = 99999
+		deployed_leader_modifiers = {
+			skill_bonus_factor = 0.2
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_infantry = 20
+		}
+	}
+
+	pwc_unit_hq_engineer = {
+		abbreviation = "HQE"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			fortification_damage = 0.2
+			amphibious_invasion_defence = 0.05
+		}
+		enable_ability = {
+			deeper_dig_in
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_infantry = 20
+			pwc_equipment_support = 10
+		}
+		entrenchment = 2
+		defense = 0.1
+		breakthrough = 0.5
+		soft_attack = -0.5
+	}
+
+	pwc_unit_hq_recon = {
+		abbreviation = "HQR"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+			category_recon
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			terrain_trait_xp_gain_factor = 0.2
+			recon_factor = 0.1
+		}
+		enable_ability = {
+			defense_in_depth
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_infantry = 20
+			pwc_equipment_support = 10
+		}
+		recon = 1
+		defense = -0.5
+		breakthrough = -0.5
+		soft_attack = -0.9
+		hard_attack = -0.9
+	}
+
+	pwc_unit_hq_military_police = {
+		abbreviation = "HQP"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			army_speed_factor = 0.05
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+		suppression_factor = 0.2
+	}
+
+	pwc_unit_hq_maintenance = {
+		abbreviation = "HQM"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			attrition = -0.1
+			equipment_capture_factor = 0.02
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+		equipment_capture_factor = 0.05
+		reliability_factor = 0.05
+	}
+
+	pwc_unit_hq_field_hospital = {
+		abbreviation = "HQF"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			wounded_chance_factor = -0.25
+			sickness_chance = -0.25
+			experience_gain_army_unit_factor = 0.1
+		}
+		enable_ability = {
+			extra_medics
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+		casualty_trickleback = 0.2
+		experience_loss_factor = -0.15
+	}
+
+	pwc_unit_hq_logistics = {
+		abbreviation = "HQL"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			max_commander_army_size = 2
+			supply_consumption_factor = -0.05
+		}
+		enable_ability = {
+			front_overrun
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+		fuel_consumption_factor = -0.05
+	}
+
+	pwc_unit_hq_signal = {
+		abbreviation = "HQS"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			max_planning = 0.03
+			recon_factor_while_entrenched = 0.1
+			enemy_operative_capture_chance_factor = 0.1
+		}
+		enable_ability = {
+			rotating_reserves
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+	}
+
+	pwc_unit_hq_naval_liaison = {
+		abbreviation = "HQNL"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			shore_bombardment_bonus = 0.15
+			extra_marine_supply_grace = 24
+			amphibious_invasion = 0.05
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+	}
+
+	pwc_unit_hq_air_liaison = {
+		abbreviation = "HQAL"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_divisional_support_battalions
+			category_army
+		}
+		regimental = no
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = no
+		required_dlc = {
+			"Thunder at Our Gates"
+		}
+		deployment_cost = 1
+		deployed_leader_modifiers = {
+			air_invasion_preparation = -0.05
+			cas_damage_reduction = 0.05
+			air_superiority_bonus_in_combat = 0.05
+		}
+		combat_width = 0
+		manpower = 200
+		max_strength = 1
+		max_organisation = 30
+		default_morale = 0.05
+		training_time = 120
+		weight = 0.1
+		need = {
+			pwc_equipment_support = 10
+		}
+	}
+
+	pwc_unit_regimental_fire_support = {
+		abbreviation = "FSC"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_regimental_support_battalions
+			category_army
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 240
+		max_strength = 0.4
+		max_organisation = 20
+		default_morale = 0.2
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.06
+		need = {
+			pwc_equipment_infantry = 30
+			pwc_equipment_support = 5
+		}
+		defense = -0.25
+		soft_attack = -0.5
+		hard_attack = -0.5
+	}
+
+	pwc_unit_regimental_motorized_fire = {
+		abbreviation = "FSC"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			motorized
+			support
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_regimental_support_battalions
+			category_army
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+			mobile_combat_support
+			armor
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 240
+		max_strength = 0.4
+		max_organisation = 20
+		default_morale = 0.2
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.06
+		need = {
+			pwc_equipment_infantry = 30
+			pwc_equipment_support = 5
+			pwc_equipment_motorized = 5
+		}
+		own_equipment_fuel_consumption_mult = 0.25
+		defense = -0.25
+		breakthrough = -0.25
+		soft_attack = -0.5
+		hard_attack = -0.5
+	}
+
+	pwc_unit_regimental_artillery = {
+		abbreviation = "IFG"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		is_artillery_brigade = yes
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			motorized
+			support
+			artillery
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_regimental_support_battalions
+			category_army
+			category_regimental_support_artillery
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+			mobile_combat_support
+			armor
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 180
+		max_strength = 0.1
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.1
+		need = {
+			pwc_equipment_artillery = 4
+		}
+		own_equipment_fuel_consumption_mult = 0.33
+		defense = -0.8
+		breakthrough = -0.6
+		soft_attack = -0.7
+		hard_attack = -0.6
+	}
+
+	pwc_unit_regimental_rocket = {
+		abbreviation = "RBC"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1199
+		ai_priority = 100
+		active = no
+		is_artillery_brigade = yes
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			motorized
+			support
+			artillery
+		}
+		group = support
+		categories = {
+			category_regimental_support_battalions
+			category_support_battalions
+			category_army
+			category_regimental_support_artillery
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+			mobile_combat_support
+			armor
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 180
+		max_strength = 0.1
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.1
+		need = {
+			pwc_equipment_rocket = 4
+		}
+		own_equipment_fuel_consumption_mult = 0.33
+		defense = -0.8
+		breakthrough = -0.6
+		soft_attack = -0.7
+		hard_attack = -0.6
+	}
+
+	pwc_unit_regimental_anti_air = {
+		abbreviation = "RAA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			motorized
+			support
+			anti_air
+		}
+		group = support
+		categories = {
+			category_support_battalions
+			category_army
+			category_anti_air
+			category_regimental_support_battalions
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 120
+		max_strength = 0.1
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.06
+		need = {
+			pwc_equipment_anti_air = 12
+		}
+		own_equipment_fuel_consumption_mult = 0.33
+		defense = -0.6
+		breakthrough = -0.8
+		soft_attack = -0.8
+		hard_attack = -0.8
+		air_attack = -0.6
+	}
+
+	pwc_unit_regimental_anti_tank = {
+		abbreviation = "RAT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_regimental_support_battalions
+			category_army
+			category_anti_tank
+			category_mobile_anti_tank
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			infantry
+			mobile
+			combat_support
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 120
+		max_strength = 0.1
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.06
+		need = {
+			pwc_equipment_anti_tank = 16
+		}
+		defense = -0.6
+		breakthrough = -0.8
+		soft_attack = -0.8
+		hard_attack = -0.65
+		ap_attack = -0.2
+	}
+
+	pwc_unit_regimental_tank_destroyer = {
+		abbreviation = "MTD"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = no
+		type = {
+			support
+			armor
+			anti_tank
+		}
+		group = support
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+			category_support_battalions
+			category_regimental_support_battalions
+			category_tank_destroyer_regimental_support
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			armor
+			mobile_combat_support
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 180
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 180
+		weight = 0.4
+		supply_consumption = 0.07
+		suppression = 0.25
+		need = {
+			pwc_platform_tank_destroyer = 10
+		}
+		own_equipment_fuel_consumption_mult = 0.33
+		breakthrough = -0.7
+		defense = -0.25
+		soft_attack = -0.33
+		hard_attack = -0.33
+		armor_value = -0.33
+	}
+
+	pwc_unit_regimental_armored_anti_air = {
+		abbreviation = "MAA"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = no
+		affects_speed = no
+		can_be_parachuted = no
+		type = {
+			support
+			motorized
+			anti_air
+		}
+		group = support
+		categories = {
+			category_army
+			category_self_propelled_anti_air
+			category_support_battalions
+			category_regimental_support_battalions
+			category_self_propelled_anti_air_regimental_support
+			category_anti_air
+		}
+		divisional = no
+		allowed_battalion_groups = {
+			armor
+			mobile_combat_support
+		}
+		allow_in_army_hq = no
+		allow_in_non_army_hq = yes
+		combat_width = 0
+		manpower = 120
+		max_strength = 0.1
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.06
+		need = {
+			pwc_equipment_anti_air = 12
+		}
+		own_equipment_fuel_consumption_mult = 0.33
+		defense = -0.6
+		breakthrough = -0.8
+		soft_attack = -0.8
+		hard_attack = -0.8
+		air_attack = -0.6
+	}
+
+	pwc_unit_marine = {
+		abbreviation = "MAR"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 601
+		ai_priority = 200
+		active = no
+		special_forces = yes
+		marines = yes
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_marines
+			category_special_forces_leg_infantry
+			category_marines_and_amphibious
+		}
+		combat_width = 2
+		manpower = 1000
+		max_strength = 20
+		max_organisation = 70
+		default_morale = 0.4
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.05
+		suppression = 1
+		need = {
+			pwc_equipment_infantry = 150
+			pwc_equipment_special_forces = 20
+		}
+		breakthrough = 0.3
+		marsh = {
+			attack = 0.3
+		}
+		river = {
+			attack = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	pwc_unit_paratrooper = {
+		abbreviation = "PAR"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 2
+		ai_priority = 2
+		active = no
+		special_forces = yes
+		can_be_parachuted = yes
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_paratroopers
+			category_special_forces_leg_infantry
+		}
+		combat_width = 2
+		manpower = 1000
+		max_strength = 22
+		max_organisation = 70
+		default_morale = 0.4
+		training_time = 150
+		weight = 0.5
+		supply_consumption = 0.05
+		suppression = 1
+		need = {
+			pwc_equipment_infantry = 130
+			pwc_equipment_special_forces = 20
+		}
+	}
+
+	pwc_unit_ranger = {
+		abbreviation = "RAN"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 601
+		ai_priority = 200
+		active = no
+		special_forces = yes
+		rangers = yes
+		type = {
+			infantry
+		}
+		group = infantry
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_rangers
+			category_special_forces_leg_infantry
+		}
+		combat_width = 2
+		manpower = 1000
+		max_strength = 20
+		max_organisation = 70
+		default_morale = 0.4
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.05
+		suppression = 1
+		need = {
+			pwc_equipment_infantry = 140
+			pwc_equipment_special_forces = 20
+		}
+		breakthrough = 0.3
+		forest = {
+			attack = 0.1
+			defence = 0.1
+			movement = 0.15
+		}
+		jungle = {
+			attack = 0.2
+			defence = 0.1
+			movement = 0.15
+		}
+	}
+
+	pwc_unit_fighter = {
+		sprite = light_plane
+		priority = 1
+		active = no
+		type = fighter
+		categories = {
+			category_fighter
+		}
+		need = {
+			pwc_platform_fighter = 1
+		}
+		land_air_wing_size = 100
+		mega_carrier_air_wing_size = 10
+	}
+
+	pwc_unit_cas = {
+		sprite = light_plane
+		priority = 2
+		active = no
+		type = cas
+		categories = {
+			category_cas
+		}
+		need = {
+			pwc_platform_cas = 1
+		}
+		land_air_wing_size = 100
+		mega_carrier_air_wing_size = 10
+	}
+
+	pwc_unit_bomber = {
+		sprite = heavy_plane
+		priority = 5
+		active = no
+		type = strategic_bomber
+		categories = {
+			category_strat_bomber
+		}
+		need = {
+			pwc_platform_bomber = 1
+		}
+		land_air_wing_size = 100
+		mega_carrier_air_wing_size = 5
+	}
+
+	pwc_unit_uav = {
+		sprite = light_plane
+		priority = 1
+		active = no
+		type = cas
+		categories = {
+			category_cas
+		}
+		need = {
+			pwc_platform_uav = 1
+		}
+		land_air_wing_size = 100
+		mega_carrier_air_wing_size = 10
+	}
+
+	pwc_unit_cv_fighter = {
+		sprite = light_plane
+		priority = 1
+		active = no
+		type = fighter
+		categories = {
+			category_fighter
+			category_carrier_fighter
+		}
+		need = {
+			pwc_platform_cv_fighter = 1
+		}
+		land_air_wing_size = 100
+		carrier_air_wing_size = 10
+		mega_carrier_air_wing_size = 10
+	}
+
+	pwc_unit_cv_cas = {
+		sprite = light_plane
+		priority = 2
+		active = no
+		type = cas
+		categories = {
+			category_cas
+			category_carrier_cas
+		}
+		need = {
+			pwc_platform_cv_cas = 1
+		}
+		land_air_wing_size = 100
+		carrier_air_wing_size = 10
+		mega_carrier_air_wing_size = 10
+	}
+
+	pwc_unit_transport = {
+		sprite = heavy_plane
+		priority = 6
+		active = no
+		type = air_transport
+		need = {
+			pwc_equipment_transport = 1
+		}
+		land_air_wing_size = 100
+	}
+
+	pwc_unit_destroyer = {
+		sprite = destroyer
+		map_icon_category = ship
+		priority = 3
+		active = no
+		type = {
+			screen_ship
+		}
+		need = {
+			pwc_platform_destroyer = 1
+		}
+		max_organisation = 35
+		supply_consumption = 0.04
+		critical_parts = {
+			destroyed_ammo_storage
+			broken_propeller
+			on_fire
+			rudder_jammed
+		}
+		critical_part_damage_chance_mult = 1
+		hit_profile_mult = 1
+	}
+
+	pwc_unit_cruiser = {
+		sprite = heavy_cruiser
+		map_icon_category = ship
+		priority = 6
+		active = no
+		type = {
+			capital_ship
+		}
+		need = {
+			pwc_platform_cruiser = 1
+		}
+		max_organisation = 40
+		supply_consumption = 0.24
+		critical_parts = {
+			rudder_jammed
+			destroyed_ammo_storage
+			broken_propeller
+			on_fire
+		}
+		critical_part_damage_chance_mult = 1
+		hit_profile_mult = 1
+	}
+
+	pwc_unit_submarine = {
+		sprite = submarine
+		map_icon_category = ship
+		priority = 2
+		active = no
+		type = {
+			submarine
+		}
+		need = {
+			pwc_platform_submarine = 1
+		}
+		max_organisation = 30
+		supply_consumption = 0.04
+		critical_parts = {
+			destroyed_ammo_storage
+			broken_propeller
+			on_fire
+			rudder_jammed
+			ballast_tanks_inoperable
+			leaking_pressure_hull
+			battery_leak
+		}
+		critical_part_damage_chance_mult = 1
+		hit_profile_mult = 1
+	}
+
+	pwc_unit_carrier = {
+		sprite = carrier
+		map_icon_category = ship
+		priority = 10
+		active = no
+		type = {
+			carrier
+		}
+		need = {
+			pwc_platform_carrier = 1
+		}
+		max_organisation = 40
+		supply_consumption = 0.8
+		critical_parts = {
+			destroyed_ammo_storage
+			broken_propeller
+			on_fire
+			damaged_flight_deck
+		}
+		critical_part_damage_chance_mult = 1
+		hit_profile_mult = 1
+	}
+}

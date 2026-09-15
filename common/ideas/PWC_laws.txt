@@ -1,0 +1,743 @@
+
+
+
+
+
+
+
+
+
+ideas = {
+
+	pwc_conscription_laws = {
+		law = yes
+		use_list_view = yes
+
+		pwc_law_conscription_1 = {
+			cost = 0
+			removal_cost = -1
+			level = 1
+			picture = pwc_law_conscription_l1
+			default = yes
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_conscription_1 = yes
+				}
+			}
+			modifier = {
+				conscription = 0.01
+				stability_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1000
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 0.8
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_conscription_2 = {
+			cost = 75
+			removal_cost = -1
+			level = 2
+			picture = pwc_law_conscription_l2
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_conscription_2 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.09
+			}
+			modifier = {
+				conscription = 0.015
+				stability_factor = 0.03
+			}
+			ai_will_do = {
+				factor = 2000
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 0.8
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_conscription_3 = {
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = pwc_law_conscription_l3
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_conscription_3 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.29
+			}
+			modifier = {
+				conscription = 0.025
+			}
+			ai_will_do = {
+				factor = 3000
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 0.8
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_conscription_4 = {
+			cost = 150
+			removal_cost = -1
+			level = 4
+			picture = pwc_law_conscription_l4
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_conscription_4 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.49
+				has_country_flag = pwc_flag_law_conscription_reformed
+				pwc_st_peacetime_mobilization_allowed = yes
+			}
+			modifier = {
+				conscription = 0.05
+				stability_factor = -0.05
+				training_time_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 4000
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 0.8
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_conscription_5 = {
+			cost = 200
+			removal_cost = -1
+			level = 5
+			picture = pwc_law_conscription_l5
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_conscription_5 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.69
+				has_country_flag = pwc_flag_law_conscription_reformed
+				pwc_st_peacetime_mobilization_allowed = yes
+			}
+			modifier = {
+				conscription = 0.1
+				stability_factor = -0.1
+				training_time_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 5000
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 0.8
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+	}
+
+	pwc_economy_mobilization_laws = {
+		law = yes
+		use_list_view = yes
+
+		pwc_law_economy_mobilization_1 = {
+			cost = 0
+			removal_cost = -1
+			level = 1
+			picture = pwc_law_economy_mobilization_l1
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_economy_mobilization_1 = yes
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.06
+				stability_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.3
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_economy_mobilization_2 = {
+			cost = 75
+			removal_cost = -1
+			level = 2
+			picture = pwc_law_economy_mobilization_l2
+			default = yes
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_economy_mobilization_2 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.09
+			}
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_speed_arms_factory_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 2000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.3
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_economy_mobilization_3 = {
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = pwc_law_economy_mobilization_l3
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_economy_mobilization_3 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.29
+			}
+			modifier = {
+				consumer_goods_factor = 0
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.03
+			}
+			ai_will_do = {
+				factor = 3000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.3
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_economy_mobilization_4 = {
+			cost = 150
+			removal_cost = -1
+			level = 4
+			picture = pwc_law_economy_mobilization_l4
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_economy_mobilization_4 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.49
+				has_country_flag = pwc_flag_law_economy_reformed
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.06
+				production_speed_buildings_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 4000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.3
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_economy_mobilization_5 = {
+			cost = 200
+			removal_cost = -1
+			level = 5
+			picture = pwc_law_economy_mobilization_l5
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_economy_mobilization_5 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.69
+				has_country_flag = pwc_flag_law_economy_reformed
+			}
+			modifier = {
+				consumer_goods_factor = -0.06
+				production_speed_arms_factory_factor = 0.2
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 5000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.3
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+	}
+
+	pwc_trade_control_laws = {
+		law = yes
+		use_list_view = yes
+
+		pwc_law_trade_control_1 = {
+			cost = 0
+			removal_cost = -1
+			level = 1
+			picture = pwc_law_trade_control_l1
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_trade_control_1 = yes
+				}
+			}
+			modifier = {
+				min_export = 0.8
+				research_speed_factor = 0.09
+				fuel_gain_factor = 0.06
+			}
+			ai_will_do = {
+				factor = 1000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_trade_control_2 = {
+			cost = 75
+			removal_cost = -1
+			level = 2
+			picture = pwc_law_trade_control_l2
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_trade_control_2 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.09
+			}
+			modifier = {
+				min_export = 0.66
+				research_speed_factor = 0.06
+				fuel_gain_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 2000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_trade_control_3 = {
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = pwc_law_trade_control_l3
+			default = yes
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_trade_control_3 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.29
+			}
+			modifier = {
+				min_export = 0.5
+				research_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 3000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_trade_control_4 = {
+			cost = 150
+			removal_cost = -1
+			level = 4
+			picture = pwc_law_trade_control_l4
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_trade_control_4 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.49
+				has_country_flag = pwc_flag_law_trade_reformed
+			}
+			modifier = {
+				min_export = 0.33
+				research_speed_factor = 0.03
+				local_resources_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 4000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+
+		pwc_law_trade_control_5 = {
+			cost = 200
+			removal_cost = -1
+			level = 5
+			picture = pwc_law_trade_control_l5
+			cancel_if_invalid = no
+			on_add = {
+				hidden_effect = {
+					pwc_se_sync_law_trade_control_5 = yes
+				}
+			}
+			available = {
+				has_war_support > 0.69
+				has_country_flag = pwc_flag_law_trade_reformed
+			}
+			modifier = {
+				min_export = 0.2
+				local_resources_factor = 0.1
+				stability_factor = -0.03
+			}
+			ai_will_do = {
+				factor = 5000
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_air_power
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_balanced
+				}
+				modifier = {
+					factor = 1.2
+					has_country_flag = pwc_ai_coastal
+				}
+				modifier = {
+					factor = 1
+					has_country_flag = pwc_ai_defense
+				}
+				modifier = {
+					factor = 1.1
+					has_country_flag = pwc_ai_industrial
+				}
+				modifier = {
+					factor = 0.9
+					has_country_flag = pwc_ai_mobility
+				}
+			}
+		}
+	}
+}

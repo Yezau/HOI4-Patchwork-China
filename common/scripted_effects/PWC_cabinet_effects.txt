@@ -1,0 +1,1686 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pwc_se_init_cabinet_state = {
+	set_country_flag = pwc_flag_cabinet_unlocked
+	set_variable = { var = pwc_seat_civil_admin_cand value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_ver value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0 }
+	set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_civil_admin_active
+	set_variable = { var = pwc_seat_economic_planning_cand value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_ver value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0 }
+	set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_economic_planning_active
+	set_variable = { var = pwc_seat_finance_trade_cand value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_ver value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0 }
+	set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_finance_trade_active
+	set_variable = { var = pwc_seat_science_education_cand value = 0 }
+	set_variable = { var = pwc_seat_science_education_ver value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+	set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	clr_country_flag = pwc_flag_seat_science_education_active
+	set_variable = { var = pwc_seat_army_command_cand value = 0 }
+	set_variable = { var = pwc_seat_army_command_ver value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+	set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_army_command_active
+	set_variable = { var = pwc_seat_navy_command_cand value = 0 }
+	set_variable = { var = pwc_seat_navy_command_ver value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0 }
+	set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	clr_country_flag = pwc_flag_seat_navy_command_active
+	set_variable = { var = pwc_seat_air_command_cand value = 0 }
+	set_variable = { var = pwc_seat_air_command_ver value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+	set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_air_command_active
+	set_variable = { var = pwc_seat_logistics_command_cand value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_ver value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_attrition value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+	set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	clr_country_flag = pwc_flag_seat_logistics_command_active
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_ver value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+	set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	clr_country_flag = pwc_flag_seat_mobilization_command_active
+}
+
+
+pwc_se_rebuild_seat_civil_admin = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0.1 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0.1 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0.0005 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = -0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0.001 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = -0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0.05 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0.1 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = 0 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_civil_admin_v_stability_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_political_power_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_war_support_factor value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_stability_weekly value = 0 }
+		set_variable = { var = pwc_seat_civil_admin_v_consumer_goods_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_civil_admin_1 = {
+	set_variable = { var = pwc_seat_civil_admin_cand value = 1 }
+	pwc_se_rebuild_seat_civil_admin = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	set_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET appoint seat=seat_civil_admin cand=1 ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_civil_admin_2 = {
+	set_variable = { var = pwc_seat_civil_admin_cand value = 2 }
+	pwc_se_rebuild_seat_civil_admin = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	set_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET appoint seat=seat_civil_admin cand=2 ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_civil_admin_3 = {
+	set_variable = { var = pwc_seat_civil_admin_cand value = 3 }
+	pwc_se_rebuild_seat_civil_admin = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	set_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET appoint seat=seat_civil_admin cand=3 ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_civil_admin_4 = {
+	set_variable = { var = pwc_seat_civil_admin_cand value = 4 }
+	pwc_se_rebuild_seat_civil_admin = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	set_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET appoint seat=seat_civil_admin cand=4 ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_civil_admin_5 = {
+	set_variable = { var = pwc_seat_civil_admin_cand value = 5 }
+	pwc_se_rebuild_seat_civil_admin = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	set_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET appoint seat=seat_civil_admin cand=5 ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+pwc_se_dismiss_seat_civil_admin = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_civil_admin_cand value = 0 }
+	add_to_variable = { pwc_seat_civil_admin_ver = 1 }
+	clr_country_flag = pwc_flag_seat_civil_admin_active
+	log = "PWC CABINET dismiss seat=seat_civil_admin ver=[?ROOT.pwc_seat_civil_admin_ver]"
+}
+
+
+pwc_se_rebuild_seat_economic_planning = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0.15 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0.15 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0.15 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0.15 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0.1 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0.15 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_economic_planning_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_buildings_factor value = 0 }
+		set_variable = { var = pwc_seat_economic_planning_v_production_speed_infrastructure_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_economic_planning_1 = {
+	set_variable = { var = pwc_seat_economic_planning_cand value = 1 }
+	pwc_se_rebuild_seat_economic_planning = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	set_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET appoint seat=seat_economic_planning cand=1 ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_economic_planning_2 = {
+	set_variable = { var = pwc_seat_economic_planning_cand value = 2 }
+	pwc_se_rebuild_seat_economic_planning = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	set_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET appoint seat=seat_economic_planning cand=2 ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_economic_planning_3 = {
+	set_variable = { var = pwc_seat_economic_planning_cand value = 3 }
+	pwc_se_rebuild_seat_economic_planning = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	set_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET appoint seat=seat_economic_planning cand=3 ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_economic_planning_4 = {
+	set_variable = { var = pwc_seat_economic_planning_cand value = 4 }
+	pwc_se_rebuild_seat_economic_planning = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	set_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET appoint seat=seat_economic_planning cand=4 ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_economic_planning_5 = {
+	set_variable = { var = pwc_seat_economic_planning_cand value = 5 }
+	pwc_se_rebuild_seat_economic_planning = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	set_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET appoint seat=seat_economic_planning cand=5 ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+pwc_se_dismiss_seat_economic_planning = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_economic_planning_cand value = 0 }
+	add_to_variable = { pwc_seat_economic_planning_ver = 1 }
+	clr_country_flag = pwc_flag_seat_economic_planning_active
+	log = "PWC CABINET dismiss seat=seat_economic_planning ver=[?ROOT.pwc_seat_economic_planning_ver]"
+}
+
+
+pwc_se_rebuild_seat_finance_trade = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0.15 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0.15 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0.15 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = -0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = -0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0.1 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0.15 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = 0 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_finance_trade_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_finance_trade_1 = {
+	set_variable = { var = pwc_seat_finance_trade_cand value = 1 }
+	pwc_se_rebuild_seat_finance_trade = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	set_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET appoint seat=seat_finance_trade cand=1 ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_finance_trade_2 = {
+	set_variable = { var = pwc_seat_finance_trade_cand value = 2 }
+	pwc_se_rebuild_seat_finance_trade = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	set_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET appoint seat=seat_finance_trade cand=2 ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_finance_trade_3 = {
+	set_variable = { var = pwc_seat_finance_trade_cand value = 3 }
+	pwc_se_rebuild_seat_finance_trade = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	set_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET appoint seat=seat_finance_trade cand=3 ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_finance_trade_4 = {
+	set_variable = { var = pwc_seat_finance_trade_cand value = 4 }
+	pwc_se_rebuild_seat_finance_trade = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	set_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET appoint seat=seat_finance_trade cand=4 ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_finance_trade_5 = {
+	set_variable = { var = pwc_seat_finance_trade_cand value = 5 }
+	pwc_se_rebuild_seat_finance_trade = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	set_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET appoint seat=seat_finance_trade cand=5 ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+pwc_se_dismiss_seat_finance_trade = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_finance_trade_cand value = 0 }
+	add_to_variable = { pwc_seat_finance_trade_ver = 1 }
+	clr_country_flag = pwc_flag_seat_finance_trade_active
+	log = "PWC CABINET dismiss seat=seat_finance_trade ver=[?ROOT.pwc_seat_finance_trade_ver]"
+}
+
+
+pwc_se_rebuild_seat_science_education = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_science_education_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0.1 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_science_education_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0.1 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_science_education_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0.1 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_science_education_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0.1 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_science_education_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0.05 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0.1 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_science_education_v_research_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_army_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_navy_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_experience_gain_air_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_civilian_intel_factor value = 0 }
+		set_variable = { var = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_science_education_1 = {
+	set_variable = { var = pwc_seat_science_education_cand value = 1 }
+	pwc_se_rebuild_seat_science_education = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	set_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET appoint seat=seat_science_education cand=1 ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_science_education_2 = {
+	set_variable = { var = pwc_seat_science_education_cand value = 2 }
+	pwc_se_rebuild_seat_science_education = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	set_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET appoint seat=seat_science_education cand=2 ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_science_education_3 = {
+	set_variable = { var = pwc_seat_science_education_cand value = 3 }
+	pwc_se_rebuild_seat_science_education = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	set_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET appoint seat=seat_science_education cand=3 ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_science_education_4 = {
+	set_variable = { var = pwc_seat_science_education_cand value = 4 }
+	pwc_se_rebuild_seat_science_education = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	set_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET appoint seat=seat_science_education cand=4 ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_science_education_5 = {
+	set_variable = { var = pwc_seat_science_education_cand value = 5 }
+	pwc_se_rebuild_seat_science_education = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	set_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET appoint seat=seat_science_education cand=5 ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+pwc_se_dismiss_seat_science_education = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_science_education_cand value = 0 }
+	add_to_variable = { pwc_seat_science_education_ver = 1 }
+	clr_country_flag = pwc_flag_seat_science_education_active
+	log = "PWC CABINET dismiss seat=seat_science_education ver=[?ROOT.pwc_seat_science_education_ver]"
+}
+
+
+pwc_se_rebuild_seat_army_command = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_army_command_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0.15 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0.1 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0.12 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_army_command_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0.12 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0.15 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0.1 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0.5 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_army_command_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0.1 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0.15 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0.12 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 2 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_army_command_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0.12 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0.1 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0.15 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_army_command_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0.1 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0.12 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0.15 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_army_command_v_army_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_experience_gain_army value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_core_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_max_dig_in value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_special_forces_cap_flat value = 0 }
+		set_variable = { var = pwc_seat_army_command_v_army_org_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_army_command_1 = {
+	set_variable = { var = pwc_seat_army_command_cand value = 1 }
+	pwc_se_rebuild_seat_army_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET appoint seat=seat_army_command cand=1 ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_army_command_2 = {
+	set_variable = { var = pwc_seat_army_command_cand value = 2 }
+	pwc_se_rebuild_seat_army_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET appoint seat=seat_army_command cand=2 ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_army_command_3 = {
+	set_variable = { var = pwc_seat_army_command_cand value = 3 }
+	pwc_se_rebuild_seat_army_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET appoint seat=seat_army_command cand=3 ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_army_command_4 = {
+	set_variable = { var = pwc_seat_army_command_cand value = 4 }
+	pwc_se_rebuild_seat_army_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET appoint seat=seat_army_command cand=4 ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_army_command_5 = {
+	set_variable = { var = pwc_seat_army_command_cand value = 5 }
+	pwc_se_rebuild_seat_army_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET appoint seat=seat_army_command cand=5 ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+pwc_se_dismiss_seat_army_command = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_army_command_cand value = 0 }
+	add_to_variable = { pwc_seat_army_command_ver = 1 }
+	clr_country_flag = pwc_flag_seat_army_command_active
+	log = "PWC CABINET dismiss seat=seat_army_command ver=[?ROOT.pwc_seat_army_command_ver]"
+}
+
+
+pwc_se_rebuild_seat_navy_command = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_navy_command_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0.1 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0.12 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0.05 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_navy_command_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0.05 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0.12 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0.1 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 1 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_navy_command_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0.12 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0.05 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 2 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0.1 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_navy_command_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0.12 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 1 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0.15 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0.1 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_navy_command_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0.05 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0.12 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0.1 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = -0.1 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_navy_command_v_navy_max_range_factor value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_experience_gain_navy value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_convoy_escort_efficiency value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_prep_speed value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_invasion_capacity value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_naval_hit_chance value = 0 }
+		set_variable = { var = pwc_seat_navy_command_v_navy_visibility value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_navy_command_1 = {
+	set_variable = { var = pwc_seat_navy_command_cand value = 1 }
+	pwc_se_rebuild_seat_navy_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET appoint seat=seat_navy_command cand=1 ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_navy_command_2 = {
+	set_variable = { var = pwc_seat_navy_command_cand value = 2 }
+	pwc_se_rebuild_seat_navy_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET appoint seat=seat_navy_command cand=2 ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_navy_command_3 = {
+	set_variable = { var = pwc_seat_navy_command_cand value = 3 }
+	pwc_se_rebuild_seat_navy_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET appoint seat=seat_navy_command cand=3 ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_navy_command_4 = {
+	set_variable = { var = pwc_seat_navy_command_cand value = 4 }
+	pwc_se_rebuild_seat_navy_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET appoint seat=seat_navy_command cand=4 ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_navy_command_5 = {
+	set_variable = { var = pwc_seat_navy_command_cand value = 5 }
+	pwc_se_rebuild_seat_navy_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET appoint seat=seat_navy_command cand=5 ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+pwc_se_dismiss_seat_navy_command = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_navy_command_cand value = 0 }
+	add_to_variable = { pwc_seat_navy_command_ver = 1 }
+	clr_country_flag = pwc_flag_seat_navy_command_active
+	log = "PWC CABINET dismiss seat=seat_navy_command ver=[?ROOT.pwc_seat_navy_command_ver]"
+}
+
+
+pwc_se_rebuild_seat_air_command = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_air_command_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0.15 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0.05 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0.12 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_air_command_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0.12 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0.15 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_air_command_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0.15 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0.05 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0.12 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_air_command_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0.12 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = -0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_air_command_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0.1 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0.12 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0.1 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_air_command_v_air_attack_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_agility_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_superiority_detect_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_experience_gain_air value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_defence_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_accidents_factor value = 0 }
+		set_variable = { var = pwc_seat_air_command_v_air_ace_generation_chance_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_air_command_1 = {
+	set_variable = { var = pwc_seat_air_command_cand value = 1 }
+	pwc_se_rebuild_seat_air_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET appoint seat=seat_air_command cand=1 ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_air_command_2 = {
+	set_variable = { var = pwc_seat_air_command_cand value = 2 }
+	pwc_se_rebuild_seat_air_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET appoint seat=seat_air_command cand=2 ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_air_command_3 = {
+	set_variable = { var = pwc_seat_air_command_cand value = 3 }
+	pwc_se_rebuild_seat_air_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET appoint seat=seat_air_command cand=3 ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_air_command_4 = {
+	set_variable = { var = pwc_seat_air_command_cand value = 4 }
+	pwc_se_rebuild_seat_air_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET appoint seat=seat_air_command cand=4 ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_air_command_5 = {
+	set_variable = { var = pwc_seat_air_command_cand value = 5 }
+	pwc_se_rebuild_seat_air_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET appoint seat=seat_air_command cand=5 ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+pwc_se_dismiss_seat_air_command = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_air_command_cand value = 0 }
+	add_to_variable = { pwc_seat_air_command_ver = 1 }
+	clr_country_flag = pwc_flag_seat_air_command_active
+	log = "PWC CABINET dismiss seat=seat_air_command ver=[?ROOT.pwc_seat_air_command_ver]"
+}
+
+
+pwc_se_rebuild_seat_logistics_command = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = -0.15 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = -0.05 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = -0.05 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = -0.05 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0.15 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = -0.1 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = -0.15 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0.05 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_logistics_command_v_attrition value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_out_of_supply_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_supply_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_army_fuel_consumption_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_line_change_production_efficiency_factor value = 0 }
+		set_variable = { var = pwc_seat_logistics_command_v_equipment_capture_factor value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_logistics_command_1 = {
+	set_variable = { var = pwc_seat_logistics_command_cand value = 1 }
+	pwc_se_rebuild_seat_logistics_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET appoint seat=seat_logistics_command cand=1 ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_logistics_command_2 = {
+	set_variable = { var = pwc_seat_logistics_command_cand value = 2 }
+	pwc_se_rebuild_seat_logistics_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET appoint seat=seat_logistics_command cand=2 ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_logistics_command_3 = {
+	set_variable = { var = pwc_seat_logistics_command_cand value = 3 }
+	pwc_se_rebuild_seat_logistics_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET appoint seat=seat_logistics_command cand=3 ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_logistics_command_4 = {
+	set_variable = { var = pwc_seat_logistics_command_cand value = 4 }
+	pwc_se_rebuild_seat_logistics_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET appoint seat=seat_logistics_command cand=4 ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_logistics_command_5 = {
+	set_variable = { var = pwc_seat_logistics_command_cand value = 5 }
+	pwc_se_rebuild_seat_logistics_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET appoint seat=seat_logistics_command cand=5 ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+pwc_se_dismiss_seat_logistics_command = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_logistics_command_cand value = 0 }
+	add_to_variable = { pwc_seat_logistics_command_ver = 1 }
+	clr_country_flag = pwc_flag_seat_logistics_command_active
+	log = "PWC CABINET dismiss seat=seat_logistics_command ver=[?ROOT.pwc_seat_logistics_command_ver]"
+}
+
+
+pwc_se_rebuild_seat_mobilization_command = {
+	if = {
+		limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 1 compare = equals } }
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0.15 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = -0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 2 compare = equals } }
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0.1 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0.1 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 3 compare = equals } }
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0.1 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 4 compare = equals } }
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = -0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0.1 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 500 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 5 compare = equals } }
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0.1 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0.05 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = -0.1 }
+	}
+	else = {
+		set_variable = { var = pwc_seat_mobilization_command_v_army_morale_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_planning_speed value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_max_planning value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_dig_in_speed_factor value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_land_reinforce_rate value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_weekly_manpower value = 0 }
+		set_variable = { var = pwc_seat_mobilization_command_v_org_loss_when_moving value = 0 }
+	}
+}
+
+
+
+
+pwc_se_appoint_seat_mobilization_command_1 = {
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 1 }
+	pwc_se_rebuild_seat_mobilization_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET appoint seat=seat_mobilization_command cand=1 ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_mobilization_command_2 = {
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 2 }
+	pwc_se_rebuild_seat_mobilization_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET appoint seat=seat_mobilization_command cand=2 ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_mobilization_command_3 = {
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 3 }
+	pwc_se_rebuild_seat_mobilization_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET appoint seat=seat_mobilization_command cand=3 ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_mobilization_command_4 = {
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 4 }
+	pwc_se_rebuild_seat_mobilization_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET appoint seat=seat_mobilization_command cand=4 ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+
+
+pwc_se_appoint_seat_mobilization_command_5 = {
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 5 }
+	pwc_se_rebuild_seat_mobilization_command = yes
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	force_update_dynamic_modifier = yes
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	set_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET appoint seat=seat_mobilization_command cand=5 ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+pwc_se_dismiss_seat_mobilization_command = {
+	if = {
+		limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+	}
+	force_update_dynamic_modifier = yes
+	set_variable = { var = pwc_seat_mobilization_command_cand value = 0 }
+	add_to_variable = { pwc_seat_mobilization_command_ver = 1 }
+	clr_country_flag = pwc_flag_seat_mobilization_command_active
+	log = "PWC CABINET dismiss seat=seat_mobilization_command ver=[?ROOT.pwc_seat_mobilization_command_ver]"
+}
+
+
+pwc_se_reconcile_cabinet = {
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_civil_admin_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
+		}
+		pwc_se_rebuild_seat_civil_admin = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+		log = "PWC CABINET reconcile seat=seat_civil_admin restored cand=[?ROOT.pwc_seat_civil_admin_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_civil_admin_active }
+			has_dynamic_modifier = pwc_dm_seat_civil_admin
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
+		log = "PWC CABINET reconcile seat=seat_civil_admin removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_economic_planning_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
+		}
+		pwc_se_rebuild_seat_economic_planning = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+		log = "PWC CABINET reconcile seat=seat_economic_planning restored cand=[?ROOT.pwc_seat_economic_planning_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_economic_planning_active }
+			has_dynamic_modifier = pwc_dm_seat_economic_planning
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
+		log = "PWC CABINET reconcile seat=seat_economic_planning removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_finance_trade_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
+		}
+		pwc_se_rebuild_seat_finance_trade = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+		log = "PWC CABINET reconcile seat=seat_finance_trade restored cand=[?ROOT.pwc_seat_finance_trade_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_finance_trade_active }
+			has_dynamic_modifier = pwc_dm_seat_finance_trade
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
+		log = "PWC CABINET reconcile seat=seat_finance_trade removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_science_education_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_science_education }
+		}
+		pwc_se_rebuild_seat_science_education = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+		log = "PWC CABINET reconcile seat=seat_science_education restored cand=[?ROOT.pwc_seat_science_education_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_science_education_active }
+			has_dynamic_modifier = pwc_dm_seat_science_education
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
+		log = "PWC CABINET reconcile seat=seat_science_education removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_army_command_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_army_command }
+		}
+		pwc_se_rebuild_seat_army_command = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+		log = "PWC CABINET reconcile seat=seat_army_command restored cand=[?ROOT.pwc_seat_army_command_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_army_command_active }
+			has_dynamic_modifier = pwc_dm_seat_army_command
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
+		log = "PWC CABINET reconcile seat=seat_army_command removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_navy_command_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_navy_command }
+		}
+		pwc_se_rebuild_seat_navy_command = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+		log = "PWC CABINET reconcile seat=seat_navy_command restored cand=[?ROOT.pwc_seat_navy_command_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_navy_command_active }
+			has_dynamic_modifier = pwc_dm_seat_navy_command
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
+		log = "PWC CABINET reconcile seat=seat_navy_command removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_air_command_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_air_command }
+		}
+		pwc_se_rebuild_seat_air_command = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+		log = "PWC CABINET reconcile seat=seat_air_command restored cand=[?ROOT.pwc_seat_air_command_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_air_command_active }
+			has_dynamic_modifier = pwc_dm_seat_air_command
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
+		log = "PWC CABINET reconcile seat=seat_air_command removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_logistics_command_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
+		}
+		pwc_se_rebuild_seat_logistics_command = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+		log = "PWC CABINET reconcile seat=seat_logistics_command restored cand=[?ROOT.pwc_seat_logistics_command_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_logistics_command_active }
+			has_dynamic_modifier = pwc_dm_seat_logistics_command
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
+		log = "PWC CABINET reconcile seat=seat_logistics_command removed orphan modifier"
+	}
+	if = {
+		limit = {
+			has_country_flag = pwc_flag_seat_mobilization_command_active
+			NOT = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
+		}
+		pwc_se_rebuild_seat_mobilization_command = yes
+		add_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+		log = "PWC CABINET reconcile seat=seat_mobilization_command restored cand=[?ROOT.pwc_seat_mobilization_command_cand]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_seat_mobilization_command_active }
+			has_dynamic_modifier = pwc_dm_seat_mobilization_command
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
+		log = "PWC CABINET reconcile seat=seat_mobilization_command removed orphan modifier"
+	}
+	force_update_dynamic_modifier = yes
+}

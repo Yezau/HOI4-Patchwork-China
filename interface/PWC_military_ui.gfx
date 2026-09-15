@@ -1,0 +1,36 @@
+spriteTypes = {
+    spriteType = {
+        name = "PWC_GFX_military_division_window"
+        texturefile = "gfx/interface/pwc/ui/military/division_window.dds"
+        noOfFrames = 1
+    }
+}
+
+bitmapfonts = {
+    bitmapfont = {
+        name = "PWC_military_paper_16"
+        fontfiles = {
+            "gfx/fonts/hoi_16typewriter_inverted"
+            "gfx/fonts/hoi4_typewriter16_inverted"
+        }
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+            R = { 222 86 70 }
+            Y = { 238 201 35 }
+            H = { 238 201 35 }
+            T = { 255 255 255 }
+        }
+    }
+    bitmapfont_override = {
+        name = "PWC_military_paper_16"
+        fontfiles = {
+            "gfx/fonts/chinese/hoi4_typewriter16_inverted_1of4"
+            "gfx/fonts/chinese/hoi4_typewriter16_inverted_2of4"
+            "gfx/fonts/chinese/hoi4_typewriter16_inverted_3of4"
+            "gfx/fonts/chinese/hoi4_typewriter16_inverted_4of4"
+        }
+        languages = { "l_simp_chinese" }
+    }
+}

@@ -1,0 +1,58 @@
+
+defined_text = {
+	name = PWCGetFocusPanelGeoStatus
+	text = {
+		trigger = { has_country_flag = pwc_geo_island }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GEO_ISLAND
+	}
+	text = {
+		trigger = { has_country_flag = pwc_geo_coastal }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GEO_COASTAL
+	}
+	text = {
+		trigger = { has_country_flag = pwc_geo_frontier }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GEO_FRONTIER
+	}
+	text = {
+		trigger = { has_country_flag = pwc_geo_inland }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GEO_INLAND
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GEO_GENERIC
+	}
+}
+defined_text = {
+	name = PWCGetFocusPanelEndgameStatus
+	text = {
+		trigger = { has_completed_focus = endgame_offensive_doctrine }
+		localization_key = PWC_FOCUS_PANEL_STATUS_ENDGAME_OFFENSIVE_DOCTRINE
+	}
+	text = {
+		trigger = { has_completed_focus = endgame_defensive_doctrine }
+		localization_key = PWC_FOCUS_PANEL_STATUS_ENDGAME_DEFENSIVE_DOCTRINE
+	}
+	text = {
+		trigger = { has_completed_focus = endgame_technological_supremacy }
+		localization_key = PWC_FOCUS_PANEL_STATUS_ENDGAME_TECHNOLOGICAL_SUPREMACY
+	}
+	text = {
+		trigger = { has_completed_focus = endgame_integration_charter }
+		localization_key = PWC_FOCUS_PANEL_STATUS_ENDGAME_INTEGRATION_CHARTER
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = PWC_FOCUS_PANEL_STATUS_ENDGAME_PENDING
+	}
+}
+defined_text = {
+	name = PWCGetFocusPanelGateStatus
+	text = {
+		trigger = { pwc_st_max_tech_center_level_2 = yes }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GATE_MET
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = PWC_FOCUS_PANEL_STATUS_GATE_UNMET
+	}
+}

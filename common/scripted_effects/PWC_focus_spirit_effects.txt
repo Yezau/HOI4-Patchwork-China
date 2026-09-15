@@ -1,0 +1,2411 @@
+
+
+
+
+pwc_se_rebuild_focus_spirit_governance = {
+	set_variable = { pwc_fs_governance_count = 0 }
+	set_variable = { pwc_fs_governance_v_army_core_defence_factor = 0 }
+	set_variable = { pwc_fs_governance_v_foreign_subversive_activites = 0 }
+	set_variable = { pwc_fs_governance_v_mobilization_speed = 0 }
+	set_variable = { pwc_fs_governance_v_political_power_factor = 0 }
+	set_variable = { pwc_fs_governance_v_political_power_gain = 0 }
+	set_variable = { pwc_fs_governance_v_production_lack_of_resource_penalty_factor = 0 }
+	set_variable = { pwc_fs_governance_v_promote_cost_factor = 0 }
+	set_variable = { pwc_fs_governance_v_required_garrison_factor = 0 }
+	set_variable = { pwc_fs_governance_v_stability_factor = 0 }
+	set_variable = { pwc_fs_governance_v_war_support_factor = 0 }
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_gov_public_order }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_governance_v_political_power_gain = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_gov_civil_defense }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_army_core_defence_factor = 0.05 }
+		add_to_variable = { pwc_fs_governance_v_required_garrison_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_gov_streamlined_administration }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_political_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_governance_v_production_lack_of_resource_penalty_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_law_civil_service_exam }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_political_power_factor = 0.03 }
+		add_to_variable = { pwc_fs_governance_v_promote_cost_factor = -0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_law_emergency_powers }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_war_support_factor = 0.03 }
+		add_to_variable = { pwc_fs_governance_v_mobilization_speed = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_law_oversight_committee }
+		add_to_variable = { pwc_fs_governance_count = 1 }
+		add_to_variable = { pwc_fs_governance_v_political_power_gain = 0.03 }
+		add_to_variable = { pwc_fs_governance_v_foreign_subversive_activites = -0.1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = pwc_flag_focus_reward_gov_public_order
+				has_country_flag = pwc_flag_focus_reward_gov_civil_defense
+				has_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
+				has_country_flag = pwc_flag_focus_reward_law_civil_service_exam
+				has_country_flag = pwc_flag_focus_reward_law_emergency_powers
+				has_country_flag = pwc_flag_focus_reward_law_oversight_committee
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pwc_dm_focus_governance } }
+			}
+			add_dynamic_modifier = { modifier = pwc_dm_focus_governance }
+		}
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = pwc_dm_focus_governance } }
+		remove_dynamic_modifier = { modifier = pwc_dm_focus_governance }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+pwc_se_rebuild_focus_spirit_economy = {
+	set_variable = { pwc_fs_economy_count = 0 }
+	set_variable = { pwc_fs_economy_v_consumer_goods_factor = 0 }
+	set_variable = { pwc_fs_economy_v_fuel_gain_factor = 0 }
+	set_variable = { pwc_fs_economy_v_global_building_slots_factor = 0 }
+	set_variable = { pwc_fs_economy_v_industrial_capacity_factory = 0 }
+	set_variable = { pwc_fs_economy_v_industry_repair_factor = 0 }
+	set_variable = { pwc_fs_economy_v_license_purchase_cost = 0 }
+	set_variable = { pwc_fs_economy_v_local_resources_factor = 0 }
+	set_variable = { pwc_fs_economy_v_political_power_gain = 0 }
+	set_variable = { pwc_fs_economy_v_production_factory_max_efficiency_factor = 0 }
+	set_variable = { pwc_fs_economy_v_production_factory_start_efficiency_factor = 0 }
+	set_variable = { pwc_fs_economy_v_production_lack_of_resource_penalty_factor = 0 }
+	set_variable = { pwc_fs_economy_v_production_speed_buildings_factor = 0 }
+	set_variable = { pwc_fs_economy_v_research_speed_factor = 0 }
+	set_variable = { pwc_fs_economy_v_trade_opinion_factor = 0 }
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_construction_bureau }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { pwc_fs_economy_v_industry_repair_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_resource_survey }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_local_resources_factor = 0.1 }
+		add_to_variable = { pwc_fs_economy_v_production_lack_of_resource_penalty_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_finance_reform }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_consumer_goods_factor = -0.03 }
+		add_to_variable = { pwc_fs_economy_v_production_factory_start_efficiency_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_municipal_energy }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_fuel_gain_factor = 0.1 }
+		add_to_variable = { pwc_fs_economy_v_production_factory_max_efficiency_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_research_institute }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_research_speed_factor = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_trade_hub }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_trade_opinion_factor = 0.1 }
+		add_to_variable = { pwc_fs_economy_v_license_purchase_cost = -0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_industrial_capacity_factory = 0.05 }
+		add_to_variable = { pwc_fs_economy_v_global_building_slots_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_commerce_district }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_consumer_goods_factor = -0.03 }
+		add_to_variable = { pwc_fs_economy_v_political_power_gain = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse }
+		add_to_variable = { pwc_fs_economy_count = 1 }
+		add_to_variable = { pwc_fs_economy_v_industrial_capacity_factory = 0.05 }
+		add_to_variable = { pwc_fs_economy_v_production_speed_buildings_factor = 0.05 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = pwc_flag_focus_reward_eco_construction_bureau
+				has_country_flag = pwc_flag_focus_reward_eco_resource_survey
+				has_country_flag = pwc_flag_focus_reward_eco_finance_reform
+				has_country_flag = pwc_flag_focus_reward_eco_municipal_energy
+				has_country_flag = pwc_flag_focus_reward_eco_research_institute
+				has_country_flag = pwc_flag_focus_reward_eco_trade_hub
+				has_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
+				has_country_flag = pwc_flag_focus_reward_eco_commerce_district
+				has_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pwc_dm_focus_economy } }
+			}
+			add_dynamic_modifier = { modifier = pwc_dm_focus_economy }
+		}
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = pwc_dm_focus_economy } }
+		remove_dynamic_modifier = { modifier = pwc_dm_focus_economy }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+pwc_se_rebuild_focus_spirit_defense = {
+	set_variable = { pwc_fs_defense_count = 0 }
+	set_variable = { pwc_fs_defense_v_air_accidents_factor = 0 }
+	set_variable = { pwc_fs_defense_v_air_cas_efficiency = 0 }
+	set_variable = { pwc_fs_defense_v_air_home_defence_factor = 0 }
+	set_variable = { pwc_fs_defense_v_air_intercept_efficiency = 0 }
+	set_variable = { pwc_fs_defense_v_air_interception_detect_factor = 0 }
+	set_variable = { pwc_fs_defense_v_amphibious_invasion = 0 }
+	set_variable = { pwc_fs_defense_v_army_attack_factor = 0 }
+	set_variable = { pwc_fs_defense_v_army_core_defence_factor = 0 }
+	set_variable = { pwc_fs_defense_v_army_intel_factor = 0 }
+	set_variable = { pwc_fs_defense_v_army_morale_factor = 0 }
+	set_variable = { pwc_fs_defense_v_army_org_factor = 0 }
+	set_variable = { pwc_fs_defense_v_army_org_regain = 0 }
+	set_variable = { pwc_fs_defense_v_army_speed_factor = 0 }
+	set_variable = { pwc_fs_defense_v_attrition = 0 }
+	set_variable = { pwc_fs_defense_v_breakthrough_factor = 0 }
+	set_variable = { pwc_fs_defense_v_command_power_gain = 0 }
+	set_variable = { pwc_fs_defense_v_convoy_escort_efficiency = 0 }
+	set_variable = { pwc_fs_defense_v_convoy_raiding_efficiency_factor = 0 }
+	set_variable = { pwc_fs_defense_v_coordination_bonus = 0 }
+	set_variable = { pwc_fs_defense_v_experience_gain_army_factor = 0 }
+	set_variable = { pwc_fs_defense_v_ground_attack_factor = 0 }
+	set_variable = { pwc_fs_defense_v_land_reinforce_rate = 0 }
+	set_variable = { pwc_fs_defense_v_max_command_power = 0 }
+	set_variable = { pwc_fs_defense_v_max_dig_in_factor = 0 }
+	set_variable = { pwc_fs_defense_v_max_planning = 0 }
+	set_variable = { pwc_fs_defense_v_naval_coordination = 0 }
+	set_variable = { pwc_fs_defense_v_naval_detection = 0 }
+	set_variable = { pwc_fs_defense_v_naval_invasion_prep_speed = 0 }
+	set_variable = { pwc_fs_defense_v_naval_torpedo_hit_chance_factor = 0 }
+	set_variable = { pwc_fs_defense_v_planning_speed = 0 }
+	set_variable = { pwc_fs_defense_v_production_factory_max_efficiency_factor = 0 }
+	set_variable = { pwc_fs_defense_v_recon_factor = 0 }
+	set_variable = { pwc_fs_defense_v_spotting_chance = 0 }
+	set_variable = { pwc_fs_defense_v_supply_consumption_factor = 0 }
+	set_variable = { pwc_fs_defense_v_training_time_army_factor = 0 }
+	set_variable = { pwc_fs_defense_v_truck_attrition_factor = 0 }
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_defense_corps }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_org_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_urban_fortification }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_core_defence_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_officer_academy }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_experience_gain_army_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_combined_arms }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_attack_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_coordination_bonus = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_logistics_command }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_supply_consumption_factor = -0.1 }
+		add_to_variable = { pwc_fs_defense_v_truck_attrition_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_naval_command }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_naval_coordination = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_naval_detection = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_planning_speed = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_max_command_power = 50 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_staff_wargames }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_max_command_power = 30 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_operational_intelligence }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_intel_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_spotting_chance = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_reserve_system }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
+		add_to_variable = { pwc_fs_defense_v_army_morale_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_armaments_standardization }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_production_factory_max_efficiency_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_truck_attrition_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_joint_operations }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_max_command_power = 40 }
+		add_to_variable = { pwc_fs_defense_v_coordination_bonus = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_mobile_operations }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_army_speed_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_mobile_reserves }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_deep_exploitation }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_breakthrough_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_firepower_operations }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_recon_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_recon_factor = 0.03 }
+		add_to_variable = { pwc_fs_defense_v_coordination_bonus = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_breakthrough_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_max_planning = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_elastic_operations }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_army_morale_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_defense_in_depth }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_max_dig_in_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_counterstroke }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_breakthrough_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_air_denial }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_air_intercept_efficiency = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_air_accidents_factor = -0.05 }
+		add_to_variable = { pwc_fs_defense_v_air_home_defence_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_interception_network }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_air_interception_detect_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_air_intercept_efficiency = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_air_joint_strike }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_ground_attack_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_forward_air_control }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_air_cas_efficiency = 0.1 }
+		add_to_variable = { pwc_fs_defense_v_ground_attack_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_air_cas_efficiency = 0.1 }
+		add_to_variable = { pwc_fs_defense_v_ground_attack_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_littoral_denial }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_naval_coordination = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_naval_detection = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_spotting_chance = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_convoy_raiding_efficiency_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_naval_torpedo_hit_chance_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_sea_control }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_command_power_gain = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_convoy_escort_efficiency = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_convoy_command }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_convoy_escort_efficiency = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_naval_coordination = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_expeditionary_support }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_amphibious_invasion = 0.03 }
+		add_to_variable = { pwc_fs_defense_v_naval_invasion_prep_speed = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_field_workshops }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_attrition = -0.05 }
+		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_mil_medical_evacuation }
+		add_to_variable = { pwc_fs_defense_count = 1 }
+		add_to_variable = { pwc_fs_defense_v_army_morale_factor = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_training_time_army_factor = -0.05 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = pwc_flag_focus_reward_mil_defense_corps
+				has_country_flag = pwc_flag_focus_reward_mil_urban_fortification
+				has_country_flag = pwc_flag_focus_reward_mil_officer_academy
+				has_country_flag = pwc_flag_focus_reward_mil_combined_arms
+				has_country_flag = pwc_flag_focus_reward_mil_logistics_command
+				has_country_flag = pwc_flag_focus_reward_mil_naval_command
+				has_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
+				has_country_flag = pwc_flag_focus_reward_mil_staff_wargames
+				has_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
+				has_country_flag = pwc_flag_focus_reward_mil_reserve_system
+				has_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
+				has_country_flag = pwc_flag_focus_reward_mil_joint_operations
+				has_country_flag = pwc_flag_focus_reward_mil_mobile_operations
+				has_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
+				has_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
+				has_country_flag = pwc_flag_focus_reward_mil_firepower_operations
+				has_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
+				has_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
+				has_country_flag = pwc_flag_focus_reward_mil_elastic_operations
+				has_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
+				has_country_flag = pwc_flag_focus_reward_mil_counterstroke
+				has_country_flag = pwc_flag_focus_reward_mil_air_denial
+				has_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
+				has_country_flag = pwc_flag_focus_reward_mil_interception_network
+				has_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
+				has_country_flag = pwc_flag_focus_reward_mil_forward_air_control
+				has_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
+				has_country_flag = pwc_flag_focus_reward_mil_littoral_denial
+				has_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
+				has_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
+				has_country_flag = pwc_flag_focus_reward_mil_sea_control
+				has_country_flag = pwc_flag_focus_reward_mil_convoy_command
+				has_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
+				has_country_flag = pwc_flag_focus_reward_mil_field_workshops
+				has_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pwc_dm_focus_defense } }
+			}
+			add_dynamic_modifier = { modifier = pwc_dm_focus_defense }
+		}
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = pwc_dm_focus_defense } }
+		remove_dynamic_modifier = { modifier = pwc_dm_focus_defense }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+pwc_se_rebuild_focus_spirit_diplomacy = {
+	set_variable = { pwc_fs_diplomacy_count = 0 }
+	set_variable = { pwc_fs_diplomacy_v_army_intel_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_army_speed_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_civilian_intel_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_command_power_gain = 0 }
+	set_variable = { pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states = 0 }
+	set_variable = { pwc_fs_diplomacy_v_defensive_war_stability_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_enemy_justify_war_goal_time = 0 }
+	set_variable = { pwc_fs_diplomacy_v_improve_relations_maintain_cost_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_max_planning = 0 }
+	set_variable = { pwc_fs_diplomacy_v_opinion_gain_monthly_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_required_garrison_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_stability_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_supply_consumption_factor = 0 }
+	set_variable = { pwc_fs_diplomacy_v_war_support_factor = 0 }
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_foreign_office }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_improve_relations_maintain_cost_factor = -0.1 }
+		add_to_variable = { pwc_fs_diplomacy_v_opinion_gain_monthly_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_nap_framework }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_diplomacy_v_enemy_justify_war_goal_time = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_access_agreements }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_supply_consumption_factor = -0.05 }
+		add_to_variable = { pwc_fs_diplomacy_v_army_speed_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_intelligence_bureau }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_civilian_intel_factor = 0.05 }
+		add_to_variable = { pwc_fs_diplomacy_v_army_intel_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_war_room }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_max_planning = 0.03 }
+		add_to_variable = { pwc_fs_diplomacy_v_command_power_gain = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_propaganda_office }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_war_support_factor = 0.03 }
+		add_to_variable = { pwc_fs_diplomacy_v_defensive_war_stability_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_war_occupation_authority }
+		add_to_variable = { pwc_fs_diplomacy_count = 1 }
+		add_to_variable = { pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states = 0.03 }
+		add_to_variable = { pwc_fs_diplomacy_v_required_garrison_factor = -0.05 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = pwc_flag_focus_reward_war_foreign_office
+				has_country_flag = pwc_flag_focus_reward_war_nap_framework
+				has_country_flag = pwc_flag_focus_reward_war_access_agreements
+				has_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
+				has_country_flag = pwc_flag_focus_reward_war_war_room
+				has_country_flag = pwc_flag_focus_reward_war_propaganda_office
+				has_country_flag = pwc_flag_focus_reward_war_occupation_authority
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pwc_dm_focus_diplomacy } }
+			}
+			add_dynamic_modifier = { modifier = pwc_dm_focus_diplomacy }
+		}
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = pwc_dm_focus_diplomacy } }
+		remove_dynamic_modifier = { modifier = pwc_dm_focus_diplomacy }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+pwc_se_rebuild_focus_spirit_geography = {
+	set_variable = { pwc_fs_geography_count = 0 }
+	set_variable = { pwc_fs_geography_v_amphibious_invasion = 0 }
+	set_variable = { pwc_fs_geography_v_army_core_defence_factor = 0 }
+	set_variable = { pwc_fs_geography_v_army_defence_factor = 0 }
+	set_variable = { pwc_fs_geography_v_army_morale_factor = 0 }
+	set_variable = { pwc_fs_geography_v_army_speed_factor = 0 }
+	set_variable = { pwc_fs_geography_v_attrition = 0 }
+	set_variable = { pwc_fs_geography_v_conscription = 0 }
+	set_variable = { pwc_fs_geography_v_consumer_goods_factor = 0 }
+	set_variable = { pwc_fs_geography_v_convoy_escort_efficiency = 0 }
+	set_variable = { pwc_fs_geography_v_drift_defence_factor = 0 }
+	set_variable = { pwc_fs_geography_v_experience_gain_navy_factor = 0 }
+	set_variable = { pwc_fs_geography_v_industrial_capacity_dockyard = 0 }
+	set_variable = { pwc_fs_geography_v_industrial_capacity_factory = 0 }
+	set_variable = { pwc_fs_geography_v_industry_repair_factor = 0 }
+	set_variable = { pwc_fs_geography_v_land_bunker_effectiveness_factor = 0 }
+	set_variable = { pwc_fs_geography_v_local_resources_factor = 0 }
+	set_variable = { pwc_fs_geography_v_max_dig_in = 0 }
+	set_variable = { pwc_fs_geography_v_max_dig_in_factor = 0 }
+	set_variable = { pwc_fs_geography_v_monthly_population = 0 }
+	set_variable = { pwc_fs_geography_v_naval_accidents_chance = 0 }
+	set_variable = { pwc_fs_geography_v_naval_coordination = 0 }
+	set_variable = { pwc_fs_geography_v_naval_detection = 0 }
+	set_variable = { pwc_fs_geography_v_naval_invasion_capacity = 0 }
+	set_variable = { pwc_fs_geography_v_naval_invasion_penalty = 0 }
+	set_variable = { pwc_fs_geography_v_navy_max_range_factor = 0 }
+	set_variable = { pwc_fs_geography_v_out_of_supply_factor = 0 }
+	set_variable = { pwc_fs_geography_v_political_power_gain = 0 }
+	set_variable = { pwc_fs_geography_v_recon_factor = 0 }
+	set_variable = { pwc_fs_geography_v_refit_speed = 0 }
+	set_variable = { pwc_fs_geography_v_spotting_chance = 0 }
+	set_variable = { pwc_fs_geography_v_stability_factor = 0 }
+	set_variable = { pwc_fs_geography_v_supply_consumption_factor = 0 }
+	set_variable = { pwc_fs_geography_v_terrain_trait_xp_gain_factor = 0 }
+	set_variable = { pwc_fs_geography_v_trade_opinion_factor = 0 }
+	set_variable = { pwc_fs_geography_v_training_time_army_factor = 0 }
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_geography_v_experience_gain_navy_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_consumer_goods_factor = -0.03 }
+		add_to_variable = { pwc_fs_geography_v_local_resources_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_naval_invasion_capacity = 5 }
+		add_to_variable = { pwc_fs_geography_v_naval_invasion_penalty = -0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_spotting_chance = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_naval_detection = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_industry_repair_factor = 0.1 }
+		add_to_variable = { pwc_fs_geography_v_naval_accidents_chance = -0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_navy_max_range_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_convoy_escort_efficiency = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_naval_coordination = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_naval_detection = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_local_resources_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_monthly_population = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_consumer_goods_factor = -0.03 }
+		add_to_variable = { pwc_fs_geography_v_trade_opinion_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_amphibious_invasion = 0.1 }
+		add_to_variable = { pwc_fs_geography_v_naval_invasion_capacity = 3 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_industrial_capacity_dockyard = 0.1 }
+		add_to_variable = { pwc_fs_geography_v_refit_speed = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_recon_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_max_dig_in_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_land_bunker_effectiveness_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_attrition = -0.05 }
+		add_to_variable = { pwc_fs_geography_v_out_of_supply_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_training_time_army_factor = -0.05 }
+		add_to_variable = { pwc_fs_geography_v_terrain_trait_xp_gain_factor = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.1 }
+		add_to_variable = { pwc_fs_geography_v_army_defence_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_monthly_population = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_local_resources_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_food_security }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_geography_v_consumer_goods_factor = -0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_conscription = 0.03 }
+		add_to_variable = { pwc_fs_geography_v_industrial_capacity_factory = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_training_time_army_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_supply_consumption_factor = -0.05 }
+		add_to_variable = { pwc_fs_geography_v_army_speed_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.1 }
+		add_to_variable = { pwc_fs_geography_v_industrial_capacity_factory = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_geography_v_drift_defence_factor = 0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_stability_factor = 0.03 }
+		add_to_variable = { pwc_fs_geography_v_consumer_goods_factor = -0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_industrial_capacity_factory = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_supply_consumption_factor = -0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_training_time_army_factor = -0.03 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_army_core_defence_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_max_dig_in = 1 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_attrition = -0.05 }
+		add_to_variable = { pwc_fs_geography_v_army_morale_factor = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth }
+		add_to_variable = { pwc_fs_geography_count = 1 }
+		add_to_variable = { pwc_fs_geography_v_industry_repair_factor = 0.05 }
+		add_to_variable = { pwc_fs_geography_v_political_power_gain = 0.01 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
+				has_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
+				has_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
+				has_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
+				has_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
+				has_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
+				has_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
+				has_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
+				has_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
+				has_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
+				has_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
+				has_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
+				has_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
+				has_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
+				has_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
+				has_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
+				has_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
+				has_country_flag = pwc_flag_focus_reward_geo_inland_food_security
+				has_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
+				has_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
+				has_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
+				has_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
+				has_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
+				has_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
+				has_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
+				has_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
+				has_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
+				has_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
+				has_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
+				has_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pwc_dm_focus_geography } }
+			}
+			add_dynamic_modifier = { modifier = pwc_dm_focus_geography }
+		}
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = pwc_dm_focus_geography } }
+		remove_dynamic_modifier = { modifier = pwc_dm_focus_geography }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+pwc_se_grant_focus_spirit_gov_public_order = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_gov_public_order
+	if = {
+		limit = { has_idea = pwc_idea_gov_public_order }
+		remove_ideas = pwc_idea_gov_public_order
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_gov_civil_defense = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_gov_civil_defense
+	if = {
+		limit = { has_idea = pwc_idea_gov_civil_defense }
+		remove_ideas = pwc_idea_gov_civil_defense
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_gov_streamlined_administration = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
+	if = {
+		limit = { has_idea = pwc_idea_gov_streamlined_administration }
+		remove_ideas = pwc_idea_gov_streamlined_administration
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_law_civil_service_exam = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_law_civil_service_exam
+	if = {
+		limit = { has_idea = pwc_idea_law_civil_service_exam }
+		remove_ideas = pwc_idea_law_civil_service_exam
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_law_emergency_powers = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_law_emergency_powers
+	if = {
+		limit = { has_idea = pwc_idea_law_emergency_powers }
+		remove_ideas = pwc_idea_law_emergency_powers
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_law_oversight_committee = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_law_oversight_committee
+	if = {
+		limit = { has_idea = pwc_idea_law_oversight_committee }
+		remove_ideas = pwc_idea_law_oversight_committee
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+}
+
+pwc_se_grant_focus_spirit_eco_construction_bureau = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_construction_bureau
+	if = {
+		limit = { has_idea = pwc_idea_eco_construction_bureau }
+		remove_ideas = pwc_idea_eco_construction_bureau
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_resource_survey = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_resource_survey
+	if = {
+		limit = { has_idea = pwc_idea_eco_resource_survey }
+		remove_ideas = pwc_idea_eco_resource_survey
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_finance_reform = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_finance_reform
+	if = {
+		limit = { has_idea = pwc_idea_eco_finance_reform }
+		remove_ideas = pwc_idea_eco_finance_reform
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_municipal_energy = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_municipal_energy
+	if = {
+		limit = { has_idea = pwc_idea_eco_municipal_energy }
+		remove_ideas = pwc_idea_eco_municipal_energy
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_research_institute = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_research_institute
+	if = {
+		limit = { has_idea = pwc_idea_eco_research_institute }
+		remove_ideas = pwc_idea_eco_research_institute
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_trade_hub = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_trade_hub
+	if = {
+		limit = { has_idea = pwc_idea_eco_trade_hub }
+		remove_ideas = pwc_idea_eco_trade_hub
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_metropolitan_economy = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
+	if = {
+		limit = { has_idea = pwc_idea_eco_metropolitan_economy }
+		remove_ideas = pwc_idea_eco_metropolitan_economy
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_commerce_district = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_commerce_district
+	if = {
+		limit = { has_idea = pwc_idea_eco_commerce_district }
+		remove_ideas = pwc_idea_eco_commerce_district
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_eco_apex_powerhouse = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
+	if = {
+		limit = { has_idea = pwc_idea_eco_apex_powerhouse }
+		remove_ideas = pwc_idea_eco_apex_powerhouse
+	}
+	pwc_se_rebuild_focus_spirit_economy = yes
+}
+
+pwc_se_grant_focus_spirit_mil_defense_corps = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_defense_corps
+	if = {
+		limit = { has_idea = pwc_idea_mil_defense_corps }
+		remove_ideas = pwc_idea_mil_defense_corps
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_urban_fortification = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_urban_fortification
+	if = {
+		limit = { has_idea = pwc_idea_mil_urban_fortification }
+		remove_ideas = pwc_idea_mil_urban_fortification
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_officer_academy = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_officer_academy
+	if = {
+		limit = { has_idea = pwc_idea_mil_officer_academy }
+		remove_ideas = pwc_idea_mil_officer_academy
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_combined_arms = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_combined_arms
+	if = {
+		limit = { has_idea = pwc_idea_mil_combined_arms }
+		remove_ideas = pwc_idea_mil_combined_arms
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_logistics_command = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_logistics_command
+	if = {
+		limit = { has_idea = pwc_idea_mil_logistics_command }
+		remove_ideas = pwc_idea_mil_logistics_command
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_naval_command = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_naval_command
+	if = {
+		limit = { has_idea = pwc_idea_mil_naval_command }
+		remove_ideas = pwc_idea_mil_naval_command
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_apex_city_marshal = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
+	if = {
+		limit = { has_idea = pwc_idea_mil_apex_city_marshal }
+		remove_ideas = pwc_idea_mil_apex_city_marshal
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_war_foreign_office = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_foreign_office
+	if = {
+		limit = { has_idea = pwc_idea_war_foreign_office }
+		remove_ideas = pwc_idea_war_foreign_office
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_nap_framework = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_nap_framework
+	if = {
+		limit = { has_idea = pwc_idea_war_nap_framework }
+		remove_ideas = pwc_idea_war_nap_framework
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_access_agreements = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_access_agreements
+	if = {
+		limit = { has_idea = pwc_idea_war_access_agreements }
+		remove_ideas = pwc_idea_war_access_agreements
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_intelligence_bureau = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
+	if = {
+		limit = { has_idea = pwc_idea_war_intelligence_bureau }
+		remove_ideas = pwc_idea_war_intelligence_bureau
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_war_room = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_war_room
+	if = {
+		limit = { has_idea = pwc_idea_war_war_room }
+		remove_ideas = pwc_idea_war_war_room
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_propaganda_office = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_propaganda_office
+	if = {
+		limit = { has_idea = pwc_idea_war_propaganda_office }
+		remove_ideas = pwc_idea_war_propaganda_office
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_war_occupation_authority = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_war_occupation_authority
+	if = {
+		limit = { has_idea = pwc_idea_war_occupation_authority }
+		remove_ideas = pwc_idea_war_occupation_authority
+	}
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+}
+
+pwc_se_grant_focus_spirit_mil_staff_wargames = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_staff_wargames
+	if = {
+		limit = { has_idea = pwc_idea_mil_staff_wargames }
+		remove_ideas = pwc_idea_mil_staff_wargames
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_operational_intelligence = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
+	if = {
+		limit = { has_idea = pwc_idea_mil_operational_intelligence }
+		remove_ideas = pwc_idea_mil_operational_intelligence
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_reserve_system = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_reserve_system
+	if = {
+		limit = { has_idea = pwc_idea_mil_reserve_system }
+		remove_ideas = pwc_idea_mil_reserve_system
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_armaments_standardization = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
+	if = {
+		limit = { has_idea = pwc_idea_mil_armaments_standardization }
+		remove_ideas = pwc_idea_mil_armaments_standardization
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_joint_operations = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_joint_operations
+	if = {
+		limit = { has_idea = pwc_idea_mil_joint_operations }
+		remove_ideas = pwc_idea_mil_joint_operations
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_mobile_operations = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_mobile_operations
+	if = {
+		limit = { has_idea = pwc_idea_mil_mobile_operations }
+		remove_ideas = pwc_idea_mil_mobile_operations
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_mobile_reserves = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
+	if = {
+		limit = { has_idea = pwc_idea_mil_mobile_reserves }
+		remove_ideas = pwc_idea_mil_mobile_reserves
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_deep_exploitation = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
+	if = {
+		limit = { has_idea = pwc_idea_mil_deep_exploitation }
+		remove_ideas = pwc_idea_mil_deep_exploitation
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_firepower_operations = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_firepower_operations
+	if = {
+		limit = { has_idea = pwc_idea_mil_firepower_operations }
+		remove_ideas = pwc_idea_mil_firepower_operations
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_sensor_shooter_network = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
+	if = {
+		limit = { has_idea = pwc_idea_mil_sensor_shooter_network }
+		remove_ideas = pwc_idea_mil_sensor_shooter_network
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
+	if = {
+		limit = { has_idea = pwc_idea_mil_deliberate_breakthrough }
+		remove_ideas = pwc_idea_mil_deliberate_breakthrough
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_elastic_operations = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_elastic_operations
+	if = {
+		limit = { has_idea = pwc_idea_mil_elastic_operations }
+		remove_ideas = pwc_idea_mil_elastic_operations
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_defense_in_depth = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
+	if = {
+		limit = { has_idea = pwc_idea_mil_defense_in_depth }
+		remove_ideas = pwc_idea_mil_defense_in_depth
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_counterstroke = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_counterstroke
+	if = {
+		limit = { has_idea = pwc_idea_mil_counterstroke }
+		remove_ideas = pwc_idea_mil_counterstroke
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_air_denial = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_air_denial
+	if = {
+		limit = { has_idea = pwc_idea_mil_air_denial }
+		remove_ideas = pwc_idea_mil_air_denial
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_dispersed_airbases = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
+	if = {
+		limit = { has_idea = pwc_idea_mil_dispersed_airbases }
+		remove_ideas = pwc_idea_mil_dispersed_airbases
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_interception_network = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_interception_network
+	if = {
+		limit = { has_idea = pwc_idea_mil_interception_network }
+		remove_ideas = pwc_idea_mil_interception_network
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_air_joint_strike = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
+	if = {
+		limit = { has_idea = pwc_idea_mil_air_joint_strike }
+		remove_ideas = pwc_idea_mil_air_joint_strike
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_forward_air_control = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_forward_air_control
+	if = {
+		limit = { has_idea = pwc_idea_mil_forward_air_control }
+		remove_ideas = pwc_idea_mil_forward_air_control
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_battlefield_interdiction = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
+	if = {
+		limit = { has_idea = pwc_idea_mil_battlefield_interdiction }
+		remove_ideas = pwc_idea_mil_battlefield_interdiction
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_littoral_denial = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_littoral_denial
+	if = {
+		limit = { has_idea = pwc_idea_mil_littoral_denial }
+		remove_ideas = pwc_idea_mil_littoral_denial
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_coastal_sensor_line = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
+	if = {
+		limit = { has_idea = pwc_idea_mil_coastal_sensor_line }
+		remove_ideas = pwc_idea_mil_coastal_sensor_line
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_ambush_flotillas = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
+	if = {
+		limit = { has_idea = pwc_idea_mil_ambush_flotillas }
+		remove_ideas = pwc_idea_mil_ambush_flotillas
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_sea_control = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_sea_control
+	if = {
+		limit = { has_idea = pwc_idea_mil_sea_control }
+		remove_ideas = pwc_idea_mil_sea_control
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_convoy_command = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_convoy_command
+	if = {
+		limit = { has_idea = pwc_idea_mil_convoy_command }
+		remove_ideas = pwc_idea_mil_convoy_command
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_expeditionary_support = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
+	if = {
+		limit = { has_idea = pwc_idea_mil_expeditionary_support }
+		remove_ideas = pwc_idea_mil_expeditionary_support
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_field_workshops = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_field_workshops
+	if = {
+		limit = { has_idea = pwc_idea_mil_field_workshops }
+		remove_ideas = pwc_idea_mil_field_workshops
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_mil_medical_evacuation = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
+	if = {
+		limit = { has_idea = pwc_idea_mil_medical_evacuation }
+		remove_ideas = pwc_idea_mil_medical_evacuation
+	}
+	pwc_se_rebuild_focus_spirit_defense = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_maritime_identity = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_maritime_identity }
+		remove_ideas = pwc_idea_geo_island_maritime_identity
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_fishing_fleet = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_fishing_fleet }
+		remove_ideas = pwc_idea_geo_island_fishing_fleet
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_amphibious_training = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_amphibious_training }
+		remove_ideas = pwc_idea_geo_island_amphibious_training
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_coastal_watch = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_coastal_watch }
+		remove_ideas = pwc_idea_geo_island_coastal_watch
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_typhoon_readiness }
+		remove_ideas = pwc_idea_geo_island_typhoon_readiness
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_apex_ocean_lord }
+		remove_ideas = pwc_idea_geo_island_apex_ocean_lord
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_coast_sea_defense = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_sea_defense }
+		remove_ideas = pwc_idea_geo_coast_sea_defense
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_marine_fisheries }
+		remove_ideas = pwc_idea_geo_coast_marine_fisheries
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_coast_maritime_trade = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_maritime_trade }
+		remove_ideas = pwc_idea_geo_coast_maritime_trade
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_coast_beachhead_training = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_beachhead_training }
+		remove_ideas = pwc_idea_geo_coast_beachhead_training
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_apex_harbor_master }
+		remove_ideas = pwc_idea_geo_coast_apex_harbor_master
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_frontier_border_guard = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_border_guard }
+		remove_ideas = pwc_idea_geo_frontier_border_guard
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_frontier_fortification_line = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_fortification_line }
+		remove_ideas = pwc_idea_geo_frontier_fortification_line
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_strategic_depth }
+		remove_ideas = pwc_idea_geo_frontier_strategic_depth
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_martial_tradition }
+		remove_ideas = pwc_idea_geo_frontier_martial_tradition
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_apex_gatekeeper }
+		remove_ideas = pwc_idea_geo_frontier_apex_gatekeeper
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_agrarian_heartland }
+		remove_ideas = pwc_idea_geo_inland_agrarian_heartland
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_food_security = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_food_security
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_food_security }
+		remove_ideas = pwc_idea_geo_inland_food_security
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_labor_reserve = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_labor_reserve }
+		remove_ideas = pwc_idea_geo_inland_labor_reserve
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_militia_tradition = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_militia_tradition }
+		remove_ideas = pwc_idea_geo_inland_militia_tradition
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_interior_lines = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_interior_lines }
+		remove_ideas = pwc_idea_geo_inland_interior_lines
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_apex_heartland_fortress }
+		remove_ideas = pwc_idea_geo_inland_apex_heartland_fortress
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_city_cooperation = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_city_cooperation }
+		remove_ideas = pwc_idea_geo_generic_city_cooperation
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_public_welfare = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_public_welfare }
+		remove_ideas = pwc_idea_geo_generic_public_welfare
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_industrial_cooperation }
+		remove_ideas = pwc_idea_geo_generic_industrial_cooperation
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_logistics_coordination }
+		remove_ideas = pwc_idea_geo_generic_logistics_coordination
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_local_mobilization = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_local_mobilization }
+		remove_ideas = pwc_idea_geo_generic_local_mobilization
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_defense_cooperation }
+		remove_ideas = pwc_idea_geo_generic_defense_cooperation
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_emergency_support = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_emergency_support }
+		remove_ideas = pwc_idea_geo_generic_emergency_support
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = {
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		pwc_se_migrate_focus_spirits_country = yes
+	}
+	set_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_apex_city_commonwealth }
+		remove_ideas = pwc_idea_geo_generic_apex_city_commonwealth
+	}
+	pwc_se_rebuild_focus_spirit_geography = yes
+}
+
+pwc_se_migrate_focus_spirits_country = {
+	if = {
+		limit = { has_idea = pwc_idea_gov_public_order }
+		set_country_flag = pwc_flag_focus_reward_gov_public_order
+		remove_ideas = pwc_idea_gov_public_order
+	}
+	if = {
+		limit = { has_idea = pwc_idea_gov_civil_defense }
+		set_country_flag = pwc_flag_focus_reward_gov_civil_defense
+		remove_ideas = pwc_idea_gov_civil_defense
+	}
+	if = {
+		limit = { has_idea = pwc_idea_gov_streamlined_administration }
+		set_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
+		remove_ideas = pwc_idea_gov_streamlined_administration
+	}
+	if = {
+		limit = { has_idea = pwc_idea_law_civil_service_exam }
+		set_country_flag = pwc_flag_focus_reward_law_civil_service_exam
+		remove_ideas = pwc_idea_law_civil_service_exam
+	}
+	if = {
+		limit = { has_idea = pwc_idea_law_emergency_powers }
+		set_country_flag = pwc_flag_focus_reward_law_emergency_powers
+		remove_ideas = pwc_idea_law_emergency_powers
+	}
+	if = {
+		limit = { has_idea = pwc_idea_law_oversight_committee }
+		set_country_flag = pwc_flag_focus_reward_law_oversight_committee
+		remove_ideas = pwc_idea_law_oversight_committee
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_construction_bureau }
+		set_country_flag = pwc_flag_focus_reward_eco_construction_bureau
+		remove_ideas = pwc_idea_eco_construction_bureau
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_resource_survey }
+		set_country_flag = pwc_flag_focus_reward_eco_resource_survey
+		remove_ideas = pwc_idea_eco_resource_survey
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_finance_reform }
+		set_country_flag = pwc_flag_focus_reward_eco_finance_reform
+		remove_ideas = pwc_idea_eco_finance_reform
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_municipal_energy }
+		set_country_flag = pwc_flag_focus_reward_eco_municipal_energy
+		remove_ideas = pwc_idea_eco_municipal_energy
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_research_institute }
+		set_country_flag = pwc_flag_focus_reward_eco_research_institute
+		remove_ideas = pwc_idea_eco_research_institute
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_trade_hub }
+		set_country_flag = pwc_flag_focus_reward_eco_trade_hub
+		remove_ideas = pwc_idea_eco_trade_hub
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_metropolitan_economy }
+		set_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
+		remove_ideas = pwc_idea_eco_metropolitan_economy
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_commerce_district }
+		set_country_flag = pwc_flag_focus_reward_eco_commerce_district
+		remove_ideas = pwc_idea_eco_commerce_district
+	}
+	if = {
+		limit = { has_idea = pwc_idea_eco_apex_powerhouse }
+		set_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
+		remove_ideas = pwc_idea_eco_apex_powerhouse
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_defense_corps }
+		set_country_flag = pwc_flag_focus_reward_mil_defense_corps
+		remove_ideas = pwc_idea_mil_defense_corps
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_urban_fortification }
+		set_country_flag = pwc_flag_focus_reward_mil_urban_fortification
+		remove_ideas = pwc_idea_mil_urban_fortification
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_officer_academy }
+		set_country_flag = pwc_flag_focus_reward_mil_officer_academy
+		remove_ideas = pwc_idea_mil_officer_academy
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_combined_arms }
+		set_country_flag = pwc_flag_focus_reward_mil_combined_arms
+		remove_ideas = pwc_idea_mil_combined_arms
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_logistics_command }
+		set_country_flag = pwc_flag_focus_reward_mil_logistics_command
+		remove_ideas = pwc_idea_mil_logistics_command
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_naval_command }
+		set_country_flag = pwc_flag_focus_reward_mil_naval_command
+		remove_ideas = pwc_idea_mil_naval_command
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_apex_city_marshal }
+		set_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
+		remove_ideas = pwc_idea_mil_apex_city_marshal
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_foreign_office }
+		set_country_flag = pwc_flag_focus_reward_war_foreign_office
+		remove_ideas = pwc_idea_war_foreign_office
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_nap_framework }
+		set_country_flag = pwc_flag_focus_reward_war_nap_framework
+		remove_ideas = pwc_idea_war_nap_framework
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_access_agreements }
+		set_country_flag = pwc_flag_focus_reward_war_access_agreements
+		remove_ideas = pwc_idea_war_access_agreements
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_intelligence_bureau }
+		set_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
+		remove_ideas = pwc_idea_war_intelligence_bureau
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_war_room }
+		set_country_flag = pwc_flag_focus_reward_war_war_room
+		remove_ideas = pwc_idea_war_war_room
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_propaganda_office }
+		set_country_flag = pwc_flag_focus_reward_war_propaganda_office
+		remove_ideas = pwc_idea_war_propaganda_office
+	}
+	if = {
+		limit = { has_idea = pwc_idea_war_occupation_authority }
+		set_country_flag = pwc_flag_focus_reward_war_occupation_authority
+		remove_ideas = pwc_idea_war_occupation_authority
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_staff_wargames }
+		set_country_flag = pwc_flag_focus_reward_mil_staff_wargames
+		remove_ideas = pwc_idea_mil_staff_wargames
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_operational_intelligence }
+		set_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
+		remove_ideas = pwc_idea_mil_operational_intelligence
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_reserve_system }
+		set_country_flag = pwc_flag_focus_reward_mil_reserve_system
+		remove_ideas = pwc_idea_mil_reserve_system
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_armaments_standardization }
+		set_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
+		remove_ideas = pwc_idea_mil_armaments_standardization
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_joint_operations }
+		set_country_flag = pwc_flag_focus_reward_mil_joint_operations
+		remove_ideas = pwc_idea_mil_joint_operations
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_mobile_operations }
+		set_country_flag = pwc_flag_focus_reward_mil_mobile_operations
+		remove_ideas = pwc_idea_mil_mobile_operations
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_mobile_reserves }
+		set_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
+		remove_ideas = pwc_idea_mil_mobile_reserves
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_deep_exploitation }
+		set_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
+		remove_ideas = pwc_idea_mil_deep_exploitation
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_firepower_operations }
+		set_country_flag = pwc_flag_focus_reward_mil_firepower_operations
+		remove_ideas = pwc_idea_mil_firepower_operations
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_sensor_shooter_network }
+		set_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
+		remove_ideas = pwc_idea_mil_sensor_shooter_network
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_deliberate_breakthrough }
+		set_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
+		remove_ideas = pwc_idea_mil_deliberate_breakthrough
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_elastic_operations }
+		set_country_flag = pwc_flag_focus_reward_mil_elastic_operations
+		remove_ideas = pwc_idea_mil_elastic_operations
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_defense_in_depth }
+		set_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
+		remove_ideas = pwc_idea_mil_defense_in_depth
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_counterstroke }
+		set_country_flag = pwc_flag_focus_reward_mil_counterstroke
+		remove_ideas = pwc_idea_mil_counterstroke
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_air_denial }
+		set_country_flag = pwc_flag_focus_reward_mil_air_denial
+		remove_ideas = pwc_idea_mil_air_denial
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_dispersed_airbases }
+		set_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
+		remove_ideas = pwc_idea_mil_dispersed_airbases
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_interception_network }
+		set_country_flag = pwc_flag_focus_reward_mil_interception_network
+		remove_ideas = pwc_idea_mil_interception_network
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_air_joint_strike }
+		set_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
+		remove_ideas = pwc_idea_mil_air_joint_strike
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_forward_air_control }
+		set_country_flag = pwc_flag_focus_reward_mil_forward_air_control
+		remove_ideas = pwc_idea_mil_forward_air_control
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_battlefield_interdiction }
+		set_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
+		remove_ideas = pwc_idea_mil_battlefield_interdiction
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_littoral_denial }
+		set_country_flag = pwc_flag_focus_reward_mil_littoral_denial
+		remove_ideas = pwc_idea_mil_littoral_denial
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_coastal_sensor_line }
+		set_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
+		remove_ideas = pwc_idea_mil_coastal_sensor_line
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_ambush_flotillas }
+		set_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
+		remove_ideas = pwc_idea_mil_ambush_flotillas
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_sea_control }
+		set_country_flag = pwc_flag_focus_reward_mil_sea_control
+		remove_ideas = pwc_idea_mil_sea_control
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_convoy_command }
+		set_country_flag = pwc_flag_focus_reward_mil_convoy_command
+		remove_ideas = pwc_idea_mil_convoy_command
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_expeditionary_support }
+		set_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
+		remove_ideas = pwc_idea_mil_expeditionary_support
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_field_workshops }
+		set_country_flag = pwc_flag_focus_reward_mil_field_workshops
+		remove_ideas = pwc_idea_mil_field_workshops
+	}
+	if = {
+		limit = { has_idea = pwc_idea_mil_medical_evacuation }
+		set_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
+		remove_ideas = pwc_idea_mil_medical_evacuation
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_maritime_identity }
+		set_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
+		remove_ideas = pwc_idea_geo_island_maritime_identity
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_fishing_fleet }
+		set_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
+		remove_ideas = pwc_idea_geo_island_fishing_fleet
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_amphibious_training }
+		set_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
+		remove_ideas = pwc_idea_geo_island_amphibious_training
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_coastal_watch }
+		set_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
+		remove_ideas = pwc_idea_geo_island_coastal_watch
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_typhoon_readiness }
+		set_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
+		remove_ideas = pwc_idea_geo_island_typhoon_readiness
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_island_apex_ocean_lord }
+		set_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
+		remove_ideas = pwc_idea_geo_island_apex_ocean_lord
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_sea_defense }
+		set_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
+		remove_ideas = pwc_idea_geo_coast_sea_defense
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_marine_fisheries }
+		set_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
+		remove_ideas = pwc_idea_geo_coast_marine_fisheries
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_maritime_trade }
+		set_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
+		remove_ideas = pwc_idea_geo_coast_maritime_trade
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_beachhead_training }
+		set_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
+		remove_ideas = pwc_idea_geo_coast_beachhead_training
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_coast_apex_harbor_master }
+		set_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
+		remove_ideas = pwc_idea_geo_coast_apex_harbor_master
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_border_guard }
+		set_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
+		remove_ideas = pwc_idea_geo_frontier_border_guard
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_fortification_line }
+		set_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
+		remove_ideas = pwc_idea_geo_frontier_fortification_line
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_strategic_depth }
+		set_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
+		remove_ideas = pwc_idea_geo_frontier_strategic_depth
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_martial_tradition }
+		set_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
+		remove_ideas = pwc_idea_geo_frontier_martial_tradition
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_frontier_apex_gatekeeper }
+		set_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
+		remove_ideas = pwc_idea_geo_frontier_apex_gatekeeper
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_agrarian_heartland }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
+		remove_ideas = pwc_idea_geo_inland_agrarian_heartland
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_food_security }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_food_security
+		remove_ideas = pwc_idea_geo_inland_food_security
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_labor_reserve }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
+		remove_ideas = pwc_idea_geo_inland_labor_reserve
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_militia_tradition }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
+		remove_ideas = pwc_idea_geo_inland_militia_tradition
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_interior_lines }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
+		remove_ideas = pwc_idea_geo_inland_interior_lines
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_inland_apex_heartland_fortress }
+		set_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
+		remove_ideas = pwc_idea_geo_inland_apex_heartland_fortress
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_city_cooperation }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
+		remove_ideas = pwc_idea_geo_generic_city_cooperation
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_public_welfare }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
+		remove_ideas = pwc_idea_geo_generic_public_welfare
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_industrial_cooperation }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
+		remove_ideas = pwc_idea_geo_generic_industrial_cooperation
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_logistics_coordination }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
+		remove_ideas = pwc_idea_geo_generic_logistics_coordination
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_local_mobilization }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
+		remove_ideas = pwc_idea_geo_generic_local_mobilization
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_defense_cooperation }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
+		remove_ideas = pwc_idea_geo_generic_defense_cooperation
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_emergency_support }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
+		remove_ideas = pwc_idea_geo_generic_emergency_support
+	}
+	if = {
+		limit = { has_idea = pwc_idea_geo_generic_apex_city_commonwealth }
+		set_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
+		remove_ideas = pwc_idea_geo_generic_apex_city_commonwealth
+	}
+	pwc_se_rebuild_focus_spirit_governance = yes
+	pwc_se_rebuild_focus_spirit_economy = yes
+	pwc_se_rebuild_focus_spirit_defense = yes
+	pwc_se_rebuild_focus_spirit_diplomacy = yes
+	pwc_se_rebuild_focus_spirit_geography = yes
+	set_country_flag = pwc_flag_focus_spirits_v6
+}
+
+
+
+pwc_se_migrate_focus_spirits_once = {
+	if = {
+		limit = { NOT = { has_global_flag = pwc_flag_focus_spirits_world_v6 } }
+		every_possible_country = {
+			limit = { pwc_st_is_city_country = yes }
+			pwc_se_migrate_focus_spirits_country = yes
+		}
+		set_global_flag = pwc_flag_focus_spirits_world_v6
+	}
+}

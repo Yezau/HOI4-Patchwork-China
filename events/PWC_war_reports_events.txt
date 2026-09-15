@@ -1,0 +1,44 @@
+
+add_namespace = pwc_war_milestone
+
+
+news_event = {
+    id = pwc_war_milestone.1
+    title = pwc_war_milestone.1.t
+    desc = pwc_war_milestone.1.d
+    picture = PWC_GFX_event_news_default
+    is_triggered_only = yes
+
+    option = {
+        name = pwc_war_milestone.1.a
+        set_country_flag = pwc_flag_war_milestone_50_read
+    }
+}
+
+
+news_event = {
+    id = pwc_war_milestone.2
+    title = pwc_war_milestone.2.t
+    desc = pwc_war_milestone.2.d
+    picture = PWC_GFX_event_news_default
+    is_triggered_only = yes
+
+    option = {
+        name = pwc_war_milestone.2.a
+        set_country_flag = pwc_flag_war_milestone_10_read
+    }
+}
+
+
+news_event = {
+    id = pwc_war_milestone.3
+    title = pwc_war_milestone.3.t
+    desc = pwc_war_milestone.3.d
+    picture = PWC_GFX_event_news_default
+    is_triggered_only = yes
+
+    option = {
+        name = pwc_war_milestone.3.a
+        set_country_flag = pwc_flag_war_milestone_3_read
+    }
+}

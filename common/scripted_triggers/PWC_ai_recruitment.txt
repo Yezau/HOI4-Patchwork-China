@@ -1,0 +1,1657 @@
+
+pwc_st_ai_recruitment_stage_motorization = {
+    num_of_military_factories > 11
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+}
+pwc_st_ai_recruitment_stage_mechanization = {
+    num_of_military_factories > 29
+    OR = { ai_wants_divisions > 59 num_divisions > 59 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+}
+pwc_st_ai_recruitment_stage_combined_arms = {
+    num_of_military_factories > 74
+    OR = { ai_wants_divisions > 119 num_divisions > 119 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+}
+pwc_st_ai_recruitment_stage_large_industry = {
+    num_of_military_factories > 149
+    OR = { ai_wants_divisions > 179 num_divisions > 179 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+}
+pwc_st_ai_recruitment_stage_mass_industry = {
+    num_of_military_factories > 299
+    OR = { ai_wants_divisions > 239 num_divisions > 239 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+}
+pwc_st_ai_recruitment_motorization_ready = {
+    num_of_military_factories > 11
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+}
+pwc_st_ai_recruitment_mechanization_ready = {
+    num_of_military_factories > 29
+    OR = { ai_wants_divisions > 59 num_divisions > 59 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+}
+pwc_st_ai_recruitment_heavy_armor_ready = {
+    num_of_military_factories > 29
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+}
+pwc_st_ai_recruitment_safe = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_ready = {
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_anti_air > 23 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 169 }
+    has_equipment = { pwc_platform_heavy_tank > 159 }
+    has_equipment = { pwc_platform_medium_tank > 799 }
+    has_equipment = { pwc_platform_tank_destroyer > 179 }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_anti_air > 8 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 63 }
+    has_equipment = { pwc_platform_heavy_tank > 59 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+    has_equipment = { pwc_platform_tank_destroyer > 67 }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+    has_manpower > 15929
+    has_equipment = { pwc_equipment_anti_air > 14 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 106 }
+    has_equipment = { pwc_platform_heavy_tank > 99 }
+    has_equipment = { pwc_platform_medium_tank > 499 }
+    has_equipment = { pwc_platform_tank_destroyer > 112 }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_ready = {
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_stock_high = {
+    has_equipment = { pwc_equipment_anti_air > 23 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 189 }
+    has_equipment = { pwc_platform_heavy_tank > 159 }
+    has_equipment = { pwc_platform_medium_tank > 799 }
+    has_equipment = { pwc_platform_tank_destroyer > 179 }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_stock_low = {
+    has_equipment = { pwc_equipment_anti_air > 8 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 71 }
+    has_equipment = { pwc_platform_heavy_tank > 59 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+    has_equipment = { pwc_platform_tank_destroyer > 67 }
+}
+pwc_st_ai_recruitment_armored_36w_project_assault_engineer_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+    has_manpower > 15929
+    has_equipment = { pwc_equipment_anti_air > 14 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 118 }
+    has_equipment = { pwc_platform_heavy_tank > 99 }
+    has_equipment = { pwc_platform_medium_tank > 499 }
+    has_equipment = { pwc_platform_tank_destroyer > 112 }
+}
+pwc_st_ai_recruitment_armored_36w_project_armored_recovery_ready = {
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_field_recovery
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+}
+pwc_st_ai_recruitment_armored_36w_project_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_anti_air > 23 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 189 }
+    has_equipment = { pwc_platform_heavy_tank > 159 }
+    has_equipment = { pwc_platform_medium_tank > 799 }
+    has_equipment = { pwc_platform_tank_destroyer > 179 }
+}
+pwc_st_ai_recruitment_armored_36w_project_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_anti_air > 8 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 71 }
+    has_equipment = { pwc_platform_heavy_tank > 59 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+    has_equipment = { pwc_platform_tank_destroyer > 67 }
+}
+pwc_st_ai_recruitment_armored_36w_project_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    is_special_project_completed = sp:pwc_project_field_recovery
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+    has_manpower > 15879
+    has_equipment = { pwc_equipment_anti_air > 14 }
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 118 }
+    has_equipment = { pwc_platform_heavy_tank > 99 }
+    has_equipment = { pwc_platform_medium_tank > 499 }
+    has_equipment = { pwc_platform_tank_destroyer > 112 }
+}
+pwc_st_ai_recruitment_armored_36w_default_ready = {
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+}
+pwc_st_ai_recruitment_armored_36w_default_stock_high = {
+    has_equipment = { pwc_equipment_anti_air > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 209 }
+    has_equipment = { pwc_platform_heavy_tank > 159 }
+    has_equipment = { pwc_platform_medium_tank > 799 }
+    has_equipment = { pwc_platform_tank_destroyer > 179 }
+}
+pwc_st_ai_recruitment_armored_36w_default_stock_low = {
+    has_equipment = { pwc_equipment_anti_air > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 78 }
+    has_equipment = { pwc_platform_heavy_tank > 59 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+    has_equipment = { pwc_platform_tank_destroyer > 67 }
+}
+pwc_st_ai_recruitment_armored_36w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 29 num_divisions > 29 }
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t2
+    has_tech = pwc_tech_army_t1
+    has_tech = pwc_tech_army_t2
+    has_tech = pwc_tech_logistics_support_t1
+    has_tech = pwc_tech_logistics_t1
+    AND = {
+        num_of_military_factories > 29
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t2
+        has_tech = pwc_tech_army_t1
+        has_tech = pwc_tech_army_t2
+        has_tech = pwc_tech_logistics_support_t1
+        has_tech = pwc_tech_logistics_t1
+    }
+    has_manpower > 15879
+    has_equipment = { pwc_equipment_anti_air > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 131 }
+    has_equipment = { pwc_platform_heavy_tank > 99 }
+    has_equipment = { pwc_platform_medium_tank > 499 }
+    has_equipment = { pwc_platform_tank_destroyer > 112 }
+}
+pwc_st_ai_recruitment_armored_18w_default_ready = {
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+}
+pwc_st_ai_recruitment_armored_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 139 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+    has_equipment = { pwc_platform_tank_destroyer > 19 }
+}
+pwc_st_ai_recruitment_armored_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 52 }
+    has_equipment = { pwc_platform_medium_tank > 112 }
+    has_equipment = { pwc_platform_tank_destroyer > 7 }
+}
+pwc_st_ai_recruitment_armored_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+    has_manpower > 10559
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 87 }
+    has_equipment = { pwc_platform_medium_tank > 187 }
+    has_equipment = { pwc_platform_tank_destroyer > 12 }
+}
+pwc_st_ai_recruitment_armored_entry_18w_default_ready = {
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+}
+pwc_st_ai_recruitment_armored_entry_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 59 }
+    has_equipment = { pwc_equipment_support > 139 }
+    has_equipment = { pwc_platform_medium_tank > 299 }
+}
+pwc_st_ai_recruitment_armored_entry_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 22 }
+    has_equipment = { pwc_equipment_support > 52 }
+    has_equipment = { pwc_platform_medium_tank > 112 }
+}
+pwc_st_ai_recruitment_armored_entry_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_t1
+    has_manpower > 10379
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 37 }
+    has_equipment = { pwc_equipment_support > 87 }
+    has_equipment = { pwc_platform_medium_tank > 187 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_support_heavy_mortar_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    is_special_project_completed = sp:pwc_project_precision_production
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_support_heavy_mortar_stock_high = {
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_heavy_mortar > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_support > 69 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_support_heavy_mortar_stock_low = {
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_heavy_mortar > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_support > 26 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_support_heavy_mortar_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    is_special_project_completed = sp:pwc_project_precision_production
+    has_manpower > 7279
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_heavy_mortar > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_support > 43 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_stock_high = {
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_support > 59 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_stock_low = {
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_support > 22 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_assault_engineer_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    has_manpower > 6929
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_support > 37 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_support_heavy_mortar_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    is_special_project_completed = sp:pwc_project_precision_production
+}
+pwc_st_ai_recruitment_infantry_12w_project_support_heavy_mortar_stock_high = {
+    has_equipment = { pwc_equipment_heavy_mortar > 23 }
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_support > 89 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_support_heavy_mortar_stock_low = {
+    has_equipment = { pwc_equipment_heavy_mortar > 8 }
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_support > 33 }
+}
+pwc_st_ai_recruitment_infantry_12w_project_support_heavy_mortar_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    is_special_project_completed = sp:pwc_project_precision_production
+    has_manpower > 7229
+    has_equipment = { pwc_equipment_heavy_mortar > 14 }
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_support > 56 }
+}
+pwc_st_ai_recruitment_infantry_12w_default_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+}
+pwc_st_ai_recruitment_infantry_12w_default_stock_high = {
+    has_equipment = { pwc_equipment_infantry > 1339 }
+    has_equipment = { pwc_equipment_support > 79 }
+}
+pwc_st_ai_recruitment_infantry_12w_default_stock_low = {
+    has_equipment = { pwc_equipment_infantry > 502 }
+    has_equipment = { pwc_equipment_support > 29 }
+}
+pwc_st_ai_recruitment_infantry_12w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_engineers
+    has_manpower > 6879
+    has_equipment = { pwc_equipment_infantry > 837 }
+    has_equipment = { pwc_equipment_support > 49 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_ready = {
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    is_special_project_completed = sp:pwc_project_precision_production
+    num_of_military_factories > 11
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_heavy_mortar > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_support > 89 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_heavy_mortar > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_support > 33 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    is_special_project_completed = sp:pwc_project_precision_production
+    num_of_military_factories > 11
+    has_manpower > 8579
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_heavy_mortar > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_support > 56 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_ready = {
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    num_of_military_factories > 11
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_support > 79 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_support > 29 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    num_of_military_factories > 11
+    has_manpower > 8229
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_support > 49 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_ready = {
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_firepower_t3
+    is_special_project_completed = sp:pwc_project_precision_production
+    num_of_military_factories > 11
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_heavy_mortar > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_support > 109 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_heavy_mortar > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_support > 41 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_firepower_t3
+    is_special_project_completed = sp:pwc_project_precision_production
+    num_of_military_factories > 11
+    has_manpower > 8529
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_heavy_mortar > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_support > 68 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_default_ready = {
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    num_of_military_factories > 11
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_support > 99 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_support > 37 }
+}
+pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    surrender_progress < 0.15
+    OR = { ai_wants_divisions > 23 num_divisions > 23 }
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t1
+    num_of_military_factories > 11
+    has_manpower > 8179
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_support > 62 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 459 }
+    has_equipment = { pwc_equipment_support > 109 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 172 }
+    has_equipment = { pwc_equipment_support > 41 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+    has_manpower > 9929
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 287 }
+    has_equipment = { pwc_equipment_support > 68 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 459 }
+    has_equipment = { pwc_equipment_support > 79 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 172 }
+    has_equipment = { pwc_equipment_support > 29 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+    has_manpower > 9429
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 287 }
+    has_equipment = { pwc_equipment_support > 49 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+}
+pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 459 }
+    has_equipment = { pwc_equipment_support > 129 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 172 }
+    has_equipment = { pwc_equipment_support > 48 }
+}
+pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+    has_manpower > 9879
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 287 }
+    has_equipment = { pwc_equipment_support > 81 }
+}
+pwc_st_ai_recruitment_mobile_18w_default_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+}
+pwc_st_ai_recruitment_mobile_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_motorized > 459 }
+    has_equipment = { pwc_equipment_support > 99 }
+}
+pwc_st_ai_recruitment_mobile_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_motorized > 172 }
+    has_equipment = { pwc_equipment_support > 37 }
+}
+pwc_st_ai_recruitment_mobile_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    OR = {
+        has_country_flag = pwc_geo_coastal
+        has_country_flag = pwc_geo_inland
+        AND = {
+            num_of_military_factories > 11
+            OR = { ai_wants_divisions > 23 num_divisions > 23 }
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_communications
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_army_firepower_t1
+        }
+    }
+    has_manpower > 9379
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_motorized > 287 }
+    has_equipment = { pwc_equipment_support > 62 }
+}
+pwc_st_ai_recruitment_mountain_18w_project_support_heavy_mortar_ready = {
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_sf_mountain_t1
+    is_special_project_completed = sp:pwc_project_precision_production
+    OR = {
+        has_country_flag = pwc_geo_frontier
+        has_country_flag = pwc_geo_island
+    }
+}
+pwc_st_ai_recruitment_mountain_18w_project_support_heavy_mortar_stock_high = {
+    has_equipment = { pwc_equipment_anti_tank > 31 }
+    has_equipment = { pwc_equipment_heavy_mortar > 23 }
+    has_equipment = { pwc_equipment_infantry > 2739 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_special_forces > 359 }
+    has_equipment = { pwc_equipment_support > 109 }
+}
+pwc_st_ai_recruitment_mountain_18w_project_support_heavy_mortar_stock_low = {
+    has_equipment = { pwc_equipment_anti_tank > 11 }
+    has_equipment = { pwc_equipment_heavy_mortar > 8 }
+    has_equipment = { pwc_equipment_infantry > 1027 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_special_forces > 134 }
+    has_equipment = { pwc_equipment_support > 41 }
+}
+pwc_st_ai_recruitment_mountain_18w_project_support_heavy_mortar_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_army_firepower_t3
+    has_tech = pwc_tech_sf_mountain_t1
+    is_special_project_completed = sp:pwc_project_precision_production
+    OR = {
+        has_country_flag = pwc_geo_frontier
+        has_country_flag = pwc_geo_island
+    }
+    has_manpower > 10649
+    has_equipment = { pwc_equipment_anti_tank > 19 }
+    has_equipment = { pwc_equipment_heavy_mortar > 14 }
+    has_equipment = { pwc_equipment_infantry > 1712 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_special_forces > 224 }
+    has_equipment = { pwc_equipment_support > 68 }
+}
+pwc_st_ai_recruitment_mountain_18w_default_ready = {
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_sf_mountain_t1
+    OR = {
+        has_country_flag = pwc_geo_frontier
+        has_country_flag = pwc_geo_island
+    }
+}
+pwc_st_ai_recruitment_mountain_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_anti_tank > 31 }
+    has_equipment = { pwc_equipment_infantry > 2739 }
+    has_equipment = { pwc_equipment_motorized > 19 }
+    has_equipment = { pwc_equipment_special_forces > 359 }
+    has_equipment = { pwc_equipment_support > 99 }
+}
+pwc_st_ai_recruitment_mountain_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_anti_tank > 11 }
+    has_equipment = { pwc_equipment_infantry > 1027 }
+    has_equipment = { pwc_equipment_motorized > 7 }
+    has_equipment = { pwc_equipment_special_forces > 134 }
+    has_equipment = { pwc_equipment_support > 37 }
+}
+pwc_st_ai_recruitment_mountain_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_industry
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech_sf_mountain_t1
+    OR = {
+        has_country_flag = pwc_geo_frontier
+        has_country_flag = pwc_geo_island
+    }
+    has_manpower > 10299
+    has_equipment = { pwc_equipment_anti_tank > 19 }
+    has_equipment = { pwc_equipment_infantry > 1712 }
+    has_equipment = { pwc_equipment_motorized > 12 }
+    has_equipment = { pwc_equipment_special_forces > 224 }
+    has_equipment = { pwc_equipment_support > 62 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 39 }
+    has_equipment = { pwc_equipment_support > 109 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 14 }
+    has_equipment = { pwc_equipment_support > 41 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+    has_manpower > 9929
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 24 }
+    has_equipment = { pwc_equipment_support > 68 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t1
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 23 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 39 }
+    has_equipment = { pwc_equipment_support > 79 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 8 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 14 }
+    has_equipment = { pwc_equipment_support > 29 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_infantry_t2
+    has_tech = pwc_tech_army_mobility_t1
+    is_special_project_completed = sp:pwc_project_flexible_manufacturing
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+    has_manpower > 9429
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_assault_engineer_vehicle > 14 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 24 }
+    has_equipment = { pwc_equipment_support > 49 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_stock_high = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 29 }
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 39 }
+    has_equipment = { pwc_equipment_support > 129 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_stock_low = {
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 11 }
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 14 }
+    has_equipment = { pwc_equipment_support > 48 }
+}
+pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    has_tech = pwc_tech_army_mobility_t2
+    is_special_project_completed = sp:pwc_project_field_recovery
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+    has_manpower > 9879
+    has_equipment = { pwc_equipment_armored_recovery_vehicle > 18 }
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 24 }
+    has_equipment = { pwc_equipment_support > 81 }
+}
+pwc_st_ai_recruitment_mechanized_18w_default_ready = {
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+}
+pwc_st_ai_recruitment_mechanized_18w_default_stock_high = {
+    has_equipment = { pwc_equipment_artillery > 95 }
+    has_equipment = { pwc_equipment_infantry > 1419 }
+    has_equipment = { pwc_equipment_mechanized > 479 }
+    has_equipment = { pwc_equipment_motorized > 39 }
+    has_equipment = { pwc_equipment_support > 99 }
+}
+pwc_st_ai_recruitment_mechanized_18w_default_stock_low = {
+    has_equipment = { pwc_equipment_artillery > 35 }
+    has_equipment = { pwc_equipment_infantry > 532 }
+    has_equipment = { pwc_equipment_mechanized > 179 }
+    has_equipment = { pwc_equipment_motorized > 14 }
+    has_equipment = { pwc_equipment_support > 37 }
+}
+pwc_st_ai_recruitment_mechanized_18w_default_field_ready = {
+    is_ai = yes
+    OR = {
+        has_country_flag = pwc_ai_balanced
+        has_country_flag = pwc_ai_industrial
+        has_country_flag = pwc_ai_defense
+        has_country_flag = pwc_ai_mobility
+        has_country_flag = pwc_ai_coastal
+        has_country_flag = pwc_ai_air_power
+    }
+    has_fuel > 1999
+    surrender_progress < 0.15
+    has_tech = pwc_tech0_basic_infantry
+    has_tech = pwc_tech0_communications
+    has_tech = pwc_tech0_engineers
+    has_tech = pwc_tech0_transport
+    has_tech = pwc_tech_army_firepower_t1
+    has_tech = pwc_tech_army_mobility_t1
+    AND = {
+        num_of_military_factories > 29
+        OR = { ai_wants_divisions > 59 num_divisions > 59 }
+        has_tech = pwc_tech0_basic_infantry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_firepower_t1
+        has_tech = pwc_tech_army_mobility_t1
+    }
+    has_manpower > 9379
+    has_equipment = { pwc_equipment_artillery > 59 }
+    has_equipment = { pwc_equipment_infantry > 887 }
+    has_equipment = { pwc_equipment_mechanized > 299 }
+    has_equipment = { pwc_equipment_motorized > 24 }
+    has_equipment = { pwc_equipment_support > 62 }
+}

@@ -1,0 +1,726 @@
+
+pwc_se_refresh_regional_identity = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            pwc_st_city_alive = yes
+            exists = yes
+        }
+        if = {
+            limit = {
+                pwc_st_regional_identity_central = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_CENTRAL } }
+                set_cosmetic_tag = PWC_TERRITORY_CENTRAL
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_east_china = yes
+                capital_scope = { pwc_st_regional_state_east_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_EAST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_EAST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_southwest_china = yes
+                capital_scope = { pwc_st_regional_state_southwest_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_northwest_china = yes
+                capital_scope = { pwc_st_regional_state_northwest_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_central_china = yes
+                capital_scope = { pwc_st_regional_state_central_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_south_china = yes
+                capital_scope = { pwc_st_regional_state_south_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_north_china = yes
+                capital_scope = { pwc_st_regional_state_north_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_northeast_china = yes
+                capital_scope = { pwc_st_regional_state_northeast_china = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_east_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_EAST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_EAST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_southwest_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_northwest_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_central_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_south_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_north_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_northeast_china = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA } }
+                set_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guangdong = yes
+                capital_scope = { pwc_st_regional_state_guangdong = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUANGDONG } }
+                set_cosmetic_tag = PWC_TERRITORY_GUANGDONG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_sichuan = yes
+                capital_scope = { pwc_st_regional_state_sichuan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SICHUAN } }
+                set_cosmetic_tag = PWC_TERRITORY_SICHUAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_henan = yes
+                capital_scope = { pwc_st_regional_state_henan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HENAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HENAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hubei = yes
+                capital_scope = { pwc_st_regional_state_hubei = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HUBEI } }
+                set_cosmetic_tag = PWC_TERRITORY_HUBEI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_taiwan = yes
+                capital_scope = { pwc_st_regional_state_taiwan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_TAIWAN } }
+                set_cosmetic_tag = PWC_TERRITORY_TAIWAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_anhui = yes
+                capital_scope = { pwc_st_regional_state_anhui = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_ANHUI } }
+                set_cosmetic_tag = PWC_TERRITORY_ANHUI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shandong = yes
+                capital_scope = { pwc_st_regional_state_shandong = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHANDONG } }
+                set_cosmetic_tag = PWC_TERRITORY_SHANDONG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_yunnan = yes
+                capital_scope = { pwc_st_regional_state_yunnan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_YUNNAN } }
+                set_cosmetic_tag = PWC_TERRITORY_YUNNAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_gansu = yes
+                capital_scope = { pwc_st_regional_state_gansu = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GANSU } }
+                set_cosmetic_tag = PWC_TERRITORY_GANSU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guangxi = yes
+                capital_scope = { pwc_st_regional_state_guangxi = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUANGXI } }
+                set_cosmetic_tag = PWC_TERRITORY_GUANGXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hunan = yes
+                capital_scope = { pwc_st_regional_state_hunan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HUNAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HUNAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_liaoning = yes
+                capital_scope = { pwc_st_regional_state_liaoning = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_LIAONING } }
+                set_cosmetic_tag = PWC_TERRITORY_LIAONING
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_xinjiang = yes
+                capital_scope = { pwc_st_regional_state_xinjiang = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_XINJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_XINJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_heilongjiang = yes
+                capital_scope = { pwc_st_regional_state_heilongjiang = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jiangsu = yes
+                capital_scope = { pwc_st_regional_state_jiangsu = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JIANGSU } }
+                set_cosmetic_tag = PWC_TERRITORY_JIANGSU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_inner_mongolia = yes
+                capital_scope = { pwc_st_regional_state_inner_mongolia = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA } }
+                set_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_fujian = yes
+                capital_scope = { pwc_st_regional_state_fujian = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_FUJIAN } }
+                set_cosmetic_tag = PWC_TERRITORY_FUJIAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hebei = yes
+                capital_scope = { pwc_st_regional_state_hebei = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HEBEI } }
+                set_cosmetic_tag = PWC_TERRITORY_HEBEI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jiangxi = yes
+                capital_scope = { pwc_st_regional_state_jiangxi = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JIANGXI } }
+                set_cosmetic_tag = PWC_TERRITORY_JIANGXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shanxi = yes
+                capital_scope = { pwc_st_regional_state_shanxi = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHANXI } }
+                set_cosmetic_tag = PWC_TERRITORY_SHANXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_zhejiang = yes
+                capital_scope = { pwc_st_regional_state_zhejiang = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_ZHEJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_ZHEJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shaanxi = yes
+                capital_scope = { pwc_st_regional_state_shaanxi = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHAANXI } }
+                set_cosmetic_tag = PWC_TERRITORY_SHAANXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guizhou = yes
+                capital_scope = { pwc_st_regional_state_guizhou = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUIZHOU } }
+                set_cosmetic_tag = PWC_TERRITORY_GUIZHOU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jilin = yes
+                capital_scope = { pwc_st_regional_state_jilin = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JILIN } }
+                set_cosmetic_tag = PWC_TERRITORY_JILIN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_xizang = yes
+                capital_scope = { pwc_st_regional_state_xizang = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_XIZANG } }
+                set_cosmetic_tag = PWC_TERRITORY_XIZANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_qinghai = yes
+                capital_scope = { pwc_st_regional_state_qinghai = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_QINGHAI } }
+                set_cosmetic_tag = PWC_TERRITORY_QINGHAI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_ningxia = yes
+                capital_scope = { pwc_st_regional_state_ningxia = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NINGXIA } }
+                set_cosmetic_tag = PWC_TERRITORY_NINGXIA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hainan = yes
+                capital_scope = { pwc_st_regional_state_hainan = yes }
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HAINAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HAINAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guangdong = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUANGDONG } }
+                set_cosmetic_tag = PWC_TERRITORY_GUANGDONG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_sichuan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SICHUAN } }
+                set_cosmetic_tag = PWC_TERRITORY_SICHUAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_henan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HENAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HENAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hubei = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HUBEI } }
+                set_cosmetic_tag = PWC_TERRITORY_HUBEI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_taiwan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_TAIWAN } }
+                set_cosmetic_tag = PWC_TERRITORY_TAIWAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_anhui = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_ANHUI } }
+                set_cosmetic_tag = PWC_TERRITORY_ANHUI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shandong = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHANDONG } }
+                set_cosmetic_tag = PWC_TERRITORY_SHANDONG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_yunnan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_YUNNAN } }
+                set_cosmetic_tag = PWC_TERRITORY_YUNNAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_gansu = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GANSU } }
+                set_cosmetic_tag = PWC_TERRITORY_GANSU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guangxi = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUANGXI } }
+                set_cosmetic_tag = PWC_TERRITORY_GUANGXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hunan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HUNAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HUNAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_liaoning = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_LIAONING } }
+                set_cosmetic_tag = PWC_TERRITORY_LIAONING
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_xinjiang = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_XINJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_XINJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_heilongjiang = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jiangsu = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JIANGSU } }
+                set_cosmetic_tag = PWC_TERRITORY_JIANGSU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_inner_mongolia = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA } }
+                set_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_fujian = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_FUJIAN } }
+                set_cosmetic_tag = PWC_TERRITORY_FUJIAN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hebei = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HEBEI } }
+                set_cosmetic_tag = PWC_TERRITORY_HEBEI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jiangxi = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JIANGXI } }
+                set_cosmetic_tag = PWC_TERRITORY_JIANGXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shanxi = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHANXI } }
+                set_cosmetic_tag = PWC_TERRITORY_SHANXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_zhejiang = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_ZHEJIANG } }
+                set_cosmetic_tag = PWC_TERRITORY_ZHEJIANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_shaanxi = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_SHAANXI } }
+                set_cosmetic_tag = PWC_TERRITORY_SHAANXI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_guizhou = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_GUIZHOU } }
+                set_cosmetic_tag = PWC_TERRITORY_GUIZHOU
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_jilin = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_JILIN } }
+                set_cosmetic_tag = PWC_TERRITORY_JILIN
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_xizang = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_XIZANG } }
+                set_cosmetic_tag = PWC_TERRITORY_XIZANG
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_qinghai = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_QINGHAI } }
+                set_cosmetic_tag = PWC_TERRITORY_QINGHAI
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_ningxia = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_NINGXIA } }
+                set_cosmetic_tag = PWC_TERRITORY_NINGXIA
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_regional_identity_hainan = yes
+            }
+            if = {
+                limit = { NOT = { has_cosmetic_tag = PWC_TERRITORY_HAINAN } }
+                set_cosmetic_tag = PWC_TERRITORY_HAINAN
+            }
+        }
+        else_if = {
+            limit = { OR = {
+                has_cosmetic_tag = PWC_TERRITORY_CENTRAL
+                has_cosmetic_tag = PWC_TERRITORY_EAST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_GUANGDONG
+                has_cosmetic_tag = PWC_TERRITORY_SICHUAN
+                has_cosmetic_tag = PWC_TERRITORY_HENAN
+                has_cosmetic_tag = PWC_TERRITORY_HUBEI
+                has_cosmetic_tag = PWC_TERRITORY_TAIWAN
+                has_cosmetic_tag = PWC_TERRITORY_ANHUI
+                has_cosmetic_tag = PWC_TERRITORY_SHANDONG
+                has_cosmetic_tag = PWC_TERRITORY_YUNNAN
+                has_cosmetic_tag = PWC_TERRITORY_GANSU
+                has_cosmetic_tag = PWC_TERRITORY_GUANGXI
+                has_cosmetic_tag = PWC_TERRITORY_HUNAN
+                has_cosmetic_tag = PWC_TERRITORY_LIAONING
+                has_cosmetic_tag = PWC_TERRITORY_XINJIANG
+                has_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG
+                has_cosmetic_tag = PWC_TERRITORY_JIANGSU
+                has_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA
+                has_cosmetic_tag = PWC_TERRITORY_FUJIAN
+                has_cosmetic_tag = PWC_TERRITORY_HEBEI
+                has_cosmetic_tag = PWC_TERRITORY_JIANGXI
+                has_cosmetic_tag = PWC_TERRITORY_SHANXI
+                has_cosmetic_tag = PWC_TERRITORY_ZHEJIANG
+                has_cosmetic_tag = PWC_TERRITORY_SHAANXI
+                has_cosmetic_tag = PWC_TERRITORY_GUIZHOU
+                has_cosmetic_tag = PWC_TERRITORY_JILIN
+                has_cosmetic_tag = PWC_TERRITORY_XIZANG
+                has_cosmetic_tag = PWC_TERRITORY_QINGHAI
+                has_cosmetic_tag = PWC_TERRITORY_NINGXIA
+                has_cosmetic_tag = PWC_TERRITORY_HAINAN
+                has_cosmetic_tag = PWC_TERRITORY_SHANGHAI
+            } }
+            drop_cosmetic_tag = yes
+        }
+    }
+}

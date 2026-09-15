@@ -1,0 +1,151 @@
+
+
+pwc_doctrine_manoeuvre = {
+    track = operations
+    name = pwc_doctrine_manoeuvre
+    description = pwc_doctrine_manoeuvre_desc
+    icon = GFX_PWC_subdoctrine_manoeuvre
+    xp_cost = 100
+    xp_type = army
+    available = {
+        has_completed_focus = mil_mobile_operations
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_mobility
+        }
+    }
+    category_all_infantry = {
+        max_organisation = 5
+    }
+    supply_consumption_factor = 0.05
+    rewards = {
+        delegation = {
+            land_reinforce_rate = 0.03
+        }
+        march = {
+            category_all_armor = {
+                maximum_speed = 0.09
+            }
+        }
+        cohesion = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            org_loss_when_moving = -0.1
+        }
+        breach = {
+            category_all_armor = {
+                breakthrough = 0.09
+            }
+        }
+        tempo = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            max_planning = -0.05
+        }
+    }
+}
+
+pwc_doctrine_fires = {
+    track = operations
+    name = pwc_doctrine_fires
+    description = pwc_doctrine_fires_desc
+    icon = GFX_PWC_subdoctrine_fires
+    xp_cost = 100
+    xp_type = army
+    available = {
+        has_completed_focus = mil_firepower_operations
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_industrial
+        }
+    }
+    category_all_infantry = {
+        max_organisation = 5
+    }
+    army_speed_factor = -0.05
+    rewards = {
+        observers = {
+            recon_factor = 0.1
+        }
+        plot = {
+            max_planning = 0.05
+        }
+        liaison = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            land_reinforce_rate = 0.03
+        }
+        concentration = {
+            category_artillery = {
+                soft_attack = 0.09
+            }
+        }
+        method = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            planning_speed = 0.1
+            supply_consumption_factor = 0.05
+        }
+    }
+}
+
+pwc_doctrine_elastic = {
+    track = operations
+    name = pwc_doctrine_elastic
+    description = pwc_doctrine_elastic_desc
+    icon = GFX_PWC_subdoctrine_elastic
+    xp_cost = 100
+    xp_type = army
+    available = {
+        has_completed_focus = mil_elastic_operations
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_defense
+        }
+    }
+    category_all_infantry = {
+        max_organisation = 5
+    }
+    army_attack_factor = -0.03
+    rewards = {
+        positions = {
+            dig_in_speed_factor = 0.15
+        }
+        rotation = {
+            category_all_infantry = {
+                default_morale = 0.1
+            }
+        }
+        reserves = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            land_reinforce_rate = 0.03
+        }
+        depth = {
+            category_army = {
+                defense = 0.06
+            }
+        }
+        recovery = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            org_loss_when_moving = -0.1
+        }
+    }
+}
+

@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+pwc_focus_detail_inlay = {
+	window_name = pwc_focus_detail_panel_window
+	internal = yes
+	visible = {
+		pwc_st_is_city_country = yes
+	}
+
+	scripted_images = {
+		pwc_focus_panel_geo_icon = {
+			GFX_idea_generic_navy_bonus = { has_country_flag = pwc_geo_island }
+			GFX_goal_generic_navy_cruiser = { has_country_flag = pwc_geo_coastal }
+			GFX_idea_generic_fortify_the_borders = { has_country_flag = pwc_geo_frontier }
+			GFX_idea_generic_build_infrastructure = { has_country_flag = pwc_geo_inland }
+			GFX_idea_generic_pp_unity_bonus = yes
+		}
+		pwc_focus_panel_endgame_icon = {
+			GFX_goal_generic_position_armies = { has_completed_focus = endgame_offensive_doctrine }
+			GFX_goal_generic_defence = { has_completed_focus = endgame_defensive_doctrine }
+			GFX_idea_generic_intel_bonus = { has_completed_focus = endgame_technological_supremacy }
+			GFX_goal_generic_forceful_treaty = { has_completed_focus = endgame_integration_charter }
+			GFX_goal_unknown = yes
+		}
+		pwc_focus_panel_gate_icon = {
+			GFX_goal_generic_construction = { pwc_st_max_tech_center_level_2 = yes }
+			GFX_goal_unknown = yes
+		}
+	}
+
+	scripted_progressbars = {
+		pwc_focus_panel_progress_bar = {
+			progress = pwc_var_focus_progress
+		}
+	}
+
+	scripted_buttons = {
+		pwc_focus_panel_guide_button = {
+			available = { is_ai = no }
+			click_effect = {
+				clr_country_flag = pwc_flag_welcome_dismissed
+				clr_country_flag = pwc_flag_welcome_buildings_page
+				clr_country_flag = pwc_flag_welcome_overview_page
+			}
+		}
+	}
+}

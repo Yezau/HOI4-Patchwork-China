@@ -1,0 +1,37 @@
+
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_north_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_north_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_northeast_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_northeast_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_east_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_east_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_central_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_central_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_south_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_south_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_southwest_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_southwest_china }
+                }
+                if = {
+                    limit = { has_dynamic_modifier = pwc_frontend_region_northwest_china }
+                    remove_dynamic_modifier = { modifier = pwc_frontend_region_northwest_china }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = { pwc_st_is_city_country = yes }
+				pwc_se_reconcile_research_institutes = yes
+			}
+		}
+	}
+}

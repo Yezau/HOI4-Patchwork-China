@@ -1,0 +1,2706 @@
+
+
+
+
+
+
+
+
+
+
+
+
+pwc_mio_armor = {
+	name = PWC_MIO_ARMOR
+	icon = PWC_GFX_mio_armor
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_armor
+		}
+	}
+	equipment_type = {
+		pwc_platform_light_tank
+		pwc_platform_medium_tank
+		pwc_platform_heavy_tank
+		pwc_platform_tank_destroyer
+	}
+	research_categories = {
+		pwc_tech_armor
+	}
+	initial_trait = {
+		name = PWC_MIO_ARMOR_INITIAL
+		equipment_bonus = {
+			armor_value = 0.03
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_anchor
+		name = PWC_MIO_ARMOR_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_armor_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_a_1
+		name = PWC_MIO_ARMOR_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_armor_chain_b_1
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_a_2
+		name = PWC_MIO_ARMOR_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_armor_chain_a_1
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_a_3
+		name = PWC_MIO_ARMOR_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_armor_chain_a_2
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_a_4
+		name = PWC_MIO_ARMOR_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_armor_chain_a_3
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_b_1
+		name = PWC_MIO_ARMOR_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_armor_value
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_armor_chain_a_1
+		}
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_b_2
+		name = PWC_MIO_ARMOR_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_armor_value
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_armor_chain_b_1
+		}
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_b_3
+		name = PWC_MIO_ARMOR_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_armor_value
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_armor_chain_b_2
+		}
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_chain_b_4
+		name = PWC_MIO_ARMOR_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_armor_value
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_armor_chain_b_3
+		}
+		equipment_bonus = {
+			armor_value = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_1
+		name = PWC_MIO_ARMOR_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_armor_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_2
+		name = PWC_MIO_ARMOR_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_armor_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_3
+		name = PWC_MIO_ARMOR_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_armor_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_4
+		name = PWC_MIO_ARMOR_SIDE_4
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_armor_side_2
+		}
+		production_bonus = {
+			production_conversion_speed_factor = 0.09
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_5
+		name = PWC_MIO_ARMOR_SIDE_5
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_armor_chain_a_2
+			pwc_mio_armor_chain_b_2
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_6
+		name = PWC_MIO_ARMOR_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_armor_side_7
+		name = PWC_MIO_ARMOR_SIDE_7
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_armor_anchor
+		}
+		equipment_bonus = {
+			armor_value = 0.03
+			hard_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_infantry = {
+	name = PWC_MIO_INFANTRY
+	icon = PWC_GFX_mio_infantry
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_infantry
+		}
+	}
+	equipment_type = {
+		pwc_equipment_infantry
+	}
+	research_categories = {
+		pwc_tech_army
+	}
+	initial_trait = {
+		name = PWC_MIO_INFANTRY_INITIAL
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_anchor
+		name = PWC_MIO_INFANTRY_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_infantry_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_a_1
+		name = PWC_MIO_INFANTRY_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_infantry_chain_b_1
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_a_2
+		name = PWC_MIO_INFANTRY_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_a_1
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_a_3
+		name = PWC_MIO_INFANTRY_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_a_2
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_a_4
+		name = PWC_MIO_INFANTRY_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_a_3
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_b_1
+		name = PWC_MIO_INFANTRY_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_infantry_chain_a_1
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_b_2
+		name = PWC_MIO_INFANTRY_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_b_1
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_b_3
+		name = PWC_MIO_INFANTRY_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_b_2
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_chain_b_4
+		name = PWC_MIO_INFANTRY_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_b_3
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_1
+		name = PWC_MIO_INFANTRY_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_infantry_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_2
+		name = PWC_MIO_INFANTRY_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_infantry_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_3
+		name = PWC_MIO_INFANTRY_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_infantry_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_4
+		name = PWC_MIO_INFANTRY_SIDE_4
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_infantry_side_2
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_5
+		name = PWC_MIO_INFANTRY_SIDE_5
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_infantry_chain_a_2
+			pwc_mio_infantry_chain_b_2
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_6
+		name = PWC_MIO_INFANTRY_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_infantry_side_7
+		name = PWC_MIO_INFANTRY_SIDE_7
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_infantry_anchor
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+}
+
+pwc_mio_firepower = {
+	name = PWC_MIO_FIREPOWER
+	icon = PWC_GFX_mio_firepower
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_firepower
+		}
+	}
+	equipment_type = {
+		pwc_equipment_artillery
+		pwc_equipment_rocket
+		pwc_equipment_anti_tank
+		pwc_equipment_anti_air
+		pwc_equipment_heavy_mortar
+	}
+	research_categories = {
+		pwc_tech_armor
+		pwc_tech_army
+	}
+	initial_trait = {
+		name = PWC_MIO_FIREPOWER_INITIAL
+		equipment_bonus = {
+			hard_attack = 0.03
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_anchor
+		name = PWC_MIO_FIREPOWER_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_firepower_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_a_1
+		name = PWC_MIO_FIREPOWER_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_firepower_chain_b_1
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_a_2
+		name = PWC_MIO_FIREPOWER_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_a_1
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_a_3
+		name = PWC_MIO_FIREPOWER_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_a_2
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_a_4
+		name = PWC_MIO_FIREPOWER_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_a_3
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_b_1
+		name = PWC_MIO_FIREPOWER_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_firepower_chain_a_1
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_b_2
+		name = PWC_MIO_FIREPOWER_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_b_1
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_b_3
+		name = PWC_MIO_FIREPOWER_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_b_2
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_chain_b_4
+		name = PWC_MIO_FIREPOWER_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_b_3
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_1
+		name = PWC_MIO_FIREPOWER_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_firepower_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_2
+		name = PWC_MIO_FIREPOWER_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_firepower_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_3
+		name = PWC_MIO_FIREPOWER_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_firepower_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_4
+		name = PWC_MIO_FIREPOWER_SIDE_4
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_firepower_side_2
+		}
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_5
+		name = PWC_MIO_FIREPOWER_SIDE_5
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_firepower_chain_a_2
+			pwc_mio_firepower_chain_b_2
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_6
+		name = PWC_MIO_FIREPOWER_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_firepower_side_7
+		name = PWC_MIO_FIREPOWER_SIDE_7
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_firepower_anchor
+		}
+		equipment_bonus = {
+			hard_attack = 0.03
+			soft_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_logistics = {
+	name = PWC_MIO_LOGISTICS
+	icon = PWC_GFX_mio_logistics
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_logistics
+		}
+	}
+	equipment_type = {
+		pwc_equipment_motorized
+		pwc_equipment_support
+		pwc_equipment_assault_engineer_vehicle
+		pwc_equipment_armored_recovery_vehicle
+		pwc_equipment_mechanized
+		pwc_equipment_transport
+		convoy
+	}
+	research_categories = {
+		pwc_tech_armor
+		pwc_tech_army
+	}
+	initial_trait = {
+		name = PWC_MIO_LOGISTICS_INITIAL
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_anchor
+		name = PWC_MIO_LOGISTICS_ANCHOR
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_logistics_side_5
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_a_1
+		name = PWC_MIO_LOGISTICS_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_logistics_chain_b_1
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_a_2
+		name = PWC_MIO_LOGISTICS_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_a_1
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_a_3
+		name = PWC_MIO_LOGISTICS_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_a_2
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_a_4
+		name = PWC_MIO_LOGISTICS_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_a_3
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_b_1
+		name = PWC_MIO_LOGISTICS_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_logistics_chain_a_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_b_2
+		name = PWC_MIO_LOGISTICS_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_b_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_b_3
+		name = PWC_MIO_LOGISTICS_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_b_2
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_chain_b_4
+		name = PWC_MIO_LOGISTICS_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_b_3
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_1
+		name = PWC_MIO_LOGISTICS_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_logistics_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_2
+		name = PWC_MIO_LOGISTICS_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_logistics_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_3
+		name = PWC_MIO_LOGISTICS_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_logistics_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_4
+		name = PWC_MIO_LOGISTICS_SIDE_4
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_logistics_side_2
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_5
+		name = PWC_MIO_LOGISTICS_SIDE_5
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_logistics_chain_a_2
+			pwc_mio_logistics_chain_b_2
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_6
+		name = PWC_MIO_LOGISTICS_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_logistics_side_7
+		name = PWC_MIO_LOGISTICS_SIDE_7
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_logistics_anchor
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+}
+
+pwc_mio_air_superiority = {
+	name = PWC_MIO_AIR_SUPERIORITY
+	icon = PWC_GFX_mio_air_superiority
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_air_superiority
+		}
+	}
+	equipment_type = {
+		pwc_platform_fighter
+		pwc_platform_cv_fighter
+	}
+	research_categories = {
+		pwc_tech_air
+		pwc_tech_navy
+	}
+	initial_trait = {
+		name = PWC_MIO_AIR_SUPERIORITY_INITIAL
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_anchor
+		name = PWC_MIO_AIR_SUPERIORITY_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_air_superiority_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_a_1
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_air_superiority_chain_b_1
+		}
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_a_2
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_a_1
+		}
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_a_3
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_a_2
+		}
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_a_4
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_a_3
+		}
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_b_1
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_air_agility
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_air_superiority_chain_a_1
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_b_2
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_air_agility
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_b_1
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_b_3
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_air_agility
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_b_2
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_chain_b_4
+		name = PWC_MIO_AIR_SUPERIORITY_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_air_agility
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_b_3
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_1
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_air_superiority_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_2
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_2
+		icon = GFX_generic_mio_trait_icon_air_range
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_air_superiority_side_6
+		}
+		equipment_bonus = {
+			air_range = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_3
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_air_superiority_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_4
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_4
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_air_superiority_side_2
+		}
+		production_bonus = {
+			production_conversion_speed_factor = 0.06
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_5
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_5
+		icon = GFX_generic_mio_trait_icon_air_defence
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_air_superiority_chain_a_2
+			pwc_mio_air_superiority_chain_b_2
+		}
+		equipment_bonus = {
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_6
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_air_superiority_side_7
+		name = PWC_MIO_AIR_SUPERIORITY_SIDE_7
+		icon = GFX_generic_mio_trait_icon_air_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_air_superiority_anchor
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+			air_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_ground_attack = {
+	name = PWC_MIO_GROUND_ATTACK
+	icon = PWC_GFX_mio_ground_attack
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_ground_attack
+		}
+	}
+	equipment_type = {
+		pwc_platform_cas
+		pwc_platform_bomber
+		pwc_platform_cv_cas
+	}
+	research_categories = {
+		pwc_tech_air
+		pwc_tech_navy
+	}
+	initial_trait = {
+		name = PWC_MIO_GROUND_ATTACK_INITIAL
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_anchor
+		name = PWC_MIO_GROUND_ATTACK_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_ground_attack_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_a_1
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_ground_attack_chain_b_1
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_a_2
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_a_1
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_a_3
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_a_2
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_a_4
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_a_3
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_b_1
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_ground_attack_chain_a_1
+		}
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_b_2
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_b_1
+		}
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_b_3
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_b_2
+		}
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_chain_b_4
+		name = PWC_MIO_GROUND_ATTACK_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_b_3
+		}
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_1
+		name = PWC_MIO_GROUND_ATTACK_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_ground_attack_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_2
+		name = PWC_MIO_GROUND_ATTACK_SIDE_2
+		icon = GFX_generic_mio_trait_icon_air_range
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_ground_attack_side_6
+		}
+		equipment_bonus = {
+			air_range = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_3
+		name = PWC_MIO_GROUND_ATTACK_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_ground_attack_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_4
+		name = PWC_MIO_GROUND_ATTACK_SIDE_4
+		icon = GFX_generic_mio_trait_icon_air_defence
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_ground_attack_side_2
+		}
+		equipment_bonus = {
+			air_defence = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_5
+		name = PWC_MIO_GROUND_ATTACK_SIDE_5
+		icon = GFX_generic_mio_trait_icon_naval_strike_attack
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_ground_attack_chain_a_2
+			pwc_mio_ground_attack_chain_b_2
+		}
+		equipment_bonus = {
+			naval_strike_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_6
+		name = PWC_MIO_GROUND_ATTACK_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_ground_attack_side_7
+		name = PWC_MIO_GROUND_ATTACK_SIDE_7
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_ground_attack_anchor
+		}
+		equipment_bonus = {
+			air_bombing = 0.03
+			air_ground_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_unmanned = {
+	name = PWC_MIO_UNMANNED
+	icon = PWC_GFX_mio_unmanned
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_unmanned
+		}
+	}
+	equipment_type = {
+		pwc_platform_uav
+	}
+	research_categories = {
+		pwc_tech_air
+	}
+	initial_trait = {
+		name = PWC_MIO_UNMANNED_INITIAL
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_anchor
+		name = PWC_MIO_UNMANNED_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_unmanned_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_a_1
+		name = PWC_MIO_UNMANNED_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_unmanned_chain_b_1
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_a_2
+		name = PWC_MIO_UNMANNED_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_a_1
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_a_3
+		name = PWC_MIO_UNMANNED_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_a_2
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_a_4
+		name = PWC_MIO_UNMANNED_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_a_3
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_b_1
+		name = PWC_MIO_UNMANNED_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_unmanned_chain_a_1
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_b_2
+		name = PWC_MIO_UNMANNED_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_b_1
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_b_3
+		name = PWC_MIO_UNMANNED_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_b_2
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_chain_b_4
+		name = PWC_MIO_UNMANNED_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_b_3
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_1
+		name = PWC_MIO_UNMANNED_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_unmanned_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_2
+		name = PWC_MIO_UNMANNED_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_unmanned_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_3
+		name = PWC_MIO_UNMANNED_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_unmanned_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_4
+		name = PWC_MIO_UNMANNED_SIDE_4
+		icon = GFX_generic_mio_trait_icon_air_range
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_unmanned_side_2
+		}
+		equipment_bonus = {
+			air_range = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_5
+		name = PWC_MIO_UNMANNED_SIDE_5
+		icon = GFX_generic_mio_trait_icon_air_agility
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_unmanned_chain_a_2
+			pwc_mio_unmanned_chain_b_2
+		}
+		equipment_bonus = {
+			air_agility = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_6
+		name = PWC_MIO_UNMANNED_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	trait = {
+		token = pwc_mio_unmanned_side_7
+		name = PWC_MIO_UNMANNED_SIDE_7
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_unmanned_anchor
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_surface_naval = {
+	name = PWC_MIO_SURFACE_NAVAL
+	icon = PWC_GFX_mio_surface_naval
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_surface_naval
+		}
+	}
+	equipment_type = {
+		pwc_platform_destroyer
+		pwc_platform_cruiser
+		pwc_platform_carrier
+	}
+	research_categories = {
+		pwc_tech_navy
+	}
+	initial_trait = {
+		name = PWC_MIO_SURFACE_NAVAL_INITIAL
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_anchor
+		name = PWC_MIO_SURFACE_NAVAL_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_surface_naval_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_a_1
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_lg_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_surface_naval_chain_b_1
+		}
+		limit_to_equipment_type = {
+			pwc_platform_destroyer
+			pwc_platform_cruiser
+		}
+		equipment_bonus = {
+			hg_attack = 0.03
+			lg_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_a_2
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_lg_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_a_1
+		}
+		limit_to_equipment_type = {
+			pwc_platform_destroyer
+			pwc_platform_cruiser
+		}
+		equipment_bonus = {
+			hg_attack = 0.03
+			lg_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_a_3
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_lg_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_a_2
+		}
+		limit_to_equipment_type = {
+			pwc_platform_destroyer
+			pwc_platform_cruiser
+		}
+		equipment_bonus = {
+			hg_attack = 0.03
+			lg_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_a_4
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_lg_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_a_3
+		}
+		limit_to_equipment_type = {
+			pwc_platform_destroyer
+			pwc_platform_cruiser
+		}
+		equipment_bonus = {
+			hg_attack = 0.03
+			lg_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_b_1
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_surface_naval_chain_a_1
+		}
+		equipment_bonus = {
+			anti_air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_b_2
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_b_1
+		}
+		equipment_bonus = {
+			anti_air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_b_3
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_b_2
+		}
+		equipment_bonus = {
+			anti_air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_chain_b_4
+		name = PWC_MIO_SURFACE_NAVAL_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_b_3
+		}
+		equipment_bonus = {
+			anti_air_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_1
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_surface_naval_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_2
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_surface_naval_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_3
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_surface_naval_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_4
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_4
+		icon = GFX_generic_mio_trait_icon_naval_range
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_surface_naval_side_2
+		}
+		equipment_bonus = {
+			naval_range = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_5
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_5
+		icon = GFX_generic_mio_trait_icon_sub_attack
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_surface_naval_chain_a_2
+			pwc_mio_surface_naval_chain_b_2
+		}
+		equipment_bonus = {
+			sub_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_6
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_surface_naval_side_7
+		name = PWC_MIO_SURFACE_NAVAL_SIDE_7
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_surface_naval_anchor
+		}
+		equipment_bonus = {
+			anti_air_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_submarine = {
+	name = PWC_MIO_SUBMARINE
+	icon = PWC_GFX_mio_submarine
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			has_country_flag = pwc_flag_mio_submarine
+		}
+	}
+	equipment_type = {
+		pwc_platform_submarine
+	}
+	research_categories = {
+		pwc_tech_navy
+	}
+	initial_trait = {
+		name = PWC_MIO_SUBMARINE_INITIAL
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_anchor
+		name = PWC_MIO_SUBMARINE_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_submarine_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_a_1
+		name = PWC_MIO_SUBMARINE_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_submarine_chain_b_1
+		}
+		equipment_bonus = {
+			torpedo_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_a_2
+		name = PWC_MIO_SUBMARINE_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_a_1
+		}
+		equipment_bonus = {
+			torpedo_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_a_3
+		name = PWC_MIO_SUBMARINE_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_a_2
+		}
+		equipment_bonus = {
+			torpedo_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_a_4
+		name = PWC_MIO_SUBMARINE_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_a_3
+		}
+		equipment_bonus = {
+			torpedo_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_b_1
+		name = PWC_MIO_SUBMARINE_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_submarine_chain_a_1
+		}
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_b_2
+		name = PWC_MIO_SUBMARINE_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_b_1
+		}
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_b_3
+		name = PWC_MIO_SUBMARINE_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_b_2
+		}
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_chain_b_4
+		name = PWC_MIO_SUBMARINE_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_b_3
+		}
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_1
+		name = PWC_MIO_SUBMARINE_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_submarine_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_2
+		name = PWC_MIO_SUBMARINE_SIDE_2
+		icon = GFX_generic_mio_trait_icon_naval_range
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_submarine_side_6
+		}
+		equipment_bonus = {
+			naval_range = 0.05
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_3
+		name = PWC_MIO_SUBMARINE_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_submarine_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_4
+		name = PWC_MIO_SUBMARINE_SIDE_4
+		icon = GFX_generic_mio_trait_icon_sub_visibility
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_submarine_side_2
+		}
+		equipment_bonus = {
+			sub_visibility = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_5
+		name = PWC_MIO_SUBMARINE_SIDE_5
+		icon = GFX_generic_mio_trait_icon_sub_attack
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_submarine_chain_a_2
+			pwc_mio_submarine_chain_b_2
+		}
+		equipment_bonus = {
+			sub_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_6
+		name = PWC_MIO_SUBMARINE_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_submarine_side_7
+		name = PWC_MIO_SUBMARINE_SIDE_7
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_submarine_anchor
+		}
+		equipment_bonus = {
+			torpedo_attack = 0.03
+		}
+	}
+}
+
+pwc_mio_special_forces = {
+	name = PWC_MIO_SPECIAL_FORCES
+	icon = PWC_GFX_mio_special_forces
+	allowed = {
+		always = yes
+	}
+	available = {
+		FROM = {
+			OR = {
+				has_tech = pwc_tech_sf_mountain_t1
+				has_tech = pwc_tech_sf_marines_t1
+				has_tech = pwc_tech_sf_airborne_t1
+				has_tech = pwc_tech_sf_rangers_t1
+			}
+		}
+	}
+	equipment_type = {
+		pwc_equipment_special_forces
+	}
+	research_categories = {
+		cat_special_forces_generic
+	}
+	initial_trait = {
+		name = PWC_MIO_SPECIAL_FORCES_INITIAL
+		equipment_bonus = {
+			reliability_factor = 0.05
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_anchor
+		name = PWC_MIO_SPECIAL_FORCES_ANCHOR
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_special_forces_side_5
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_a_1
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_A_1
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 2
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_special_forces_chain_b_1
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_a_2
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_A_2
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 2
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_a_1
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_a_3
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_A_3
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 2
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_a_2
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_a_4
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_A_4
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 2
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_a_3
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_b_1
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_B_1
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 0
+		}
+		mutually_exclusive = {
+			pwc_mio_special_forces_chain_a_1
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_b_2
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_B_2
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_b_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_b_3
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_B_3
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 6
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_b_2
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_chain_b_4
+		name = PWC_MIO_SPECIAL_FORCES_CHAIN_B_4
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 6
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_b_3
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_1
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_special_forces_side_6
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_2
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_2
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 8
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_special_forces_side_6
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_3
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_special_forces_side_1
+		}
+		equipment_bonus = {
+			reliability_factor = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_4
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_4
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 8
+			y = 2
+		}
+		any_parent = {
+			pwc_mio_special_forces_side_2
+		}
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_5
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_5
+		icon = GFX_generic_mio_trait_icon_defense
+		position = {
+			x = 4
+			y = 1
+		}
+		any_parent = {
+			pwc_mio_special_forces_chain_a_2
+			pwc_mio_special_forces_chain_b_2
+		}
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_6
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_6
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 4
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+	trait = {
+		token = pwc_mio_special_forces_side_7
+		name = PWC_MIO_SPECIAL_FORCES_SIDE_7
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = {
+			x = 4
+			y = 3
+		}
+		any_parent = {
+			pwc_mio_special_forces_anchor
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+}
+

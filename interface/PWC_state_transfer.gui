@@ -1,0 +1,258 @@
+guiTypes = {
+    containerWindowType = {
+        name = pwc_state_transfer_window
+        position = { x = 468 y = 89 }
+        size = { width = 296 height = 502 }
+        clipping = yes
+        background = {
+            name = background
+            quadTextureSprite = PWC_GFX_state_transfer_panel
+        }
+        instantTextboxType = {
+            name = pwc_transfer_title
+            position = { x = 36 y = 6 }
+            font = hoi_24header
+            text = "PWC_TRANSFER_TITLE"
+            maxWidth = 224
+            maxHeight = 28
+            format = center
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_transfer_close
+            position = { x = 264 y = 10 }
+            quadTextureSprite = GFX_closebutton_16
+            pdx_tooltip = PWC_TRANSFER_HIDE_TT
+            clicksound = click_default
+        }
+        instantTextboxType = {
+            name = pwc_transfer_current_state
+            position = { x = 22 y = 44 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_CURRENT_STATE"
+            maxWidth = 252
+            maxHeight = 22
+            format = center
+            alwaystransparent = no
+            multiline = no
+            pdx_tooltip = PWC_TRANSFER_CURRENT_STATE_TT
+        }
+        buttonType = {
+            name = pwc_transfer_mark
+            position = { x = 45 y = 74 }
+            quadTextureSprite = GFX_quick_add_button
+            pdx_tooltip = PWC_TRANSFER_MARK_TT
+            clicksound = click_default
+            shortcut = "ctrl+z"
+        }
+        buttonType = {
+            name = pwc_transfer_all
+            position = { x = 132 y = 74 }
+            quadTextureSprite = GFX_add_all_button_32x32
+            pdx_tooltip = PWC_TRANSFER_ALL_TT
+            clicksound = click_default
+            shortcut = "ctrl+a"
+        }
+        buttonType = {
+            name = pwc_transfer_clear
+            position = { x = 219 y = 74 }
+            quadTextureSprite = GFX_closebutton
+            pdx_tooltip = PWC_TRANSFER_CLEAR_TT
+            clicksound = click_default
+            shortcut = "ctrl+x"
+        }
+        instantTextboxType = {
+            name = pwc_transfer_mark_caption
+            position = { x = 22 y = 109 }
+            font = hoi_18mbs
+            text = "[PWC_TRANSFER_MARK_CAPTION]"
+            maxWidth = 78
+            maxHeight = 22
+            format = center
+            alwaystransparent = yes
+            multiline = no
+        }
+        instantTextboxType = {
+            name = pwc_transfer_all_caption
+            position = { x = 109 y = 109 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_ALL"
+            maxWidth = 78
+            maxHeight = 22
+            format = center
+            alwaystransparent = yes
+            multiline = no
+        }
+        instantTextboxType = {
+            name = pwc_transfer_clear_caption
+            position = { x = 196 y = 109 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_CLEAR"
+            maxWidth = 78
+            maxHeight = 22
+            format = center
+            alwaystransparent = yes
+            multiline = no
+        }
+        instantTextboxType = {
+            name = pwc_transfer_source
+            position = { x = 24 y = 146 }
+            font = hoi_18mbs
+            text = "[PWC_TRANSFER_SOURCE]"
+            maxWidth = 248
+            maxHeight = 22
+            format = left
+            alwaystransparent = no
+            multiline = no
+            pdx_tooltip = PWC_TRANSFER_SOURCE_TT
+        }
+        instantTextboxType = {
+            name = pwc_transfer_target_name
+            position = { x = 24 y = 170 }
+            font = hoi_18mbs
+            text = "[PWC_TRANSFER_TARGET]"
+            maxWidth = 248
+            maxHeight = 22
+            format = left
+            alwaystransparent = no
+            multiline = no
+            pdx_tooltip = PWC_TRANSFER_TARGET_NAME_TT
+        }
+        buttonType = {
+            name = pwc_transfer_target
+            position = { x = 86 y = 206 }
+            quadTextureSprite = PWC_GFX_state_transfer_action
+            pdx_tooltip = PWC_TRANSFER_TARGET_TT
+            clicksound = click_default
+            buttonText = PWC_TRANSFER_TARGET_BUTTON
+            buttonFont = hoi_18mbs
+            shortcut = "ctrl+c"
+        }
+        instantTextboxType = {
+            name = pwc_transfer_list_title
+            position = { x = 24 y = 248 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_LIST_TITLE"
+            maxWidth = 248
+            maxHeight = 22
+            format = left
+            alwaystransparent = yes
+            multiline = no
+        }
+        instantTextboxType = {
+            name = pwc_transfer_empty
+            position = { x = 28 y = 336 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_EMPTY"
+            maxWidth = 240
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+            multiline = no
+        }
+        containerWindowType = {
+            name = pwc_transfer_scroll
+            position = { x = 22 y = 286 }
+            size = { width = 252 height = 120 }
+            clipping = yes
+            verticalScrollbar = right_vertical_slider
+            scroll_wheel_factor = 24
+            margin = { right = 24 }
+            gridBoxType = {
+                name = pwc_transfer_states_grid
+                position = { x = 0 y = 0 }
+                slotsize = { width = 228 height = 24 }
+                format = UPPER_LEFT
+                max_slots_horizontal = 1
+            }
+        }
+        instantTextboxType = {
+            name = pwc_transfer_ready
+            position = { x = 24 y = 424 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_READY"
+            maxWidth = 248
+            maxHeight = 22
+            format = left
+            alwaystransparent = yes
+            multiline = no
+        }
+        instantTextboxType = {
+            name = pwc_transfer_rules
+            position = { x = 24 y = 424 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_RULES"
+            maxWidth = 248
+            maxHeight = 22
+            format = left
+            alwaystransparent = yes
+            multiline = no
+        }
+        buttonType = {
+            name = pwc_transfer_back
+            position = { x = 18 y = 452 }
+            quadTextureSprite = PWC_GFX_state_transfer_action
+            pdx_tooltip = PWC_TRANSFER_BACK_TT
+            clicksound = click_default
+            buttonText = PWC_TRANSFER_BACK
+            buttonFont = hoi_18mbs
+        }
+        buttonType = {
+            name = pwc_transfer_preview
+            position = { x = 86 y = 452 }
+            quadTextureSprite = PWC_GFX_state_transfer_action
+            pdx_tooltip = PWC_TRANSFER_PREVIEW_TT
+            clicksound = click_default
+            buttonText = PWC_TRANSFER_PREVIEW
+            buttonFont = hoi_18mbs
+            shortcut = "ctrl+t"
+        }
+        buttonType = {
+            name = pwc_transfer_confirm
+            position = { x = 156 y = 452 }
+            quadTextureSprite = PWC_GFX_state_transfer_action
+            pdx_tooltip = PWC_TRANSFER_CONFIRM_TT
+            clicksound = click_default
+            buttonText = PWC_TRANSFER_CONFIRM
+            buttonFont = hoi_18mbs
+        }
+    }
+    containerWindowType = {
+        name = pwc_transfer_state_row
+        size = { width = 228 height = 24 }
+        clipping = yes
+        instantTextboxType = {
+            name = pwc_transfer_state_name
+            position = { x = 4 y = 3 }
+            font = hoi_18mbs
+            text = "PWC_TRANSFER_LIST_ROW"
+            maxWidth = 196
+            maxHeight = 21
+            format = left
+            alwaystransparent = no
+            multiline = no
+            pdx_tooltip = PWC_TRANSFER_LIST_ROW
+        }
+        buttonType = {
+            name = pwc_transfer_remove
+            position = { x = 208 y = 4 }
+            quadTextureSprite = GFX_closebutton_16
+            pdx_tooltip = PWC_TRANSFER_REMOVE_TT
+            clicksound = click_default
+        }
+    }
+    containerWindowType = {
+        name = pwc_transfer_entry_window
+        position = { x = 468 y = 89 }
+        size = { width = 32 height = 32 }
+        buttonType = {
+            name = pwc_transfer_open
+            position = { x = 0 y = 0 }
+            quadTextureSprite = PWC_GFX_state_transfer_entry
+            pdx_tooltip = PWC_TRANSFER_OPEN_TT
+            clicksound = click_default
+            buttonText = PWC_TRANSFER_OPEN
+            buttonFont = hoi_18mbs
+        }
+    }
+}

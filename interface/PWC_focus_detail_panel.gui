@@ -1,0 +1,188 @@
+
+
+
+
+
+
+
+
+
+
+
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "pwc_focus_detail_panel_window"
+		orientation = lower_left
+		position = { x = 0 y = 0 }
+		size = { width = 420 height = 440 }
+		clipping = no
+
+		background = {
+			name = "pwc_focus_panel_background"
+			quadTextureSprite = "PWC_GFX_ui_focus_detail"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "pwc_focus_panel_logo"
+			spriteType = "GFX_frontend_game_logo"
+			position = { x = 24 y = 4 }
+			scale = 0.36
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_title"
+			position = { x = 212 y = 28 }
+			font = "PWC_focus_heading26"
+			text = PWC_FOCUS_PANEL_TITLE
+			format = left
+			maxWidth = 184
+			maxHeight = 32
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "pwc_focus_panel_progress_bar"
+			spriteType = "GFX_exile_legitimacy_progressbar_long"
+			position = { x = 24 y = 108 }
+			context_aware_tooltip = "PWC_FOCUS_PANEL_PROGRESS_TT"
+		}
+
+		instantTextBoxType = {
+			name = "pwc_focus_panel_progress_text"
+			position = { x = 24 y = 72 }
+			font = "PWC_focus_body26"
+			context_aware_text = "PWC_FOCUS_PANEL_PROGRESS_TEXT"
+			format = left
+			maxWidth = 372
+			maxHeight = 32
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "pwc_focus_panel_geo_divider"
+			position = { x = 24 y = 134 }
+			size = { width = 372 height = 4 }
+			background = {
+				name = "divider"
+				quadTextureSprite = "PWC_GFX_ui_focus_divider"
+				alwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "pwc_focus_panel_geo_icon"
+			spriteType = "GFX_idea_generic_pp_unity_bonus"
+			position = { x = 24 y = 142 }
+			scale = 0.6
+			context_aware_tooltip = "PWC_FOCUS_PANEL_GEO_TT"
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_geo_label"
+			position = { x = 92 y = 143 }
+			font = "PWC_tech_caption"
+			text = PWC_FOCUS_PANEL_GEO_LABEL
+			maxWidth = 304
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_geo_status"
+			position = { x = 92 y = 170 }
+			font = "hoi_18mbs"
+			context_aware_text = "PWC_FOCUS_PANEL_GEO_STATUS"
+			context_aware_tooltip = "PWC_FOCUS_PANEL_GEO_TT"
+			maxWidth = 304
+			maxHeight = 24
+			multiline = no
+			alwaystransparent = no
+		}
+
+		containerWindowType = {
+			name = "pwc_focus_panel_endgame_divider"
+			position = { x = 24 y = 206 }
+			size = { width = 372 height = 4 }
+			background = {
+				name = "divider"
+				quadTextureSprite = "PWC_GFX_ui_focus_divider"
+				alwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "pwc_focus_panel_endgame_icon"
+			spriteType = "GFX_goal_unknown"
+			position = { x = 24 y = 214 }
+			scale = 0.6
+			context_aware_tooltip = "PWC_FOCUS_PANEL_ENDGAME_TT"
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_endgame_label"
+			position = { x = 92 y = 215 }
+			font = "PWC_tech_caption"
+			text = PWC_FOCUS_PANEL_ENDGAME_LABEL
+			maxWidth = 304
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_endgame_status"
+			position = { x = 92 y = 242 }
+			font = "hoi_18mbs"
+			context_aware_text = "PWC_FOCUS_PANEL_ENDGAME_STATUS"
+			context_aware_tooltip = "PWC_FOCUS_PANEL_ENDGAME_TT"
+			maxWidth = 304
+			maxHeight = 24
+			multiline = no
+			alwaystransparent = no
+		}
+
+		containerWindowType = {
+			name = "pwc_focus_panel_gate_divider"
+			position = { x = 24 y = 278 }
+			size = { width = 372 height = 4 }
+			background = {
+				name = "divider"
+				quadTextureSprite = "PWC_GFX_ui_focus_divider"
+				alwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "pwc_focus_panel_gate_icon"
+			spriteType = "GFX_goal_unknown"
+			position = { x = 24 y = 286 }
+			scale = 0.6
+			context_aware_tooltip = "PWC_FOCUS_PANEL_GATE_TT"
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_gate_label"
+			position = { x = 92 y = 287 }
+			font = "PWC_tech_caption"
+			text = PWC_FOCUS_PANEL_GATE_LABEL
+			maxWidth = 304
+			maxHeight = 24
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "pwc_focus_panel_gate_status"
+			position = { x = 92 y = 314 }
+			font = "hoi_18mbs"
+			context_aware_text = "PWC_FOCUS_PANEL_GATE_STATUS"
+			context_aware_tooltip = "PWC_FOCUS_PANEL_GATE_TT"
+			maxWidth = 304
+			maxHeight = 24
+			multiline = no
+			alwaystransparent = no
+		}
+		buttonType = {
+			name = "pwc_focus_panel_guide_button"
+			position = { x = 24 y = 374 }
+			quadTextureSprite = "PWC_GFX_welcome_reopen"
+			buttonFont = hoi_18mbs
+			buttonText = PWC_FOCUS_PANEL_GUIDE
+			pdx_tooltip = PWC_FOCUS_PANEL_GUIDE_TT
+			clicksound = click_default
+		}
+
+	}
+}

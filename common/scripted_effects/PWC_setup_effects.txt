@@ -1,0 +1,1031 @@
+
+pwc_se_assign_setup_archetypes = {
+    if = {
+        limit = { has_game_rule = { rule = pwc_archetype_seed option = RANDOM } }
+        clr_country_flag = pwc_ai_balanced
+        clr_country_flag = pwc_ai_industrial
+        clr_country_flag = pwc_ai_defense
+        clr_country_flag = pwc_ai_mobility
+        clr_country_flag = pwc_ai_coastal
+        clr_country_flag = pwc_ai_air_power
+        if = {
+            limit = { OR = {
+                tag = U68
+                tag = U69
+                tag = U94
+                tag = V08
+                tag = V88
+                tag = V89
+                tag = V93
+                tag = W01
+                tag = W11
+                tag = W17
+                tag = W19
+                tag = W21
+                tag = W27
+                tag = W86
+                tag = X09
+                tag = X14
+                tag = X23
+                tag = X24
+                tag = X26
+                tag = X27
+                tag = X36
+                tag = X50
+                tag = X55
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_air_power }
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_coastal }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_industrial }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U51
+                tag = U64
+                tag = U98
+                tag = X56
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_air_power }
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_coastal }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U14
+                tag = U24
+                tag = U38
+                tag = U60
+                tag = U84
+                tag = U87
+                tag = V02
+                tag = V10
+                tag = V19
+                tag = V45
+                tag = V46
+                tag = V48
+                tag = V68
+                tag = V81
+                tag = V82
+                tag = V91
+                tag = W02
+                tag = W32
+                tag = W44
+                tag = W51
+                tag = W52
+                tag = W58
+                tag = W72
+                tag = W75
+                tag = W78
+                tag = W89
+                tag = W90
+                tag = X00
+                tag = X20
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_air_power }
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_industrial }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U29
+                tag = U33
+                tag = U57
+                tag = U62
+                tag = U83
+                tag = V00
+                tag = W09
+                tag = W67
+                tag = W83
+                tag = W98
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_air_power }
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = V95
+                tag = W28
+                tag = X63
+                tag = X64
+                tag = X65
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_coastal }
+                1 = { set_country_flag = pwc_ai_defense }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = V01
+                tag = V41
+                tag = V53
+                tag = V79
+                tag = V90
+                tag = W00
+                tag = W10
+                tag = W30
+                tag = W37
+                tag = W47
+                tag = W60
+                tag = W94
+                tag = X02
+                tag = X21
+                tag = X34
+                tag = X35
+                tag = X37
+                tag = X39
+                tag = X42
+                tag = X47
+                tag = X49
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_coastal }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_industrial }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U55
+                tag = U58
+                tag = U59
+                tag = U61
+                tag = U65
+                tag = U82
+                tag = U89
+                tag = U91
+                tag = V24
+                tag = V71
+                tag = V74
+                tag = V86
+                tag = V87
+                tag = V98
+                tag = W03
+                tag = W04
+                tag = W06
+                tag = W13
+                tag = W15
+                tag = W23
+                tag = W26
+                tag = W29
+                tag = W31
+                tag = W38
+                tag = W46
+                tag = W73
+                tag = W96
+                tag = X04
+                tag = X18
+                tag = X19
+                tag = X25
+                tag = X28
+                tag = X30
+                tag = X38
+                tag = X40
+                tag = X43
+                tag = X44
+                tag = X45
+                tag = X46
+                tag = X48
+                tag = X51
+                tag = X54
+                tag = X57
+                tag = X59
+                tag = X60
+                tag = X61
+                tag = X62
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_coastal }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U71
+                tag = V09
+                tag = V49
+                tag = V67
+                tag = V85
+                tag = W40
+                tag = W55
+                tag = W62
+                tag = W64
+                tag = W71
+                tag = W79
+                tag = W81
+                tag = W82
+                tag = X29
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_industrial }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+        if = {
+            limit = { OR = {
+                tag = U00
+                tag = U01
+                tag = U02
+                tag = U03
+                tag = U04
+                tag = U05
+                tag = U06
+                tag = U07
+                tag = U08
+                tag = U09
+                tag = U10
+                tag = U11
+                tag = U12
+                tag = U13
+                tag = U15
+                tag = U16
+                tag = U17
+                tag = U18
+                tag = U19
+                tag = U20
+                tag = U21
+                tag = U22
+                tag = U23
+                tag = U25
+                tag = U26
+                tag = U27
+                tag = U28
+                tag = U30
+                tag = U31
+                tag = U32
+                tag = U34
+                tag = U35
+                tag = U36
+                tag = U37
+                tag = U39
+                tag = U40
+                tag = U41
+                tag = U42
+                tag = U43
+                tag = U44
+                tag = U45
+                tag = U46
+                tag = U47
+                tag = U48
+                tag = U49
+                tag = U50
+                tag = U52
+                tag = U53
+                tag = U54
+                tag = U56
+                tag = U63
+                tag = U66
+                tag = U67
+                tag = U70
+                tag = U72
+                tag = U73
+                tag = U74
+                tag = U75
+                tag = U76
+                tag = U77
+                tag = U78
+                tag = U79
+                tag = U80
+                tag = U81
+                tag = U85
+                tag = U86
+                tag = U88
+                tag = U90
+                tag = U92
+                tag = U93
+                tag = U95
+                tag = U96
+                tag = U97
+                tag = U99
+                tag = V03
+                tag = V04
+                tag = V05
+                tag = V06
+                tag = V07
+                tag = V11
+                tag = V12
+                tag = V13
+                tag = V14
+                tag = V15
+                tag = V16
+                tag = V17
+                tag = V18
+                tag = V20
+                tag = V21
+                tag = V22
+                tag = V23
+                tag = V25
+                tag = V26
+                tag = V27
+                tag = V28
+                tag = V29
+                tag = V30
+                tag = V31
+                tag = V32
+                tag = V33
+                tag = V34
+                tag = V35
+                tag = V36
+                tag = V37
+                tag = V38
+                tag = V39
+                tag = V40
+                tag = V42
+                tag = V43
+                tag = V44
+                tag = V47
+                tag = V50
+                tag = V51
+                tag = V52
+                tag = V54
+                tag = V55
+                tag = V56
+                tag = V57
+                tag = V58
+                tag = V59
+                tag = V60
+                tag = V61
+                tag = V62
+                tag = V63
+                tag = V64
+                tag = V65
+                tag = V66
+                tag = V69
+                tag = V70
+                tag = V72
+                tag = V73
+                tag = V75
+                tag = V76
+                tag = V77
+                tag = V78
+                tag = V80
+                tag = V83
+                tag = V84
+                tag = V92
+                tag = V94
+                tag = V96
+                tag = V97
+                tag = V99
+                tag = W05
+                tag = W07
+                tag = W08
+                tag = W12
+                tag = W14
+                tag = W16
+                tag = W18
+                tag = W20
+                tag = W22
+                tag = W24
+                tag = W25
+                tag = W33
+                tag = W34
+                tag = W35
+                tag = W36
+                tag = W39
+                tag = W41
+                tag = W42
+                tag = W43
+                tag = W45
+                tag = W48
+                tag = W49
+                tag = W50
+                tag = W53
+                tag = W54
+                tag = W56
+                tag = W57
+                tag = W59
+                tag = W61
+                tag = W63
+                tag = W65
+                tag = W66
+                tag = W68
+                tag = W69
+                tag = W70
+                tag = W74
+                tag = W76
+                tag = W77
+                tag = W80
+                tag = W84
+                tag = W85
+                tag = W87
+                tag = W88
+                tag = W91
+                tag = W92
+                tag = W93
+                tag = W95
+                tag = W97
+                tag = W99
+                tag = X01
+                tag = X03
+                tag = X05
+                tag = X06
+                tag = X07
+                tag = X08
+                tag = X10
+                tag = X11
+                tag = X12
+                tag = X13
+                tag = X15
+                tag = X16
+                tag = X17
+                tag = X22
+                tag = X31
+                tag = X32
+                tag = X33
+                tag = X41
+                tag = X52
+                tag = X53
+                tag = X58
+            } }
+            random_list = {
+                1 = { set_country_flag = pwc_ai_balanced }
+                1 = { set_country_flag = pwc_ai_defense }
+                1 = { set_country_flag = pwc_ai_mobility }
+            }
+        }
+    }
+}
+pwc_se_init_setup_country = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_setup_country_applied }
+        }
+        set_country_flag = pwc_flag_setup_country_applied
+        pwc_se_assign_setup_archetypes = yes
+        pwc_se_calibrate_starting_industry = yes
+        pwc_se_apply_integration_speed = yes
+        pwc_se_refresh_setup_country = yes
+    }
+}
+pwc_se_refresh_setup_country = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            pwc_st_city_alive = yes
+            exists = yes
+        }
+        pwc_se_update_administration = yes
+        pwc_se_update_unit_limit = yes
+        pwc_se_update_demobilization = yes
+        pwc_se_monthly_gate_latch = yes
+        pwc_se_arm_war_phase = yes
+        pwc_se_refresh_regional_identity = yes
+    }
+}
+pwc_se_update_administration = {
+    set_variable = { pwc_administrative_pressure = 0 }
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            NOT = {
+                has_game_rule = { rule = pwc_administrative_pressure option = REMOVE }
+            }
+        }
+        every_owned_state = {
+            limit = { is_capital = no }
+            if = {
+                limit = { is_core_of = PREV }
+                PREV = {
+                    add_to_variable = { pwc_administrative_pressure = 0.002 }
+                }
+            }
+            else = {
+                PREV = {
+                    add_to_variable = { pwc_administrative_pressure = 0.005 }
+                }
+            }
+        }
+        clamp_variable = {
+            var = pwc_administrative_pressure min = 0 max = 0.1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_dynamic_modifier = { modifier = pwc_dm_administrative_pressure }
+                }
+            }
+            add_dynamic_modifier = { modifier = pwc_dm_administrative_pressure }
+        }
+    }
+    else = {
+        remove_dynamic_modifier = { modifier = pwc_dm_administrative_pressure }
+    }
+}
+pwc_se_update_unit_limit = {
+    set_variable = { pwc_setup_owned_states = num_owned_states }
+    set_variable = { pwc_setup_controlled_states = 0 }
+    every_owned_state = {
+        limit = { is_fully_controlled_by = PREV }
+        PREV = { add_to_variable = { pwc_setup_controlled_states = 1 } }
+    }
+    set_variable = {
+        pwc_unit_capacity = {
+            value = pwc_setup_controlled_states
+            multiply = 4
+            add = 8
+            clamp = { min = 8 max = 500 }
+        }
+    }
+    set_variable = { pwc_unit_penalty = 0 }
+    set_variable = { pwc_unit_penalty_negative = 0 }
+    set_variable = { pwc_unit_ai_limit = 0 }
+    set_variable = { pwc_unit_capacity_bar_offset = 0 }
+    set_variable = { pwc_unit_penalty_percent = 0 }
+    if = {
+        limit = { pwc_st_unit_limit_applies = yes }
+        set_variable = {
+            pwc_unit_penalty = {
+                value = num_divisions
+                divide = pwc_unit_capacity
+                subtract = 1
+                multiply = 0.25
+                clamp = { min = 0 max = 0.25 }
+            }
+        }
+        set_variable = {
+            pwc_unit_penalty_negative = { value = pwc_unit_penalty multiply = -1 }
+        }
+        set_variable = {
+            pwc_unit_capacity_bar_offset = {
+                value = num_divisions
+                divide = pwc_unit_capacity
+                multiply = 300
+                subtract = 300
+                round = yes
+                clamp = { min = -300 max = 0 }
+            }
+        }
+        set_variable = {
+            pwc_unit_penalty_percent = {
+                value = pwc_unit_penalty
+                multiply = 100
+                round = yes
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    var = num_divisions
+                    value = pwc_unit_capacity
+                    compare = greater_than_or_equals
+                }
+            }
+            set_variable = { pwc_unit_ai_limit = -1 }
+        }
+        if = {
+            limit = {
+                NOT = { has_dynamic_modifier = { modifier = pwc_dm_unit_capacity } }
+            }
+            add_dynamic_modifier = { modifier = pwc_dm_unit_capacity }
+        }
+    }
+    else = { remove_dynamic_modifier = { modifier = pwc_dm_unit_capacity } }
+}
+pwc_se_update_demobilization = {
+    if = {
+        limit = {
+            pwc_st_demobilization_applies = yes
+            has_war = no
+            OR = {
+                check_variable = { pwc_law_conscription > 3 }
+                check_variable = {
+                    pwc_law_economy_mobilization > 3
+                }
+            }
+            NOT = { has_active_mission = pwc_demobilization_grace }
+        }
+        activate_mission = pwc_demobilization_grace
+    }
+}
+pwc_se_demobilize = {
+    if = {
+        limit = { pwc_st_demobilization_applies = yes has_war = no }
+        if = {
+            limit = { check_variable = { pwc_law_conscription > 3 } }
+            pwc_se_set_law_conscription_3 = yes
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    pwc_law_economy_mobilization > 3
+                }
+            }
+            pwc_se_set_law_economy_mobilization_3 = yes
+        }
+    }
+}
+pwc_se_calibrate_starting_industry = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_setup_industry_applied }
+            OR = {
+                has_game_rule = { rule = pwc_industry_calibration option = NORMALIZE }
+                has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
+            }
+        }
+        set_country_flag = pwc_flag_setup_industry_applied
+        
+        
+        set_variable = { pwc_setup_offsite_civ = num_of_civilian_factories }
+        set_variable = { pwc_setup_offsite_mil = num_of_military_factories }
+        every_owned_state = {
+            PREV = {
+                subtract_from_variable = {
+                    pwc_setup_offsite_civ = PREV.industrial_complex_level
+                }
+                subtract_from_variable = {
+                    pwc_setup_offsite_mil = PREV.arms_factory_level
+                }
+            }
+        }
+        clamp_variable = { var = pwc_setup_offsite_civ min = 0 }
+        clamp_variable = { var = pwc_setup_offsite_mil min = 0 }
+        multiply_variable = { pwc_setup_offsite_civ = -1 }
+        multiply_variable = { pwc_setup_offsite_mil = -1 }
+        add_offsite_building = {
+            type = industrial_complex level = var:pwc_setup_offsite_civ
+        }
+        add_offsite_building = { type = arms_factory level = var:pwc_setup_offsite_mil }
+        clear_variable = pwc_setup_offsite_civ
+        clear_variable = pwc_setup_offsite_mil
+        if = {
+            limit = {
+                has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
+            }
+            every_owned_state = {
+                set_building_level = { type = industrial_complex level = 2 }
+                set_building_level = { type = arms_factory level = 1 }
+            }
+        }
+    }
+}
+pwc_se_apply_regional_supply = {
+    if = {
+        limit = {
+            NOT = { has_global_flag = pwc_flag_regional_supply_applied }
+        }
+        set_global_flag = pwc_flag_regional_supply_applied
+        if = {
+            limit = { NOT = {
+                has_game_rule = { rule = pwc_geographic_supply option = REMOVE }
+            } }
+9 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+14 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+19 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+22 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+23 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+30 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+31 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+32 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+35 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+37 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+38 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+39 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+43 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+45 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+46 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+47 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+49 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+55 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+56 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+57 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+58 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+61 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+70 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+71 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+76 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+81 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+84 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+86 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+88 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+91 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+92 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+93 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+95 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+97 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+105 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+107 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+112 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+114 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+117 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+120 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+122 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+124 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+129 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+132 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+136 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+139 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+140 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+141 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+149 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+152 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+155 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+161 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+174 = {
+    if = {
+        limit = { owner = { pwc_st_is_city_country = yes } }
+        add_dynamic_modifier = { modifier = pwc_dm_regional_supply }
+    }
+}
+        }
+    }
+}
+pwc_se_apply_integration_speed = {
+    THIS = {
+        if = {
+            limit = { has_game_rule = { rule = pwc_integration_speed option = FAST } }
+            set_occupation_law = pwc_city_administration_fast
+        }
+        else_if = {
+            limit = { has_game_rule = { rule = pwc_integration_speed option = STRICT } }
+            set_occupation_law = pwc_city_administration_strict
+        }
+        else = { set_occupation_law = pwc_city_military_administration }
+    }
+}

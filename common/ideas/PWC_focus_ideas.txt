@@ -1,0 +1,924 @@
+
+
+
+
+
+
+
+
+
+ideas = {
+	country = {
+
+		
+		pwc_idea_gov_public_order = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.03
+			}
+		}
+
+		
+		pwc_idea_gov_civil_defense = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				army_core_defence_factor = 0.05
+				required_garrison_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_gov_streamlined_administration = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_law_civil_service_exam = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = 0.03
+				promote_cost_factor = -0.1
+			}
+		}
+
+		
+		pwc_idea_law_emergency_powers = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				war_support_factor = 0.03
+				mobilization_speed = 0.1
+			}
+		}
+
+		
+		pwc_idea_law_oversight_committee = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.03
+				foreign_subversive_activites = -0.1
+			}
+		}
+
+		
+		pwc_idea_eco_construction_bureau = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industry_repair_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_eco_resource_survey = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_eco_finance_reform = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_eco_municipal_energy = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				fuel_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_eco_research_institute = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+
+		
+		pwc_idea_eco_trade_hub = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				trade_opinion_factor = 0.1
+				license_purchase_cost = -0.1
+			}
+		}
+
+		
+		pwc_idea_eco_metropolitan_economy = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_eco_commerce_district = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.03
+			}
+		}
+
+		
+		pwc_idea_eco_apex_powerhouse = {
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_defense_corps = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.03
+			}
+		}
+
+		
+		pwc_idea_mil_urban_fortification = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_officer_academy = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				experience_gain_army_factor = 0.05
+				command_power_gain = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_combined_arms = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_attack_factor = 0.05
+				coordination_bonus = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_logistics_command = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				supply_consumption_factor = -0.1
+				truck_attrition_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_mil_naval_command = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				naval_coordination = 0.05
+				naval_detection = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_apex_city_marshal = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				planning_speed = 0.05
+				max_command_power = 50
+				command_power_gain = 0.1
+			}
+		}
+
+		
+		pwc_idea_war_foreign_office = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.1
+				opinion_gain_monthly_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_war_nap_framework = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				stability_factor = 0.03
+				enemy_justify_war_goal_time = 0.1
+			}
+		}
+
+		
+		pwc_idea_war_access_agreements = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				supply_consumption_factor = -0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_war_intelligence_bureau = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				civilian_intel_factor = 0.05
+				army_intel_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_war_war_room = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				max_planning = 0.03
+				command_power_gain = 0.1
+			}
+		}
+
+		
+		pwc_idea_war_propaganda_office = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				war_support_factor = 0.03
+				defensive_war_stability_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_war_occupation_authority = {
+			removal_cost = -1
+			picture = generic_war_preparation
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.03
+				required_garrison_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_endgame_offensive_doctrine = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_endgame_defensive_doctrine = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				army_defence_factor = 0.1
+				army_core_defence_factor = 0.1
+				max_dig_in = 1
+			}
+		}
+
+		
+		pwc_idea_endgame_technological_supremacy = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				special_project_speed_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_endgame_integration_charter = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.06
+				resistance_growth_on_our_occupied_states = -0.09
+				non_core_manpower = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_staff_wargames = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				max_command_power = 30
+				land_reinforce_rate = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_operational_intelligence = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_intel_factor = 0.05
+				spotting_chance = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_reserve_system = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_regain = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_armaments_standardization = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				truck_attrition_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_mil_joint_operations = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				max_command_power = 40
+				coordination_bonus = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_mobile_operations = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				army_speed_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_mobile_reserves = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_regain = 0.1
+				land_reinforce_rate = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_deep_exploitation = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				breakthrough_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_firepower_operations = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				recon_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_sensor_shooter_network = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				recon_factor = 0.03
+				coordination_bonus = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_deliberate_breakthrough = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				breakthrough_factor = 0.05
+				max_planning = 0.03
+			}
+		}
+
+		
+		pwc_idea_mil_elastic_operations = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_defense_in_depth = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				land_reinforce_rate = 0.05
+				max_dig_in_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_counterstroke = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				breakthrough_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_air_denial = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				air_intercept_efficiency = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_dispersed_airbases = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				air_accidents_factor = -0.05
+				air_home_defence_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_interception_network = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				air_interception_detect_factor = 0.05
+				air_intercept_efficiency = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_air_joint_strike = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				ground_attack_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_forward_air_control = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				air_cas_efficiency = 0.1
+				ground_attack_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_battlefield_interdiction = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				air_cas_efficiency = 0.1
+				ground_attack_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_littoral_denial = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				naval_coordination = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_coastal_sensor_line = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				naval_detection = 0.05
+				spotting_chance = 0.03
+			}
+		}
+
+		
+		pwc_idea_mil_ambush_flotillas = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.05
+				naval_torpedo_hit_chance_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_sea_control = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				convoy_escort_efficiency = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_convoy_command = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				convoy_escort_efficiency = 0.05
+				naval_coordination = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_expeditionary_support = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				amphibious_invasion = 0.03
+				naval_invasion_prep_speed = 0.05
+			}
+		}
+
+		
+		pwc_idea_mil_field_workshops = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				attrition = -0.05
+				army_org_regain = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_medical_evacuation = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_morale_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_geo_island_maritime_identity = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				stability_factor = 0.03
+				experience_gain_navy_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_island_fishing_fleet = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				local_resources_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_island_amphibious_training = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				naval_invasion_capacity = 5
+				naval_invasion_penalty = -0.1
+			}
+		}
+
+		
+		pwc_idea_geo_island_coastal_watch = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				spotting_chance = 0.05
+				naval_detection = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_island_typhoon_readiness = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				industry_repair_factor = 0.1
+				naval_accidents_chance = -0.1
+			}
+		}
+
+		
+		pwc_idea_geo_island_apex_ocean_lord = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				navy_max_range_factor = 0.05
+				convoy_escort_efficiency = 0.05
+				naval_coordination = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_coast_sea_defense = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				army_core_defence_factor = 0.05
+				naval_detection = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_coast_marine_fisheries = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				local_resources_factor = 0.05
+				monthly_population = 0.03
+			}
+		}
+
+		
+		pwc_idea_geo_coast_maritime_trade = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_geo_coast_beachhead_training = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				amphibious_invasion = 0.1
+				naval_invasion_capacity = 3
+			}
+		}
+
+		
+		pwc_idea_geo_coast_apex_harbor_master = {
+			removal_cost = -1
+			picture = generic_navy_bonus
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				refit_speed = 0.1
+			}
+		}
+
+		
+		pwc_idea_geo_frontier_border_guard = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				army_core_defence_factor = 0.05
+				recon_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_frontier_fortification_line = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				max_dig_in_factor = 0.05
+				land_bunker_effectiveness_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_geo_frontier_strategic_depth = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				attrition = -0.05
+				out_of_supply_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_geo_frontier_martial_tradition = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				training_time_army_factor = -0.05
+				terrain_trait_xp_gain_factor = 0.1
+			}
+		}
+
+		
+		pwc_idea_geo_frontier_apex_gatekeeper = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_inland_agrarian_heartland = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				monthly_population = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_inland_food_security = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		
+		pwc_idea_geo_inland_labor_reserve = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				conscription = 0.03
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_inland_militia_tradition = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				army_core_defence_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_geo_inland_interior_lines = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				supply_consumption_factor = -0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_inland_apex_heartland_fortress = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				army_core_defence_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_generic_city_cooperation = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.03
+				drift_defence_factor = 0.03
+			}
+		}
+
+		
+		pwc_idea_geo_generic_public_welfare = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		
+		pwc_idea_geo_generic_industrial_cooperation = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_generic_logistics_coordination = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_geo_generic_local_mobilization = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				training_time_army_factor = -0.03
+			}
+		}
+
+		
+		pwc_idea_geo_generic_defense_cooperation = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				army_core_defence_factor = 0.05
+				max_dig_in = 1
+			}
+		}
+
+		
+		pwc_idea_geo_generic_emergency_support = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				attrition = -0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		
+		pwc_idea_geo_generic_apex_city_commonwealth = {
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				industry_repair_factor = 0.05
+				political_power_gain = 0.01
+			}
+		}
+	}
+}

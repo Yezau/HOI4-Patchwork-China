@@ -1,0 +1,392 @@
+
+pwc_state_operation_fire_coordination = {
+    icon = GFX_idea_pwc_military_fire_coordination_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_attack_factor = 0.1
+}
+pwc_state_operation_deliberate_assault = {
+    icon = GFX_idea_pwc_military_deliberate_offensive_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    breakthrough_factor = 0.1
+}
+pwc_state_operation_deep_thrust = {
+    icon = GFX_idea_pwc_military_deep_exploitation_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_attack_factor = 0.05
+    breakthrough_factor = 0.05
+    army_speed_factor = 0.1
+    army_defence_factor = -0.05
+}
+pwc_state_operation_elastic_counterattack = {
+    icon = GFX_idea_pwc_military_defence_in_depth_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_defence_factor = 0.1
+}
+pwc_state_operation_supply_staging = {
+    icon = GFX_idea_pwc_military_war_reserves_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    out_of_supply_factor = -0.1
+}
+pwc_state_operation_mobile_workshops = {
+    icon = GFX_idea_pwc_military_field_repairs_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_speed_factor = 0.1
+}
+pwc_state_operation_evacuation_posts = {
+    icon = GFX_idea_pwc_military_evacuation_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_morale_factor = 0.1
+}
+pwc_state_operation_reconnaissance = {
+    icon = GFX_idea_pwc_military_reconnaissance_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_attack_factor = 0.05
+    breakthrough_factor = 0.05
+}
+pwc_state_operation_reserve_assault = {
+    icon = GFX_idea_pwc_military_front_rotation_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    breakthrough_factor = 0.05
+}
+pwc_state_operation_mobile_breach = {
+    icon = GFX_idea_pwc_military_mobile_concentration_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    breakthrough_factor = 0.1
+    army_speed_factor = 0.05
+}
+pwc_state_operation_counterstroke = {
+    icon = GFX_idea_pwc_military_counterstroke_active
+    attacker_modifier = yes
+    enable = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_war = yes
+        ROOT = {
+            OR = {
+                is_controlled_by = PREV
+                controller = {
+                    exists = yes
+                    has_war_with = PREV.PREV
+                }
+            }
+        }
+    }
+    remove_trigger = {
+        NOT = {
+            exists = yes
+            pwc_st_city_alive = yes
+            has_war = yes
+            ROOT = {
+                OR = {
+                    is_controlled_by = PREV
+                    controller = {
+                        exists = yes
+                        has_war_with = PREV.PREV
+                    }
+                }
+            }
+        }
+    }
+    army_attack_factor = 0.1
+    breakthrough_factor = 0.1
+}

@@ -1,0 +1,517 @@
+
+
+new_mobile_warfare = {
+    folder = land
+    name = PWC_GRAND_NEW_MOBILE_WARFARE
+    description = PWC_GRAND_NEW_MOBILE_WARFARE_DESC
+    icon = GFX_doctrine_mobile_warfare_medium
+    xp_cost = 100
+    xp_type = army
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_defense_corps
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_mobility
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_mobile_operations
+        }
+    }
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+    army_speed_factor = 0.06
+    planning_speed = 0.09
+    max_planning = -0.05
+    enable_tactic = tactic_unexpected_thrust
+    milestones = {
+        {
+            org_loss_when_moving = -0.09
+            enable_tactic = tactic_delay
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            supply_consumption_factor = -0.03
+            enable_tactic = tactic_overwhelming_fire
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            pwc_unit_light_tank = {
+                breakthrough = 0.05
+            }
+            pwc_unit_tank = {
+                breakthrough = 0.05
+            }
+            enable_tactic = tactic_blitz
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            land_reinforce_rate = 0.03
+            planning_speed = 0.05
+            enable_tactic = tactic_backhand_blow
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+superior_firepower = {
+    folder = land
+    name = PWC_GRAND_SUPERIOR_FIREPOWER
+    description = PWC_GRAND_SUPERIOR_FIREPOWER_DESC
+    icon = GFX_doctrine_superior_firepower_medium
+    xp_cost = 100
+    xp_type = army
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_defense_corps
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_industrial
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_firepower_operations
+        }
+    }
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+    recon_factor = 0.06
+    supply_consumption_factor = 0.05
+    pwc_unit_artillery = {
+        soft_attack = 0.05
+    }
+    pwc_unit_rocket_artillery = {
+        soft_attack = 0.05
+    }
+    enable_tactic = tactic_overwhelming_fire
+    milestones = {
+        {
+            pwc_unit_infantry = {
+                max_organisation = 2
+            }
+            enable_tactic = tactic_elastic_defense
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            pwc_unit_artillery = {
+                soft_attack = 0.03
+            }
+            pwc_unit_anti_tank = {
+                hard_attack = 0.05
+            }
+            enable_tactic = tactic_barrage
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            pwc_unit_tank = {
+                hard_attack = 0.05
+            }
+            pwc_unit_tank_destroyer = {
+                hard_attack = 0.05
+            }
+            enable_tactic = tactic_delay
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            max_planning = 0.05
+            planning_decay_rate_factor = -0.05
+            enable_tactic = tactic_tactical_withdrawal
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+grand_battleplan = {
+    folder = land
+    name = PWC_GRAND_GRAND_BATTLEPLAN
+    description = PWC_GRAND_GRAND_BATTLEPLAN_DESC
+    icon = GFX_doctrine_grand_battleplan_medium
+    xp_cost = 100
+    xp_type = army
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_defense_corps
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_balanced
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_staff_wargames
+        }
+    }
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+    max_planning = 0.09
+    planning_speed = -0.05
+    command_power_gain_mult = 0.05
+    enable_tactic = tactic_planned_attack
+    milestones = {
+        {
+            max_dig_in_factor = 0.05
+            enable_tactic = tactic_elastic_defense
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            supply_consumption_factor = -0.05
+            enable_tactic = tactic_overwhelming_fire
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            pwc_unit_tank = {
+                defense = 0.05
+            }
+            pwc_unit_heavy_tank = {
+                defense = 0.05
+            }
+            enable_tactic = tactic_breakthrough
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            max_command_power = 10
+            coordination_bonus = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+mass_assault = {
+    folder = land
+    name = PWC_GRAND_MASS_ASSAULT
+    description = PWC_GRAND_MASS_ASSAULT_DESC
+    icon = GFX_doctrine_mass_assault_medium
+    xp_cost = 100
+    xp_type = army
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_defense_corps
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_defense
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_elastic_operations
+        }
+    }
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+    army_morale_factor = 0.05
+    land_reinforce_rate = 0.03
+    army_speed_factor = -0.05
+    enable_tactic = tactic_elastic_defense
+    milestones = {
+        {
+            army_core_defence_factor = 0.05
+            enable_tactic = tactic_delay
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        infantry_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            attrition = -0.03
+            dig_in_speed_factor = 0.05
+            enable_tactic = tactic_overwhelming_fire
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        support_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            pwc_unit_tank = {
+                breakthrough = 0.05
+            }
+            pwc_unit_heavy_tank = {
+                breakthrough = 0.05
+            }
+            enable_tactic = tactic_backhand_blow
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        armor_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            out_of_supply_factor = -0.09
+            enable_tactic = tactic_tactical_withdrawal
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        operations_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+

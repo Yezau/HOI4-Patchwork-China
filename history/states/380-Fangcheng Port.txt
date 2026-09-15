@@ -1,0 +1,27 @@
+state={
+	id = 380
+	name = STATE_380
+	provinces = { 1505 2067 4205 4206 }
+	manpower = 1059000
+	state_category = large_town
+	resources = {
+		rubber = 18
+		steel = 7
+	}
+	local_supplies = 0.0
+	history = {
+		add_core_of = X44
+		owner = X44
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			4205 = {
+				naval_base = 1
+			}
+			pwc_building_tech_center = 1
+		}
+		victory_points = { 4205 1 }
+		victory_points = { 4206 2 }
+	}
+}

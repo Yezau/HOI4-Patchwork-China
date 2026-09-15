@@ -1,0 +1,789 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "PWC_cabinet_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1000 height = 720 }
+		orientation = center
+		moveable = yes
+
+		iconType = {
+			name = "PWC_cabinet_background"
+			spriteType = "PWC_GFX_console_background"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "PWC_cabinet_header_strip"
+			spriteType = "PWC_GFX_console_header_strip"
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "PWC_cabinet_title"
+			position = { x = 20 y = 14 }
+			font = "hoi_18mbs"
+			text = PWC_CABINET_TITLE
+			format = centre
+			maxWidth = 960
+		}
+
+		
+
+		containerWindowType = {
+			name = "PWC_seat_civil_admin"
+			position = { x = 30 y = 90 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_civil_admin_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_civil_admin_icon"
+				spriteType = "PWC_GFX_seat_civil_admin"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_civil_admin_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_CIVIL_ADMIN
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_civil_admin_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_civil_admin_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_CIVIL_CITY_ANCHOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_CIVIL_VETERAN_ADMINISTRATOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_CIVIL_WELFARE_OFFICER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_CIVIL_CITY_PSYCHOLOGIST_DESC"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_CIVIL_RALLY_ORATOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_civil_admin_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_CIVIL_ADMIN_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_economic_planning"
+			position = { x = 350 y = 90 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_economic_planning_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_economic_planning_icon"
+				spriteType = "PWC_GFX_seat_economic_planning"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_economic_planning_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_ECONOMIC_PLANNING
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_economic_planning_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_economic_planning_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ECO_INDUSTRIAL_CZAR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ECO_MASTER_BUILDER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ECO_CIVILIAN_FACTORY_DIRECTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ECO_ARSENAL_DIRECTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ECO_INFRASTRUCTURE_ENGINEER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_economic_planning_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_ECONOMIC_PLANNING_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_finance_trade"
+			position = { x = 670 y = 90 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_finance_trade_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_finance_trade_icon"
+				spriteType = "PWC_GFX_seat_finance_trade"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_finance_trade_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_FINANCE_TRADE
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_finance_trade_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_finance_trade_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_FIN_ENERGY_BROKER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_FIN_RESOURCE_SURVEYOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_FIN_LEAN_MANAGER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_FIN_CONVERSION_PLANNER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_FIN_OUTPUT_OPTIMIZER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_finance_trade_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_FINANCE_TRADE_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_science_education"
+			position = { x = 30 y = 260 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_science_education_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_science_education_icon"
+				spriteType = "PWC_GFX_seat_science_education"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_science_education_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_SCIENCE_EDUCATION
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_science_education_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_science_education_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_science_education_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_SCI_RESEARCH_DEAN_DESC"
+			}
+
+			buttonType = {
+				name = "seat_science_education_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_SCI_MILITARY_EDUCATOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_science_education_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_SCI_NAVAL_ACADEMICIAN_DESC"
+			}
+
+			buttonType = {
+				name = "seat_science_education_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_SCI_FLIGHT_INSTRUCTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_science_education_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_SCI_CIVIC_TEACHER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_science_education_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_SCIENCE_EDUCATION_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_army_command"
+			position = { x = 350 y = 260 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_army_command_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_army_command_icon"
+				spriteType = "PWC_GFX_seat_army_command"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_army_command_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_ARMY_COMMAND
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_army_command_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_army_command_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_army_command_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ARM_IRON_FIST_COMMANDER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_army_command_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ARM_BULWARK_COMMANDER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_army_command_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ARM_URBAN_ASSAULT_LEADER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_army_command_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ARM_FORTRESS_WARDEN_DESC"
+			}
+
+			buttonType = {
+				name = "seat_army_command_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_ARM_IRON_ORGANIZER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_army_command_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_ARMY_COMMAND_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_navy_command"
+			position = { x = 670 y = 260 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_navy_command_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_navy_command_icon"
+				spriteType = "PWC_GFX_seat_navy_command"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_navy_command_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_NAVY_COMMAND
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_navy_command_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_navy_command_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_NAVY_BLUE_WATER_ADMIRAL_DESC"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_NAVY_LANDING_MASTER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_NAVY_AMPHIBIOUS_CHIEF_DESC"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_NAVY_SHIPBUILDING_SUPERUSER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_NAVY_SILENT_COMMODORE_DESC"
+			}
+
+			buttonType = {
+				name = "seat_navy_command_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_NAVY_COMMAND_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_air_command"
+			position = { x = 30 y = 430 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_air_command_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_air_command_icon"
+				spriteType = "PWC_GFX_seat_air_command"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_air_command_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_AIR_COMMAND
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_air_command_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_air_command_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_air_command_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_AIR_DOGFIGHT_ACE_DESC"
+			}
+
+			buttonType = {
+				name = "seat_air_command_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_AIR_SKY_SHIELD_DESC"
+			}
+
+			buttonType = {
+				name = "seat_air_command_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_AIR_AGILITY_INSTRUCTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_air_command_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_AIR_GROUND_CREW_INSPECTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_air_command_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_AIR_ACE_TALENT_SCOUT_DESC"
+			}
+
+			buttonType = {
+				name = "seat_air_command_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_AIR_COMMAND_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_logistics_command"
+			position = { x = 350 y = 430 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_logistics_command_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_logistics_command_icon"
+				spriteType = "PWC_GFX_seat_logistics_command"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_logistics_command_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_LOGISTICS_COMMAND
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_logistics_command_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_logistics_command_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_LOG_SUPPLY_GUARDIAN_DESC"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_LOG_SUPPLY_LINE_ENGINEER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_LOG_FUEL_STEWARD_DESC"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_LOG_RETOOLING_MASTER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_LOG_SALVAGE_EXPERT_DESC"
+			}
+
+			buttonType = {
+				name = "seat_logistics_command_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_LOGISTICS_COMMAND_DESC"
+			}
+		}
+
+		containerWindowType = {
+			name = "PWC_seat_mobilization_command"
+			position = { x = 670 y = 430 }
+			size = { width = 300 height = 150 }
+
+			iconType = {
+				name = "PWC_seat_mobilization_command_frame"
+				spriteType = "PWC_GFX_console_seat_frame_idle"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "PWC_seat_mobilization_command_icon"
+				spriteType = "PWC_GFX_seat_mobilization_command"
+				position = { x = 8 y = 8 }
+			}
+
+			instantTextBoxType = {
+				name = "PWC_seat_mobilization_command_name"
+				position = { x = 64 y = 10 }
+				font = "hoi_16mbs"
+				text = PWC_SEAT_MOBILIZATION_COMMAND
+				maxWidth = 226
+			}
+
+			iconType = {
+				name = "PWC_seat_mobilization_command_portrait"
+				spriteType = "PWC_GFX_console_candidate_portrait_frame"
+				position = { x = 8 y = 48 }
+			}
+
+			gridBoxType = {
+				name = "PWC_seat_mobilization_command_cand_grid"
+				position = { x = 90 y = 48 }
+				size = { width = 200 height = 56 }
+				slotsize = { width = 32 height = 32 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_cand_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_MOB_MORALE_INSPIRER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_cand_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_MOB_GRAND_PLANNER_DESC"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_cand_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_MOB_DEEP_OPERATIONS_SCHOLAR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_cand_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_MOB_REINFORCEMENT_SPECIALIST_DESC"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_cand_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "PWC_GFX_console_appoint_button"
+				pdx_tooltip = "PWC_CAND_MOB_FORCED_MARCH_INSTRUCTOR_DESC"
+			}
+
+			buttonType = {
+				name = "seat_mobilization_command_dismiss"
+				position = { x = 0 y = 36 }
+				quadTextureSprite = "PWC_GFX_console_dismiss_button"
+				pdx_tooltip = "PWC_SEAT_MOBILIZATION_COMMAND_DESC"
+			}
+		}
+
+		
+		buttonType = {
+			name = "PWC_cabinet_close_button"
+			position = { x = 962 y = 6 }
+			quadTextureSprite = "PWC_GFX_console_dismiss_button"
+			pdx_tooltip = "PWC_CABINET_CLOSE_TIP"
+		}
+
+	}
+}

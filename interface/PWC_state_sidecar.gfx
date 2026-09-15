@@ -1,0 +1,31 @@
+spriteTypes = {
+    spriteType = {
+        name = "PWC_GFX_state_region_panel"
+        texturefile = "gfx/interface/pwc/ui/state_region_panel.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "PWC_GFX_state_transfer_panel"
+        texturefile = "gfx/interface/pwc/ui/state_transfer_panel.dds"
+        noOfFrames = 1
+    }
+    spriteType = {
+        name = "PWC_GFX_state_transfer_entry"
+        texturefile = "gfx/interface/pwc/ui/state_transfer_entry.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "PWC_GFX_state_transfer_action"
+        texturefile = "gfx/interface/pwc/ui/state_transfer_action.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_state_victory_points_bg"
+        texturefile = "gfx/interface/victorypoint_stateview_bg.dds"
+        size = { x = 60 y = 22 }
+        borderSize = { x = 6 y = 6 }
+        tilingCenter = no
+    }
+}

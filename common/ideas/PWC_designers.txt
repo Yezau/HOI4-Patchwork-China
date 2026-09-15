@@ -1,0 +1,376 @@
+
+
+
+
+
+
+
+
+ideas = {
+
+	tank_manufacturer = {
+
+		pwc_designer_land_research_bureau = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_land_research_bureau
+			research_bonus = {
+				pwc_tech_armor = 0.09
+			}
+			modifier = {
+				military_industrial_organization_research_bonus = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_land_serial_works = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_land_serial_works
+			research_bonus = {
+				pwc_tech_armor = 0.05
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_land_mio_consortium = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_land_mio_consortium
+			research_bonus = {
+				pwc_tech_armor = 0.05
+			}
+			modifier = {
+				military_industrial_organization_funds_gain = 0.15
+				military_industrial_organization_research_bonus = 0.03
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		pwc_designer_air_research_bureau = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_air_research_bureau
+			research_bonus = {
+				pwc_tech_air = 0.09
+			}
+			modifier = {
+				military_industrial_organization_research_bonus = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_air_serial_works = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_air_serial_works
+			research_bonus = {
+				pwc_tech_air = 0.05
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_air_mio_consortium = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_air_mio_consortium
+			research_bonus = {
+				pwc_tech_air = 0.05
+			}
+			modifier = {
+				military_industrial_organization_funds_gain = 0.15
+				air_accidents_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	naval_manufacturer = {
+
+		pwc_designer_naval_research_bureau = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_naval_research_bureau
+			research_bonus = {
+				pwc_tech_navy = 0.09
+			}
+			modifier = {
+				military_industrial_organization_research_bonus = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_naval_serial_works = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_naval_serial_works
+			research_bonus = {
+				pwc_tech_navy = 0.05
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_naval_mio_consortium = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_naval_mio_consortium
+			research_bonus = {
+				pwc_tech_navy = 0.05
+			}
+			modifier = {
+				military_industrial_organization_funds_gain = 0.15
+				convoy_escort_efficiency = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		pwc_designer_materiel_research_bureau = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_materiel_research_bureau
+			research_bonus = {
+				pwc_tech_army = 0.09
+			}
+			modifier = {
+				equipment_capture_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_materiel_serial_works = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_materiel_serial_works
+			research_bonus = {
+				pwc_tech_army = 0.05
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				supply_consumption_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_materiel_mio_consortium = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_materiel_mio_consortium
+			research_bonus = {
+				pwc_tech_army = 0.05
+			}
+			modifier = {
+				military_industrial_organization_funds_gain = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		pwc_designer_industry_research_bureau = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_research_bureau
+			research_bonus = {
+				pwc_tech_industry = 0.09
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_conversion_works = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_conversion_works
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.15
+				industrial_capacity_factory = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_mio_consortium = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_mio_consortium
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				military_industrial_organization_funds_gain = 0.2
+				military_industrial_organization_research_bonus = 0.03
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_steel = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_steel
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_construction = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_construction
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_mining = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_mining
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_railway = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_railway
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				production_speed_rail_way_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_electrical = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_electrical
+			research_bonus = {
+				pwc_tech_electronics = 0.1
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.2
+				production_speed_infrastructure_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		pwc_designer_industry_chemical = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_designer_industry_chemical
+			research_bonus = {
+				pwc_tech_industry = 0.05
+			}
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.2
+				fuel_gain_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

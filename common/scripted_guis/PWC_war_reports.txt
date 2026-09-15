@@ -1,0 +1,50 @@
+scripted_gui = {
+    pwc_war_reports = {
+        context_type = player_context
+        window_name = pwc_war_reports_window
+        dirty = global.pwc_war_reports_dirty
+        ai_enabled = { always = no }
+        visible = { pwc_st_is_city_country = yes }
+        triggers = {
+            pwc_war_reports_unread_visible = {
+                has_country_flag = pwc_flag_war_reports_unread
+            }
+        }
+        effects = {
+            pwc_war_reports_toggle_click = { pwc_se_toggle_war_reports = yes }
+        }
+    }
+    
+    pwc_war_reports_panel_gui = {
+        context_type = player_context
+        window_name = pwc_war_reports_panel
+        dirty = global.pwc_war_reports_dirty
+        ai_enabled = { always = no }
+        visible = {
+            pwc_st_is_city_country = yes
+            has_country_flag = pwc_flag_war_reports_open
+        }
+        dynamic_lists = {
+            pwc_war_reports_header_grid = {
+                array = global.pwc_war_report_header
+                entry_container = pwc_war_reports_header
+                value = pwc_report_header_country
+                change_scope = yes
+            }
+            pwc_war_reports_grid = {
+                array = pwc_war_reports
+                entry_container = pwc_war_report_row
+                value = pwc_report_country
+                change_scope = yes
+            }
+        }
+        triggers = {
+            pwc_war_reports_empty_visible = {
+                check_variable = { pwc_war_reports^num = 0 }
+            }
+        }
+        effects = {
+            pwc_war_reports_close_click = { pwc_se_close_war_reports = yes }
+        }
+    }
+}

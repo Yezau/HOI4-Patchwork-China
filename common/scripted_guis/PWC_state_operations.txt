@@ -1,0 +1,1781 @@
+
+scripted_gui = {
+    pwc_state_operations_near = {
+        window_name = pwc_state_operations_near
+        context_type = selected_state_context
+        parent_window_token = selected_state_view
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            NOT = {
+                ROOT = {
+                    pwc_st_state_transfer_allowed = yes
+                    has_country_flag = pwc_flag_transfer_tool_open
+                }
+            }
+        }
+        effects = {
+            pwc_ops_tab_operations_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        clr_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+            pwc_ops_tab_support_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        set_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_operations_selected_visible = {
+                ROOT = {
+                    NOT = {
+                        has_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+            pwc_ops_support_selected_visible = {
+                ROOT = {
+                    has_country_flag = pwc_flag_state_operations_support
+                }
+            }
+        }
+    }
+    pwc_state_operations_near_operations = {
+        window_name = pwc_ops_operations_scroll
+        context_type = selected_state_context
+        parent_scripted_gui = pwc_state_operations_near
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            NOT = {
+                ROOT = {
+                    pwc_st_state_transfer_allowed = yes
+                    has_country_flag = pwc_flag_transfer_tool_open
+                }
+            }
+            ROOT = {
+                NOT = {
+                    has_country_flag = pwc_flag_state_operations_support
+                }
+            }
+        }
+        effects = {
+            pwc_ops_fire_coordination_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_operational_intelligence
+                                has_completed_focus = mil_sensor_shooter_network
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_fire_coordination
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_fire_coordination
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_deliberate_assault_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_reserve_system
+                                has_completed_focus = mil_deliberate_breakthrough
+                                has_completed_focus = mil_counterstroke
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_deliberate_assault
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_deliberate_assault
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_deep_thrust_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_mobile_reserves
+                                has_completed_focus = mil_deep_exploitation
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_deep_thrust
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_deep_thrust
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_elastic_counterattack_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_defense_in_depth
+                                has_completed_focus = mil_urban_fortification
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_elastic_counterattack
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_elastic_counterattack
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_fire_coordination_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_operational_intelligence
+                        has_completed_focus = mil_sensor_shooter_network
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_fire_coordination
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_deliberate_assault_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_reserve_system
+                        has_completed_focus = mil_deliberate_breakthrough
+                        has_completed_focus = mil_counterstroke
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_deliberate_assault
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_deep_thrust_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_mobile_reserves
+                        has_completed_focus = mil_deep_exploitation
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_deep_thrust
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_elastic_counterattack_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_defense_in_depth
+                        has_completed_focus = mil_urban_fortification
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_elastic_counterattack
+                        scope = ROOT
+                    }
+                }
+            }
+        }
+    }
+    pwc_state_operations_near_support = {
+        window_name = pwc_ops_support_scroll
+        context_type = selected_state_context
+        parent_scripted_gui = pwc_state_operations_near
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            NOT = {
+                ROOT = {
+                    pwc_st_state_transfer_allowed = yes
+                    has_country_flag = pwc_flag_transfer_tool_open
+                }
+            }
+            ROOT = {
+                has_country_flag = pwc_flag_state_operations_support
+            }
+        }
+        effects = {
+            pwc_ops_supply_staging_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            has_completed_focus = mil_armaments_standardization
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_supply_staging
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_supply_staging
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+            pwc_ops_mobile_workshops_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            has_completed_focus = mil_field_workshops
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_mobile_workshops
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_mobile_workshops
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+            pwc_ops_evacuation_posts_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_medical_evacuation
+                                has_completed_focus = mil_reserve_system
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_evacuation_posts
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_evacuation_posts
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_supply_staging_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    has_completed_focus = mil_armaments_standardization
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_supply_staging
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_mobile_workshops_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    has_completed_focus = mil_field_workshops
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_mobile_workshops
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_evacuation_posts_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_medical_evacuation
+                        has_completed_focus = mil_reserve_system
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_evacuation_posts
+                        scope = ROOT
+                    }
+                }
+            }
+        }
+    }
+    pwc_state_operations_far = {
+        window_name = pwc_state_operations_far
+        context_type = selected_state_context
+        parent_window_token = selected_state_view
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                has_country_flag = pwc_flag_transfer_tool_open
+            }
+        }
+        effects = {
+            pwc_ops_tab_operations_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        clr_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+            pwc_ops_tab_support_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        set_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_operations_selected_visible = {
+                ROOT = {
+                    NOT = {
+                        has_country_flag = pwc_flag_state_operations_support
+                    }
+                }
+            }
+            pwc_ops_support_selected_visible = {
+                ROOT = {
+                    has_country_flag = pwc_flag_state_operations_support
+                }
+            }
+        }
+    }
+    pwc_state_operations_far_operations = {
+        window_name = pwc_ops_operations_scroll
+        context_type = selected_state_context
+        parent_scripted_gui = pwc_state_operations_far
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                has_country_flag = pwc_flag_transfer_tool_open
+            }
+            ROOT = {
+                NOT = {
+                    has_country_flag = pwc_flag_state_operations_support
+                }
+            }
+        }
+        effects = {
+            pwc_ops_fire_coordination_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_operational_intelligence
+                                has_completed_focus = mil_sensor_shooter_network
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_fire_coordination
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_fire_coordination
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_deliberate_assault_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_reserve_system
+                                has_completed_focus = mil_deliberate_breakthrough
+                                has_completed_focus = mil_counterstroke
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_deliberate_assault
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_deliberate_assault
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_deep_thrust_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        controller = {
+                            exists = yes
+                            has_war_with = ROOT
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_mobile_reserves
+                                has_completed_focus = mil_deep_exploitation
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_deep_thrust
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_deep_thrust
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+            pwc_ops_elastic_counterattack_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_operations
+                                    has_country_flag = pwc_military_lock_land
+                                    has_country_flag = pwc_military_lock_intelligence
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_defense_in_depth
+                                has_completed_focus = mil_urban_fortification
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 20
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_elastic_counterattack
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -20
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_operations
+                            days = 21
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_elastic_counterattack
+                        scope = ROOT
+                        days = 7
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_fire_coordination_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_operational_intelligence
+                        has_completed_focus = mil_sensor_shooter_network
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_fire_coordination
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_deliberate_assault_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_reserve_system
+                        has_completed_focus = mil_deliberate_breakthrough
+                        has_completed_focus = mil_counterstroke
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_deliberate_assault
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_deep_thrust_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_mobile_reserves
+                        has_completed_focus = mil_deep_exploitation
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_deep_thrust
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_elastic_counterattack_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_operations
+                            has_country_flag = pwc_military_lock_land
+                            has_country_flag = pwc_military_lock_intelligence
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_defense_in_depth
+                        has_completed_focus = mil_urban_fortification
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 20
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_elastic_counterattack
+                        scope = ROOT
+                    }
+                }
+            }
+        }
+    }
+    pwc_state_operations_far_support = {
+        window_name = pwc_ops_support_scroll
+        context_type = selected_state_context
+        parent_scripted_gui = pwc_state_operations_far
+        ai_enabled = {
+            always = no
+        }
+        visible = {
+            ROOT = {
+                exists = yes
+                is_ai = no
+                pwc_st_city_alive = yes
+                has_war = yes
+                NOT = {
+                    tag = NTR
+                }
+            }
+            OR = {
+                is_controlled_by = ROOT
+                controller = {
+                    exists = yes
+                    has_war_with = ROOT
+                }
+            }
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                has_country_flag = pwc_flag_transfer_tool_open
+            }
+            ROOT = {
+                has_country_flag = pwc_flag_state_operations_support
+            }
+        }
+        effects = {
+            pwc_ops_supply_staging_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            has_completed_focus = mil_armaments_standardization
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_supply_staging
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_supply_staging
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+            pwc_ops_mobile_workshops_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            has_completed_focus = mil_field_workshops
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_mobile_workshops
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_mobile_workshops
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+            pwc_ops_evacuation_posts_click = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            exists = yes
+                            is_ai = no
+                            pwc_st_city_alive = yes
+                            has_war = yes
+                            NOT = {
+                                tag = NTR
+                            }
+                        }
+                        OR = {
+                            is_controlled_by = ROOT
+                            controller = {
+                                exists = yes
+                                has_war_with = ROOT
+                            }
+                        }
+                        NOT = {
+                            ROOT = {
+                                OR = {
+                                    has_country_flag = pwc_state_operations_cooldown_support
+                                    has_country_flag = pwc_military_lock_sustainment
+                                    has_country_flag = pwc_military_lock_land
+                                }
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                has_completed_focus = mil_medical_evacuation
+                                has_completed_focus = mil_reserve_system
+                            }
+                            has_army_size = {
+                                size > 0
+                            }
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = {
+                                modifier = pwc_state_operation_evacuation_posts
+                                scope = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {
+                        add_command_power = -15
+                        set_country_flag = {
+                            flag = pwc_state_operations_cooldown_support
+                            days = 30
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = pwc_state_operation_evacuation_posts
+                        scope = ROOT
+                        days = 10
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_ops_supply_staging_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    has_completed_focus = mil_armaments_standardization
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_supply_staging
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_mobile_workshops_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    has_completed_focus = mil_field_workshops
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_mobile_workshops
+                        scope = ROOT
+                    }
+                }
+            }
+            pwc_ops_evacuation_posts_click_enabled = {
+                ROOT = {
+                    exists = yes
+                    is_ai = no
+                    pwc_st_city_alive = yes
+                    has_war = yes
+                    NOT = {
+                        tag = NTR
+                    }
+                }
+                OR = {
+                    is_controlled_by = ROOT
+                    controller = {
+                        exists = yes
+                        has_war_with = ROOT
+                    }
+                }
+                NOT = {
+                    ROOT = {
+                        OR = {
+                            has_country_flag = pwc_state_operations_cooldown_support
+                            has_country_flag = pwc_military_lock_sustainment
+                            has_country_flag = pwc_military_lock_land
+                        }
+                    }
+                }
+                ROOT = {
+                    OR = {
+                        has_completed_focus = mil_medical_evacuation
+                        has_completed_focus = mil_reserve_system
+                    }
+                    has_army_size = {
+                        size > 0
+                    }
+                    NOT = {
+                        command_power < 15
+                    }
+                }
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = pwc_state_operation_evacuation_posts
+                        scope = ROOT
+                    }
+                }
+            }
+        }
+    }
+}

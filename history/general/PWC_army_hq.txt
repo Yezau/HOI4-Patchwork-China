@@ -1,0 +1,31 @@
+
+
+
+
+every_possible_country = {
+	limit = {
+		has_dlc = "Thunder at Our Gates"
+		OR = {
+			has_country_flag = pwc_geo_inland
+			has_country_flag = pwc_geo_coastal
+			has_country_flag = pwc_geo_frontier
+			has_country_flag = pwc_geo_island
+		}
+	}
+	division_template = {
+		localization_key = "PWC_ARMY_HQ_TEMPLATE"
+		template_counter = 121
+		is_army_hq = yes
+		regiments = {
+			pwc_unit_hq_motorized = { x = 0 y = 0 }
+			pwc_unit_hq_motorized = { x = 0 y = 1 }
+			pwc_unit_hq_motorized = { x = 0 y = 2 }
+		}
+		support = {
+			pwc_unit_hq_command = { x = 0 y = 0 }
+			pwc_unit_hq_engineer = { x = 0 y = 1 }
+			pwc_unit_hq_recon = { x = 0 y = 2 }
+			pwc_unit_hq_signal = { x = 0 y = 3 }
+		}
+	}
+}

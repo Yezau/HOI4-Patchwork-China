@@ -1,0 +1,137 @@
+pwc_se_toggle_transfer_tool = {
+    if = {
+        limit = { pwc_st_state_transfer_allowed = yes }
+        if = {
+            limit = { has_country_flag = pwc_flag_transfer_tool_open }
+            clr_country_flag = pwc_flag_transfer_tool_open
+        }
+        else = { set_country_flag = pwc_flag_transfer_tool_open }
+        clr_country_flag = pwc_flag_transfer_preview
+    }
+}
+pwc_se_clear_transfer_selection = {
+    clear_array = pwc_transfer_states
+    clear_variable = pwc_transfer_source
+    clear_variable = pwc_transfer_target
+    clr_country_flag = pwc_flag_transfer_preview
+}
+
+pwc_se_toggle_transfer_state = {
+    if = {
+        limit = { ROOT = { pwc_st_state_transfer_allowed = yes } }
+        if = {
+            limit = { is_in_array = { array = ROOT.pwc_transfer_states value = THIS } }
+            remove_from_array = { array = ROOT.pwc_transfer_states value = THIS }
+            ROOT = { clr_country_flag = pwc_flag_transfer_preview }
+            if = {
+                limit = { check_variable = { ROOT.pwc_transfer_states^num = 0 } }
+                ROOT = { pwc_se_clear_transfer_selection = yes }
+            }
+        }
+        else_if = {
+            limit = {
+                pwc_st_transfer_state_eligible = yes
+                OR = {
+                    NOT = { has_variable = ROOT.pwc_transfer_source }
+                    is_owned_by = var:ROOT.pwc_transfer_source
+                }
+            }
+            owner = { ROOT = { set_variable = { pwc_transfer_source = PREV } } }
+            add_to_array = { array = ROOT.pwc_transfer_states value = THIS }
+            ROOT = { clr_country_flag = pwc_flag_transfer_preview }
+        }
+    }
+}
+pwc_se_select_all_transfer_states = {
+    if = {
+        limit = { pwc_st_transfer_can_select_all = yes }
+        owner = {
+            every_owned_state = {
+                limit = {
+                    pwc_st_transfer_state_eligible = yes
+                    NOT = {
+                        is_in_array = { array = ROOT.pwc_transfer_states value = THIS }
+                    }
+                }
+                pwc_se_toggle_transfer_state = yes
+            }
+        }
+    }
+}
+pwc_se_select_transfer_target = {
+    if = {
+        limit = {
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                has_variable = pwc_transfer_source
+            }
+            owner = {
+                pwc_st_transfer_country_eligible = yes
+                NOT = { tag = var:ROOT.pwc_transfer_source }
+            }
+        }
+        owner = { ROOT = {
+            set_variable = { pwc_transfer_target = PREV }
+            clr_country_flag = pwc_flag_transfer_preview
+        } }
+    }
+}
+pwc_se_preview_state_transfer = {
+    clr_country_flag = pwc_flag_transfer_preview
+    if = {
+        limit = { pwc_st_transfer_selection_valid = yes }
+        set_country_flag = pwc_flag_transfer_preview
+    }
+}
+pwc_se_confirm_state_transfer = {
+    if = {
+        limit = {
+            has_country_flag = pwc_flag_transfer_preview
+            pwc_st_transfer_selection_valid = yes
+        }
+        clr_country_flag = pwc_flag_transfer_preview
+        var:pwc_transfer_source = {
+            pwc_se_capture_war_report = yes
+            set_variable = { pwc_report_winner = ROOT.pwc_transfer_target }
+            set_country_flag = pwc_flag_report_transfer
+        }
+        for_each_scope_loop = {
+            array = pwc_transfer_states
+            transfer_state_to = var:ROOT.pwc_transfer_target
+        }
+        var:pwc_transfer_source = { pwc_se_refresh_setup_country = yes }
+        var:pwc_transfer_target = { pwc_se_refresh_setup_country = yes }
+        
+        
+        
+        
+        
+        if = {
+            limit = {
+                var:pwc_transfer_source = {
+                    
+                    
+                    check_variable = { num_owned_states = 0 }
+                }
+            }
+            var:pwc_transfer_source = {
+                pwc_se_mark_city_eliminated = yes
+                log = "PWC TRANSFER source left landless, eliminated"
+                
+                
+                var:ROOT.pwc_transfer_target = {
+                    annex_country = {
+                        target = PREV
+                        transfer_troops = yes
+                    }
+                    log = "PWC TRANSFER receiver annexed the landless donor"
+                }
+            }
+        }
+        
+        
+        
+        pwc_se_check_champion = yes
+        pwc_se_clear_transfer_selection = yes
+    }
+}

@@ -1,0 +1,904 @@
+
+
+
+
+
+
+
+
+
+
+pwc_se_rebuild_law_conscription = {
+	if = {
+		limit = { check_variable = { var = pwc_law_conscription value = 1 compare = equals } }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.01 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_conscription value = 2 compare = equals } }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.015 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.03 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_conscription value = 3 compare = equals } }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.025 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_conscription value = 4 compare = equals } }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = -0.05 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_conscription value = 5 compare = equals } }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.1 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = -0.1 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.1 }
+	}
+	else = {
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	}
+}
+
+
+pwc_se_sync_law_conscription_1 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_conscription value = 1 compare = equals } }
+		}
+		add_to_variable = { pwc_law_conscription_ver = 1 }
+	}
+	set_variable = { var = pwc_law_conscription value = 1 }
+	pwc_se_rebuild_law_conscription = yes
+	log = "PWC LAW set law=conscription level=1 ver=[?ROOT.pwc_law_conscription_ver]"
+}
+
+pwc_se_set_law_conscription_1 = {
+	if = {
+		limit = { has_idea = pwc_law_conscription_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_2
+			add_idea = pwc_law_conscription_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_3
+			add_idea = pwc_law_conscription_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_4
+			add_idea = pwc_law_conscription_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_5
+			add_idea = pwc_law_conscription_1
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_conscription_1 } }
+		add_ideas = pwc_law_conscription_1
+	}
+	hidden_effect = { pwc_se_sync_law_conscription_1 = yes }
+}
+
+pwc_se_sync_law_conscription_2 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_conscription value = 2 compare = equals } }
+		}
+		add_to_variable = { pwc_law_conscription_ver = 1 }
+	}
+	set_variable = { var = pwc_law_conscription value = 2 }
+	pwc_se_rebuild_law_conscription = yes
+	log = "PWC LAW set law=conscription level=2 ver=[?ROOT.pwc_law_conscription_ver]"
+}
+
+pwc_se_set_law_conscription_2 = {
+	if = {
+		limit = { has_idea = pwc_law_conscription_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_1
+			add_idea = pwc_law_conscription_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_3
+			add_idea = pwc_law_conscription_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_4
+			add_idea = pwc_law_conscription_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_5
+			add_idea = pwc_law_conscription_2
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_conscription_2 } }
+		add_ideas = pwc_law_conscription_2
+	}
+	hidden_effect = { pwc_se_sync_law_conscription_2 = yes }
+}
+
+pwc_se_sync_law_conscription_3 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_conscription value = 3 compare = equals } }
+		}
+		add_to_variable = { pwc_law_conscription_ver = 1 }
+	}
+	set_variable = { var = pwc_law_conscription value = 3 }
+	pwc_se_rebuild_law_conscription = yes
+	log = "PWC LAW set law=conscription level=3 ver=[?ROOT.pwc_law_conscription_ver]"
+}
+
+pwc_se_set_law_conscription_3 = {
+	if = {
+		limit = { has_idea = pwc_law_conscription_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_1
+			add_idea = pwc_law_conscription_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_2
+			add_idea = pwc_law_conscription_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_4
+			add_idea = pwc_law_conscription_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_5
+			add_idea = pwc_law_conscription_3
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_conscription_3 } }
+		add_ideas = pwc_law_conscription_3
+	}
+	hidden_effect = { pwc_se_sync_law_conscription_3 = yes }
+}
+
+pwc_se_sync_law_conscription_4 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_conscription value = 4 compare = equals } }
+		}
+		add_to_variable = { pwc_law_conscription_ver = 1 }
+	}
+	set_variable = { var = pwc_law_conscription value = 4 }
+	pwc_se_rebuild_law_conscription = yes
+	log = "PWC LAW set law=conscription level=4 ver=[?ROOT.pwc_law_conscription_ver]"
+}
+
+pwc_se_set_law_conscription_4 = {
+	if = {
+		limit = { has_idea = pwc_law_conscription_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_1
+			add_idea = pwc_law_conscription_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_2
+			add_idea = pwc_law_conscription_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_3
+			add_idea = pwc_law_conscription_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_5
+			add_idea = pwc_law_conscription_4
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_conscription_4 } }
+		add_ideas = pwc_law_conscription_4
+	}
+	hidden_effect = { pwc_se_sync_law_conscription_4 = yes }
+}
+
+pwc_se_sync_law_conscription_5 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_conscription value = 5 compare = equals } }
+		}
+		add_to_variable = { pwc_law_conscription_ver = 1 }
+	}
+	set_variable = { var = pwc_law_conscription value = 5 }
+	pwc_se_rebuild_law_conscription = yes
+	log = "PWC LAW set law=conscription level=5 ver=[?ROOT.pwc_law_conscription_ver]"
+}
+
+pwc_se_set_law_conscription_5 = {
+	if = {
+		limit = { has_idea = pwc_law_conscription_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_1
+			add_idea = pwc_law_conscription_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_2
+			add_idea = pwc_law_conscription_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_3
+			add_idea = pwc_law_conscription_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_conscription_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_conscription_4
+			add_idea = pwc_law_conscription_5
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_conscription_5 } }
+		add_ideas = pwc_law_conscription_5
+	}
+	hidden_effect = { pwc_se_sync_law_conscription_5 = yes }
+}
+
+
+
+pwc_se_rebuild_law_economy_mobilization = {
+	if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 1 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0.06 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 2 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0.03 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.05 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 3 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.03 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = -0.03 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.15 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.06 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 5 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = -0.06 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = -0.05 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.2 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	}
+	else = {
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	}
+}
+
+
+pwc_se_sync_law_economy_mobilization_1 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_economy_mobilization value = 1 compare = equals } }
+		}
+		add_to_variable = { pwc_law_economy_mobilization_ver = 1 }
+	}
+	set_variable = { var = pwc_law_economy_mobilization value = 1 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	log = "PWC LAW set law=economy_mobilization level=1 ver=[?ROOT.pwc_law_economy_mobilization_ver]"
+}
+
+pwc_se_set_law_economy_mobilization_1 = {
+	if = {
+		limit = { has_idea = pwc_law_economy_mobilization_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_2
+			add_idea = pwc_law_economy_mobilization_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_3
+			add_idea = pwc_law_economy_mobilization_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_4
+			add_idea = pwc_law_economy_mobilization_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_5
+			add_idea = pwc_law_economy_mobilization_1
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_economy_mobilization_1 } }
+		add_ideas = pwc_law_economy_mobilization_1
+	}
+	hidden_effect = { pwc_se_sync_law_economy_mobilization_1 = yes }
+}
+
+pwc_se_sync_law_economy_mobilization_2 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_economy_mobilization value = 2 compare = equals } }
+		}
+		add_to_variable = { pwc_law_economy_mobilization_ver = 1 }
+	}
+	set_variable = { var = pwc_law_economy_mobilization value = 2 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	log = "PWC LAW set law=economy_mobilization level=2 ver=[?ROOT.pwc_law_economy_mobilization_ver]"
+}
+
+pwc_se_set_law_economy_mobilization_2 = {
+	if = {
+		limit = { has_idea = pwc_law_economy_mobilization_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_1
+			add_idea = pwc_law_economy_mobilization_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_3
+			add_idea = pwc_law_economy_mobilization_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_4
+			add_idea = pwc_law_economy_mobilization_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_5
+			add_idea = pwc_law_economy_mobilization_2
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_economy_mobilization_2 } }
+		add_ideas = pwc_law_economy_mobilization_2
+	}
+	hidden_effect = { pwc_se_sync_law_economy_mobilization_2 = yes }
+}
+
+pwc_se_sync_law_economy_mobilization_3 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_economy_mobilization value = 3 compare = equals } }
+		}
+		add_to_variable = { pwc_law_economy_mobilization_ver = 1 }
+	}
+	set_variable = { var = pwc_law_economy_mobilization value = 3 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	log = "PWC LAW set law=economy_mobilization level=3 ver=[?ROOT.pwc_law_economy_mobilization_ver]"
+}
+
+pwc_se_set_law_economy_mobilization_3 = {
+	if = {
+		limit = { has_idea = pwc_law_economy_mobilization_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_1
+			add_idea = pwc_law_economy_mobilization_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_2
+			add_idea = pwc_law_economy_mobilization_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_4
+			add_idea = pwc_law_economy_mobilization_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_5
+			add_idea = pwc_law_economy_mobilization_3
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_economy_mobilization_3 } }
+		add_ideas = pwc_law_economy_mobilization_3
+	}
+	hidden_effect = { pwc_se_sync_law_economy_mobilization_3 = yes }
+}
+
+pwc_se_sync_law_economy_mobilization_4 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals } }
+		}
+		add_to_variable = { pwc_law_economy_mobilization_ver = 1 }
+	}
+	set_variable = { var = pwc_law_economy_mobilization value = 4 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	log = "PWC LAW set law=economy_mobilization level=4 ver=[?ROOT.pwc_law_economy_mobilization_ver]"
+}
+
+pwc_se_set_law_economy_mobilization_4 = {
+	if = {
+		limit = { has_idea = pwc_law_economy_mobilization_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_1
+			add_idea = pwc_law_economy_mobilization_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_2
+			add_idea = pwc_law_economy_mobilization_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_3
+			add_idea = pwc_law_economy_mobilization_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_5
+			add_idea = pwc_law_economy_mobilization_4
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_economy_mobilization_4 } }
+		add_ideas = pwc_law_economy_mobilization_4
+	}
+	hidden_effect = { pwc_se_sync_law_economy_mobilization_4 = yes }
+}
+
+pwc_se_sync_law_economy_mobilization_5 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_economy_mobilization value = 5 compare = equals } }
+		}
+		add_to_variable = { pwc_law_economy_mobilization_ver = 1 }
+	}
+	set_variable = { var = pwc_law_economy_mobilization value = 5 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	log = "PWC LAW set law=economy_mobilization level=5 ver=[?ROOT.pwc_law_economy_mobilization_ver]"
+}
+
+pwc_se_set_law_economy_mobilization_5 = {
+	if = {
+		limit = { has_idea = pwc_law_economy_mobilization_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_1
+			add_idea = pwc_law_economy_mobilization_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_2
+			add_idea = pwc_law_economy_mobilization_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_3
+			add_idea = pwc_law_economy_mobilization_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_economy_mobilization_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_economy_mobilization_4
+			add_idea = pwc_law_economy_mobilization_5
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_economy_mobilization_5 } }
+		add_ideas = pwc_law_economy_mobilization_5
+	}
+	hidden_effect = { pwc_se_sync_law_economy_mobilization_5 = yes }
+}
+
+
+
+pwc_se_rebuild_law_trade_control = {
+	if = {
+		limit = { check_variable = { var = pwc_law_trade_control value = 1 compare = equals } }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.8 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.09 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.06 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_trade_control value = 2 compare = equals } }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.66 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.06 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_trade_control value = 3 compare = equals } }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.5 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_trade_control value = 4 compare = equals } }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.33 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.03 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { var = pwc_law_trade_control value = 5 compare = equals } }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.2 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = -0.03 }
+	}
+	else = {
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	}
+}
+
+
+pwc_se_sync_law_trade_control_1 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_trade_control value = 1 compare = equals } }
+		}
+		add_to_variable = { pwc_law_trade_control_ver = 1 }
+	}
+	set_variable = { var = pwc_law_trade_control value = 1 }
+	pwc_se_rebuild_law_trade_control = yes
+	log = "PWC LAW set law=trade_control level=1 ver=[?ROOT.pwc_law_trade_control_ver]"
+}
+
+pwc_se_set_law_trade_control_1 = {
+	if = {
+		limit = { has_idea = pwc_law_trade_control_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_2
+			add_idea = pwc_law_trade_control_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_3
+			add_idea = pwc_law_trade_control_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_4
+			add_idea = pwc_law_trade_control_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_5
+			add_idea = pwc_law_trade_control_1
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_trade_control_1 } }
+		add_ideas = pwc_law_trade_control_1
+	}
+	hidden_effect = { pwc_se_sync_law_trade_control_1 = yes }
+}
+
+pwc_se_sync_law_trade_control_2 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_trade_control value = 2 compare = equals } }
+		}
+		add_to_variable = { pwc_law_trade_control_ver = 1 }
+	}
+	set_variable = { var = pwc_law_trade_control value = 2 }
+	pwc_se_rebuild_law_trade_control = yes
+	log = "PWC LAW set law=trade_control level=2 ver=[?ROOT.pwc_law_trade_control_ver]"
+}
+
+pwc_se_set_law_trade_control_2 = {
+	if = {
+		limit = { has_idea = pwc_law_trade_control_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_1
+			add_idea = pwc_law_trade_control_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_3
+			add_idea = pwc_law_trade_control_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_4
+			add_idea = pwc_law_trade_control_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_5
+			add_idea = pwc_law_trade_control_2
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_trade_control_2 } }
+		add_ideas = pwc_law_trade_control_2
+	}
+	hidden_effect = { pwc_se_sync_law_trade_control_2 = yes }
+}
+
+pwc_se_sync_law_trade_control_3 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_trade_control value = 3 compare = equals } }
+		}
+		add_to_variable = { pwc_law_trade_control_ver = 1 }
+	}
+	set_variable = { var = pwc_law_trade_control value = 3 }
+	pwc_se_rebuild_law_trade_control = yes
+	log = "PWC LAW set law=trade_control level=3 ver=[?ROOT.pwc_law_trade_control_ver]"
+}
+
+pwc_se_set_law_trade_control_3 = {
+	if = {
+		limit = { has_idea = pwc_law_trade_control_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_1
+			add_idea = pwc_law_trade_control_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_2
+			add_idea = pwc_law_trade_control_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_4
+			add_idea = pwc_law_trade_control_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_5
+			add_idea = pwc_law_trade_control_3
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_trade_control_3 } }
+		add_ideas = pwc_law_trade_control_3
+	}
+	hidden_effect = { pwc_se_sync_law_trade_control_3 = yes }
+}
+
+pwc_se_sync_law_trade_control_4 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_trade_control value = 4 compare = equals } }
+		}
+		add_to_variable = { pwc_law_trade_control_ver = 1 }
+	}
+	set_variable = { var = pwc_law_trade_control value = 4 }
+	pwc_se_rebuild_law_trade_control = yes
+	log = "PWC LAW set law=trade_control level=4 ver=[?ROOT.pwc_law_trade_control_ver]"
+}
+
+pwc_se_set_law_trade_control_4 = {
+	if = {
+		limit = { has_idea = pwc_law_trade_control_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_1
+			add_idea = pwc_law_trade_control_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_2
+			add_idea = pwc_law_trade_control_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_3
+			add_idea = pwc_law_trade_control_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_5 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_5
+			add_idea = pwc_law_trade_control_4
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_trade_control_4 } }
+		add_ideas = pwc_law_trade_control_4
+	}
+	hidden_effect = { pwc_se_sync_law_trade_control_4 = yes }
+}
+
+pwc_se_sync_law_trade_control_5 = {
+	if = {
+		limit = {
+			NOT = { check_variable = { var = pwc_law_trade_control value = 5 compare = equals } }
+		}
+		add_to_variable = { pwc_law_trade_control_ver = 1 }
+	}
+	set_variable = { var = pwc_law_trade_control value = 5 }
+	pwc_se_rebuild_law_trade_control = yes
+	log = "PWC LAW set law=trade_control level=5 ver=[?ROOT.pwc_law_trade_control_ver]"
+}
+
+pwc_se_set_law_trade_control_5 = {
+	if = {
+		limit = { has_idea = pwc_law_trade_control_1 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_1
+			add_idea = pwc_law_trade_control_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_2 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_2
+			add_idea = pwc_law_trade_control_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_3 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_3
+			add_idea = pwc_law_trade_control_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = pwc_law_trade_control_4 }
+		swap_ideas = {
+			remove_idea = pwc_law_trade_control_4
+			add_idea = pwc_law_trade_control_5
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = pwc_law_trade_control_5 } }
+		add_ideas = pwc_law_trade_control_5
+	}
+	hidden_effect = { pwc_se_sync_law_trade_control_5 = yes }
+}
+
+
+
+pwc_se_init_laws = {
+	set_variable = { var = pwc_law_conscription value = 1 }
+	set_variable = { var = pwc_law_conscription_v_conscription value = 0 }
+	set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
+	set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	pwc_se_rebuild_law_conscription = yes
+	add_ideas = pwc_law_conscription_1
+	set_variable = { var = pwc_law_conscription_ver value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization value = 2 }
+	set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+	pwc_se_rebuild_law_economy_mobilization = yes
+	add_ideas = pwc_law_economy_mobilization_2
+	set_variable = { var = pwc_law_economy_mobilization_ver value = 0 }
+	set_variable = { var = pwc_law_trade_control value = 3 }
+	set_variable = { var = pwc_law_trade_control_v_min_export value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
+	pwc_se_rebuild_law_trade_control = yes
+	add_ideas = pwc_law_trade_control_3
+	set_variable = { var = pwc_law_trade_control_ver value = 0 }
+}

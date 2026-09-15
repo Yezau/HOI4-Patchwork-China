@@ -1,0 +1,30 @@
+state={
+	id = 357
+	name = STATE_357
+	provinces = { 394 3007 3251 4137 4146 4152 4156 }
+	manpower = 18734000
+	state_category = megalopolis
+	local_supplies = 0.0
+	resources = {
+		aluminium = 10
+		tungsten = 20
+		chromium = 6
+		coal = 22
+	}
+	history = {
+		add_core_of = X23
+		owner = X23
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 5
+			air_base = 3
+			dockyard = 1
+			3251 = {
+				naval_base = 5
+			}
+			pwc_building_tech_center = 1
+		}
+		victory_points = { 394 40 }
+	}
+}

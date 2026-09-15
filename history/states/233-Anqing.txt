@@ -1,0 +1,29 @@
+state={
+	id = 233
+	name = STATE_233
+	provinces = { 1730 3041 3167 3305 3826 3827 3847 }
+	manpower = 4156000
+	resources = {
+		steel = 8
+		coal = 15
+	}
+	state_category = city
+	history = {
+		add_core_of = W06
+		owner = W06
+		victory_points = { 3041 5 }
+		victory_points = { 3827 1 }
+		victory_points = { 1730 1 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+			dockyard = 1
+			3041 = {
+				naval_base = 1
+			}
+			pwc_building_tech_center = 1
+		}
+	}
+	local_supplies = 0.0
+}

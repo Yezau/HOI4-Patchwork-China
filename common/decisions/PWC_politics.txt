@@ -1,0 +1,1220 @@
+
+
+
+
+
+
+
+
+
+
+
+
+PWC_politics_category = {
+
+	
+	pwc_dec_appoint_seat_civil_admin_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_civil_admin_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_civil_admin_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_civil_admin_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_civil_admin_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_civil_admin = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_civil_admin_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_civil_admin = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_economic_planning_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_economic_planning_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_economic_planning_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_economic_planning_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_economic_planning_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_economic_planning_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_economic_planning_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_economic_planning_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_economic_planning_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_economic_planning_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_economic_planning_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_economic_planning_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_economic_planning_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_economic_planning_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_economic_planning_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_economic_planning = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_economic_planning_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_economic_planning = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_finance_trade_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_finance_trade_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_finance_trade_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_finance_trade_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_finance_trade_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_finance_trade_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_finance_trade_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_finance_trade_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_finance_trade_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_finance_trade_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_finance_trade_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_finance_trade_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_finance_trade_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_finance_trade_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_finance_trade_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_finance_trade = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_finance_trade_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_finance_trade = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_science_education_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_science_education_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_science_education_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_science_education_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_science_education_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_science_education_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_science_education_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_science_education_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_science_education_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_science_education_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_science_education_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_science_education_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_science_education_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_science_education_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_science_education_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_science_education = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_science_education_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_science_education = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_army_command_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_army_command_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_army_command_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_army_command_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_army_command_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_army_command_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_army_command_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_army_command_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_army_command_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_army_command_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_army_command_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_army_command_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_army_command_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_army_command_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_army_command_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_army_command = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_army_command_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_army_command = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_navy_command_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_navy_command_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_navy_command_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_navy_command_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_navy_command_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_navy_command_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_navy_command_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_navy_command_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_navy_command_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_navy_command_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_navy_command_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_navy_command_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_navy_command_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_navy_command_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_navy_command_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_navy_command = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_navy_command_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_navy_command = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_air_command_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_air_command_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_air_command_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_air_command_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_air_command_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_air_command_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_air_command_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_air_command_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_air_command_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_air_command_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_air_command_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_air_command_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_air_command_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_air_command_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_air_command_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_air_command = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_air_command_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_air_command = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_logistics_command_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_logistics_command_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_logistics_command_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_logistics_command_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_logistics_command_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_logistics_command_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_logistics_command_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_logistics_command_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_logistics_command_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_logistics_command_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_logistics_command_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_logistics_command_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_logistics_command_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_logistics_command_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_logistics_command_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_logistics_command = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_logistics_command_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_logistics_command = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_mobilization_command_1 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_mobilization_command_cand_1 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_mobilization_command_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_mobilization_command_2 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_mobilization_command_cand_2 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_mobilization_command_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_mobilization_command_3 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_mobilization_command_cand_3 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_mobilization_command_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_mobilization_command_4 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_mobilization_command_cand_4 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_mobilization_command_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_appoint_seat_mobilization_command_5 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_mobilization_command_cand_5 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_mobilization_command_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_dismiss_seat_mobilization_command = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 0
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = { pwc_st_seat_mobilization_command_occupied = yes }
+		complete_effect = {
+			pwc_se_dismiss_seat_mobilization_command = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_law_conscription_upgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 75
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 1 compare = equals }
+			has_war_support > 0.1
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_upgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 2 compare = equals }
+			has_war_support > 0.3
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_upgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 150
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 3 compare = equals }
+			has_war_support > 0.5
+			has_country_flag = pwc_flag_law_conscription_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_upgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 200
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 4 compare = equals }
+			has_war_support > 0.7
+			has_country_flag = pwc_flag_law_conscription_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_downgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 2 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_downgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 3 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_downgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 4 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_conscription_downgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_conscription value = 5 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_conscription_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_law_economy_mobilization_upgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 75
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 1 compare = equals }
+			has_war_support > 0.1
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_upgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 2 compare = equals }
+			has_war_support > 0.3
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_upgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 150
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 3 compare = equals }
+			has_war_support > 0.5
+			has_country_flag = pwc_flag_law_economy_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_upgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 200
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals }
+			has_war_support > 0.7
+			has_country_flag = pwc_flag_law_economy_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_downgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 2 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_downgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 3 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_downgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_economy_mobilization_downgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_economy_mobilization value = 5 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_economy_mobilization_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
+	pwc_dec_law_trade_control_upgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 75
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 1 compare = equals }
+			has_war_support > 0.1
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_upgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 2 compare = equals }
+			has_war_support > 0.3
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_upgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 150
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 3 compare = equals }
+			has_war_support > 0.5
+			has_country_flag = pwc_flag_law_trade_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_upgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 200
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 4 compare = equals }
+			has_war_support > 0.7
+			has_country_flag = pwc_flag_law_trade_reformed
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_5 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_downgrade_2 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 2 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_1 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_downgrade_3 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 3 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_2 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_downgrade_4 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 4 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_3 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	pwc_dec_law_trade_control_downgrade_5 = {
+		icon = GFX_decision_PWC_law
+		cost = 50
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			check_variable = { var = pwc_law_trade_control value = 5 compare = equals }
+		}
+		complete_effect = {
+			pwc_se_set_law_trade_control_4 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

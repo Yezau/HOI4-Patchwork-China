@@ -1,0 +1,4099 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus_tree = {
+	id = pwc_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			NOT = { tag = NTR }
+		}
+	}
+	default = yes
+	initial_show_position = {
+		focus = city_governance_hub
+	}
+	continuous_focus_position = { x = 24 y = 600 }
+	inlay_window = {
+		id = pwc_focus_detail_inlay
+		position = { x = 0 y = 0 }
+	}
+
+	
+
+
+focus = {
+	id = city_governance_hub
+	icon = PWC_GFX_focus_city_governance_hub
+	x = 36
+	y = 0
+	cost = 1
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		set_country_flag = pwc_flag_focus_tree_started
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_public_order
+	icon = PWC_GFX_focus_gov_public_order
+	prerequisite = { focus = city_governance_hub }
+	x = 9
+	y = 1
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_gov_public_order
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_gov_public_order = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_municipal_services
+	icon = PWC_GFX_focus_gov_municipal_services
+	prerequisite = { focus = gov_public_order }
+	x = 10
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_census_registry
+	icon = PWC_GFX_focus_gov_census_registry
+	prerequisite = { focus = gov_public_order }
+	x = 7
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 50
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_urban_planning
+	icon = PWC_GFX_focus_gov_urban_planning
+	prerequisite = { focus = gov_municipal_services }
+	x = 11
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_civil_defense
+	icon = PWC_GFX_focus_gov_civil_defense
+	prerequisite = { focus = gov_municipal_services }
+	x = 9
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_gov_civil_defense
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_gov_civil_defense = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_streamlined_administration
+	icon = PWC_GFX_focus_gov_streamlined_administration
+	prerequisite = { focus = gov_census_registry }
+	x = 7
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_gov_streamlined_administration
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_gov_streamlined_administration = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = gov_mayors_office_upgrade
+	icon = PWC_GFX_focus_gov_mayors_office_upgrade
+	prerequisite = { focus = gov_urban_planning focus = gov_civil_defense }
+	prerequisite = { focus = gov_streamlined_administration }
+	x = 9
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 75
+		add_war_support = 0.05
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_cabinet_charter
+	icon = PWC_GFX_focus_law_cabinet_charter
+	prerequisite = { focus = city_governance_hub }
+	x = 16
+	y = 1
+	cost = 5
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_CABINET_CHARTER
+		set_country_flag = pwc_flag_cabinet_unlocked
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_civil_service_exam
+	icon = PWC_GFX_focus_law_civil_service_exam
+	prerequisite = { focus = law_cabinet_charter }
+	x = 18
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_law_civil_service_exam
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_law_civil_service_exam = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_emergency_powers
+	icon = PWC_GFX_focus_law_emergency_powers
+	prerequisite = { focus = law_cabinet_charter }
+	x = 16
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_law_emergency_powers
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_law_emergency_powers = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_conscription_reform
+	icon = PWC_GFX_focus_law_conscription_reform
+	prerequisite = { focus = law_civil_service_exam }
+	x = 18
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 0.7
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_CONSCRIPTION_REFORM
+		set_country_flag = pwc_flag_law_conscription_reformed
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_economy_reform
+	icon = PWC_GFX_focus_law_economy_reform
+	prerequisite = { focus = law_emergency_powers }
+	x = 14
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_ECONOMY_REFORM
+		set_country_flag = pwc_flag_law_economy_reformed
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_trade_reform
+	icon = PWC_GFX_focus_law_trade_reform
+	prerequisite = { focus = law_civil_service_exam }
+	prerequisite = { focus = law_emergency_powers }
+	x = 16
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_TRADE_REFORM
+		set_country_flag = pwc_flag_law_trade_reformed
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_oversight_committee
+	icon = PWC_GFX_focus_law_oversight_committee
+	prerequisite = { focus = law_cabinet_charter }
+	x = 14
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_law_oversight_committee
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_law_oversight_committee = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = law_constitutional_convention
+	icon = PWC_GFX_focus_law_constitutional_convention
+	prerequisite = { focus = law_oversight_committee }
+	prerequisite = { focus = law_trade_reform }
+	x = 15
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 100
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_industrial_base
+	icon = PWC_GFX_focus_eco_industrial_base
+	prerequisite = { focus = city_governance_hub }
+	x = 24
+	y = 1
+	cost = 5
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_construction_bureau
+	icon = PWC_GFX_focus_eco_construction_bureau
+	prerequisite = { focus = eco_industrial_base }
+	x = 26
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_construction_bureau
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_construction_bureau = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_resource_survey
+	icon = PWC_GFX_focus_eco_resource_survey
+	prerequisite = { focus = eco_industrial_base }
+	x = 22
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_resource_survey
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_resource_survey = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_urban_industry
+	icon = PWC_GFX_focus_eco_urban_industry
+	prerequisite = { focus = eco_construction_bureau }
+	x = 27
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_arms_industry
+	icon = PWC_GFX_focus_eco_arms_industry
+	prerequisite = { focus = eco_construction_bureau }
+	x = 25
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_finance_reform
+	icon = PWC_GFX_focus_eco_finance_reform
+	prerequisite = { focus = eco_resource_survey }
+	x = 22
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_finance_reform
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_finance_reform = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_industrial_expansion
+	icon = PWC_GFX_focus_eco_industrial_expansion
+	prerequisite = { focus = eco_urban_industry }
+	x = 27
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_municipal_energy
+	icon = PWC_GFX_focus_eco_municipal_energy
+	prerequisite = { focus = eco_arms_industry }
+	x = 25
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_municipal_energy
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_municipal_energy = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_research_institute
+	icon = PWC_GFX_focus_eco_research_institute
+	prerequisite = { focus = eco_finance_reform }
+	x = 23
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 7
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_research_institute
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_research_institute = yes
+		}
+		generate_scientist_character = {
+			skills = {
+				specialization_land = 2
+				specialization_air = 2
+				specialization_naval = 2
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_trade_hub
+	icon = PWC_GFX_focus_eco_trade_hub
+	prerequisite = { focus = eco_finance_reform }
+	x = 21
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_trade_hub
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_trade_hub = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_metropolitan_economy
+	icon = PWC_GFX_focus_eco_metropolitan_economy
+	prerequisite = { focus = eco_industrial_expansion }
+	x = 26
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_metropolitan_economy
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_metropolitan_economy = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_fourth_research_slot
+	icon = PWC_GFX_focus_eco_fourth_research_slot
+	prerequisite = { focus = eco_research_institute }
+	x = 24
+	y = 5
+	cost = 10
+	available = {
+		pwc_st_max_tech_center_level_2 = yes
+	}
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_research_slot = 1
+		set_country_flag = pwc_flag_fourth_research_slot
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_commerce_district
+	icon = PWC_GFX_focus_eco_commerce_district
+	prerequisite = { focus = eco_trade_hub }
+	x = 22
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_commerce_district
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_commerce_district = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = eco_apex_powerhouse
+	icon = PWC_GFX_focus_eco_apex_powerhouse
+	prerequisite = { focus = eco_metropolitan_economy focus = eco_municipal_energy focus = eco_fourth_research_slot focus = eco_commerce_district }
+	x = 24
+	y = 6
+	cost = 10
+	ai_will_do = {
+		factor = 7
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_eco_apex_powerhouse
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_eco_apex_powerhouse = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_defense_corps
+	icon = PWC_GFX_focus_mil_defense_corps
+	prerequisite = { focus = city_governance_hub }
+	x = 41
+	y = 1
+	cost = 5
+	ai_will_do = {
+		factor = 8
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_defense_corps
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_defense_corps = yes
+		}
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DEFENSE_CORPS
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_infantry_doctrine
+	icon = PWC_GFX_focus_mil_infantry_doctrine
+	prerequisite = { focus = mil_defense_corps }
+	x = 32
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 20
+		set_country_flag = pwc_flag_mio_infantry
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_infantry
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_urban_fortification
+	icon = PWC_GFX_focus_mil_urban_fortification
+	prerequisite = { focus = mil_defense_corps }
+	x = 34
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = { all_provinces = yes }
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_urban_fortification
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_urban_fortification = yes
+		}
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_URBAN_FORTIFICATION
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_naval_program
+	icon = PWC_GFX_focus_mil_naval_program
+	prerequisite = { focus = mil_defense_corps }
+	x = 44
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 0.9
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 25
+		set_country_flag = pwc_flag_mio_surface_naval
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_surface_naval
+		generate_character = {
+			token_base = pwc_admiral_t1
+			name = PWC_TITLE_NAVY_01
+			portraits = {
+				navy = {
+					large = GFX_PWC_PORTRAIT_ADMIRAL_01
+					small = GFX_PWC_PORTRAIT_ADMIRAL_01
+				}
+			}
+			navy_leader = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 2
+			}
+		}
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_NAVAL_PROGRAM
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_air_wing
+	icon = PWC_GFX_focus_mil_air_wing
+	prerequisite = { focus = mil_defense_corps }
+	x = 50
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 25
+		set_country_flag = pwc_flag_mio_air_superiority
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_air_superiority
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_AIR_WING
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_officer_academy
+	icon = PWC_GFX_focus_mil_officer_academy
+	prerequisite = { focus = mil_infantry_doctrine focus = mil_naval_program focus = mil_air_wing }
+	x = 32
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 25
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_officer_academy
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_officer_academy = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_mechanized_initiative
+	icon = PWC_GFX_focus_mil_mechanized_initiative
+	prerequisite = { focus = mil_infantry_doctrine }
+	x = 30
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.7
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		set_country_flag = pwc_flag_mio_armor
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_armor
+		add_tech_bonus = {
+			name = pwc_bonus_mil_mechanized_initiative
+			bonus = 0.25
+			uses = 1
+			category = pwc_tech_armor
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_combined_arms
+	icon = PWC_GFX_focus_mil_combined_arms
+	prerequisite = { focus = mil_officer_academy }
+	prerequisite = { focus = mil_mechanized_initiative }
+	x = 38
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		set_country_flag = pwc_flag_mio_firepower
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_combined_arms
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_combined_arms = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_logistics_command
+	icon = PWC_GFX_focus_mil_logistics_command
+	prerequisite = { focus = mil_officer_academy }
+	x = 40
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		set_country_flag = pwc_flag_mio_logistics
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_logistics
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_logistics_command
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_logistics_command = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_naval_expansion
+	icon = PWC_GFX_focus_mil_naval_expansion
+	prerequisite = { focus = mil_naval_program }
+	x = 42
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 0.7
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 25
+		set_country_flag = pwc_flag_mio_submarine
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_submarine
+		generate_character = {
+			token_base = pwc_admiral_t2
+			name = PWC_TITLE_NAVY_02
+			portraits = {
+				navy = {
+					large = GFX_PWC_PORTRAIT_ADMIRAL_02
+					small = GFX_PWC_PORTRAIT_ADMIRAL_02
+				}
+			}
+			navy_leader = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 2
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_naval_command
+	icon = PWC_GFX_focus_mil_naval_command
+	prerequisite = { focus = mil_naval_expansion }
+	x = 42
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 0.7
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 25
+		generate_character = {
+			token_base = pwc_admiral_t4
+			name = PWC_TITLE_NAVY_03
+			portraits = {
+				navy = {
+					large = GFX_PWC_PORTRAIT_ADMIRAL_03
+					small = GFX_PWC_PORTRAIT_ADMIRAL_03
+				}
+			}
+			navy_leader = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 2
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_naval_command
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_naval_command = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_air_cas_command
+	icon = PWC_GFX_focus_mil_air_cas_command
+	prerequisite = { focus = mil_air_wing }
+	x = 48
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.9
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 25
+		set_country_flag = pwc_flag_mio_ground_attack
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_ground_attack
+		add_tech_bonus = {
+			name = pwc_bonus_mil_air_cas_command
+			bonus = 0.25
+			uses = 1
+			category = pwc_tech_air
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_air_drone_program
+	icon = PWC_GFX_focus_mil_air_drone_program
+	prerequisite = { focus = mil_air_cas_command }
+	x = 48
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.7
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.9
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		set_country_flag = pwc_flag_mio_unmanned
+		unlock_military_industrial_organization_tooltip = mio:pwc_mio_unmanned
+		add_tech_bonus = {
+			name = pwc_bonus_mil_air_drone_program
+			bonus = 0.25
+			uses = 1
+			category = pwc_tech_air
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_apex_city_marshal
+	icon = PWC_GFX_focus_mil_apex_city_marshal
+	prerequisite = { focus = mil_combined_arms focus = mil_naval_command focus = mil_air_drone_program }
+	prerequisite = { focus = mil_logistics_command }
+	x = 41
+	y = 7
+	cost = 10
+	ai_will_do = {
+		factor = 7
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		generate_character = {
+			token_base = pwc_marshal
+			name = PWC_TITLE_MARSHAL_01
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_MARSHAL_01
+					small = GFX_PWC_PORTRAIT_MARSHAL_01
+				}
+			}
+			field_marshal = {
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_apex_city_marshal
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_apex_city_marshal = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_foreign_office
+	icon = PWC_GFX_focus_war_foreign_office
+	prerequisite = { focus = city_governance_hub }
+	x = 57
+	y = 1
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		add_political_power = 25
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_foreign_office
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_foreign_office = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_diplomatic_corps
+	icon = PWC_GFX_focus_war_diplomatic_corps
+	prerequisite = { focus = war_foreign_office }
+	x = 58
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_WAR_DIPLOMATIC_CORPS
+		set_country_flag = pwc_flag_diplomatic_corps
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_nap_framework
+	icon = PWC_GFX_focus_war_nap_framework
+	prerequisite = { focus = war_diplomatic_corps }
+	x = 59
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_nap_framework
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_nap_framework = yes
+		}
+		set_country_flag = pwc_flag_nap_framework
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_access_agreements
+	icon = PWC_GFX_focus_war_access_agreements
+	prerequisite = { focus = war_diplomatic_corps }
+	x = 57
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_access_agreements
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_access_agreements = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_intelligence_bureau
+	icon = PWC_GFX_focus_war_intelligence_bureau
+	prerequisite = { focus = war_foreign_office }
+	x = 55
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_intelligence_bureau
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_intelligence_bureau = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_war_room
+	icon = PWC_GFX_focus_war_war_room
+	prerequisite = { focus = war_intelligence_bureau }
+	x = 55
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_war_room
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_war_room = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_propaganda_office
+	icon = PWC_GFX_focus_war_propaganda_office
+	prerequisite = { focus = war_war_room }
+	x = 55
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_propaganda_office
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_propaganda_office = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = war_occupation_authority
+	icon = PWC_GFX_focus_war_occupation_authority
+	prerequisite = { focus = war_propaganda_office }
+	x = 55
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_war_occupation_authority
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_war_occupation_authority = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = endgame_offensive_doctrine
+	icon = PWC_GFX_focus_endgame_offensive_doctrine
+	prerequisite = { focus = mil_apex_city_marshal }
+	prerequisite = { focus = war_war_room }
+	mutually_exclusive = { focus = endgame_defensive_doctrine focus = endgame_technological_supremacy focus = endgame_integration_charter }
+	x = 43
+	y = 9
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_ideas = pwc_idea_endgame_offensive_doctrine
+		army_experience = 25
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = endgame_defensive_doctrine
+	icon = PWC_GFX_focus_endgame_defensive_doctrine
+	prerequisite = { focus = eco_apex_powerhouse }
+	prerequisite = { focus = mil_urban_fortification }
+	mutually_exclusive = { focus = endgame_offensive_doctrine focus = endgame_technological_supremacy focus = endgame_integration_charter }
+	x = 35
+	y = 9
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_ideas = pwc_idea_endgame_defensive_doctrine
+		army_experience = 25
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = endgame_technological_supremacy
+	icon = PWC_GFX_focus_endgame_technological_supremacy
+	prerequisite = { focus = eco_fourth_research_slot }
+	prerequisite = { focus = war_intelligence_bureau }
+	mutually_exclusive = { focus = endgame_offensive_doctrine focus = endgame_defensive_doctrine focus = endgame_integration_charter }
+	x = 39
+	y = 9
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_ideas = pwc_idea_endgame_technological_supremacy
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = endgame_integration_charter
+	icon = PWC_GFX_focus_endgame_integration_charter
+	prerequisite = { focus = geo_island_apex_ocean_lord focus = geo_coast_apex_harbor_master focus = geo_frontier_apex_gatekeeper focus = geo_inland_apex_heartland_fortress focus = geo_generic_apex_city_commonwealth }
+	prerequisite = { focus = war_occupation_authority }
+	mutually_exclusive = { focus = endgame_offensive_doctrine focus = endgame_defensive_doctrine focus = endgame_technological_supremacy }
+	x = 47
+	y = 9
+	cost = 10
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_ideas = pwc_idea_endgame_integration_charter
+		add_political_power = 100
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_staff_wargames
+	icon = PWC_GFX_focus_mil_staff_wargames
+	prerequisite = { focus = mil_officer_academy }
+	x = 36
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_STAFF_WARGAMES
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_staff_wargames
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_staff_wargames = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_operational_intelligence
+	icon = PWC_GFX_focus_mil_operational_intelligence
+	prerequisite = { focus = mil_staff_wargames }
+	x = 36
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_OPERATIONAL_INTELLIGENCE
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_operational_intelligence
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_operational_intelligence = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_reserve_system
+	icon = PWC_GFX_focus_mil_reserve_system
+	prerequisite = { focus = mil_defense_corps }
+	x = 30
+	y = 2
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_RESERVE_SYSTEM
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_reserve_system
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_reserve_system = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_armaments_standardization
+	icon = PWC_GFX_focus_mil_armaments_standardization
+	prerequisite = { focus = mil_logistics_command }
+	x = 38
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_ARMAMENTS_STANDARDIZATION
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_armaments_standardization
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_armaments_standardization = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_joint_operations
+	icon = PWC_GFX_focus_mil_joint_operations
+	prerequisite = { focus = mil_apex_city_marshal }
+	prerequisite = { focus = mil_deep_exploitation focus = mil_deliberate_breakthrough focus = mil_counterstroke }
+	prerequisite = { focus = mil_interception_network focus = mil_battlefield_interdiction focus = mil_ambush_flotillas focus = mil_expeditionary_support }
+	x = 41
+	y = 8
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_JOINT_OPERATIONS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_joint_operations
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_joint_operations = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_mobile_operations
+	icon = PWC_GFX_focus_mil_mobile_operations
+	prerequisite = { focus = mil_officer_academy }
+	mutually_exclusive = { focus = mil_firepower_operations focus = mil_elastic_operations }
+	x = 30
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_MOBILE_OPERATIONS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_mobile_operations
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_mobile_operations = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_mobile_reserves
+	icon = PWC_GFX_focus_mil_mobile_reserves
+	prerequisite = { focus = mil_mobile_operations }
+	prerequisite = { focus = mil_reserve_system }
+	x = 30
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_MOBILE_RESERVES
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_mobile_reserves
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_mobile_reserves = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_deep_exploitation
+	icon = PWC_GFX_focus_mil_deep_exploitation
+	prerequisite = { focus = mil_mobile_reserves }
+	prerequisite = { focus = mil_combined_arms }
+	x = 30
+	y = 7
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DEEP_EXPLOITATION
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_deep_exploitation
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_deep_exploitation = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_firepower_operations
+	icon = PWC_GFX_focus_mil_firepower_operations
+	prerequisite = { focus = mil_officer_academy }
+	mutually_exclusive = { focus = mil_mobile_operations focus = mil_elastic_operations }
+	x = 32
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_FIREPOWER_OPERATIONS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_firepower_operations
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_firepower_operations = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_sensor_shooter_network
+	icon = PWC_GFX_focus_mil_sensor_shooter_network
+	prerequisite = { focus = mil_firepower_operations }
+	prerequisite = { focus = mil_operational_intelligence }
+	x = 32
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_SENSOR_SHOOTER_NETWORK
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_sensor_shooter_network
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_sensor_shooter_network = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_deliberate_breakthrough
+	icon = PWC_GFX_focus_mil_deliberate_breakthrough
+	prerequisite = { focus = mil_sensor_shooter_network }
+	prerequisite = { focus = mil_combined_arms }
+	x = 32
+	y = 7
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DELIBERATE_BREAKTHROUGH
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_deliberate_breakthrough
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_elastic_operations
+	icon = PWC_GFX_focus_mil_elastic_operations
+	prerequisite = { focus = mil_officer_academy }
+	mutually_exclusive = { focus = mil_mobile_operations focus = mil_firepower_operations }
+	x = 34
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_ELASTIC_OPERATIONS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_elastic_operations
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_elastic_operations = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_defense_in_depth
+	icon = PWC_GFX_focus_mil_defense_in_depth
+	prerequisite = { focus = mil_elastic_operations }
+	prerequisite = { focus = mil_urban_fortification }
+	x = 34
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DEFENSE_IN_DEPTH
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_defense_in_depth
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_defense_in_depth = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_counterstroke
+	icon = PWC_GFX_focus_mil_counterstroke
+	prerequisite = { focus = mil_defense_in_depth }
+	prerequisite = { focus = mil_combined_arms }
+	x = 34
+	y = 7
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_COUNTERSTROKE
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_counterstroke
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_counterstroke = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_air_denial
+	icon = PWC_GFX_focus_mil_air_denial
+	prerequisite = { focus = mil_air_wing }
+	mutually_exclusive = { focus = mil_air_joint_strike }
+	x = 50
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_AIR_DENIAL
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_air_denial
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_air_denial = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_dispersed_airbases
+	icon = PWC_GFX_focus_mil_dispersed_airbases
+	prerequisite = { focus = mil_air_denial }
+	prerequisite = { focus = mil_air_cas_command }
+	x = 50
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DISPERSED_AIRBASES
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_dispersed_airbases
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_dispersed_airbases = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_interception_network
+	icon = PWC_GFX_focus_mil_interception_network
+	prerequisite = { focus = mil_dispersed_airbases }
+	prerequisite = { focus = mil_air_drone_program }
+	x = 50
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_air_power
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_INTERCEPTION_NETWORK
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_interception_network
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_interception_network = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_air_joint_strike
+	icon = PWC_GFX_focus_mil_air_joint_strike
+	prerequisite = { focus = mil_air_wing }
+	mutually_exclusive = { focus = mil_air_denial }
+	x = 52
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_air_power
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_AIR_JOINT_STRIKE
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_air_joint_strike
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_air_joint_strike = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_forward_air_control
+	icon = PWC_GFX_focus_mil_forward_air_control
+	prerequisite = { focus = mil_air_joint_strike }
+	prerequisite = { focus = mil_air_cas_command }
+	x = 52
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_air_power
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_FORWARD_AIR_CONTROL
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_forward_air_control
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_forward_air_control = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_battlefield_interdiction
+	icon = PWC_GFX_focus_mil_battlefield_interdiction
+	prerequisite = { focus = mil_forward_air_control }
+	prerequisite = { focus = mil_air_drone_program }
+	x = 52
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_air_power
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		air_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_BATTLEFIELD_INTERDICTION
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_battlefield_interdiction
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_battlefield_interdiction = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_littoral_denial
+	icon = PWC_GFX_focus_mil_littoral_denial
+	prerequisite = { focus = mil_naval_program }
+	mutually_exclusive = { focus = mil_sea_control }
+	x = 44
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_LITTORAL_DENIAL
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_littoral_denial
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_littoral_denial = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_coastal_sensor_line
+	icon = PWC_GFX_focus_mil_coastal_sensor_line
+	prerequisite = { focus = mil_littoral_denial }
+	prerequisite = { focus = mil_naval_expansion }
+	x = 44
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_COASTAL_SENSOR_LINE
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_coastal_sensor_line
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_coastal_sensor_line = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_ambush_flotillas
+	icon = PWC_GFX_focus_mil_ambush_flotillas
+	prerequisite = { focus = mil_coastal_sensor_line }
+	prerequisite = { focus = mil_naval_command }
+	x = 44
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_AMBUSH_FLOTILLAS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_ambush_flotillas
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_ambush_flotillas = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_sea_control
+	icon = PWC_GFX_focus_mil_sea_control
+	prerequisite = { focus = mil_naval_program }
+	mutually_exclusive = { focus = mil_littoral_denial }
+	x = 46
+	y = 3
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_SEA_CONTROL
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_sea_control
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_sea_control = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_convoy_command
+	icon = PWC_GFX_focus_mil_convoy_command
+	prerequisite = { focus = mil_sea_control }
+	prerequisite = { focus = mil_naval_expansion }
+	x = 46
+	y = 4
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_CONVOY_COMMAND
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_convoy_command
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_convoy_command = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_expeditionary_support
+	icon = PWC_GFX_focus_mil_expeditionary_support
+	prerequisite = { focus = mil_convoy_command }
+	prerequisite = { focus = mil_naval_command }
+	x = 46
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		navy_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_EXPEDITIONARY_SUPPORT
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_expeditionary_support
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_expeditionary_support = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_field_workshops
+	icon = PWC_GFX_focus_mil_field_workshops
+	prerequisite = { focus = mil_logistics_command }
+	x = 40
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_FIELD_WORKSHOPS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_field_workshops
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_field_workshops = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = mil_medical_evacuation
+	icon = PWC_GFX_focus_mil_medical_evacuation
+	prerequisite = { focus = mil_field_workshops }
+	x = 40
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_MEDICAL_EVACUATION
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_medical_evacuation
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_medical_evacuation = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+	
+
+
+focus = {
+	id = geo_island_maritime_identity
+	icon = PWC_GFX_focus_geo_island_maritime_identity
+	prerequisite = { focus = city_governance_hub }
+	x = 63
+	y = 1
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_maritime_identity
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_maritime_identity = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_fishing_fleet
+	icon = PWC_GFX_focus_geo_island_fishing_fleet
+	prerequisite = { focus = geo_island_maritime_identity }
+	x = 64
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_fishing_fleet
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_fishing_fleet = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_harborworks
+	icon = PWC_GFX_focus_geo_island_harborworks
+	prerequisite = { focus = geo_island_fishing_fleet }
+	x = 64
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = { all_provinces = yes limit_to_naval_base = yes }
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_amphibious_training
+	icon = PWC_GFX_focus_geo_island_amphibious_training
+	prerequisite = { focus = geo_island_harborworks }
+	x = 64
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_amphibious_training
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_amphibious_training = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_coastal_watch
+	icon = PWC_GFX_focus_geo_island_coastal_watch
+	prerequisite = { focus = geo_island_maritime_identity }
+	x = 62
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_coastal_watch
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_coastal_watch = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_ferry_network
+	icon = PWC_GFX_focus_geo_island_ferry_network
+	prerequisite = { focus = geo_island_coastal_watch }
+	x = 62
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_typhoon_readiness
+	icon = PWC_GFX_focus_geo_island_typhoon_readiness
+	prerequisite = { focus = geo_island_ferry_network }
+	x = 62
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_typhoon_readiness
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_island_apex_ocean_lord
+	icon = PWC_GFX_focus_geo_island_apex_ocean_lord
+	prerequisite = { focus = geo_island_amphibious_training }
+	prerequisite = { focus = geo_island_typhoon_readiness }
+	x = 63
+	y = 5
+	cost = 10
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_island
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_island_apex_ocean_lord
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_port_city
+	icon = PWC_GFX_focus_geo_coast_port_city
+	prerequisite = { focus = city_governance_hub }
+	x = 63
+	y = 1
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 7
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_coastal
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_shipyard_expansion
+	icon = PWC_GFX_focus_geo_coast_shipyard_expansion
+	prerequisite = { focus = geo_coast_port_city }
+	x = 64
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_sea_defense
+	icon = PWC_GFX_focus_geo_coast_sea_defense
+	prerequisite = { focus = geo_coast_shipyard_expansion }
+	x = 64
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				instant_build = yes
+				province = { all_provinces = yes }
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_coast_sea_defense
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_coast_sea_defense = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_marine_fisheries
+	icon = PWC_GFX_focus_geo_coast_marine_fisheries
+	prerequisite = { focus = geo_coast_sea_defense }
+	x = 64
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 4
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_coast_marine_fisheries
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_maritime_trade
+	icon = PWC_GFX_focus_geo_coast_maritime_trade
+	prerequisite = { focus = geo_coast_port_city }
+	x = 62
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_coast_maritime_trade
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_coast_maritime_trade = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_beachhead_training
+	icon = PWC_GFX_focus_geo_coast_beachhead_training
+	prerequisite = { focus = geo_coast_maritime_trade }
+	x = 62
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_coast_beachhead_training
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_coast_beachhead_training = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_hinterland_link
+	icon = PWC_GFX_focus_geo_coast_hinterland_link
+	prerequisite = { focus = geo_coast_beachhead_training }
+	x = 62
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_coast_apex_harbor_master
+	icon = PWC_GFX_focus_geo_coast_apex_harbor_master
+	prerequisite = { focus = geo_coast_marine_fisheries }
+	prerequisite = { focus = geo_coast_hinterland_link }
+	x = 63
+	y = 5
+	cost = 10
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_coastal
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_coastal
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_coast_apex_harbor_master
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_border_guard
+	icon = PWC_GFX_focus_geo_frontier_border_guard
+	prerequisite = { focus = city_governance_hub }
+	x = 63
+	y = 1
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_frontier_border_guard
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_frontier_border_guard = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_pass_forts
+	icon = PWC_GFX_focus_geo_frontier_pass_forts
+	prerequisite = { focus = geo_frontier_border_guard }
+	x = 64
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = { all_provinces = yes }
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_fortification_line
+	icon = PWC_GFX_focus_geo_frontier_fortification_line
+	prerequisite = { focus = geo_frontier_pass_forts }
+	x = 64
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = { all_provinces = yes }
+			}
+		}
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_frontier_fortification_line
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_frontier_fortification_line = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_supply_roads
+	icon = PWC_GFX_focus_geo_frontier_supply_roads
+	prerequisite = { focus = geo_frontier_fortification_line }
+	x = 64
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_strategic_depth
+	icon = PWC_GFX_focus_geo_frontier_strategic_depth
+	prerequisite = { focus = geo_frontier_border_guard }
+	x = 62
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_frontier_strategic_depth
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_border_trade
+	icon = PWC_GFX_focus_geo_frontier_border_trade
+	prerequisite = { focus = geo_frontier_strategic_depth }
+	x = 62
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_political_power = 50
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_martial_tradition
+	icon = PWC_GFX_focus_geo_frontier_martial_tradition
+	prerequisite = { focus = geo_frontier_border_trade }
+	x = 62
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_frontier_martial_tradition
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_frontier_apex_gatekeeper
+	icon = PWC_GFX_focus_geo_frontier_apex_gatekeeper
+	prerequisite = { focus = geo_frontier_supply_roads }
+	prerequisite = { focus = geo_frontier_martial_tradition }
+	x = 63
+	y = 5
+	cost = 10
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_frontier
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.7
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_frontier_apex_gatekeeper
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_agrarian_heartland
+	icon = PWC_GFX_focus_geo_inland_agrarian_heartland
+	prerequisite = { focus = city_governance_hub }
+	x = 63
+	y = 1
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_agrarian_heartland
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_food_security
+	icon = PWC_GFX_focus_geo_inland_food_security
+	prerequisite = { focus = geo_inland_agrarian_heartland }
+	x = 64
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_food_security
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_food_security = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_industrial_park
+	icon = PWC_GFX_focus_geo_inland_industrial_park
+	prerequisite = { focus = geo_inland_food_security }
+	x = 64
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_rail_junction
+	icon = PWC_GFX_focus_geo_inland_rail_junction
+	prerequisite = { focus = geo_inland_industrial_park }
+	x = 64
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_labor_reserve
+	icon = PWC_GFX_focus_geo_inland_labor_reserve
+	prerequisite = { focus = geo_inland_agrarian_heartland }
+	x = 62
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_labor_reserve
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_labor_reserve = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_militia_tradition
+	icon = PWC_GFX_focus_geo_inland_militia_tradition
+	prerequisite = { focus = geo_inland_labor_reserve }
+	x = 62
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_militia_tradition
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_militia_tradition = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_interior_lines
+	icon = PWC_GFX_focus_geo_inland_interior_lines
+	prerequisite = { focus = geo_inland_militia_tradition }
+	x = 62
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_interior_lines
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_interior_lines = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_inland_apex_heartland_fortress
+	icon = PWC_GFX_focus_geo_inland_apex_heartland_fortress
+	prerequisite = { focus = geo_inland_rail_junction }
+	prerequisite = { focus = geo_inland_interior_lines }
+	x = 63
+	y = 5
+	cost = 10
+	allow_branch = {
+		NOT = { tag = NTR }
+		NOT = { has_game_rule = { rule = pwc_geography_mode option = GENERIC } }
+		has_country_flag = pwc_geo_inland
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_inland_apex_heartland_fortress
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_city_cooperation
+	icon = PWC_GFX_focus_geo_generic_city_cooperation
+	prerequisite = { focus = city_governance_hub }
+	x = 63
+	y = 1
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 6
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_city_cooperation
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_city_cooperation = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_public_welfare
+	icon = PWC_GFX_focus_geo_generic_public_welfare
+	prerequisite = { focus = geo_generic_city_cooperation }
+	x = 64
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_public_welfare
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_public_welfare = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_industrial_cooperation
+	icon = PWC_GFX_focus_geo_generic_industrial_cooperation
+	prerequisite = { focus = geo_generic_public_welfare }
+	x = 64
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_industrial_cooperation
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_logistics_coordination
+	icon = PWC_GFX_focus_geo_generic_logistics_coordination
+	prerequisite = { focus = geo_generic_industrial_cooperation }
+	x = 64
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_logistics_coordination
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_local_mobilization
+	icon = PWC_GFX_focus_geo_generic_local_mobilization
+	prerequisite = { focus = geo_generic_city_cooperation }
+	x = 62
+	y = 2
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.1
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_local_mobilization
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_local_mobilization = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_defense_cooperation
+	icon = PWC_GFX_focus_geo_generic_defense_cooperation
+	prerequisite = { focus = geo_generic_local_mobilization }
+	x = 62
+	y = 3
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_defense_cooperation
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_emergency_support
+	icon = PWC_GFX_focus_geo_generic_emergency_support
+	prerequisite = { focus = geo_generic_defense_cooperation }
+	x = 62
+	y = 4
+	cost = 5
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_emergency_support
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_emergency_support = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+
+
+focus = {
+	id = geo_generic_apex_city_commonwealth
+	icon = PWC_GFX_focus_geo_generic_apex_city_commonwealth
+	prerequisite = { focus = geo_generic_logistics_coordination }
+	prerequisite = { focus = geo_generic_emergency_support }
+	x = 63
+	y = 5
+	cost = 10
+	allow_branch = {
+		NOT = { tag = NTR }
+		has_game_rule = { rule = pwc_geography_mode option = GENERIC }
+	}
+	ai_will_do = {
+		factor = 6
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = pwc_idea_geo_generic_apex_city_commonwealth
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = yes
+		}
+		pwc_se_focus_progress_tick = yes
+	}
+}
+}

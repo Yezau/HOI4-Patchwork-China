@@ -1,0 +1,1476 @@
+
+
+pwc_se_begin_pwc_military_army_course = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_army_course = yes
+        }
+        add_command_power = -17
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_army_course_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_army_course_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_army_course = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_army_course_pending
+        }
+        clr_country_flag = pwc_military_army_course_pending
+        remove_ideas = pwc_military_army_course_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_staff_wargames
+                has_war = no
+            }
+            army_experience = 15
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_army_study = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_army_study = yes
+        }
+        add_command_power = -22
+        army_experience = -10
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_army_study_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_army_study_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_army_study = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_army_study_pending
+        }
+        clr_country_flag = pwc_military_army_study_pending
+        remove_ideas = pwc_military_army_study_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_staff_wargames
+                has_war = no
+                has_subdoctrine_in_track = operations
+            }
+            add_mastery = {
+                amount = 15
+                track = operations
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_air_course = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_air_course = yes
+        }
+        add_command_power = -17
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_air_course_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_air_course_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_air_course = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_air_course_pending
+        }
+        clr_country_flag = pwc_military_air_course_pending
+        remove_ideas = pwc_military_air_course_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_air_wing
+                has_war = no
+            }
+            air_experience = 15
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_air_study = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_air_study = yes
+        }
+        add_command_power = -22
+        air_experience = -10
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_air_study_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_air_study_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_air_study = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_air_study_pending
+        }
+        clr_country_flag = pwc_military_air_study_pending
+        remove_ideas = pwc_military_air_study_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                OR = {
+                    has_completed_focus = mil_interception_network
+                    has_completed_focus = mil_battlefield_interdiction
+                }
+                has_war = no
+                has_subdoctrine_in_track = fighter_aircraft
+            }
+            add_mastery = {
+                amount = 15
+                track = fighter_aircraft
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_navy_course = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_navy_course = yes
+        }
+        add_command_power = -17
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_navy_course_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_navy_course_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_navy_course = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_navy_course_pending
+        }
+        clr_country_flag = pwc_military_navy_course_pending
+        remove_ideas = pwc_military_navy_course_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_naval_program
+                has_war = no
+            }
+            navy_experience = 15
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_navy_study = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_navy_study = yes
+        }
+        add_command_power = -22
+        navy_experience = -10
+        set_country_flag = {
+            flag = pwc_military_lock_training
+            days = 90
+        }
+        set_country_flag = {
+            flag = pwc_military_navy_study_pending
+            days = 32
+        }
+        add_timed_idea = {
+            idea = pwc_military_navy_study_preparing_idea
+            days = 30
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_navy_study = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_navy_study_pending
+        }
+        clr_country_flag = pwc_military_navy_study_pending
+        remove_ideas = pwc_military_navy_study_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                OR = {
+                    has_completed_focus = mil_ambush_flotillas
+                    has_completed_focus = mil_expeditionary_support
+                }
+                has_war = no
+                has_subdoctrine_in_track = screens
+            }
+            add_mastery = {
+                amount = 15
+                track = screens
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_reconnaissance = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_reconnaissance = yes
+        }
+        add_command_power = -25
+        set_country_flag = {
+            flag = pwc_military_lock_intelligence
+            days = 69
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_intelligence
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_reconnaissance_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_reconnaissance_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.107
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_reconnaissance = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_reconnaissance_pending
+        }
+        clr_country_flag = pwc_military_reconnaissance_pending
+        remove_ideas = pwc_military_reconnaissance_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_operational_intelligence
+                has_war = yes
+            }
+            add_timed_idea = {
+                idea = pwc_military_reconnaissance_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_war_reserves = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_war_reserves = yes
+        }
+        add_command_power = -27
+        set_country_flag = {
+            flag = pwc_military_lock_sustainment
+            days = 97
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sustainment
+            days = 37
+        }
+        set_country_flag = {
+            flag = pwc_military_war_reserves_pending
+            days = 9
+        }
+        add_timed_idea = {
+            idea = pwc_military_war_reserves_preparing_idea
+            days = 7
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.108
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_war_reserves = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_war_reserves_pending
+        }
+        clr_country_flag = pwc_military_war_reserves_pending
+        remove_ideas = pwc_military_war_reserves_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_armaments_standardization
+                has_war = yes
+            }
+            add_timed_idea = {
+                idea = pwc_military_war_reserves_active_idea
+                days = 30
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_field_repairs = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_field_repairs = yes
+        }
+        add_command_power = -25
+        set_country_flag = {
+            flag = pwc_military_lock_sustainment
+            days = 83
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sustainment
+            days = 33
+        }
+        set_country_flag = {
+            flag = pwc_military_field_repairs_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_field_repairs_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.109
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_field_repairs = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_field_repairs_pending
+        }
+        clr_country_flag = pwc_military_field_repairs_pending
+        remove_ideas = pwc_military_field_repairs_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_field_workshops
+                has_war = yes
+            }
+            add_timed_idea = {
+                idea = pwc_military_field_repairs_active_idea
+                days = 30
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_evacuation = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_evacuation = yes
+        }
+        add_command_power = -25
+        set_country_flag = {
+            flag = pwc_military_lock_sustainment
+            days = 74
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sustainment
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_evacuation_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_evacuation_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.110
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_evacuation = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_evacuation_pending
+        }
+        clr_country_flag = pwc_military_evacuation_pending
+        remove_ideas = pwc_military_evacuation_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_medical_evacuation
+                has_war = yes
+            }
+            add_timed_idea = {
+                idea = pwc_military_evacuation_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_front_rotation = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_front_rotation = yes
+        }
+        add_command_power = -22
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 51
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 16
+        }
+        set_country_flag = {
+            flag = pwc_military_front_rotation_pending
+            days = 4
+        }
+        add_timed_idea = {
+            idea = pwc_military_front_rotation_preparing_idea
+            days = 2
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.111
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_front_rotation = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_front_rotation_pending
+        }
+        clr_country_flag = pwc_military_front_rotation_pending
+        remove_ideas = pwc_military_front_rotation_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_reserve_system
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_front_rotation_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_anti_assault = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_anti_assault = yes
+        }
+        add_command_power = -30
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 51
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 16
+        }
+        set_country_flag = {
+            flag = pwc_military_anti_assault_pending
+            days = 4
+        }
+        add_timed_idea = {
+            idea = pwc_military_anti_assault_preparing_idea
+            days = 2
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.112
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_anti_assault = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_anti_assault_pending
+        }
+        clr_country_flag = pwc_military_anti_assault_pending
+        remove_ideas = pwc_military_anti_assault_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_urban_fortification
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_anti_assault_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_mobile_concentration = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_mobile_concentration = yes
+        }
+        add_command_power = -32
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 62
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 17
+        }
+        set_country_flag = {
+            flag = pwc_military_mobile_concentration_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_mobile_concentration_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.113
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_mobile_concentration = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_mobile_concentration_pending
+        }
+        clr_country_flag = pwc_military_mobile_concentration_pending
+        remove_ideas = pwc_military_mobile_concentration_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_mobile_reserves
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_mobile_concentration_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_deep_exploitation = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_deep_exploitation = yes
+        }
+        add_command_power = -50
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 91
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 21
+        }
+        set_country_flag = {
+            flag = pwc_military_deep_exploitation_pending
+            days = 9
+        }
+        add_timed_idea = {
+            idea = pwc_military_deep_exploitation_preparing_idea
+            days = 7
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.114
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_deep_exploitation = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_deep_exploitation_pending
+        }
+        clr_country_flag = pwc_military_deep_exploitation_pending
+        remove_ideas = pwc_military_deep_exploitation_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_deep_exploitation
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_deep_exploitation_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_fire_coordination = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_fire_coordination = yes
+        }
+        add_command_power = -32
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 76
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 26
+        }
+        set_country_flag = {
+            flag = pwc_military_fire_coordination_pending
+            days = 7
+        }
+        add_timed_idea = {
+            idea = pwc_military_fire_coordination_preparing_idea
+            days = 5
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.115
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_fire_coordination = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_fire_coordination_pending
+        }
+        clr_country_flag = pwc_military_fire_coordination_pending
+        remove_ideas = pwc_military_fire_coordination_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_sensor_shooter_network
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_fire_coordination_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_deliberate_offensive = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_deliberate_offensive = yes
+        }
+        add_command_power = -50
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 101
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 31
+        }
+        set_country_flag = {
+            flag = pwc_military_deliberate_offensive_pending
+            days = 12
+        }
+        add_timed_idea = {
+            idea = pwc_military_deliberate_offensive_preparing_idea
+            days = 10
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.116
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_deliberate_offensive = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_deliberate_offensive_pending
+        }
+        clr_country_flag = pwc_military_deliberate_offensive_pending
+        remove_ideas = pwc_military_deliberate_offensive_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_deliberate_breakthrough
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_deliberate_offensive_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_defence_in_depth = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_defence_in_depth = yes
+        }
+        add_command_power = -32
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 74
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_defence_in_depth_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_defence_in_depth_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.117
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_defence_in_depth = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_defence_in_depth_pending
+        }
+        clr_country_flag = pwc_military_defence_in_depth_pending
+        remove_ideas = pwc_military_defence_in_depth_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_defense_in_depth
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_defence_in_depth_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_counterstroke = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_counterstroke = yes
+        }
+        add_command_power = -47
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 78
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 13
+        }
+        set_country_flag = {
+            flag = pwc_military_counterstroke_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_counterstroke_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.118
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_counterstroke = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_counterstroke_pending
+        }
+        clr_country_flag = pwc_military_counterstroke_pending
+        remove_ideas = pwc_military_counterstroke_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_counterstroke
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_counterstroke_active_idea
+                days = 10
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_airfield_dispersal = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_airfield_dispersal = yes
+        }
+        add_command_power = -25
+        set_country_flag = {
+            flag = pwc_military_lock_air
+            days = 68
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_air
+            days = 23
+        }
+        set_country_flag = {
+            flag = pwc_military_airfield_dispersal_pending
+            days = 4
+        }
+        add_timed_idea = {
+            idea = pwc_military_airfield_dispersal_preparing_idea
+            days = 2
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.119
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_airfield_dispersal = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_airfield_dispersal_pending
+        }
+        clr_country_flag = pwc_military_airfield_dispersal_pending
+        remove_ideas = pwc_military_airfield_dispersal_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_dispersed_airbases
+                has_war = yes
+                has_deployed_air_force_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_airfield_dispersal_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_interception_surge = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_interception_surge = yes
+        }
+        add_command_power = -37
+        set_country_flag = {
+            flag = pwc_military_lock_air
+            days = 66
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_air
+            days = 16
+        }
+        set_country_flag = {
+            flag = pwc_military_interception_surge_pending
+            days = 4
+        }
+        add_timed_idea = {
+            idea = pwc_military_interception_surge_preparing_idea
+            days = 2
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.120
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_interception_surge = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_interception_surge_pending
+        }
+        clr_country_flag = pwc_military_interception_surge_pending
+        remove_ideas = pwc_military_interception_surge_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_interception_network
+                has_war = yes
+                has_deployed_air_force_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_interception_surge_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_close_support = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_close_support = yes
+        }
+        add_command_power = -32
+        set_country_flag = {
+            flag = pwc_military_lock_air
+            days = 75
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_air
+            days = 25
+        }
+        set_country_flag = {
+            flag = pwc_military_close_support_pending
+            days = 6
+        }
+        add_timed_idea = {
+            idea = pwc_military_close_support_preparing_idea
+            days = 4
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.121
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_close_support = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_close_support_pending
+        }
+        clr_country_flag = pwc_military_close_support_pending
+        remove_ideas = pwc_military_close_support_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_forward_air_control
+                has_war = yes
+                has_deployed_air_force_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_close_support_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_interdiction = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_interdiction = yes
+        }
+        add_command_power = -45
+        set_country_flag = {
+            flag = pwc_military_lock_air
+            days = 98
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_air
+            days = 28
+        }
+        set_country_flag = {
+            flag = pwc_military_interdiction_pending
+            days = 9
+        }
+        add_timed_idea = {
+            idea = pwc_military_interdiction_preparing_idea
+            days = 7
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.122
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_interdiction = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_interdiction_pending
+        }
+        clr_country_flag = pwc_military_interdiction_pending
+        remove_ideas = pwc_military_interdiction_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_battlefield_interdiction
+                has_war = yes
+                has_deployed_air_force_size = {
+                    size > 0
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_interdiction_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_coastal_watch = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_coastal_watch = yes
+        }
+        add_command_power = -25
+        set_country_flag = {
+            flag = pwc_military_lock_sea
+            days = 69
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sea
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_coastal_watch_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_coastal_watch_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.123
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_coastal_watch = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_coastal_watch_pending
+        }
+        clr_country_flag = pwc_military_coastal_watch_pending
+        remove_ideas = pwc_military_coastal_watch_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_coastal_sensor_line
+                has_war = yes
+                OR = {
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_destroyer
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_cruiser
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_submarine
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_carrier
+                    }
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_coastal_watch_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_littoral_ambush = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_littoral_ambush = yes
+        }
+        add_command_power = -42
+        set_country_flag = {
+            flag = pwc_military_lock_sea
+            days = 93
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sea
+            days = 28
+        }
+        set_country_flag = {
+            flag = pwc_military_littoral_ambush_pending
+            days = 9
+        }
+        add_timed_idea = {
+            idea = pwc_military_littoral_ambush_preparing_idea
+            days = 7
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.124
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_littoral_ambush = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_littoral_ambush_pending
+        }
+        clr_country_flag = pwc_military_littoral_ambush_pending
+        remove_ideas = pwc_military_littoral_ambush_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_ambush_flotillas
+                has_war = yes
+                OR = {
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_destroyer
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_cruiser
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_submarine
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_carrier
+                    }
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_littoral_ambush_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_escort_surge = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_escort_surge = yes
+        }
+        add_command_power = -32
+        set_country_flag = {
+            flag = pwc_military_lock_sea
+            days = 74
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sea
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_escort_surge_pending
+            days = 5
+        }
+        add_timed_idea = {
+            idea = pwc_military_escort_surge_preparing_idea
+            days = 3
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.125
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_escort_surge = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_escort_surge_pending
+        }
+        clr_country_flag = pwc_military_escort_surge_pending
+        remove_ideas = pwc_military_escort_surge_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_convoy_command
+                has_war = yes
+                OR = {
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_destroyer
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_cruiser
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_submarine
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_carrier
+                    }
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_escort_surge_active_idea
+                days = 21
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_landing_support = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_landing_support = yes
+        }
+        add_command_power = -50
+        set_country_flag = {
+            flag = pwc_military_lock_sea
+            days = 99
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sea
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_landing_support_pending
+            days = 12
+        }
+        add_timed_idea = {
+            idea = pwc_military_landing_support_preparing_idea
+            days = 10
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.126
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_landing_support = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_landing_support_pending
+        }
+        clr_country_flag = pwc_military_landing_support_pending
+        remove_ideas = pwc_military_landing_support_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_expeditionary_support
+                has_war = yes
+                OR = {
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_destroyer
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_cruiser
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_submarine
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_carrier
+                    }
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_landing_support_active_idea
+                days = 14
+            }
+        }
+    }
+}
+
+pwc_se_begin_pwc_military_joint_operation = {
+    if = {
+        limit = {
+            pwc_st_start_pwc_military_joint_operation = yes
+        }
+        add_command_power = -65
+        set_country_flag = {
+            flag = pwc_military_lock_land
+            days = 114
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_land
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_lock_air
+            days = 114
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_air
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_lock_sea
+            days = 114
+        }
+        set_country_flag = {
+            flag = pwc_military_signal_sea
+            days = 24
+        }
+        set_country_flag = {
+            flag = pwc_military_joint_operation_pending
+            days = 12
+        }
+        add_timed_idea = {
+            idea = pwc_military_joint_operation_preparing_idea
+            days = 10
+        }
+        every_enemy_country = {
+            country_event = {
+                id = pwc_military.127
+            }
+        }
+    }
+}
+
+pwc_se_finish_pwc_military_joint_operation = {
+    if = {
+        limit = {
+            has_country_flag = pwc_military_joint_operation_pending
+        }
+        clr_country_flag = pwc_military_joint_operation_pending
+        remove_ideas = pwc_military_joint_operation_preparing_idea
+        if = {
+            limit = {
+                pwc_st_city_alive = yes
+                has_completed_focus = mil_joint_operations
+                has_war = yes
+                has_army_size = {
+                    size > 0
+                }
+                OR = {
+                    has_deployed_air_force_size = {
+                        size > 0
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_destroyer
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_cruiser
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_submarine
+                    }
+                    has_navy_size = {
+                        size > 0
+                        unit = pwc_unit_carrier
+                    }
+                }
+            }
+            add_timed_idea = {
+                idea = pwc_military_joint_operation_active_idea
+                days = 14
+            }
+        }
+    }
+}
+

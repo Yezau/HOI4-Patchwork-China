@@ -1,0 +1,33 @@
+state={
+	id = 248
+	name = STATE_248
+	provinces = { 612 2239 2535 2546 2786 3036 3304 3321 3854 3856 3866 3867 }
+	manpower = 12370000
+	state_category = megalopolis
+	resources = {
+		steel = 16
+		aluminium = 10
+		tungsten = 8
+		chromium = 6
+	}
+	history = {
+		add_core_of = W21
+		owner = W21
+		victory_points = { 3321 30 }
+		victory_points = { 3304 1 }
+		victory_points = { 612 1 }
+		victory_points = { 3867 1 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 3
+			dockyard = 2
+			air_base = 5
+			3321 = {
+				naval_base = 3
+			}
+			pwc_building_tech_center = 1
+		}
+	}
+	local_supplies = 12.0
+}

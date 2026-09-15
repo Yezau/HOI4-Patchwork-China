@@ -1,0 +1,2384 @@
+
+pwc_st_ai_needs_institute_industry = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t2 }
+			has_tech = pwc_tech_industry_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t3 }
+			has_tech = pwc_tech_industry_construction_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t4 }
+			has_tech = pwc_tech_industry_construction_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t2 }
+			has_tech = pwc_tech_industry_manufacturing_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t3 }
+			has_tech = pwc_tech_industry_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t4 }
+			has_tech = pwc_tech_industry_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_institute_army = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t2 }
+			has_tech = pwc_tech_army_infantry_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t3 }
+			has_tech = pwc_tech_army_infantry_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t4 }
+			has_tech = pwc_tech_army_infantry_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t2 }
+			has_tech = pwc_tech_logistics_support_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t3 }
+			has_tech = pwc_tech_logistics_support_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t4 }
+			has_tech = pwc_tech_logistics_support_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t2 }
+			has_tech = pwc_tech_logistics_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t3 }
+			has_tech = pwc_tech_logistics_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t4 }
+			has_tech = pwc_tech_logistics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t2 }
+			has_tech = pwc_tech_sf_mountain_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t3 }
+			has_tech = pwc_tech_sf_mountain_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t4 }
+			has_tech = pwc_tech_sf_mountain_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t2 }
+			has_tech = pwc_tech_sf_marines_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t3 }
+			has_tech = pwc_tech_sf_marines_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t4 }
+			has_tech = pwc_tech_sf_marines_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t2 }
+			has_tech = pwc_tech_sf_airborne_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t3 }
+			has_tech = pwc_tech_sf_airborne_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t4 }
+			has_tech = pwc_tech_sf_airborne_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t2 }
+			has_tech = pwc_tech_sf_rangers_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t3 }
+			has_tech = pwc_tech_sf_rangers_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t4 }
+			has_tech = pwc_tech_sf_rangers_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_institute_armor = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t2 }
+			has_tech = pwc_tech_army_firepower_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t3 }
+			has_tech = pwc_tech_army_firepower_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t4 }
+			has_tech = pwc_tech_army_firepower_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t2 }
+			has_tech = pwc_tech_missile_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_strike_t3 }
+			has_tech = pwc_tech_missile_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_strike_t4 }
+			has_tech = pwc_tech_missile_strike_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_defense_t2 }
+			has_tech = pwc_tech_missile_defense_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t3 }
+			has_tech = pwc_tech_missile_defense_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t4 }
+			has_tech = pwc_tech_missile_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t2 }
+			has_tech = pwc_tech_army_mobility_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t3 }
+			has_tech = pwc_tech_army_mobility_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t4 }
+			has_tech = pwc_tech_army_mobility_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t2 }
+			has_tech = pwc_tech_army_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t3 }
+			has_tech = pwc_tech_army_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t4 }
+			has_tech = pwc_tech_army_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_institute_air = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t2 }
+			has_tech = pwc_tech_air_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t3 }
+			has_tech = pwc_tech_air_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t4 }
+			has_tech = pwc_tech_air_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t2 }
+			has_tech = pwc_tech_air_support_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t3 }
+			has_tech = pwc_tech_air_support_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t4 }
+			has_tech = pwc_tech_air_support_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t2 }
+			has_tech = pwc_tech_air_strike_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t3 }
+			has_tech = pwc_tech_air_strike_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t4 }
+			has_tech = pwc_tech_air_strike_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_institute_navy = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t2 }
+			has_tech = pwc_tech_navy_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t3 }
+			has_tech = pwc_tech_navy_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t4 }
+			has_tech = pwc_tech_navy_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t2 }
+			has_tech = pwc_tech_navy_submarine_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t3 }
+			has_tech = pwc_tech_navy_submarine_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t4 }
+			has_tech = pwc_tech_navy_submarine_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t2 }
+			has_tech = pwc_tech_navy_fleet_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t3 }
+			has_tech = pwc_tech_navy_fleet_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t4 }
+			has_tech = pwc_tech_navy_fleet_t3
+			has_tech = pwc_tech_electronics_radar_t4
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t2 }
+			has_tech = pwc_tech_navy_carrier_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t3 }
+			has_tech = pwc_tech_navy_carrier_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t4 }
+			has_tech = pwc_tech_navy_carrier_t3
+			has_tech = pwc_tech_electronics_radar_t4
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_institute_electronics = {
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t2 }
+			has_tech = pwc_tech_electronics_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_computing_t3 }
+			has_tech = pwc_tech_electronics_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t4 }
+			has_tech = pwc_tech_electronics_computing_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_radar_t2 }
+			has_tech = pwc_tech_electronics_radar_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t3 }
+			has_tech = pwc_tech_electronics_radar_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_radar_t4 }
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 2
+					}
+				}
+			}
+		}
+	}
+}
+pwc_st_ai_needs_tech_center = {
+	NOT = {
+		OR = {
+			pwc_st_ai_needs_institute_industry = yes
+			pwc_st_ai_needs_institute_army = yes
+			pwc_st_ai_needs_institute_armor = yes
+			pwc_st_ai_needs_institute_air = yes
+			pwc_st_ai_needs_institute_navy = yes
+			pwc_st_ai_needs_institute_electronics = yes
+		}
+	}
+	OR = {
+		NOT = { has_tech = pwc_tech_army_infantry_t1 }
+		NOT = { has_tech = pwc_tech_army_infantry_t2 }
+		NOT = { has_tech = pwc_tech_army_infantry_t3 }
+		NOT = { has_tech = pwc_tech_army_infantry_t4 }
+		NOT = { has_tech = pwc_tech_logistics_support_t1 }
+		NOT = { has_tech = pwc_tech_logistics_support_t2 }
+		NOT = { has_tech = pwc_tech_logistics_support_t3 }
+		NOT = { has_tech = pwc_tech_logistics_support_t4 }
+		NOT = { has_tech = pwc_tech_army_firepower_t1 }
+		NOT = { has_tech = pwc_tech_army_firepower_t2 }
+		NOT = { has_tech = pwc_tech_army_firepower_t3 }
+		NOT = { has_tech = pwc_tech_army_firepower_t4 }
+		NOT = { has_tech = pwc_tech_missile_t1 }
+		NOT = { has_tech = pwc_tech_missile_t2 }
+		NOT = { has_tech = pwc_tech_missile_strike_t3 }
+		NOT = { has_tech = pwc_tech_missile_strike_t4 }
+		NOT = { has_tech = pwc_tech_missile_defense_t1 }
+		NOT = { has_tech = pwc_tech_missile_defense_t2 }
+		NOT = { has_tech = pwc_tech_missile_t3 }
+		NOT = { has_tech = pwc_tech_missile_t4 }
+		NOT = { has_tech = pwc_tech_logistics_t1 }
+		NOT = { has_tech = pwc_tech_logistics_t2 }
+		NOT = { has_tech = pwc_tech_logistics_t3 }
+		NOT = { has_tech = pwc_tech_logistics_t4 }
+		NOT = { has_tech = pwc_tech_army_mobility_t1 }
+		NOT = { has_tech = pwc_tech_army_mobility_t2 }
+		NOT = { has_tech = pwc_tech_army_mobility_t3 }
+		NOT = { has_tech = pwc_tech_army_mobility_t4 }
+		NOT = { has_tech = pwc_tech_army_t1 }
+		NOT = { has_tech = pwc_tech_army_t2 }
+		NOT = { has_tech = pwc_tech_army_t3 }
+		NOT = { has_tech = pwc_tech_army_t4 }
+		NOT = { has_tech = pwc_tech_air_t1 }
+		NOT = { has_tech = pwc_tech_air_t2 }
+		NOT = { has_tech = pwc_tech_air_t3 }
+		NOT = { has_tech = pwc_tech_air_t4 }
+		NOT = { has_tech = pwc_tech_air_support_t1 }
+		NOT = { has_tech = pwc_tech_air_support_t2 }
+		NOT = { has_tech = pwc_tech_air_support_t3 }
+		NOT = { has_tech = pwc_tech_air_support_t4 }
+		NOT = { has_tech = pwc_tech_air_strike_t1 }
+		NOT = { has_tech = pwc_tech_air_strike_t2 }
+		NOT = { has_tech = pwc_tech_air_strike_t3 }
+		NOT = { has_tech = pwc_tech_air_strike_t4 }
+		NOT = { has_tech = pwc_tech_navy_t1 }
+		NOT = { has_tech = pwc_tech_navy_t2 }
+		NOT = { has_tech = pwc_tech_navy_t3 }
+		NOT = { has_tech = pwc_tech_navy_t4 }
+		NOT = { has_tech = pwc_tech_navy_submarine_t1 }
+		NOT = { has_tech = pwc_tech_navy_submarine_t2 }
+		NOT = { has_tech = pwc_tech_navy_submarine_t3 }
+		NOT = { has_tech = pwc_tech_navy_submarine_t4 }
+		NOT = { has_tech = pwc_tech_navy_fleet_t1 }
+		NOT = { has_tech = pwc_tech_navy_fleet_t2 }
+		NOT = { has_tech = pwc_tech_navy_fleet_t3 }
+		NOT = { has_tech = pwc_tech_navy_fleet_t4 }
+		NOT = { has_tech = pwc_tech_navy_carrier_t1 }
+		NOT = { has_tech = pwc_tech_navy_carrier_t2 }
+		NOT = { has_tech = pwc_tech_navy_carrier_t3 }
+		NOT = { has_tech = pwc_tech_navy_carrier_t4 }
+		NOT = { has_tech = pwc_tech_industry_t1 }
+		NOT = { has_tech = pwc_tech_industry_construction_t2 }
+		NOT = { has_tech = pwc_tech_industry_construction_t3 }
+		NOT = { has_tech = pwc_tech_industry_construction_t4 }
+		NOT = { has_tech = pwc_tech_industry_manufacturing_t1 }
+		NOT = { has_tech = pwc_tech_industry_t2 }
+		NOT = { has_tech = pwc_tech_industry_t3 }
+		NOT = { has_tech = pwc_tech_industry_t4 }
+		NOT = { has_tech = pwc_tech_electronics_t1 }
+		NOT = { has_tech = pwc_tech_electronics_t2 }
+		NOT = { has_tech = pwc_tech_electronics_computing_t3 }
+		NOT = { has_tech = pwc_tech_electronics_t4 }
+		NOT = { has_tech = pwc_tech_electronics_radar_t1 }
+		NOT = { has_tech = pwc_tech_electronics_radar_t2 }
+		NOT = { has_tech = pwc_tech_electronics_t3 }
+		NOT = { has_tech = pwc_tech_electronics_radar_t4 }
+		NOT = { has_tech = pwc_tech_sf_mountain_t1 }
+		NOT = { has_tech = pwc_tech_sf_mountain_t2 }
+		NOT = { has_tech = pwc_tech_sf_mountain_t3 }
+		NOT = { has_tech = pwc_tech_sf_mountain_t4 }
+		NOT = { has_tech = pwc_tech_sf_marines_t1 }
+		NOT = { has_tech = pwc_tech_sf_marines_t2 }
+		NOT = { has_tech = pwc_tech_sf_marines_t3 }
+		NOT = { has_tech = pwc_tech_sf_marines_t4 }
+		NOT = { has_tech = pwc_tech_sf_airborne_t1 }
+		NOT = { has_tech = pwc_tech_sf_airborne_t2 }
+		NOT = { has_tech = pwc_tech_sf_airborne_t3 }
+		NOT = { has_tech = pwc_tech_sf_airborne_t4 }
+		NOT = { has_tech = pwc_tech_sf_rangers_t1 }
+		NOT = { has_tech = pwc_tech_sf_rangers_t2 }
+		NOT = { has_tech = pwc_tech_sf_rangers_t3 }
+		NOT = { has_tech = pwc_tech_sf_rangers_t4 }
+	}
+	OR = {
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t2 }
+			has_tech = pwc_tech_army_infantry_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t3 }
+			has_tech = pwc_tech_army_infantry_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_infantry_t4 }
+			has_tech = pwc_tech_army_infantry_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t2 }
+			has_tech = pwc_tech_logistics_support_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t3 }
+			has_tech = pwc_tech_logistics_support_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_support_t4 }
+			has_tech = pwc_tech_logistics_support_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t2 }
+			has_tech = pwc_tech_army_firepower_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t3 }
+			has_tech = pwc_tech_army_firepower_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_firepower_t4 }
+			has_tech = pwc_tech_army_firepower_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t2 }
+			has_tech = pwc_tech_missile_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_strike_t3 }
+			has_tech = pwc_tech_missile_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_strike_t4 }
+			has_tech = pwc_tech_missile_strike_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_defense_t2 }
+			has_tech = pwc_tech_missile_defense_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t3 }
+			has_tech = pwc_tech_missile_defense_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_missile_t4 }
+			has_tech = pwc_tech_missile_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t2 }
+			has_tech = pwc_tech_logistics_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t3 }
+			has_tech = pwc_tech_logistics_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_logistics_t4 }
+			has_tech = pwc_tech_logistics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t2 }
+			has_tech = pwc_tech_army_mobility_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t3 }
+			has_tech = pwc_tech_army_mobility_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_mobility_t4 }
+			has_tech = pwc_tech_army_mobility_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t2 }
+			has_tech = pwc_tech_army_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t3 }
+			has_tech = pwc_tech_army_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_t4 }
+			has_tech = pwc_tech_army_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t2 }
+			has_tech = pwc_tech_air_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t3 }
+			has_tech = pwc_tech_air_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_t4 }
+			has_tech = pwc_tech_air_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t2 }
+			has_tech = pwc_tech_air_support_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t3 }
+			has_tech = pwc_tech_air_support_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_support_t4 }
+			has_tech = pwc_tech_air_support_t3
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t2 }
+			has_tech = pwc_tech_air_strike_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t3 }
+			has_tech = pwc_tech_air_strike_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_air_strike_t4 }
+			has_tech = pwc_tech_air_strike_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t2 }
+			has_tech = pwc_tech_navy_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t3 }
+			has_tech = pwc_tech_navy_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_t4 }
+			has_tech = pwc_tech_navy_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t2 }
+			has_tech = pwc_tech_navy_submarine_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t3 }
+			has_tech = pwc_tech_navy_submarine_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_submarine_t4 }
+			has_tech = pwc_tech_navy_submarine_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t2 }
+			has_tech = pwc_tech_navy_fleet_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t3 }
+			has_tech = pwc_tech_navy_fleet_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_fleet_t4 }
+			has_tech = pwc_tech_navy_fleet_t3
+			has_tech = pwc_tech_electronics_radar_t4
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t2 }
+			has_tech = pwc_tech_navy_carrier_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t3 }
+			has_tech = pwc_tech_navy_carrier_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_navy_carrier_t4 }
+			has_tech = pwc_tech_navy_carrier_t3
+			has_tech = pwc_tech_electronics_radar_t4
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t2 }
+			has_tech = pwc_tech_industry_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t3 }
+			has_tech = pwc_tech_industry_construction_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_construction_t4 }
+			has_tech = pwc_tech_industry_construction_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t2 }
+			has_tech = pwc_tech_industry_manufacturing_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t3 }
+			has_tech = pwc_tech_industry_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_industry_t4 }
+			has_tech = pwc_tech_industry_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t2 }
+			has_tech = pwc_tech_electronics_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_computing_t3 }
+			has_tech = pwc_tech_electronics_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t4 }
+			has_tech = pwc_tech_electronics_computing_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_radar_t2 }
+			has_tech = pwc_tech_electronics_radar_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_t3 }
+			has_tech = pwc_tech_electronics_radar_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_electronics_radar_t4 }
+			has_tech = pwc_tech_electronics_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t2 }
+			has_tech = pwc_tech_sf_mountain_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t3 }
+			has_tech = pwc_tech_sf_mountain_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_mountain_t4 }
+			has_tech = pwc_tech_sf_mountain_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t2 }
+			has_tech = pwc_tech_sf_marines_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t3 }
+			has_tech = pwc_tech_sf_marines_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_marines_t4 }
+			has_tech = pwc_tech_sf_marines_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t2 }
+			has_tech = pwc_tech_sf_airborne_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t3 }
+			has_tech = pwc_tech_sf_airborne_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_airborne_t4 }
+			has_tech = pwc_tech_sf_airborne_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t2 }
+			has_tech = pwc_tech_sf_rangers_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t3 }
+			has_tech = pwc_tech_sf_rangers_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_sf_rangers_t4 }
+			has_tech = pwc_tech_sf_rangers_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t2
+				has_tech = pwc_tech_army_infantry_t3
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t2
+				has_tech = pwc_tech_logistics_support_t3
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t2
+				has_tech = pwc_tech_army_firepower_t3
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_t2
+				has_tech = pwc_tech_missile_strike_t3
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_defense_t2
+				has_tech = pwc_tech_missile_t3
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t2
+				has_tech = pwc_tech_logistics_t3
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t2
+				has_tech = pwc_tech_army_mobility_t3
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t2
+				has_tech = pwc_tech_army_t3
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t2
+				has_tech = pwc_tech_air_t3
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t2
+				has_tech = pwc_tech_air_support_t3
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t2
+				has_tech = pwc_tech_air_strike_t3
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t2
+				has_tech = pwc_tech_navy_t3
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t2
+				has_tech = pwc_tech_navy_submarine_t3
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t2
+				has_tech = pwc_tech_navy_fleet_t3
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t2
+				has_tech = pwc_tech_navy_carrier_t3
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t2
+				has_tech = pwc_tech_industry_construction_t3
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t2
+				has_tech = pwc_tech_industry_t3
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t2
+				has_tech = pwc_tech_electronics_computing_t3
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t2
+				has_tech = pwc_tech_electronics_t3
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t2
+				has_tech = pwc_tech_sf_mountain_t3
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t2
+				has_tech = pwc_tech_sf_marines_t3
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t2
+				has_tech = pwc_tech_sf_airborne_t3
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t2
+				has_tech = pwc_tech_sf_rangers_t3
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t3
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t3
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t3
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t3
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t3
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t3
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t3
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t3
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t3
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t3
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t3
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t3
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t3
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t3
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t3
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t3
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t3
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_computing_t3
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_t3
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t3
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t3
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t3
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t3
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 5
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t3
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t3
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t3
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t3
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t3
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t3
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t3
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t3
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t3
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t3
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t3
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t3
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t3
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t3
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t3
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t3
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t3
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_computing_t3
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_t3
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t3
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t3
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t3
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t3
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 7
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 3
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t3
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t3
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t3
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t3
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t3
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t3
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t3
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t3
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t3
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t3
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t3
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t3
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t3
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t3
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t3
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t3
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t3
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_computing_t3
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_t3
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t3
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t3
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t3
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t3
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 9
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 4
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 13
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 5
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 17
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 6
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 21
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 7
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 25
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 8
+					}
+				}
+			}
+		}
+		AND = {
+			OR = {
+				has_tech = pwc_tech_army_infantry_t4
+				has_tech = pwc_tech_logistics_support_t4
+				has_tech = pwc_tech_army_firepower_t4
+				has_tech = pwc_tech_missile_strike_t4
+				has_tech = pwc_tech_missile_t4
+				has_tech = pwc_tech_logistics_t4
+				has_tech = pwc_tech_army_mobility_t4
+				has_tech = pwc_tech_army_t4
+				has_tech = pwc_tech_air_t4
+				has_tech = pwc_tech_air_support_t4
+				has_tech = pwc_tech_air_strike_t4
+				has_tech = pwc_tech_navy_t4
+				has_tech = pwc_tech_navy_submarine_t4
+				has_tech = pwc_tech_navy_fleet_t4
+				has_tech = pwc_tech_navy_carrier_t4
+				has_tech = pwc_tech_industry_construction_t4
+				has_tech = pwc_tech_industry_t4
+				has_tech = pwc_tech_electronics_t4
+				has_tech = pwc_tech_electronics_radar_t4
+				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_sf_marines_t4
+				has_tech = pwc_tech_sf_airborne_t4
+				has_tech = pwc_tech_sf_rangers_t4
+			}
+			num_of_civilian_factories > 29
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 9
+					}
+				}
+			}
+		}
+	}
+}

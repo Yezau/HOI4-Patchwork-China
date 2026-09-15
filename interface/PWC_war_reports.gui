@@ -1,0 +1,150 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwc_war_reports_window"
+        position = { x = 0 y = 0 }
+        size = { width = 100%% height = 100%% }
+        orientation = upper_left
+        moveable = no
+        buttonType = {
+            name = "pwc_war_reports_toggle"
+            position = { x = -515 y = 3 }
+            orientation = upper_right
+            spriteType = "PWC_GFX_war_reports_toggle"
+            pdx_tooltip = "PWC_WAR_REPORTS_TOGGLE_TT"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwc_war_reports_label"
+            position = { x = -505 y = 10 }
+            orientation = upper_right
+            font = "hoi_18mbs"
+            text = "PWC_WAR_REPORTS_TOGGLE"
+            maxWidth = 68
+            maxHeight = 24
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwc_war_reports_unread"
+            position = { x = -435 y = 10 }
+            orientation = upper_right
+            font = "hoi_18mbs"
+            text = "PWC_WAR_REPORTS_UNREAD"
+            maxWidth = 20
+            maxHeight = 24
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwc_war_reports_panel"
+        position = { x = -490 y = 130 }
+        orientation = upper_right
+        size = { width = 460 height = 240 }
+        moveable = yes
+        click_to_front = yes
+        background = {
+            name = "pwc_war_reports_background"
+            quadTextureSprite = "PWC_GFX_war_reports_panel"
+        }
+        instantTextBoxType = {
+            name = "pwc_war_reports_title"
+            position = { x = 20 y = 14 }
+            orientation = upper_left
+            font = "hoi_18mbs"
+            text = "PWC_WAR_REPORTS_TITLE"
+            maxWidth = 240
+            maxHeight = 24
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwc_war_reports_close"
+            position = { x = 418 y = 14 }
+            quadTextureSprite = "GFX_pwc_alert_close"
+            pdx_tooltip = "PWC_WAR_REPORTS_CLOSE_TT"
+            clicksound = click_close
+        }
+        gridboxtype = {
+            name = "pwc_war_reports_header_grid"
+            position = { x = 270 y = 17 }
+            slotsize = { width = 128 height = 20 }
+            max_slots_horizontal = 1
+            format = "UPPER_LEFT"
+        }
+        containerWindowType = {
+            name = "pwc_war_reports_scroll"
+            position = { x = 20 y = 56 }
+            size = { width = 420 height = 168 }
+            clipping = yes
+            verticalScrollbar = "right_vertical_slider"
+            scroll_wheel_factor = 28
+            margin = { right = 20 }
+            gridboxtype = {
+                name = "pwc_war_reports_grid"
+                position = { x = 0 y = 0 }
+                slotsize = { width = 400 height = 28 }
+                max_slots_horizontal = 1
+                format = "UPPER_LEFT"
+            }
+        }
+        instantTextBoxType = {
+            name = "pwc_war_reports_empty"
+            position = { x = 32 y = 126 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWC_WAR_REPORTS_EMPTY"
+            maxWidth = 396
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = center
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwc_war_reports_header"
+        size = { width = 128 height = 20 }
+        instantTextBoxType = {
+            name = "pwc_war_reports_count"
+            position = { x = 0 y = 0 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWC_WAR_REPORTS_COUNT"
+            maxWidth = 128
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwc_war_report_row"
+        size = { width = 400 height = 28 }
+        background = {
+            name = "pwc_report_row_background"
+            quadTextureSprite = "PWC_GFX_war_reports_row"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwc_report_summary"
+            position = { x = 8 y = 6 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWC_WAR_REPORT_OUTCOME"
+            maxWidth = 384
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

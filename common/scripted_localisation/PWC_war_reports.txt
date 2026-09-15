@@ -1,0 +1,15 @@
+defined_text = {
+    name = PWCGetWarReportOutcome
+    text = {
+        trigger = {
+            has_country_flag = pwc_flag_report_transfer
+            has_variable = pwc_report_winner
+        }
+        localization_key = PWC_WAR_REPORT_TRANSFER
+    }
+    text = {
+        trigger = { has_variable = pwc_report_winner }
+        localization_key = PWC_WAR_REPORT_ANNEXED
+    }
+    text = { localization_key = PWC_WAR_REPORT_UNKNOWN }
+}

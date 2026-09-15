@@ -1,0 +1,55 @@
+pwc_st_state_transfer_allowed = {
+    has_game_rule = { rule = pwc_state_transfer option = ON }
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    exists = yes
+    is_ai = no
+}
+
+
+
+pwc_st_transfer_country_eligible = {
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    exists = yes
+    NOT = { is_in_peace_conference = yes }
+    NOT = { has_country_flag = pwc_flag_conference_pending }
+}
+
+
+
+
+pwc_st_transfer_state_eligible = {
+    is_fully_controlled_by = owner
+    owner = { pwc_st_transfer_country_eligible = yes }
+}
+pwc_st_transfer_can_select_all = {
+    ROOT = { pwc_st_state_transfer_allowed = yes }
+    owner = {
+        pwc_st_transfer_country_eligible = yes
+        OR = {
+            NOT = { has_variable = ROOT.pwc_transfer_source }
+            tag = var:ROOT.pwc_transfer_source
+        }
+        any_owned_state = {
+            pwc_st_transfer_state_eligible = yes
+            NOT = { is_in_array = { array = ROOT.pwc_transfer_states value = THIS } }
+        }
+    }
+}
+pwc_st_transfer_selection_valid = {
+    pwc_st_state_transfer_allowed = yes
+    has_variable = pwc_transfer_source
+    has_variable = pwc_transfer_target
+    check_variable = { pwc_transfer_states^num > 0 }
+    var:pwc_transfer_source = {
+        pwc_st_transfer_country_eligible = yes
+        NOT = { tag = var:ROOT.pwc_transfer_target }
+    }
+    var:pwc_transfer_target = { pwc_st_transfer_country_eligible = yes }
+    all_of_scopes = {
+        array = pwc_transfer_states
+        pwc_st_transfer_state_eligible = yes
+        is_owned_by = var:ROOT.pwc_transfer_source
+    }
+}

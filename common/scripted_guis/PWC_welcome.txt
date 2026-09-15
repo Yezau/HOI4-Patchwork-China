@@ -1,0 +1,84 @@
+
+scripted_gui = {
+    pwc_welcome = {
+        context_type = player_context
+        window_name = pwc_welcome_window
+        ai_enabled = { always = no }
+        visible = {
+            is_ai = no
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_welcome_dismissed }
+        }
+        triggers = {
+            pwc_welcome_home_marker_visible = {
+                NOT = { has_country_flag = pwc_flag_welcome_overview_page }
+                NOT = { has_country_flag = pwc_flag_welcome_buildings_page }
+            }
+            pwc_welcome_overview_marker_visible = {
+                has_country_flag = pwc_flag_welcome_overview_page
+                NOT = { has_country_flag = pwc_flag_welcome_buildings_page }
+            }
+            pwc_welcome_buildings_marker_visible = {
+                has_country_flag = pwc_flag_welcome_buildings_page
+            }
+        }
+        effects = {
+            pwc_welcome_home_tab_click = {
+                clr_country_flag = pwc_flag_welcome_overview_page
+                clr_country_flag = pwc_flag_welcome_buildings_page
+            }
+            pwc_welcome_overview_tab_click = {
+                set_country_flag = pwc_flag_welcome_overview_page
+                clr_country_flag = pwc_flag_welcome_buildings_page
+            }
+            pwc_welcome_buildings_tab_click = {
+                clr_country_flag = pwc_flag_welcome_overview_page
+                set_country_flag = pwc_flag_welcome_buildings_page
+            }
+            pwc_welcome_close_click = {
+                set_country_flag = pwc_flag_welcome_dismissed
+            }
+            pwc_welcome_continue_click = {
+                set_country_flag = pwc_flag_welcome_dismissed
+            }
+        }
+    }
+    pwc_welcome_home = {
+        context_type = player_context
+        window_name = pwc_welcome_home_page
+        parent_scripted_gui = pwc_welcome
+        ai_enabled = { always = no }
+        visible = {
+            is_ai = no
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_welcome_dismissed }
+            NOT = { has_country_flag = pwc_flag_welcome_overview_page }
+            NOT = { has_country_flag = pwc_flag_welcome_buildings_page }
+        }
+    }
+    pwc_welcome_overview = {
+        context_type = player_context
+        window_name = pwc_welcome_overview_page
+        parent_scripted_gui = pwc_welcome
+        ai_enabled = { always = no }
+        visible = {
+            is_ai = no
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_welcome_dismissed }
+            has_country_flag = pwc_flag_welcome_overview_page
+            NOT = { has_country_flag = pwc_flag_welcome_buildings_page }
+        }
+    }
+    pwc_welcome_buildings = {
+        context_type = player_context
+        window_name = pwc_welcome_buildings_page
+        parent_scripted_gui = pwc_welcome
+        ai_enabled = { always = no }
+        visible = {
+            is_ai = no
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_welcome_dismissed }
+            has_country_flag = pwc_flag_welcome_buildings_page
+        }
+    }
+}

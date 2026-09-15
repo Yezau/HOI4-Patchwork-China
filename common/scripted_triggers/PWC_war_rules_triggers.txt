@@ -1,0 +1,139 @@
+
+
+
+
+
+
+
+pwc_st_is_city_country = {
+	OR = { has_country_flag = pwc_geo_island has_country_flag = pwc_geo_coastal has_country_flag = pwc_geo_frontier has_country_flag = pwc_geo_inland }
+}
+
+
+pwc_st_protection_active = {
+    OR = {
+        AND = {
+            NOT = { OR = {
+                has_game_rule = { rule = pwc_protection_period option = DAYS_90 }
+                has_game_rule = { rule = pwc_protection_period option = NONE }
+            } }
+            date < 2026.6.30
+        }
+        AND = {
+            has_game_rule = { rule = pwc_protection_period option = DAYS_90 }
+            date < 2026.4.1
+        }
+    }
+}
+
+
+pwc_st_ai_war_pacing_ready = {
+    OR = {
+        is_ai = no
+        has_game_rule = { rule = pwc_ai_war_pacing option = OFF }
+        AND = {
+            has_country_flag = pwc_flag_war_phase_armed
+            NOT = { has_country_flag = pwc_flag_war_phase_pending }
+            NOT = { has_country_flag = pwc_flag_war_cooldown }
+        }
+    }
+}
+
+
+
+
+pwc_st_target_adjacent = {
+	FROM = {
+		is_neighbor_of = ROOT
+	}
+}
+
+
+pwc_st_warning_in_progress = {
+	has_country_flag = pwc_flag_warning_to_@FROM
+}
+
+
+pwc_st_city_alive = {
+	NOT = { has_country_flag = pwc_flag_city_eliminated }
+}
+
+
+pwc_st_settlement_not_done = {
+	NOT = { has_country_flag = pwc_flag_settled }
+}
+
+
+pwc_st_only_one_city_alive = {
+	check_variable = { var = global.pwc_alive_count value = 1 compare = equals }
+}
+
+
+pwc_st_capital_relocation_available = {
+	is_ai = no
+	has_war = yes
+	NOT = { has_country_flag = pwc_flag_capital_move_cooldown }
+	any_owned_state = {
+		OR = {
+			state = 24
+			state = 36
+			state = 45
+			state = 50
+			state = 71
+			state = 74
+			state = 82
+			state = 97
+			state = 98
+			state = 104
+			state = 117
+			state = 119
+			state = 129
+			state = 167
+			state = 170
+			state = 207
+			state = 214
+			state = 228
+			state = 229
+			state = 236
+			state = 238
+			state = 246
+			state = 248
+			state = 281
+			state = 287
+			state = 311
+			state = 319
+			state = 323
+			state = 334
+			state = 354
+			state = 357
+			state = 377
+			state = 381
+			state = 388
+		}
+		is_owned_by = ROOT
+		is_fully_controlled_by = ROOT
+		is_core_of = ROOT
+		is_capital = no
+	}
+}
+
+
+pwc_st_target_is_human = {
+	FROM = { is_ai = no }
+}
+
+
+
+
+
+
+pwc_st_max_tech_center_level_2 = {
+	any_state = {
+		is_owned_by = ROOT
+		is_fully_controlled_by = ROOT
+		non_damaged_building_level = {
+			building = pwc_building_tech_center
+			level > 1
+		}
+	}
+}

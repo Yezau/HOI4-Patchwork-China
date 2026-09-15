@@ -1,0 +1,586 @@
+
+pwc_se_reconcile_research_infrastructure = {
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_1 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_1 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_2 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_2 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_3 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_3 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_4 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_4 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_5 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_5 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_6 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_6 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_7 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_7 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_8 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_8 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_9 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_9 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_tech_center_level_10 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_tech_center_level_10 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_1 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_1 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_2 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_2 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_3 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_3 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_4 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_4 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_5 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_industrial_facility_level_5 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_1 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_1 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_2 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_2 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_3 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_3 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_4 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_4 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_5 } } }
+		add_dynamic_modifier = { modifier = pwc_dm_supply_hub_level_5 }
+	}
+	force_update_dynamic_modifier = yes
+	pwc_se_reconcile_research_institutes = yes
+}
+
+pwc_se_reconcile_research_institutes = {
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_industry
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_1 }
+			remove_ideas = pwc_idea_domain_industry_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_2 }
+			remove_ideas = pwc_idea_domain_industry_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_industry_level_3 } }
+			add_ideas = pwc_idea_domain_industry_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_industry
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_1 }
+			remove_ideas = pwc_idea_domain_industry_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_3 }
+			remove_ideas = pwc_idea_domain_industry_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_industry_level_2 } }
+			add_ideas = pwc_idea_domain_industry_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_industry
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_2 }
+			remove_ideas = pwc_idea_domain_industry_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_3 }
+			remove_ideas = pwc_idea_domain_industry_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_industry_level_1 } }
+			add_ideas = pwc_idea_domain_industry_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_1 }
+			remove_ideas = pwc_idea_domain_industry_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_2 }
+			remove_ideas = pwc_idea_domain_industry_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_industry_level_3 }
+			remove_ideas = pwc_idea_domain_industry_level_3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_army
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_1 }
+			remove_ideas = pwc_idea_domain_army_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_2 }
+			remove_ideas = pwc_idea_domain_army_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_army_level_3 } }
+			add_ideas = pwc_idea_domain_army_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_army
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_1 }
+			remove_ideas = pwc_idea_domain_army_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_3 }
+			remove_ideas = pwc_idea_domain_army_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_army_level_2 } }
+			add_ideas = pwc_idea_domain_army_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_army
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_2 }
+			remove_ideas = pwc_idea_domain_army_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_3 }
+			remove_ideas = pwc_idea_domain_army_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_army_level_1 } }
+			add_ideas = pwc_idea_domain_army_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_1 }
+			remove_ideas = pwc_idea_domain_army_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_2 }
+			remove_ideas = pwc_idea_domain_army_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_army_level_3 }
+			remove_ideas = pwc_idea_domain_army_level_3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_armor
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_1 }
+			remove_ideas = pwc_idea_domain_armor_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_2 }
+			remove_ideas = pwc_idea_domain_armor_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_armor_level_3 } }
+			add_ideas = pwc_idea_domain_armor_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_armor
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_1 }
+			remove_ideas = pwc_idea_domain_armor_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_3 }
+			remove_ideas = pwc_idea_domain_armor_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_armor_level_2 } }
+			add_ideas = pwc_idea_domain_armor_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_armor
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_2 }
+			remove_ideas = pwc_idea_domain_armor_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_3 }
+			remove_ideas = pwc_idea_domain_armor_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_armor_level_1 } }
+			add_ideas = pwc_idea_domain_armor_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_1 }
+			remove_ideas = pwc_idea_domain_armor_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_2 }
+			remove_ideas = pwc_idea_domain_armor_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_armor_level_3 }
+			remove_ideas = pwc_idea_domain_armor_level_3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_air
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_1 }
+			remove_ideas = pwc_idea_domain_air_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_2 }
+			remove_ideas = pwc_idea_domain_air_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_air_level_3 } }
+			add_ideas = pwc_idea_domain_air_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_air
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_1 }
+			remove_ideas = pwc_idea_domain_air_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_3 }
+			remove_ideas = pwc_idea_domain_air_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_air_level_2 } }
+			add_ideas = pwc_idea_domain_air_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_air
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_2 }
+			remove_ideas = pwc_idea_domain_air_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_3 }
+			remove_ideas = pwc_idea_domain_air_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_air_level_1 } }
+			add_ideas = pwc_idea_domain_air_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_1 }
+			remove_ideas = pwc_idea_domain_air_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_2 }
+			remove_ideas = pwc_idea_domain_air_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_air_level_3 }
+			remove_ideas = pwc_idea_domain_air_level_3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_navy
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_1 }
+			remove_ideas = pwc_idea_domain_navy_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_2 }
+			remove_ideas = pwc_idea_domain_navy_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_navy_level_3 } }
+			add_ideas = pwc_idea_domain_navy_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_navy
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_1 }
+			remove_ideas = pwc_idea_domain_navy_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_3 }
+			remove_ideas = pwc_idea_domain_navy_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_navy_level_2 } }
+			add_ideas = pwc_idea_domain_navy_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_navy
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_2 }
+			remove_ideas = pwc_idea_domain_navy_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_3 }
+			remove_ideas = pwc_idea_domain_navy_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_navy_level_1 } }
+			add_ideas = pwc_idea_domain_navy_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_1 }
+			remove_ideas = pwc_idea_domain_navy_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_2 }
+			remove_ideas = pwc_idea_domain_navy_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_navy_level_3 }
+			remove_ideas = pwc_idea_domain_navy_level_3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_electronics
+					level > 2
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_1 }
+			remove_ideas = pwc_idea_domain_electronics_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_2 }
+			remove_ideas = pwc_idea_domain_electronics_level_2
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_electronics_level_3 } }
+			add_ideas = pwc_idea_domain_electronics_level_3
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_electronics
+					level > 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_1 }
+			remove_ideas = pwc_idea_domain_electronics_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_3 }
+			remove_ideas = pwc_idea_domain_electronics_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_electronics_level_2 } }
+			add_ideas = pwc_idea_domain_electronics_level_2
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_domain_electronics
+					level > 0
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_2 }
+			remove_ideas = pwc_idea_domain_electronics_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_3 }
+			remove_ideas = pwc_idea_domain_electronics_level_3
+		}
+		if = {
+			limit = { NOT = { has_idea = pwc_idea_domain_electronics_level_1 } }
+			add_ideas = pwc_idea_domain_electronics_level_1
+		}
+	}
+	else = {
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_1 }
+			remove_ideas = pwc_idea_domain_electronics_level_1
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_2 }
+			remove_ideas = pwc_idea_domain_electronics_level_2
+		}
+		if = {
+			limit = { has_idea = pwc_idea_domain_electronics_level_3 }
+			remove_ideas = pwc_idea_domain_electronics_level_3
+		}
+	}
+}

@@ -1,0 +1,132 @@
+guiTypes = {
+	containerWindowType = {
+		name = "pwc_alerts_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100%% height = 100%% }
+		orientation = upper_left
+
+		containerWindowType = {
+			name = "pwc_state_integration_alerts_scroll"
+			position = { x = -392 y = -556 }
+			size = { width = 380 height = 312 }
+			orientation = lower_right
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 156
+			margin = { right = 20 }
+			gridboxtype = {
+				name = "pwc_state_integration_alerts_grid"
+				position = { x = 0 y = 0 }
+				slotsize = { width = 360 height = 156 }
+				max_slots_horizontal = 1
+				orientation = upper_left
+				format = "UPPER_LEFT"
+			}
+		}
+
+		gridboxtype = {
+			name = "pwc_war_warning_alerts_grid"
+			position = { x = 662 y = 82 }
+			size = { width = 320 height = 44 }
+			slotsize = { width = 48 height = 44 }
+			format = "UPPER_LEFT"
+		}
+	}
+
+	containerWindowType = {
+		name = "pwc_war_warning_alert"
+		position = { x = 0 y = 0 }
+		size = { width = 43 height = 38 }
+		moveable = no
+		orientation = upper_left
+
+		buttonType = {
+			name = "pwc_war_warning_icon"
+			spriteType = "GFX_global_alert_icons"
+			position = { x = 0 y = 0 }
+			frame = 12
+			oversound = ui_menu_over
+			pdx_tooltip = "PWC_WAR_WARNING_ALERT_TT"
+		}
+
+		iconType = {
+			name = "pwc_war_warning_red_glow"
+			spriteType = "GFX_red_alert_glow"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "pwc_state_integration_alert"
+		position = { x = 0 y = 0 }
+		size = { width = 360 height = 148 }
+		moveable = no
+		fade_time = 200
+		fade_type = linear
+		hide_sound = menu_close_window
+		click_to_front = yes
+
+		buttonType = {
+			name = "pwc_state_integration_bg"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_pwc_alert_bg"
+			pdx_tooltip = "PWC_WAR_INTEGRATION_ALERT_OPEN_TT"
+			clicksound = click_default
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 48 y = 12 }
+			font = "hoi_18mbs"
+			text = "PWC_WAR_INTEGRATION_ALERT_TITLE"
+			maxWidth = 264
+			maxHeight = 24
+			fixedsize = yes
+			multiline = no
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 16 y = 52 }
+			font = "hoi_18mbs"
+			text = "PWC_WAR_INTEGRATION_ALERT_MESSAGE"
+			maxWidth = 328
+			maxHeight = 60
+			multiline = yes
+			format = center
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "pwc_state_integration_progress"
+			position = { x = 30 y = 124 }
+			size = { width = 300 height = 12 }
+			clipping = yes
+			alwaystransparent = yes
+			iconType = {
+				name = "pwc_state_integration_progress_track"
+				spriteType = "GFX_pwc_alert_progress_track"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "pwc_state_integration_alert_progressbar"
+				spriteType = "GFX_pwc_alert_progress"
+				position = { x = -300 y = 0 }
+				alwaystransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "pwc_state_integration_close"
+			position = { x = 320 y = 9 }
+			quadTextureSprite = "GFX_pwc_alert_close"
+			pdx_tooltip = "PWC_WAR_INTEGRATION_ALERT_CLOSE_TT"
+			clicksound = click_close
+		}
+	}
+}

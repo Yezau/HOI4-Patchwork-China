@@ -1,0 +1,5390 @@
+
+
+
+
+
+
+
+
+
+technologies = {
+
+	
+	paratroopers = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	
+	marines = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	
+	coastal_defense_ships = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	
+	tech_mountaineers = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	
+	rangers_tech = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	
+	rocket_artillery = {
+		allow = {
+			always = no
+		}
+		research_cost = 0
+	}
+
+	pwc_tech_army_infantry_t1 = {
+		enable_equipments = {
+			pwc_equipment_infantry_gen1
+		}
+		enable_subunits = {
+			pwc_unit_military_police
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_military_police
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_infantry_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 70
+		}
+	}
+
+	pwc_tech_army_infantry_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_infantry_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_infantry_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 65
+		}
+	}
+
+	pwc_tech_army_infantry_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_infantry_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_infantry_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_army_infantry_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_infantry_gen4
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_logistics_support_t1 = {
+		enable_equipments = {
+			pwc_equipment_support_gen1
+		}
+		enable_subunits = {
+			pwc_unit_maintenance
+			pwc_unit_field_hospital
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_maintenance
+			pwc_unit_hq_field_hospital
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_support_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_logistics_support_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_engineer = {
+			entrenchment = 1
+		}
+		pwc_unit_maintenance = {
+			reliability_factor = 0.03
+		}
+		pwc_unit_field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+		pwc_unit_hq_engineer = {
+			entrenchment = 1
+		}
+		pwc_unit_hq_maintenance = {
+			reliability_factor = 0.03
+		}
+		pwc_unit_hq_field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+		pwc_unit_assault_engineer = {
+			entrenchment = 1
+		}
+		pwc_unit_armored_recovery = {
+			reliability_factor = 0.03
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_support_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_logistics_support_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_maintenance = {
+			reliability_factor = 0.03
+		}
+		pwc_unit_hq_maintenance = {
+			reliability_factor = 0.03
+		}
+		pwc_unit_armored_recovery = {
+			reliability_factor = 0.03
+		}
+		enable_equipments = {
+			pwc_equipment_support_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_support_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_logistics_support_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_engineer = {
+			entrenchment = 2
+		}
+		pwc_unit_maintenance = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.03
+		}
+		pwc_unit_field_hospital = {
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.05
+		}
+		pwc_unit_hq_engineer = {
+			entrenchment = 2
+		}
+		pwc_unit_hq_maintenance = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.03
+		}
+		pwc_unit_hq_field_hospital = {
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.05
+		}
+		pwc_unit_assault_engineer = {
+			entrenchment = 2
+		}
+		pwc_unit_armored_recovery = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.03
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_army_firepower_t1 = {
+		enable_equipments = {
+			pwc_equipment_artillery_gen1
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_firepower_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 70
+		}
+	}
+
+	pwc_tech_army_firepower_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_artillery = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+		pwc_unit_support_artillery = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+		pwc_unit_regimental_artillery = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+		pwc_unit_support_heavy_mortar = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+		enable_equipments = {
+			pwc_equipment_artillery_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_firepower_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 65
+		}
+	}
+
+	pwc_tech_army_firepower_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_artillery_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_firepower_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_army_firepower_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_artillery_gen4
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_missile_t1 = {
+		enable_equipments = {
+			pwc_equipment_rocket_gen1
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_armor
+			rocketry
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_missile_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_rocket_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_strike_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_armor
+			rocketry
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_missile_strike_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_rocket_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.15
+			breakthrough = 0.1
+		}
+		pwc_unit_regimental_rocket = {
+			soft_attack = 0.05
+			hard_attack = 0.15
+			breakthrough = 0.1
+		}
+		enable_equipments = {
+			pwc_equipment_rocket_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_strike_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_armor
+			rocketry
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_missile_strike_t4 = {
+		allow = {
+			ROOT = {
+				has_tech = pwc_tech_electronics_t3
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_rocket_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.15
+		}
+		pwc_unit_regimental_rocket = {
+			soft_attack = 0.1
+			hard_attack = 0.15
+		}
+		enable_equipments = {
+			pwc_equipment_rocket_gen4
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+			rocketry
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_missile_defense_t1 = {
+		enable_equipments = {
+			pwc_equipment_anti_tank_gen1
+			pwc_equipment_anti_air_gen1
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_defense_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_missile_defense_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_anti_air = {
+			air_attack = 0.1
+		}
+		pwc_unit_support_anti_air = {
+			air_attack = 0.1
+		}
+		pwc_unit_anti_tank = {
+			hard_attack = 0.1
+			ap_attack = 0.05
+		}
+		pwc_unit_support_anti_tank = {
+			hard_attack = 0.1
+			ap_attack = 0.05
+		}
+		pwc_unit_regimental_anti_air = {
+			air_attack = 0.1
+		}
+		pwc_unit_regimental_anti_tank = {
+			hard_attack = 0.1
+			ap_attack = 0.05
+		}
+		pwc_unit_regimental_armored_anti_air = {
+			air_attack = 0.1
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_missile_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_anti_tank_gen2
+			pwc_equipment_anti_air_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_missile_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 45
+		}
+	}
+
+	pwc_tech_missile_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_anti_tank_gen3
+			pwc_equipment_anti_air_gen3
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_logistics_t1 = {
+		supply_consumption_factor = -0.03
+		enable_equipments = {
+			pwc_equipment_motorized_gen1
+		}
+		enable_subunits = {
+			pwc_unit_logistics
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_logistics
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_logistics_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		max_fuel_factor = 0.1
+		enable_equipments = {
+			pwc_equipment_motorized_gen2
+			train_equipment_2
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 45
+		}
+	}
+
+	pwc_tech_logistics_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		supply_consumption_factor = -0.05
+		enable_building = {
+			building = pwc_building_supply_hub
+			level = 3
+		}
+		enable_equipments = {
+			train_equipment_3
+		}
+		path = {
+			leads_to_tech = pwc_tech_logistics_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_logistics_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		supply_consumption_factor = -0.05
+		army_fuel_consumption_factor = -0.1
+		navy_fuel_consumption_factor = -0.1
+		enable_building = {
+			building = pwc_building_supply_hub
+			level = 5
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_army_mobility_t1 = {
+		enable_equipments = {
+			pwc_equipment_mechanized_gen1
+			pwc_platform_light_tank_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_gun_105mm
+			pwc_module_tank_armor_steel
+			pwc_module_tank_engine_diesel_600
+			pwc_module_tank_radio_vhf
+			pwc_module_tank_gun_120mm
+			pwc_module_tank_suspension_torsion
+			pwc_module_tank_armor_composite_gen1
+			pwc_module_tank_atgm_basic
+			pwc_module_tank_engine_diesel_900
+			pwc_module_tank_turret_autoloader
+			pwc_module_tank_radio_digital
+			pwc_module_tank_fcs_thermal
+			pwc_module_tank_engine_turbine_1200
+			pwc_module_tank_gun_support_t1
+			pwc_module_tank_gun_penetrator_t1
+			pwc_module_tank_engine_economy_t1
+			pwc_module_tank_engine_power_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代·现代轻型坦克"
+					type = pwc_platform_light_tank_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_mobility_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 70
+		}
+	}
+
+	pwc_tech_army_mobility_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_mechanized_gen2
+			pwc_platform_light_tank_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_gun_125mm
+			pwc_module_tank_armor_composite_gen2
+			pwc_module_tank_suspension_hydropneumatic
+			pwc_module_tank_special_apfsds
+			pwc_module_tank_atgm_advanced
+			pwc_module_tank_gun_support_t2
+			pwc_module_tank_gun_penetrator_t2
+			pwc_module_tank_engine_economy_t2
+			pwc_module_tank_engine_power_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代·模块化轻型坦克"
+					type = pwc_platform_light_tank_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_mobility_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 65
+		}
+	}
+
+	pwc_tech_army_mobility_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_mechanized_gen3
+			pwc_platform_light_tank_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_special_dozer
+			pwc_module_tank_armor_era
+			pwc_module_tank_gun_atgm_multipurpose
+			pwc_module_tank_gun_support_t3
+			pwc_module_tank_gun_penetrator_t3
+			pwc_module_tank_engine_economy_t3
+			pwc_module_tank_engine_power_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代·智能侦察轻型坦克"
+					type = pwc_platform_light_tank_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_mobility_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_army_mobility_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_equipment_mechanized_gen4
+			pwc_platform_light_tank_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_armor_modular
+			pwc_module_tank_engine_hybrid_1500
+			pwc_module_tank_suspension_adaptive
+			pwc_module_tank_special_nbc
+			pwc_module_tank_special_urban_kit
+			pwc_module_tank_gun_support_t4
+			pwc_module_tank_gun_penetrator_t4
+			pwc_module_tank_engine_economy_t4
+			pwc_module_tank_engine_power_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代·无人协同轻型坦克"
+					type = pwc_platform_light_tank_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+						fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_army_t1 = {
+		enable_equipments = {
+			pwc_platform_medium_tank_gen1
+			pwc_platform_heavy_tank_gen1
+			pwc_platform_tank_destroyer_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_gun_105mm
+			pwc_module_tank_armor_steel
+			pwc_module_tank_engine_diesel_600
+			pwc_module_tank_radio_vhf
+			pwc_module_tank_gun_120mm
+			pwc_module_tank_suspension_torsion
+			pwc_module_tank_armor_composite_gen1
+			pwc_module_tank_atgm_basic
+			pwc_module_tank_engine_diesel_900
+			pwc_module_tank_turret_autoloader
+			pwc_module_tank_radio_digital
+			pwc_module_tank_fcs_thermal
+			pwc_module_tank_engine_turbine_1200
+			pwc_module_tank_gun_support_t1
+			pwc_module_tank_gun_penetrator_t1
+			pwc_module_tank_engine_economy_t1
+			pwc_module_tank_engine_power_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代·现代主战坦克"
+					type = pwc_platform_medium_tank_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+					}
+				}
+				create_equipment_variant = {
+					name = "一代·现代重装突击坦克"
+					type = pwc_platform_heavy_tank_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+					}
+				}
+				create_equipment_variant = {
+					name = "一代·履带式反坦克导弹车"
+					type = pwc_platform_tank_destroyer_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_basic
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 70
+		}
+	}
+
+	pwc_tech_army_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_medium_tank_gen2
+			pwc_platform_heavy_tank_gen2
+			pwc_platform_tank_destroyer_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_gun_125mm
+			pwc_module_tank_armor_composite_gen2
+			pwc_module_tank_suspension_hydropneumatic
+			pwc_module_tank_special_apfsds
+			pwc_module_tank_atgm_advanced
+			pwc_module_tank_gun_support_t2
+			pwc_module_tank_gun_penetrator_t2
+			pwc_module_tank_engine_economy_t2
+			pwc_module_tank_engine_power_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代·模块化主战坦克"
+					type = pwc_platform_medium_tank_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+					}
+				}
+				create_equipment_variant = {
+					name = "二代·模块化重装突击坦克"
+					type = pwc_platform_heavy_tank_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+					}
+				}
+				create_equipment_variant = {
+					name = "二代·非视距反坦克导弹车"
+					type = pwc_platform_tank_destroyer_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_advanced
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_radio_1 = pwc_module_tank_radio_digital
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 65
+		}
+	}
+
+	pwc_tech_army_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_medium_tank_gen3
+			pwc_platform_heavy_tank_gen3
+			pwc_platform_tank_destroyer_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_special_dozer
+			pwc_module_tank_armor_era
+			pwc_module_tank_gun_atgm_multipurpose
+			pwc_module_tank_gun_support_t3
+			pwc_module_tank_gun_penetrator_t3
+			pwc_module_tank_engine_economy_t3
+			pwc_module_tank_engine_power_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代·智能主战坦克"
+					type = pwc_platform_medium_tank_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+					}
+				}
+				create_equipment_variant = {
+					name = "三代·智能攻坚平台"
+					type = pwc_platform_heavy_tank_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_special_1 = pwc_module_tank_special_dozer
+						fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+					}
+				}
+				create_equipment_variant = {
+					name = "三代·网络化反坦克导弹车"
+					type = pwc_platform_tank_destroyer_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+						pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+						fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_army_t4 = {
+		allow = {
+			ROOT = {
+				has_tech = pwc_tech_electronics_t3
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_medium_tank_gen4
+			pwc_platform_heavy_tank_gen4
+			pwc_platform_tank_destroyer_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_armor_modular
+			pwc_module_tank_engine_hybrid_1500
+			pwc_module_tank_suspension_adaptive
+			pwc_module_tank_special_nbc
+			pwc_module_tank_special_urban_kit
+			pwc_module_tank_gun_support_t4
+			pwc_module_tank_gun_penetrator_t4
+			pwc_module_tank_engine_economy_t4
+			pwc_module_tank_engine_power_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代·新概念主战平台"
+					type = pwc_platform_medium_tank_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+						pwc_slot_special_1 = pwc_module_tank_special_nbc
+						fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+					}
+				}
+				create_equipment_variant = {
+					name = "四代·未来重装突击平台"
+					type = pwc_platform_heavy_tank_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
+						fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+						pwc_slot_special_1 = pwc_module_tank_special_nbc
+						fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+					}
+				}
+				create_equipment_variant = {
+					name = "四代·智能齐射歼击平台"
+					type = pwc_platform_tank_destroyer_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
+						fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+						fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+						pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+						fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_air_t1 = {
+		enable_equipments = {
+			pwc_platform_fighter_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen1
+			pwc_module_air_weapon_gun_20mm_rotary
+			pwc_module_air_payload_bomb_rack
+			pwc_module_air_avionics_ins
+			pwc_module_air_engine_endurance_t1
+			pwc_module_air_engine_sprint_t1
+			pwc_module_air_payload_land_t1
+			pwc_module_air_payload_sea_t1
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_air_liaison
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代战斗机"
+					type = pwc_platform_fighter_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_fighter_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen2
+			pwc_module_air_weapon_gun_pod
+			pwc_module_air_engine_endurance_t2
+			pwc_module_air_engine_sprint_t2
+			pwc_module_air_payload_land_t2
+			pwc_module_air_payload_sea_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代战斗机"
+					type = pwc_platform_fighter_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_fighter_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen3
+			pwc_module_air_payload_missile_bay
+			pwc_module_air_special_aar_probe
+			pwc_module_air_payload_fuel_tank
+			pwc_module_air_weapon_aam_bvr
+			pwc_module_air_engine_endurance_t3
+			pwc_module_air_engine_sprint_t3
+			pwc_module_air_payload_land_t3
+			pwc_module_air_payload_sea_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代战斗机"
+					type = pwc_platform_fighter_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_bvr
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_air_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_fighter_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen4
+			pwc_module_air_payload_standoff_bomb
+			pwc_module_air_special_lo_coating
+			pwc_module_air_weapon_aam_advanced
+			pwc_module_air_engine_endurance_t4
+			pwc_module_air_engine_sprint_t4
+			pwc_module_air_payload_land_t4
+			pwc_module_air_payload_sea_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代战斗机"
+					type = pwc_platform_fighter_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_advanced
+						pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_air_support_t1 = {
+		enable_equipments = {
+			pwc_platform_cas_gen1
+			pwc_platform_uav_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen1
+			pwc_module_air_weapon_gun_20mm_rotary
+			pwc_module_air_payload_bomb_rack
+			pwc_module_air_avionics_ins
+			pwc_module_air_engine_endurance_t1
+			pwc_module_air_engine_sprint_t1
+			pwc_module_air_payload_land_t1
+			pwc_module_air_payload_sea_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代攻击机"
+					type = pwc_platform_cas_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "一代无人机"
+					type = pwc_platform_uav_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_support_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_support_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cas_gen2
+			pwc_platform_uav_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen2
+			pwc_module_air_weapon_gun_pod
+			pwc_module_air_engine_endurance_t2
+			pwc_module_air_engine_sprint_t2
+			pwc_module_air_payload_land_t2
+			pwc_module_air_payload_sea_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代攻击机"
+					type = pwc_platform_cas_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "二代无人机"
+					type = pwc_platform_uav_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_support_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_support_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cas_gen3
+			pwc_platform_uav_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen3
+			pwc_module_air_payload_missile_bay
+			pwc_module_air_special_aar_probe
+			pwc_module_air_payload_fuel_tank
+			pwc_module_air_engine_endurance_t3
+			pwc_module_air_engine_sprint_t3
+			pwc_module_air_payload_land_t3
+			pwc_module_air_payload_sea_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代攻击机"
+					type = pwc_platform_cas_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "三代无人机"
+					type = pwc_platform_uav_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_support_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_air_support_t4 = {
+		allow = {
+			ROOT = {
+				has_tech = pwc_tech_electronics_t3
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cas_gen4
+			pwc_platform_uav_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen4
+			pwc_module_air_payload_standoff_bomb
+			pwc_module_air_special_lo_coating
+			pwc_module_air_payload_cruise_missile
+			pwc_module_air_engine_endurance_t4
+			pwc_module_air_engine_sprint_t4
+			pwc_module_air_payload_land_t4
+			pwc_module_air_payload_sea_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代攻击机"
+					type = pwc_platform_cas_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_avionics_1 = pwc_module_air_avionics_targeting_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+					}
+				}
+				create_equipment_variant = {
+					name = "四代无人机"
+					type = pwc_platform_uav_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_air_strike_t1 = {
+		enable_equipments = {
+			pwc_platform_bomber_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen1
+			pwc_module_air_weapon_gun_20mm_rotary
+			pwc_module_air_payload_bomb_rack
+			pwc_module_air_avionics_ins
+			pwc_module_air_engine_endurance_t1
+			pwc_module_air_engine_sprint_t1
+			pwc_module_air_payload_land_t1
+			pwc_module_air_payload_sea_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代轰炸机"
+					type = pwc_platform_bomber_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_strike_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_strike_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_bomber_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen2
+			pwc_module_air_weapon_gun_pod
+			pwc_module_air_engine_endurance_t2
+			pwc_module_air_engine_sprint_t2
+			pwc_module_air_payload_land_t2
+			pwc_module_air_payload_sea_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代轰炸机"
+					type = pwc_platform_bomber_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_strike_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	pwc_tech_air_strike_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_bomber_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen3
+			pwc_module_air_payload_missile_bay
+			pwc_module_air_special_aar_probe
+			pwc_module_air_payload_fuel_tank
+			pwc_module_air_engine_endurance_t3
+			pwc_module_air_engine_sprint_t3
+			pwc_module_air_payload_land_t3
+			pwc_module_air_payload_sea_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代轰炸机"
+					type = pwc_platform_bomber_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_air_strike_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_air_strike_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_air
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_bomber_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen4
+			pwc_module_air_payload_standoff_bomb
+			pwc_module_air_special_lo_coating
+			pwc_module_air_payload_cruise_missile
+			pwc_module_air_engine_endurance_t4
+			pwc_module_air_engine_sprint_t4
+			pwc_module_air_payload_land_t4
+			pwc_module_air_payload_sea_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代轰炸机"
+					type = pwc_platform_bomber_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = air_techs_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_air
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_navy_t1 = {
+		naval_invasion_capacity = 100
+		enable_equipments = {
+			pwc_platform_destroyer_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_76mm
+			pwc_module_navy_engine_diesel
+			pwc_module_navy_missile_torpedo_light
+			pwc_module_navy_radar_search_gen1
+			pwc_module_navy_engine_cruise_t1
+			pwc_module_navy_engine_power_t1
+			pwc_module_navy_aux_damage_control_t1
+			pwc_module_navy_aux_weapon_support_t1
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_naval_liaison
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代驱逐舰"
+					type = pwc_platform_destroyer_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		repair_speed_factor = 0.1
+		enable_equipments = {
+			pwc_platform_destroyer_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_127mm
+			pwc_module_navy_engine_cogag
+			pwc_module_navy_sonar_basic
+			pwc_module_navy_engine_cruise_t2
+			pwc_module_navy_engine_power_t2
+			pwc_module_navy_aux_damage_control_t2
+			pwc_module_navy_aux_weapon_support_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代驱逐舰"
+					type = pwc_platform_destroyer_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_127mm
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_cogag
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_basic
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_destroyer_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm
+			pwc_module_navy_engine_iep
+			pwc_module_navy_missile_vls_gen1
+			pwc_module_navy_sonar_towed_array
+			pwc_module_navy_missile_ssm_basic
+			pwc_module_navy_missile_sam_area
+			pwc_module_navy_engine_cruise_t3
+			pwc_module_navy_engine_power_t3
+			pwc_module_navy_aux_damage_control_t3
+			pwc_module_navy_aux_weapon_support_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代驱逐舰"
+					type = pwc_platform_destroyer_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm
+						pwc_slot_missile_1 = pwc_module_navy_missile_vls_gen1
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_iep
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_towed_array
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_destroyer_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm_adv
+			pwc_module_navy_engine_pod
+			pwc_module_navy_missile_vls_gen2
+			pwc_module_navy_sonar_advanced
+			pwc_module_navy_engine_cruise_t4
+			pwc_module_navy_engine_power_t4
+			pwc_module_navy_aux_damage_control_t4
+			pwc_module_navy_aux_weapon_support_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代驱逐舰"
+					type = pwc_platform_destroyer_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm_adv
+						pwc_slot_missile_1 = pwc_module_navy_missile_vls_gen2
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_pod
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_advanced
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_navy_submarine_t1 = {
+		enable_equipments = {
+			pwc_platform_submarine_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_76mm
+			pwc_module_navy_engine_diesel
+			pwc_module_navy_missile_torpedo_light
+			pwc_module_navy_radar_search_gen1
+			pwc_module_navy_engine_cruise_t1
+			pwc_module_navy_engine_power_t1
+			pwc_module_navy_aux_damage_control_t1
+			pwc_module_navy_aux_weapon_support_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代潜艇"
+					type = pwc_platform_submarine_gen1
+					modules = {
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_submarine_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_submarine_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_submarine_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_127mm
+			pwc_module_navy_engine_cogag
+			pwc_module_navy_sonar_basic
+			pwc_module_navy_engine_cruise_t2
+			pwc_module_navy_engine_power_t2
+			pwc_module_navy_aux_damage_control_t2
+			pwc_module_navy_aux_weapon_support_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代潜艇"
+					type = pwc_platform_submarine_gen2
+					modules = {
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_cogag
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_basic
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_submarine_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_submarine_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_submarine_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm
+			pwc_module_navy_engine_iep
+			pwc_module_navy_missile_vls_gen1
+			pwc_module_navy_sonar_towed_array
+			pwc_module_navy_missile_ssm_basic
+			pwc_module_navy_engine_cruise_t3
+			pwc_module_navy_engine_power_t3
+			pwc_module_navy_aux_damage_control_t3
+			pwc_module_navy_aux_weapon_support_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代潜艇"
+					type = pwc_platform_submarine_gen3
+					modules = {
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						pwc_slot_missile_2 = pwc_module_navy_missile_vls_gen1
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_iep
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_towed_array
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_submarine_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_submarine_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_submarine_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm_adv
+			pwc_module_navy_engine_pod
+			pwc_module_navy_missile_vls_gen2
+			pwc_module_navy_sonar_advanced
+			pwc_module_navy_engine_cruise_t4
+			pwc_module_navy_engine_power_t4
+			pwc_module_navy_aux_damage_control_t4
+			pwc_module_navy_aux_weapon_support_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代潜艇"
+					type = pwc_platform_submarine_gen4
+					modules = {
+						pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light
+						pwc_slot_missile_2 = pwc_module_navy_missile_vls_gen2
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_pod
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_advanced
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_navy_fleet_t1 = {
+		enable_equipments = {
+			pwc_platform_cruiser_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_76mm
+			pwc_module_navy_engine_diesel
+			pwc_module_navy_missile_torpedo_light
+			pwc_module_navy_radar_search_gen1
+			pwc_module_navy_engine_cruise_t1
+			pwc_module_navy_engine_power_t1
+			pwc_module_navy_aux_damage_control_t1
+			pwc_module_navy_aux_weapon_support_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代巡洋舰"
+					type = pwc_platform_cruiser_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_fleet_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_fleet_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cruiser_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_127mm
+			pwc_module_navy_engine_cogag
+			pwc_module_navy_sonar_basic
+			pwc_module_navy_engine_cruise_t2
+			pwc_module_navy_engine_power_t2
+			pwc_module_navy_aux_damage_control_t2
+			pwc_module_navy_aux_weapon_support_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代巡洋舰"
+					type = pwc_platform_cruiser_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_127mm
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_cogag
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_basic
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_fleet_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_fleet_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cruiser_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm
+			pwc_module_navy_engine_iep
+			pwc_module_navy_missile_vls_gen1
+			pwc_module_navy_sonar_towed_array
+			pwc_module_navy_missile_ssm_basic
+			pwc_module_navy_missile_sam_area
+			pwc_module_navy_engine_cruise_t3
+			pwc_module_navy_engine_power_t3
+			pwc_module_navy_aux_damage_control_t3
+			pwc_module_navy_aux_weapon_support_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代巡洋舰"
+					type = pwc_platform_cruiser_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm
+						fixed_pwc_slot_gun_2 = pwc_module_navy_gun_127mm
+						pwc_slot_missile_1 = pwc_module_navy_missile_vls_gen1
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_iep
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_towed_array
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_fleet_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_fleet_t4 = {
+		allow = {
+			ROOT = {
+				has_tech = pwc_tech_electronics_radar_t4
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cruiser_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_navy_gun_155mm_adv
+			pwc_module_navy_engine_pod
+			pwc_module_navy_missile_vls_gen2
+			pwc_module_navy_sonar_advanced
+			pwc_module_navy_engine_cruise_t4
+			pwc_module_navy_engine_power_t4
+			pwc_module_navy_aux_damage_control_t4
+			pwc_module_navy_aux_weapon_support_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代巡洋舰"
+					type = pwc_platform_cruiser_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm_adv
+						fixed_pwc_slot_gun_2 = pwc_module_navy_gun_155mm
+						pwc_slot_missile_1 = pwc_module_navy_missile_vls_gen2
+						pwc_slot_missile_2 = pwc_module_navy_missile_ssm_basic
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_pod
+						pwc_slot_radar_1 = pwc_module_navy_radar_aegis
+						pwc_slot_sonar_1 = pwc_module_navy_sonar_advanced
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_navy_carrier_t1 = {
+		enable_equipments = {
+			pwc_platform_cv_fighter_gen1
+			pwc_platform_cv_cas_gen1
+			pwc_platform_carrier_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen1
+			pwc_module_air_weapon_gun_20mm_rotary
+			pwc_module_air_payload_bomb_rack
+			pwc_module_air_avionics_ins
+			pwc_module_navy_gun_76mm
+			pwc_module_navy_engine_diesel
+			pwc_module_navy_missile_torpedo_light
+			pwc_module_navy_radar_search_gen1
+			pwc_module_air_engine_endurance_t1
+			pwc_module_air_engine_sprint_t1
+			pwc_module_air_payload_land_t1
+			pwc_module_air_payload_sea_t1
+			pwc_module_navy_engine_cruise_t1
+			pwc_module_navy_engine_power_t1
+			pwc_module_navy_aux_damage_control_t1
+			pwc_module_navy_aux_weapon_support_t1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "一代舰载战斗机"
+					type = pwc_platform_cv_fighter_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "一代舰载攻击机"
+					type = pwc_platform_cv_cas_gen1
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "一代航空母舰"
+					type = pwc_platform_carrier_gen1
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_carrier_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_carrier_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cv_fighter_gen2
+			pwc_platform_cv_cas_gen2
+			pwc_platform_carrier_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen2
+			pwc_module_air_weapon_gun_pod
+			pwc_module_navy_gun_127mm
+			pwc_module_navy_engine_cogag
+			pwc_module_navy_sonar_basic
+			pwc_module_air_engine_endurance_t2
+			pwc_module_air_engine_sprint_t2
+			pwc_module_air_payload_land_t2
+			pwc_module_air_payload_sea_t2
+			pwc_module_navy_engine_cruise_t2
+			pwc_module_navy_engine_power_t2
+			pwc_module_navy_aux_damage_control_t2
+			pwc_module_navy_aux_weapon_support_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "二代舰载战斗机"
+					type = pwc_platform_cv_fighter_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "二代舰载攻击机"
+					type = pwc_platform_cv_cas_gen2
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "二代航空母舰"
+					type = pwc_platform_carrier_gen2
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_127mm
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel
+						pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_carrier_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_carrier_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cv_fighter_gen3
+			pwc_platform_cv_cas_gen3
+			pwc_platform_carrier_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen3
+			pwc_module_air_payload_missile_bay
+			pwc_module_air_special_aar_probe
+			pwc_module_air_payload_fuel_tank
+			pwc_module_navy_gun_155mm
+			pwc_module_navy_engine_iep
+			pwc_module_navy_missile_vls_gen1
+			pwc_module_navy_flight_deck_stobar
+			pwc_module_navy_sonar_towed_array
+			pwc_module_air_weapon_aam_bvr
+			pwc_module_navy_missile_ssm_basic
+			pwc_module_navy_missile_sam_area
+			pwc_module_air_engine_endurance_t3
+			pwc_module_air_engine_sprint_t3
+			pwc_module_air_payload_land_t3
+			pwc_module_air_payload_sea_t3
+			pwc_module_navy_engine_cruise_t3
+			pwc_module_navy_engine_power_t3
+			pwc_module_navy_aux_damage_control_t3
+			pwc_module_navy_aux_weapon_support_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "三代舰载战斗机"
+					type = pwc_platform_cv_fighter_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_bvr
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+						pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "三代舰载攻击机"
+					type = pwc_platform_cv_cas_gen3
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+					}
+				}
+				create_equipment_variant = {
+					name = "三代航空母舰"
+					type = pwc_platform_carrier_gen3
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_iep
+						fixed_pwc_slot_flight_deck_1 = pwc_module_navy_flight_deck_stobar
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_navy_carrier_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	pwc_tech_navy_carrier_t4 = {
+		allow = {
+			ROOT = {
+				has_tech = pwc_tech_electronics_radar_t4
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_navy
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_cv_fighter_gen4
+			pwc_platform_cv_cas_gen4
+			pwc_platform_carrier_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_air_engine_turbofan_gen4
+			pwc_module_air_payload_standoff_bomb
+			pwc_module_air_special_lo_coating
+			pwc_module_navy_gun_155mm_adv
+			pwc_module_navy_engine_pod
+			pwc_module_navy_missile_vls_gen2
+			pwc_module_navy_flight_deck_catapult
+			pwc_module_navy_sonar_advanced
+			pwc_module_air_weapon_aam_advanced
+			pwc_module_air_engine_endurance_t4
+			pwc_module_air_engine_sprint_t4
+			pwc_module_air_payload_land_t4
+			pwc_module_air_payload_sea_t4
+			pwc_module_navy_engine_cruise_t4
+			pwc_module_navy_engine_power_t4
+			pwc_module_navy_aux_damage_control_t4
+			pwc_module_navy_aux_weapon_support_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "四代舰载战斗机"
+					type = pwc_platform_cv_fighter_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_advanced
+						pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+					}
+				}
+				create_equipment_variant = {
+					name = "四代舰载攻击机"
+					type = pwc_platform_cv_cas_gen4
+					modules = {
+						fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+						fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+						pwc_slot_avionics_1 = pwc_module_air_avionics_targeting_pod
+						pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+					}
+				}
+				create_equipment_variant = {
+					name = "四代航空母舰"
+					type = pwc_platform_carrier_gen4
+					modules = {
+						fixed_pwc_slot_gun_1 = pwc_module_navy_gun_155mm_adv
+						fixed_pwc_slot_engine_1 = pwc_module_navy_engine_pod
+						pwc_slot_radar_1 = pwc_module_navy_radar_aegis
+						fixed_pwc_slot_flight_deck_1 = pwc_module_navy_flight_deck_catapult
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = naval_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_naval
+		}
+		categories = {
+			pwc_tech_navy
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_industry_t1 = {
+		production_speed_buildings_factor = 0.03
+		path = {
+			leads_to_tech = pwc_tech_industry_construction_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	pwc_tech_industry_construction_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 0
+					}
+				}
+			}
+		}
+		production_speed_buildings_factor = 0.03
+		repair_speed_factor = 0.05
+		path = {
+			leads_to_tech = pwc_tech_industry_construction_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	pwc_tech_industry_construction_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 1
+					}
+				}
+			}
+		}
+		production_speed_buildings_factor = 0.05
+		repair_speed_factor = 0.1
+		path = {
+			leads_to_tech = pwc_tech_industry_construction_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	pwc_tech_industry_construction_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 2
+					}
+				}
+			}
+		}
+		production_speed_buildings_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 75
+		}
+	}
+
+	pwc_tech_industry_manufacturing_t1 = {
+		industrial_capacity_factory = 0.03
+		production_factory_start_efficiency_factor = 0.03
+		path = {
+			leads_to_tech = pwc_tech_industry_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 85
+		}
+	}
+
+	pwc_tech_industry_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 0
+					}
+				}
+			}
+		}
+		industrial_capacity_factory = 0.06
+		production_factory_max_efficiency_factor = 0.05
+		path = {
+			leads_to_tech = pwc_tech_industry_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 85
+		}
+	}
+
+	pwc_tech_industry_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 1
+					}
+				}
+			}
+		}
+		industrial_capacity_factory = 0.03
+		enable_building = {
+			building = pwc_building_industrial_facility
+			level = 3
+		}
+		enable_equipment_modules = {
+			pwc_module_air_special_composite_structure
+			pwc_module_navy_special_composite_superstructure
+		}
+		path = {
+			leads_to_tech = pwc_tech_industry_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	pwc_tech_industry_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_industry
+						level > 2
+					}
+				}
+			}
+		}
+		industrial_capacity_factory = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		enable_building = {
+			building = pwc_building_industrial_facility
+			level = 5
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_industry
+		}
+		ai_will_do = {
+			factor = 75
+		}
+	}
+
+	pwc_tech_electronics_t1 = {
+		research_speed_factor = 0.03
+		path = {
+			leads_to_tech = pwc_tech_electronics_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_electronics_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 0
+					}
+				}
+			}
+		}
+		research_speed_factor = 0.03
+		path = {
+			leads_to_tech = pwc_tech_electronics_computing_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_electronics_computing_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_signal = {
+			initiative = 0.12
+		}
+		pwc_unit_hq_signal = {
+			initiative = 0.12
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_radio_network
+		}
+		path = {
+			leads_to_tech = pwc_tech_electronics_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_electronics_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 2
+					}
+				}
+			}
+		}
+		research_speed_factor = 0.03
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_electronics_radar_t1 = {
+		enable_building = {
+			building = radar_station
+			level = 1
+		}
+		pwc_unit_recon = {
+			recon = 1
+		}
+		pwc_unit_hq_recon = {
+			recon = 1
+		}
+		path = {
+			leads_to_tech = pwc_tech_electronics_radar_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_electronics_radar_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 0
+					}
+				}
+			}
+		}
+		enable_building = {
+			building = radar_station
+			level = 2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_avionics_rwr
+		}
+		path = {
+			leads_to_tech = pwc_tech_electronics_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+	}
+
+	pwc_tech_electronics_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 1
+					}
+				}
+			}
+		}
+		enable_building = {
+			building = radar_station
+			level = 4
+		}
+		pwc_unit_recon = {
+			recon = 2
+		}
+		pwc_unit_hq_recon = {
+			recon = 2
+		}
+		enable_equipment_modules = {
+			pwc_module_air_avionics_aesa
+			pwc_module_air_avionics_targeting_pod
+			pwc_module_navy_radar_fire_control
+		}
+		path = {
+			leads_to_tech = pwc_tech_electronics_radar_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_electronics_radar_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_electronics
+						level > 2
+					}
+				}
+			}
+		}
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
+		enable_equipment_modules = {
+			pwc_module_air_avionics_ew_suite
+			pwc_module_navy_radar_aegis
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = industry_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_air
+		}
+		categories = {
+			pwc_tech_electronics
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	pwc_tech_sf_mountain_t1 = {
+		enable_equipments = {
+			pwc_equipment_special_forces_gen1
+		}
+		enable_subunits = {
+			pwc_unit_mountain
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_mountain_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			mountaineers_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_mountain_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_mountain = {
+			max_organisation = 5
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_mountain_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			mountaineers_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_mountain_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_mountain = {
+			breakthrough = 0.05
+			initiative = 0.03
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_mountain_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			mountaineers_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_mountain_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_mountain = {
+			max_organisation = 5
+			supply_consumption_factor = -0.05
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen4
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			mountaineers_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_marines_t1 = {
+		enable_equipments = {
+			pwc_equipment_special_forces_gen1
+		}
+		enable_subunits = {
+			pwc_unit_marine
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_marines_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			marine_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_marines_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_marine = {
+			max_organisation = 5
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_marines_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			marine_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_marines_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_marine = {
+			breakthrough = 0.05
+			initiative = 0.03
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_marines_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			marine_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_marines_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_marine = {
+			max_organisation = 5
+			supply_consumption_factor = -0.05
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen4
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			marine_tech
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_airborne_t1 = {
+		enable_equipments = {
+			pwc_equipment_special_forces_gen1
+			pwc_equipment_transport_gen1
+		}
+		enable_subunits = {
+			pwc_unit_paratrooper
+			pwc_unit_transport
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_airborne_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+			specialization_air
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			para_tech
+			transport_planes_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_airborne_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_paratrooper = {
+			max_organisation = 5
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen2
+			pwc_equipment_transport_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_airborne_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+			specialization_air
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			para_tech
+			transport_planes_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_airborne_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_paratrooper = {
+			breakthrough = 0.05
+			initiative = 0.03
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen3
+			pwc_equipment_transport_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_airborne_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+			specialization_air
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			para_tech
+			transport_planes_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_airborne_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_paratrooper = {
+			max_organisation = 5
+			supply_consumption_factor = -0.05
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen4
+			pwc_equipment_transport_gen4
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+			specialization_air
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			para_tech
+			transport_planes_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_rangers_t1 = {
+		enable_equipments = {
+			pwc_equipment_special_forces_gen1
+		}
+		enable_subunits = {
+			pwc_unit_ranger
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_rangers_t2
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.3636363636363635
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			rangers_tech_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_rangers_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 0
+					}
+				}
+			}
+		}
+		pwc_unit_ranger = {
+			max_organisation = 5
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen2
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_rangers_t3
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 2.4545454545454546
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			rangers_tech_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_rangers_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 1
+					}
+				}
+			}
+		}
+		pwc_unit_ranger = {
+			breakthrough = 0.05
+			initiative = 0.03
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen3
+		}
+		path = {
+			leads_to_tech = pwc_tech_sf_rangers_t4
+			research_cost_coeff = 1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 3.8181818181818183
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			rangers_tech_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech_sf_rangers_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_army
+						level > 2
+					}
+				}
+			}
+		}
+		pwc_unit_ranger = {
+			max_organisation = 5
+			supply_consumption_factor = -0.05
+		}
+		enable_equipments = {
+			pwc_equipment_special_forces_gen4
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 5.454545454545454
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_army
+			cat_special_forces_generic
+			rangers_tech_cat
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	pwc_tech0_basic_infantry = {
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			pwc_equipment_infantry_gen0
+			pwc_equipment_artillery_gen0
+			pwc_equipment_anti_tank_gen0
+			pwc_equipment_anti_air_gen0
+			pwc_equipment_rocket_gen0
+		}
+		enable_subunits = {
+			pwc_unit_regimental_fire_support
+			pwc_unit_regimental_artillery
+			pwc_unit_regimental_rocket
+			pwc_unit_regimental_anti_air
+			pwc_unit_regimental_armored_anti_air
+			pwc_unit_infantry
+			pwc_unit_artillery
+			pwc_unit_anti_air
+			pwc_unit_rocket_artillery
+			pwc_unit_support_artillery
+			pwc_unit_support_anti_air
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_infantry
+			pwc_unit_hq_command
+		}
+	}
+
+	pwc_tech0_engineers = {
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			pwc_equipment_support_gen0
+		}
+		enable_subunits = {
+			pwc_unit_engineer
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_engineer
+		}
+	}
+
+	pwc_tech0_transport = {
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			pwc_equipment_mechanized_gen0
+			pwc_equipment_motorized_gen0
+			train_equipment_1
+		}
+		enable_subunits = {
+			pwc_unit_regimental_motorized_fire
+			pwc_unit_motorized
+			pwc_unit_mechanized
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_motorized
+		}
+	}
+
+	pwc_tech0_basic_industry = {
+		allow = {
+			always = no
+		}
+		industrial_capacity_factory = 0.03
+		enable_equipments = {
+			pwc_platform_light_tank_gen0
+			pwc_platform_medium_tank_gen0
+			pwc_platform_heavy_tank_gen0
+			pwc_platform_tank_destroyer_gen0
+			pwc_platform_fighter_gen0
+			pwc_platform_cas_gen0
+			pwc_platform_bomber_gen0
+			pwc_platform_uav_gen0
+			pwc_platform_destroyer_gen0
+			pwc_platform_cruiser_gen0
+			pwc_platform_submarine_gen0
+			pwc_platform_carrier_gen0
+			pwc_platform_cv_fighter_gen0
+			pwc_platform_cv_cas_gen0
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_gun_105mm_t0
+			pwc_module_tank_armor_steel_t0
+			pwc_module_tank_engine_diesel_600_t0
+			pwc_module_tank_suspension_torsion_t0
+			pwc_module_tank_turret_autoloader_t0
+			pwc_module_air_engine_turbofan_gen1_t0
+			pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_module_air_payload_bomb_rack_t0
+			pwc_module_navy_gun_76mm_t0
+			pwc_module_navy_engine_diesel_t0
+			pwc_module_navy_missile_torpedo_light_t0
+			pwc_module_tank_howitzer_t0
+			pwc_module_tank_kit_light
+			pwc_module_tank_kit_medium
+			pwc_module_tank_kit_heavy
+			pwc_module_tank_kit_td
+			pwc_module_tank_gun_support_t0
+			pwc_module_tank_gun_penetrator_t0
+			pwc_module_tank_engine_economy_t0
+			pwc_module_tank_engine_power_t0
+			pwc_module_air_engine_endurance_t0
+			pwc_module_air_engine_sprint_t0
+			pwc_module_air_payload_land_t0
+			pwc_module_air_payload_sea_t0
+			pwc_module_navy_engine_cruise_t0
+			pwc_module_navy_engine_power_t0
+			pwc_module_navy_aux_damage_control_t0
+			pwc_module_navy_aux_weapon_support_t0
+		}
+		enable_subunits = {
+			pwc_unit_regimental_anti_tank
+			pwc_unit_regimental_tank_destroyer
+			pwc_unit_tank
+			pwc_unit_light_tank
+			pwc_unit_heavy_tank
+			pwc_unit_tank_destroyer
+			pwc_unit_anti_tank
+			pwc_unit_support_anti_tank
+			pwc_unit_fighter
+			pwc_unit_cas
+			pwc_unit_bomber
+			pwc_unit_uav
+			pwc_unit_cv_fighter
+			pwc_unit_cv_cas
+			pwc_unit_destroyer
+			pwc_unit_cruiser
+			pwc_unit_submarine
+			pwc_unit_carrier
+		}
+	}
+
+	pwc_tech0_communications = {
+		allow = {
+			always = no
+		}
+		army_org_factor = 0.03
+		enable_equipment_modules = {
+			pwc_module_tank_radio_vhf_t0
+			pwc_module_air_avionics_ins_t0
+			pwc_module_navy_radar_search_gen1_t0
+		}
+		enable_subunits = {
+			pwc_unit_recon
+			pwc_unit_signal
+		}
+		enable_subunits = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			pwc_unit_hq_recon
+			pwc_unit_hq_signal
+		}
+	}
+}

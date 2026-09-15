@@ -1,0 +1,29 @@
+state={
+	id = 260
+	name = STATE_260
+	provinces = { 529 1476 1788 2405 3375 3871 }
+	manpower = 5210000
+	state_category = large_city
+	resources = {
+		oil = 3
+		steel = 24
+		coal = 69
+	}
+	history = {
+		add_core_of = W32
+		owner = W32
+		victory_points = { 3871 20 }
+		victory_points = { 1476 1 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 3
+			1788 = {
+				bunker = 2
+			}
+			pwc_building_tech_center = 1
+		}
+	}
+	local_supplies = 12.0
+}

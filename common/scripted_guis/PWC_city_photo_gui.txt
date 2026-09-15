@@ -1,0 +1,748 @@
+
+
+scripted_gui = {
+	PWC_city_photo_gui = {
+		context_type = selected_state_context
+		window_name = "PWC_city_photo_window"
+		parent_window_token = selected_state_view
+		ai_enabled = { always = no }
+		visible = {
+			OR = {
+				state = 8
+				state = 9
+				state = 12
+				state = 13
+				state = 14
+				state = 15
+				state = 16
+				state = 17
+				state = 18
+				state = 19
+				state = 20
+				state = 21
+				state = 22
+				state = 23
+				state = 24
+				state = 25
+				state = 26
+				state = 27
+				state = 29
+				state = 30
+				state = 31
+				state = 32
+				state = 34
+				state = 35
+				state = 36
+				state = 37
+				state = 38
+				state = 39
+				state = 40
+				state = 41
+				state = 42
+				state = 43
+				state = 44
+				state = 45
+				state = 46
+				state = 47
+				state = 48
+				state = 49
+				state = 50
+				state = 51
+				state = 53
+				state = 54
+				state = 55
+				state = 56
+				state = 57
+				state = 58
+				state = 59
+				state = 60
+				state = 61
+				state = 62
+				state = 63
+				state = 64
+				state = 65
+				state = 66
+				state = 67
+				state = 69
+				state = 70
+				state = 71
+				state = 72
+				state = 73
+				state = 74
+				state = 75
+				state = 76
+				state = 77
+				state = 78
+				state = 79
+				state = 80
+				state = 81
+				state = 82
+				state = 83
+				state = 84
+				state = 85
+				state = 86
+				state = 87
+				state = 88
+				state = 89
+				state = 90
+				state = 91
+				state = 92
+				state = 93
+				state = 94
+				state = 95
+				state = 96
+				state = 97
+				state = 98
+				state = 99
+				state = 103
+				state = 104
+				state = 105
+				state = 106
+				state = 107
+				state = 108
+				state = 109
+				state = 110
+				state = 111
+				state = 112
+				state = 113
+				state = 114
+				state = 115
+				state = 116
+				state = 117
+				state = 118
+				state = 119
+				state = 120
+				state = 122
+				state = 123
+				state = 124
+				state = 125
+				state = 126
+				state = 128
+				state = 129
+				state = 130
+				state = 131
+				state = 132
+				state = 133
+				state = 134
+				state = 135
+				state = 136
+				state = 137
+				state = 138
+				state = 139
+				state = 140
+				state = 141
+				state = 142
+				state = 143
+				state = 144
+				state = 145
+				state = 146
+				state = 147
+				state = 148
+				state = 149
+				state = 151
+				state = 152
+				state = 154
+				state = 155
+				state = 157
+				state = 158
+				state = 159
+				state = 160
+				state = 161
+				state = 162
+				state = 163
+				state = 164
+				state = 165
+				state = 166
+				state = 167
+				state = 168
+				state = 169
+				state = 170
+				state = 172
+				state = 173
+				state = 174
+				state = 175
+				state = 176
+				state = 177
+				state = 178
+				state = 179
+				state = 180
+				state = 181
+				state = 183
+				state = 184
+				state = 185
+				state = 186
+				state = 187
+				state = 188
+				state = 190
+				state = 191
+				state = 192
+				state = 193
+				state = 194
+				state = 196
+				state = 197
+				state = 198
+				state = 199
+				state = 200
+				state = 201
+				state = 202
+				state = 203
+				state = 204
+				state = 205
+				state = 206
+				state = 207
+				state = 208
+				state = 209
+				state = 210
+				state = 211
+				state = 212
+				state = 213
+				state = 214
+				state = 215
+				state = 216
+				state = 217
+				state = 218
+				state = 219
+				state = 220
+				state = 221
+				state = 222
+				state = 223
+				state = 224
+				state = 225
+				state = 226
+				state = 228
+				state = 229
+				state = 230
+				state = 231
+				state = 232
+				state = 233
+				state = 234
+				state = 235
+				state = 236
+				state = 237
+				state = 238
+				state = 239
+				state = 240
+				state = 241
+				state = 242
+				state = 243
+				state = 244
+				state = 245
+				state = 246
+				state = 247
+				state = 248
+				state = 249
+				state = 250
+				state = 251
+				state = 253
+				state = 254
+				state = 255
+				state = 256
+				state = 257
+				state = 258
+				state = 259
+				state = 260
+				state = 261
+				state = 262
+				state = 263
+				state = 264
+				state = 265
+				state = 266
+				state = 267
+				state = 268
+				state = 269
+				state = 270
+				state = 271
+				state = 272
+				state = 273
+				state = 275
+				state = 276
+				state = 277
+				state = 278
+				state = 279
+				state = 280
+				state = 281
+				state = 282
+				state = 283
+				state = 284
+				state = 285
+				state = 286
+				state = 287
+				state = 288
+				state = 289
+				state = 292
+				state = 293
+				state = 295
+				state = 296
+				state = 298
+				state = 299
+				state = 300
+				state = 301
+				state = 302
+				state = 303
+				state = 304
+				state = 305
+				state = 306
+				state = 307
+				state = 308
+				state = 309
+				state = 310
+				state = 311
+				state = 312
+				state = 313
+				state = 314
+				state = 315
+				state = 316
+				state = 317
+				state = 318
+				state = 319
+				state = 320
+				state = 321
+				state = 323
+				state = 324
+				state = 325
+				state = 326
+				state = 327
+				state = 328
+				state = 329
+				state = 330
+				state = 331
+				state = 332
+				state = 333
+				state = 334
+				state = 335
+				state = 336
+				state = 337
+				state = 338
+				state = 339
+				state = 340
+				state = 341
+				state = 342
+				state = 343
+				state = 344
+				state = 345
+				state = 346
+				state = 347
+				state = 348
+				state = 349
+				state = 350
+				state = 351
+				state = 352
+				state = 353
+				state = 354
+				state = 355
+				state = 356
+				state = 357
+				state = 358
+				state = 359
+				state = 360
+				state = 361
+				state = 362
+				state = 363
+				state = 364
+				state = 366
+				state = 367
+				state = 368
+				state = 369
+				state = 370
+				state = 371
+				state = 372
+				state = 373
+				state = 374
+				state = 375
+				state = 376
+				state = 377
+				state = 379
+				state = 380
+				state = 381
+				state = 383
+				state = 384
+				state = 385
+				state = 387
+				state = 388
+				state = 391
+				state = 434
+				state = 435
+				state = 505
+				state = 506
+				state = 507
+				state = 508
+				state = 509
+				state = 510
+				state = 511
+				state = 512
+				state = 513
+				state = 524
+				state = 525
+				state = 526
+			}
+		}
+		triggers = {
+			pwc_city_photo_8_visible = { state = 8 }
+			pwc_city_photo_9_visible = { state = 9 }
+			pwc_city_photo_12_visible = { state = 12 }
+			pwc_city_photo_13_visible = { state = 13 }
+			pwc_city_photo_14_visible = { state = 14 }
+			pwc_city_photo_15_visible = { state = 15 }
+			pwc_city_photo_16_visible = { state = 16 }
+			pwc_city_photo_17_visible = { state = 17 }
+			pwc_city_photo_18_visible = { state = 18 }
+			pwc_city_photo_19_visible = { state = 19 }
+			pwc_city_photo_20_visible = { state = 20 }
+			pwc_city_photo_21_visible = { state = 21 }
+			pwc_city_photo_22_visible = { state = 22 }
+			pwc_city_photo_23_visible = { state = 23 }
+			pwc_city_photo_24_visible = { state = 24 }
+			pwc_city_photo_25_visible = { state = 25 }
+			pwc_city_photo_26_visible = { state = 26 }
+			pwc_city_photo_27_visible = { state = 27 }
+			pwc_city_photo_29_visible = { state = 29 }
+			pwc_city_photo_30_visible = { state = 30 }
+			pwc_city_photo_31_visible = { state = 31 }
+			pwc_city_photo_32_visible = { state = 32 }
+			pwc_city_photo_34_visible = { state = 34 }
+			pwc_city_photo_35_visible = { state = 35 }
+			pwc_city_photo_36_visible = { state = 36 }
+			pwc_city_photo_37_visible = { state = 37 }
+			pwc_city_photo_38_visible = { state = 38 }
+			pwc_city_photo_39_visible = { state = 39 }
+			pwc_city_photo_40_visible = { state = 40 }
+			pwc_city_photo_41_visible = { state = 41 }
+			pwc_city_photo_42_visible = { state = 42 }
+			pwc_city_photo_43_visible = { state = 43 }
+			pwc_city_photo_44_visible = { state = 44 }
+			pwc_city_photo_45_visible = { state = 45 }
+			pwc_city_photo_46_visible = { state = 46 }
+			pwc_city_photo_47_visible = { state = 47 }
+			pwc_city_photo_48_visible = { state = 48 }
+			pwc_city_photo_49_visible = { state = 49 }
+			pwc_city_photo_50_visible = { state = 50 }
+			pwc_city_photo_51_visible = { state = 51 }
+			pwc_city_photo_53_visible = { state = 53 }
+			pwc_city_photo_54_visible = { state = 54 }
+			pwc_city_photo_55_visible = { state = 55 }
+			pwc_city_photo_56_visible = { state = 56 }
+			pwc_city_photo_57_visible = { state = 57 }
+			pwc_city_photo_58_visible = { state = 58 }
+			pwc_city_photo_59_visible = { state = 59 }
+			pwc_city_photo_60_visible = { state = 60 }
+			pwc_city_photo_61_visible = { state = 61 }
+			pwc_city_photo_62_visible = { state = 62 }
+			pwc_city_photo_63_visible = { state = 63 }
+			pwc_city_photo_64_visible = { state = 64 }
+			pwc_city_photo_65_visible = { state = 65 }
+			pwc_city_photo_66_visible = { state = 66 }
+			pwc_city_photo_67_visible = { state = 67 }
+			pwc_city_photo_69_visible = { state = 69 }
+			pwc_city_photo_70_visible = { state = 70 }
+			pwc_city_photo_71_visible = { state = 71 }
+			pwc_city_photo_72_visible = { state = 72 }
+			pwc_city_photo_73_visible = { state = 73 }
+			pwc_city_photo_74_visible = { state = 74 }
+			pwc_city_photo_75_visible = { state = 75 }
+			pwc_city_photo_76_visible = { state = 76 }
+			pwc_city_photo_77_visible = { state = 77 }
+			pwc_city_photo_78_visible = { state = 78 }
+			pwc_city_photo_79_visible = { state = 79 }
+			pwc_city_photo_80_visible = { state = 80 }
+			pwc_city_photo_81_visible = { state = 81 }
+			pwc_city_photo_82_visible = { state = 82 }
+			pwc_city_photo_83_visible = { state = 83 }
+			pwc_city_photo_84_visible = { state = 84 }
+			pwc_city_photo_85_visible = { state = 85 }
+			pwc_city_photo_86_visible = { state = 86 }
+			pwc_city_photo_87_visible = { state = 87 }
+			pwc_city_photo_88_visible = { state = 88 }
+			pwc_city_photo_89_visible = { state = 89 }
+			pwc_city_photo_90_visible = { state = 90 }
+			pwc_city_photo_91_visible = { state = 91 }
+			pwc_city_photo_92_visible = { state = 92 }
+			pwc_city_photo_93_visible = { state = 93 }
+			pwc_city_photo_94_visible = { state = 94 }
+			pwc_city_photo_95_visible = { state = 95 }
+			pwc_city_photo_96_visible = { state = 96 }
+			pwc_city_photo_97_visible = { state = 97 }
+			pwc_city_photo_98_visible = { state = 98 }
+			pwc_city_photo_99_visible = { state = 99 }
+			pwc_city_photo_103_visible = { state = 103 }
+			pwc_city_photo_104_visible = { state = 104 }
+			pwc_city_photo_105_visible = { state = 105 }
+			pwc_city_photo_106_visible = { state = 106 }
+			pwc_city_photo_107_visible = { state = 107 }
+			pwc_city_photo_108_visible = { state = 108 }
+			pwc_city_photo_109_visible = { state = 109 }
+			pwc_city_photo_110_visible = { state = 110 }
+			pwc_city_photo_111_visible = { state = 111 }
+			pwc_city_photo_112_visible = { state = 112 }
+			pwc_city_photo_113_visible = { state = 113 }
+			pwc_city_photo_114_visible = { state = 114 }
+			pwc_city_photo_115_visible = { state = 115 }
+			pwc_city_photo_116_visible = { state = 116 }
+			pwc_city_photo_117_visible = { state = 117 }
+			pwc_city_photo_118_visible = { state = 118 }
+			pwc_city_photo_119_visible = { state = 119 }
+			pwc_city_photo_120_visible = { state = 120 }
+			pwc_city_photo_122_visible = { state = 122 }
+			pwc_city_photo_123_visible = { state = 123 }
+			pwc_city_photo_124_visible = { state = 124 }
+			pwc_city_photo_125_visible = { state = 125 }
+			pwc_city_photo_126_visible = { state = 126 }
+			pwc_city_photo_128_visible = { state = 128 }
+			pwc_city_photo_129_visible = { state = 129 }
+			pwc_city_photo_130_visible = { state = 130 }
+			pwc_city_photo_131_visible = { state = 131 }
+			pwc_city_photo_132_visible = { state = 132 }
+			pwc_city_photo_133_visible = { state = 133 }
+			pwc_city_photo_134_visible = { state = 134 }
+			pwc_city_photo_135_visible = { state = 135 }
+			pwc_city_photo_136_visible = { state = 136 }
+			pwc_city_photo_137_visible = { state = 137 }
+			pwc_city_photo_138_visible = { state = 138 }
+			pwc_city_photo_139_visible = { state = 139 }
+			pwc_city_photo_140_visible = { state = 140 }
+			pwc_city_photo_141_visible = { state = 141 }
+			pwc_city_photo_142_visible = { state = 142 }
+			pwc_city_photo_143_visible = { state = 143 }
+			pwc_city_photo_144_visible = { state = 144 }
+			pwc_city_photo_145_visible = { state = 145 }
+			pwc_city_photo_146_visible = { state = 146 }
+			pwc_city_photo_147_visible = { state = 147 }
+			pwc_city_photo_148_visible = { state = 148 }
+			pwc_city_photo_149_visible = { state = 149 }
+			pwc_city_photo_151_visible = { state = 151 }
+			pwc_city_photo_152_visible = { state = 152 }
+			pwc_city_photo_154_visible = { state = 154 }
+			pwc_city_photo_155_visible = { state = 155 }
+			pwc_city_photo_157_visible = { state = 157 }
+			pwc_city_photo_158_visible = { state = 158 }
+			pwc_city_photo_159_visible = { state = 159 }
+			pwc_city_photo_160_visible = { state = 160 }
+			pwc_city_photo_161_visible = { state = 161 }
+			pwc_city_photo_162_visible = { state = 162 }
+			pwc_city_photo_163_visible = { state = 163 }
+			pwc_city_photo_164_visible = { state = 164 }
+			pwc_city_photo_165_visible = { state = 165 }
+			pwc_city_photo_166_visible = { state = 166 }
+			pwc_city_photo_167_visible = { state = 167 }
+			pwc_city_photo_168_visible = { state = 168 }
+			pwc_city_photo_169_visible = { state = 169 }
+			pwc_city_photo_170_visible = { state = 170 }
+			pwc_city_photo_172_visible = { state = 172 }
+			pwc_city_photo_173_visible = { state = 173 }
+			pwc_city_photo_174_visible = { state = 174 }
+			pwc_city_photo_175_visible = { state = 175 }
+			pwc_city_photo_176_visible = { state = 176 }
+			pwc_city_photo_177_visible = { state = 177 }
+			pwc_city_photo_178_visible = { state = 178 }
+			pwc_city_photo_179_visible = { state = 179 }
+			pwc_city_photo_180_visible = { state = 180 }
+			pwc_city_photo_181_visible = { state = 181 }
+			pwc_city_photo_183_visible = { state = 183 }
+			pwc_city_photo_184_visible = { state = 184 }
+			pwc_city_photo_185_visible = { state = 185 }
+			pwc_city_photo_186_visible = { state = 186 }
+			pwc_city_photo_187_visible = { state = 187 }
+			pwc_city_photo_188_visible = { state = 188 }
+			pwc_city_photo_190_visible = { state = 190 }
+			pwc_city_photo_191_visible = { state = 191 }
+			pwc_city_photo_192_visible = { state = 192 }
+			pwc_city_photo_193_visible = { state = 193 }
+			pwc_city_photo_194_visible = { state = 194 }
+			pwc_city_photo_196_visible = { state = 196 }
+			pwc_city_photo_197_visible = { state = 197 }
+			pwc_city_photo_198_visible = { state = 198 }
+			pwc_city_photo_199_visible = { state = 199 }
+			pwc_city_photo_200_visible = { state = 200 }
+			pwc_city_photo_201_visible = { state = 201 }
+			pwc_city_photo_202_visible = { state = 202 }
+			pwc_city_photo_203_visible = { state = 203 }
+			pwc_city_photo_204_visible = { state = 204 }
+			pwc_city_photo_205_visible = { state = 205 }
+			pwc_city_photo_206_visible = { state = 206 }
+			pwc_city_photo_207_visible = { state = 207 }
+			pwc_city_photo_208_visible = { state = 208 }
+			pwc_city_photo_209_visible = { state = 209 }
+			pwc_city_photo_210_visible = { state = 210 }
+			pwc_city_photo_211_visible = { state = 211 }
+			pwc_city_photo_212_visible = { state = 212 }
+			pwc_city_photo_213_visible = { state = 213 }
+			pwc_city_photo_214_visible = { state = 214 }
+			pwc_city_photo_215_visible = { state = 215 }
+			pwc_city_photo_216_visible = { state = 216 }
+			pwc_city_photo_217_visible = { state = 217 }
+			pwc_city_photo_218_visible = { state = 218 }
+			pwc_city_photo_219_visible = { state = 219 }
+			pwc_city_photo_220_visible = { state = 220 }
+			pwc_city_photo_221_visible = { state = 221 }
+			pwc_city_photo_222_visible = { state = 222 }
+			pwc_city_photo_223_visible = { state = 223 }
+			pwc_city_photo_224_visible = { state = 224 }
+			pwc_city_photo_225_visible = { state = 225 }
+			pwc_city_photo_226_visible = { state = 226 }
+			pwc_city_photo_228_visible = { state = 228 }
+			pwc_city_photo_229_visible = { state = 229 }
+			pwc_city_photo_230_visible = { state = 230 }
+			pwc_city_photo_231_visible = { state = 231 }
+			pwc_city_photo_232_visible = { state = 232 }
+			pwc_city_photo_233_visible = { state = 233 }
+			pwc_city_photo_234_visible = { state = 234 }
+			pwc_city_photo_235_visible = { state = 235 }
+			pwc_city_photo_236_visible = { state = 236 }
+			pwc_city_photo_237_visible = { state = 237 }
+			pwc_city_photo_238_visible = { state = 238 }
+			pwc_city_photo_239_visible = { state = 239 }
+			pwc_city_photo_240_visible = { state = 240 }
+			pwc_city_photo_241_visible = { state = 241 }
+			pwc_city_photo_242_visible = { state = 242 }
+			pwc_city_photo_243_visible = { state = 243 }
+			pwc_city_photo_244_visible = { state = 244 }
+			pwc_city_photo_245_visible = { state = 245 }
+			pwc_city_photo_246_visible = { state = 246 }
+			pwc_city_photo_247_visible = { state = 247 }
+			pwc_city_photo_248_visible = { state = 248 }
+			pwc_city_photo_249_visible = { state = 249 }
+			pwc_city_photo_250_visible = { state = 250 }
+			pwc_city_photo_251_visible = { state = 251 }
+			pwc_city_photo_253_visible = { state = 253 }
+			pwc_city_photo_254_visible = { state = 254 }
+			pwc_city_photo_255_visible = { state = 255 }
+			pwc_city_photo_256_visible = { state = 256 }
+			pwc_city_photo_257_visible = { state = 257 }
+			pwc_city_photo_258_visible = { state = 258 }
+			pwc_city_photo_259_visible = { state = 259 }
+			pwc_city_photo_260_visible = { state = 260 }
+			pwc_city_photo_261_visible = { state = 261 }
+			pwc_city_photo_262_visible = { state = 262 }
+			pwc_city_photo_263_visible = { state = 263 }
+			pwc_city_photo_264_visible = { state = 264 }
+			pwc_city_photo_265_visible = { state = 265 }
+			pwc_city_photo_266_visible = { state = 266 }
+			pwc_city_photo_267_visible = { state = 267 }
+			pwc_city_photo_268_visible = { state = 268 }
+			pwc_city_photo_269_visible = { state = 269 }
+			pwc_city_photo_270_visible = { state = 270 }
+			pwc_city_photo_271_visible = { state = 271 }
+			pwc_city_photo_272_visible = { state = 272 }
+			pwc_city_photo_273_visible = { state = 273 }
+			pwc_city_photo_275_visible = { state = 275 }
+			pwc_city_photo_276_visible = { state = 276 }
+			pwc_city_photo_277_visible = { state = 277 }
+			pwc_city_photo_278_visible = { state = 278 }
+			pwc_city_photo_279_visible = { state = 279 }
+			pwc_city_photo_280_visible = { state = 280 }
+			pwc_city_photo_281_visible = { state = 281 }
+			pwc_city_photo_282_visible = { state = 282 }
+			pwc_city_photo_283_visible = { state = 283 }
+			pwc_city_photo_284_visible = { state = 284 }
+			pwc_city_photo_285_visible = { state = 285 }
+			pwc_city_photo_286_visible = { state = 286 }
+			pwc_city_photo_287_visible = { state = 287 }
+			pwc_city_photo_288_visible = { state = 288 }
+			pwc_city_photo_289_visible = { state = 289 }
+			pwc_city_photo_292_visible = { state = 292 }
+			pwc_city_photo_293_visible = { state = 293 }
+			pwc_city_photo_295_visible = { state = 295 }
+			pwc_city_photo_296_visible = { state = 296 }
+			pwc_city_photo_298_visible = { state = 298 }
+			pwc_city_photo_299_visible = { state = 299 }
+			pwc_city_photo_300_visible = { state = 300 }
+			pwc_city_photo_301_visible = { state = 301 }
+			pwc_city_photo_302_visible = { state = 302 }
+			pwc_city_photo_303_visible = { state = 303 }
+			pwc_city_photo_304_visible = { state = 304 }
+			pwc_city_photo_305_visible = { state = 305 }
+			pwc_city_photo_306_visible = { state = 306 }
+			pwc_city_photo_307_visible = { state = 307 }
+			pwc_city_photo_308_visible = { state = 308 }
+			pwc_city_photo_309_visible = { state = 309 }
+			pwc_city_photo_310_visible = { state = 310 }
+			pwc_city_photo_311_visible = { state = 311 }
+			pwc_city_photo_312_visible = { state = 312 }
+			pwc_city_photo_313_visible = { state = 313 }
+			pwc_city_photo_314_visible = { state = 314 }
+			pwc_city_photo_315_visible = { state = 315 }
+			pwc_city_photo_316_visible = { state = 316 }
+			pwc_city_photo_317_visible = { state = 317 }
+			pwc_city_photo_318_visible = { state = 318 }
+			pwc_city_photo_319_visible = { state = 319 }
+			pwc_city_photo_320_visible = { state = 320 }
+			pwc_city_photo_321_visible = { state = 321 }
+			pwc_city_photo_323_visible = { state = 323 }
+			pwc_city_photo_324_visible = { state = 324 }
+			pwc_city_photo_325_visible = { state = 325 }
+			pwc_city_photo_326_visible = { state = 326 }
+			pwc_city_photo_327_visible = { state = 327 }
+			pwc_city_photo_328_visible = { state = 328 }
+			pwc_city_photo_329_visible = { state = 329 }
+			pwc_city_photo_330_visible = { state = 330 }
+			pwc_city_photo_331_visible = { state = 331 }
+			pwc_city_photo_332_visible = { state = 332 }
+			pwc_city_photo_333_visible = { state = 333 }
+			pwc_city_photo_334_visible = { state = 334 }
+			pwc_city_photo_335_visible = { state = 335 }
+			pwc_city_photo_336_visible = { state = 336 }
+			pwc_city_photo_337_visible = { state = 337 }
+			pwc_city_photo_338_visible = { state = 338 }
+			pwc_city_photo_339_visible = { state = 339 }
+			pwc_city_photo_340_visible = { state = 340 }
+			pwc_city_photo_341_visible = { state = 341 }
+			pwc_city_photo_342_visible = { state = 342 }
+			pwc_city_photo_343_visible = { state = 343 }
+			pwc_city_photo_344_visible = { state = 344 }
+			pwc_city_photo_345_visible = { state = 345 }
+			pwc_city_photo_346_visible = { state = 346 }
+			pwc_city_photo_347_visible = { state = 347 }
+			pwc_city_photo_348_visible = { state = 348 }
+			pwc_city_photo_349_visible = { state = 349 }
+			pwc_city_photo_350_visible = { state = 350 }
+			pwc_city_photo_351_visible = { state = 351 }
+			pwc_city_photo_352_visible = { state = 352 }
+			pwc_city_photo_353_visible = { state = 353 }
+			pwc_city_photo_354_visible = { state = 354 }
+			pwc_city_photo_355_visible = { state = 355 }
+			pwc_city_photo_356_visible = { state = 356 }
+			pwc_city_photo_357_visible = { state = 357 }
+			pwc_city_photo_358_visible = { state = 358 }
+			pwc_city_photo_359_visible = { state = 359 }
+			pwc_city_photo_360_visible = { state = 360 }
+			pwc_city_photo_361_visible = { state = 361 }
+			pwc_city_photo_362_visible = { state = 362 }
+			pwc_city_photo_363_visible = { state = 363 }
+			pwc_city_photo_364_visible = { state = 364 }
+			pwc_city_photo_366_visible = { state = 366 }
+			pwc_city_photo_367_visible = { state = 367 }
+			pwc_city_photo_368_visible = { state = 368 }
+			pwc_city_photo_369_visible = { state = 369 }
+			pwc_city_photo_370_visible = { state = 370 }
+			pwc_city_photo_371_visible = { state = 371 }
+			pwc_city_photo_372_visible = { state = 372 }
+			pwc_city_photo_373_visible = { state = 373 }
+			pwc_city_photo_374_visible = { state = 374 }
+			pwc_city_photo_375_visible = { state = 375 }
+			pwc_city_photo_376_visible = { state = 376 }
+			pwc_city_photo_377_visible = { state = 377 }
+			pwc_city_photo_379_visible = { state = 379 }
+			pwc_city_photo_380_visible = { state = 380 }
+			pwc_city_photo_381_visible = { state = 381 }
+			pwc_city_photo_383_visible = { state = 383 }
+			pwc_city_photo_384_visible = { state = 384 }
+			pwc_city_photo_385_visible = { state = 385 }
+			pwc_city_photo_387_visible = { state = 387 }
+			pwc_city_photo_388_visible = { state = 388 }
+			pwc_city_photo_391_visible = { state = 391 }
+			pwc_city_photo_434_visible = { state = 434 }
+			pwc_city_photo_435_visible = { state = 435 }
+			pwc_city_photo_505_visible = { state = 505 }
+			pwc_city_photo_506_visible = { state = 506 }
+			pwc_city_photo_507_visible = { state = 507 }
+			pwc_city_photo_508_visible = { state = 508 }
+			pwc_city_photo_509_visible = { state = 509 }
+			pwc_city_photo_510_visible = { state = 510 }
+			pwc_city_photo_511_visible = { state = 511 }
+			pwc_city_photo_512_visible = { state = 512 }
+			pwc_city_photo_513_visible = { state = 513 }
+			pwc_city_photo_524_visible = { state = 524 }
+			pwc_city_photo_525_visible = { state = 525 }
+			pwc_city_photo_526_visible = { state = 526 }
+		}
+	}
+}

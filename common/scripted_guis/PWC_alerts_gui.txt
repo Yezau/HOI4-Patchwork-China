@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+scripted_gui = {
+	pwc_alerts = {
+		context_type = player_context
+		window_name = "pwc_alerts_window"
+		dirty = global.pwc_alerts_dirty
+		visible = {
+			always = yes
+		}
+		ai_enabled = {
+			always = no
+		}
+		dynamic_lists = {
+			pwc_state_integration_alerts_grid = {
+				array = pwc_state_integration_alerts
+				entry_container = pwc_state_integration_alert
+				value = integrated_state
+			}
+			pwc_war_warning_alerts_grid = {
+				array = pwc_war_warning_attackers
+				entry_container = pwc_war_warning_alert
+				value = pwc_warning_attacker
+				change_scope = yes
+			}
+		}
+		triggers = {
+			pwc_state_integration_alerts_scroll_visible = {
+				check_variable = { pwc_state_integration_alerts^num > 0 }
+			}
+		}
+		effects = {
+			pwc_state_integration_bg_click = {
+				set_temp_variable = { target = integrated_state }
+				goto_state = var:target
+				pwc_se_clear_integration_alert = yes
+			}
+			pwc_state_integration_bg_right_click = {
+				set_temp_variable = { target = integrated_state }
+				pwc_se_clear_integration_alert = yes
+			}
+			pwc_state_integration_close_click = {
+				set_temp_variable = { target = integrated_state }
+				pwc_se_clear_integration_alert = yes
+			}
+			pwc_state_integration_close_right_click = {
+				set_temp_variable = { target = integrated_state }
+				pwc_se_clear_integration_alert = yes
+			}
+		}
+		properties = {
+			pwc_state_integration_alert_progressbar = {
+				x = integration_progressbar_value_@var:integrated_state
+			}
+		}
+	}
+}

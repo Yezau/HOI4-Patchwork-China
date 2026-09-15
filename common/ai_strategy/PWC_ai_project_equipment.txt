@@ -1,0 +1,33 @@
+
+
+
+PWC_ai_production_pwc_equipment_assault_engineer_vehicle = {
+	allowed = { always = yes }
+	enable = { is_special_project_completed = sp:pwc_project_flexible_manufacturing }
+	abort = { NOT = { is_special_project_completed = sp:pwc_project_flexible_manufacturing } }
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = pwc_equipment_assault_engineer_vehicle
+		value = 5
+	}
+}
+PWC_ai_production_pwc_equipment_armored_recovery_vehicle = {
+	allowed = { always = yes }
+	enable = { is_special_project_completed = sp:pwc_project_field_recovery }
+	abort = { NOT = { is_special_project_completed = sp:pwc_project_field_recovery } }
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = pwc_equipment_armored_recovery_vehicle
+		value = 5
+	}
+}
+PWC_ai_production_pwc_equipment_heavy_mortar = {
+	allowed = { always = yes }
+	enable = { is_special_project_completed = sp:pwc_project_precision_production }
+	abort = { NOT = { is_special_project_completed = sp:pwc_project_precision_production } }
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = pwc_equipment_heavy_mortar
+		value = 5
+	}
+}

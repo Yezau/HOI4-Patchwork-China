@@ -1,0 +1,424 @@
+
+
+pwc_dm_tech_center_level_1 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 0
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 1
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.05
+	special_project_speed_factor = 0.03
+}
+
+pwc_dm_tech_center_level_2 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 1
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 2
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.1
+	special_project_speed_factor = 0.06
+}
+
+pwc_dm_tech_center_level_3 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 2
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 3
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.15
+	special_project_speed_factor = 0.09
+}
+
+pwc_dm_tech_center_level_4 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 3
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 4
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.2
+	special_project_speed_factor = 0.12
+}
+
+pwc_dm_tech_center_level_5 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 4
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 5
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.25
+	special_project_speed_factor = 0.15
+}
+
+pwc_dm_tech_center_level_6 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 5
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 6
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.3
+	special_project_speed_factor = 0.18
+}
+
+pwc_dm_tech_center_level_7 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 6
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 7
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.35
+	special_project_speed_factor = 0.21
+}
+
+pwc_dm_tech_center_level_8 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 7
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 8
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.4
+	special_project_speed_factor = 0.24
+}
+
+pwc_dm_tech_center_level_9 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 8
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_tech_center
+					level > 9
+				}
+			}
+		}
+	}
+	research_speed_factor = 0.45
+	special_project_speed_factor = 0.27
+}
+
+pwc_dm_tech_center_level_10 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_tech_center
+				level > 9
+			}
+		}
+	}
+	research_speed_factor = 0.5
+	special_project_speed_factor = 0.3
+}
+
+pwc_dm_industrial_facility_level_1 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_industrial_facility
+				level > 0
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_industrial_facility
+					level > 1
+				}
+			}
+		}
+	}
+	industrial_capacity_factory = 0.05
+}
+
+pwc_dm_industrial_facility_level_2 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_industrial_facility
+				level > 1
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_industrial_facility
+					level > 2
+				}
+			}
+		}
+	}
+	industrial_capacity_factory = 0.1
+}
+
+pwc_dm_industrial_facility_level_3 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_industrial_facility
+				level > 2
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_industrial_facility
+					level > 3
+				}
+			}
+		}
+	}
+	industrial_capacity_factory = 0.15
+}
+
+pwc_dm_industrial_facility_level_4 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_industrial_facility
+				level > 3
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_industrial_facility
+					level > 4
+				}
+			}
+		}
+	}
+	industrial_capacity_factory = 0.2
+}
+
+pwc_dm_industrial_facility_level_5 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_industrial_facility
+				level > 4
+			}
+		}
+	}
+	industrial_capacity_factory = 0.25
+}
+
+pwc_dm_supply_hub_level_1 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_supply_hub
+				level > 0
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_supply_hub
+					level > 1
+				}
+			}
+		}
+	}
+	supply_consumption_factor = -0.05
+}
+
+pwc_dm_supply_hub_level_2 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_supply_hub
+				level > 1
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_supply_hub
+					level > 2
+				}
+			}
+		}
+	}
+	supply_consumption_factor = -0.1
+}
+
+pwc_dm_supply_hub_level_3 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_supply_hub
+				level > 2
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_supply_hub
+					level > 3
+				}
+			}
+		}
+	}
+	supply_consumption_factor = -0.15
+}
+
+pwc_dm_supply_hub_level_4 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_supply_hub
+				level > 3
+			}
+		}
+		NOT = {
+			any_owned_state = {
+				is_fully_controlled_by = PREV
+				non_damaged_building_level = {
+					building = pwc_building_supply_hub
+					level > 4
+				}
+			}
+		}
+	}
+	supply_consumption_factor = -0.2
+}
+
+pwc_dm_supply_hub_level_5 = {
+	enable = {
+		any_owned_state = {
+			is_fully_controlled_by = PREV
+			non_damaged_building_level = {
+				building = pwc_building_supply_hub
+				level > 4
+			}
+		}
+	}
+	supply_consumption_factor = -0.25
+}

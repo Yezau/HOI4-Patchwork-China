@@ -1,0 +1,120 @@
+scripted_gui = {
+    pwc_state_transfer = {
+        context_type = selected_state_context
+        window_name = pwc_state_transfer_window
+        parent_window_token = selected_state_view
+        ai_enabled = { always = no }
+        visible = {
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                has_country_flag = pwc_flag_transfer_tool_open
+            }
+        }
+        dynamic_lists = {
+            pwc_transfer_states_grid = {
+                array = ROOT.pwc_transfer_states
+                entry_container = pwc_transfer_state_row
+                value = pwc_transfer_list_state
+            }
+        }
+        effects = {
+            pwc_transfer_close_click = { ROOT = { pwc_se_toggle_transfer_tool = yes } }
+            pwc_transfer_mark_click = { pwc_se_toggle_transfer_state = yes }
+            pwc_transfer_all_click = { pwc_se_select_all_transfer_states = yes }
+            pwc_transfer_target_click = { pwc_se_select_transfer_target = yes }
+            pwc_transfer_clear_click = { ROOT = { pwc_se_clear_transfer_selection = yes } }
+            pwc_transfer_preview_click = { ROOT = { pwc_se_preview_state_transfer = yes } }
+            pwc_transfer_confirm_click = { ROOT = { pwc_se_confirm_state_transfer = yes } }
+            pwc_transfer_back_click = {
+                ROOT = { clr_country_flag = pwc_flag_transfer_preview }
+            }
+            pwc_transfer_remove_click = {
+                var:pwc_transfer_list_state = {
+                    if = {
+                        limit = {
+                            is_in_array = { array = ROOT.pwc_transfer_states value = THIS }
+                        }
+                        pwc_se_toggle_transfer_state = yes
+                    }
+                }
+            }
+        }
+        triggers = {
+            pwc_transfer_all_click_enabled = { pwc_st_transfer_can_select_all = yes }
+            pwc_transfer_remove_click_enabled = {
+                ROOT = { pwc_st_state_transfer_allowed = yes }
+                var:pwc_transfer_list_state = {
+                    is_in_array = { array = ROOT.pwc_transfer_states value = THIS }
+                }
+            }
+            pwc_transfer_mark_click_enabled = {
+                ROOT = { pwc_st_state_transfer_allowed = yes }
+                OR = {
+                    is_in_array = { array = ROOT.pwc_transfer_states value = THIS }
+                    AND = {
+                        pwc_st_transfer_state_eligible = yes
+                        OR = {
+                            NOT = { has_variable = ROOT.pwc_transfer_source }
+                            is_owned_by = var:ROOT.pwc_transfer_source
+                        }
+                    }
+                }
+            }
+            pwc_transfer_target_click_enabled = {
+                ROOT = {
+                    pwc_st_state_transfer_allowed = yes
+                    has_variable = pwc_transfer_source
+                }
+                owner = {
+                    pwc_st_transfer_country_eligible = yes
+                    NOT = { tag = var:ROOT.pwc_transfer_source }
+                }
+            }
+            pwc_transfer_preview_click_enabled = {
+                ROOT = { pwc_st_transfer_selection_valid = yes }
+            }
+            pwc_transfer_clear_click_enabled = {
+                ROOT = { check_variable = { pwc_transfer_states^num > 0 } }
+            }
+            pwc_transfer_confirm_click_enabled = {
+                ROOT = {
+                    has_country_flag = pwc_flag_transfer_preview
+                    pwc_st_transfer_selection_valid = yes
+                }
+            }
+            pwc_transfer_confirm_visible = {
+                ROOT = { has_country_flag = pwc_flag_transfer_preview }
+            }
+            pwc_transfer_back_visible = {
+                ROOT = { has_country_flag = pwc_flag_transfer_preview }
+            }
+            pwc_transfer_preview_visible = {
+                ROOT = { NOT = { has_country_flag = pwc_flag_transfer_preview } }
+            }
+            pwc_transfer_ready_visible = {
+                ROOT = { has_country_flag = pwc_flag_transfer_preview }
+            }
+            pwc_transfer_rules_visible = {
+                ROOT = { NOT = { has_country_flag = pwc_flag_transfer_preview } }
+            }
+            pwc_transfer_empty_visible = {
+                ROOT = { check_variable = { pwc_transfer_states^num = 0 } }
+            }
+        }
+    }
+    pwc_state_transfer_entry = {
+        context_type = selected_state_context
+        window_name = pwc_transfer_entry_window
+        parent_window_token = selected_state_view
+        ai_enabled = { always = no }
+        visible = {
+            ROOT = {
+                pwc_st_state_transfer_allowed = yes
+                NOT = { has_country_flag = pwc_flag_transfer_tool_open }
+            }
+        }
+        effects = {
+            pwc_transfer_open_click = { ROOT = { pwc_se_toggle_transfer_tool = yes } }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+
+
+
+
+
+
+
+pwc_dm_seat_civil_admin = {
+	icon = GFX_idea_unknown
+	stability_factor = pwc_seat_civil_admin_v_stability_factor
+	political_power_factor = pwc_seat_civil_admin_v_political_power_factor
+	war_support_factor = pwc_seat_civil_admin_v_war_support_factor
+	stability_weekly = pwc_seat_civil_admin_v_stability_weekly
+	consumer_goods_factor = pwc_seat_civil_admin_v_consumer_goods_factor
+}
+
+pwc_dm_seat_economic_planning = {
+	icon = GFX_idea_unknown
+	industrial_capacity_factory = pwc_seat_economic_planning_v_industrial_capacity_factory
+	production_speed_industrial_complex_factor = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
+	production_speed_buildings_factor = pwc_seat_economic_planning_v_production_speed_buildings_factor
+	production_speed_infrastructure_factor = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
+}
+
+pwc_dm_seat_finance_trade = {
+	icon = GFX_idea_unknown
+	fuel_gain_factor = pwc_seat_finance_trade_v_fuel_gain_factor
+	local_resources_factor = pwc_seat_finance_trade_v_local_resources_factor
+	production_factory_efficiency_gain_factor = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
+	conversion_cost_civ_to_mil_factor = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
+}
+
+pwc_dm_seat_science_education = {
+	icon = GFX_idea_unknown
+	research_speed_factor = pwc_seat_science_education_v_research_speed_factor
+	experience_gain_army_factor = pwc_seat_science_education_v_experience_gain_army_factor
+	experience_gain_navy_factor = pwc_seat_science_education_v_experience_gain_navy_factor
+	experience_gain_air_factor = pwc_seat_science_education_v_experience_gain_air_factor
+	civilian_intel_factor = pwc_seat_science_education_v_civilian_intel_factor
+	compliance_growth_on_our_occupied_states = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+}
+
+pwc_dm_seat_army_command = {
+	icon = GFX_idea_unknown
+	army_attack_factor = pwc_seat_army_command_v_army_attack_factor
+	army_core_attack_factor = pwc_seat_army_command_v_army_core_attack_factor
+	dig_in_speed_factor = pwc_seat_army_command_v_dig_in_speed_factor
+	experience_gain_army = pwc_seat_army_command_v_experience_gain_army
+	army_defence_factor = pwc_seat_army_command_v_army_defence_factor
+	army_core_defence_factor = pwc_seat_army_command_v_army_core_defence_factor
+	max_dig_in = pwc_seat_army_command_v_max_dig_in
+	special_forces_cap_flat = pwc_seat_army_command_v_special_forces_cap_flat
+	army_org_factor = pwc_seat_army_command_v_army_org_factor
+}
+
+pwc_dm_seat_navy_command = {
+	icon = GFX_idea_unknown
+	navy_max_range_factor = pwc_seat_navy_command_v_navy_max_range_factor
+	experience_gain_navy = pwc_seat_navy_command_v_experience_gain_navy
+	convoy_escort_efficiency = pwc_seat_navy_command_v_convoy_escort_efficiency
+	naval_invasion_prep_speed = pwc_seat_navy_command_v_naval_invasion_prep_speed
+	naval_invasion_capacity = pwc_seat_navy_command_v_naval_invasion_capacity
+	industrial_capacity_dockyard = pwc_seat_navy_command_v_industrial_capacity_dockyard
+	naval_hit_chance = pwc_seat_navy_command_v_naval_hit_chance
+	navy_visibility = pwc_seat_navy_command_v_navy_visibility
+}
+
+pwc_dm_seat_air_command = {
+	icon = GFX_idea_unknown
+	air_attack_factor = pwc_seat_air_command_v_air_attack_factor
+	air_agility_factor = pwc_seat_air_command_v_air_agility_factor
+	air_superiority_detect_factor = pwc_seat_air_command_v_air_superiority_detect_factor
+	experience_gain_air = pwc_seat_air_command_v_experience_gain_air
+	air_defence_factor = pwc_seat_air_command_v_air_defence_factor
+	air_accidents_factor = pwc_seat_air_command_v_air_accidents_factor
+	air_ace_generation_chance_factor = pwc_seat_air_command_v_air_ace_generation_chance_factor
+}
+
+pwc_dm_seat_logistics_command = {
+	icon = GFX_idea_unknown
+	attrition = pwc_seat_logistics_command_v_attrition
+	out_of_supply_factor = pwc_seat_logistics_command_v_out_of_supply_factor
+	supply_consumption_factor = pwc_seat_logistics_command_v_supply_consumption_factor
+	army_fuel_consumption_factor = pwc_seat_logistics_command_v_army_fuel_consumption_factor
+	line_change_production_efficiency_factor = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
+	equipment_capture_factor = pwc_seat_logistics_command_v_equipment_capture_factor
+}
+
+pwc_dm_seat_mobilization_command = {
+	icon = GFX_idea_unknown
+	army_morale_factor = pwc_seat_mobilization_command_v_army_morale_factor
+	planning_speed = pwc_seat_mobilization_command_v_planning_speed
+	training_time_factor = pwc_seat_mobilization_command_v_training_time_factor
+	max_planning = pwc_seat_mobilization_command_v_max_planning
+	dig_in_speed_factor = pwc_seat_mobilization_command_v_dig_in_speed_factor
+	land_reinforce_rate = pwc_seat_mobilization_command_v_land_reinforce_rate
+	weekly_manpower = pwc_seat_mobilization_command_v_weekly_manpower
+	org_loss_when_moving = pwc_seat_mobilization_command_v_org_loss_when_moving
+}

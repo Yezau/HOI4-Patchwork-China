@@ -1,0 +1,478 @@
+
+
+
+
+mountaineers_1 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_MOUNTAINEERS_1
+    description = PWC_SF_MOUNTAINEERS_1_DESC
+    icon = GFX_ski_troops_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { mountaineers_2 }
+    mastery = {
+        multiplier = 6
+        categories = { category_mountaineers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_mountain_t1
+    }
+    ai_will_do = { base = 1 }
+    mountaineers_special_forces_contribution_factor = -0.15
+    pwc_unit_mountain = {
+        acclimatization_cold_climate_gain_factor = 0.15
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                max_organisation = 3
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                mountain = {
+                    movement = 0.05
+                }
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                mountain = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                supply_consumption = -0.015
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                mountain = {
+                    defence = 0.09
+                }
+            }
+        }
+    }
+}
+
+mountaineers_2 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_MOUNTAINEERS_2
+    description = PWC_SF_MOUNTAINEERS_2_DESC
+    icon = GFX_special_forces_mountaineers_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { mountaineers_1 }
+    mastery = {
+        multiplier = 6
+        categories = { category_mountaineers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_mountain_t1
+    }
+    ai_will_do = { base = 1 }
+    mountaineers_special_forces_contribution_factor = -0.15
+    pwc_unit_mountain = {
+        initiative = 0.03
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                mountain = {
+                    movement = 0.05
+                }
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                soft_attack = 0.05
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                breakthrough = 0.05
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                mountain = {
+                    attack = 0.09
+                }
+                hills = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_mountain = {
+                default_morale = 0.06
+            }
+        }
+    }
+}
+
+marines_1 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_MARINES_1
+    description = PWC_SF_MARINES_1_DESC
+    icon = GFX_marines_commandoes_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { marines_2 }
+    mastery = {
+        multiplier = 6
+        categories = { category_marines }
+    }
+    available = {
+        has_tech = pwc_tech_sf_marines_t1
+    }
+    ai_will_do = { base = 1 }
+    marines_special_forces_contribution_factor = -0.15
+    pwc_unit_marine = {
+        amphibious = {
+            attack = 0.05
+        }
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_marine = {
+                max_organisation = 3
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_marine = {
+                breakthrough = 0.05
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_marine = {
+                river = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_marine = {
+                initiative = 0.03
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_marine = {
+                amphibious = {
+                    attack = 0.1
+                }
+            }
+        }
+    }
+}
+
+marines_2 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_MARINES_2
+    description = PWC_SF_MARINES_2_DESC
+    icon = GFX_marines_expeditionary_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { marines_1 }
+    mastery = {
+        multiplier = 6
+        categories = { category_marines }
+    }
+    available = {
+        has_tech = pwc_tech_sf_marines_t1
+    }
+    ai_will_do = { base = 1 }
+    marines_special_forces_contribution_factor = -0.15
+    pwc_unit_marine = {
+        max_organisation = 3
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_marine = {
+                marsh = {
+                    attack = 0.05
+                    defence = 0.05
+                }
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_marine = {
+                supply_consumption = -0.015
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_marine = {
+                defense = 0.05
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_marine = {
+                river = {
+                    movement = 0.05
+                }
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_marine = {
+                max_organisation = 5
+                default_morale = 0.04
+            }
+        }
+    }
+}
+
+paratroopers_1 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_PARATROOPERS_1
+    description = PWC_SF_PARATROOPERS_1_DESC
+    icon = GFX_paras_dispersed_drop_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { paratroopers_2 }
+    mastery = {
+        multiplier = 6
+        categories = { category_paratroopers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_airborne_t1
+    }
+    ai_will_do = { base = 1 }
+    paratroopers_special_forces_contribution_factor = -0.15
+    pwc_unit_paratrooper = {
+        initiative = 0.03
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                max_organisation = 3
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                breakthrough = 0.05
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                urban = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                initiative = 0.03
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                soft_attack = 0.05
+            }
+        }
+    }
+}
+
+paratroopers_2 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_PARATROOPERS_2
+    description = PWC_SF_PARATROOPERS_2_DESC
+    icon = GFX_paras_combat_drop_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { paratroopers_1 }
+    mastery = {
+        multiplier = 6
+        categories = { category_paratroopers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_airborne_t1
+    }
+    ai_will_do = { base = 1 }
+    paratroopers_special_forces_contribution_factor = -0.15
+    pwc_unit_paratrooper = {
+        supply_consumption = -0.01
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                defense = 0.05
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                max_organisation = 5
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                supply_consumption = -0.015
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                river = {
+                    movement = 0.05
+                }
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_paratrooper = {
+                defense = 0.05
+                default_morale = 0.04
+            }
+        }
+    }
+}
+
+rangers_1 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_RANGERS_1
+    description = PWC_SF_RANGERS_1_DESC
+    icon = GFX_rangers_jaegers_training_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { rangers_2 }
+    mastery = {
+        multiplier = 6
+        categories = { category_rangers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_rangers_t1
+    }
+    ai_will_do = { base = 1 }
+    rangers_special_forces_contribution_factor = -0.15
+    pwc_unit_ranger = {
+        forest = {
+            movement = 0.05
+        }
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                forest = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                initiative = 0.03
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                supply_consumption = -0.015
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                forest = {
+                    defence = 0.05
+                }
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                soft_attack = 0.05
+            }
+        }
+    }
+}
+
+rangers_2 = {
+    track = { special_forces_first special_forces_second }
+    name = PWC_SF_RANGERS_2
+    description = PWC_SF_RANGERS_2_DESC
+    icon = GFX_rangers_jungle_training_medium
+    xp_cost = 60
+    xp_type = army
+    xor = { rangers_1 }
+    mastery = {
+        multiplier = 6
+        categories = { category_rangers }
+    }
+    available = {
+        has_tech = pwc_tech_sf_rangers_t1
+    }
+    ai_will_do = { base = 1 }
+    rangers_special_forces_contribution_factor = -0.15
+    pwc_unit_ranger = {
+        acclimatization_hot_climate_gain_factor = 0.15
+    }
+    rewards = {
+        reward_1 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                jungle = {
+                    attack = 0.05
+                }
+            }
+        }
+        reward_2 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                jungle = {
+                    defence = 0.05
+                }
+            }
+        }
+        reward_3 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                max_organisation = 5
+            }
+        }
+        reward_4 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                supply_consumption = -0.015
+            }
+        }
+        reward_5 = {
+            mastery = 60
+            pwc_unit_ranger = {
+                breakthrough = 0.05
+                jungle = {
+                    movement = 0.05
+                }
+            }
+        }
+    }
+}

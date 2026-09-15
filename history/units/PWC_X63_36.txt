@@ -1,0 +1,285 @@
+
+
+
+
+
+
+
+
+
+division_template = {
+	name = "步兵师"
+	division_names_group = PWC_INF_01
+	regiments = {
+		pwc_unit_infantry = { x = 0 y = 0 }
+		pwc_unit_infantry = { x = 0 y = 1 }
+		pwc_unit_infantry = { x = 0 y = 2 }
+		pwc_unit_infantry = { x = 1 y = 0 }
+		pwc_unit_infantry = { x = 1 y = 1 }
+		pwc_unit_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		pwc_unit_engineer = { x = 0 y = 0 }
+	}
+	regimental_support = {
+		pwc_unit_regimental_fire_support = { x = 0 y = 0 }
+		pwc_unit_regimental_fire_support = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "城防师"
+	division_names_group = PWC_GAR_01
+	regiments = {
+		pwc_unit_infantry = { x = 0 y = 0 }
+		pwc_unit_infantry = { x = 0 y = 1 }
+		pwc_unit_infantry = { x = 0 y = 2 }
+		pwc_unit_infantry = { x = 1 y = 0 }
+		pwc_unit_infantry = { x = 1 y = 1 }
+		pwc_unit_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		pwc_unit_military_police = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "山地师"
+	division_names_group = PWC_MTN_01
+	regiments = {
+		pwc_unit_mountain = { x = 0 y = 0 }
+		pwc_unit_mountain = { x = 0 y = 1 }
+		pwc_unit_mountain = { x = 0 y = 2 }
+		pwc_unit_mountain = { x = 1 y = 0 }
+		pwc_unit_mountain = { x = 1 y = 1 }
+		pwc_unit_mountain = { x = 1 y = 2 }
+		pwc_unit_mountain = { x = 2 y = 0 }
+		pwc_unit_mountain = { x = 2 y = 1 }
+		pwc_unit_mountain = { x = 2 y = 2 }
+	}
+	support = {
+		pwc_unit_engineer = { x = 0 y = 0 }
+		pwc_unit_recon = { x = 0 y = 1 }
+	}
+	regimental_support = {
+		pwc_unit_regimental_fire_support = { x = 0 y = 0 }
+		pwc_unit_regimental_fire_support = { x = 1 y = 0 }
+		pwc_unit_regimental_anti_tank = { x = 2 y = 0 }
+	}
+}
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		division_template = "步兵师"
+		location = 5089
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		division_template = "步兵师"
+		location = 5089
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		division_template = "步兵师"
+		location = 5089
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		division_template = "步兵师"
+		location = 5089
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		division_template = "步兵师"
+		location = 5089
+		start_equipment_factor = 1.0
+	}
+}
+
+instant_effect = {
+	create_equipment_variant = {
+		name = "0阶·储备轻型坦克"
+		type = pwc_platform_light_tank_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+			fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备现代坦克"
+		type = pwc_platform_medium_tank_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+			fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
+			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+			fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备重装突击平台"
+		type = pwc_platform_heavy_tank_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+			fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
+			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+			fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备反坦克歼击平台"
+		type = pwc_platform_tank_destroyer_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+			fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备战斗机"
+		type = pwc_platform_fighter_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备攻击机"
+		type = pwc_platform_cas_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备轰炸机"
+		type = pwc_platform_bomber_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+			fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack_t0
+			pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备无人机"
+		type = pwc_platform_uav_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备驱逐舰"
+		type = pwc_platform_destroyer_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
+			pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light_t0
+			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
+			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备巡洋舰"
+		type = pwc_platform_cruiser_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
+			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
+			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备潜艇"
+		type = pwc_platform_submarine_gen0
+		modules = {
+			pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light_t0
+			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备航空母舰"
+		type = pwc_platform_carrier_gen0
+		modules = {
+			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
+			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
+			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备舰载战斗机"
+		type = pwc_platform_cv_fighter_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	create_equipment_variant = {
+		name = "0阶·储备舰载攻击机"
+		type = pwc_platform_cv_cas_gen0
+		modules = {
+			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = pwc_equipment_infantry_gen0
+		amount = 4187
+		producer = X63
+	}
+	add_equipment_to_stockpile = {
+		type = pwc_equipment_support_gen0
+		amount = 250
+		producer = X63
+	}
+	add_equipment_to_stockpile = {
+		type = pwc_equipment_motorized_gen0
+		amount = 100
+		producer = X63
+	}
+	add_equipment_to_stockpile = {
+		type = train_equipment_1
+		amount = 10
+		producer = X63
+	}
+}

@@ -1,0 +1,145 @@
+
+allow_access = {
+    name = "RULE_ALLOW_MILITARY_ACCESS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "FREE"
+        text = "RULE_OPTION_FREE"
+        desc = "RULE_ALLOW_ACCESS_FREE_DESC"
+    }
+}
+allow_licensing = {
+    name = "RULE_ALLOW_LICENSING"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "FREE"
+        text = "RULE_OPTION_FREE"
+        desc = "RULE_ALLOW_LICENSING_FREE_DESC"
+    }
+}
+allow_lend_lease = {
+    name = "RULE_ALLOW_LEND_LEASE"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "LIMITED"
+        text = "RULE_OPTION_LIMITED"
+        desc = "RULE_ALLOW_LEND_LEASE_LIMITED_DESC"
+    }
+}
+allow_volunteers = {
+    name = "RULE_ALLOW_VOLUNTEERS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "LIMITED"
+        text = "RULE_OPTION_LIMITED"
+        desc = "RULE_ALLOW_VOLUNTEERS_LIMITED_DESC"
+    }
+}
+allow_leave_faction = {
+    name = "RULE_ALLOW_LEAVE_FACTION"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "ALLOWED"
+        text = "RULE_OPTION_ALLOWED"
+        desc = "RULE_ALLOW_LEAVE_FACTION_ALLOWED_DESC"
+    }
+}
+allow_kick_faction = {
+    name = "RULE_ALLOW_KICK_FACTION"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "ALLOWED"
+        text = "RULE_OPTION_ALLOWED"
+        desc = "RULE_ALLOW_KICK_FACTION_ALLOWED_DESC"
+    }
+}
+allow_take_over_faction = {
+    name = "RULE_ALLOW_TAKE_OVER_FACTION"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "ALLOWED"
+        text = "RULE_OPTION_ALLOWED"
+        desc = "RULE_ALLOW_TAKE_OVER_FACTION_ALLOWED_DESC"
+    }
+}
+allow_coups = {
+    name = "RULE_ALLOW_COUPS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "BLOCKED"
+        text = "RULE_OPTION_BLOCKED"
+        desc = "RULE_ALLOW_COUPS_BLOCKED_DESC"
+    }
+}
+allow_party_boosting = {
+    name = "RULE_ALLOW_PARTY_BOOSTING"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "FREE"
+        text = "RULE_OPTION_FREE"
+        desc = "RULE_ALLOW_PARTY_BOOSTING_FREE_DESC"
+    }
+}
+allow_paratroopers = {
+    name = "RULE_ALLOW_PARATROOPERS"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "yes"
+        text = "RULE_OPTION_ALLOWED"
+        desc = "RULE_ALLOW_PARATROOPERS_ALLOWED_DESC"
+    }
+}
+maximum_fort_level = {
+    name = "RULE_MAXIMUM_FORT_LEVEL"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "normal"
+        text = "RULE_OPTION_NORMAL"
+        desc = "RULE_MAXIMUM_FORT_LEVEL_NORMAL_DESC"
+    }
+}
+allow_scorched_earth = {
+    name = "RULE_ALLOW_SCORCHED_EARTH"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "yes"
+        text = "RULE_OPTION_ALLOWED"
+        desc = "RULE_ALLOW_SCORCHED_EARTH_ALLOWED_DESC"
+    }
+}
+obsolete_focus_branches_visibility = {
+    name = "OBSOLETE_FOCUS_BRANCHES_VISIBILITY"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "HIDE"
+        text = "RULE_OPTION_HIDE"
+        desc = "RULE_OPTION_HIDE_DESC"
+    }
+}
+peace_score_to_overlord = {
+    name = "PEACE_SCORE_TO_OVERLORD"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "YES"
+        text = "RULE_OPTION_YES"
+        desc = "RULE_OPTION_PEACE_SCORE_TO_OVERLORD_YES_DESC"
+    }
+}
+peace_score_to_faction_leader = {
+    name = "PEACE_SCORE_TO_FACTION_LEADER"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "NO"
+        text = "RULE_OPTION_NO"
+        desc = "RULE_OPTION_PEACE_SCORE_TO_FACTION_LEADER_NO_DESC"
+    }
+}
+peace_score_reset_low_scores = {
+    name = "PEACE_SCORE_RESET_LOW_SCORES"
+    group = "PWC_RULE_GROUP_FIXED"
+    default = {
+        name = "NO"
+        text = "RULE_OPTION_NO"
+        desc = "RULE_OPTION_PEACE_SCORE_RESET_LOW_SCORES_NO_DESC"
+    }
+}

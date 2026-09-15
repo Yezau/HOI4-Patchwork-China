@@ -1,0 +1,26 @@
+guiTypes = {
+    containerWindowType = {
+        name = "PWC_state_region_window"
+        position = { x = 468 y = 5 }
+        size = { width = 296 height = 84 }
+        orientation = upper_left
+        clipping = no
+        moveable = no
+        background = {
+            name = "region_background"
+            quadTextureSprite = PWC_GFX_state_region_panel
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwc_state_region_title"
+            position = { x = 84 y = 26 }
+            font = "hoi_30header"
+            text = "[PWC_STATE_REGION_TITLE]"
+            maxWidth = 202
+            maxHeight = 34
+            format = center
+            multiline = no
+            alwaystransparent = yes
+        }
+    }
+}

@@ -1,0 +1,377 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pwc_project_stealth_technology = {
+	specialization = specialization_air
+	icon = PWC_GFX_project_card_stealth_technology
+	project_tags = pwc_sp_tag_air
+	ai_will_do = {
+		base = 45
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_air_t3
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 2
+	}
+	prototype_time = 240
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_air_special_stealth_shaping
+		}
+	}
+}
+
+pwc_project_next_gen_armor = {
+	specialization = specialization_land
+	icon = PWC_GFX_project_card_next_gen_armor
+	project_tags = pwc_sp_tag_armor
+	ai_will_do = {
+		base = 40
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_army_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_land = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_tank_gun_140mm_etc
+			pwc_module_tank_turret_unmanned
+		}
+	}
+}
+
+pwc_project_active_protection = {
+	specialization = specialization_land
+	icon = PWC_GFX_project_card_active_protection
+	project_tags = pwc_sp_tag_armor
+	ai_will_do = {
+		base = 40
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_army_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_land = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_tank_armor_aps
+			pwc_module_tank_special_softkill
+		}
+	}
+}
+
+pwc_project_strategic_uav = {
+	specialization = specialization_air
+	icon = PWC_GFX_project_card_strategic_uav
+	project_tags = pwc_sp_tag_air
+	ai_will_do = {
+		base = 45
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_air_support_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_tank_special_recon_uav
+			pwc_module_air_special_uav_datalink
+			pwc_module_air_avionics_sensor_fusion
+		}
+	}
+}
+
+pwc_project_naval_network = {
+	specialization = specialization_naval
+	icon = PWC_GFX_project_card_naval_network
+	project_tags = pwc_sp_tag_navy
+	ai_will_do = {
+		base = 30
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_navy_fleet_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_naval = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_navy_special_stealth_quieting
+			pwc_module_navy_special_cic
+		}
+	}
+}
+
+pwc_project_flexible_manufacturing = {
+	specialization = specialization_land
+	icon = PWC_GFX_project_card_flexible_manufacturing
+	project_tags = pwc_sp_tag_army
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_army_infantry_t2
+		}
+	}
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	prototype_time = 180
+	project_output = {
+		enable_equipments = {
+			pwc_equipment_assault_engineer_vehicle_gen1
+		}
+		enable_subunits = {
+			pwc_unit_assault_engineer
+		}
+	}
+}
+
+pwc_project_flight_test_instrumentation = {
+	specialization = specialization_air
+	icon = PWC_GFX_project_card_flight_test_instrumentation
+	project_tags = pwc_sp_tag_air
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_air_support_t2
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 1
+	}
+	prototype_time = 180
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_air_avionics_maritime_radar
+		}
+	}
+}
+
+pwc_project_modular_shipbuilding = {
+	specialization = specialization_naval
+	icon = PWC_GFX_project_card_modular_shipbuilding
+	project_tags = pwc_sp_tag_navy
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_navy_t2
+		}
+	}
+	breakthrough_cost = {
+		specialization_naval = 1
+	}
+	prototype_time = 180
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_navy_special_asw_mission_bay
+		}
+	}
+}
+
+pwc_project_efficient_marine_propulsion = {
+	specialization = specialization_naval
+	icon = PWC_GFX_project_card_efficient_marine_propulsion
+	project_tags = pwc_sp_tag_navy
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_navy_t3
+		}
+	}
+	breakthrough_cost = {
+		specialization_naval = 2
+	}
+	prototype_time = 240
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_navy_engine_quiet_electric
+		}
+	}
+}
+
+pwc_project_field_recovery = {
+	specialization = specialization_land
+	icon = PWC_GFX_project_card_field_recovery
+	project_tags = pwc_sp_tag_army
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_army_mobility_t2
+		}
+	}
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	prototype_time = 180
+	project_output = {
+		enable_equipments = {
+			pwc_equipment_armored_recovery_vehicle_gen1
+		}
+		enable_subunits = {
+			pwc_unit_armored_recovery
+		}
+	}
+}
+
+pwc_project_precision_production = {
+	specialization = specialization_land
+	icon = PWC_GFX_project_card_precision_production
+	project_tags = pwc_sp_tag_army
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_army_firepower_t3
+		}
+	}
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+	prototype_time = 240
+	project_output = {
+		enable_equipments = {
+			pwc_equipment_heavy_mortar_gen1
+		}
+		enable_subunits = {
+			pwc_unit_support_heavy_mortar
+		}
+	}
+}
+
+pwc_project_integrated_flight_testing = {
+	specialization = specialization_air
+	icon = PWC_GFX_project_card_integrated_flight_testing
+	project_tags = pwc_sp_tag_air
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_air_t3
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 2
+	}
+	prototype_time = 240
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_air_special_defensive_jammer
+		}
+	}
+}
+
+pwc_project_night_flight_systems = {
+	specialization = specialization_air
+	icon = PWC_GFX_project_card_night_flight_systems
+	project_tags = pwc_sp_tag_air
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_air_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_air = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_air_avionics_night_navigation
+		}
+	}
+}
+
+pwc_project_fleet_damage_control = {
+	specialization = specialization_naval
+	icon = PWC_GFX_project_card_fleet_damage_control
+	project_tags = pwc_sp_tag_navy
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_navy_t3
+		}
+	}
+	breakthrough_cost = {
+		specialization_naval = 2
+	}
+	prototype_time = 240
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_navy_aux_automated_damage_control
+		}
+	}
+}
+
+pwc_project_modular_naval_refit = {
+	specialization = specialization_naval
+	icon = PWC_GFX_project_card_modular_naval_refit
+	project_tags = pwc_sp_tag_navy
+	ai_will_do = {
+		base = 35
+	}
+	available = {
+		FROM = {
+			has_tech = pwc_tech_navy_t4
+		}
+	}
+	breakthrough_cost = {
+		specialization_naval = 3
+	}
+	prototype_time = 300
+	project_output = {
+		enable_equipment_modules = {
+			pwc_module_navy_special_helicopter_hangar
+		}
+	}
+}
+

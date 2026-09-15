@@ -1,0 +1,700 @@
+
+guiTypes = {
+    containerWindowType = {
+        name = pwc_welcome_window
+        orientation = CENTER
+        position = { x = -520 y = -328 }
+        size = { width = 1040 height = 656 }
+        moveable = yes
+        background = {
+            name = background
+            quadTextureSprite = PWC_GFX_welcome_panel
+        }
+        iconType = {
+            name = pwc_welcome_logo
+            spriteType = GFX_frontend_game_logo
+            position = { x = 32 y = 12 }
+            scale = 0.56
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_title
+            position = { x = 320 y = 26 }
+            font = hoi_36header
+            text = PWC_WELCOME_TITLE
+            maxWidth = 440
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_version
+            position = { x = 804 y = 40 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_VERSION
+            maxWidth = 168
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_footer
+            position = { x = 32 y = 616 }
+            font = hoi_16mbs
+            text = PWC_WELCOME_FOOTER
+            maxWidth = 774
+            maxHeight = 22
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_welcome_home_tab
+            position = { x = 320 y = 80 }
+            quadTextureSprite = PWC_GFX_welcome_tab
+            buttonFont = hoi_18mbs
+            buttonText = PWC_WELCOME_HOME_TAB
+            pdx_tooltip = PWC_WELCOME_HOME_TAB_TT
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_welcome_home_marker
+            spriteType = PWC_GFX_welcome_tab_marker
+            position = { x = 320 y = 112 }
+            scale = 1
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_welcome_overview_tab
+            position = { x = 496 y = 80 }
+            quadTextureSprite = PWC_GFX_welcome_tab
+            buttonFont = hoi_18mbs
+            buttonText = PWC_WELCOME_OVERVIEW_TAB
+            pdx_tooltip = PWC_WELCOME_OVERVIEW_TAB_TT
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_welcome_overview_marker
+            spriteType = PWC_GFX_welcome_tab_marker
+            position = { x = 496 y = 112 }
+            scale = 1
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_welcome_buildings_tab
+            position = { x = 672 y = 80 }
+            quadTextureSprite = PWC_GFX_welcome_tab
+            buttonFont = hoi_18mbs
+            buttonText = PWC_WELCOME_BUILDINGS_TAB
+            pdx_tooltip = PWC_WELCOME_BUILDINGS_TAB_TT
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_welcome_buildings_marker
+            spriteType = PWC_GFX_welcome_tab_marker
+            position = { x = 672 y = 112 }
+            scale = 1
+            alwaystransparent = yes
+        }
+buttonType = {
+    name = pwc_welcome_close
+    position = { x = 996 y = 18 }
+    quadTextureSprite = GFX_closebutton
+    pdx_tooltip = PWC_WELCOME_DISMISS_TT
+    clicksound = click_close
+}
+        buttonType = {
+            name = pwc_welcome_continue
+            position = { x = 832 y = 606 }
+            quadTextureSprite = PWC_GFX_welcome_continue
+            buttonFont = hoi_18mbs
+            buttonText = PWC_WELCOME_CONTINUE
+            pdx_tooltip = PWC_WELCOME_DISMISS_TT
+            clicksound = click_default
+        }
+    }
+    containerWindowType = {
+        name = pwc_welcome_home_page
+        position = { x = 0 y = 140 }
+        size = { width = 1040 height = 456 }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_title
+            position = { x = 504 y = 16 }
+            font = PWC_focus_heading26
+            text = PWC_WELCOME_CHANGELOG_TITLE
+            maxWidth = 456
+            maxHeight = 34
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_date
+            position = { x = 504 y = 54 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_DATE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = pwc_welcome_changelog_rule
+            spriteType = PWC_GFX_welcome_tab_marker
+            position = { x = 504 y = 84 }
+            scale = 1
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_performance_title
+            position = { x = 504 y = 98 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_PERFORMANCE_TITLE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_performance_body
+            position = { x = 504 y = 124 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_CHANGELOG_PERFORMANCE_BODY
+            maxWidth = 456
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_industry_title
+            position = { x = 504 y = 168 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_INDUSTRY_TITLE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_industry_body
+            position = { x = 504 y = 194 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_CHANGELOG_INDUSTRY_BODY
+            maxWidth = 456
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_bonuses_title
+            position = { x = 504 y = 238 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_BONUSES_TITLE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_bonuses_body
+            position = { x = 504 y = 264 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_CHANGELOG_BONUSES_BODY
+            maxWidth = 456
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_operations_title
+            position = { x = 504 y = 308 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_OPERATIONS_TITLE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_operations_body
+            position = { x = 504 y = 334 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_CHANGELOG_OPERATIONS_BODY
+            maxWidth = 456
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_interface_title
+            position = { x = 504 y = 378 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_CHANGELOG_INTERFACE_TITLE
+            maxWidth = 456
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_changelog_interface_body
+            position = { x = 504 y = 404 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_CHANGELOG_INTERFACE_BODY
+            maxWidth = 456
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_greeting
+            position = { x = 80 y = 60 }
+            font = PWC_focus_heading26
+            text = PWC_WELCOME_GREETING
+            maxWidth = 400
+            maxHeight = 76
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_message
+            position = { x = 80 y = 156 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_MESSAGE
+            maxWidth = 400
+            maxHeight = 28
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = pwc_welcome_home_rule
+            spriteType = PWC_GFX_welcome_tab_marker
+            position = { x = 80 y = 232 }
+            scale = 1
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_disclaimer_title
+            position = { x = 80 y = 258 }
+            font = PWC_tech_caption
+            text = PWC_WELCOME_DISCLAIMER_TITLE
+            maxWidth = 400
+            maxHeight = 28
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_disclaimer_body
+            position = { x = 80 y = 306 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_DISCLAIMER_BODY
+            maxWidth = 400
+            maxHeight = 92
+            format = left
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = pwc_welcome_overview_page
+        position = { x = 0 y = 140 }
+        size = { width = 1040 height = 456 }
+        containerWindowType = {
+            name = pwc_welcome_city
+            position = { x = 32 y = 0 }
+            size = { width = 976 height = 102 }
+            background = {
+                name = pwc_welcome_city_background
+                quadTextureSprite = PWC_GFX_welcome_overview_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_city_icon
+                spriteType = PWC_GFX_focus_endgame_integration_charter
+                position = { x = 20 y = 18 }
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_city_title
+                position = { x = 72 y = 18 }
+                font = PWC_focus_heading26
+                text = PWC_WELCOME_CITY_TITLE
+                maxWidth = 228
+                maxHeight = 64
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_city_body
+                position = { x = 320 y = 15 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_CITY_BODY
+                maxWidth = 636
+                maxHeight = 76
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_territory
+            position = { x = 32 y = 114 }
+            size = { width = 976 height = 102 }
+            background = {
+                name = pwc_welcome_territory_background
+                quadTextureSprite = PWC_GFX_welcome_overview_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_territory_icon
+                spriteType = PWC_GFX_focus_war_occupation_authority
+                position = { x = 20 y = 18 }
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_territory_title
+                position = { x = 72 y = 18 }
+                font = PWC_focus_heading26
+                text = PWC_WELCOME_TERRITORY_TITLE
+                maxWidth = 228
+                maxHeight = 64
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_territory_body
+                position = { x = 320 y = 15 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_TERRITORY_BODY
+                maxWidth = 636
+                maxHeight = 76
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_progression
+            position = { x = 32 y = 228 }
+            size = { width = 976 height = 102 }
+            background = {
+                name = pwc_welcome_progression_background
+                quadTextureSprite = PWC_GFX_welcome_overview_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_progression_icon
+                spriteType = PWC_GFX_focus_eco_research_institute
+                position = { x = 20 y = 18 }
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_progression_title
+                position = { x = 72 y = 18 }
+                font = PWC_focus_heading26
+                text = PWC_WELCOME_PROGRESSION_TITLE
+                maxWidth = 228
+                maxHeight = 64
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_progression_body
+                position = { x = 320 y = 15 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_PROGRESSION_BODY
+                maxWidth = 636
+                maxHeight = 76
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_rules
+            position = { x = 32 y = 342 }
+            size = { width = 976 height = 102 }
+            background = {
+                name = pwc_welcome_rules_background
+                quadTextureSprite = PWC_GFX_welcome_overview_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_rules_icon
+                spriteType = PWC_GFX_focus_law_cabinet_charter
+                position = { x = 20 y = 18 }
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_rules_title
+                position = { x = 72 y = 18 }
+                font = PWC_focus_heading26
+                text = PWC_WELCOME_RULES_TITLE
+                maxWidth = 228
+                maxHeight = 64
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_rules_body
+                position = { x = 320 y = 15 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_RULES_BODY
+                maxWidth = 636
+                maxHeight = 76
+                format = left
+                alwaystransparent = yes
+            }
+        }
+    }
+    containerWindowType = {
+        name = pwc_welcome_buildings_page
+        position = { x = 0 y = 140 }
+        size = { width = 1040 height = 456 }
+        containerWindowType = {
+            name = pwc_welcome_tech_center
+            position = { x = 32 y = 0 }
+            size = { width = 480 height = 154 }
+            background = {
+                name = pwc_welcome_tech_center_background
+                quadTextureSprite = PWC_GFX_welcome_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_tech_center_icon
+                spriteType = PWC_GFX_building_tech_center
+                position = { x = 20 y = 16 }
+                scale = 1.25
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_tech_center_title
+                position = { x = 92 y = 14 }
+                font = PWC_focus_heading26
+                text = pwc_building_tech_center
+                maxWidth = 368
+                maxHeight = 32
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_tech_center_limit
+                position = { x = 92 y = 50 }
+                font = PWC_tech_caption
+                text = PWC_WELCOME_TECH_CENTER_LIMIT
+                maxWidth = 368
+                maxHeight = 24
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_tech_center_body
+                position = { x = 20 y = 86 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_TECH_CENTER_BODY
+                maxWidth = 440
+                maxHeight = 60
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_institutes
+            position = { x = 528 y = 0 }
+            size = { width = 480 height = 154 }
+            background = {
+                name = pwc_welcome_institutes_background
+                quadTextureSprite = PWC_GFX_welcome_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_institutes_icon
+                spriteType = PWC_GFX_building_domain_industry
+                position = { x = 20 y = 16 }
+                scale = 1.25
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_institutes_title
+                position = { x = 92 y = 14 }
+                font = PWC_focus_heading26
+                text = PWC_WELCOME_INSTITUTES_TITLE
+                maxWidth = 368
+                maxHeight = 32
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_institutes_limit
+                position = { x = 92 y = 50 }
+                font = PWC_tech_caption
+                text = PWC_WELCOME_INSTITUTES_LIMIT
+                maxWidth = 368
+                maxHeight = 24
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_institutes_body
+                position = { x = 20 y = 86 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_INSTITUTES_BODY
+                maxWidth = 440
+                maxHeight = 60
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_manufacturing
+            position = { x = 32 y = 166 }
+            size = { width = 480 height = 154 }
+            background = {
+                name = pwc_welcome_manufacturing_background
+                quadTextureSprite = PWC_GFX_welcome_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_manufacturing_icon
+                spriteType = PWC_GFX_building_industrial_facility
+                position = { x = 20 y = 16 }
+                scale = 1.25
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_manufacturing_title
+                position = { x = 92 y = 14 }
+                font = PWC_focus_heading26
+                text = pwc_building_industrial_facility
+                maxWidth = 368
+                maxHeight = 32
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_manufacturing_limit
+                position = { x = 92 y = 50 }
+                font = PWC_tech_caption
+                text = PWC_WELCOME_MANUFACTURING_LIMIT
+                maxWidth = 368
+                maxHeight = 24
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_manufacturing_body
+                position = { x = 20 y = 86 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_MANUFACTURING_BODY
+                maxWidth = 440
+                maxHeight = 60
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_welcome_logistics
+            position = { x = 528 y = 166 }
+            size = { width = 480 height = 154 }
+            background = {
+                name = pwc_welcome_logistics_background
+                quadTextureSprite = PWC_GFX_welcome_card
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = pwc_welcome_logistics_icon
+                spriteType = PWC_GFX_building_supply_hub
+                position = { x = 20 y = 16 }
+                scale = 1.25
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_logistics_title
+                position = { x = 92 y = 14 }
+                font = PWC_focus_heading26
+                text = pwc_building_supply_hub
+                maxWidth = 368
+                maxHeight = 32
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_logistics_limit
+                position = { x = 92 y = 50 }
+                font = PWC_tech_caption
+                text = PWC_WELCOME_LOGISTICS_LIMIT
+                maxWidth = 368
+                maxHeight = 24
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = pwc_welcome_logistics_body
+                position = { x = 20 y = 86 }
+                font = hoi_18mbs
+                text = PWC_WELCOME_LOGISTICS_BODY
+                maxWidth = 440
+                maxHeight = 60
+                format = left
+                alwaystransparent = yes
+            }
+        }
+        instantTextboxType = {
+            name = pwc_welcome_gates_title
+            position = { x = 32 y = 338 }
+            font = PWC_focus_heading26
+            text = PWC_WELCOME_GATES_TITLE
+            maxWidth = 976
+            maxHeight = 32
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_effect_note
+            position = { x = 32 y = 412 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_EFFECT_NOTE
+            maxWidth = 976
+            maxHeight = 44
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_tier_1
+            position = { x = 32 y = 378 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_TIER_1
+            maxWidth = 232
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_tier_2
+            position = { x = 276 y = 378 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_TIER_2
+            maxWidth = 232
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_tier_3
+            position = { x = 520 y = 378 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_TIER_3
+            maxWidth = 232
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = pwc_welcome_tier_4
+            position = { x = 764 y = 378 }
+            font = hoi_18mbs
+            text = PWC_WELCOME_TIER_4
+            maxWidth = 232
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

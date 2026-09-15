@@ -1,0 +1,25 @@
+* text=auto
+.gitattributes text eol=lf
+README.md text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+common/** text eol=crlf
+events/** text eol=crlf
+history/** text eol=crlf
+interface/** text eol=crlf
+map/** text eol=crlf
+portraits/** text eol=crlf
+descriptor.mod text eol=crlf
+common/defines/PWC_defines.lua text eol=lf
+localisation/** text eol=crlf
+*.bmp binary
+*.tga binary
+*.dds binary
+*.png binary
+*.jpg binary
+*.ogg binary
+*.wav binary
+*.mp3 binary
+music/*.asset text eol=crlf
+music/PWC_songs.txt text eol=crlf
+music/LICENSE-CC-BY-4.0.txt -text

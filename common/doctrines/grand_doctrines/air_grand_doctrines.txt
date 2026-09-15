@@ -1,0 +1,286 @@
+
+
+new_strategic_destruction = {
+    folder = air
+    name = PWC_GRAND_NEW_STRATEGIC_DESTRUCTION
+    description = PWC_GRAND_NEW_STRATEGIC_DESTRUCTION_DESC
+    icon = GFX_doctrine_strategic_destruction_medium
+    xp_cost = 100
+    xp_type = air
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_air_wing
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_industrial
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_battlefield_interdiction
+        }
+    }
+    tracks = {
+        fighter_aircraft
+        strike_aircraft
+        heavy_aircraft
+    }
+    air_strategic_bomber_bombing_factor = 0.09
+    air_escort_efficiency = 0.05
+    air_cas_efficiency = -0.05
+    milestones = {
+        {
+            air_escort_efficiency = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = fighters_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            air_mission_xp_gain_factor = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = strikers_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            air_strategic_bomber_defence_factor = 0.06
+            air_strategic_bomber_bombing_factor = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = heavies_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+new_battlefield_support = {
+    folder = air
+    name = PWC_GRAND_NEW_BATTLEFIELD_SUPPORT
+    description = PWC_GRAND_NEW_BATTLEFIELD_SUPPORT_DESC
+    icon = GFX_doctrine_direct_ground_support_medium
+    xp_cost = 100
+    xp_type = air
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_air_wing
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_air_power
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_air_joint_strike
+        }
+    }
+    tracks = {
+        fighter_aircraft
+        strike_aircraft
+        heavy_aircraft
+    }
+    air_cas_efficiency = 0.09
+    ground_attack_factor = 0.05
+    air_intercept_efficiency = -0.05
+    milestones = {
+        {
+            air_superiority_efficiency = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = fighters_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            ground_attack_factor = 0.05
+            air_mission_xp_gain_factor = 0.03
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = strikers_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            air_mission_efficiency = 0.03
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = heavies_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+new_operational_integrity = {
+    folder = air
+    name = PWC_GRAND_NEW_OPERATIONAL_INTEGRITY
+    description = PWC_GRAND_NEW_OPERATIONAL_INTEGRITY_DESC
+    icon = GFX_doctrine_operational_destruction_medium
+    xp_cost = 100
+    xp_type = air
+    available = {
+        pwc_st_city_alive = yes
+        has_completed_focus = mil_air_wing
+    }
+    ai_will_do = {
+        base = 1
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_defense
+        }
+        modifier = {
+            factor = 2
+            has_completed_focus = mil_air_denial
+        }
+    }
+    tracks = {
+        fighter_aircraft
+        strike_aircraft
+        heavy_aircraft
+    }
+    air_intercept_efficiency = 0.09
+    air_accidents_factor = -0.05
+    air_strategic_bomber_bombing_factor = -0.05
+    milestones = {
+        {
+            air_interception_detect_factor = 0.06
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = fighters_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        fighters_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            air_weather_penalty = -0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = strikers_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        strikers_milestone_var = 1
+                    }
+                }
+            }
+        }
+        {
+            air_strategic_bomber_defence_factor = 0.05
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = heavies_milestone_var
+                        }
+                    }
+                    set_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        heavies_milestone_var = 1
+                    }
+                }
+            }
+        }
+    }
+}
+

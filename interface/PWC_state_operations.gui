@@ -1,0 +1,558 @@
+
+guiTypes = {
+    containerWindowType = {
+        name = pwc_state_operations_near
+        position = { x = 468 y = 129 }
+        size = { width = 296 height = 524 }
+        moveable = no
+        clipping = yes
+        background = {
+            name = background
+            quadTextureSprite = PWC_GFX_state_operations_panel
+        }
+        instantTextBoxType = {
+            name = pwc_ops_title
+            position = { x = 18 y = 12 }
+            font = hoi_24header
+            text = "PWC_STATE_OPERATIONS_TITLE"
+            maxWidth = 260
+            maxHeight = 28
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_state
+            position = { x = 18 y = 44 }
+            font = hoi_18mbs
+            text = "PWC_STATE_OPERATIONS_STATE"
+            maxWidth = 260
+            maxHeight = 22
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_scope
+            position = { x = 18 y = 70 }
+            font = hoi_16mbs
+            text = "PWC_STATE_OPERATIONS_SCOPE"
+            maxWidth = 260
+            maxHeight = 20
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_ops_tab_operations
+            position = { x = 14 y = 98 }
+            quadTextureSprite = PWC_GFX_state_operations_tab
+            buttonText = PWC_STATE_OPERATIONS_OPERATIONS
+            buttonFont = hoi_16mbs
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_ops_operations_selected
+            position = { x = 16 y = 130 }
+            spriteType = PWC_GFX_state_operations_tab_selected
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_ops_tab_support
+            position = { x = 154 y = 98 }
+            quadTextureSprite = PWC_GFX_state_operations_tab
+            buttonText = PWC_STATE_OPERATIONS_SUPPORT
+            buttonFont = hoi_16mbs
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_ops_support_selected
+            position = { x = 156 y = 130 }
+            spriteType = PWC_GFX_state_operations_tab_selected
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_footer
+            position = { x = 14 y = 492 }
+            font = hoi_16mbs
+            text = "PWC_STATE_OPERATIONS_FOOTER"
+            maxWidth = 268
+            maxHeight = 20
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = pwc_state_operations_far
+        position = { x = 772 y = 5 }
+        size = { width = 296 height = 524 }
+        moveable = no
+        clipping = yes
+        background = {
+            name = background
+            quadTextureSprite = PWC_GFX_state_operations_panel
+        }
+        instantTextBoxType = {
+            name = pwc_ops_title
+            position = { x = 18 y = 12 }
+            font = hoi_24header
+            text = "PWC_STATE_OPERATIONS_TITLE"
+            maxWidth = 260
+            maxHeight = 28
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_state
+            position = { x = 18 y = 44 }
+            font = hoi_18mbs
+            text = "PWC_STATE_OPERATIONS_STATE"
+            maxWidth = 260
+            maxHeight = 22
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_scope
+            position = { x = 18 y = 70 }
+            font = hoi_16mbs
+            text = "PWC_STATE_OPERATIONS_SCOPE"
+            maxWidth = 260
+            maxHeight = 20
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_ops_tab_operations
+            position = { x = 14 y = 98 }
+            quadTextureSprite = PWC_GFX_state_operations_tab
+            buttonText = PWC_STATE_OPERATIONS_OPERATIONS
+            buttonFont = hoi_16mbs
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_ops_operations_selected
+            position = { x = 16 y = 130 }
+            spriteType = PWC_GFX_state_operations_tab_selected
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = pwc_ops_tab_support
+            position = { x = 154 y = 98 }
+            quadTextureSprite = PWC_GFX_state_operations_tab
+            buttonText = PWC_STATE_OPERATIONS_SUPPORT
+            buttonFont = hoi_16mbs
+            clicksound = click_default
+        }
+        iconType = {
+            name = pwc_ops_support_selected
+            position = { x = 156 y = 130 }
+            spriteType = PWC_GFX_state_operations_tab_selected
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = pwc_ops_footer
+            position = { x = 14 y = 492 }
+            font = hoi_16mbs
+            text = "PWC_STATE_OPERATIONS_FOOTER"
+            maxWidth = 268
+            maxHeight = 20
+            format = left
+            multiline = no
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = pwc_ops_operations_scroll
+        position = { x = 14 y = 140 }
+        size = { width = 268 height = 344 }
+        clipping = yes
+        verticalScrollbar = right_vertical_slider
+        scroll_wheel_factor = 58
+        margin = { right = 20 }
+        containerWindowType = {
+            name = pwc_ops_fire_coordination_row
+            position = { x = 0 y = 0 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_fire_coordination
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_FIRE_COORDINATION_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_fire_coordination_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_fire_coordination_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_fire_coordination_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_FIRE_COORDINATION_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_fire_coordination_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_FIRE_COORDINATION_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_fire_coordination_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_FIRE_COORDINATION_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_ops_deliberate_assault_row
+            position = { x = 0 y = 58 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_deliberate_assault
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_deliberate_assault_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_deliberate_offensive_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deliberate_assault_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deliberate_assault_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deliberate_assault_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_ops_deep_thrust_row
+            position = { x = 0 y = 116 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_deep_thrust
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_DEEP_THRUST_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_deep_thrust_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_deep_exploitation_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deep_thrust_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_DEEP_THRUST_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deep_thrust_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_DEEP_THRUST_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_deep_thrust_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_DEEP_THRUST_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_ops_elastic_counterattack_row
+            position = { x = 0 y = 174 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_elastic_counterattack
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_elastic_counterattack_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_defence_in_depth_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_elastic_counterattack_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_elastic_counterattack_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_elastic_counterattack_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+    }
+    containerWindowType = {
+        name = pwc_ops_support_scroll
+        position = { x = 14 y = 140 }
+        size = { width = 268 height = 344 }
+        clipping = yes
+        verticalScrollbar = right_vertical_slider
+        scroll_wheel_factor = 58
+        margin = { right = 20 }
+        containerWindowType = {
+            name = pwc_ops_supply_staging_row
+            position = { x = 0 y = 0 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_supply_staging
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_SUPPLY_STAGING_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_supply_staging_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_war_reserves_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_supply_staging_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_SUPPLY_STAGING_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_supply_staging_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_SUPPLY_STAGING_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_supply_staging_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_SUPPLY_STAGING_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_ops_mobile_workshops_row
+            position = { x = 0 y = 58 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_mobile_workshops
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_mobile_workshops_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_field_repairs_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_mobile_workshops_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_mobile_workshops_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_mobile_workshops_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = pwc_ops_evacuation_posts_row
+            position = { x = 0 y = 116 }
+            size = { width = 248 height = 54 }
+            clipping = yes
+            buttonType = {
+                name = pwc_ops_evacuation_posts
+                position = { x = 0 y = 0 }
+                quadTextureSprite = PWC_GFX_state_operations_row
+                pdx_tooltip = PWC_STATE_OPERATIONS_EVACUATION_POSTS_TOOLTIP
+                clicksound = click_default
+            }
+            iconType = {
+                name = pwc_ops_evacuation_posts_icon
+                position = { x = 8 y = 4 }
+                spriteType = GFX_idea_pwc_military_evacuation_active
+                scale = 0.4
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_evacuation_posts_name
+                position = { x = 40 y = 7 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_EVACUATION_POSTS_CAPTION"
+                maxWidth = 200
+                maxHeight = 20
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_evacuation_posts_status
+                position = { x = 10 y = 31 }
+                font = hoi_16mbs
+                text = "[PWC_STATE_OPERATIONS_EVACUATION_POSTS_STATUS]"
+                maxWidth = 136
+                maxHeight = 18
+                format = left
+                multiline = no
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = pwc_ops_evacuation_posts_cost
+                position = { x = 150 y = 31 }
+                font = hoi_16mbs
+                text = "PWC_STATE_OPERATIONS_EVACUATION_POSTS_COST"
+                maxWidth = 88
+                maxHeight = 18
+                format = right
+                multiline = no
+                alwaystransparent = yes
+            }
+        }
+    }
+}

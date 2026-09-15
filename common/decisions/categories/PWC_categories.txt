@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+PWC_politics_category = {
+	icon = GFX_decision_category_PWC_politics_category
+	
+	allowed = { pwc_st_is_city_country = yes }
+	visible = {
+		pwc_st_is_city_country = yes
+	}
+	visible_when_empty = no
+	priority = 600
+}
+
+PWC_war_category = {
+	icon = GFX_decision_category_PWC_war_category
+	
+	allowed = { pwc_st_is_city_country = yes }
+	visible = {
+		pwc_st_is_city_country = yes
+	}
+	visible_when_empty = no
+	priority = 900
+}
+
+PWC_diplomacy_category = {
+	icon = GFX_decision_category_PWC_diplomacy_category
+	
+	allowed = { pwc_st_is_city_country = yes }
+	visible = {
+		pwc_st_is_city_country = yes
+		has_country_flag = pwc_flag_diplomatic_corps
+	}
+	visible_when_empty = no
+	priority = 400
+}

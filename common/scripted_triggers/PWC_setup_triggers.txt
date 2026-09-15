@@ -1,0 +1,49 @@
+
+pwc_st_unit_limit_applies = {
+    pwc_st_is_city_country = yes
+    NOT = { has_game_rule = { rule = pwc_unit_limit option = OFF } }
+    OR = {
+        NOT = { has_game_rule = { rule = pwc_unit_limit option = AI_ONLY } }
+        is_ai = yes
+    }
+}
+pwc_st_demobilization_applies = {
+    pwc_st_is_city_country = yes
+    NOT = { has_game_rule = { rule = pwc_demobilization option = OFF } }
+    OR = {
+        NOT = { has_game_rule = { rule = pwc_demobilization option = AI_ONLY } }
+        is_ai = yes
+    }
+}
+pwc_st_peacetime_mobilization_allowed = {
+    OR = {
+        pwc_st_demobilization_applies = no
+        has_war = yes
+        has_active_mission = pwc_demobilization_grace
+    }
+}
+pwc_st_legal_war_request = {
+    
+    hidden_trigger = {
+        exists = yes
+        pwc_st_is_city_country = yes
+        pwc_st_city_alive = yes
+        pwc_st_target_reachable = yes
+        OR = {
+            is_ai = no
+            pwc_st_target_adjacent = yes
+            pwc_st_ai_cross_strait_target_ready = yes
+        }
+        NOT = { tag = FROM }
+        FROM = {
+            exists = yes
+            pwc_st_is_city_country = yes
+            pwc_st_city_alive = yes
+        }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_WAR_PROTECTION_READY_TT
+        pwc_st_protection_active = no
+    }
+    NOT = { has_war_with = FROM }
+}

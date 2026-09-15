@@ -1,0 +1,31 @@
+scripted_gui = {
+    PWC_unit_capacity_gui = {
+        window_name = "PWC_unit_capacity_entry"
+        context_type = player_context
+        parent_window_name = "pwc_unit_capacity_anchor"
+        ai_enabled = { always = no }
+        visible = { always = yes }
+    }
+    PWC_unit_capacity_meter_gui = {
+        window_name = "pwc_unit_capacity_meter"
+        context_type = player_context
+        parent_window_name = "pwc_unit_capacity_anchor"
+        ai_enabled = { always = no }
+        visible = { pwc_st_unit_limit_applies = yes }
+        properties = {
+            pwc_unit_capacity_progressbar = {
+                x = pwc_unit_capacity_bar_offset
+            }
+        }
+    }
+    PWC_unit_capacity_alert_gui = {
+        window_name = "pwc_unit_capacity_alert_container"
+        context_type = player_context
+        parent_window_name = "after_intel_agency_button"
+        ai_enabled = { always = no }
+        visible = {
+            pwc_st_unit_limit_applies = yes
+            check_variable = { pwc_unit_penalty > 0 }
+        }
+    }
+}

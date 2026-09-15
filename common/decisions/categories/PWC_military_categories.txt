@@ -1,0 +1,41 @@
+
+
+pwc_military_training = {
+    icon = GFX_decision_category_military_operation
+    priority = 40
+    visible_when_empty = no
+    allowed = {
+        NOT = {
+            tag = NTR
+        }
+    }
+    visible = {
+        pwc_st_city_alive = yes
+    }
+}
+pwc_military_support = {
+    icon = GFX_decision_category_military_operation
+    priority = 40
+    visible_when_empty = no
+    allowed = {
+        NOT = {
+            tag = NTR
+        }
+    }
+    visible = {
+        pwc_st_city_alive = yes
+    }
+}
+pwc_military_operations = {
+    icon = GFX_decision_category_military_operation
+    priority = 40
+    visible_when_empty = no
+    allowed = {
+        NOT = {
+            tag = NTR
+        }
+    }
+    visible = {
+        pwc_st_city_alive = yes
+    }
+}

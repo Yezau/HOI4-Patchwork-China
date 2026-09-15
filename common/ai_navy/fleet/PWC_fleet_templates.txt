@@ -1,0 +1,51 @@
+
+
+PWC_strait_dominance_fleet = {
+    required_taskforces = {
+        PWC_strait_patrol = 2
+        PWC_strait_strike = 3
+    }
+    optional_taskforces = {
+        PWC_strait_patrol = 2
+        PWC_strait_strike = 1
+    }
+}
+PWC_strait_patrol_fleet = {
+    required_taskforces = {
+        PWC_strait_patrol = 1
+    }
+    optional_taskforces = {
+    }
+}
+PWC_strait_escort_fleet = {
+    required_taskforces = {
+        PWC_strait_escort = 1
+    }
+    optional_taskforces = {
+        PWC_strait_escort = 1
+    }
+}
+PWC_strait_raiding_fleet = {
+    required_taskforces = {
+        PWC_strait_raiding = 1
+    }
+    optional_taskforces = {
+        PWC_strait_raiding = 1
+    }
+}
+PWC_strait_invasion_fleet = {
+    required_taskforces = {
+        PWC_strait_invasion = 1
+    }
+    optional_taskforces = {
+        PWC_strait_escort = 1
+    }
+}
+PWC_strait_strike_fleet = {
+    required_taskforces = {
+        PWC_strait_strike = 1
+    }
+    optional_taskforces = {
+        PWC_strait_strike = 1
+    }
+}

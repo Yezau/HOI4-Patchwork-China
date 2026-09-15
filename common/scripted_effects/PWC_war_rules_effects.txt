@@ -1,0 +1,4346 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pwc_se_start_war_warning = {
+	if = {
+		limit = {
+			pwc_st_legal_war_request = yes
+			NOT = { pwc_st_warning_in_progress = yes }
+		}
+		set_country_flag = pwc_flag_warning_to_@FROM
+		
+		set_country_flag = pwc_flag_warning_active
+		FROM = { set_country_flag = pwc_flag_warning_from_@ROOT }
+		pwc_se_warning_break_nap = yes
+		pwc_se_warning_cancel_access = yes
+		if = {
+			limit = { has_game_rule = { rule = pwc_war_warning option = OFF } }
+			pwc_se_on_warning_expiry = yes
+		}
+		else = {
+			pwc_se_add_war_warning_alert = yes
+			log = "PWC WARNING start initiator=[ROOT.GetName] target=[FROM.GetName]"
+		}
+	}
+}
+
+
+
+pwc_se_add_war_warning_alert = {
+	FROM = {
+		if = {
+			limit = {
+				NOT = { has_war_with = ROOT }
+				NOT = {
+					is_in_array = {
+						array = pwc_war_warning_attackers
+						value = ROOT
+					}
+				}
+			}
+			add_to_array = {
+				array = pwc_war_warning_attackers
+				value = ROOT
+			}
+			add_to_variable = { global.pwc_alerts_dirty = 1 }
+		}
+	}
+}
+
+
+pwc_se_clear_war_warning_alert = {
+	if = {
+		limit = { FROM = { exists = yes } }
+		FROM = {
+			if = {
+				limit = {
+					is_in_array = {
+						array = pwc_war_warning_attackers
+						value = ROOT
+					}
+				}
+				remove_from_array = {
+					array = pwc_war_warning_attackers
+					value = ROOT
+				}
+				add_to_variable = { global.pwc_alerts_dirty = 1 }
+			}
+		}
+	}
+}
+
+
+pwc_se_clear_war_warning = {
+	clr_country_flag = pwc_flag_warning_to_@FROM
+	if = {
+		limit = { FROM = { exists = yes } }
+		FROM = { clr_country_flag = pwc_flag_warning_from_@ROOT }
+	}
+	pwc_se_clear_war_warning_alert = yes
+	
+	if = {
+		limit = {
+			NOT = {
+				any_country = { has_country_flag = pwc_flag_warning_from_@ROOT }
+			}
+		}
+		clr_country_flag = pwc_flag_warning_active
+	}
+}
+
+
+pwc_se_refresh_warning_active = {
+    if = {
+        limit = {
+            has_country_flag = pwc_flag_warning_active
+            NOT = {
+                any_country = {
+                    pwc_st_city_alive = yes
+                    has_country_flag = pwc_flag_warning_from_@PREV
+                }
+            }
+        }
+        clr_country_flag = pwc_flag_warning_active
+    }
+}
+
+
+
+pwc_se_clear_eliminated_war_warnings = {
+    every_possible_country = {
+        limit = { pwc_st_is_city_country = yes }
+        clr_country_flag = pwc_flag_warning_from_@PREV
+        PREV = {
+            clr_country_flag = pwc_flag_warning_to_@PREV
+            clr_country_flag = pwc_flag_warning_from_@PREV
+        }
+        if = {
+            limit = { has_country_flag = pwc_flag_warning_to_@PREV }
+            clr_country_flag = pwc_flag_warning_to_@PREV
+            pwc_se_refresh_warning_active = yes
+        }
+        if = {
+            limit = {
+                is_in_array = { array = pwc_war_warning_attackers value = PREV }
+            }
+            remove_from_array = { array = pwc_war_warning_attackers value = PREV }
+            add_to_variable = { global.pwc_alerts_dirty = 1 }
+        }
+    }
+    clr_country_flag = pwc_flag_warning_active
+    if = {
+        limit = { check_variable = { pwc_war_warning_attackers^num > 0 } }
+        clear_array = pwc_war_warning_attackers
+        add_to_variable = { global.pwc_alerts_dirty = 1 }
+    }
+}
+
+
+
+pwc_se_reconcile_war_warnings = {
+    if = {
+        limit = {
+            OR = {
+                has_country_flag = pwc_flag_warning_active
+                check_variable = { pwc_war_warning_attackers^num > 0 }
+            }
+        }
+        every_possible_country = {
+            limit = {
+                pwc_st_is_city_country = yes
+                OR = { exists = no pwc_st_city_alive = no }
+                OR = {
+                    has_country_flag = pwc_flag_warning_from_@PREV
+                    has_country_flag = pwc_flag_warning_to_@PREV
+                    is_in_array = { array = pwc_war_warning_attackers value = PREV }
+                    PREV = {
+                        OR = {
+                            has_country_flag = pwc_flag_warning_from_@PREV
+                            has_country_flag = pwc_flag_warning_to_@PREV
+                            is_in_array = {
+                                array = pwc_war_warning_attackers
+                                value = PREV
+                            }
+                        }
+                    }
+                }
+            }
+            pwc_se_clear_eliminated_war_warnings = yes
+        }
+        pwc_se_refresh_warning_active = yes
+    }
+}
+
+
+
+
+pwc_se_clear_integration_alert = {
+	clear_variable = integration_alert_timer_@var:target
+	clear_variable = integration_progressbar_value_@var:target
+	if = {
+		limit = {
+			is_in_array = {
+				array = pwc_state_integration_alerts
+				value = var:target
+			}
+		}
+		remove_from_array = {
+			array = pwc_state_integration_alerts
+			value = var:target
+		}
+	}
+	add_to_variable = { global.pwc_alerts_dirty = 1 }
+}
+
+pwc_se_update_integration_progressbar = {
+	set_variable = {
+		integration_progressbar_value_@var:target = {
+			value = integration_alert_timer_@var:target
+			divide = 72
+			multiply = 300
+			subtract = 300
+			round = yes
+			clamp = { min = -300 max = 0 }
+		}
+	}
+}
+
+
+
+
+pwc_se_push_integration_alert = {
+	if = {
+		limit = {
+			is_ai = no
+			NOT = {
+				is_in_array = {
+					array = pwc_state_integration_alerts
+					value = event_target:pwc_cored_state
+				}
+			}
+		}
+		set_temp_variable = { target = event_target:pwc_cored_state }
+		set_variable = {
+			integration_progressbar_value_@var:target = -300
+		}
+		set_variable = {
+			integration_alert_timer_@var:target = 0
+		}
+		add_to_array = {
+			array = pwc_state_integration_alerts
+			value = var:target
+		}
+		add_to_variable = { global.pwc_alerts_dirty = 1 }
+		pwc_se_ensure_integration_tick = yes
+	}
+}
+
+
+
+pwc_se_ensure_integration_tick = {
+    if = {
+        limit = {
+            is_ai = no
+            check_variable = { pwc_state_integration_alerts^num > 0 }
+            NOT = { has_country_flag = pwc_flag_integration_tick_pending }
+        }
+        set_country_flag = {
+            flag = pwc_flag_integration_tick_pending days = 1
+        }
+        country_event = { id = pwc_ev_integration_tick.2 hours = 1 }
+    }
+}
+
+pwc_se_tick_integration_alerts = {
+    clr_country_flag = pwc_flag_integration_tick_pending
+    if = {
+        limit = {
+            is_ai = no
+            check_variable = { pwc_state_integration_alerts^num > 0 }
+        }
+        
+        clear_temp_array = pwc_integration_tick_snapshot
+        for_each_loop = {
+            array = pwc_state_integration_alerts
+            value = pwc_integration_tick_state
+            add_to_temp_array = {
+                array = pwc_integration_tick_snapshot
+                value = var:pwc_integration_tick_state
+            }
+        }
+        for_each_loop = {
+            array = pwc_integration_tick_snapshot
+            value = target
+            add_to_variable = { integration_alert_timer_@var:target = 1 }
+            if = {
+                limit = {
+                    check_variable = { integration_alert_timer_@var:target > 71 }
+                }
+                pwc_se_clear_integration_alert = yes
+            }
+            else = { pwc_se_update_integration_progressbar = yes }
+        }
+        clear_temp_array = pwc_integration_tick_snapshot
+        add_to_variable = { global.pwc_alerts_dirty = 1 }
+        pwc_se_ensure_integration_tick = yes
+    }
+}
+
+
+pwc_se_warning_break_nap = {
+	if = {
+		limit = { has_non_aggression_pact_with = FROM }
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = no
+		}
+	}
+}
+
+
+
+
+pwc_se_warning_cancel_access = {
+	diplomatic_relation = {
+		country = FROM
+		relation = military_access
+		active = no
+	}
+	FROM = {
+		diplomatic_relation = {
+			country = ROOT
+			relation = military_access
+			active = no
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+pwc_se_declare_war_on_warning_expiry = {
+	if = {
+		limit = {
+			pwc_st_legal_war_request = yes
+		}
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+pwc_se_on_warning_expiry = {
+	if = {
+		limit = { has_country_flag = pwc_flag_warning_to_@FROM }
+		pwc_se_clear_war_warning = yes
+		if = {
+			limit = { FROM = { exists = yes } }
+			remove_targeted_decision = { target = FROM decision = pwc_dec_war_warning_countdown }
+		}
+		pwc_se_declare_war_on_warning_expiry = yes
+		if = {
+			limit = {
+				FROM = { exists = yes }
+				has_war_with = FROM
+			}
+			log = "PWC WAR declared on warning expiry initiator=[ROOT.GetName] target=[FROM.GetName]"
+		}
+		else = {
+			log = "PWC WARNING expired without war initiator=[ROOT.GetName]"
+		}
+	}
+}
+
+
+
+
+pwc_se_on_surrender_settle = {
+	if = {
+		limit = {
+			pwc_st_is_city_country = yes
+			pwc_st_settlement_not_done = yes
+			NOT = { has_game_rule = { rule = pwc_peace_conference option = ON } }
+		}
+		set_country_flag = pwc_flag_settled
+		pwc_se_capture_war_report = yes
+		add_to_variable = { global.pwc_capitulation_fires = 1 }
+		add_to_variable = { global.pwc_settle_runs = 1 }
+		log = "PWC SETTLE begin target=[ROOT.GetName] fires=[?global.pwc_capitulation_fires]"
+
+		
+		set_variable = { var = pwc_best_gain value = -1 }
+		set_variable = { var = pwc_best_rank value = 999 }
+		save_event_target_as = pwc_capital_controller
+		save_event_target_as = pwc_claimant
+
+		
+		
+		
+		
+		every_enemy_country = {
+			set_variable = { var = pwc_war_gain value = 0 }
+			every_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = PREV
+				}
+				transfer_state_to = PREV
+				PREV = { add_to_variable = { pwc_war_gain = 1 } }
+				if = {
+					limit = { is_capital = yes }
+					PREV = { save_event_target_as = pwc_capital_controller }
+				}
+			}
+		}
+
+		
+		
+		every_enemy_country = {
+			if = {
+				limit = { check_variable = { var = pwc_war_gain value = ROOT.pwc_best_gain compare = greater_than } }
+				set_variable = { var = ROOT.pwc_best_gain value = pwc_war_gain }
+			}
+		}
+		every_enemy_country = {
+			if = {
+				limit = {
+					pwc_st_city_alive = yes
+					check_variable = { var = pwc_war_gain value = ROOT.pwc_best_gain compare = equals }
+					check_variable = { var = pwc_tag_rank value = ROOT.pwc_best_rank compare = less_than }
+				}
+				set_variable = { var = ROOT.pwc_best_rank value = pwc_tag_rank }
+				save_event_target_as = pwc_claimant
+			}
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		every_state = {
+			limit = { is_owned_by = ROOT }
+			if = {
+				limit = { NOT = { event_target:pwc_capital_controller = { tag = ROOT } } }
+				transfer_state_to = event_target:pwc_capital_controller
+				log = "PWC SETTLE residual -> capital controller"
+			}
+			else_if = {
+				limit = { NOT = { event_target:pwc_claimant = { tag = ROOT } } }
+				transfer_state_to = event_target:pwc_claimant
+				log = "PWC SETTLE residual -> claimant"
+			}
+		}
+
+		
+		
+		every_enemy_country = { pwc_se_apply_war_cooldown = yes }
+		
+		every_enemy_country = { white_peace = { tag = ROOT } }
+
+		
+		pwc_se_record_settlement_report_winner = yes
+		pwc_se_mark_city_eliminated = yes
+		if = {
+			limit = { NOT = { event_target:pwc_capital_controller = { tag = ROOT } } }
+			event_target:pwc_capital_controller = { annex_country = { target = ROOT transfer_troops = yes } }
+			log = "PWC SETTLE remnant annexed by capital controller"
+		}
+		else_if = {
+			limit = { NOT = { event_target:pwc_claimant = { tag = ROOT } } }
+			event_target:pwc_claimant = { annex_country = { target = ROOT transfer_troops = yes } }
+			log = "PWC SETTLE remnant annexed by claimant"
+		}
+		log = "PWC SETTLE end runs=[?global.pwc_settle_runs]"
+	}
+	else = {
+		log = "PWC SETTLE skipped, already settled"
+	}
+}
+
+
+
+pwc_se_mark_city_eliminated = {
+	if = {
+		limit = {
+			pwc_st_is_city_country = yes
+			NOT = { has_country_flag = pwc_flag_city_eliminated }
+		}
+	pwc_se_init_war_reports = yes
+	clr_country_flag = pwc_flag_city_alive
+	set_country_flag = pwc_flag_city_eliminated
+	pwc_se_clear_eliminated_war_warnings = yes
+	add_to_variable = { global.pwc_alive_count = -1 }
+	pwc_se_publish_war_report = yes
+	}
+}
+
+
+
+
+pwc_se_check_champion = {
+	pwc_se_check_war_milestones = yes
+	if = {
+		limit = {
+			check_variable = { var = global.pwc_alive_count value = 1 compare = equals }
+			NOT = { has_global_flag = pwc_flag_champion_crowned }
+		}
+		set_global_flag = pwc_flag_champion_crowned
+		every_country = {
+			limit = {
+				pwc_st_is_city_country = yes
+				pwc_st_city_alive = yes
+				exists = yes
+			}
+			country_event = { id = pwc_ev_last_city_champion.1 }
+		}
+		log = "PWC CHAMPION crowned alive=[?global.pwc_alive_count]"
+	}
+}
+
+
+
+pwc_se_monthly_gate_latch = {
+	pwc_se_reconcile_research_infrastructure = yes
+}
+
+
+
+pwc_se_init_world_runtime = {
+	if = {
+		limit = { NOT = { has_global_flag = pwc_flag_runtime_initialized } }
+		set_global_flag = pwc_flag_runtime_initialized
+		set_variable = { var = global.pwc_alive_count value = 366 }
+		set_variable = { var = global.pwc_capitulation_fires value = 0 }
+		set_variable = { var = global.pwc_settle_runs value = 0 }
+		pwc_se_apply_regional_supply = yes
+		every_country = {
+			limit = { pwc_st_is_city_country = yes }
+			pwc_se_init_country_runtime = yes
+		}
+		pwc_se_init_market_access = yes
+		log = "PWC INIT world runtime alive=[?global.pwc_alive_count]"
+	}
+}
+
+
+
+
+pwc_se_init_market_access = {
+	if = {
+		limit = { NOT = { has_global_flag = pwc_flag_market_access_initialized } }
+		every_country = {
+			limit = { is_ai = yes pwc_st_is_city_country = yes }
+			set_rule = { can_access_market = no }
+		}
+		set_global_flag = pwc_flag_market_access_initialized
+		log = "PWC INIT market trial: no mesh, AI market disabled"
+	}
+}
+
+
+
+pwc_se_init_country_runtime = {
+	if = { limit = { tag = U00 } set_variable = { var = pwc_tag_rank value = 0 } }
+	if = { limit = { tag = U01 } set_variable = { var = pwc_tag_rank value = 1 } }
+	if = { limit = { tag = U02 } set_variable = { var = pwc_tag_rank value = 2 } }
+	if = { limit = { tag = U03 } set_variable = { var = pwc_tag_rank value = 3 } }
+	if = { limit = { tag = U04 } set_variable = { var = pwc_tag_rank value = 4 } }
+	if = { limit = { tag = U05 } set_variable = { var = pwc_tag_rank value = 5 } }
+	if = { limit = { tag = U06 } set_variable = { var = pwc_tag_rank value = 6 } }
+	if = { limit = { tag = U07 } set_variable = { var = pwc_tag_rank value = 7 } }
+	if = { limit = { tag = U08 } set_variable = { var = pwc_tag_rank value = 8 } }
+	if = { limit = { tag = U09 } set_variable = { var = pwc_tag_rank value = 9 } }
+	if = { limit = { tag = U10 } set_variable = { var = pwc_tag_rank value = 10 } }
+	if = { limit = { tag = U11 } set_variable = { var = pwc_tag_rank value = 11 } }
+	if = { limit = { tag = U12 } set_variable = { var = pwc_tag_rank value = 12 } }
+	if = { limit = { tag = U13 } set_variable = { var = pwc_tag_rank value = 13 } }
+	if = { limit = { tag = U14 } set_variable = { var = pwc_tag_rank value = 14 } }
+	if = { limit = { tag = U15 } set_variable = { var = pwc_tag_rank value = 15 } }
+	if = { limit = { tag = U16 } set_variable = { var = pwc_tag_rank value = 16 } }
+	if = { limit = { tag = U17 } set_variable = { var = pwc_tag_rank value = 17 } }
+	if = { limit = { tag = U18 } set_variable = { var = pwc_tag_rank value = 18 } }
+	if = { limit = { tag = U19 } set_variable = { var = pwc_tag_rank value = 19 } }
+	if = { limit = { tag = U20 } set_variable = { var = pwc_tag_rank value = 20 } }
+	if = { limit = { tag = U21 } set_variable = { var = pwc_tag_rank value = 21 } }
+	if = { limit = { tag = U22 } set_variable = { var = pwc_tag_rank value = 22 } }
+	if = { limit = { tag = U23 } set_variable = { var = pwc_tag_rank value = 23 } }
+	if = { limit = { tag = U24 } set_variable = { var = pwc_tag_rank value = 24 } }
+	if = { limit = { tag = U25 } set_variable = { var = pwc_tag_rank value = 25 } }
+	if = { limit = { tag = U26 } set_variable = { var = pwc_tag_rank value = 26 } }
+	if = { limit = { tag = U27 } set_variable = { var = pwc_tag_rank value = 27 } }
+	if = { limit = { tag = U28 } set_variable = { var = pwc_tag_rank value = 28 } }
+	if = { limit = { tag = U29 } set_variable = { var = pwc_tag_rank value = 29 } }
+	if = { limit = { tag = U30 } set_variable = { var = pwc_tag_rank value = 30 } }
+	if = { limit = { tag = U31 } set_variable = { var = pwc_tag_rank value = 31 } }
+	if = { limit = { tag = U32 } set_variable = { var = pwc_tag_rank value = 32 } }
+	if = { limit = { tag = U33 } set_variable = { var = pwc_tag_rank value = 33 } }
+	if = { limit = { tag = U34 } set_variable = { var = pwc_tag_rank value = 34 } }
+	if = { limit = { tag = U35 } set_variable = { var = pwc_tag_rank value = 35 } }
+	if = { limit = { tag = U36 } set_variable = { var = pwc_tag_rank value = 36 } }
+	if = { limit = { tag = U37 } set_variable = { var = pwc_tag_rank value = 37 } }
+	if = { limit = { tag = U38 } set_variable = { var = pwc_tag_rank value = 38 } }
+	if = { limit = { tag = U39 } set_variable = { var = pwc_tag_rank value = 39 } }
+	if = { limit = { tag = U40 } set_variable = { var = pwc_tag_rank value = 40 } }
+	if = { limit = { tag = U41 } set_variable = { var = pwc_tag_rank value = 41 } }
+	if = { limit = { tag = U42 } set_variable = { var = pwc_tag_rank value = 42 } }
+	if = { limit = { tag = U43 } set_variable = { var = pwc_tag_rank value = 43 } }
+	if = { limit = { tag = U44 } set_variable = { var = pwc_tag_rank value = 44 } }
+	if = { limit = { tag = U45 } set_variable = { var = pwc_tag_rank value = 45 } }
+	if = { limit = { tag = U46 } set_variable = { var = pwc_tag_rank value = 46 } }
+	if = { limit = { tag = U47 } set_variable = { var = pwc_tag_rank value = 47 } }
+	if = { limit = { tag = U48 } set_variable = { var = pwc_tag_rank value = 48 } }
+	if = { limit = { tag = U49 } set_variable = { var = pwc_tag_rank value = 49 } }
+	if = { limit = { tag = U50 } set_variable = { var = pwc_tag_rank value = 50 } }
+	if = { limit = { tag = U51 } set_variable = { var = pwc_tag_rank value = 51 } }
+	if = { limit = { tag = U52 } set_variable = { var = pwc_tag_rank value = 52 } }
+	if = { limit = { tag = U53 } set_variable = { var = pwc_tag_rank value = 53 } }
+	if = { limit = { tag = U54 } set_variable = { var = pwc_tag_rank value = 54 } }
+	if = { limit = { tag = U55 } set_variable = { var = pwc_tag_rank value = 55 } }
+	if = { limit = { tag = U56 } set_variable = { var = pwc_tag_rank value = 56 } }
+	if = { limit = { tag = U57 } set_variable = { var = pwc_tag_rank value = 57 } }
+	if = { limit = { tag = U58 } set_variable = { var = pwc_tag_rank value = 58 } }
+	if = { limit = { tag = U59 } set_variable = { var = pwc_tag_rank value = 59 } }
+	if = { limit = { tag = U60 } set_variable = { var = pwc_tag_rank value = 60 } }
+	if = { limit = { tag = U61 } set_variable = { var = pwc_tag_rank value = 61 } }
+	if = { limit = { tag = U62 } set_variable = { var = pwc_tag_rank value = 62 } }
+	if = { limit = { tag = U63 } set_variable = { var = pwc_tag_rank value = 63 } }
+	if = { limit = { tag = U64 } set_variable = { var = pwc_tag_rank value = 64 } }
+	if = { limit = { tag = U65 } set_variable = { var = pwc_tag_rank value = 65 } }
+	if = { limit = { tag = U66 } set_variable = { var = pwc_tag_rank value = 66 } }
+	if = { limit = { tag = U67 } set_variable = { var = pwc_tag_rank value = 67 } }
+	if = { limit = { tag = U68 } set_variable = { var = pwc_tag_rank value = 68 } }
+	if = { limit = { tag = U69 } set_variable = { var = pwc_tag_rank value = 69 } }
+	if = { limit = { tag = U70 } set_variable = { var = pwc_tag_rank value = 70 } }
+	if = { limit = { tag = U71 } set_variable = { var = pwc_tag_rank value = 71 } }
+	if = { limit = { tag = U72 } set_variable = { var = pwc_tag_rank value = 72 } }
+	if = { limit = { tag = U73 } set_variable = { var = pwc_tag_rank value = 73 } }
+	if = { limit = { tag = U74 } set_variable = { var = pwc_tag_rank value = 74 } }
+	if = { limit = { tag = U75 } set_variable = { var = pwc_tag_rank value = 75 } }
+	if = { limit = { tag = U76 } set_variable = { var = pwc_tag_rank value = 76 } }
+	if = { limit = { tag = U77 } set_variable = { var = pwc_tag_rank value = 77 } }
+	if = { limit = { tag = U78 } set_variable = { var = pwc_tag_rank value = 78 } }
+	if = { limit = { tag = U79 } set_variable = { var = pwc_tag_rank value = 79 } }
+	if = { limit = { tag = U80 } set_variable = { var = pwc_tag_rank value = 80 } }
+	if = { limit = { tag = U81 } set_variable = { var = pwc_tag_rank value = 81 } }
+	if = { limit = { tag = U82 } set_variable = { var = pwc_tag_rank value = 82 } }
+	if = { limit = { tag = U83 } set_variable = { var = pwc_tag_rank value = 83 } }
+	if = { limit = { tag = U84 } set_variable = { var = pwc_tag_rank value = 84 } }
+	if = { limit = { tag = U85 } set_variable = { var = pwc_tag_rank value = 85 } }
+	if = { limit = { tag = U86 } set_variable = { var = pwc_tag_rank value = 86 } }
+	if = { limit = { tag = U87 } set_variable = { var = pwc_tag_rank value = 87 } }
+	if = { limit = { tag = U88 } set_variable = { var = pwc_tag_rank value = 88 } }
+	if = { limit = { tag = U89 } set_variable = { var = pwc_tag_rank value = 89 } }
+	if = { limit = { tag = U90 } set_variable = { var = pwc_tag_rank value = 90 } }
+	if = { limit = { tag = U91 } set_variable = { var = pwc_tag_rank value = 91 } }
+	if = { limit = { tag = U92 } set_variable = { var = pwc_tag_rank value = 92 } }
+	if = { limit = { tag = U93 } set_variable = { var = pwc_tag_rank value = 93 } }
+	if = { limit = { tag = U94 } set_variable = { var = pwc_tag_rank value = 94 } }
+	if = { limit = { tag = U95 } set_variable = { var = pwc_tag_rank value = 95 } }
+	if = { limit = { tag = U96 } set_variable = { var = pwc_tag_rank value = 96 } }
+	if = { limit = { tag = U97 } set_variable = { var = pwc_tag_rank value = 97 } }
+	if = { limit = { tag = U98 } set_variable = { var = pwc_tag_rank value = 98 } }
+	if = { limit = { tag = U99 } set_variable = { var = pwc_tag_rank value = 99 } }
+	if = { limit = { tag = V00 } set_variable = { var = pwc_tag_rank value = 100 } }
+	if = { limit = { tag = V01 } set_variable = { var = pwc_tag_rank value = 101 } }
+	if = { limit = { tag = V02 } set_variable = { var = pwc_tag_rank value = 102 } }
+	if = { limit = { tag = V03 } set_variable = { var = pwc_tag_rank value = 103 } }
+	if = { limit = { tag = V04 } set_variable = { var = pwc_tag_rank value = 104 } }
+	if = { limit = { tag = V05 } set_variable = { var = pwc_tag_rank value = 105 } }
+	if = { limit = { tag = V06 } set_variable = { var = pwc_tag_rank value = 106 } }
+	if = { limit = { tag = V07 } set_variable = { var = pwc_tag_rank value = 107 } }
+	if = { limit = { tag = V08 } set_variable = { var = pwc_tag_rank value = 108 } }
+	if = { limit = { tag = V09 } set_variable = { var = pwc_tag_rank value = 109 } }
+	if = { limit = { tag = V10 } set_variable = { var = pwc_tag_rank value = 110 } }
+	if = { limit = { tag = V11 } set_variable = { var = pwc_tag_rank value = 111 } }
+	if = { limit = { tag = V12 } set_variable = { var = pwc_tag_rank value = 112 } }
+	if = { limit = { tag = V13 } set_variable = { var = pwc_tag_rank value = 113 } }
+	if = { limit = { tag = V14 } set_variable = { var = pwc_tag_rank value = 114 } }
+	if = { limit = { tag = V15 } set_variable = { var = pwc_tag_rank value = 115 } }
+	if = { limit = { tag = V16 } set_variable = { var = pwc_tag_rank value = 116 } }
+	if = { limit = { tag = V17 } set_variable = { var = pwc_tag_rank value = 117 } }
+	if = { limit = { tag = V18 } set_variable = { var = pwc_tag_rank value = 118 } }
+	if = { limit = { tag = V19 } set_variable = { var = pwc_tag_rank value = 119 } }
+	if = { limit = { tag = V20 } set_variable = { var = pwc_tag_rank value = 120 } }
+	if = { limit = { tag = V21 } set_variable = { var = pwc_tag_rank value = 121 } }
+	if = { limit = { tag = V22 } set_variable = { var = pwc_tag_rank value = 122 } }
+	if = { limit = { tag = V23 } set_variable = { var = pwc_tag_rank value = 123 } }
+	if = { limit = { tag = V24 } set_variable = { var = pwc_tag_rank value = 124 } }
+	if = { limit = { tag = V25 } set_variable = { var = pwc_tag_rank value = 125 } }
+	if = { limit = { tag = V26 } set_variable = { var = pwc_tag_rank value = 126 } }
+	if = { limit = { tag = V27 } set_variable = { var = pwc_tag_rank value = 127 } }
+	if = { limit = { tag = V28 } set_variable = { var = pwc_tag_rank value = 128 } }
+	if = { limit = { tag = V29 } set_variable = { var = pwc_tag_rank value = 129 } }
+	if = { limit = { tag = V30 } set_variable = { var = pwc_tag_rank value = 130 } }
+	if = { limit = { tag = V31 } set_variable = { var = pwc_tag_rank value = 131 } }
+	if = { limit = { tag = V32 } set_variable = { var = pwc_tag_rank value = 132 } }
+	if = { limit = { tag = V33 } set_variable = { var = pwc_tag_rank value = 133 } }
+	if = { limit = { tag = V34 } set_variable = { var = pwc_tag_rank value = 134 } }
+	if = { limit = { tag = V35 } set_variable = { var = pwc_tag_rank value = 135 } }
+	if = { limit = { tag = V36 } set_variable = { var = pwc_tag_rank value = 136 } }
+	if = { limit = { tag = V37 } set_variable = { var = pwc_tag_rank value = 137 } }
+	if = { limit = { tag = V38 } set_variable = { var = pwc_tag_rank value = 138 } }
+	if = { limit = { tag = V39 } set_variable = { var = pwc_tag_rank value = 139 } }
+	if = { limit = { tag = V40 } set_variable = { var = pwc_tag_rank value = 140 } }
+	if = { limit = { tag = V41 } set_variable = { var = pwc_tag_rank value = 141 } }
+	if = { limit = { tag = V42 } set_variable = { var = pwc_tag_rank value = 142 } }
+	if = { limit = { tag = V43 } set_variable = { var = pwc_tag_rank value = 143 } }
+	if = { limit = { tag = V44 } set_variable = { var = pwc_tag_rank value = 144 } }
+	if = { limit = { tag = V45 } set_variable = { var = pwc_tag_rank value = 145 } }
+	if = { limit = { tag = V46 } set_variable = { var = pwc_tag_rank value = 146 } }
+	if = { limit = { tag = V47 } set_variable = { var = pwc_tag_rank value = 147 } }
+	if = { limit = { tag = V48 } set_variable = { var = pwc_tag_rank value = 148 } }
+	if = { limit = { tag = V49 } set_variable = { var = pwc_tag_rank value = 149 } }
+	if = { limit = { tag = V50 } set_variable = { var = pwc_tag_rank value = 150 } }
+	if = { limit = { tag = V51 } set_variable = { var = pwc_tag_rank value = 151 } }
+	if = { limit = { tag = V52 } set_variable = { var = pwc_tag_rank value = 152 } }
+	if = { limit = { tag = V53 } set_variable = { var = pwc_tag_rank value = 153 } }
+	if = { limit = { tag = V54 } set_variable = { var = pwc_tag_rank value = 154 } }
+	if = { limit = { tag = V55 } set_variable = { var = pwc_tag_rank value = 155 } }
+	if = { limit = { tag = V56 } set_variable = { var = pwc_tag_rank value = 156 } }
+	if = { limit = { tag = V57 } set_variable = { var = pwc_tag_rank value = 157 } }
+	if = { limit = { tag = V58 } set_variable = { var = pwc_tag_rank value = 158 } }
+	if = { limit = { tag = V59 } set_variable = { var = pwc_tag_rank value = 159 } }
+	if = { limit = { tag = V60 } set_variable = { var = pwc_tag_rank value = 160 } }
+	if = { limit = { tag = V61 } set_variable = { var = pwc_tag_rank value = 161 } }
+	if = { limit = { tag = V62 } set_variable = { var = pwc_tag_rank value = 162 } }
+	if = { limit = { tag = V63 } set_variable = { var = pwc_tag_rank value = 163 } }
+	if = { limit = { tag = V64 } set_variable = { var = pwc_tag_rank value = 164 } }
+	if = { limit = { tag = V65 } set_variable = { var = pwc_tag_rank value = 165 } }
+	if = { limit = { tag = V66 } set_variable = { var = pwc_tag_rank value = 166 } }
+	if = { limit = { tag = V67 } set_variable = { var = pwc_tag_rank value = 167 } }
+	if = { limit = { tag = V68 } set_variable = { var = pwc_tag_rank value = 168 } }
+	if = { limit = { tag = V69 } set_variable = { var = pwc_tag_rank value = 169 } }
+	if = { limit = { tag = V70 } set_variable = { var = pwc_tag_rank value = 170 } }
+	if = { limit = { tag = V71 } set_variable = { var = pwc_tag_rank value = 171 } }
+	if = { limit = { tag = V72 } set_variable = { var = pwc_tag_rank value = 172 } }
+	if = { limit = { tag = V73 } set_variable = { var = pwc_tag_rank value = 173 } }
+	if = { limit = { tag = V74 } set_variable = { var = pwc_tag_rank value = 174 } }
+	if = { limit = { tag = V75 } set_variable = { var = pwc_tag_rank value = 175 } }
+	if = { limit = { tag = V76 } set_variable = { var = pwc_tag_rank value = 176 } }
+	if = { limit = { tag = V77 } set_variable = { var = pwc_tag_rank value = 177 } }
+	if = { limit = { tag = V78 } set_variable = { var = pwc_tag_rank value = 178 } }
+	if = { limit = { tag = V79 } set_variable = { var = pwc_tag_rank value = 179 } }
+	if = { limit = { tag = V80 } set_variable = { var = pwc_tag_rank value = 180 } }
+	if = { limit = { tag = V81 } set_variable = { var = pwc_tag_rank value = 181 } }
+	if = { limit = { tag = V82 } set_variable = { var = pwc_tag_rank value = 182 } }
+	if = { limit = { tag = V83 } set_variable = { var = pwc_tag_rank value = 183 } }
+	if = { limit = { tag = V84 } set_variable = { var = pwc_tag_rank value = 184 } }
+	if = { limit = { tag = V85 } set_variable = { var = pwc_tag_rank value = 185 } }
+	if = { limit = { tag = V86 } set_variable = { var = pwc_tag_rank value = 186 } }
+	if = { limit = { tag = V87 } set_variable = { var = pwc_tag_rank value = 187 } }
+	if = { limit = { tag = V88 } set_variable = { var = pwc_tag_rank value = 188 } }
+	if = { limit = { tag = V89 } set_variable = { var = pwc_tag_rank value = 189 } }
+	if = { limit = { tag = V90 } set_variable = { var = pwc_tag_rank value = 190 } }
+	if = { limit = { tag = V91 } set_variable = { var = pwc_tag_rank value = 191 } }
+	if = { limit = { tag = V92 } set_variable = { var = pwc_tag_rank value = 192 } }
+	if = { limit = { tag = V93 } set_variable = { var = pwc_tag_rank value = 193 } }
+	if = { limit = { tag = V94 } set_variable = { var = pwc_tag_rank value = 194 } }
+	if = { limit = { tag = V95 } set_variable = { var = pwc_tag_rank value = 195 } }
+	if = { limit = { tag = V96 } set_variable = { var = pwc_tag_rank value = 196 } }
+	if = { limit = { tag = V97 } set_variable = { var = pwc_tag_rank value = 197 } }
+	if = { limit = { tag = V98 } set_variable = { var = pwc_tag_rank value = 198 } }
+	if = { limit = { tag = V99 } set_variable = { var = pwc_tag_rank value = 199 } }
+	if = { limit = { tag = W00 } set_variable = { var = pwc_tag_rank value = 200 } }
+	if = { limit = { tag = W01 } set_variable = { var = pwc_tag_rank value = 201 } }
+	if = { limit = { tag = W02 } set_variable = { var = pwc_tag_rank value = 202 } }
+	if = { limit = { tag = W03 } set_variable = { var = pwc_tag_rank value = 203 } }
+	if = { limit = { tag = W04 } set_variable = { var = pwc_tag_rank value = 204 } }
+	if = { limit = { tag = W05 } set_variable = { var = pwc_tag_rank value = 205 } }
+	if = { limit = { tag = W06 } set_variable = { var = pwc_tag_rank value = 206 } }
+	if = { limit = { tag = W07 } set_variable = { var = pwc_tag_rank value = 207 } }
+	if = { limit = { tag = W08 } set_variable = { var = pwc_tag_rank value = 208 } }
+	if = { limit = { tag = W09 } set_variable = { var = pwc_tag_rank value = 209 } }
+	if = { limit = { tag = W10 } set_variable = { var = pwc_tag_rank value = 210 } }
+	if = { limit = { tag = W11 } set_variable = { var = pwc_tag_rank value = 211 } }
+	if = { limit = { tag = W12 } set_variable = { var = pwc_tag_rank value = 212 } }
+	if = { limit = { tag = W13 } set_variable = { var = pwc_tag_rank value = 213 } }
+	if = { limit = { tag = W14 } set_variable = { var = pwc_tag_rank value = 214 } }
+	if = { limit = { tag = W15 } set_variable = { var = pwc_tag_rank value = 215 } }
+	if = { limit = { tag = W16 } set_variable = { var = pwc_tag_rank value = 216 } }
+	if = { limit = { tag = W17 } set_variable = { var = pwc_tag_rank value = 217 } }
+	if = { limit = { tag = W18 } set_variable = { var = pwc_tag_rank value = 218 } }
+	if = { limit = { tag = W19 } set_variable = { var = pwc_tag_rank value = 219 } }
+	if = { limit = { tag = W20 } set_variable = { var = pwc_tag_rank value = 220 } }
+	if = { limit = { tag = W21 } set_variable = { var = pwc_tag_rank value = 221 } }
+	if = { limit = { tag = W22 } set_variable = { var = pwc_tag_rank value = 222 } }
+	if = { limit = { tag = W23 } set_variable = { var = pwc_tag_rank value = 223 } }
+	if = { limit = { tag = W24 } set_variable = { var = pwc_tag_rank value = 224 } }
+	if = { limit = { tag = W25 } set_variable = { var = pwc_tag_rank value = 225 } }
+	if = { limit = { tag = W26 } set_variable = { var = pwc_tag_rank value = 226 } }
+	if = { limit = { tag = W27 } set_variable = { var = pwc_tag_rank value = 227 } }
+	if = { limit = { tag = W28 } set_variable = { var = pwc_tag_rank value = 228 } }
+	if = { limit = { tag = W29 } set_variable = { var = pwc_tag_rank value = 229 } }
+	if = { limit = { tag = W30 } set_variable = { var = pwc_tag_rank value = 230 } }
+	if = { limit = { tag = W31 } set_variable = { var = pwc_tag_rank value = 231 } }
+	if = { limit = { tag = W32 } set_variable = { var = pwc_tag_rank value = 232 } }
+	if = { limit = { tag = W33 } set_variable = { var = pwc_tag_rank value = 233 } }
+	if = { limit = { tag = W34 } set_variable = { var = pwc_tag_rank value = 234 } }
+	if = { limit = { tag = W35 } set_variable = { var = pwc_tag_rank value = 235 } }
+	if = { limit = { tag = W36 } set_variable = { var = pwc_tag_rank value = 236 } }
+	if = { limit = { tag = W37 } set_variable = { var = pwc_tag_rank value = 237 } }
+	if = { limit = { tag = W38 } set_variable = { var = pwc_tag_rank value = 238 } }
+	if = { limit = { tag = W39 } set_variable = { var = pwc_tag_rank value = 239 } }
+	if = { limit = { tag = W40 } set_variable = { var = pwc_tag_rank value = 240 } }
+	if = { limit = { tag = W41 } set_variable = { var = pwc_tag_rank value = 241 } }
+	if = { limit = { tag = W42 } set_variable = { var = pwc_tag_rank value = 242 } }
+	if = { limit = { tag = W43 } set_variable = { var = pwc_tag_rank value = 243 } }
+	if = { limit = { tag = W44 } set_variable = { var = pwc_tag_rank value = 244 } }
+	if = { limit = { tag = W45 } set_variable = { var = pwc_tag_rank value = 245 } }
+	if = { limit = { tag = W46 } set_variable = { var = pwc_tag_rank value = 246 } }
+	if = { limit = { tag = W47 } set_variable = { var = pwc_tag_rank value = 247 } }
+	if = { limit = { tag = W48 } set_variable = { var = pwc_tag_rank value = 248 } }
+	if = { limit = { tag = W49 } set_variable = { var = pwc_tag_rank value = 249 } }
+	if = { limit = { tag = W50 } set_variable = { var = pwc_tag_rank value = 250 } }
+	if = { limit = { tag = W51 } set_variable = { var = pwc_tag_rank value = 251 } }
+	if = { limit = { tag = W52 } set_variable = { var = pwc_tag_rank value = 252 } }
+	if = { limit = { tag = W53 } set_variable = { var = pwc_tag_rank value = 253 } }
+	if = { limit = { tag = W54 } set_variable = { var = pwc_tag_rank value = 254 } }
+	if = { limit = { tag = W55 } set_variable = { var = pwc_tag_rank value = 255 } }
+	if = { limit = { tag = W56 } set_variable = { var = pwc_tag_rank value = 256 } }
+	if = { limit = { tag = W57 } set_variable = { var = pwc_tag_rank value = 257 } }
+	if = { limit = { tag = W58 } set_variable = { var = pwc_tag_rank value = 258 } }
+	if = { limit = { tag = W59 } set_variable = { var = pwc_tag_rank value = 259 } }
+	if = { limit = { tag = W60 } set_variable = { var = pwc_tag_rank value = 260 } }
+	if = { limit = { tag = W61 } set_variable = { var = pwc_tag_rank value = 261 } }
+	if = { limit = { tag = W62 } set_variable = { var = pwc_tag_rank value = 262 } }
+	if = { limit = { tag = W63 } set_variable = { var = pwc_tag_rank value = 263 } }
+	if = { limit = { tag = W64 } set_variable = { var = pwc_tag_rank value = 264 } }
+	if = { limit = { tag = W65 } set_variable = { var = pwc_tag_rank value = 265 } }
+	if = { limit = { tag = W66 } set_variable = { var = pwc_tag_rank value = 266 } }
+	if = { limit = { tag = W67 } set_variable = { var = pwc_tag_rank value = 267 } }
+	if = { limit = { tag = W68 } set_variable = { var = pwc_tag_rank value = 268 } }
+	if = { limit = { tag = W69 } set_variable = { var = pwc_tag_rank value = 269 } }
+	if = { limit = { tag = W70 } set_variable = { var = pwc_tag_rank value = 270 } }
+	if = { limit = { tag = W71 } set_variable = { var = pwc_tag_rank value = 271 } }
+	if = { limit = { tag = W72 } set_variable = { var = pwc_tag_rank value = 272 } }
+	if = { limit = { tag = W73 } set_variable = { var = pwc_tag_rank value = 273 } }
+	if = { limit = { tag = W74 } set_variable = { var = pwc_tag_rank value = 274 } }
+	if = { limit = { tag = W75 } set_variable = { var = pwc_tag_rank value = 275 } }
+	if = { limit = { tag = W76 } set_variable = { var = pwc_tag_rank value = 276 } }
+	if = { limit = { tag = W77 } set_variable = { var = pwc_tag_rank value = 277 } }
+	if = { limit = { tag = W78 } set_variable = { var = pwc_tag_rank value = 278 } }
+	if = { limit = { tag = W79 } set_variable = { var = pwc_tag_rank value = 279 } }
+	if = { limit = { tag = W80 } set_variable = { var = pwc_tag_rank value = 280 } }
+	if = { limit = { tag = W81 } set_variable = { var = pwc_tag_rank value = 281 } }
+	if = { limit = { tag = W82 } set_variable = { var = pwc_tag_rank value = 282 } }
+	if = { limit = { tag = W83 } set_variable = { var = pwc_tag_rank value = 283 } }
+	if = { limit = { tag = W84 } set_variable = { var = pwc_tag_rank value = 284 } }
+	if = { limit = { tag = W85 } set_variable = { var = pwc_tag_rank value = 285 } }
+	if = { limit = { tag = W86 } set_variable = { var = pwc_tag_rank value = 286 } }
+	if = { limit = { tag = W87 } set_variable = { var = pwc_tag_rank value = 287 } }
+	if = { limit = { tag = W88 } set_variable = { var = pwc_tag_rank value = 288 } }
+	if = { limit = { tag = W89 } set_variable = { var = pwc_tag_rank value = 289 } }
+	if = { limit = { tag = W90 } set_variable = { var = pwc_tag_rank value = 290 } }
+	if = { limit = { tag = W91 } set_variable = { var = pwc_tag_rank value = 291 } }
+	if = { limit = { tag = W92 } set_variable = { var = pwc_tag_rank value = 292 } }
+	if = { limit = { tag = W93 } set_variable = { var = pwc_tag_rank value = 293 } }
+	if = { limit = { tag = W94 } set_variable = { var = pwc_tag_rank value = 294 } }
+	if = { limit = { tag = W95 } set_variable = { var = pwc_tag_rank value = 295 } }
+	if = { limit = { tag = W96 } set_variable = { var = pwc_tag_rank value = 296 } }
+	if = { limit = { tag = W97 } set_variable = { var = pwc_tag_rank value = 297 } }
+	if = { limit = { tag = W98 } set_variable = { var = pwc_tag_rank value = 298 } }
+	if = { limit = { tag = W99 } set_variable = { var = pwc_tag_rank value = 299 } }
+	if = { limit = { tag = X00 } set_variable = { var = pwc_tag_rank value = 300 } }
+	if = { limit = { tag = X01 } set_variable = { var = pwc_tag_rank value = 301 } }
+	if = { limit = { tag = X02 } set_variable = { var = pwc_tag_rank value = 302 } }
+	if = { limit = { tag = X03 } set_variable = { var = pwc_tag_rank value = 303 } }
+	if = { limit = { tag = X04 } set_variable = { var = pwc_tag_rank value = 304 } }
+	if = { limit = { tag = X05 } set_variable = { var = pwc_tag_rank value = 305 } }
+	if = { limit = { tag = X06 } set_variable = { var = pwc_tag_rank value = 306 } }
+	if = { limit = { tag = X07 } set_variable = { var = pwc_tag_rank value = 307 } }
+	if = { limit = { tag = X08 } set_variable = { var = pwc_tag_rank value = 308 } }
+	if = { limit = { tag = X09 } set_variable = { var = pwc_tag_rank value = 309 } }
+	if = { limit = { tag = X10 } set_variable = { var = pwc_tag_rank value = 310 } }
+	if = { limit = { tag = X11 } set_variable = { var = pwc_tag_rank value = 311 } }
+	if = { limit = { tag = X12 } set_variable = { var = pwc_tag_rank value = 312 } }
+	if = { limit = { tag = X13 } set_variable = { var = pwc_tag_rank value = 313 } }
+	if = { limit = { tag = X14 } set_variable = { var = pwc_tag_rank value = 314 } }
+	if = { limit = { tag = X15 } set_variable = { var = pwc_tag_rank value = 315 } }
+	if = { limit = { tag = X16 } set_variable = { var = pwc_tag_rank value = 316 } }
+	if = { limit = { tag = X17 } set_variable = { var = pwc_tag_rank value = 317 } }
+	if = { limit = { tag = X18 } set_variable = { var = pwc_tag_rank value = 318 } }
+	if = { limit = { tag = X19 } set_variable = { var = pwc_tag_rank value = 319 } }
+	if = { limit = { tag = X20 } set_variable = { var = pwc_tag_rank value = 320 } }
+	if = { limit = { tag = X21 } set_variable = { var = pwc_tag_rank value = 321 } }
+	if = { limit = { tag = X22 } set_variable = { var = pwc_tag_rank value = 322 } }
+	if = { limit = { tag = X23 } set_variable = { var = pwc_tag_rank value = 323 } }
+	if = { limit = { tag = X24 } set_variable = { var = pwc_tag_rank value = 324 } }
+	if = { limit = { tag = X25 } set_variable = { var = pwc_tag_rank value = 325 } }
+	if = { limit = { tag = X26 } set_variable = { var = pwc_tag_rank value = 326 } }
+	if = { limit = { tag = X27 } set_variable = { var = pwc_tag_rank value = 327 } }
+	if = { limit = { tag = X28 } set_variable = { var = pwc_tag_rank value = 328 } }
+	if = { limit = { tag = X29 } set_variable = { var = pwc_tag_rank value = 329 } }
+	if = { limit = { tag = X30 } set_variable = { var = pwc_tag_rank value = 330 } }
+	if = { limit = { tag = X31 } set_variable = { var = pwc_tag_rank value = 331 } }
+	if = { limit = { tag = X32 } set_variable = { var = pwc_tag_rank value = 332 } }
+	if = { limit = { tag = X33 } set_variable = { var = pwc_tag_rank value = 333 } }
+	if = { limit = { tag = X34 } set_variable = { var = pwc_tag_rank value = 334 } }
+	if = { limit = { tag = X35 } set_variable = { var = pwc_tag_rank value = 335 } }
+	if = { limit = { tag = X36 } set_variable = { var = pwc_tag_rank value = 336 } }
+	if = { limit = { tag = X37 } set_variable = { var = pwc_tag_rank value = 337 } }
+	if = { limit = { tag = X38 } set_variable = { var = pwc_tag_rank value = 338 } }
+	if = { limit = { tag = X39 } set_variable = { var = pwc_tag_rank value = 339 } }
+	if = { limit = { tag = X40 } set_variable = { var = pwc_tag_rank value = 340 } }
+	if = { limit = { tag = X41 } set_variable = { var = pwc_tag_rank value = 341 } }
+	if = { limit = { tag = X42 } set_variable = { var = pwc_tag_rank value = 342 } }
+	if = { limit = { tag = X43 } set_variable = { var = pwc_tag_rank value = 343 } }
+	if = { limit = { tag = X44 } set_variable = { var = pwc_tag_rank value = 344 } }
+	if = { limit = { tag = X45 } set_variable = { var = pwc_tag_rank value = 345 } }
+	if = { limit = { tag = X46 } set_variable = { var = pwc_tag_rank value = 346 } }
+	if = { limit = { tag = X47 } set_variable = { var = pwc_tag_rank value = 347 } }
+	if = { limit = { tag = X48 } set_variable = { var = pwc_tag_rank value = 348 } }
+	if = { limit = { tag = X49 } set_variable = { var = pwc_tag_rank value = 349 } }
+	if = { limit = { tag = X50 } set_variable = { var = pwc_tag_rank value = 350 } }
+	if = { limit = { tag = X51 } set_variable = { var = pwc_tag_rank value = 351 } }
+	if = { limit = { tag = X52 } set_variable = { var = pwc_tag_rank value = 352 } }
+	if = { limit = { tag = X53 } set_variable = { var = pwc_tag_rank value = 353 } }
+	if = { limit = { tag = X54 } set_variable = { var = pwc_tag_rank value = 354 } }
+	if = { limit = { tag = X55 } set_variable = { var = pwc_tag_rank value = 355 } }
+	if = { limit = { tag = X56 } set_variable = { var = pwc_tag_rank value = 356 } }
+	if = { limit = { tag = X57 } set_variable = { var = pwc_tag_rank value = 357 } }
+	if = { limit = { tag = X58 } set_variable = { var = pwc_tag_rank value = 358 } }
+	if = { limit = { tag = X59 } set_variable = { var = pwc_tag_rank value = 359 } }
+	if = { limit = { tag = X60 } set_variable = { var = pwc_tag_rank value = 360 } }
+	if = { limit = { tag = X61 } set_variable = { var = pwc_tag_rank value = 361 } }
+	if = { limit = { tag = X62 } set_variable = { var = pwc_tag_rank value = 362 } }
+	if = { limit = { tag = X63 } set_variable = { var = pwc_tag_rank value = 363 } }
+	if = { limit = { tag = X64 } set_variable = { var = pwc_tag_rank value = 364 } }
+	if = { limit = { tag = X65 } set_variable = { var = pwc_tag_rank value = 365 } }
+	add_political_power = 100
+	pwc_se_init_cabinet_state = yes
+	pwc_se_init_laws = yes
+	set_country_flag = pwc_flag_city_alive
+	
+	
+	
+	
+	
+	set_rule = {
+		can_create_factions = no
+		can_join_factions = no
+		can_join_opposite_factions = no
+		can_puppet = no
+		can_create_collaboration_government = no
+		can_guarantee_other_ideologies = no
+		can_send_volunteers = yes
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	THIS = {
+		set_occupation_law = pwc_city_military_administration
+	}
+	pwc_se_apply_ai_difficulty = yes
+	pwc_se_init_setup_country = yes
+	
+	
+	
+	generate_scientist_character = {
+		skills = {
+			specialization_land = 1
+			specialization_air = 1
+			specialization_naval = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+pwc_se_init_ntr_isolation = {
+	set_rule = {
+		can_not_declare_war = yes
+		can_declare_war_on_same_ideology = no
+		can_create_factions = no
+		can_join_factions = no
+		can_join_opposite_factions = no
+		can_puppet = no
+		can_create_collaboration_government = no
+		can_guarantee_other_ideologies = no
+		can_send_volunteers = no
+		can_boost_own_ideology = no
+		can_boost_other_ideologies = no
+		can_access_market = no
+		contributes_operatives = no
+	}
+	log = "PWC INIT NTR isolation rules applied"
+}
+
+
+
+
+
+
+
+pwc_se_apply_ai_difficulty = {
+	if = {
+		limit = {
+			is_ai = yes
+			NOT = { has_country_flag = pwc_flag_ai_difficulty_applied }
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = pwc_ai_difficulty
+					option = TIER_10
+				}
+			}
+			set_variable = { var = pwc_ai_diff_v_research_speed_factor value = 0.1 }
+			set_variable = { var = pwc_ai_diff_v_production_speed_buildings_factor value = 0.1 }
+			set_variable = { var = pwc_ai_diff_v_industrial_capacity_factory value = 0.1 }
+			set_variable = { var = pwc_ai_diff_v_supply_factor value = 0.1 }
+			set_country_flag = pwc_flag_ai_difficulty_applied
+			add_dynamic_modifier = { modifier = pwc_dm_ai_difficulty }
+			log = "PWC AI DIFFICULTY TIER_10 applied to [THIS.GetName]"
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = pwc_ai_difficulty
+					option = TIER_20
+				}
+			}
+			set_variable = { var = pwc_ai_diff_v_research_speed_factor value = 0.2 }
+			set_variable = { var = pwc_ai_diff_v_production_speed_buildings_factor value = 0.2 }
+			set_variable = { var = pwc_ai_diff_v_industrial_capacity_factory value = 0.2 }
+			set_variable = { var = pwc_ai_diff_v_supply_factor value = 0.2 }
+			set_country_flag = pwc_flag_ai_difficulty_applied
+			add_dynamic_modifier = { modifier = pwc_dm_ai_difficulty }
+			log = "PWC AI DIFFICULTY TIER_20 applied to [THIS.GetName]"
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = pwc_ai_difficulty
+					option = TIER_30
+				}
+			}
+			set_variable = { var = pwc_ai_diff_v_research_speed_factor value = 0.3 }
+			set_variable = { var = pwc_ai_diff_v_production_speed_buildings_factor value = 0.3 }
+			set_variable = { var = pwc_ai_diff_v_industrial_capacity_factory value = 0.3 }
+			set_variable = { var = pwc_ai_diff_v_supply_factor value = 0.3 }
+			set_country_flag = pwc_flag_ai_difficulty_applied
+			add_dynamic_modifier = { modifier = pwc_dm_ai_difficulty }
+			log = "PWC AI DIFFICULTY TIER_30 applied to [THIS.GetName]"
+		}
+	}
+}
+
+
+
+pwc_se_monthly_ai_difficulty = {
+	if = {
+		limit = {
+			is_ai = no
+			has_country_flag = pwc_flag_ai_difficulty_applied
+		}
+		remove_dynamic_modifier = { modifier = pwc_dm_ai_difficulty }
+		clr_country_flag = pwc_flag_ai_difficulty_applied
+		log = "PWC AI DIFFICULTY revoked (human owner) [THIS.GetName]"
+	}
+	else = {
+		pwc_se_apply_ai_difficulty = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+pwc_se_monthly_general_growth = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_02 }
+			has_army_size = {
+				size > 23
+			}
+		}
+		set_country_flag = pwc_flag_general_02
+		generate_character = {
+			token_base = pwc_general_02
+			name = PWC_TITLE_ARMY_02
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_02
+					small = GFX_PWC_PORTRAIT_GENERAL_02
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 2 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_03 }
+			has_army_size = {
+				size > 47
+			}
+		}
+		set_country_flag = pwc_flag_general_03
+		generate_character = {
+			token_base = pwc_general_03
+			name = PWC_TITLE_ARMY_03
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_03
+					small = GFX_PWC_PORTRAIT_GENERAL_03
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 3 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_04 }
+			has_army_size = {
+				size > 71
+			}
+		}
+		set_country_flag = pwc_flag_general_04
+		generate_character = {
+			token_base = pwc_general_04
+			name = PWC_TITLE_ARMY_04
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_04
+					small = GFX_PWC_PORTRAIT_GENERAL_04
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 4 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_05 }
+			has_army_size = {
+				size > 95
+			}
+		}
+		set_country_flag = pwc_flag_general_05
+		generate_character = {
+			token_base = pwc_general_05
+			name = PWC_TITLE_ARMY_05
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_05
+					small = GFX_PWC_PORTRAIT_GENERAL_05
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 5 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_06 }
+			has_army_size = {
+				size > 119
+			}
+		}
+		set_country_flag = pwc_flag_general_06
+		generate_character = {
+			token_base = pwc_general_06
+			name = PWC_TITLE_ARMY_06
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_06
+					small = GFX_PWC_PORTRAIT_GENERAL_06
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 6 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_07 }
+			has_army_size = {
+				size > 143
+			}
+		}
+		set_country_flag = pwc_flag_general_07
+		generate_character = {
+			token_base = pwc_general_07
+			name = PWC_TITLE_ARMY_07
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_07
+					small = GFX_PWC_PORTRAIT_GENERAL_07
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 7 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_08 }
+			has_army_size = {
+				size > 167
+			}
+		}
+		set_country_flag = pwc_flag_general_08
+		generate_character = {
+			token_base = pwc_general_08
+			name = PWC_TITLE_ARMY_08
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_08
+					small = GFX_PWC_PORTRAIT_GENERAL_08
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 8 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_09 }
+			has_army_size = {
+				size > 191
+			}
+		}
+		set_country_flag = pwc_flag_general_09
+		generate_character = {
+			token_base = pwc_general_09
+			name = PWC_TITLE_ARMY_09
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_09
+					small = GFX_PWC_PORTRAIT_GENERAL_09
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 9 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_10 }
+			has_army_size = {
+				size > 215
+			}
+		}
+		set_country_flag = pwc_flag_general_10
+		generate_character = {
+			token_base = pwc_general_10
+			name = PWC_TITLE_ARMY_10
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_10
+					small = GFX_PWC_PORTRAIT_GENERAL_10
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 10 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_11 }
+			has_army_size = {
+				size > 239
+			}
+		}
+		set_country_flag = pwc_flag_general_11
+		generate_character = {
+			token_base = pwc_general_11
+			name = PWC_TITLE_ARMY_11
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_11
+					small = GFX_PWC_PORTRAIT_GENERAL_11
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 11 granted to [THIS.GetName]"
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = pwc_flag_general_12 }
+			has_army_size = {
+				size > 263
+			}
+		}
+		set_country_flag = pwc_flag_general_12
+		generate_character = {
+			token_base = pwc_general_12
+			name = PWC_TITLE_ARMY_12
+			portraits = {
+				army = {
+					large = GFX_PWC_PORTRAIT_GENERAL_12
+					small = GFX_PWC_PORTRAIT_GENERAL_12
+				}
+			}
+			corps_commander = {
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
+		log = "PWC GENERAL 12 granted to [THIS.GetName]"
+	}
+}
+
+
+
+
+pwc_se_init_adjacency_flags = {
+	if = {
+		limit = { NOT = { has_global_flag = pwc_flag_adjacency_initialized } }
+		set_global_flag = pwc_flag_adjacency_initialized
+		U00 = {
+			set_country_flag = pwc_adj_U01
+			set_country_flag = pwc_adj_U02
+		}
+		U01 = {
+			set_country_flag = pwc_adj_U00
+			set_country_flag = pwc_adj_U02
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U09
+		}
+		U02 = {
+			set_country_flag = pwc_adj_U00
+			set_country_flag = pwc_adj_U01
+			set_country_flag = pwc_adj_U03
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U08
+		}
+		U03 = {
+			set_country_flag = pwc_adj_U02
+			set_country_flag = pwc_adj_U06
+			set_country_flag = pwc_adj_U07
+			set_country_flag = pwc_adj_U08
+			set_country_flag = pwc_adj_U14
+		}
+		U04 = {
+			set_country_flag = pwc_adj_U12
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U33
+		}
+		U05 = {
+			set_country_flag = pwc_adj_U01
+			set_country_flag = pwc_adj_U02
+			set_country_flag = pwc_adj_U08
+			set_country_flag = pwc_adj_U09
+			set_country_flag = pwc_adj_U11
+			set_country_flag = pwc_adj_U16
+		}
+		U06 = {
+			set_country_flag = pwc_adj_U03
+			set_country_flag = pwc_adj_U07
+			set_country_flag = pwc_adj_U10
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U17
+		}
+		U07 = {
+			set_country_flag = pwc_adj_U03
+			set_country_flag = pwc_adj_U06
+		}
+		U08 = {
+			set_country_flag = pwc_adj_U02
+			set_country_flag = pwc_adj_U03
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U11
+			set_country_flag = pwc_adj_U14
+		}
+		U09 = {
+			set_country_flag = pwc_adj_U01
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U16
+			set_country_flag = pwc_adj_U19
+		}
+		U10 = {
+			set_country_flag = pwc_adj_U06
+			set_country_flag = pwc_adj_U15
+			set_country_flag = pwc_adj_U17
+		}
+		U11 = {
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U08
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U16
+			set_country_flag = pwc_adj_U22
+		}
+		U12 = {
+			set_country_flag = pwc_adj_U04
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U23
+			set_country_flag = pwc_adj_U27
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U70
+		}
+		U13 = {
+			set_country_flag = pwc_adj_U09
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U25
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U50
+		}
+		U14 = {
+			set_country_flag = pwc_adj_U03
+			set_country_flag = pwc_adj_U06
+			set_country_flag = pwc_adj_U08
+			set_country_flag = pwc_adj_U11
+			set_country_flag = pwc_adj_U17
+			set_country_flag = pwc_adj_U18
+			set_country_flag = pwc_adj_U22
+			set_country_flag = pwc_adj_U24
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U29
+		}
+		U15 = {
+			set_country_flag = pwc_adj_U10
+			set_country_flag = pwc_adj_U17
+			set_country_flag = pwc_adj_U18
+		}
+		U16 = {
+			set_country_flag = pwc_adj_U05
+			set_country_flag = pwc_adj_U09
+			set_country_flag = pwc_adj_U11
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U22
+		}
+		U17 = {
+			set_country_flag = pwc_adj_U06
+			set_country_flag = pwc_adj_U10
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U15
+			set_country_flag = pwc_adj_U18
+		}
+		U18 = {
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U15
+			set_country_flag = pwc_adj_U17
+			set_country_flag = pwc_adj_U29
+		}
+		U19 = {
+			set_country_flag = pwc_adj_U09
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U16
+			set_country_flag = pwc_adj_U22
+			set_country_flag = pwc_adj_U25
+			set_country_flag = pwc_adj_U32
+			set_country_flag = pwc_adj_U36
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U40
+			set_country_flag = pwc_adj_U49
+		}
+		U20 = {
+			set_country_flag = pwc_adj_U42
+			set_country_flag = pwc_adj_U72
+		}
+		U21 = {
+			set_country_flag = pwc_adj_U04
+			set_country_flag = pwc_adj_U12
+			set_country_flag = pwc_adj_U26
+			set_country_flag = pwc_adj_U33
+			set_country_flag = pwc_adj_U34
+			set_country_flag = pwc_adj_U35
+		}
+		U22 = {
+			set_country_flag = pwc_adj_U11
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U16
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U24
+			set_country_flag = pwc_adj_U32
+		}
+		U23 = {
+			set_country_flag = pwc_adj_U12
+			set_country_flag = pwc_adj_U27
+		}
+		U24 = {
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U22
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U32
+		}
+		U25 = {
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U49
+		}
+		U26 = {
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U34
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U42
+		}
+		U27 = {
+			set_country_flag = pwc_adj_U12
+			set_country_flag = pwc_adj_U23
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U45
+		}
+		U28 = {
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U24
+			set_country_flag = pwc_adj_U29
+			set_country_flag = pwc_adj_U30
+			set_country_flag = pwc_adj_U32
+			set_country_flag = pwc_adj_U39
+			set_country_flag = pwc_adj_U41
+		}
+		U29 = {
+			set_country_flag = pwc_adj_U14
+			set_country_flag = pwc_adj_U18
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U41
+		}
+		U30 = {
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U32
+			set_country_flag = pwc_adj_U36
+			set_country_flag = pwc_adj_U39
+			set_country_flag = pwc_adj_U47
+		}
+		U31 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U88
+		}
+		U32 = {
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U22
+			set_country_flag = pwc_adj_U24
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U30
+			set_country_flag = pwc_adj_U36
+		}
+		U33 = {
+			set_country_flag = pwc_adj_U04
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U34
+			set_country_flag = pwc_adj_U35
+		}
+		U34 = {
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U26
+			set_country_flag = pwc_adj_U33
+			set_country_flag = pwc_adj_U35
+		}
+		U35 = {
+			set_country_flag = pwc_adj_U12
+			set_country_flag = pwc_adj_U21
+			set_country_flag = pwc_adj_U26
+			set_country_flag = pwc_adj_U27
+			set_country_flag = pwc_adj_U33
+			set_country_flag = pwc_adj_U34
+			set_country_flag = pwc_adj_U42
+			set_country_flag = pwc_adj_U45
+			set_country_flag = pwc_adj_U74
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V17
+		}
+		U36 = {
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U30
+			set_country_flag = pwc_adj_U32
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U47
+		}
+		U37 = {
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U44
+			set_country_flag = pwc_adj_U50
+			set_country_flag = pwc_adj_U57
+			set_country_flag = pwc_adj_U63
+			set_country_flag = pwc_adj_U66
+		}
+		U38 = {
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U36
+			set_country_flag = pwc_adj_U40
+			set_country_flag = pwc_adj_U47
+			set_country_flag = pwc_adj_U51
+			set_country_flag = pwc_adj_U52
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U54
+		}
+		U39 = {
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U30
+			set_country_flag = pwc_adj_U41
+			set_country_flag = pwc_adj_U47
+			set_country_flag = pwc_adj_U52
+			set_country_flag = pwc_adj_U59
+		}
+		U40 = {
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U49
+			set_country_flag = pwc_adj_U51
+		}
+		U41 = {
+			set_country_flag = pwc_adj_U28
+			set_country_flag = pwc_adj_U29
+			set_country_flag = pwc_adj_U39
+		}
+		U42 = {
+			set_country_flag = pwc_adj_U20
+			set_country_flag = pwc_adj_U26
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U78
+		}
+		U43 = {
+			set_country_flag = pwc_adj_U31
+			set_country_flag = pwc_adj_U42
+			set_country_flag = pwc_adj_U48
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U81
+			set_country_flag = pwc_adj_U83
+			set_country_flag = pwc_adj_U88
+			set_country_flag = pwc_adj_U90
+			set_country_flag = pwc_adj_U95
+			set_country_flag = pwc_adj_U97
+		}
+		U44 = {
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U48
+			set_country_flag = pwc_adj_U57
+			set_country_flag = pwc_adj_U62
+		}
+		U45 = {
+			set_country_flag = pwc_adj_U27
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U56
+			set_country_flag = pwc_adj_U67
+			set_country_flag = pwc_adj_U74
+		}
+		U46 = {
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U25
+			set_country_flag = pwc_adj_U49
+			set_country_flag = pwc_adj_U50
+			set_country_flag = pwc_adj_U60
+			set_country_flag = pwc_adj_U64
+			set_country_flag = pwc_adj_U65
+			set_country_flag = pwc_adj_U68
+		}
+		U47 = {
+			set_country_flag = pwc_adj_U30
+			set_country_flag = pwc_adj_U36
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U39
+			set_country_flag = pwc_adj_U52
+		}
+		U48 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U44
+			set_country_flag = pwc_adj_U62
+		}
+		U49 = {
+			set_country_flag = pwc_adj_U19
+			set_country_flag = pwc_adj_U25
+			set_country_flag = pwc_adj_U40
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U51
+			set_country_flag = pwc_adj_U58
+			set_country_flag = pwc_adj_U64
+		}
+		U50 = {
+			set_country_flag = pwc_adj_U13
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U60
+			set_country_flag = pwc_adj_U63
+			set_country_flag = pwc_adj_U71
+		}
+		U51 = {
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U40
+			set_country_flag = pwc_adj_U49
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U55
+			set_country_flag = pwc_adj_U58
+		}
+		U52 = {
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U39
+			set_country_flag = pwc_adj_U47
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U54
+			set_country_flag = pwc_adj_U59
+		}
+		U53 = {
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U51
+			set_country_flag = pwc_adj_U52
+			set_country_flag = pwc_adj_U54
+			set_country_flag = pwc_adj_U55
+			set_country_flag = pwc_adj_U59
+			set_country_flag = pwc_adj_U61
+			set_country_flag = pwc_adj_U69
+		}
+		U54 = {
+			set_country_flag = pwc_adj_U38
+			set_country_flag = pwc_adj_U52
+			set_country_flag = pwc_adj_U53
+		}
+		U55 = {
+			set_country_flag = pwc_adj_U51
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U61
+		}
+		U56 = {
+			set_country_flag = pwc_adj_U45
+			set_country_flag = pwc_adj_U67
+		}
+		U57 = {
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U44
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U66
+			set_country_flag = pwc_adj_U73
+		}
+		U58 = {
+			set_country_flag = pwc_adj_U49
+			set_country_flag = pwc_adj_U51
+			set_country_flag = pwc_adj_U64
+		}
+		U59 = {
+			set_country_flag = pwc_adj_U39
+			set_country_flag = pwc_adj_U52
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U69
+		}
+		U60 = {
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U50
+			set_country_flag = pwc_adj_U68
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U76
+		}
+		U61 = {
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U55
+			set_country_flag = pwc_adj_U69
+		}
+		U62 = {
+			set_country_flag = pwc_adj_U31
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U44
+			set_country_flag = pwc_adj_U48
+			set_country_flag = pwc_adj_U57
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U83
+			set_country_flag = pwc_adj_U88
+			set_country_flag = pwc_adj_U90
+		}
+		U63 = {
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U50
+			set_country_flag = pwc_adj_U66
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U73
+		}
+		U64 = {
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U49
+			set_country_flag = pwc_adj_U58
+			set_country_flag = pwc_adj_U65
+		}
+		U65 = {
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U64
+			set_country_flag = pwc_adj_U68
+		}
+		U66 = {
+			set_country_flag = pwc_adj_U37
+			set_country_flag = pwc_adj_U57
+			set_country_flag = pwc_adj_U63
+			set_country_flag = pwc_adj_U73
+		}
+		U67 = {
+			set_country_flag = pwc_adj_U45
+			set_country_flag = pwc_adj_U56
+			set_country_flag = pwc_adj_U74
+		}
+		U68 = {
+			set_country_flag = pwc_adj_U46
+			set_country_flag = pwc_adj_U60
+			set_country_flag = pwc_adj_U65
+			set_country_flag = pwc_adj_U76
+			set_country_flag = pwc_adj_U82
+		}
+		U69 = {
+			set_country_flag = pwc_adj_U53
+			set_country_flag = pwc_adj_U59
+			set_country_flag = pwc_adj_U61
+		}
+		U70 = {
+			set_country_flag = pwc_adj_U12
+		}
+		U71 = {
+			set_country_flag = pwc_adj_U50
+			set_country_flag = pwc_adj_U60
+			set_country_flag = pwc_adj_U63
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U76
+			set_country_flag = pwc_adj_U82
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U86
+		}
+		U72 = {
+			set_country_flag = pwc_adj_U20
+			set_country_flag = pwc_adj_U42
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_U81
+		}
+		U73 = {
+			set_country_flag = pwc_adj_U57
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U63
+			set_country_flag = pwc_adj_U66
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U80
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_U87
+		}
+		U74 = {
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U45
+			set_country_flag = pwc_adj_U67
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V31
+		}
+		U75 = {
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_U90
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V04
+		}
+		U76 = {
+			set_country_flag = pwc_adj_U60
+			set_country_flag = pwc_adj_U68
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U82
+		}
+		U77 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_U81
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V10
+		}
+		U78 = {
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U42
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V17
+			set_country_flag = pwc_adj_V32
+		}
+		U79 = {
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_V00
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V06
+		}
+		U80 = {
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U87
+			set_country_flag = pwc_adj_U92
+		}
+		U81 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U72
+			set_country_flag = pwc_adj_U77
+		}
+		U82 = {
+			set_country_flag = pwc_adj_U68
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U76
+			set_country_flag = pwc_adj_U86
+			set_country_flag = pwc_adj_U89
+			set_country_flag = pwc_adj_U93
+		}
+		U83 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U88
+			set_country_flag = pwc_adj_U90
+		}
+		U84 = {
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U80
+			set_country_flag = pwc_adj_U86
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_U96
+		}
+		U85 = {
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U87
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V12
+		}
+		U86 = {
+			set_country_flag = pwc_adj_U71
+			set_country_flag = pwc_adj_U82
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U93
+			set_country_flag = pwc_adj_U96
+		}
+		U87 = {
+			set_country_flag = pwc_adj_U73
+			set_country_flag = pwc_adj_U80
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_U92
+		}
+		U88 = {
+			set_country_flag = pwc_adj_U31
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U83
+		}
+		U89 = {
+			set_country_flag = pwc_adj_U82
+			set_country_flag = pwc_adj_U91
+			set_country_flag = pwc_adj_U93
+			set_country_flag = pwc_adj_V02
+			set_country_flag = pwc_adj_V05
+		}
+		U90 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U62
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U83
+			set_country_flag = pwc_adj_U95
+			set_country_flag = pwc_adj_V04
+		}
+		U91 = {
+			set_country_flag = pwc_adj_U89
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V05
+		}
+		U92 = {
+			set_country_flag = pwc_adj_U80
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_U87
+			set_country_flag = pwc_adj_U96
+			set_country_flag = pwc_adj_V07
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V12
+		}
+		U93 = {
+			set_country_flag = pwc_adj_U82
+			set_country_flag = pwc_adj_U86
+			set_country_flag = pwc_adj_U89
+			set_country_flag = pwc_adj_U96
+			set_country_flag = pwc_adj_V02
+			set_country_flag = pwc_adj_V11
+		}
+		U94 = {
+			set_country_flag = pwc_adj_U98
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V08
+		}
+		U95 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U90
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V04
+			set_country_flag = pwc_adj_V13
+		}
+		U96 = {
+			set_country_flag = pwc_adj_U84
+			set_country_flag = pwc_adj_U86
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_U93
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V11
+		}
+		U97 = {
+			set_country_flag = pwc_adj_U43
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U95
+			set_country_flag = pwc_adj_V10
+			set_country_flag = pwc_adj_V13
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V30
+		}
+		U98 = {
+			set_country_flag = pwc_adj_U94
+		}
+		U99 = {
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_V04
+			set_country_flag = pwc_adj_V12
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V29
+			set_country_flag = pwc_adj_V33
+			set_country_flag = pwc_adj_V35
+		}
+		V00 = {
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V06
+		}
+		V01 = {
+			set_country_flag = pwc_adj_U91
+			set_country_flag = pwc_adj_U94
+			set_country_flag = pwc_adj_V05
+			set_country_flag = pwc_adj_V08
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V24
+		}
+		V02 = {
+			set_country_flag = pwc_adj_U89
+			set_country_flag = pwc_adj_U93
+			set_country_flag = pwc_adj_V05
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V15
+		}
+		V03 = {
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_V00
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V20
+			set_country_flag = pwc_adj_V32
+		}
+		V04 = {
+			set_country_flag = pwc_adj_U75
+			set_country_flag = pwc_adj_U90
+			set_country_flag = pwc_adj_U95
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V13
+			set_country_flag = pwc_adj_V30
+			set_country_flag = pwc_adj_V35
+		}
+		V05 = {
+			set_country_flag = pwc_adj_U89
+			set_country_flag = pwc_adj_U91
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V02
+			set_country_flag = pwc_adj_V15
+			set_country_flag = pwc_adj_V19
+		}
+		V06 = {
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U79
+			set_country_flag = pwc_adj_V00
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V10
+			set_country_flag = pwc_adj_V20
+			set_country_flag = pwc_adj_V21
+			set_country_flag = pwc_adj_V34
+		}
+		V07 = {
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V12
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V23
+		}
+		V08 = {
+			set_country_flag = pwc_adj_U94
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V24
+		}
+		V09 = {
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_U96
+			set_country_flag = pwc_adj_V07
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V18
+		}
+		V10 = {
+			set_country_flag = pwc_adj_U77
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V21
+			set_country_flag = pwc_adj_V22
+		}
+		V11 = {
+			set_country_flag = pwc_adj_U93
+			set_country_flag = pwc_adj_U96
+			set_country_flag = pwc_adj_V02
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V15
+			set_country_flag = pwc_adj_V18
+			set_country_flag = pwc_adj_V25
+			set_country_flag = pwc_adj_V26
+		}
+		V12 = {
+			set_country_flag = pwc_adj_U85
+			set_country_flag = pwc_adj_U92
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V07
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V29
+		}
+		V13 = {
+			set_country_flag = pwc_adj_U95
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V04
+			set_country_flag = pwc_adj_V30
+		}
+		V14 = {
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U74
+			set_country_flag = pwc_adj_V17
+			set_country_flag = pwc_adj_V31
+			set_country_flag = pwc_adj_V83
+			set_country_flag = pwc_adj_V96
+			set_country_flag = pwc_adj_W09
+			set_country_flag = pwc_adj_W18
+		}
+		V15 = {
+			set_country_flag = pwc_adj_V02
+			set_country_flag = pwc_adj_V05
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V25
+		}
+		V16 = {
+			set_country_flag = pwc_adj_V07
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V18
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V56
+		}
+		V17 = {
+			set_country_flag = pwc_adj_U35
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V32
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_V83
+		}
+		V18 = {
+			set_country_flag = pwc_adj_V09
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V26
+		}
+		V19 = {
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V05
+			set_country_flag = pwc_adj_V15
+			set_country_flag = pwc_adj_V24
+			set_country_flag = pwc_adj_V25
+			set_country_flag = pwc_adj_V36
+			set_country_flag = pwc_adj_V41
+			set_country_flag = pwc_adj_V46
+		}
+		V20 = {
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V32
+			set_country_flag = pwc_adj_V34
+		}
+		V21 = {
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V10
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V34
+		}
+		V22 = {
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V10
+			set_country_flag = pwc_adj_V21
+			set_country_flag = pwc_adj_V30
+			set_country_flag = pwc_adj_V34
+			set_country_flag = pwc_adj_V39
+			set_country_flag = pwc_adj_V51
+		}
+		V23 = {
+			set_country_flag = pwc_adj_V07
+			set_country_flag = pwc_adj_V12
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V29
+			set_country_flag = pwc_adj_V37
+			set_country_flag = pwc_adj_V38
+		}
+		V24 = {
+			set_country_flag = pwc_adj_V01
+			set_country_flag = pwc_adj_V08
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V41
+		}
+		V25 = {
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V15
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V36
+			set_country_flag = pwc_adj_V46
+		}
+		V26 = {
+			set_country_flag = pwc_adj_V11
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V18
+			set_country_flag = pwc_adj_V25
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V46
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V49
+		}
+		V27 = {
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V37
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V45
+			set_country_flag = pwc_adj_V56
+		}
+		V28 = {
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V29
+			set_country_flag = pwc_adj_V33
+			set_country_flag = pwc_adj_V35
+			set_country_flag = pwc_adj_V42
+			set_country_flag = pwc_adj_V48
+			set_country_flag = pwc_adj_V52
+		}
+		V29 = {
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V12
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V38
+			set_country_flag = pwc_adj_V42
+		}
+		V30 = {
+			set_country_flag = pwc_adj_U97
+			set_country_flag = pwc_adj_V04
+			set_country_flag = pwc_adj_V13
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V35
+			set_country_flag = pwc_adj_V39
+			set_country_flag = pwc_adj_V40
+		}
+		V31 = {
+			set_country_flag = pwc_adj_U74
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V96
+		}
+		V32 = {
+			set_country_flag = pwc_adj_U78
+			set_country_flag = pwc_adj_V03
+			set_country_flag = pwc_adj_V17
+			set_country_flag = pwc_adj_V20
+			set_country_flag = pwc_adj_V34
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V64
+		}
+		V33 = {
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V35
+		}
+		V34 = {
+			set_country_flag = pwc_adj_V06
+			set_country_flag = pwc_adj_V20
+			set_country_flag = pwc_adj_V21
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V32
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V59
+		}
+		V35 = {
+			set_country_flag = pwc_adj_U99
+			set_country_flag = pwc_adj_V04
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V30
+			set_country_flag = pwc_adj_V33
+			set_country_flag = pwc_adj_V40
+			set_country_flag = pwc_adj_V48
+		}
+		V36 = {
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V25
+			set_country_flag = pwc_adj_V46
+		}
+		V37 = {
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V38
+			set_country_flag = pwc_adj_V44
+			set_country_flag = pwc_adj_V45
+		}
+		V38 = {
+			set_country_flag = pwc_adj_V23
+			set_country_flag = pwc_adj_V29
+			set_country_flag = pwc_adj_V37
+			set_country_flag = pwc_adj_V42
+			set_country_flag = pwc_adj_V44
+		}
+		V39 = {
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V30
+			set_country_flag = pwc_adj_V40
+			set_country_flag = pwc_adj_V51
+		}
+		V40 = {
+			set_country_flag = pwc_adj_V30
+			set_country_flag = pwc_adj_V35
+			set_country_flag = pwc_adj_V39
+			set_country_flag = pwc_adj_V48
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V65
+		}
+		V41 = {
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V24
+			set_country_flag = pwc_adj_V46
+			set_country_flag = pwc_adj_V53
+			set_country_flag = pwc_adj_V58
+			set_country_flag = pwc_adj_V63
+		}
+		V42 = {
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V29
+			set_country_flag = pwc_adj_V38
+			set_country_flag = pwc_adj_V44
+			set_country_flag = pwc_adj_V52
+			set_country_flag = pwc_adj_V67
+		}
+		V43 = {
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V45
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V55
+			set_country_flag = pwc_adj_V60
+		}
+		V44 = {
+			set_country_flag = pwc_adj_V37
+			set_country_flag = pwc_adj_V38
+			set_country_flag = pwc_adj_V42
+			set_country_flag = pwc_adj_V45
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V67
+		}
+		V45 = {
+			set_country_flag = pwc_adj_V27
+			set_country_flag = pwc_adj_V37
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V44
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V55
+		}
+		V46 = {
+			set_country_flag = pwc_adj_V19
+			set_country_flag = pwc_adj_V25
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V36
+			set_country_flag = pwc_adj_V41
+			set_country_flag = pwc_adj_V49
+			set_country_flag = pwc_adj_V58
+		}
+		V47 = {
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V49
+			set_country_flag = pwc_adj_V60
+			set_country_flag = pwc_adj_V61
+			set_country_flag = pwc_adj_V62
+		}
+		V48 = {
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V35
+			set_country_flag = pwc_adj_V40
+			set_country_flag = pwc_adj_V52
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V66
+		}
+		V49 = {
+			set_country_flag = pwc_adj_V26
+			set_country_flag = pwc_adj_V46
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V58
+			set_country_flag = pwc_adj_V61
+			set_country_flag = pwc_adj_V70
+		}
+		V50 = {
+			set_country_flag = pwc_adj_V62
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V70
+			set_country_flag = pwc_adj_V73
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V81
+		}
+		V51 = {
+			set_country_flag = pwc_adj_V22
+			set_country_flag = pwc_adj_V34
+			set_country_flag = pwc_adj_V39
+			set_country_flag = pwc_adj_V40
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_V76
+		}
+		V52 = {
+			set_country_flag = pwc_adj_V28
+			set_country_flag = pwc_adj_V42
+			set_country_flag = pwc_adj_V48
+			set_country_flag = pwc_adj_V66
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V72
+		}
+		V53 = {
+			set_country_flag = pwc_adj_V41
+			set_country_flag = pwc_adj_V63
+			set_country_flag = pwc_adj_V71
+			set_country_flag = pwc_adj_V74
+			set_country_flag = pwc_adj_V79
+		}
+		V54 = {
+			set_country_flag = pwc_adj_V44
+			set_country_flag = pwc_adj_V45
+			set_country_flag = pwc_adj_V55
+			set_country_flag = pwc_adj_V57
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V69
+		}
+		V55 = {
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V45
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V57
+			set_country_flag = pwc_adj_V60
+		}
+		V56 = {
+			set_country_flag = pwc_adj_V16
+			set_country_flag = pwc_adj_V27
+		}
+		V57 = {
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V55
+			set_country_flag = pwc_adj_V60
+			set_country_flag = pwc_adj_V69
+		}
+		V58 = {
+			set_country_flag = pwc_adj_V41
+			set_country_flag = pwc_adj_V46
+			set_country_flag = pwc_adj_V49
+			set_country_flag = pwc_adj_V63
+			set_country_flag = pwc_adj_V70
+			set_country_flag = pwc_adj_V73
+		}
+		V59 = {
+			set_country_flag = pwc_adj_V32
+			set_country_flag = pwc_adj_V34
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_V97
+			set_country_flag = pwc_adj_W02
+			set_country_flag = pwc_adj_W12
+		}
+		V60 = {
+			set_country_flag = pwc_adj_V43
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V55
+			set_country_flag = pwc_adj_V57
+			set_country_flag = pwc_adj_V62
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V69
+		}
+		V61 = {
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V49
+			set_country_flag = pwc_adj_V62
+			set_country_flag = pwc_adj_V70
+		}
+		V62 = {
+			set_country_flag = pwc_adj_V47
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V60
+			set_country_flag = pwc_adj_V61
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V70
+		}
+		V63 = {
+			set_country_flag = pwc_adj_V41
+			set_country_flag = pwc_adj_V53
+			set_country_flag = pwc_adj_V58
+			set_country_flag = pwc_adj_V71
+			set_country_flag = pwc_adj_V73
+		}
+		V64 = {
+			set_country_flag = pwc_adj_V17
+			set_country_flag = pwc_adj_V32
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V83
+			set_country_flag = pwc_adj_W12
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W50
+			set_country_flag = pwc_adj_W70
+		}
+		V65 = {
+			set_country_flag = pwc_adj_V40
+			set_country_flag = pwc_adj_V48
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V66
+			set_country_flag = pwc_adj_V76
+			set_country_flag = pwc_adj_V78
+			set_country_flag = pwc_adj_V85
+		}
+		V66 = {
+			set_country_flag = pwc_adj_V48
+			set_country_flag = pwc_adj_V52
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V72
+			set_country_flag = pwc_adj_V85
+			set_country_flag = pwc_adj_W11
+		}
+		V67 = {
+			set_country_flag = pwc_adj_V42
+			set_country_flag = pwc_adj_V44
+			set_country_flag = pwc_adj_V52
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V69
+			set_country_flag = pwc_adj_V72
+			set_country_flag = pwc_adj_V80
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V84
+		}
+		V68 = {
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V60
+			set_country_flag = pwc_adj_V62
+			set_country_flag = pwc_adj_V69
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V80
+		}
+		V69 = {
+			set_country_flag = pwc_adj_V54
+			set_country_flag = pwc_adj_V57
+			set_country_flag = pwc_adj_V60
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V80
+		}
+		V70 = {
+			set_country_flag = pwc_adj_V49
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V58
+			set_country_flag = pwc_adj_V61
+			set_country_flag = pwc_adj_V62
+			set_country_flag = pwc_adj_V73
+		}
+		V71 = {
+			set_country_flag = pwc_adj_V53
+			set_country_flag = pwc_adj_V63
+			set_country_flag = pwc_adj_V73
+			set_country_flag = pwc_adj_V74
+			set_country_flag = pwc_adj_V88
+		}
+		V72 = {
+			set_country_flag = pwc_adj_V52
+			set_country_flag = pwc_adj_V66
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V92
+			set_country_flag = pwc_adj_W11
+		}
+		V73 = {
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V58
+			set_country_flag = pwc_adj_V63
+			set_country_flag = pwc_adj_V70
+			set_country_flag = pwc_adj_V71
+			set_country_flag = pwc_adj_V81
+			set_country_flag = pwc_adj_V86
+			set_country_flag = pwc_adj_V88
+		}
+		V74 = {
+			set_country_flag = pwc_adj_V53
+			set_country_flag = pwc_adj_V71
+			set_country_flag = pwc_adj_V79
+		}
+		V75 = {
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V76
+			set_country_flag = pwc_adj_V91
+			set_country_flag = pwc_adj_V97
+			set_country_flag = pwc_adj_W07
+		}
+		V76 = {
+			set_country_flag = pwc_adj_V51
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_V78
+			set_country_flag = pwc_adj_V91
+		}
+		V77 = {
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V80
+			set_country_flag = pwc_adj_V81
+			set_country_flag = pwc_adj_W00
+			set_country_flag = pwc_adj_W06
+		}
+		V78 = {
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V76
+			set_country_flag = pwc_adj_V85
+			set_country_flag = pwc_adj_V91
+		}
+		V79 = {
+			set_country_flag = pwc_adj_V53
+			set_country_flag = pwc_adj_V74
+			set_country_flag = pwc_adj_V95
+		}
+		V80 = {
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V68
+			set_country_flag = pwc_adj_V69
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V84
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_W00
+		}
+		V81 = {
+			set_country_flag = pwc_adj_V50
+			set_country_flag = pwc_adj_V73
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V86
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W06
+		}
+		V82 = {
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V72
+			set_country_flag = pwc_adj_V84
+			set_country_flag = pwc_adj_V92
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_V99
+		}
+		V83 = {
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V17
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_W50
+		}
+		V84 = {
+			set_country_flag = pwc_adj_V67
+			set_country_flag = pwc_adj_V80
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_V99
+		}
+		V85 = {
+			set_country_flag = pwc_adj_V65
+			set_country_flag = pwc_adj_V66
+			set_country_flag = pwc_adj_V78
+			set_country_flag = pwc_adj_V91
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W14
+		}
+		V86 = {
+			set_country_flag = pwc_adj_V73
+			set_country_flag = pwc_adj_V81
+			set_country_flag = pwc_adj_V88
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W05
+		}
+		V87 = {
+			set_country_flag = pwc_adj_V88
+			set_country_flag = pwc_adj_V89
+		}
+		V88 = {
+			set_country_flag = pwc_adj_V71
+			set_country_flag = pwc_adj_V73
+			set_country_flag = pwc_adj_V86
+			set_country_flag = pwc_adj_V87
+			set_country_flag = pwc_adj_V89
+			set_country_flag = pwc_adj_W05
+		}
+		V89 = {
+			set_country_flag = pwc_adj_V87
+			set_country_flag = pwc_adj_V88
+			set_country_flag = pwc_adj_V93
+			set_country_flag = pwc_adj_W05
+		}
+		V90 = {
+			set_country_flag = pwc_adj_V93
+			set_country_flag = pwc_adj_W01
+			set_country_flag = pwc_adj_W08
+			set_country_flag = pwc_adj_W10
+		}
+		V91 = {
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_V76
+			set_country_flag = pwc_adj_V78
+			set_country_flag = pwc_adj_V85
+			set_country_flag = pwc_adj_W07
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W14
+		}
+		V92 = {
+			set_country_flag = pwc_adj_V72
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_W11
+		}
+		V93 = {
+			set_country_flag = pwc_adj_V89
+			set_country_flag = pwc_adj_V90
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W08
+		}
+		V94 = {
+			set_country_flag = pwc_adj_V80
+			set_country_flag = pwc_adj_V84
+			set_country_flag = pwc_adj_V99
+			set_country_flag = pwc_adj_W00
+			set_country_flag = pwc_adj_W19
+			set_country_flag = pwc_adj_W23
+			set_country_flag = pwc_adj_W24
+		}
+		V95 = {
+			set_country_flag = pwc_adj_V79
+			set_country_flag = pwc_adj_W01
+		}
+		V96 = {
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V31
+			set_country_flag = pwc_adj_W09
+			set_country_flag = pwc_adj_W39
+		}
+		V97 = {
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_W02
+			set_country_flag = pwc_adj_W07
+			set_country_flag = pwc_adj_W16
+		}
+		V98 = {
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V92
+			set_country_flag = pwc_adj_V99
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W13
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W32
+		}
+		V99 = {
+			set_country_flag = pwc_adj_V82
+			set_country_flag = pwc_adj_V84
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W20
+			set_country_flag = pwc_adj_W24
+		}
+		W00 = {
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V80
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_W06
+			set_country_flag = pwc_adj_W19
+		}
+		W01 = {
+			set_country_flag = pwc_adj_V90
+			set_country_flag = pwc_adj_V95
+			set_country_flag = pwc_adj_W10
+		}
+		W02 = {
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V97
+			set_country_flag = pwc_adj_W12
+			set_country_flag = pwc_adj_W16
+			set_country_flag = pwc_adj_W25
+		}
+		W03 = {
+			set_country_flag = pwc_adj_V81
+			set_country_flag = pwc_adj_V86
+			set_country_flag = pwc_adj_W04
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W06
+			set_country_flag = pwc_adj_W15
+		}
+		W04 = {
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W15
+		}
+		W05 = {
+			set_country_flag = pwc_adj_V86
+			set_country_flag = pwc_adj_V88
+			set_country_flag = pwc_adj_V89
+			set_country_flag = pwc_adj_V93
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W08
+			set_country_flag = pwc_adj_W15
+			set_country_flag = pwc_adj_W21
+			set_country_flag = pwc_adj_W22
+		}
+		W06 = {
+			set_country_flag = pwc_adj_V77
+			set_country_flag = pwc_adj_V81
+			set_country_flag = pwc_adj_W00
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W15
+		}
+		W07 = {
+			set_country_flag = pwc_adj_V75
+			set_country_flag = pwc_adj_V91
+			set_country_flag = pwc_adj_V97
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W16
+		}
+		W08 = {
+			set_country_flag = pwc_adj_V90
+			set_country_flag = pwc_adj_V93
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W10
+			set_country_flag = pwc_adj_W21
+		}
+		W09 = {
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V96
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_W39
+		}
+		W10 = {
+			set_country_flag = pwc_adj_V90
+			set_country_flag = pwc_adj_W01
+			set_country_flag = pwc_adj_W08
+			set_country_flag = pwc_adj_W21
+		}
+		W11 = {
+			set_country_flag = pwc_adj_V66
+			set_country_flag = pwc_adj_V72
+			set_country_flag = pwc_adj_V85
+			set_country_flag = pwc_adj_V91
+			set_country_flag = pwc_adj_V92
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_W07
+			set_country_flag = pwc_adj_W13
+			set_country_flag = pwc_adj_W14
+			set_country_flag = pwc_adj_W16
+			set_country_flag = pwc_adj_W33
+			set_country_flag = pwc_adj_W42
+			set_country_flag = pwc_adj_W43
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W54
+		}
+		W12 = {
+			set_country_flag = pwc_adj_V59
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_W02
+			set_country_flag = pwc_adj_W25
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W48
+		}
+		W13 = {
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W32
+			set_country_flag = pwc_adj_W36
+			set_country_flag = pwc_adj_W43
+		}
+		W14 = {
+			set_country_flag = pwc_adj_V85
+			set_country_flag = pwc_adj_V91
+			set_country_flag = pwc_adj_W11
+		}
+		W15 = {
+			set_country_flag = pwc_adj_W03
+			set_country_flag = pwc_adj_W04
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W06
+			set_country_flag = pwc_adj_W22
+			set_country_flag = pwc_adj_W34
+			set_country_flag = pwc_adj_W38
+			set_country_flag = pwc_adj_W41
+		}
+		W16 = {
+			set_country_flag = pwc_adj_V97
+			set_country_flag = pwc_adj_W02
+			set_country_flag = pwc_adj_W07
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W25
+			set_country_flag = pwc_adj_W33
+		}
+		W17 = {
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_V99
+			set_country_flag = pwc_adj_W20
+			set_country_flag = pwc_adj_W23
+			set_country_flag = pwc_adj_W32
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W44
+		}
+		W18 = {
+			set_country_flag = pwc_adj_V14
+			set_country_flag = pwc_adj_V83
+			set_country_flag = pwc_adj_W09
+			set_country_flag = pwc_adj_W39
+			set_country_flag = pwc_adj_W50
+			set_country_flag = pwc_adj_W63
+			set_country_flag = pwc_adj_X53
+		}
+		W19 = {
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_W00
+			set_country_flag = pwc_adj_W23
+			set_country_flag = pwc_adj_W26
+			set_country_flag = pwc_adj_W29
+			set_country_flag = pwc_adj_W31
+		}
+		W20 = {
+			set_country_flag = pwc_adj_V99
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W23
+			set_country_flag = pwc_adj_W24
+		}
+		W21 = {
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W08
+			set_country_flag = pwc_adj_W10
+			set_country_flag = pwc_adj_W22
+			set_country_flag = pwc_adj_W30
+			set_country_flag = pwc_adj_W40
+			set_country_flag = pwc_adj_W45
+		}
+		W22 = {
+			set_country_flag = pwc_adj_W05
+			set_country_flag = pwc_adj_W15
+			set_country_flag = pwc_adj_W21
+			set_country_flag = pwc_adj_W34
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W45
+		}
+		W23 = {
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W19
+			set_country_flag = pwc_adj_W20
+			set_country_flag = pwc_adj_W24
+		}
+		W24 = {
+			set_country_flag = pwc_adj_V94
+			set_country_flag = pwc_adj_V99
+			set_country_flag = pwc_adj_W20
+			set_country_flag = pwc_adj_W23
+		}
+		W25 = {
+			set_country_flag = pwc_adj_W02
+			set_country_flag = pwc_adj_W12
+			set_country_flag = pwc_adj_W16
+			set_country_flag = pwc_adj_W33
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W42
+		}
+		W26 = {
+			set_country_flag = pwc_adj_W19
+			set_country_flag = pwc_adj_W29
+		}
+		W27 = {
+			set_country_flag = pwc_adj_W28
+			set_country_flag = pwc_adj_W30
+			set_country_flag = pwc_adj_W47
+		}
+		W28 = {
+			set_country_flag = pwc_adj_W27
+		}
+		W29 = {
+			set_country_flag = pwc_adj_W19
+			set_country_flag = pwc_adj_W26
+			set_country_flag = pwc_adj_W31
+			set_country_flag = pwc_adj_W38
+		}
+		W30 = {
+			set_country_flag = pwc_adj_W21
+			set_country_flag = pwc_adj_W27
+			set_country_flag = pwc_adj_W40
+			set_country_flag = pwc_adj_W47
+		}
+		W31 = {
+			set_country_flag = pwc_adj_W19
+			set_country_flag = pwc_adj_W29
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W38
+		}
+		W32 = {
+			set_country_flag = pwc_adj_V98
+			set_country_flag = pwc_adj_W13
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W36
+			set_country_flag = pwc_adj_W44
+			set_country_flag = pwc_adj_W55
+		}
+		W33 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W16
+			set_country_flag = pwc_adj_W25
+			set_country_flag = pwc_adj_W42
+		}
+		W34 = {
+			set_country_flag = pwc_adj_W15
+			set_country_flag = pwc_adj_W22
+			set_country_flag = pwc_adj_W41
+		}
+		W35 = {
+			set_country_flag = pwc_adj_W12
+			set_country_flag = pwc_adj_W25
+			set_country_flag = pwc_adj_W42
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W49
+			set_country_flag = pwc_adj_W57
+		}
+		W36 = {
+			set_country_flag = pwc_adj_W13
+			set_country_flag = pwc_adj_W32
+			set_country_flag = pwc_adj_W43
+			set_country_flag = pwc_adj_W55
+		}
+		W37 = {
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W31
+			set_country_flag = pwc_adj_W38
+			set_country_flag = pwc_adj_W44
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W58
+		}
+		W38 = {
+			set_country_flag = pwc_adj_W15
+			set_country_flag = pwc_adj_W29
+			set_country_flag = pwc_adj_W31
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W52
+			set_country_flag = pwc_adj_W53
+		}
+		W39 = {
+			set_country_flag = pwc_adj_V96
+			set_country_flag = pwc_adj_W09
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_X53
+		}
+		W40 = {
+			set_country_flag = pwc_adj_W21
+			set_country_flag = pwc_adj_W30
+			set_country_flag = pwc_adj_W45
+			set_country_flag = pwc_adj_W47
+			set_country_flag = pwc_adj_W56
+		}
+		W41 = {
+			set_country_flag = pwc_adj_W15
+			set_country_flag = pwc_adj_W22
+			set_country_flag = pwc_adj_W34
+			set_country_flag = pwc_adj_W38
+			set_country_flag = pwc_adj_W45
+			set_country_flag = pwc_adj_W52
+			set_country_flag = pwc_adj_W59
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W62
+		}
+		W42 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W25
+			set_country_flag = pwc_adj_W33
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W49
+		}
+		W43 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W13
+			set_country_flag = pwc_adj_W36
+			set_country_flag = pwc_adj_W54
+			set_country_flag = pwc_adj_W55
+		}
+		W44 = {
+			set_country_flag = pwc_adj_W17
+			set_country_flag = pwc_adj_W32
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W64
+		}
+		W45 = {
+			set_country_flag = pwc_adj_W21
+			set_country_flag = pwc_adj_W22
+			set_country_flag = pwc_adj_W40
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W56
+			set_country_flag = pwc_adj_W62
+		}
+		W46 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W42
+			set_country_flag = pwc_adj_W49
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W57
+			set_country_flag = pwc_adj_W71
+		}
+		W47 = {
+			set_country_flag = pwc_adj_W27
+			set_country_flag = pwc_adj_W30
+			set_country_flag = pwc_adj_W40
+			set_country_flag = pwc_adj_W56
+			set_country_flag = pwc_adj_W60
+		}
+		W48 = {
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_W12
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W57
+			set_country_flag = pwc_adj_W70
+			set_country_flag = pwc_adj_W77
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W88
+			set_country_flag = pwc_adj_W89
+		}
+		W49 = {
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W42
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W57
+		}
+		W50 = {
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_V83
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_W63
+			set_country_flag = pwc_adj_W70
+		}
+		W51 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W54
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W74
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W78
+		}
+		W52 = {
+			set_country_flag = pwc_adj_W38
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W61
+		}
+		W53 = {
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W38
+			set_country_flag = pwc_adj_W52
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W65
+			set_country_flag = pwc_adj_W68
+			set_country_flag = pwc_adj_W69
+		}
+		W54 = {
+			set_country_flag = pwc_adj_W11
+			set_country_flag = pwc_adj_W43
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W74
+		}
+		W55 = {
+			set_country_flag = pwc_adj_W32
+			set_country_flag = pwc_adj_W36
+			set_country_flag = pwc_adj_W43
+			set_country_flag = pwc_adj_W44
+			set_country_flag = pwc_adj_W54
+			set_country_flag = pwc_adj_W64
+			set_country_flag = pwc_adj_W72
+			set_country_flag = pwc_adj_W74
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_W92
+		}
+		W56 = {
+			set_country_flag = pwc_adj_W40
+			set_country_flag = pwc_adj_W45
+			set_country_flag = pwc_adj_W47
+			set_country_flag = pwc_adj_W60
+			set_country_flag = pwc_adj_W62
+			set_country_flag = pwc_adj_W73
+		}
+		W57 = {
+			set_country_flag = pwc_adj_W35
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W49
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W81
+		}
+		W58 = {
+			set_country_flag = pwc_adj_W37
+			set_country_flag = pwc_adj_W44
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W64
+			set_country_flag = pwc_adj_W66
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W68
+		}
+		W59 = {
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W62
+		}
+		W60 = {
+			set_country_flag = pwc_adj_W47
+			set_country_flag = pwc_adj_W56
+			set_country_flag = pwc_adj_W73
+		}
+		W61 = {
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W52
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W59
+			set_country_flag = pwc_adj_W62
+			set_country_flag = pwc_adj_W69
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W80
+		}
+		W62 = {
+			set_country_flag = pwc_adj_W41
+			set_country_flag = pwc_adj_W45
+			set_country_flag = pwc_adj_W56
+			set_country_flag = pwc_adj_W59
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W73
+			set_country_flag = pwc_adj_W80
+		}
+		W63 = {
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_W50
+			set_country_flag = pwc_adj_W70
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W95
+		}
+		W64 = {
+			set_country_flag = pwc_adj_W44
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W66
+			set_country_flag = pwc_adj_W72
+			set_country_flag = pwc_adj_W75
+		}
+		W65 = {
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W69
+		}
+		W66 = {
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W64
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W75
+		}
+		W67 = {
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W66
+			set_country_flag = pwc_adj_W68
+			set_country_flag = pwc_adj_W69
+			set_country_flag = pwc_adj_W75
+			set_country_flag = pwc_adj_W83
+		}
+		W68 = {
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W58
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W69
+		}
+		W69 = {
+			set_country_flag = pwc_adj_W53
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W65
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W68
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W83
+		}
+		W70 = {
+			set_country_flag = pwc_adj_V64
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W50
+			set_country_flag = pwc_adj_W63
+			set_country_flag = pwc_adj_W77
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W88
+		}
+		W71 = {
+			set_country_flag = pwc_adj_W46
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W57
+			set_country_flag = pwc_adj_W78
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W84
+			set_country_flag = pwc_adj_W87
+		}
+		W72 = {
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W64
+			set_country_flag = pwc_adj_W75
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W90
+		}
+		W73 = {
+			set_country_flag = pwc_adj_W56
+			set_country_flag = pwc_adj_W60
+			set_country_flag = pwc_adj_W62
+			set_country_flag = pwc_adj_W80
+			set_country_flag = pwc_adj_W86
+		}
+		W74 = {
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W54
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W92
+			set_country_flag = pwc_adj_W97
+		}
+		W75 = {
+			set_country_flag = pwc_adj_W64
+			set_country_flag = pwc_adj_W66
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W72
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W83
+		}
+		W76 = {
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W74
+			set_country_flag = pwc_adj_W78
+			set_country_flag = pwc_adj_W87
+			set_country_flag = pwc_adj_W91
+			set_country_flag = pwc_adj_W97
+			set_country_flag = pwc_adj_X05
+		}
+		W77 = {
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W70
+			set_country_flag = pwc_adj_W88
+		}
+		W78 = {
+			set_country_flag = pwc_adj_W51
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W87
+		}
+		W79 = {
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W69
+			set_country_flag = pwc_adj_W80
+			set_country_flag = pwc_adj_W83
+			set_country_flag = pwc_adj_W93
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X11
+		}
+		W80 = {
+			set_country_flag = pwc_adj_W61
+			set_country_flag = pwc_adj_W62
+			set_country_flag = pwc_adj_W73
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W86
+			set_country_flag = pwc_adj_W93
+			set_country_flag = pwc_adj_W94
+		}
+		W81 = {
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W57
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W84
+			set_country_flag = pwc_adj_W89
+			set_country_flag = pwc_adj_W91
+			set_country_flag = pwc_adj_X05
+			set_country_flag = pwc_adj_X12
+			set_country_flag = pwc_adj_X13
+		}
+		W82 = {
+			set_country_flag = pwc_adj_W72
+			set_country_flag = pwc_adj_W75
+			set_country_flag = pwc_adj_W83
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X03
+		}
+		W83 = {
+			set_country_flag = pwc_adj_W67
+			set_country_flag = pwc_adj_W69
+			set_country_flag = pwc_adj_W75
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X01
+		}
+		W84 = {
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W87
+			set_country_flag = pwc_adj_W91
+		}
+		W85 = {
+			set_country_flag = pwc_adj_W63
+			set_country_flag = pwc_adj_W70
+			set_country_flag = pwc_adj_W88
+			set_country_flag = pwc_adj_W95
+			set_country_flag = pwc_adj_X06
+			set_country_flag = pwc_adj_X10
+		}
+		W86 = {
+			set_country_flag = pwc_adj_W73
+			set_country_flag = pwc_adj_W80
+			set_country_flag = pwc_adj_W94
+			set_country_flag = pwc_adj_W96
+		}
+		W87 = {
+			set_country_flag = pwc_adj_W71
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W78
+			set_country_flag = pwc_adj_W84
+			set_country_flag = pwc_adj_W91
+		}
+		W88 = {
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W70
+			set_country_flag = pwc_adj_W77
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W89
+			set_country_flag = pwc_adj_X07
+			set_country_flag = pwc_adj_X10
+		}
+		W89 = {
+			set_country_flag = pwc_adj_W48
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W88
+			set_country_flag = pwc_adj_X07
+			set_country_flag = pwc_adj_X12
+		}
+		W90 = {
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W72
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W92
+			set_country_flag = pwc_adj_X03
+			set_country_flag = pwc_adj_X15
+			set_country_flag = pwc_adj_X16
+		}
+		W91 = {
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W84
+			set_country_flag = pwc_adj_W87
+			set_country_flag = pwc_adj_X05
+		}
+		W92 = {
+			set_country_flag = pwc_adj_W55
+			set_country_flag = pwc_adj_W74
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_W97
+			set_country_flag = pwc_adj_X15
+		}
+		W93 = {
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W80
+			set_country_flag = pwc_adj_W94
+			set_country_flag = pwc_adj_X02
+			set_country_flag = pwc_adj_X08
+		}
+		W94 = {
+			set_country_flag = pwc_adj_W80
+			set_country_flag = pwc_adj_W86
+			set_country_flag = pwc_adj_W93
+			set_country_flag = pwc_adj_W96
+			set_country_flag = pwc_adj_X02
+			set_country_flag = pwc_adj_X09
+		}
+		W95 = {
+			set_country_flag = pwc_adj_W63
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W99
+			set_country_flag = pwc_adj_X06
+		}
+		W96 = {
+			set_country_flag = pwc_adj_W86
+			set_country_flag = pwc_adj_W94
+		}
+		W97 = {
+			set_country_flag = pwc_adj_W74
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W92
+			set_country_flag = pwc_adj_X05
+			set_country_flag = pwc_adj_X15
+			set_country_flag = pwc_adj_X20
+		}
+		W98 = {
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W83
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X11
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X23
+		}
+		W99 = {
+			set_country_flag = pwc_adj_W95
+		}
+		X00 = {
+			set_country_flag = pwc_adj_X55
+		}
+		X01 = {
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W83
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X03
+			set_country_flag = pwc_adj_X17
+			set_country_flag = pwc_adj_X23
+			set_country_flag = pwc_adj_X29
+		}
+		X02 = {
+			set_country_flag = pwc_adj_W93
+			set_country_flag = pwc_adj_W94
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X09
+			set_country_flag = pwc_adj_X19
+		}
+		X03 = {
+			set_country_flag = pwc_adj_W82
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X17
+		}
+		X04 = {
+			set_country_flag = pwc_adj_X14
+			set_country_flag = pwc_adj_X54
+			set_country_flag = pwc_adj_X56
+			set_country_flag = pwc_adj_X57
+		}
+		X05 = {
+			set_country_flag = pwc_adj_W76
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W91
+			set_country_flag = pwc_adj_W97
+			set_country_flag = pwc_adj_X13
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X31
+		}
+		X06 = {
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W95
+			set_country_flag = pwc_adj_X10
+		}
+		X07 = {
+			set_country_flag = pwc_adj_W88
+			set_country_flag = pwc_adj_W89
+			set_country_flag = pwc_adj_X10
+			set_country_flag = pwc_adj_X12
+		}
+		X08 = {
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W93
+			set_country_flag = pwc_adj_X02
+			set_country_flag = pwc_adj_X11
+			set_country_flag = pwc_adj_X19
+			set_country_flag = pwc_adj_X25
+			set_country_flag = pwc_adj_X30
+		}
+		X09 = {
+			set_country_flag = pwc_adj_W94
+			set_country_flag = pwc_adj_X02
+			set_country_flag = pwc_adj_X64
+			set_country_flag = pwc_adj_X65
+		}
+		X10 = {
+			set_country_flag = pwc_adj_W85
+			set_country_flag = pwc_adj_W88
+			set_country_flag = pwc_adj_X06
+			set_country_flag = pwc_adj_X07
+			set_country_flag = pwc_adj_X12
+			set_country_flag = pwc_adj_X41
+		}
+		X11 = {
+			set_country_flag = pwc_adj_W79
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X30
+		}
+		X12 = {
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_W89
+			set_country_flag = pwc_adj_X07
+			set_country_flag = pwc_adj_X10
+			set_country_flag = pwc_adj_X13
+		}
+		X13 = {
+			set_country_flag = pwc_adj_W81
+			set_country_flag = pwc_adj_X05
+			set_country_flag = pwc_adj_X12
+		}
+		X14 = {
+			set_country_flag = pwc_adj_X04
+			set_country_flag = pwc_adj_X18
+			set_country_flag = pwc_adj_X54
+			set_country_flag = pwc_adj_X57
+			set_country_flag = pwc_adj_X58
+			set_country_flag = pwc_adj_X59
+		}
+		X15 = {
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_W92
+			set_country_flag = pwc_adj_W97
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X22
+		}
+		X16 = {
+			set_country_flag = pwc_adj_W90
+			set_country_flag = pwc_adj_X03
+			set_country_flag = pwc_adj_X15
+			set_country_flag = pwc_adj_X17
+			set_country_flag = pwc_adj_X22
+			set_country_flag = pwc_adj_X32
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X39
+		}
+		X17 = {
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X03
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X29
+			set_country_flag = pwc_adj_X32
+		}
+		X18 = {
+			set_country_flag = pwc_adj_X14
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X28
+			set_country_flag = pwc_adj_X54
+			set_country_flag = pwc_adj_X58
+		}
+		X19 = {
+			set_country_flag = pwc_adj_X02
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X25
+			set_country_flag = pwc_adj_X26
+		}
+		X20 = {
+			set_country_flag = pwc_adj_W97
+			set_country_flag = pwc_adj_X05
+			set_country_flag = pwc_adj_X15
+			set_country_flag = pwc_adj_X22
+			set_country_flag = pwc_adj_X31
+			set_country_flag = pwc_adj_X38
+			set_country_flag = pwc_adj_X44
+		}
+		X21 = {
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X11
+			set_country_flag = pwc_adj_X23
+			set_country_flag = pwc_adj_X30
+			set_country_flag = pwc_adj_X34
+			set_country_flag = pwc_adj_X36
+		}
+		X22 = {
+			set_country_flag = pwc_adj_X15
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X38
+		}
+		X23 = {
+			set_country_flag = pwc_adj_W98
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X29
+			set_country_flag = pwc_adj_X34
+			set_country_flag = pwc_adj_X37
+		}
+		X24 = {
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X60
+			set_country_flag = pwc_adj_X63
+		}
+		X25 = {
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X19
+			set_country_flag = pwc_adj_X26
+			set_country_flag = pwc_adj_X30
+		}
+		X26 = {
+			set_country_flag = pwc_adj_X19
+			set_country_flag = pwc_adj_X25
+		}
+		X27 = {
+			set_country_flag = pwc_adj_X18
+			set_country_flag = pwc_adj_X24
+			set_country_flag = pwc_adj_X28
+			set_country_flag = pwc_adj_X58
+			set_country_flag = pwc_adj_X60
+			set_country_flag = pwc_adj_X62
+		}
+		X28 = {
+			set_country_flag = pwc_adj_X18
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X62
+		}
+		X29 = {
+			set_country_flag = pwc_adj_X01
+			set_country_flag = pwc_adj_X17
+			set_country_flag = pwc_adj_X23
+			set_country_flag = pwc_adj_X32
+			set_country_flag = pwc_adj_X35
+			set_country_flag = pwc_adj_X37
+		}
+		X30 = {
+			set_country_flag = pwc_adj_X08
+			set_country_flag = pwc_adj_X11
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X25
+		}
+		X31 = {
+			set_country_flag = pwc_adj_X05
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X44
+		}
+		X32 = {
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X17
+			set_country_flag = pwc_adj_X29
+			set_country_flag = pwc_adj_X35
+			set_country_flag = pwc_adj_X39
+			set_country_flag = pwc_adj_X40
+		}
+		X33 = {
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X22
+			set_country_flag = pwc_adj_X38
+			set_country_flag = pwc_adj_X39
+			set_country_flag = pwc_adj_X46
+			set_country_flag = pwc_adj_X47
+		}
+		X34 = {
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X23
+			set_country_flag = pwc_adj_X36
+		}
+		X35 = {
+			set_country_flag = pwc_adj_X29
+			set_country_flag = pwc_adj_X32
+			set_country_flag = pwc_adj_X37
+			set_country_flag = pwc_adj_X40
+			set_country_flag = pwc_adj_X43
+		}
+		X36 = {
+			set_country_flag = pwc_adj_X21
+			set_country_flag = pwc_adj_X34
+			set_country_flag = pwc_adj_X42
+		}
+		X37 = {
+			set_country_flag = pwc_adj_X23
+			set_country_flag = pwc_adj_X29
+			set_country_flag = pwc_adj_X35
+			set_country_flag = pwc_adj_X43
+		}
+		X38 = {
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X22
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X44
+			set_country_flag = pwc_adj_X46
+		}
+		X39 = {
+			set_country_flag = pwc_adj_X16
+			set_country_flag = pwc_adj_X32
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X40
+			set_country_flag = pwc_adj_X47
+		}
+		X40 = {
+			set_country_flag = pwc_adj_X32
+			set_country_flag = pwc_adj_X35
+			set_country_flag = pwc_adj_X39
+		}
+		X41 = {
+			set_country_flag = pwc_adj_X10
+		}
+		X42 = {
+			set_country_flag = pwc_adj_X36
+		}
+		X43 = {
+			set_country_flag = pwc_adj_X35
+			set_country_flag = pwc_adj_X37
+			set_country_flag = pwc_adj_X45
+		}
+		X44 = {
+			set_country_flag = pwc_adj_X20
+			set_country_flag = pwc_adj_X31
+			set_country_flag = pwc_adj_X38
+		}
+		X45 = {
+			set_country_flag = pwc_adj_X43
+		}
+		X46 = {
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X38
+			set_country_flag = pwc_adj_X47
+		}
+		X47 = {
+			set_country_flag = pwc_adj_X33
+			set_country_flag = pwc_adj_X39
+			set_country_flag = pwc_adj_X46
+			set_country_flag = pwc_adj_X50
+		}
+		X48 = {
+			set_country_flag = pwc_adj_X49
+		}
+		X49 = {
+			set_country_flag = pwc_adj_X48
+			set_country_flag = pwc_adj_X50
+			set_country_flag = pwc_adj_X51
+		}
+		X50 = {
+			set_country_flag = pwc_adj_X47
+			set_country_flag = pwc_adj_X49
+		}
+		X51 = {
+			set_country_flag = pwc_adj_X49
+		}
+		X52 = {
+			set_country_flag = pwc_adj_X53
+		}
+		X53 = {
+			set_country_flag = pwc_adj_W18
+			set_country_flag = pwc_adj_W39
+			set_country_flag = pwc_adj_X52
+		}
+		X54 = {
+			set_country_flag = pwc_adj_X04
+			set_country_flag = pwc_adj_X14
+			set_country_flag = pwc_adj_X18
+			set_country_flag = pwc_adj_X55
+			set_country_flag = pwc_adj_X56
+		}
+		X55 = {
+			set_country_flag = pwc_adj_X00
+			set_country_flag = pwc_adj_X54
+			set_country_flag = pwc_adj_X56
+		}
+		X56 = {
+			set_country_flag = pwc_adj_X04
+			set_country_flag = pwc_adj_X54
+			set_country_flag = pwc_adj_X55
+		}
+		X57 = {
+			set_country_flag = pwc_adj_X04
+			set_country_flag = pwc_adj_X14
+		}
+		X58 = {
+			set_country_flag = pwc_adj_X14
+			set_country_flag = pwc_adj_X18
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X59
+			set_country_flag = pwc_adj_X60
+			set_country_flag = pwc_adj_X61
+		}
+		X59 = {
+			set_country_flag = pwc_adj_X14
+			set_country_flag = pwc_adj_X58
+			set_country_flag = pwc_adj_X61
+		}
+		X60 = {
+			set_country_flag = pwc_adj_X24
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X58
+			set_country_flag = pwc_adj_X61
+		}
+		X61 = {
+			set_country_flag = pwc_adj_X58
+			set_country_flag = pwc_adj_X59
+			set_country_flag = pwc_adj_X60
+		}
+		X62 = {
+			set_country_flag = pwc_adj_X27
+			set_country_flag = pwc_adj_X28
+		}
+		X63 = {
+			set_country_flag = pwc_adj_X24
+		}
+		X64 = {
+			set_country_flag = pwc_adj_X09
+		}
+		X65 = {
+			set_country_flag = pwc_adj_X09
+		}
+	}
+}
+
+
+pwc_se_on_surrender_settle_entry = {
+	if = {
+		limit = { has_game_rule = { rule = pwc_peace_conference option = ON } }
+		set_country_flag = pwc_flag_conference_pending
+		pwc_se_capture_war_report = yes
+		every_enemy_country = { pwc_se_apply_war_cooldown = yes }
+	}
+	else = {
+		pwc_se_on_surrender_settle = yes
+		pwc_se_check_champion = yes
+		every_country = {
+			limit = { pwc_st_is_city_country = yes }
+			pwc_se_refresh_setup_country = yes
+		}
+	}
+}
+pwc_se_reconcile_conference_results = {
+    if = {
+        limit = { has_game_rule = { rule = pwc_peace_conference option = ON } }
+        every_possible_country = {
+            limit = { pwc_st_is_city_country = yes }
+            if = {
+                limit = {
+                    exists = no
+                    has_country_flag = pwc_flag_city_alive
+                }
+                pwc_se_mark_city_eliminated = yes
+            }
+            else_if = {
+                limit = { exists = yes pwc_st_city_alive = yes }
+                if = {
+                    limit = {
+                        has_war = no
+                        NOT = { is_in_peace_conference = yes }
+                    }
+                    clr_country_flag = pwc_flag_conference_pending
+                }
+                pwc_se_refresh_setup_country = yes
+            }
+        }
+        pwc_se_check_champion = yes
+    }
+}
+
+
+
+
+
+
+
+pwc_se_arm_war_phase = {
+	if = {
+		limit = {
+			is_ai = yes
+			NOT = { has_game_rule = { rule = pwc_ai_war_pacing option = OFF } }
+			pwc_st_protection_active = no
+			NOT = { has_country_flag = pwc_flag_war_phase_armed }
+		}
+		set_country_flag = pwc_flag_war_phase_armed
+		pwc_se_arm_war_phase_offset = yes
+	}
+}
+pwc_se_arm_war_phase_offset = {
+	if = {
+		limit = { NOT = { OR = { has_game_rule = { rule = pwc_ai_war_pacing option = OFF } has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } } } }
+		if = {
+			limit = { OR = {
+				tag = U69 tag = U77 tag = X00 tag = X37 tag = U75 tag = W40 tag = X21 tag = U88 tag = W18 tag = V57
+				tag = X56 tag = V91 tag = U72 tag = U97 tag = X57 tag = U19 tag = W68 tag = U12 tag = W29 tag = U58
+				tag = X32 tag = U02 tag = V94 tag = V69 tag = U92 tag = X03 tag = U50 tag = W65 tag = X31 tag = U95
+				tag = U54
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 15 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W88 tag = W19 tag = U13 tag = U93 tag = V68 tag = U47 tag = V62 tag = X50 tag = W21 tag = U87
+				tag = V79 tag = U43 tag = X44 tag = X64 tag = X02 tag = U46 tag = X39 tag = V84 tag = U67 tag = V87
+				tag = W81 tag = W35 tag = W00 tag = V52 tag = X41 tag = V20 tag = V37 tag = W62 tag = W55 tag = U10
+				tag = U90
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 30 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W77 tag = X33 tag = X26 tag = X17 tag = X49 tag = W56 tag = U26 tag = U16 tag = V10 tag = W70
+				tag = X46 tag = V15 tag = W42 tag = V36 tag = X08 tag = W06 tag = U48 tag = X29 tag = W97 tag = W85
+				tag = U60 tag = V78 tag = X59 tag = V86 tag = X60 tag = V40 tag = W83 tag = U29 tag = V08 tag = V59
+				tag = U39
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 45 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W26 tag = V39 tag = U73 tag = W17 tag = W59 tag = V45 tag = X65 tag = X43 tag = V23 tag = X52
+				tag = W14 tag = W49 tag = W75 tag = X36 tag = X40 tag = X09 tag = U49 tag = W05 tag = U38 tag = V29
+				tag = V58 tag = X11 tag = U76 tag = V99 tag = W36 tag = U03 tag = V47 tag = W94 tag = U27 tag = U51
+				tag = W27
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 60 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = U42 tag = U36 tag = U96 tag = W71 tag = V48 tag = X19 tag = W12 tag = U68 tag = V96 tag = W54
+				tag = X53 tag = U85 tag = V72 tag = V71 tag = V89 tag = V27 tag = W33 tag = U41 tag = U34 tag = W22
+				tag = V67 tag = U45 tag = X45 tag = W47 tag = W38 tag = U86 tag = U00 tag = V98 tag = U04 tag = W78
+				tag = V93
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 75 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X55 tag = X04 tag = W24 tag = W89 tag = W91 tag = V14 tag = V09 tag = W13 tag = W64 tag = V32
+				tag = X47 tag = U83 tag = U25 tag = V92 tag = V04 tag = X07 tag = V21 tag = W53 tag = W52 tag = V07
+				tag = V03 tag = U06 tag = U24 tag = V02 tag = V76 tag = V46 tag = V60 tag = X54 tag = U78 tag = V44
+				tag = W08
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 90 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V88 tag = V73 tag = W32 tag = X61 tag = W84 tag = W69 tag = U21 tag = W61 tag = W10 tag = X35
+				tag = V63 tag = U09 tag = W66 tag = X63 tag = X22 tag = W37 tag = U23 tag = U55 tag = W99 tag = W63
+				tag = W01 tag = X30 tag = W76 tag = W04 tag = X62 tag = U53 tag = U64 tag = V83 tag = W48 tag = V90
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 105 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W93 tag = U20 tag = U99 tag = W28 tag = U61 tag = V05 tag = W03 tag = W23 tag = X05 tag = X06
+				tag = V95 tag = W60 tag = W79 tag = V34 tag = X16 tag = W16 tag = V77 tag = X27 tag = W92 tag = V64
+				tag = X01 tag = U30 tag = V80 tag = W58 tag = V11 tag = V13 tag = W20 tag = W86 tag = W43 tag = W72
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 120 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X12 tag = U37 tag = W09 tag = U31 tag = V28 tag = W15 tag = W87 tag = W25 tag = X20 tag = X24
+				tag = V66 tag = U66 tag = X38 tag = V12 tag = W73 tag = U74 tag = V51 tag = X10 tag = X14 tag = X23
+				tag = W07 tag = V06 tag = U08 tag = W80 tag = U05 tag = U01 tag = W45 tag = V30 tag = U70 tag = U22
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 135 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V35 tag = X42 tag = W50 tag = V61 tag = U32 tag = V24 tag = V75 tag = U98 tag = U80 tag = W90
+				tag = U91 tag = X48 tag = V18 tag = W82 tag = U56 tag = V22 tag = V54 tag = V41 tag = V16 tag = W02
+				tag = W51 tag = V82 tag = X51 tag = X13 tag = U84 tag = U40 tag = U07 tag = V85 tag = U65 tag = U71
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 150 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X34 tag = U17 tag = V42 tag = X15 tag = V43 tag = U33 tag = V33 tag = W41 tag = W98 tag = W74
+				tag = U63 tag = X58 tag = V25 tag = V70 tag = U52 tag = W30 tag = U11 tag = V49 tag = W31 tag = U82
+				tag = V31 tag = V38 tag = X18 tag = W96 tag = U14 tag = U59 tag = W57 tag = W67 tag = V65 tag = V56
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 165 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V26 tag = U94 tag = U57 tag = X25 tag = W11 tag = X28 tag = U28 tag = U44 tag = U15 tag = W39
+				tag = V53 tag = U81 tag = W95 tag = U18 tag = V17 tag = U35 tag = U79 tag = W46 tag = V74 tag = V50
+				tag = V01 tag = V97 tag = U89 tag = U62 tag = V81 tag = W44 tag = V19 tag = V55 tag = W34 tag = V00
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 180 value = 1 }
+		}
+	}
+	else_if = {
+		limit = { has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } }
+		if = {
+			limit = { OR = {
+				tag = U69 tag = U37 tag = W71 tag = W40 tag = W87 tag = V96 tag = X56 tag = U66 tag = V71 tag = U19
+				tag = V51 tag = U34 tag = X32 tag = V06 tag = W47 tag = X03 tag = W45 tag = U04 tag = U54
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 15 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W88 tag = X42 tag = W89 tag = U47 tag = V75 tag = W64 tag = V79 tag = X48 tag = V92 tag = U46
+				tag = V54 tag = W52 tag = W81 tag = V82 tag = V02 tag = V20 tag = U07 tag = U78 tag = U90
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 30 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W77 tag = U17 tag = X61 tag = W56 tag = V33 tag = W10 tag = X46 tag = X58 tag = X63 tag = W06
+				tag = U11 tag = W99 tag = U60 tag = V38 tag = W04 tag = V40 tag = W57 tag = W48 tag = U39
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 45 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W26 tag = U94 tag = W28 tag = V45 tag = U28 tag = X05 tag = W14 tag = U81 tag = V34 tag = X09
+				tag = U79 tag = W92 tag = V58 tag = V97 tag = W58 tag = U03 tag = V19 tag = W43 tag = W27
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 60 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = U42 tag = X00 tag = U31 tag = X19 tag = U88 tag = X20 tag = X53 tag = U72 tag = V12 tag = V27
+				tag = U12 tag = X14 tag = V67 tag = V94 tag = W80 tag = U86 tag = W65 tag = U70 tag = V93
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 75 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X55 tag = U13 tag = V61 tag = V14 tag = X50 tag = U80 tag = X47 tag = X44 tag = W82 tag = X07
+				tag = V84 tag = V16 tag = V03 tag = W00 tag = X13 tag = V46 tag = W62 tag = U65 tag = W08
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 90 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V88 tag = X26 tag = X15 tag = W69 tag = U16 tag = W98 tag = V63 tag = W42 tag = V70 tag = W37
+				tag = X29 tag = W31 tag = W01 tag = X59 tag = W96 tag = U53 tag = U29 tag = V65
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 105 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W93 tag = U73 tag = X25 tag = V05 tag = X43 tag = U15 tag = V95 tag = W75 tag = U18 tag = W16
+				tag = W05 tag = V74 tag = X01 tag = U76 tag = U62 tag = V13 tag = W94 tag = W34
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 120 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X12 tag = U96 tag = U75 tag = W15 tag = U68 tag = V57 tag = V66 tag = V72 tag = X57 tag = U74
+				tag = U41 tag = U58 tag = W07 tag = X45 tag = U92 tag = U01 tag = V98 tag = U95
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 135 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V35 tag = W24 tag = V68 tag = V24 tag = W13 tag = U87 tag = U91 tag = U25 tag = X02 tag = V22
+				tag = W53 tag = V87 tag = W51 tag = U24 tag = X41 tag = U40 tag = X54 tag = U10
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 150 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X34 tag = W32 tag = X49 tag = U33 tag = W61 tag = W70 tag = U63 tag = W66 tag = X08 tag = W30
+				tag = U55 tag = W85 tag = V31 tag = W76 tag = X60 tag = U59 tag = V83 tag = V59
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 165 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V26 tag = U99 tag = W59 tag = X28 tag = W23 tag = X52 tag = V53 tag = W79 tag = X40 tag = U35
+				tag = X27 tag = V29 tag = V01 tag = V80 tag = W36 tag = W44 tag = W86 tag = U51
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 180 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = U77 tag = W09 tag = V48 tag = X21 tag = W25 tag = W54 tag = V91 tag = X38 tag = V89 tag = W68
+				tag = X10 tag = W22 tag = U02 tag = U08 tag = W38 tag = U50 tag = V30 tag = W78
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 195 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = W19 tag = W50 tag = W91 tag = V62 tag = U98 tag = V32 tag = U43 tag = V18 tag = V04 tag = X39
+				tag = V41 tag = V07 tag = W35 tag = X51 tag = V76 tag = V37 tag = V85 tag = V44
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 210 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X33 tag = V42 tag = W84 tag = U26 tag = W41 tag = X35 tag = V15 tag = V25 tag = X22 tag = U48
+				tag = V49 tag = W63 tag = V78 tag = X18 tag = X62 tag = W83 tag = W67 tag = V90
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 225 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V39 tag = U57 tag = U61 tag = X65 tag = U44 tag = X06 tag = W49 tag = W95 tag = X16 tag = U49
+				tag = W46 tag = V64 tag = X11 tag = U89 tag = V11 tag = V47 tag = V55 tag = W72
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 240 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = U36 tag = X37 tag = V28 tag = W12 tag = W18 tag = X24 tag = U85 tag = U97 tag = W73 tag = W33
+				tag = W29 tag = X23 tag = U45 tag = V69 tag = U05 tag = U00 tag = X31 tag = U22
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 255 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = X04 tag = U93 tag = U32 tag = V09 tag = W21 tag = W90 tag = U83 tag = X64 tag = U56 tag = V21
+				tag = U67 tag = W02 tag = U06 tag = V52 tag = U84 tag = V60 tag = W55 tag = U71
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 270 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = V73 tag = X17 tag = V43 tag = U21 tag = V10 tag = W74 tag = U09 tag = V36 tag = U52 tag = U23
+				tag = W97 tag = U82 tag = X30 tag = V86 tag = U14 tag = U64 tag = V08 tag = V56
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 285 value = 1 }
+		}
+		if = {
+			limit = { OR = {
+				tag = U20 tag = W17 tag = W11 tag = W03 tag = V23 tag = W39 tag = W60 tag = X36 tag = V17 tag = V77
+				tag = U38 tag = V50 tag = U30 tag = V99 tag = V81 tag = W20 tag = U27 tag = V00
+			} }
+			set_country_flag = { flag = pwc_flag_war_phase_pending days = 300 value = 1 }
+		}
+	}
+}
+
+
+
+
+pwc_se_apply_war_cooldown = {
+	if = {
+		limit = { is_ai = yes }
+		if = {
+			limit = { NOT = { OR = { has_game_rule = { rule = pwc_ai_war_pacing option = OFF } has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } } } }
+			set_country_flag = { flag = pwc_flag_war_cooldown days = 90 value = 1 }
+		}
+		else_if = {
+			limit = { has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } }
+			set_country_flag = { flag = pwc_flag_war_cooldown days = 150 value = 1 }
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+spriteTypes = {
+    corneredTileSpriteType = {
+        name = "PWC_GFX_state_operations_panel"
+        texturefile = "gfx/interface/pwc/ui/polish_v2/focus_panel.dds"
+        size = { x = 296 y = 524 }
+        borderSize = { x = 8 y = 8 }
+        tilingCenter = no
+    }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_state_operations_row"
+        texturefile = "gfx/interface/pwc/ui/state_transfer_action.dds"
+        size = { x = 248 y = 54 }
+        borderSize = { x = 8 y = 8 }
+        tilingCenter = no
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_state_operations_tab"
+        texturefile = "gfx/interface/pwc/ui/state_transfer_action.dds"
+        size = { x = 128 y = 30 }
+        borderSize = { x = 8 y = 8 }
+        tilingCenter = no
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_state_operations_tab_selected"
+        texturefile = "gfx/interface/pwc/ui/focustree/PWC_ART_focustree_detail_divider.dds"
+        size = { x = 124 y = 2 }
+        borderSize = { x = 8 y = 1 }
+        tilingCenter = no
+    }
+}
