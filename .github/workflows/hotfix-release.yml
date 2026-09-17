@@ -1,0 +1,54 @@
+name: Package v0.1.2 hotfix
+on:
+    workflow_dispatch:
+permissions:
+    contents: write
+jobs:
+    package:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: v0.1.2hotfix
+                  persist-credentials: false
+            - name: Download base package and expected hotfix manifest
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  gh release download v0.1.2 --pattern '*.zip' --dir /tmp/base
+                  gh release download v0.1.2hotfix --pattern '*.manifest.json' --dir /tmp/expected
+            - name: Build and verify hotfix
+              run: |
+                  python - <<'PY'
+                  import hashlib
+                  import json
+                  from pathlib import Path
+                  from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
+
+                  expected = json.loads(Path('/tmp/expected/PatchworkChina-0.1.2hotfix.manifest.json').read_text())
+                  output = Path('/tmp/PatchworkChina-0.1.2hotfix.zip')
+                  replacements = {
+                      'PatchworkChina/interface/countryproductionlineview.gui': Path('interface/countryproductionlineview.gui'),
+                      'CHANGELOG.md': Path('CHANGELOG.md'),
+                  }
+                  with ZipFile('/tmp/base/PatchworkChina-0.1.2.zip') as base:
+                      assert set(base.namelist()) == set(expected)
+                      with ZipFile(output, 'w', compression=ZIP_DEFLATED, compresslevel=6) as bundle:
+                          for name in sorted(expected):
+                              payload = replacements[name].read_bytes() if name in replacements else base.read(name)
+                              assert hashlib.sha256(payload).hexdigest() == expected[name], name
+                              info = ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
+                              info.create_system = 3
+                              info.compress_type = ZIP_DEFLATED
+                              info.external_attr = 0o100644 << 16
+                              bundle.writestr(info, payload, compresslevel=6)
+                  with ZipFile(output) as bundle:
+                      assert bundle.testzip() is None
+                  digest = hashlib.sha256(output.read_bytes()).hexdigest()
+                  output.with_suffix('.sha256').write_text(f'{digest}  {output.name}\n')
+                  PY
+            - name: Upload verified package
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  gh release upload v0.1.2hotfix /tmp/PatchworkChina-0.1.2hotfix.zip /tmp/PatchworkChina-0.1.2hotfix.sha256 --clobber
