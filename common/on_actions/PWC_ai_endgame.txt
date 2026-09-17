@@ -1,0 +1,30 @@
+on_actions = {
+    on_monthly = { effect = { pwc_se_coalition_monthly = yes } }
+    on_weekly = {
+        effect = {
+            if = {
+                limit = { pwc_st_is_city_country = yes }
+                pwc_se_coalition_weekly = yes
+                pwc_se_ai_finish_war_weekly = yes
+            }
+        }
+    }
+    
+    
+    on_war = {
+        effect = {
+            clr_country_flag = pwc_flag_ai_war_tracked
+            clr_country_flag = pwc_flag_ai_war_grace
+            remove_dynamic_modifier = { modifier = pwc_dm_ai_sustained_offensive }
+            pwc_se_ai_finish_war_weekly = yes
+        }
+    }
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = { has_country_flag = pwc_flag_coalition_pending }
+                pwc_se_coalition_cleanup = yes
+            }
+        }
+    }
+}

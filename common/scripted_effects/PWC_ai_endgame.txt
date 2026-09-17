@@ -1,0 +1,312 @@
+pwc_se_coalition_reset_totals = {
+    set_variable = { pwc_coalition_count = 0 }
+    set_variable = { pwc_coalition_manpower = 0 }
+    set_variable = { pwc_coalition_industry = 0 }
+    set_variable = { pwc_coalition_required_manpower = deployed_army_manpower_k }
+    multiply_variable = { pwc_coalition_required_manpower = 0.8 }
+    set_variable = { pwc_coalition_required_industry = num_of_factories }
+    multiply_variable = { pwc_coalition_required_industry = 0.6 }
+}
+
+
+pwc_se_coalition_count_member = {
+    event_target:pwc_coalition_player = {
+        add_to_variable = { pwc_coalition_count = 1 }
+        add_to_variable = { pwc_coalition_manpower = PREV.deployed_army_manpower_k }
+        add_to_variable = { pwc_coalition_industry = PREV.num_of_factories }
+    }
+}
+
+pwc_se_coalition_prepare_member = {
+    set_country_flag = {
+        flag = pwc_flag_coalition_reserved days = 75 value = 1
+    }
+    set_variable = { pwc_coalition_target = event_target:pwc_coalition_player }
+    add_ai_strategy = {
+        type = prepare_for_war id = event_target:pwc_coalition_player value = 200
+    }
+    add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 60 }
+}
+
+pwc_se_coalition_release_member = {
+    if = {
+        limit = { has_variable = pwc_coalition_target }
+        remove_ai_strategy = {
+            type = prepare_for_war id = var:pwc_coalition_target
+        }
+        
+        if = {
+            limit = {
+                OR = {
+                    is_ai = no
+                    NOT = { has_war_with = var:pwc_coalition_target }
+                }
+            }
+            clear_variable = pwc_coalition_target
+        }
+    }
+    clr_country_flag = pwc_flag_coalition_reserved
+    remove_dynamic_modifier = { modifier = pwc_dm_coalition_muster }
+}
+
+pwc_se_coalition_cleanup = {
+    save_event_target_as = pwc_coalition_player
+    for_each_scope_loop = {
+        array = pwc_coalition_members
+        if = {
+            limit = {
+                has_variable = pwc_coalition_target
+                var:pwc_coalition_target = { tag = event_target:pwc_coalition_player }
+            }
+            pwc_se_coalition_release_member = yes
+        }
+    }
+    clear_array = pwc_coalition_members
+    clr_country_flag = pwc_flag_coalition_pending
+    clr_country_flag = pwc_flag_coalition_warning
+    remove_dynamic_modifier = { modifier = pwc_dm_coalition_warning }
+}
+
+pwc_se_coalition_monthly = {
+    if = {
+        limit = {
+            pwc_st_coalition_player = yes
+            NOT = { date < 2028.1.1 }
+            num_of_factories > 39
+            num_owned_states > 5
+            NOT = { has_country_flag = pwc_flag_coalition_pending }
+            NOT = { has_country_flag = pwc_flag_coalition_cooldown }
+        }
+        save_event_target_as = pwc_coalition_player
+        clear_array = pwc_coalition_candidates
+        clear_array = pwc_coalition_members
+        set_variable = { pwc_coalition_largest_ai = 0 }
+        pwc_se_coalition_reset_totals = yes
+        
+        every_other_country = {
+            limit = {
+                is_ai = yes pwc_st_is_city_country = yes pwc_st_city_alive = yes
+                has_capitulated = no
+            }
+            if = {
+                limit = { check_variable = {
+                    var = num_of_factories value = PREV.pwc_coalition_largest_ai
+                    compare = greater_than
+                } }
+                event_target:pwc_coalition_player = {
+                    set_variable = { pwc_coalition_largest_ai = PREV.num_of_factories }
+                }
+            }
+            if = {
+                limit = {
+                    pwc_st_coalition_partner = yes
+                    has_war = no
+                    pwc_st_ai_war_pacing_ready = yes
+                    NOT = { has_country_flag = pwc_flag_warning_active }
+                    NOT = { has_country_flag = pwc_flag_coalition_reserved }
+                    NOT = { has_variable = pwc_coalition_target }
+                }
+                event_target:pwc_coalition_player = {
+                    add_to_array = { array = pwc_coalition_candidates value = PREV }
+                }
+            }
+        }
+        multiply_variable = { pwc_coalition_largest_ai = 2 }
+        if = {
+            limit = { check_variable = {
+                var = num_of_factories value = pwc_coalition_largest_ai
+                compare = greater_than_or_equals
+            } }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = no }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = { NOT = { is_in_array = {
+                        array = PREV.pwc_coalition_members value = THIS
+                    } } }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+if = {
+                limit = { pwc_st_coalition_size_ready = yes }
+                set_country_flag = pwc_flag_coalition_pending
+                set_country_flag = {
+                    flag = pwc_flag_coalition_warning days = 60 value = 1
+                }
+                add_dynamic_modifier = {
+                    modifier = pwc_dm_coalition_warning days = 60
+                }
+                for_each_scope_loop = {
+                    array = pwc_coalition_members
+                    pwc_se_coalition_prepare_member = yes
+                }
+            }
+            else = { clear_array = pwc_coalition_members }
+        }
+        clear_array = pwc_coalition_candidates
+    }
+}
+
+pwc_se_coalition_weekly = {
+    if = {
+        limit = { has_country_flag = pwc_flag_coalition_pending }
+        save_event_target_as = pwc_coalition_player
+        if = {
+            limit = { pwc_st_coalition_player = no }
+            pwc_se_coalition_cleanup = yes
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = pwc_flag_coalition_warning } }
+            pwc_se_coalition_reset_totals = yes
+            clear_array = pwc_coalition_valid_members
+            for_each_scope_loop = {
+                array = pwc_coalition_members
+                if = {
+                    limit = {
+                        has_variable = pwc_coalition_target
+                        var:pwc_coalition_target = {
+                            tag = event_target:pwc_coalition_player
+                        }
+                        pwc_st_coalition_partner = yes
+                    }
+                    pwc_se_coalition_count_member = yes
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_valid_members value = PREV }
+                    }
+                }
+            }
+            if = {
+                limit = { pwc_st_coalition_size_ready = yes }
+                set_country_flag = {
+                    flag = pwc_flag_coalition_cooldown days = 730 value = 1
+                }
+                for_each_scope_loop = {
+                    array = pwc_coalition_valid_members
+                    if = {
+                        limit = {
+                            NOT = { has_war_with = event_target:pwc_coalition_player }
+                        }
+                        declare_war_on = {
+                            target = event_target:pwc_coalition_player
+                            type = annex_everything
+                        }
+                    }
+                }
+            }
+            else = {
+                set_country_flag = {
+                    flag = pwc_flag_coalition_cooldown days = 180 value = 1
+                }
+            }
+            clear_array = pwc_coalition_valid_members
+            pwc_se_coalition_cleanup = yes
+        }
+    }
+    
+    if = {
+        limit = {
+            has_variable = pwc_coalition_target
+            OR = {
+                is_ai = no
+                AND = {
+                    NOT = { has_country_flag = pwc_flag_coalition_reserved }
+                    NOT = { has_war_with = var:pwc_coalition_target }
+                }
+            }
+        }
+        pwc_se_coalition_release_member = yes
+    }
+}
+
+pwc_se_ai_finish_war_weekly = {
+    if = {
+        limit = { pwc_st_ai_only_war = yes }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_ai_war_tracked } }
+            set_country_flag = pwc_flag_ai_war_tracked
+            set_country_flag = {
+                flag = pwc_flag_ai_war_grace days = 120 value = 1
+            }
+        }
+        if = {
+            limit = { pwc_st_ai_finish_war = yes }
+            add_dynamic_modifier = { modifier = pwc_dm_ai_sustained_offensive }
+        }
+        else = {
+            remove_dynamic_modifier = { modifier = pwc_dm_ai_sustained_offensive }
+        }
+    }
+    else = {
+        clr_country_flag = pwc_flag_ai_war_tracked
+        clr_country_flag = pwc_flag_ai_war_grace
+        remove_dynamic_modifier = { modifier = pwc_dm_ai_sustained_offensive }
+    }
+}

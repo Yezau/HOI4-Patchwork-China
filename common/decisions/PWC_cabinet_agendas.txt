@@ -1,0 +1,410 @@
+pwc_cabinet_agendas = {
+    pwc_agenda_civic_relief_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_civic_relief_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_civic_relief_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_civic_relief_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_civic_relief_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_civic_relief_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_civic_relief_discount = yes
+            }
+        }
+    }
+    pwc_agenda_civic_relief_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_civic_relief_discount = yes
+        }
+        available = {
+            pwc_st_agenda_civic_relief_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_civic_relief_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_civic_relief_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_civic_relief_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_civic_relief_discount = yes
+            }
+        }
+    }
+    pwc_agenda_industrial_audit_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_industrial_audit_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_industrial_audit_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_industrial_audit_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_industrial_audit_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_industrial_audit_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_industrial }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_industrial_audit_discount = yes
+            }
+        }
+    }
+    pwc_agenda_industrial_audit_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_industrial_audit_discount = yes
+        }
+        available = {
+            pwc_st_agenda_industrial_audit_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_industrial_audit_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_industrial_audit_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_industrial_audit_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_industrial }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_industrial_audit_discount = yes
+            }
+        }
+    }
+    pwc_agenda_logistics_repair_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_logistics_repair_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_logistics_repair_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_logistics_repair_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_logistics_repair_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_logistics_repair_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_defense has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_logistics_repair_discount = yes
+            }
+        }
+    }
+    pwc_agenda_logistics_repair_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_logistics_repair_discount = yes
+        }
+        available = {
+            pwc_st_agenda_logistics_repair_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_logistics_repair_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_logistics_repair_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_logistics_repair_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_defense has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_logistics_repair_discount = yes
+            }
+        }
+    }
+    pwc_agenda_defense_training_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_defense_training_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_defense_training_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_defense_training_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_defense_training_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_defense_training_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_defense has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_defense_training_discount = yes
+            }
+        }
+    }
+    pwc_agenda_defense_training_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_defense_training_discount = yes
+        }
+        available = {
+            pwc_st_agenda_defense_training_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_defense_training_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_defense_training_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_defense_training_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_defense has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_defense_training_discount = yes
+            }
+        }
+    }
+    pwc_agenda_administrative_integration_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_administrative_integration_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_administrative_integration_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_administrative_integration_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_administrative_integration_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_administrative_integration_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_administrative_integration_discount = yes
+            }
+        }
+    }
+    pwc_agenda_administrative_integration_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_administrative_integration_discount = yes
+        }
+        available = {
+            pwc_st_agenda_administrative_integration_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_administrative_integration_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_administrative_integration_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_administrative_integration_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_administrative_integration_discount = yes
+            }
+        }
+    }
+    pwc_agenda_production_retooling_50 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 50
+        visible = {
+            NOT = { pwc_st_agenda_production_retooling_discount = yes }
+        }
+        available = {
+            pwc_st_agenda_production_retooling_eligible = yes
+            hidden_trigger = {
+                NOT = { pwc_st_agenda_production_retooling_discount = yes }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_production_retooling_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_production_retooling_50 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_industrial has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 149 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_production_retooling_discount = yes
+            }
+        }
+    }
+    pwc_agenda_production_retooling_40 = {
+        icon = GFX_decision_PWC_cabinet
+        cost = 40
+        visible = {
+            pwc_st_agenda_production_retooling_discount = yes
+        }
+        available = {
+            pwc_st_agenda_production_retooling_eligible = yes
+            hidden_trigger = {
+                pwc_st_agenda_production_retooling_discount = yes
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = pwc_agenda_production_retooling_effect_tt
+            hidden_effect = {
+                pwc_se_start_pwc_agenda_production_retooling_40 = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 2
+                OR = { has_country_flag = pwc_ai_industrial has_country_flag = pwc_ai_mobility }
+            }
+            modifier = {
+                factor = 0
+                NOT = { has_political_power > 139 }
+            }
+            modifier = {
+                factor = 1.5
+                pwc_st_agenda_production_retooling_discount = yes
+            }
+        }
+    }
+}

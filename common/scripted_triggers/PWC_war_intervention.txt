@@ -1,0 +1,62 @@
+pwc_st_support_actor = {
+    exists = yes
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    has_capitulated = no
+    has_war = yes
+    has_country_flag = pwc_flag_diplomatic_corps
+    NOT = { pwc_st_protection_active = yes }
+    NOT = { has_country_flag = pwc_support_used }
+    NOT = { has_country_flag = pwc_support_auxiliary }
+    NOT = { has_country_flag = pwc_support_pending }
+}
+pwc_st_support_enemy = {
+    exists = yes
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    has_capitulated = no
+    has_war_with = ROOT
+    NOT = { has_country_flag = pwc_support_auxiliary }
+}
+pwc_st_support_recipient = {
+    exists = yes
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    has_capitulated = no
+    has_war = no
+    is_subject = no
+    is_in_faction = no
+    NOT = { tag = ROOT }
+    NOT = { has_country_flag = pwc_support_requested }
+}
+pwc_st_support_selection = {
+    has_variable = pwc_support_enemy
+    var:pwc_support_enemy = { pwc_st_support_enemy = yes }
+}
+pwc_st_support_accept = {
+    exists = yes
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    has_capitulated = no
+    has_war = no
+    is_subject = no
+    is_in_faction = no
+    has_country_flag = pwc_support_requested
+    event_target:pwc_support_host = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_capitulated = no
+        has_country_flag = pwc_flag_diplomatic_corps
+        has_country_flag = pwc_support_pending
+        var:pwc_support_invitee = { tag = ROOT }
+        NOT = { has_country_flag = pwc_support_used }
+        NOT = { has_country_flag = pwc_support_auxiliary }
+        has_war_with = event_target:pwc_support_opponent
+    }
+    event_target:pwc_support_opponent = {
+        exists = yes
+        pwc_st_city_alive = yes
+        has_capitulated = no
+        NOT = { has_non_aggression_pact_with = ROOT }
+    }
+}

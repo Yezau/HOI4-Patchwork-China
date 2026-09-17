@@ -1,0 +1,20 @@
+pwc_st_ai_sf_amphibious_need = {
+    pwc_st_naval_port = yes
+    OR = {
+        pwc_st_amphibious_preparation_needed = yes
+        any_enemy_country = { pwc_st_naval_target_coast = yes }
+    }
+}
+pwc_st_ai_sf_ready = {
+    is_ai = yes
+    pwc_st_is_city_country = yes
+    has_tech = pwc_tech_sf_mountain_t1
+    num_of_military_factories > 4
+    num_divisions > 7
+    has_manpower > 11999
+    surrender_progress < 0.5
+}
+pwc_st_ai_sf_airborne_ready = {
+    num_of_military_factories > 19
+    has_deployed_air_force_size = { type = air_transport size > 49 }
+}

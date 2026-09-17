@@ -1,9 +1,3 @@
-
-
-
-
-
-
 PWC_ai_template_armored_combined = {
 	role = pwc_role_armored_combined
 	upgrade_prio = {
@@ -522,11 +516,6 @@ PWC_ai_template_mobility_mountain = {
 			has_tech = pwc_tech_army_mobility_t2
 			is_special_project_completed = sp:pwc_project_field_recovery
 			is_special_project_completed = sp:pwc_project_flexible_manufacturing
-			OR = {
-			    has_country_flag = pwc_geo_coastal
-			    has_country_flag = pwc_geo_inland
-			    pwc_st_ai_recruitment_motorization_ready = yes
-			}
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_field_ready = yes
@@ -561,11 +550,6 @@ PWC_ai_template_mobility_mountain = {
 			has_tech = pwc_tech_army_firepower_t1
 			has_tech = pwc_tech_army_infantry_t2
 			is_special_project_completed = sp:pwc_project_flexible_manufacturing
-			OR = {
-			    has_country_flag = pwc_geo_coastal
-			    has_country_flag = pwc_geo_inland
-			    pwc_st_ai_recruitment_motorization_ready = yes
-			}
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_field_ready = yes
@@ -599,11 +583,6 @@ PWC_ai_template_mobility_mountain = {
 			has_tech = pwc_tech_army_firepower_t1
 			has_tech = pwc_tech_army_mobility_t2
 			is_special_project_completed = sp:pwc_project_field_recovery
-			OR = {
-			    has_country_flag = pwc_geo_coastal
-			    has_country_flag = pwc_geo_inland
-			    pwc_st_ai_recruitment_motorization_ready = yes
-			}
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_field_ready = yes
@@ -636,11 +615,6 @@ PWC_ai_template_mobility_mountain = {
 			has_tech = pwc_tech0_engineers
 			has_tech = pwc_tech0_transport
 			has_tech = pwc_tech_army_firepower_t1
-			OR = {
-			    has_country_flag = pwc_geo_coastal
-			    has_country_flag = pwc_geo_inland
-			    pwc_st_ai_recruitment_motorization_ready = yes
-			}
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_mechanized_18w_default_field_ready = yes
@@ -659,67 +633,6 @@ PWC_ai_template_mobility_mountain = {
 			regiments = {
 				pwc_unit_artillery = 2
 				pwc_unit_motorized = 6
-			}
-		}
-	}
-	pwc_template_mountain_18w_project_support_heavy_mortar = {
-		upgrade_prio = {
-			base = 2
-		}
-		enable = {
-			has_tech = pwc_tech0_basic_industry
-			has_tech = pwc_tech0_basic_infantry
-			has_tech = pwc_tech0_communications
-			has_tech = pwc_tech0_engineers
-			has_tech = pwc_tech_army_firepower_t3
-			has_tech = pwc_tech_sf_mountain_t1
-			is_special_project_completed = sp:pwc_project_precision_production
-			OR = {
-			    has_country_flag = pwc_geo_frontier
-			    has_country_flag = pwc_geo_island
-			}
-		}
-		target_template = {
-			support = {
-				pwc_unit_engineer = 1
-				pwc_unit_recon = 1
-				pwc_unit_support_heavy_mortar = 1
-			}
-			regimental_support = {
-				pwc_unit_regimental_anti_tank = 1
-				pwc_unit_regimental_fire_support = 2
-			}
-			regiments = {
-				pwc_unit_mountain = 9
-			}
-		}
-	}
-	pwc_template_mountain_18w_default = {
-		upgrade_prio = {
-			base = 1
-		}
-		enable = {
-			has_tech = pwc_tech0_basic_industry
-			has_tech = pwc_tech0_basic_infantry
-			has_tech = pwc_tech0_communications
-			has_tech = pwc_tech0_engineers
-			has_tech = pwc_tech_sf_mountain_t1
-			OR = {
-			    has_country_flag = pwc_geo_frontier
-			    has_country_flag = pwc_geo_island
-			}
-		}
-		target_template = {
-			support = {
-				pwc_unit_engineer = 1
-				pwc_unit_recon = 1
-			}
-			regimental_support = {
-				pwc_unit_regimental_anti_tank = 1
-				pwc_unit_regimental_fire_support = 2
-			}
-			regiments = {
-				pwc_unit_mountain = 9
 			}
 		}
 	}

@@ -1,0 +1,264 @@
+pwc_seat_executive_coordination_occupied = {
+    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+}
+pwc_seat_government_oversight_occupied = {
+    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+}
+pwc_seat_general_staff_occupied = {
+    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+}
+pwc_specialist_infantry_occupied = {
+    OR = { has_idea = pwc_advisor_infantry_recruit has_idea = pwc_advisor_infantry_defense has_idea = pwc_advisor_infantry_special }
+}
+pwc_specialist_armor_occupied = {
+    OR = { has_idea = pwc_advisor_armor_assault has_idea = pwc_advisor_armor_mobile has_idea = pwc_advisor_armor_defense }
+}
+pwc_specialist_surface_occupied = {
+    OR = { has_idea = pwc_advisor_surface_gunnery has_idea = pwc_advisor_surface_escort has_idea = pwc_advisor_surface_screen }
+}
+pwc_specialist_submarine_occupied = {
+    OR = { has_idea = pwc_advisor_submarine_ambush has_idea = pwc_advisor_submarine_raiding has_idea = pwc_advisor_submarine_survival }
+}
+pwc_specialist_superiority_occupied = {
+    OR = { has_idea = pwc_advisor_superiority_interception has_idea = pwc_advisor_superiority_patrol has_idea = pwc_advisor_superiority_training }
+}
+pwc_specialist_support_occupied = {
+    OR = { has_idea = pwc_advisor_support_coordination has_idea = pwc_advisor_support_strike has_idea = pwc_advisor_support_mission }
+}
+pwc_st_agenda_cabinet_ready = {
+    has_completed_focus = law_cabinet_charter
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_THREE_MINISTERS_TT
+        OR = {
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_civil_admin_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_economic_planning_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_science_education_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_finance_trade_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_army_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_science_education_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_navy_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_army_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes }
+            AND = { pwc_st_seat_navy_command_occupied = yes pwc_st_seat_air_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_navy_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+            AND = { pwc_st_seat_air_command_occupied = yes pwc_st_seat_logistics_command_occupied = yes pwc_st_seat_mobilization_command_occupied = yes }
+        }
+    }
+}
+pwc_st_agenda_active = {
+    OR = { has_idea = pwc_agenda_civic_relief_normal has_idea = pwc_agenda_civic_relief_audited has_idea = pwc_agenda_industrial_audit_normal has_idea = pwc_agenda_industrial_audit_audited has_idea = pwc_agenda_logistics_repair_normal has_idea = pwc_agenda_logistics_repair_audited has_idea = pwc_agenda_defense_training_normal has_idea = pwc_agenda_defense_training_audited has_idea = pwc_agenda_administrative_integration_normal has_idea = pwc_agenda_administrative_integration_audited has_idea = pwc_agenda_production_retooling_normal has_idea = pwc_agenda_production_retooling_audited }
+}
+pwc_st_agenda_civic_relief_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_civic }
+}
+pwc_st_agenda_civic_relief_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_civic }
+}
+pwc_st_agenda_civic_relief_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_CIVIL_ADMIN_TT
+        pwc_st_seat_civil_admin_occupied = yes
+    }
+}
+pwc_st_agenda_industrial_audit_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_industrial }
+}
+pwc_st_agenda_industrial_audit_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_administration }
+}
+pwc_st_agenda_industrial_audit_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_ECONOMIC_PLANNING_TT
+        pwc_st_seat_economic_planning_occupied = yes
+    }
+}
+pwc_st_agenda_logistics_repair_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_defense }
+}
+pwc_st_agenda_logistics_repair_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military }
+}
+pwc_st_agenda_logistics_repair_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_LOGISTICS_COMMAND_TT
+        pwc_st_seat_logistics_command_occupied = yes
+    }
+}
+pwc_st_agenda_defense_training_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_defense }
+}
+pwc_st_agenda_defense_training_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_military }
+}
+pwc_st_agenda_defense_training_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_ARMY_COMMAND_TT
+        pwc_st_seat_army_command_occupied = yes
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_MOBILIZATION_COMMAND_TT
+        pwc_st_seat_mobilization_command_occupied = yes
+    }
+}
+pwc_st_agenda_administrative_integration_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+}
+pwc_st_agenda_administrative_integration_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_administration }
+}
+pwc_st_agenda_administrative_integration_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_CIVIL_ADMIN_TT
+        pwc_st_seat_civil_admin_occupied = yes
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_SCIENCE_EDUCATION_TT
+        pwc_st_seat_science_education_occupied = yes
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NONCORE_TT
+        any_owned_state = { NOT = { is_core_of = ROOT } }
+    }
+}
+pwc_st_agenda_production_retooling_discount = {
+    OR = { has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_integration }
+}
+pwc_st_agenda_production_retooling_audit = {
+    OR = { has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics }
+}
+pwc_st_agenda_production_retooling_eligible = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_ALIVE_TT
+        pwc_st_city_alive = yes
+    }
+    pwc_st_agenda_cabinet_ready = yes
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_NO_ACTIVE_TT
+        NOT = { pwc_st_agenda_active = yes }
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_FINANCE_TRADE_TT
+        pwc_st_seat_finance_trade_occupied = yes
+    }
+    custom_trigger_tooltip = {
+        tooltip = PWC_AGENDA_REQUIRES_SEAT_LOGISTICS_COMMAND_TT
+        pwc_st_seat_logistics_command_occupied = yes
+    }
+}

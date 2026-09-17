@@ -1,0 +1,222 @@
+pwc_se_init_institutions = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_institutions_initialized } }
+        if = {
+            limit = { NOT = { OR = { has_idea = pwc_institution_administration_local has_idea = pwc_institution_administration_coordinated has_idea = pwc_institution_administration_central } } }
+            add_ideas = pwc_institution_administration_coordinated
+        }
+        if = {
+            limit = { NOT = { OR = { has_idea = pwc_institution_labor_protected has_idea = pwc_institution_labor_negotiated has_idea = pwc_institution_labor_war } } }
+            add_ideas = pwc_institution_labor_negotiated
+        }
+        if = {
+            limit = { NOT = { OR = { has_idea = pwc_institution_education_basic has_idea = pwc_institution_education_vocational has_idea = pwc_institution_education_military } } }
+            add_ideas = pwc_institution_education_vocational
+        }
+        set_country_flag = pwc_institutions_initialized
+    }
+}
+pwc_se_start_pwc_agenda_civic_relief_50 = {
+    if = {
+        limit = { pwc_st_agenda_civic_relief_eligible = yes NOT = { pwc_st_agenda_civic_relief_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_civic_relief_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_civic_relief_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_civic_relief_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.1 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_civic_relief_40 = {
+    if = {
+        limit = { pwc_st_agenda_civic_relief_eligible = yes pwc_st_agenda_civic_relief_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_civic_relief_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_civic_relief_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_civic_relief_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.1 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_industrial_audit_50 = {
+    if = {
+        limit = { pwc_st_agenda_industrial_audit_eligible = yes NOT = { pwc_st_agenda_industrial_audit_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_industrial_audit_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_industrial_audit_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_industrial_audit_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.2 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_industrial_audit_40 = {
+    if = {
+        limit = { pwc_st_agenda_industrial_audit_eligible = yes pwc_st_agenda_industrial_audit_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_industrial_audit_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_industrial_audit_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_industrial_audit_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.2 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_logistics_repair_50 = {
+    if = {
+        limit = { pwc_st_agenda_logistics_repair_eligible = yes NOT = { pwc_st_agenda_logistics_repair_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_logistics_repair_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_logistics_repair_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_logistics_repair_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.3 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_logistics_repair_40 = {
+    if = {
+        limit = { pwc_st_agenda_logistics_repair_eligible = yes pwc_st_agenda_logistics_repair_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_logistics_repair_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_logistics_repair_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_logistics_repair_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.3 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_defense_training_50 = {
+    if = {
+        limit = { pwc_st_agenda_defense_training_eligible = yes NOT = { pwc_st_agenda_defense_training_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_defense_training_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_defense_training_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_defense_training_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.4 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_defense_training_40 = {
+    if = {
+        limit = { pwc_st_agenda_defense_training_eligible = yes pwc_st_agenda_defense_training_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_defense_training_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_defense_training_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_defense_training_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.4 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_administrative_integration_50 = {
+    if = {
+        limit = { pwc_st_agenda_administrative_integration_eligible = yes NOT = { pwc_st_agenda_administrative_integration_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_administrative_integration_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_administrative_integration_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_administrative_integration_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.5 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_administrative_integration_40 = {
+    if = {
+        limit = { pwc_st_agenda_administrative_integration_eligible = yes pwc_st_agenda_administrative_integration_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_administrative_integration_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_administrative_integration_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_administrative_integration_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.5 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_production_retooling_50 = {
+    if = {
+        limit = { pwc_st_agenda_production_retooling_eligible = yes NOT = { pwc_st_agenda_production_retooling_discount = yes } }
+        set_variable = { pwc_agenda_paid = 50 }
+        if = {
+            limit = { pwc_st_agenda_production_retooling_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_production_retooling_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_production_retooling_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.6 }
+        }
+    }
+}
+pwc_se_start_pwc_agenda_production_retooling_40 = {
+    if = {
+        limit = { pwc_st_agenda_production_retooling_eligible = yes pwc_st_agenda_production_retooling_discount = yes }
+        set_variable = { pwc_agenda_paid = 40 }
+        if = {
+            limit = { pwc_st_agenda_production_retooling_audit = yes }
+            add_timed_idea = { idea = pwc_agenda_production_retooling_audited days = 90 }
+        }
+        else = {
+            add_timed_idea = { idea = pwc_agenda_production_retooling_normal days = 90 }
+        }
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwc_government.6 }
+        }
+    }
+}

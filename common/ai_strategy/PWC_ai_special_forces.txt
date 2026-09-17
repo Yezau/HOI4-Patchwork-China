@@ -1,0 +1,95 @@
+PWC_ai_sf_mountaineers = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = no
+        OR = { has_country_flag = pwc_geo_inland
+               has_country_flag = pwc_geo_frontier }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = mountaineers value = 4 }
+}
+PWC_ai_sf_marines = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = marines value = 12 }
+}
+PWC_ai_sf_paratroopers = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = no
+        pwc_st_ai_sf_airborne_ready = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = paratroopers value = 2 }
+}
+PWC_ai_sf_pwc_role_rangers = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = no
+        num_of_military_factories > 9
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = pwc_role_rangers value = 2 }
+}
+PWC_ai_sf_research = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        num_of_military_factories > 4
+        num_divisions > 7
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_weight_factor id = pwc_tech_sf_mountain_t1 value = 80 }
+}
+PWC_ai_sf_amphibious_research = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_amphibious_need = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_weight_factor id = pwc_tech_sf_mountain_t1 value = 200 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = 100 }
+}
+PWC_ai_sf_equipment = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        NOT = { has_equipment = { pwc_equipment_special_forces > 239 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_surplus_management id = pwc_equipment_special_forces value = 10 }
+}
+PWC_ai_sf_transport = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = no
+        num_of_military_factories > 19
+        has_tech = pwc_tech_air_t1
+        pwc_st_ai_sf_airborne_ready = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories id = air_transport value = 1 }
+}

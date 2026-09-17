@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 ideas = {
 
 	pwc_seat_civil_admin = {
@@ -21,6 +14,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -36,6 +36,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -51,6 +58,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -66,6 +80,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -81,6 +101,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 	}
@@ -99,6 +126,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 12
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -114,6 +147,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -129,6 +169,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -144,6 +190,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -159,6 +212,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 	}
@@ -177,6 +237,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_coastal
+					}
+				}
 			}
 		}
 
@@ -192,6 +259,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -207,6 +280,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -222,6 +302,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -237,6 +324,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 	}
@@ -255,6 +348,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -270,6 +370,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -285,6 +392,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+					}
+				}
 			}
 		}
 
@@ -300,6 +413,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+					}
+				}
 			}
 		}
 
@@ -315,6 +434,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 9
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 	}
@@ -334,6 +460,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 12
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_mobility
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -350,6 +483,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 12
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -366,6 +505,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_mobility
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -382,6 +528,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -397,6 +549,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 	}
@@ -415,6 +573,16 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_state = { is_coastal = yes } }
+				}
 			}
 		}
 
@@ -431,6 +599,17 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+						has_country_flag = pwc_ai_mobility
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_state = { is_coastal = yes } }
+				}
 			}
 		}
 
@@ -447,6 +626,17 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+						has_country_flag = pwc_ai_balanced
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_state = { is_coastal = yes } }
+				}
 			}
 		}
 
@@ -463,6 +653,17 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+						has_country_flag = pwc_ai_industrial
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_state = { is_coastal = yes } }
+				}
 			}
 		}
 
@@ -479,6 +680,17 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 9
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+						has_country_flag = pwc_ai_defense
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { any_owned_state = { is_coastal = yes } }
+				}
 			}
 		}
 	}
@@ -498,6 +710,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 12
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+					}
+				}
 			}
 		}
 
@@ -513,6 +731,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -529,6 +754,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -545,6 +777,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -560,6 +799,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_air_power
+					}
+				}
 			}
 		}
 	}
@@ -578,6 +823,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 
@@ -593,6 +845,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -608,6 +866,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_coastal
+						has_country_flag = pwc_ai_air_power
+					}
+				}
 			}
 		}
 
@@ -623,6 +888,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -638,6 +909,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 9
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 	}
@@ -656,6 +934,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_defense
+					}
+				}
 			}
 		}
 
@@ -671,6 +956,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -686,6 +978,12 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_mobility
+					}
+				}
 			}
 		}
 
@@ -701,6 +999,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_defense
+						has_country_flag = pwc_ai_industrial
+					}
+				}
 			}
 		}
 
@@ -716,6 +1021,13 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 10
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_mobility
+						has_country_flag = pwc_ai_balanced
+					}
+				}
 			}
 		}
 	}

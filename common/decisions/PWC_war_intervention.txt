@@ -1,0 +1,62 @@
+PWC_diplomacy_category = {
+    pwc_dec_select_support_war = {
+        icon = GFX_decision_PWC_envoys
+        cost = 0
+        allowed = { pwc_st_is_city_country = yes }
+        targets_dynamic = yes
+        target_root_trigger = { pwc_st_support_actor = yes }
+        target_trigger = { FROM = { pwc_st_support_enemy = yes } }
+        visible = {
+            pwc_st_support_actor = yes
+            FROM = { pwc_st_support_enemy = yes }
+        }
+        available = {
+            pwc_st_support_actor = yes
+            FROM = { pwc_st_support_enemy = yes }
+        }
+        complete_effect = { set_variable = { pwc_support_enemy = FROM } }
+        ai_will_do = { factor = 0.01 }
+    }
+    pwc_dec_invite_support = {
+        icon = GFX_decision_PWC_envoys
+        cost = 25
+        allowed = { pwc_st_is_city_country = yes }
+        targets_dynamic = yes
+        target_root_trigger = {
+            pwc_st_support_actor = yes
+            pwc_st_support_selection = yes
+        }
+        target_trigger = {
+            FROM = { pwc_st_support_recipient = yes }
+            var:pwc_support_enemy = {
+                NOT = { has_non_aggression_pact_with = FROM }
+            }
+        }
+        visible = {
+            pwc_st_support_actor = yes
+            pwc_st_support_selection = yes
+            FROM = { pwc_st_support_recipient = yes }
+        }
+        available = {
+            pwc_st_support_actor = yes
+            pwc_st_support_selection = yes
+            FROM = { pwc_st_support_recipient = yes }
+            var:pwc_support_enemy = {
+                NOT = { has_non_aggression_pact_with = FROM }
+            }
+        }
+        complete_effect = {
+            save_event_target_as = pwc_support_host
+            var:pwc_support_enemy = {
+                save_event_target_as = pwc_support_opponent
+            }
+            set_country_flag = { flag = pwc_support_pending days = 10 }
+            set_variable = { pwc_support_invitee = FROM }
+            FROM = {
+                set_country_flag = { flag = pwc_support_requested days = 10 }
+                country_event = { id = pwc_support.1 }
+            }
+        }
+        ai_will_do = { factor = 0.01 }
+    }
+}

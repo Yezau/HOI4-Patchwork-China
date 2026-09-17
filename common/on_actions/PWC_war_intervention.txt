@@ -1,0 +1,18 @@
+on_actions = {
+    on_war = {
+        effect = {
+            if = {
+                limit = {
+                    pwc_st_is_city_country = yes
+                    NOT = { has_country_flag = pwc_support_joining }
+                }
+                clr_country_flag = pwc_support_used
+                clr_country_flag = pwc_support_auxiliary
+                clr_country_flag = pwc_support_pending
+                clr_country_flag = pwc_support_requested
+                clear_variable = pwc_support_enemy
+                clear_variable = pwc_support_invitee
+            }
+        }
+    }
+}

@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 technology_categories = {
 	pwc_tech_industry
 	pwc_tech_army
@@ -16,6 +5,86 @@ technology_categories = {
 	pwc_tech_air
 	pwc_tech_navy
 	pwc_tech_electronics
+	pwc_mio_research_pwc_tech_army_infantry_t1
+	pwc_mio_research_pwc_tech_army_infantry_t2
+	pwc_mio_research_pwc_tech_army_infantry_t3
+	pwc_mio_research_pwc_tech_army_infantry_t4
+	pwc_mio_research_pwc_tech_logistics_support_t1
+	pwc_mio_research_pwc_tech_logistics_support_t2
+	pwc_mio_research_pwc_tech_logistics_support_t3
+	pwc_mio_research_pwc_tech_logistics_support_t4
+	pwc_mio_research_pwc_tech_army_firepower_t1
+	pwc_mio_research_pwc_tech_army_firepower_t2
+	pwc_mio_research_pwc_tech_army_firepower_t3
+	pwc_mio_research_pwc_tech_army_firepower_t4
+	pwc_mio_research_pwc_tech_missile_t1
+	pwc_mio_research_pwc_tech_missile_t2
+	pwc_mio_research_pwc_tech_missile_strike_t3
+	pwc_mio_research_pwc_tech_missile_strike_t4
+	pwc_mio_research_pwc_tech_missile_defense_t1
+	pwc_mio_research_pwc_tech_missile_defense_t2
+	pwc_mio_research_pwc_tech_missile_t3
+	pwc_mio_research_pwc_tech_missile_t4
+	pwc_mio_research_pwc_tech_logistics_t1
+	pwc_mio_research_pwc_tech_logistics_t2
+	pwc_mio_research_pwc_tech_logistics_t3
+	pwc_mio_research_pwc_tech_logistics_t4
+	pwc_mio_research_pwc_tech_army_mobility_t1
+	pwc_mio_research_pwc_tech_army_mobility_t2
+	pwc_mio_research_pwc_tech_army_mobility_t3
+	pwc_mio_research_pwc_tech_army_mobility_t4
+	pwc_mio_research_pwc_tech_army_t1
+	pwc_mio_research_pwc_tech_army_t2
+	pwc_mio_research_pwc_tech_army_t3
+	pwc_mio_research_pwc_tech_army_t4
+	pwc_mio_research_pwc_tech_air_t1
+	pwc_mio_research_pwc_tech_air_t2
+	pwc_mio_research_pwc_tech_air_t3
+	pwc_mio_research_pwc_tech_air_t4
+	pwc_mio_research_pwc_tech_air_support_t1
+	pwc_mio_research_pwc_tech_air_support_t2
+	pwc_mio_research_pwc_tech_air_support_t3
+	pwc_mio_research_pwc_tech_air_support_t4
+	pwc_mio_research_pwc_tech_air_strike_t1
+	pwc_mio_research_pwc_tech_air_strike_t2
+	pwc_mio_research_pwc_tech_air_strike_t3
+	pwc_mio_research_pwc_tech_air_strike_t4
+	pwc_mio_research_pwc_tech_navy_t1
+	pwc_mio_research_pwc_tech_navy_t2
+	pwc_mio_research_pwc_tech_navy_t3
+	pwc_mio_research_pwc_tech_navy_t4
+	pwc_mio_research_pwc_tech_navy_submarine_t1
+	pwc_mio_research_pwc_tech_navy_submarine_t2
+	pwc_mio_research_pwc_tech_navy_submarine_t3
+	pwc_mio_research_pwc_tech_navy_submarine_t4
+	pwc_mio_research_pwc_tech_navy_fleet_t1
+	pwc_mio_research_pwc_tech_navy_fleet_t2
+	pwc_mio_research_pwc_tech_navy_fleet_t3
+	pwc_mio_research_pwc_tech_navy_fleet_t4
+	pwc_mio_research_pwc_tech_navy_carrier_t1
+	pwc_mio_research_pwc_tech_navy_carrier_t2
+	pwc_mio_research_pwc_tech_navy_carrier_t3
+	pwc_mio_research_pwc_tech_navy_carrier_t4
+	pwc_mio_research_pwc_tech_industry_t1
+	pwc_mio_research_pwc_tech_industry_construction_t2
+	pwc_mio_research_pwc_tech_industry_construction_t3
+	pwc_mio_research_pwc_tech_industry_construction_t4
+	pwc_mio_research_pwc_tech_industry_manufacturing_t1
+	pwc_mio_research_pwc_tech_industry_t2
+	pwc_mio_research_pwc_tech_industry_t3
+	pwc_mio_research_pwc_tech_industry_t4
+	pwc_mio_research_pwc_tech_electronics_t1
+	pwc_mio_research_pwc_tech_electronics_t2
+	pwc_mio_research_pwc_tech_electronics_computing_t3
+	pwc_mio_research_pwc_tech_electronics_t4
+	pwc_mio_research_pwc_tech_electronics_radar_t1
+	pwc_mio_research_pwc_tech_electronics_radar_t2
+	pwc_mio_research_pwc_tech_electronics_t3
+	pwc_mio_research_pwc_tech_electronics_radar_t4
+	pwc_mio_research_pwc_tech_sf_mountain_t1
+	pwc_mio_research_pwc_tech_sf_mountain_t2
+	pwc_mio_research_pwc_tech_sf_mountain_t3
+	pwc_mio_research_pwc_tech_sf_mountain_t4
 
 	
 	light_air
@@ -162,11 +231,6 @@ technology_folders = {
 	}
 
 	
-	support_folder = {
-		ledger = army
-	}
-
-	
 	land_doctrine_folder = {
 		ledger = army
 		doctrine = yes
@@ -188,6 +252,13 @@ technology_folders = {
 	special_forces_doctrine_folder = {
 		ledger = hidden
 		doctrine = yes
+	}
+
+	support_folder = {
+		ledger = army
+		available = {
+			always = no
+		}
 	}
 
 	nsb_armour_folder = {

@@ -1,0 +1,116 @@
+PWC_ai_sf_mountaineers = {
+    role = mountaineers
+    upgrade_prio = {
+        base = 3
+        modifier = {
+            factor = 0
+            NOT = {
+                pwc_st_ai_sf_ready = yes
+                pwc_st_ai_sf_amphibious_need = no
+                OR = { has_country_flag = pwc_geo_inland
+                       has_country_flag = pwc_geo_frontier }
+            }
+        }
+    }
+    PWC_ai_sf_mountaineers_12w = {
+        reinforce_prio = 2
+        upgrade_prio = { base = 1 }
+        enable = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = no
+            OR = { has_country_flag = pwc_geo_inland
+                   has_country_flag = pwc_geo_frontier }
+        }
+        can_upgrade_in_field = { always = no }
+        target_template = {
+            regiments = {
+                pwc_unit_mountain = 6
+            }
+        }
+    }
+}
+PWC_ai_sf_marines = {
+    role = marines
+    upgrade_prio = {
+        base = 3
+        modifier = {
+            factor = 0
+            NOT = {
+                pwc_st_ai_sf_ready = yes
+                pwc_st_ai_sf_amphibious_need = yes
+            }
+        }
+    }
+    PWC_ai_sf_marines_12w = {
+        reinforce_prio = 2
+        upgrade_prio = { base = 1 }
+        enable = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = yes
+        }
+        can_upgrade_in_field = { always = no }
+        target_template = {
+            regiments = {
+                pwc_unit_marine = 6
+            }
+        }
+    }
+}
+PWC_ai_sf_paratroopers = {
+    role = paratroopers
+    upgrade_prio = {
+        base = 3
+        modifier = {
+            factor = 0
+            NOT = {
+                pwc_st_ai_sf_ready = yes
+                pwc_st_ai_sf_amphibious_need = no
+                pwc_st_ai_sf_airborne_ready = yes
+            }
+        }
+    }
+    PWC_ai_sf_paratroopers_12w = {
+        reinforce_prio = 2
+        upgrade_prio = { base = 1 }
+        enable = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = no
+            pwc_st_ai_sf_airborne_ready = yes
+        }
+        can_upgrade_in_field = { always = no }
+        target_template = {
+            regiments = {
+                pwc_unit_paratrooper = 6
+            }
+        }
+    }
+}
+PWC_ai_sf_pwc_role_rangers = {
+    role = pwc_role_rangers
+    upgrade_prio = {
+        base = 3
+        modifier = {
+            factor = 0
+            NOT = {
+                pwc_st_ai_sf_ready = yes
+                pwc_st_ai_sf_amphibious_need = no
+                num_of_military_factories > 9
+            }
+        }
+    }
+    PWC_ai_sf_pwc_role_rangers_12w = {
+        reinforce_prio = 2
+        upgrade_prio = { base = 1 }
+        enable = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = no
+            num_of_military_factories > 9
+        }
+        can_upgrade_in_field = { always = no }
+        target_template = {
+            regiments = {
+                pwc_unit_ranger = 6
+            }
+        }
+    }
+}

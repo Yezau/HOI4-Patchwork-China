@@ -1,0 +1,16 @@
+scripted_gui = {
+    PWC_agency_gate = {
+        context_type = player_context
+        window_name = "PWC_agency_gate_window"
+        parent_window_name = "countryintelligenceagencyview"
+        visible = {
+            has_dlc = "La Resistance"
+            pwc_st_is_city_country = yes
+            has_intelligence_agency = no
+            NOT = { has_completed_focus = war_establish_agency }
+        }
+        ai_enabled = { always = no }
+        effects = { PWC_agency_locked_click = { } }
+        triggers = { PWC_agency_locked_click_enabled = { always = yes } }
+    }
+}

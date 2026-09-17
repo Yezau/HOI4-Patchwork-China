@@ -1,0 +1,10 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = { pwc_st_is_city_country = yes }
+                pwc_se_init_institutions = yes
+            }
+        }
+    }
+}

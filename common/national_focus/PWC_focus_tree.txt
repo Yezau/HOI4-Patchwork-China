@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 focus_tree = {
 	id = pwc_focus_tree
 	country = {
@@ -57,6 +33,11 @@ focus = {
 	completion_reward = {
 		set_country_flag = pwc_flag_focus_tree_started
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 1 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -92,6 +73,11 @@ focus = {
 			pwc_se_grant_focus_spirit_gov_public_order = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -124,6 +110,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -150,6 +141,11 @@ focus = {
 	completion_reward = {
 		add_political_power = 50
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -178,6 +174,11 @@ focus = {
 			add_extra_state_shared_building_slots = 1
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -205,6 +206,11 @@ focus = {
 			pwc_se_grant_focus_spirit_gov_civil_defense = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -236,6 +242,11 @@ focus = {
 			pwc_se_grant_focus_spirit_gov_streamlined_administration = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -264,6 +275,11 @@ focus = {
 		add_political_power = 75
 		add_war_support = 0.05
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -292,10 +308,14 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		
 		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_CABINET_CHARTER
 		set_country_flag = pwc_flag_cabinet_unlocked
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -323,6 +343,11 @@ focus = {
 			pwc_se_grant_focus_spirit_law_civil_service_exam = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -354,6 +379,11 @@ focus = {
 			pwc_se_grant_focus_spirit_law_emergency_powers = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -382,10 +412,14 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		
 		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_CONSCRIPTION_REFORM
 		set_country_flag = pwc_flag_law_conscription_reformed
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -410,10 +444,14 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		
 		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_ECONOMY_REFORM
 		set_country_flag = pwc_flag_law_economy_reformed
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -439,10 +477,14 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		
 		custom_effect_tooltip = PWC_FOCUS_UNLOCK_LAW_TRADE_REFORM
 		set_country_flag = pwc_flag_law_trade_reformed
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -474,6 +516,11 @@ focus = {
 			pwc_se_grant_focus_spirit_law_oversight_committee = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -497,6 +544,11 @@ focus = {
 	completion_reward = {
 		add_political_power = 100
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -518,6 +570,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -525,6 +578,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -556,6 +614,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_construction_bureau = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -576,6 +639,12 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		capital_scope = {
+		    add_resource = {
+		        type = rubber
+		        amount = 8
+		    }
+		}
 		effect_tooltip = {
 			add_ideas = pwc_idea_eco_resource_survey
 		}
@@ -583,6 +652,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_resource_survey = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -604,6 +678,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -611,6 +686,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -640,6 +720,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -647,6 +728,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -678,6 +764,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_finance_reform = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -703,6 +794,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -710,6 +802,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -745,6 +842,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_municipal_energy = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -783,6 +885,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -814,6 +921,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_trade_hub = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -841,6 +953,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_metropolitan_economy = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -875,6 +992,11 @@ focus = {
 		add_research_slot = 1
 		set_country_flag = pwc_flag_fourth_research_slot
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -906,6 +1028,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_commerce_district = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -927,6 +1054,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -934,6 +1062,7 @@ focus = {
 			}
 		}
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -947,6 +1076,11 @@ focus = {
 			pwc_se_grant_focus_spirit_eco_apex_powerhouse = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -979,6 +1113,11 @@ focus = {
 		}
 		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_DEFENSE_CORPS
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1007,6 +1146,11 @@ focus = {
 		set_country_flag = pwc_flag_mio_infantry
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_infantry
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1043,6 +1187,11 @@ focus = {
 		}
 		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_URBAN_FORTIFICATION
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1093,6 +1242,11 @@ focus = {
 		}
 		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_NAVAL_PROGRAM
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1122,6 +1276,11 @@ focus = {
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_air_superiority
 		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_AIR_WING
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1150,6 +1309,40 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
+		generate_character = {
+		    token_base = pwc_focus_mil_officer_academy_1
+		    gender = female
+		    portraits = {
+		        army = {
+		            large = GFX_PWC_PORTRAIT_GENERAL_13
+		            small = GFX_PWC_PORTRAIT_GENERAL_13_small
+		        }
+		    }
+		    corps_commander = {
+		        skill = 2
+		        attack_skill = 2
+		        defense_skill = 3
+		        planning_skill = 2
+		        logistics_skill = 2
+		    }
+		}
+		generate_character = {
+		    token_base = pwc_focus_mil_officer_academy_2
+		    gender = female
+		    portraits = {
+		        army = {
+		            large = GFX_PWC_PORTRAIT_GENERAL_14
+		            small = GFX_PWC_PORTRAIT_GENERAL_14_small
+		        }
+		    }
+		    corps_commander = {
+		        skill = 2
+		        attack_skill = 2
+		        defense_skill = 3
+		        planning_skill = 2
+		        logistics_skill = 2
+		    }
+		}
 		army_experience = 25
 		effect_tooltip = {
 			add_ideas = pwc_idea_mil_officer_academy
@@ -1158,6 +1351,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_officer_academy = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1195,6 +1393,11 @@ focus = {
 			category = pwc_tech_armor
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1224,6 +1427,23 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
+		generate_character = {
+		    token_base = pwc_focus_mil_combined_arms_1
+		    gender = female
+		    portraits = {
+		        army = {
+		            large = GFX_PWC_PORTRAIT_GENERAL_15
+		            small = GFX_PWC_PORTRAIT_GENERAL_15_small
+		        }
+		    }
+		    corps_commander = {
+		        skill = 2
+		        attack_skill = 2
+		        defense_skill = 3
+		        planning_skill = 2
+		        logistics_skill = 2
+		    }
+		}
 		set_country_flag = pwc_flag_mio_firepower
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
 		effect_tooltip = {
@@ -1233,6 +1453,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_combined_arms = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1261,6 +1486,23 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
+		generate_character = {
+		    token_base = pwc_focus_mil_logistics_command_1
+		    gender = female
+		    portraits = {
+		        army = {
+		            large = GFX_PWC_PORTRAIT_GENERAL_16
+		            small = GFX_PWC_PORTRAIT_GENERAL_16_small
+		        }
+		    }
+		    corps_commander = {
+		        skill = 2
+		        attack_skill = 2
+		        defense_skill = 3
+		        planning_skill = 2
+		        logistics_skill = 2
+		    }
+		}
 		set_country_flag = pwc_flag_mio_logistics
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_logistics
 		effect_tooltip = {
@@ -1270,6 +1512,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_logistics_command = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1315,6 +1562,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1364,6 +1616,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_naval_command = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1398,6 +1655,11 @@ focus = {
 			category = pwc_tech_air
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1431,6 +1693,11 @@ focus = {
 			category = pwc_tech_air
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1484,6 +1751,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_apex_city_marshal = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1516,6 +1788,11 @@ focus = {
 			pwc_se_grant_focus_spirit_war_foreign_office = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1524,7 +1801,7 @@ focus = {
 	id = war_diplomatic_corps
 	icon = PWC_GFX_focus_war_diplomatic_corps
 	prerequisite = { focus = war_foreign_office }
-	x = 58
+	x = 57
 	y = 2
 	cost = 5
 	ai_will_do = {
@@ -1540,10 +1817,14 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	completion_reward = {
-		
 		custom_effect_tooltip = PWC_FOCUS_UNLOCK_WAR_DIPLOMATIC_CORPS
 		set_country_flag = pwc_flag_diplomatic_corps
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1580,6 +1861,11 @@ focus = {
 		}
 		set_country_flag = pwc_flag_nap_framework
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1611,6 +1897,11 @@ focus = {
 			pwc_se_grant_focus_spirit_war_access_agreements = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1646,6 +1937,45 @@ focus = {
 			pwc_se_grant_focus_spirit_war_intelligence_bureau = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = war_establish_agency
+	icon = PWC_GFX_focus_war_establish_agency
+	prerequisite = { focus = war_diplomatic_corps }
+	x = 55
+	y = 4
+	cost = 5
+	available = {
+        has_dlc = "La Resistance"
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_WAR_ESTABLISH_AGENCY
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1681,6 +2011,11 @@ focus = {
 			pwc_se_grant_focus_spirit_war_war_room = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1689,7 +2024,7 @@ focus = {
 	id = war_propaganda_office
 	icon = PWC_GFX_focus_war_propaganda_office
 	prerequisite = { focus = war_war_room }
-	x = 55
+	x = 57
 	y = 4
 	cost = 5
 	ai_will_do = {
@@ -1712,6 +2047,11 @@ focus = {
 			pwc_se_grant_focus_spirit_war_propaganda_office = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1720,7 +2060,7 @@ focus = {
 	id = war_occupation_authority
 	icon = PWC_GFX_focus_war_occupation_authority
 	prerequisite = { focus = war_propaganda_office }
-	x = 55
+	x = 57
 	y = 5
 	cost = 5
 	ai_will_do = {
@@ -1747,6 +2087,11 @@ focus = {
 			pwc_se_grant_focus_spirit_war_occupation_authority = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1780,6 +2125,11 @@ focus = {
 		add_ideas = pwc_idea_endgame_offensive_doctrine
 		army_experience = 25
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1809,6 +2159,11 @@ focus = {
 		add_ideas = pwc_idea_endgame_defensive_doctrine
 		army_experience = 25
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1841,6 +2196,11 @@ focus = {
 	completion_reward = {
 		add_ideas = pwc_idea_endgame_technological_supremacy
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1874,6 +2234,11 @@ focus = {
 		add_ideas = pwc_idea_endgame_integration_charter
 		add_political_power = 100
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1903,6 +2268,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_staff_wargames = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1932,6 +2302,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_operational_intelligence = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1961,6 +2336,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_reserve_system = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -1990,6 +2370,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_armaments_standardization = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2021,6 +2406,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_joint_operations = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2051,6 +2441,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_mobile_operations = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2081,6 +2476,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_mobile_reserves = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2111,6 +2511,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_deep_exploitation = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2141,6 +2546,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_firepower_operations = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2171,6 +2581,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_sensor_shooter_network = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2201,6 +2616,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2231,6 +2651,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_elastic_operations = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2261,6 +2686,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_defense_in_depth = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2291,6 +2721,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_counterstroke = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2321,6 +2756,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_air_denial = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2351,6 +2791,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_dispersed_airbases = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2381,6 +2826,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_interception_network = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2411,6 +2861,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_air_joint_strike = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2441,6 +2896,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_forward_air_control = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2471,6 +2931,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_battlefield_interdiction = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2501,6 +2966,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_littoral_denial = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2531,6 +3001,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_coastal_sensor_line = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2561,6 +3036,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_ambush_flotillas = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2591,6 +3071,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_sea_control = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2621,6 +3106,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_convoy_command = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2651,6 +3141,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_expeditionary_support = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2680,6 +3175,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_field_workshops = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2709,6 +3209,11 @@ focus = {
 			pwc_se_grant_focus_spirit_mil_medical_evacuation = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2743,6 +3248,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_maritime_identity = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2779,6 +3289,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_fishing_fleet = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2813,6 +3328,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2849,6 +3369,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_amphibious_training = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2885,6 +3410,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_coastal_watch = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2922,6 +3452,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2958,6 +3493,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -2991,6 +3531,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3017,6 +3562,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = dockyard
 				level = 1
@@ -3024,6 +3570,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3054,6 +3605,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = dockyard
 				level = 1
@@ -3061,6 +3613,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3105,6 +3662,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_coast_sea_defense = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3141,6 +3703,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3177,6 +3744,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_coast_maritime_trade = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3213,6 +3785,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_coast_beachhead_training = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3250,6 +3827,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3287,6 +3869,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3319,6 +3906,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_frontier_border_guard = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3353,6 +3945,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3393,6 +3990,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_frontier_fortification_line = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3434,6 +4036,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3470,6 +4077,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3501,6 +4113,11 @@ focus = {
 	completion_reward = {
 		add_political_power = 50
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3537,6 +4154,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3570,6 +4192,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3606,6 +4233,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3642,6 +4274,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_food_security = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3668,6 +4305,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		capital_scope = {
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3675,6 +4313,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3712,6 +4355,11 @@ focus = {
 			}
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3748,6 +4396,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_labor_reserve = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3784,6 +4437,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_militia_tradition = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3820,6 +4478,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_interior_lines = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3857,6 +4520,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3884,6 +4552,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_city_cooperation = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3915,6 +4588,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_public_welfare = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3946,6 +4624,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -3977,6 +4660,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -4008,6 +4696,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_local_mobilization = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -4039,6 +4732,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -4066,6 +4764,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_emergency_support = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 
@@ -4094,6 +4797,11 @@ focus = {
 			pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = yes
 		}
 		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
 	}
 }
 }

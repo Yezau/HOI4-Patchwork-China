@@ -6374,6 +6374,40 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "PWC_GFX_focus_war_establish_agency"
+		texturefile = "gfx/interface/pwc/goals/pwc_focus_icon_war_establish_agency.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_focus_war_establish_agency_shine"
+		texturefile = "gfx/interface/pwc/goals/pwc_focus_icon_war_establish_agency.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/pwc/goals/pwc_focus_icon_war_establish_agency.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/pwc/goals/pwc_focus_icon_war_establish_agency.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "PWC_GFX_focus_war_war_room"
 		texturefile = "gfx/interface/pwc/goals/pwc_focus_icon_war_war_room.dds"
 	}
@@ -9284,6 +9318,270 @@ spriteTypes = {
 		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_mob_forced_march_instructor.dds"
 	}
 	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_executive_coordination_coordinator"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_executive_coordination_coordinator.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_executive_coordination_coordinator"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_executive_coordination_coordinator.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_executive_coordination_industrial"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_executive_coordination_industrial.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_executive_coordination_industrial"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_executive_coordination_industrial.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_executive_coordination_defense"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_executive_coordination_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_executive_coordination_defense"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_executive_coordination_defense.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_executive_coordination_civic"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_executive_coordination_civic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_executive_coordination_civic"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_executive_coordination_civic.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_executive_coordination_integration"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_executive_coordination_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_executive_coordination_integration"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_executive_coordination_integration.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_government_oversight_civic"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_government_oversight_civic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_government_oversight_civic"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_government_oversight_civic.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_government_oversight_industry"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_government_oversight_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_government_oversight_industry"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_government_oversight_industry.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_government_oversight_logistics"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_government_oversight_logistics.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_government_oversight_logistics"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_government_oversight_logistics.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_government_oversight_military"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_government_oversight_military.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_government_oversight_military"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_government_oversight_military.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_government_oversight_administration"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_government_oversight_administration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_government_oversight_administration"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_government_oversight_administration.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_general_staff_joint"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_general_staff_joint.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_general_staff_joint"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_general_staff_joint.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_general_staff_defense"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_general_staff_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_general_staff_defense"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_general_staff_defense.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_general_staff_mobility"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_general_staff_mobility.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_general_staff_mobility"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_general_staff_mobility.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_general_staff_planning"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_general_staff_planning.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_general_staff_planning"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_general_staff_planning.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_cand_general_staff_refit"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_cand_general_staff_refit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_cand_general_staff_refit"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_cand_general_staff_refit.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_infantry_recruit"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_infantry_recruit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_infantry_recruit"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_infantry_recruit.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_infantry_defense"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_infantry_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_infantry_defense"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_infantry_defense.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_infantry_special"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_infantry_special.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_infantry_special"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_infantry_special.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_armor_assault"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_armor_assault.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_armor_assault"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_armor_assault.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_armor_mobile"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_armor_mobile.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_armor_mobile"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_armor_mobile.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_armor_defense"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_armor_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_armor_defense"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_armor_defense.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_surface_gunnery"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_surface_gunnery.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_surface_gunnery"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_surface_gunnery.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_surface_escort"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_surface_escort.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_surface_escort"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_surface_escort.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_surface_screen"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_surface_screen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_surface_screen"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_surface_screen.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_submarine_ambush"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_submarine_ambush.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_submarine_ambush"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_submarine_ambush.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_submarine_raiding"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_submarine_raiding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_submarine_raiding"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_submarine_raiding.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_submarine_survival"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_submarine_survival.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_submarine_survival"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_submarine_survival.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_superiority_interception"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_superiority_interception.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_superiority_interception"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_superiority_interception.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_superiority_patrol"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_superiority_patrol.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_superiority_patrol"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_superiority_patrol.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_superiority_training"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_superiority_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_superiority_training"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_superiority_training.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_support_coordination"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_support_coordination.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_support_coordination"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_support_coordination.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_support_strike"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_support_strike.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_support_strike"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_support_strike.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_cabinet_cand_advisor_support_mission"
+		texturefile = "gfx/interface/pwc/cabinet/pwc_portrait_advisor_support_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_cabinet_cand_advisor_support_mission"
+		texturefile = "gfx/interface/pwc/cabinet/idea_icons/pwc_portrait_advisor_support_mission.dds"
+	}
+	spriteType = {
 		name = "PWC_GFX_mio_armor"
 		texturefile = "gfx/interface/pwc/mio/pwc_asset_mio_armor.dds"
 	}
@@ -9866,6 +10164,102 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_pwc_law_trade_control_l5"
 		texturefile = "gfx/interface/pwc/laws/pwc_icon_law_trade_control_l5.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_administration"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_administration"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_labor"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_labor"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_education"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_education"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_administration_local"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_local.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_administration_local"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_local.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_administration_coordinated"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_coordinated.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_administration_coordinated"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_coordinated.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_administration_central"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_central.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_administration_central"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_administration_central.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_labor_protected"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_protected.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_labor_protected"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_protected.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_labor_negotiated"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_negotiated.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_labor_negotiated"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_negotiated.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_labor_war"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_war.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_labor_war"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_labor_war.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_education_basic"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_basic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_education_basic"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_basic.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_education_vocational"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_vocational.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_education_vocational"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_vocational.dds"
+	}
+	spriteType = {
+		name = "PWC_GFX_law_institution_education_military"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_military.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pwc_law_institution_education_military"
+		texturefile = "gfx/interface/pwc/laws/pwc_icon_institution_education_military.dds"
 	}
 	spriteType = {
 		name = "PWC_GFX_unit_infantry"
@@ -10624,6 +11018,102 @@ spriteTypes = {
 		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_12.dds"
 	}
 	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_13"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_13.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_13_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_13.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_14"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_14.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_14_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_14.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_15"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_15.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_15_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_15.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_16"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_16.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_16_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_16.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_17"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_17.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_17_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_17.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_18"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_18.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_18_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_18.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_19"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_19.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_19_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_19.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_20"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_20.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_20_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_20.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_21"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_21.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_21_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_21.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_22"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_22.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_22_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_22.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_23"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_23.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_23_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_23.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_24"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_GENERAL_24.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_GENERAL_24_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_GENERAL_24.dds"
+	}
+	spriteType = {
 		name = "GFX_PWC_PORTRAIT_ADMIRAL_01"
 		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_ADMIRAL_01.dds"
 	}
@@ -10648,12 +11138,44 @@ spriteTypes = {
 		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_ADMIRAL_03.dds"
 	}
 	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_04"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_ADMIRAL_04.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_04_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_ADMIRAL_04.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_05"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_ADMIRAL_05.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_05_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_ADMIRAL_05.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_06"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_ADMIRAL_06.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_ADMIRAL_06_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_ADMIRAL_06.dds"
+	}
+	spriteType = {
 		name = "GFX_PWC_PORTRAIT_MARSHAL_01"
 		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_MARSHAL_01.dds"
 	}
 	spriteType = {
 		name = "GFX_PWC_PORTRAIT_MARSHAL_01_small"
 		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_MARSHAL_01.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_MARSHAL_02"
+		texturefile = "gfx/leaders/pwc/PWC_PORTRAIT_MARSHAL_02.dds"
+	}
+	spriteType = {
+		name = "GFX_PWC_PORTRAIT_MARSHAL_02_small"
+		texturefile = "gfx/leaders/pwc/small/PWC_PORTRAIT_MARSHAL_02.dds"
 	}
 	spriteType = {
 		name = "PWC_GFX_city_council_portrait"

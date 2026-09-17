@@ -1,8 +1,3 @@
-
-
-
-
-
 NDefines.NAI.AREA_DEFENSE_SETTING_VP = true
 
 

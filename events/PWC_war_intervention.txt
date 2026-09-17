@@ -1,0 +1,60 @@
+add_namespace = pwc_support
+country_event = {
+    id = pwc_support.1
+    title = pwc_support_title
+    desc = pwc_support_desc
+    is_triggered_only = yes
+    timeout_days = 7
+    option = {
+        name = pwc_support_decline
+        ai_chance = { base = 20 }
+        clr_country_flag = pwc_support_requested
+        event_target:pwc_support_host = {
+            if = {
+                limit = { var:pwc_support_invitee = { tag = ROOT } }
+                clr_country_flag = pwc_support_pending
+                clear_variable = pwc_support_invitee
+            }
+            country_event = { id = pwc_support.3 }
+        }
+    }
+    option = {
+        name = pwc_support_accept
+        trigger = { pwc_st_support_accept = yes }
+        ai_chance = { base = 80 }
+        if = {
+            limit = { pwc_st_support_accept = yes }
+            event_target:pwc_support_host = {
+                set_country_flag = pwc_support_used
+                clr_country_flag = pwc_support_pending
+                clear_variable = pwc_support_invitee
+            }
+            set_country_flag = { flag = pwc_support_joining days = 1 }
+            set_country_flag = pwc_support_auxiliary
+            clr_country_flag = pwc_support_requested
+            add_to_war = {
+                targeted_alliance = event_target:pwc_support_host
+                enemy = event_target:pwc_support_opponent
+                hostility_reason = asked_to_join
+                single_target_only = yes
+            }
+            event_target:pwc_support_host = {
+                country_event = { id = pwc_support.2 }
+            }
+        }
+    }
+}
+country_event = {
+    id = pwc_support.2
+    title = pwc_support_joined_title
+    desc = pwc_support_joined_desc
+    is_triggered_only = yes
+    option = { name = pwc_support_ok }
+}
+country_event = {
+    id = pwc_support.3
+    title = pwc_support_declined_title
+    desc = pwc_support_declined_desc
+    is_triggered_only = yes
+    option = { name = pwc_support_ok }
+}

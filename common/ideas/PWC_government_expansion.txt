@@ -1,0 +1,1440 @@
+ideas = {
+    pwc_seat_executive_coordination = {
+        pwc_cand_executive_coordination_coordinator = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_executive_coordination_coordinator
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+                }
+            }
+        }
+        pwc_cand_executive_coordination_industrial = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_executive_coordination_industrial
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+                }
+            }
+        }
+        pwc_cand_executive_coordination_defense = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_executive_coordination_defense
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+                }
+            }
+        }
+        pwc_cand_executive_coordination_civic = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_executive_coordination_civic
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+                }
+            }
+        }
+        pwc_cand_executive_coordination_integration = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_executive_coordination_integration
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_executive_coordination_coordinator has_idea = pwc_cand_executive_coordination_industrial has_idea = pwc_cand_executive_coordination_defense has_idea = pwc_cand_executive_coordination_civic has_idea = pwc_cand_executive_coordination_integration }
+                }
+            }
+        }
+    }
+    pwc_seat_government_oversight = {
+        pwc_cand_government_oversight_civic = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_government_oversight_civic
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+                }
+            }
+        }
+        pwc_cand_government_oversight_industry = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_government_oversight_industry
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+                }
+            }
+        }
+        pwc_cand_government_oversight_logistics = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_government_oversight_logistics
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+                }
+            }
+        }
+        pwc_cand_government_oversight_military = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_government_oversight_military
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+                }
+            }
+        }
+        pwc_cand_government_oversight_administration = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = civilian
+            picture = pwc_cabinet_cand_cand_government_oversight_administration
+            modifier = {
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_government_oversight_civic has_idea = pwc_cand_government_oversight_industry has_idea = pwc_cand_government_oversight_logistics has_idea = pwc_cand_government_oversight_military has_idea = pwc_cand_government_oversight_administration }
+                }
+            }
+        }
+    }
+    pwc_seat_general_staff = {
+        pwc_cand_general_staff_joint = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_cand_general_staff_joint
+            modifier = {
+                command_power_gain_mult = 0.05
+                max_command_power_mult = 0.05
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+                }
+            }
+        }
+        pwc_cand_general_staff_defense = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_cand_general_staff_defense
+            modifier = {
+                dig_in_speed = 0.05
+                planning_speed = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+                }
+            }
+        }
+        pwc_cand_general_staff_mobility = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_cand_general_staff_mobility
+            modifier = {
+                org_loss_when_moving = -0.05
+                max_planning = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_mobility }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+                }
+            }
+        }
+        pwc_cand_general_staff_planning = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_cand_general_staff_planning
+            modifier = {
+                max_planning = 0.05
+                planning_speed = -0.05
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+                }
+            }
+        }
+        pwc_cand_general_staff_refit = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_cand_general_staff_refit
+            modifier = {
+                line_change_production_efficiency_factor = 0.05
+                training_time_army_factor = 0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_industrial }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { pwc_st_agenda_cabinet_ready = yes }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_cand_general_staff_joint has_idea = pwc_cand_general_staff_defense has_idea = pwc_cand_general_staff_mobility has_idea = pwc_cand_general_staff_planning has_idea = pwc_cand_general_staff_refit }
+                }
+            }
+        }
+    }
+    pwc_specialist_infantry = {
+        pwc_advisor_infantry_recruit = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_infantry_recruit
+            modifier = {
+                experience_gain_army = 0.12
+                training_time_army_factor = -0.05
+                army_morale_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_infantry_recruit has_idea = pwc_advisor_infantry_defense has_idea = pwc_advisor_infantry_special }
+                }
+            }
+        }
+        pwc_advisor_infantry_defense = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_infantry_defense
+            modifier = {
+                experience_gain_army = 0.12
+                army_infantry_defence_factor = 0.05
+                army_infantry_attack_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_infantry_recruit has_idea = pwc_advisor_infantry_defense has_idea = pwc_advisor_infantry_special }
+                }
+            }
+        }
+        pwc_advisor_infantry_special = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_infantry_special
+            modifier = {
+                experience_gain_army = 0.12
+                special_forces_training_time_factor = -0.1
+                training_time_army_factor = 0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_infantry_recruit has_idea = pwc_advisor_infantry_defense has_idea = pwc_advisor_infantry_special }
+                }
+            }
+        }
+    }
+    pwc_specialist_armor = {
+        pwc_advisor_armor_assault = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_armor_assault
+            modifier = {
+                experience_gain_army = 0.12
+                army_armor_attack_factor = 0.05
+                army_armor_defence_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_armor_assault has_idea = pwc_advisor_armor_mobile has_idea = pwc_advisor_armor_defense }
+                }
+            }
+        }
+        pwc_advisor_armor_mobile = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_armor_mobile
+            modifier = {
+                experience_gain_army = 0.12
+                army_armor_speed_factor = 0.05
+                army_fuel_consumption_factor = 0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_armor_assault has_idea = pwc_advisor_armor_mobile has_idea = pwc_advisor_armor_defense }
+                }
+            }
+        }
+        pwc_advisor_armor_defense = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = army
+            picture = pwc_cabinet_cand_advisor_armor_defense
+            modifier = {
+                experience_gain_army = 0.12
+                army_armor_defence_factor = 0.05
+                army_armor_attack_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_armor_assault has_idea = pwc_advisor_armor_mobile has_idea = pwc_advisor_armor_defense }
+                }
+            }
+        }
+    }
+    pwc_specialist_surface = {
+        pwc_advisor_surface_gunnery = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_surface_gunnery
+            modifier = {
+                experience_gain_navy = 0.12
+                navy_capital_ship_attack_factor = 0.05
+                navy_capital_ship_defence_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0  } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_surface_gunnery has_idea = pwc_advisor_surface_escort has_idea = pwc_advisor_surface_screen }
+                }
+            }
+        }
+        pwc_advisor_surface_escort = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_surface_escort
+            modifier = {
+                experience_gain_navy = 0.12
+                convoy_escort_efficiency = 0.08
+                convoy_raiding_efficiency_factor = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0  } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_surface_gunnery has_idea = pwc_advisor_surface_escort has_idea = pwc_advisor_surface_screen }
+                }
+            }
+        }
+        pwc_advisor_surface_screen = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_surface_screen
+            modifier = {
+                experience_gain_navy = 0.12
+                navy_screen_defence_factor = 0.05
+                navy_screen_attack_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0  } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_surface_gunnery has_idea = pwc_advisor_surface_escort has_idea = pwc_advisor_surface_screen }
+                }
+            }
+        }
+    }
+    pwc_specialist_submarine = {
+        pwc_advisor_submarine_ambush = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_submarine_ambush
+            modifier = {
+                experience_gain_navy = 0.12
+                navy_submarine_attack_factor = 0.05
+                navy_submarine_defence_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0 unit = pwc_unit_submarine } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_submarine_ambush has_idea = pwc_advisor_submarine_raiding has_idea = pwc_advisor_submarine_survival }
+                }
+            }
+        }
+        pwc_advisor_submarine_raiding = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_submarine_raiding
+            modifier = {
+                experience_gain_navy = 0.12
+                convoy_raiding_efficiency_factor = 0.08
+                convoy_escort_efficiency = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0 unit = pwc_unit_submarine } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_submarine_ambush has_idea = pwc_advisor_submarine_raiding has_idea = pwc_advisor_submarine_survival }
+                }
+            }
+        }
+        pwc_advisor_submarine_survival = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = navy
+            picture = pwc_cabinet_cand_advisor_submarine_survival
+            modifier = {
+                experience_gain_navy = 0.12
+                navy_submarine_defence_factor = 0.05
+                navy_submarine_attack_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_coastal }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { is_coastal = yes } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_navy_size = { size > 0 unit = pwc_unit_submarine } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_submarine_ambush has_idea = pwc_advisor_submarine_raiding has_idea = pwc_advisor_submarine_survival }
+                }
+            }
+        }
+    }
+    pwc_specialist_superiority = {
+        pwc_advisor_superiority_interception = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_superiority_interception
+            modifier = {
+                experience_gain_air = 0.12
+                air_intercept_efficiency = 0.08
+                air_superiority_efficiency = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_superiority_interception has_idea = pwc_advisor_superiority_patrol has_idea = pwc_advisor_superiority_training }
+                }
+            }
+        }
+        pwc_advisor_superiority_patrol = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_superiority_patrol
+            modifier = {
+                experience_gain_air = 0.12
+                air_superiority_efficiency = 0.08
+                air_intercept_efficiency = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_superiority_interception has_idea = pwc_advisor_superiority_patrol has_idea = pwc_advisor_superiority_training }
+                }
+            }
+        }
+        pwc_advisor_superiority_training = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_superiority_training
+            modifier = {
+                experience_gain_air = 0.12
+                air_training_xp_gain_factor = 0.08
+                air_mission_efficiency = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_superiority_interception has_idea = pwc_advisor_superiority_patrol has_idea = pwc_advisor_superiority_training }
+                }
+            }
+        }
+    }
+    pwc_specialist_support = {
+        pwc_advisor_support_coordination = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_support_coordination
+            modifier = {
+                experience_gain_air = 0.12
+                air_cas_present_factor = 0.05
+                air_superiority_efficiency = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_support_coordination has_idea = pwc_advisor_support_strike has_idea = pwc_advisor_support_mission }
+                }
+            }
+        }
+        pwc_advisor_support_strike = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_support_strike
+            modifier = {
+                experience_gain_air = 0.12
+                ground_attack_factor = 0.05
+                air_intercept_efficiency = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_support_coordination has_idea = pwc_advisor_support_strike has_idea = pwc_advisor_support_mission }
+                }
+            }
+        }
+        pwc_advisor_support_mission = {
+            allowed = { always = yes }
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+            }
+            cost = 100
+            removal_cost = 0
+            ledger = air
+            picture = pwc_cabinet_cand_advisor_support_mission
+            modifier = {
+                experience_gain_air = 0.12
+                air_cas_efficiency = 0.08
+                air_superiority_efficiency = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_air_power }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { any_owned_state = { air_base > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    NOT = { has_deployed_air_force_size = { size > 0 } }
+                }
+                modifier = {
+                    factor = 0
+                    OR = { has_idea = pwc_advisor_support_coordination has_idea = pwc_advisor_support_strike has_idea = pwc_advisor_support_mission }
+                }
+            }
+        }
+    }
+    pwc_institution_administration = {
+        law = yes
+        use_list_view = yes
+        pwc_institution_administration_local = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 1
+            cancel_if_invalid = no
+            picture = pwc_law_institution_administration_local
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_administration_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_administration_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                stability_factor = 0.03
+                political_power_factor = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_defense }
+                }
+            }
+        }
+        pwc_institution_administration_coordinated = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 2
+            cancel_if_invalid = no
+            picture = pwc_law_institution_administration_coordinated
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_administration_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_administration_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                political_power_factor = 0.02
+                consumer_goods_factor = 0.01
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced }
+                }
+            }
+        }
+        pwc_institution_administration_central = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 3
+            cancel_if_invalid = no
+            picture = pwc_law_institution_administration_central
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_administration_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_administration_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                compliance_growth = 0.03
+                stability_factor = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_mobility }
+                }
+            }
+        }
+    }
+    pwc_institution_labor = {
+        law = yes
+        use_list_view = yes
+        pwc_institution_labor_protected = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 1
+            cancel_if_invalid = no
+            picture = pwc_law_institution_labor_protected
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_labor_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_labor_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                stability_factor = 0.03
+                industrial_capacity_factory = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_defense }
+                }
+            }
+        }
+        pwc_institution_labor_negotiated = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 2
+            cancel_if_invalid = no
+            picture = pwc_law_institution_labor_negotiated
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_labor_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_labor_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.03
+                political_power_factor = -0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
+                }
+            }
+        }
+        pwc_institution_labor_war = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 3
+            cancel_if_invalid = no
+            picture = pwc_law_institution_labor_war
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_labor_cooldown }
+                has_war = yes
+                has_war_support > 0.29
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_labor_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                industrial_capacity_factory = 0.03
+                stability_factor = -0.05
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_mobility }
+                }
+            }
+        }
+    }
+    pwc_institution_education = {
+        law = yes
+        use_list_view = yes
+        pwc_institution_education_basic = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 1
+            cancel_if_invalid = no
+            picture = pwc_law_institution_education_basic
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_education_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_education_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                compliance_growth = 0.02
+                consumer_goods_factor = 0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
+                }
+            }
+        }
+        pwc_institution_education_vocational = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 2
+            cancel_if_invalid = no
+            picture = pwc_law_institution_education_vocational
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_education_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_education_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                line_change_production_efficiency_factor = 0.03
+                consumer_goods_factor = 0.02
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_industrial }
+                }
+            }
+        }
+        pwc_institution_education_military = {
+            allowed = { always = yes }
+            cost = 100
+            removal_cost = -1
+            level = 3
+            cancel_if_invalid = no
+            picture = pwc_law_institution_education_military
+            available = {
+                hidden_trigger = { pwc_st_is_city_country = yes }
+                pwc_st_city_alive = yes
+                NOT = { has_country_flag = pwc_institution_education_cooldown }
+            }
+            on_add = {
+                hidden_effect = {
+                    if = {
+                        limit = { has_country_flag = pwc_institutions_initialized }
+                        set_country_flag = { flag = pwc_institution_education_cooldown days = 180 }
+                    }
+                }
+            }
+            modifier = {
+                experience_gain_army_factor = 0.03
+                experience_gain_air_factor = 0.03
+                experience_gain_navy_factor = 0.03
+                political_power_factor = -0.03
+            }
+            ai_will_do = {
+                factor = 10
+                modifier = {
+                    factor = 2
+                    OR = { has_country_flag = pwc_ai_mobility has_country_flag = pwc_ai_coastal has_country_flag = pwc_ai_air_power }
+                }
+            }
+        }
+    }
+    country = {
+        pwc_agenda_civic_relief_normal = {
+            picture = pwc_law_institution_labor
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                stability_weekly = 0.001
+                industrial_capacity_factory = -0.03
+            }
+        }
+        pwc_agenda_civic_relief_audited = {
+            picture = pwc_law_institution_labor
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                stability_weekly = 0.001
+            }
+        }
+        pwc_agenda_industrial_audit_normal = {
+            picture = pwc_law_economy_mobilization_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.05
+                consumer_goods_factor = 0.03
+            }
+        }
+        pwc_agenda_industrial_audit_audited = {
+            picture = pwc_law_economy_mobilization_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.05
+            }
+        }
+        pwc_agenda_logistics_repair_normal = {
+            picture = pwc_law_trade_control_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                production_speed_infrastructure_factor = 0.1
+                production_speed_industrial_complex_factor = -0.03
+            }
+        }
+        pwc_agenda_logistics_repair_audited = {
+            picture = pwc_law_trade_control_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                production_speed_infrastructure_factor = 0.1
+            }
+        }
+        pwc_agenda_defense_training_normal = {
+            picture = pwc_law_conscription_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                experience_gain_army = 0.05
+                training_time_army_factor = 0.05
+            }
+        }
+        pwc_agenda_defense_training_audited = {
+            picture = pwc_law_conscription_l2
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                experience_gain_army = 0.05
+            }
+        }
+        pwc_agenda_administrative_integration_normal = {
+            picture = pwc_law_institution_administration
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                compliance_growth = 0.05
+                political_power_factor = -0.05
+            }
+        }
+        pwc_agenda_administrative_integration_audited = {
+            picture = pwc_law_institution_administration
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                compliance_growth = 0.05
+            }
+        }
+        pwc_agenda_production_retooling_normal = {
+            picture = pwc_law_institution_education
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                line_change_production_efficiency_factor = 0.05
+                industrial_capacity_factory = -0.03
+            }
+        }
+        pwc_agenda_production_retooling_audited = {
+            picture = pwc_law_institution_education
+            allowed = { always = yes }
+            removal_cost = -1
+            modifier = {
+                line_change_production_efficiency_factor = 0.05
+            }
+        }
+    }
+}
