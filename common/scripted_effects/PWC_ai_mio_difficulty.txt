@@ -1,0 +1,42 @@
+pwc_se_ai_mio_difficulty_sync = {
+    if = {
+        limit = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        if = {
+            limit = {
+                NOT = { has_dynamic_modifier = { modifier = pwc_dm_ai_mio_20 } }
+            }
+            add_dynamic_modifier = { modifier = pwc_dm_ai_mio_20 }
+        }
+    }
+    else_if = {
+        limit = {
+            has_dynamic_modifier = { modifier = pwc_dm_ai_mio_20 }
+        }
+        remove_dynamic_modifier = { modifier = pwc_dm_ai_mio_20 }
+    }
+    if = {
+        limit = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        if = {
+            limit = {
+                NOT = { has_dynamic_modifier = { modifier = pwc_dm_ai_mio_30 } }
+            }
+            add_dynamic_modifier = { modifier = pwc_dm_ai_mio_30 }
+        }
+    }
+    else_if = {
+        limit = {
+            has_dynamic_modifier = { modifier = pwc_dm_ai_mio_30 }
+        }
+        remove_dynamic_modifier = { modifier = pwc_dm_ai_mio_30 }
+    }
+}

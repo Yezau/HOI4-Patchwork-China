@@ -3,6 +3,7 @@ pwc_se_ai_refit_count = {
     set_variable = { pwc_ai_refit_infantry = 0 }
     set_variable = { pwc_ai_refit_mobile = 0 }
     set_variable = { pwc_ai_refit_armor = 0 }
+    set_variable = { pwc_ai_refit_mechanizable = 0 }
     every_country_division = {
         limit = {
             OR = {
@@ -36,6 +37,17 @@ pwc_se_ai_refit_count = {
             }
             PREV = {
                 add_to_variable = { pwc_ai_refit_mobile = 1 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        division_has_majority_template = pwc_unit_motorized
+                        division_has_majority_template = pwc_unit_artillery
+                    }
+                }
+                PREV = {
+                    add_to_variable = { pwc_ai_refit_mechanizable = 1 }
+                }
             }
         }
         if = {
@@ -591,7 +603,11 @@ pwc_se_ai_refit_tick = {
         pwc_se_ai_refit_goals = yes
         if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 8
@@ -602,9 +618,7 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = yes
             }
             if = {
                 limit = {
@@ -667,7 +681,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 4
@@ -678,9 +696,7 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = yes
             }
             if = {
                 limit = {
@@ -743,7 +759,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 2
@@ -754,9 +774,7 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = yes
             }
             if = {
                 limit = {
@@ -819,7 +837,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 1
@@ -830,9 +852,7 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = yes
             }
             if = {
                 limit = {
@@ -895,25 +915,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -976,25 +998,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1057,11 +1081,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1073,8 +1096,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1138,11 +1164,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1154,8 +1179,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1219,11 +1247,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1235,8 +1262,11 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1300,11 +1330,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1316,8 +1345,11 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1381,11 +1413,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1397,8 +1428,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1462,11 +1496,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -1478,8 +1511,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -1543,6 +1579,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1554,19 +1605,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1629,6 +1667,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1640,19 +1693,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1715,6 +1755,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1726,19 +1781,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1801,6 +1843,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1812,19 +1869,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1887,6 +1931,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1898,19 +1957,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -1962,6 +2008,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -1973,19 +2034,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2037,6 +2085,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2048,19 +2111,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2112,6 +2162,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2123,19 +2188,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2187,6 +2239,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2198,19 +2265,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2261,6 +2315,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2272,19 +2341,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2335,6 +2391,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2346,19 +2417,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2409,6 +2467,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -2420,19 +2493,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -2483,7 +2543,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 8
@@ -2494,13 +2558,7 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = yes
             }
             if = {
                 limit = {
@@ -2567,7 +2625,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 4
@@ -2578,13 +2640,7 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = yes
             }
             if = {
                 limit = {
@@ -2651,7 +2707,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 2
@@ -2662,13 +2722,7 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = yes
             }
             if = {
                 limit = {
@@ -2735,7 +2789,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
                     value = 1
@@ -2746,13 +2804,7 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = yes
             }
             if = {
                 limit = {
@@ -2819,29 +2871,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -2908,29 +2958,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -2997,11 +3045,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3013,12 +3060,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3086,11 +3132,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3102,12 +3147,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3175,11 +3219,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3191,12 +3234,11 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3264,11 +3306,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3280,12 +3321,11 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3353,11 +3393,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3369,12 +3408,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3442,11 +3480,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_armor_deficit
@@ -3458,12 +3495,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -3531,6 +3567,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -3542,23 +3593,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -3625,6 +3659,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -3636,23 +3685,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -3719,6 +3751,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -3730,23 +3777,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -3813,6 +3843,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_36w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -3824,23 +3869,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -3907,6 +3935,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -3918,23 +3961,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -3990,6 +4016,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4001,23 +4042,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4073,6 +4097,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4084,23 +4123,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4156,6 +4178,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_18w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4167,23 +4204,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4239,6 +4259,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4250,23 +4285,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4321,6 +4339,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4332,23 +4365,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4403,6 +4419,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 2
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 2
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4414,23 +4445,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 2
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4485,6 +4499,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mobile
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_armor_deficit
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_surplus
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_armored_entry_18w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -4496,23 +4525,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_armor_deficit
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_surplus
-                    value = 1
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4567,18 +4579,12 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8 = yes
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
                 }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8 = yes
             }
             if = {
                 limit = {
@@ -4636,18 +4642,12 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4 = yes
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
                 }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4 = yes
             }
             if = {
                 limit = {
@@ -4705,18 +4705,12 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2 = yes
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
                 }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2 = yes
             }
             if = {
                 limit = {
@@ -4774,18 +4768,12 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1 = yes
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
                 }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1 = yes
             }
             if = {
                 limit = {
@@ -4843,23 +4831,17 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4916,23 +4898,17 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -4989,22 +4965,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5062,22 +5032,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5135,22 +5099,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_assault_engineer
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5209,22 +5167,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_assault_engineer
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5283,22 +5235,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_assault_engineer
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5357,22 +5303,16 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_assault_engineer
                     value = 0
                     compare = less_than_or_equals
-                }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
                 }
             }
             if = {
@@ -5431,6 +5371,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -5442,17 +5387,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -5509,6 +5443,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_default_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -5520,17 +5459,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -5587,6 +5515,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_default_batch_2 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -5598,17 +5531,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -5665,6 +5587,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_mechanizable
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_default_batch_1 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -5676,17 +5603,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                any_country_division = {
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_mechanized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                    OR = {
-                        division_has_majority_template = pwc_unit_motorized
-                        division_has_majority_template = pwc_unit_artillery
-                    }
-                }
             }
             if = {
                 limit = {
@@ -5743,7 +5659,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 8
@@ -5754,9 +5674,7 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8 = yes
             }
             if = {
                 limit = {
@@ -5806,7 +5724,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 4
@@ -5817,9 +5739,7 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4 = yes
             }
             if = {
                 limit = {
@@ -5869,7 +5789,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 2
@@ -5880,9 +5804,7 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2 = yes
             }
             if = {
                 limit = {
@@ -5932,7 +5854,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 1
@@ -5943,9 +5869,7 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1 = yes
             }
             if = {
                 limit = {
@@ -5995,25 +5919,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -6062,25 +5988,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -6129,11 +6057,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6145,8 +6072,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6196,11 +6126,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6212,8 +6141,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6263,11 +6195,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_8 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6279,8 +6210,11 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6331,11 +6265,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6347,8 +6280,11 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6399,11 +6335,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6415,8 +6350,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6467,11 +6405,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6483,8 +6420,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6535,6 +6475,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mechanized_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -6546,19 +6501,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -6607,16 +6549,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_default_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6628,8 +6564,16 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_default_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6679,16 +6623,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_default_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6700,8 +6638,16 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_default_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6751,16 +6697,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mechanized_18w_default_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -6772,8 +6712,16 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mechanized_18w_default_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -6823,20 +6771,22 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_8 = yes
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -6886,7 +6836,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 4
@@ -6897,9 +6851,7 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_4 = yes
             }
             if = {
                 limit = {
@@ -6949,7 +6901,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 2
@@ -6960,9 +6916,7 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_2 = yes
             }
             if = {
                 limit = {
@@ -7012,7 +6966,11 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
                     value = 1
@@ -7023,9 +6981,7 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
+                pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_1 = yes
             }
             if = {
                 limit = {
@@ -7075,25 +7031,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -7142,25 +7100,27 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 4
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 4
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_4 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 4
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -7209,11 +7169,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7225,8 +7184,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7276,11 +7238,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7292,8 +7253,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7343,11 +7307,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_8 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7359,8 +7322,11 @@ pwc_se_ai_refit_tick = {
                     value = 8
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_8 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7411,11 +7377,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7427,8 +7392,11 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7479,11 +7447,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7495,8 +7462,11 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7547,11 +7517,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7563,8 +7532,11 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7615,6 +7587,21 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
+                check_variable = {
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_mobile_deficit
+                    value = 8
+                    compare = greater_than_or_equals
+                }
+                check_variable = {
+                    var = pwc_ai_refit_infantry_surplus
+                    value = 8
+                    compare = greater_than_or_equals
+                }
                 pwc_st_ai_refit_mobile_18w_default_batch_8 = yes
                 check_variable = {
                     var = num_battalions_with_type@pwc_unit_armored_recovery
@@ -7626,19 +7613,6 @@ pwc_se_ai_refit_tick = {
                     value = 0
                     compare = less_than_or_equals
                 }
-                check_variable = {
-                    var = pwc_ai_refit_mobile_deficit
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                check_variable = {
-                    var = pwc_ai_refit_infantry_surplus
-                    value = 8
-                    compare = greater_than_or_equals
-                }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
-                }
             }
             if = {
                 limit = {
@@ -7687,16 +7661,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_default_batch_4 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7708,8 +7676,16 @@ pwc_se_ai_refit_tick = {
                     value = 4
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_default_batch_4 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7759,16 +7735,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_default_batch_2 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7780,8 +7750,16 @@ pwc_se_ai_refit_tick = {
                     value = 2
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_default_batch_2 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7831,16 +7809,10 @@ pwc_se_ai_refit_tick = {
         }
         else_if = {
             limit = {
-                pwc_st_ai_refit_mobile_18w_default_batch_1 = yes
                 check_variable = {
-                    var = num_battalions_with_type@pwc_unit_armored_recovery
-                    value = 0
-                    compare = less_than_or_equals
-                }
-                check_variable = {
-                    var = num_battalions_with_type@pwc_unit_assault_engineer
-                    value = 0
-                    compare = less_than_or_equals
+                    var = pwc_ai_refit_infantry
+                    value = 1
+                    compare = greater_than_or_equals
                 }
                 check_variable = {
                     var = pwc_ai_refit_mobile_deficit
@@ -7852,8 +7824,16 @@ pwc_se_ai_refit_tick = {
                     value = 1
                     compare = greater_than_or_equals
                 }
-                any_country_division = {
-                    division_has_majority_template = pwc_unit_infantry
+                pwc_st_ai_refit_mobile_18w_default_batch_1 = yes
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_armored_recovery
+                    value = 0
+                    compare = less_than_or_equals
+                }
+                check_variable = {
+                    var = num_battalions_with_type@pwc_unit_assault_engineer
+                    value = 0
+                    compare = less_than_or_equals
                 }
             }
             if = {
@@ -7905,6 +7885,7 @@ pwc_se_ai_refit_tick = {
         clear_variable = pwc_ai_refit_infantry
         clear_variable = pwc_ai_refit_mobile
         clear_variable = pwc_ai_refit_armor
+        clear_variable = pwc_ai_refit_mechanizable
         clear_variable = pwc_ai_refit_infantry_goal
         clear_variable = pwc_ai_refit_infantry_surplus
         clear_variable = pwc_ai_refit_infantry_deficit

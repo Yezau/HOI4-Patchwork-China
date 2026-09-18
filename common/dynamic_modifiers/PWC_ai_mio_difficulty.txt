@@ -1,0 +1,42 @@
+pwc_dm_ai_mio_20 = {
+    icon = GFX_idea_unknown
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_dlc = "Arms Against Tyranny"
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+    }
+    remove_trigger = {
+        NOT = {
+            AND = {
+                is_ai = yes
+                pwc_st_is_city_country = yes
+                has_dlc = "Arms Against Tyranny"
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            }
+        }
+    }
+    military_industrial_organization_funds_gain = 0.5
+    military_industrial_organization_size_up_requirement = -0.1
+}
+pwc_dm_ai_mio_30 = {
+    icon = GFX_idea_unknown
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_dlc = "Arms Against Tyranny"
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+    }
+    remove_trigger = {
+        NOT = {
+            AND = {
+                is_ai = yes
+                pwc_st_is_city_country = yes
+                has_dlc = "Arms Against Tyranny"
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
+    }
+    military_industrial_organization_funds_gain = 1
+    military_industrial_organization_size_up_requirement = -0.2
+}

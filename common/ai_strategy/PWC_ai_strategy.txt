@@ -45488,6 +45488,7 @@ PWC_ai_armored_reserve_12_pwc_equipment_mechanized = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45497,7 +45498,43 @@ PWC_ai_armored_reserve_12_pwc_equipment_mechanized = {
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 11
         num_of_military_factories < 30
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_equipment_mechanized > 479 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_equipment_mechanized
+        value = 1
+    }
+}
+PWC_ai_armored_reserve_12_pwc_equipment_mechanized_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 11
+        num_of_military_factories < 30
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_equipment_mechanized > 779 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -45511,6 +45548,7 @@ PWC_ai_armored_reserve_12_pwc_platform_medium_tank = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45521,7 +45559,44 @@ PWC_ai_armored_reserve_12_pwc_platform_medium_tank = {
         num_of_military_factories > 11
         num_of_military_factories < 30
         has_design_based_on = pwc_platform_medium_tank
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_platform_medium_tank > 299 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_platform_medium_tank
+        value = 2
+    }
+}
+PWC_ai_armored_reserve_12_pwc_platform_medium_tank_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 11
+        num_of_military_factories < 30
+        has_design_based_on = pwc_platform_medium_tank
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_platform_medium_tank > 487 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -45535,6 +45610,7 @@ PWC_ai_armored_reserve_30_pwc_equipment_mechanized = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45543,8 +45619,44 @@ PWC_ai_armored_reserve_30_pwc_equipment_mechanized = {
         has_tech = pwc_tech_army_mobility_t1
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 29
-        num_of_military_factories < 100
+        num_of_military_factories < 75
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_equipment_mechanized > 479 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_equipment_mechanized
+        value = 3
+    }
+}
+PWC_ai_armored_reserve_30_pwc_equipment_mechanized_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 29
+        num_of_military_factories < 75
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_equipment_mechanized > 779 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -45558,6 +45670,7 @@ PWC_ai_armored_reserve_30_pwc_platform_medium_tank = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45566,9 +45679,168 @@ PWC_ai_armored_reserve_30_pwc_platform_medium_tank = {
         has_tech = pwc_tech_army_mobility_t1
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 29
+        num_of_military_factories < 75
+        has_design_based_on = pwc_platform_medium_tank
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
+        NOT = { has_equipment = { pwc_platform_medium_tank > 299 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_platform_medium_tank
+        value = 6
+    }
+}
+PWC_ai_armored_reserve_30_pwc_platform_medium_tank_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 29
+        num_of_military_factories < 75
+        has_design_based_on = pwc_platform_medium_tank
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_platform_medium_tank > 487 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_platform_medium_tank
+        value = 6
+    }
+}
+PWC_ai_armored_reserve_75_pwc_equipment_mechanized = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 74
+        num_of_military_factories < 100
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
+        NOT = { has_equipment = { pwc_equipment_mechanized > 479 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_equipment_mechanized
+        value = 3
+    }
+}
+PWC_ai_armored_reserve_75_pwc_equipment_mechanized_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 74
+        num_of_military_factories < 100
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_equipment_mechanized > 779 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_equipment_mechanized
+        value = 3
+    }
+}
+PWC_ai_armored_reserve_75_pwc_platform_medium_tank = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 74
         num_of_military_factories < 100
         has_design_based_on = pwc_platform_medium_tank
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_platform_medium_tank > 299 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_platform_medium_tank
+        value = 6
+    }
+}
+PWC_ai_armored_reserve_75_pwc_platform_medium_tank_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 74
+        num_of_military_factories < 100
+        has_design_based_on = pwc_platform_medium_tank
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_platform_medium_tank > 1299 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -45582,6 +45854,7 @@ PWC_ai_armored_reserve_100_pwc_equipment_mechanized = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45590,7 +45863,42 @@ PWC_ai_armored_reserve_100_pwc_equipment_mechanized = {
         has_tech = pwc_tech_army_mobility_t1
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 99
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_equipment_mechanized > 479 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_equipment_mechanized
+        value = 6
+    }
+}
+PWC_ai_armored_reserve_100_pwc_equipment_mechanized_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 99
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_equipment_mechanized > 779 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -45604,6 +45912,7 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         pwc_st_ai_recruitment_stage_motorization = yes
         has_tech = pwc_tech0_basic_industry
         has_tech = pwc_tech0_communications
@@ -45613,7 +45922,43 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank = {
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 99
         has_design_based_on = pwc_platform_medium_tank
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         NOT = { has_equipment = { pwc_platform_medium_tank > 299 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = equipment_production_min_factories_archetype
+        id = pwc_platform_medium_tank
+        value = 15
+    }
+}
+PWC_ai_armored_reserve_100_pwc_platform_medium_tank_enhanced = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        pwc_st_ai_recruitment_stage_motorization = yes
+        has_tech = pwc_tech0_basic_industry
+        has_tech = pwc_tech0_communications
+        has_tech = pwc_tech0_engineers
+        has_tech = pwc_tech0_transport
+        has_tech = pwc_tech_army_mobility_t1
+        has_tech = pwc_tech_army_t1
+        num_of_military_factories > 99
+        has_design_based_on = pwc_platform_medium_tank
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        NOT = { has_equipment = { pwc_platform_medium_tank > 1299 } }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
