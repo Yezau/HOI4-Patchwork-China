@@ -25,1730 +25,1823 @@ pwc_se_focus_ai_equipment = {
         }
         if = {
             limit = {
-                has_tech = pwc_tech_army_infantry_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 120 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_infantry_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_infantry_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 120 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_infantry_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_infantry_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 120 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_infantry_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_infantry_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 120 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_infantry_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_infantry
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 120 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_infantry_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_logistics_support_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 20 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_support_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_logistics_support_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 20 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_support_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_engineers
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 20 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_support_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_army_firepower_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 12 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_artillery_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_firepower_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 12 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_artillery_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_firepower_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 12 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_artillery_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_firepower_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 12 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_artillery_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_infantry
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 12 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_artillery_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_missile_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_tank_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_tank_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_defense_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_tank_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_infantry
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_tank_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_missile_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_air_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_air_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_defense_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_air_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_infantry
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_anti_air_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_missile_strike_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_rocket_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_strike_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_rocket_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_rocket_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_missile_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_rocket_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_infantry
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_rocket_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_logistics_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 30 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_motorized_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_logistics_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 30 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_motorized_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_transport
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 30 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_motorized_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_mechanized_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_mechanized_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_mechanized_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_mechanized_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_transport
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_mechanized_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_special_forces_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_special_forces_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_special_forces_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 15 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_special_forces_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t4
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_transport_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t3
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_transport_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t2
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_transport_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_sf_mountain_t1
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_equipment_transport_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-            }
-        }
-        if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t4
+                has_equipment = { pwc_equipment_infantry < 2400 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g4 }
+                    has_tech = pwc_tech_army_infantry_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply light_tank G4"
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 120 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_infantry_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_infantry_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 120 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_infantry_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_infantry_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 120 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_infantry_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_infantry_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 120 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_infantry_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_basic_infantry
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 120 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_infantry_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_support < 400 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_logistics_support_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 20 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_support_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_logistics_support_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 20 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_support_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_engineers
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 20 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_support_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_artillery < 240 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_army_firepower_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 12 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_artillery_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_firepower_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 12 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_artillery_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_firepower_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 12 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_artillery_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_firepower_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 12 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_artillery_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_basic_infantry
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 12 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_artillery_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_anti_tank < 120 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_tank_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_tank_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_defense_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_tank_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_basic_infantry
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_tank_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_anti_air < 120 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_air_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_air_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_defense_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_air_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_basic_infantry
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_anti_air_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_rocket < 120 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_missile_strike_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_rocket_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_strike_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_rocket_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_rocket_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_missile_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_rocket_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_basic_infantry
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_rocket_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_motorized < 600 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_logistics_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 30 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_motorized_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_logistics_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 30 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_motorized_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_transport
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 30 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_motorized_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_mechanized < 300 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_army_mobility_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_mechanized_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_mobility_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_mechanized_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_mobility_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_mechanized_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_army_mobility_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_mechanized_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech0_transport
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_mechanized_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_special_forces < 300 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_special_forces_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_special_forces_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_special_forces_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 15 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_special_forces_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_equipment_transport < 40 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_transport_gen4
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_transport_gen3
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_transport_gen2
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech = pwc_tech_sf_mountain_t1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
+                    type = pwc_equipment_transport_gen1
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_equipment = { pwc_platform_light_tank < 120 }
+            }
+            if = {
+                limit = {
+                    has_tech = pwc_tech_army_mobility_t4
+                }
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply light_tank G4"
+                        type = pwc_platform_light_tank_gen4
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_light_tank_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_light_tank_gen4
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                        fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply light_tank G4"
                 }
-                set_country_flag = pwc_flag_supply_design_light_tank_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_light_tank_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply light_tank G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g3 }
+                    has_tech = pwc_tech_army_mobility_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply light_tank G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply light_tank G3"
+                        type = pwc_platform_light_tank_gen3
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_light_tank_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_light_tank_gen3
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply light_tank G3"
                 }
-                set_country_flag = pwc_flag_supply_design_light_tank_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_light_tank_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply light_tank G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g2 }
+                    has_tech = pwc_tech_army_mobility_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply light_tank G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply light_tank G2"
+                        type = pwc_platform_light_tank_gen2
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_light_tank_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_light_tank_gen2
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply light_tank G2"
                 }
-                set_country_flag = pwc_flag_supply_design_light_tank_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_light_tank_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply light_tank G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_mobility_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g1 }
+                    has_tech = pwc_tech_army_mobility_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply light_tank G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply light_tank G1"
+                        type = pwc_platform_light_tank_gen1
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_light_tank_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_light_tank_gen1
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply light_tank G1"
                 }
-                set_country_flag = pwc_flag_supply_design_light_tank_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_light_tank_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply light_tank G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply light_tank G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_light_tank_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply light_tank G0"
+                        type = pwc_platform_light_tank_gen0
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_light_tank_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_light_tank_gen0
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                        pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                        fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply light_tank G0"
                 }
-                set_country_flag = pwc_flag_supply_design_light_tank_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_light_tank_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply light_tank G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_army_t4
+                has_equipment = { pwc_platform_medium_tank < 120 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g4 }
+                    has_tech = pwc_tech_army_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply medium_tank G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply medium_tank G4"
+                        type = pwc_platform_medium_tank_gen4
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+                            pwc_slot_special_1 = pwc_module_tank_special_nbc
+                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_medium_tank_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_medium_tank_gen4
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                        pwc_slot_special_1 = pwc_module_tank_special_nbc
-                        fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply medium_tank G4"
                 }
-                set_country_flag = pwc_flag_supply_design_medium_tank_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_medium_tank_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply medium_tank G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g3 }
+                    has_tech = pwc_tech_army_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply medium_tank G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply medium_tank G3"
+                        type = pwc_platform_medium_tank_gen3
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_medium_tank_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_medium_tank_gen3
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply medium_tank G3"
                 }
-                set_country_flag = pwc_flag_supply_design_medium_tank_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_medium_tank_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply medium_tank G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g2 }
+                    has_tech = pwc_tech_army_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply medium_tank G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply medium_tank G2"
+                        type = pwc_platform_medium_tank_gen2
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_medium_tank_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_medium_tank_gen2
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply medium_tank G2"
                 }
-                set_country_flag = pwc_flag_supply_design_medium_tank_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_medium_tank_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply medium_tank G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g1 }
+                    has_tech = pwc_tech_army_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply medium_tank G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply medium_tank G1"
+                        type = pwc_platform_medium_tank_gen1
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_medium_tank_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_medium_tank_gen1
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply medium_tank G1"
                 }
-                set_country_flag = pwc_flag_supply_design_medium_tank_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_medium_tank_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply medium_tank G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply medium_tank G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_medium_tank_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply medium_tank G0"
+                        type = pwc_platform_medium_tank_gen0
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_medium_tank_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_medium_tank_gen0
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                        pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                        fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply medium_tank G0"
                 }
-                set_country_flag = pwc_flag_supply_design_medium_tank_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_medium_tank_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply medium_tank G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_army_t4
+                has_equipment = { pwc_platform_heavy_tank < 60 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g4 }
+                    has_tech = pwc_tech_army_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply heavy_tank G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply heavy_tank G4"
+                        type = pwc_platform_heavy_tank_gen4
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+                            pwc_slot_special_1 = pwc_module_tank_special_nbc
+                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_heavy_tank_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_heavy_tank_gen4
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                        pwc_slot_special_1 = pwc_module_tank_special_nbc
-                        fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply heavy_tank G4"
                 }
-                set_country_flag = pwc_flag_supply_design_heavy_tank_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_heavy_tank_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply heavy_tank G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g3 }
+                    has_tech = pwc_tech_army_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply heavy_tank G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply heavy_tank G3"
+                        type = pwc_platform_heavy_tank_gen3
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_special_1 = pwc_module_tank_special_dozer
+                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_heavy_tank_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_heavy_tank_gen3
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_special_1 = pwc_module_tank_special_dozer
-                        fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply heavy_tank G3"
                 }
-                set_country_flag = pwc_flag_supply_design_heavy_tank_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_heavy_tank_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply heavy_tank G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g2 }
+                    has_tech = pwc_tech_army_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply heavy_tank G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply heavy_tank G2"
+                        type = pwc_platform_heavy_tank_gen2
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_heavy_tank_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_heavy_tank_gen2
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply heavy_tank G2"
                 }
-                set_country_flag = pwc_flag_supply_design_heavy_tank_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_heavy_tank_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply heavy_tank G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g1 }
+                    has_tech = pwc_tech_army_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply heavy_tank G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply heavy_tank G1"
+                        type = pwc_platform_heavy_tank_gen1
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_heavy_tank_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_heavy_tank_gen1
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply heavy_tank G1"
                 }
-                set_country_flag = pwc_flag_supply_design_heavy_tank_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_heavy_tank_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply heavy_tank G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply heavy_tank G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_heavy_tank_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply heavy_tank G0"
+                        type = pwc_platform_heavy_tank_gen0
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_heavy_tank_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_heavy_tank_gen0
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                        fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                        pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                        fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply heavy_tank G0"
                 }
-                set_country_flag = pwc_flag_supply_design_heavy_tank_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_heavy_tank_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply heavy_tank G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_army_t4
+                has_equipment = { pwc_platform_tank_destroyer < 60 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g4 }
+                    has_tech = pwc_tech_army_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply tank_destroyer G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply tank_destroyer G4"
+                        type = pwc_platform_tank_destroyer_gen4
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
+                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_tank_destroyer_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_tank_destroyer_gen4
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                        fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply tank_destroyer G4"
                 }
-                set_country_flag = pwc_flag_supply_design_tank_destroyer_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_tank_destroyer_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply tank_destroyer G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g3 }
+                    has_tech = pwc_tech_army_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply tank_destroyer G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply tank_destroyer G3"
+                        type = pwc_platform_tank_destroyer_gen3
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_tank_destroyer_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_tank_destroyer_gen3
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply tank_destroyer G3"
                 }
-                set_country_flag = pwc_flag_supply_design_tank_destroyer_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_tank_destroyer_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply tank_destroyer G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g2 }
+                    has_tech = pwc_tech_army_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply tank_destroyer G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply tank_destroyer G2"
+                        type = pwc_platform_tank_destroyer_gen2
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_advanced
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_tank_destroyer_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_tank_destroyer_gen2
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_advanced
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply tank_destroyer G2"
                 }
-                set_country_flag = pwc_flag_supply_design_tank_destroyer_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_tank_destroyer_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply tank_destroyer G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_army_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g1 }
+                    has_tech = pwc_tech_army_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply tank_destroyer G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply tank_destroyer G1"
+                        type = pwc_platform_tank_destroyer_gen1
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_basic
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
+                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
+                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
+                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_tank_destroyer_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_tank_destroyer_gen1
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_basic
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                        pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                        pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                        fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply tank_destroyer G1"
                 }
-                set_country_flag = pwc_flag_supply_design_tank_destroyer_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_tank_destroyer_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply tank_destroyer G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply tank_destroyer G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_tank_destroyer_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply tank_destroyer G0"
+                        type = pwc_platform_tank_destroyer_gen0
+                        modules = {
+                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
+                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
+                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
+                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
+                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
+                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_tank_destroyer_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_tank_destroyer_gen0
-                    modules = {
-                        fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                        fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                        fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                        pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                        pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                        fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply tank_destroyer G0"
                 }
-                set_country_flag = pwc_flag_supply_design_tank_destroyer_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_tank_destroyer_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply tank_destroyer G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_air_t4
+                has_equipment = { pwc_platform_fighter < 120 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_fighter_g4 }
+                    has_tech = pwc_tech_air_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply fighter G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_fighter_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply fighter G4"
+                        type = pwc_platform_fighter_gen4
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_advanced
+                            pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_fighter_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_fighter_gen4
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_advanced
-                        pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply fighter G4"
                 }
-                set_country_flag = pwc_flag_supply_design_fighter_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_fighter_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply fighter G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_fighter_g3 }
+                    has_tech = pwc_tech_air_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply fighter G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_fighter_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply fighter G3"
+                        type = pwc_platform_fighter_gen3
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_bvr
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_fighter_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_fighter_gen3
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_bvr
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply fighter G3"
                 }
-                set_country_flag = pwc_flag_supply_design_fighter_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_fighter_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply fighter G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_fighter_g2 }
+                    has_tech = pwc_tech_air_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply fighter G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_fighter_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply fighter G2"
+                        type = pwc_platform_fighter_gen2
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_fighter_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_fighter_gen2
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply fighter G2"
                 }
-                set_country_flag = pwc_flag_supply_design_fighter_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_fighter_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply fighter G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_fighter_g1 }
+                    has_tech = pwc_tech_air_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply fighter G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_fighter_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply fighter G1"
+                        type = pwc_platform_fighter_gen1
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_fighter_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_fighter_gen1
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply fighter G1"
                 }
-                set_country_flag = pwc_flag_supply_design_fighter_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_fighter_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply fighter G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_fighter_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply fighter G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_fighter_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply fighter G0"
+                        type = pwc_platform_fighter_gen0
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_fighter_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 6 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_fighter_gen0
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply fighter G0"
                 }
-                set_country_flag = pwc_flag_supply_design_fighter_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 6 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_fighter_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply fighter G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_air_support_t4
+                has_equipment = { pwc_platform_cas < 80 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_cas_g4 }
+                    has_tech = pwc_tech_air_support_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply cas G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_cas_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply cas G4"
+                        type = pwc_platform_cas_gen4
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_targeting_pod
+                            pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_cas_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 4 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_cas_gen4
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_targeting_pod
-                        pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply cas G4"
                 }
-                set_country_flag = pwc_flag_supply_design_cas_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 4 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_cas_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply cas G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_cas_g3 }
+                    has_tech = pwc_tech_air_support_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply cas G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_cas_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply cas G3"
+                        type = pwc_platform_cas_gen3
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_cas_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 4 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_cas_gen3
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply cas G3"
                 }
-                set_country_flag = pwc_flag_supply_design_cas_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 4 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_cas_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply cas G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_cas_g2 }
+                    has_tech = pwc_tech_air_support_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply cas G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_cas_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply cas G2"
+                        type = pwc_platform_cas_gen2
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_cas_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 4 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_cas_gen2
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply cas G2"
                 }
-                set_country_flag = pwc_flag_supply_design_cas_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 4 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_cas_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply cas G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_cas_g1 }
+                    has_tech = pwc_tech_air_support_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply cas G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_cas_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply cas G1"
+                        type = pwc_platform_cas_gen1
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_cas_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 4 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_cas_gen1
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply cas G1"
                 }
-                set_country_flag = pwc_flag_supply_design_cas_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 4 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_cas_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply cas G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_cas_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply cas G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_cas_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply cas G0"
+                        type = pwc_platform_cas_gen0
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_cas_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 4 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_cas_gen0
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                        pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply cas G0"
                 }
-                set_country_flag = pwc_flag_supply_design_cas_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 4 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_cas_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply cas G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_air_strike_t4
+                has_equipment = { pwc_platform_bomber < 40 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_bomber_g4 }
+                    has_tech = pwc_tech_air_strike_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply bomber G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_bomber_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply bomber G4"
+                        type = pwc_platform_bomber_gen4
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_bomber_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_bomber_gen4
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply bomber G4"
                 }
-                set_country_flag = pwc_flag_supply_design_bomber_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_bomber_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply bomber G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_strike_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_bomber_g3 }
+                    has_tech = pwc_tech_air_strike_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply bomber G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_bomber_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply bomber G3"
+                        type = pwc_platform_bomber_gen3
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_bomber_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_bomber_gen3
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply bomber G3"
                 }
-                set_country_flag = pwc_flag_supply_design_bomber_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_bomber_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply bomber G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_strike_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_bomber_g2 }
+                    has_tech = pwc_tech_air_strike_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply bomber G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_bomber_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply bomber G2"
+                        type = pwc_platform_bomber_gen2
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_bomber_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_bomber_gen2
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply bomber G2"
                 }
-                set_country_flag = pwc_flag_supply_design_bomber_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_bomber_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply bomber G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_strike_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_bomber_g1 }
+                    has_tech = pwc_tech_air_strike_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply bomber G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_bomber_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply bomber G1"
+                        type = pwc_platform_bomber_gen1
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_bomber_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_bomber_gen1
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                        pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply bomber G1"
                 }
-                set_country_flag = pwc_flag_supply_design_bomber_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_bomber_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply bomber G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_bomber_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply bomber G0"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_bomber_g0 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply bomber G0"
+                        type = pwc_platform_bomber_gen0
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
+                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack_t0
+                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack_t0
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_bomber_g0
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 2 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_bomber_gen0
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                        pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
-                        pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack_t0
-                        pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack_t0
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply bomber G0"
                 }
-                set_country_flag = pwc_flag_supply_design_bomber_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 2 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_bomber_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply bomber G0"
             }
         }
         if = {
             limit = {
-                has_tech = pwc_tech_air_support_t4
+                has_equipment = { pwc_platform_uav < 60 }
             }
             if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_uav_g4 }
+                    has_tech = pwc_tech_air_support_t4
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply uav G4"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_uav_g4 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply uav G4"
+                        type = pwc_platform_uav_gen4
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_uav_g4
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_uav_gen4
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply uav G4"
                 }
-                set_country_flag = pwc_flag_supply_design_uav_g4
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_uav_gen4
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply uav G4"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t3
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_uav_g3 }
+                    has_tech = pwc_tech_air_support_t3
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply uav G3"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_uav_g3 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply uav G3"
+                        type = pwc_platform_uav_gen3
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_uav_g3
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_uav_gen3
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply uav G3"
                 }
-                set_country_flag = pwc_flag_supply_design_uav_g3
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_uav_gen3
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply uav G3"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t2
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_uav_g2 }
+                    has_tech = pwc_tech_air_support_t2
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply uav G2"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_uav_g2 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply uav G2"
+                        type = pwc_platform_uav_gen2
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_uav_g2
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_uav_gen2
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply uav G2"
                 }
-                set_country_flag = pwc_flag_supply_design_uav_g2
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_uav_gen2
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply uav G2"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech_air_support_t1
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_uav_g1 }
+                    has_tech = pwc_tech_air_support_t1
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply uav G1"
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_uav_g1 }
+                    }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply uav G1"
+                        type = pwc_platform_uav_gen1
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_uav_g1
+                }
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
                     type = pwc_platform_uav_gen1
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                    }
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply uav G1"
                 }
-                set_country_flag = pwc_flag_supply_design_uav_g1
             }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_uav_gen1
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply uav G1"
-            }
-        }
-        else_if = {
-            limit = {
-                has_tech = pwc_tech0_basic_industry
-            }
-            if = {
+            else_if = {
                 limit = {
-                    NOT = { has_country_flag = pwc_flag_supply_design_uav_g0 }
+                    has_tech = pwc_tech0_basic_industry
                 }
-                create_equipment_variant = {
-                    name = "PWC AI Supply uav G0"
-                    type = pwc_platform_uav_gen0
-                    modules = {
-                        fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                        fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = pwc_flag_supply_design_uav_g0 }
                     }
+                    create_equipment_variant = {
+                        name = "PWC AI Supply uav G0"
+                        type = pwc_platform_uav_gen0
+                        modules = {
+                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
+                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                        }
+                    }
+                    set_country_flag = pwc_flag_supply_design_uav_g0
                 }
-                set_country_flag = pwc_flag_supply_design_uav_g0
-            }
-            set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
-            multiply_variable = { pwc_focus_equipment_amount = 3 }
-            add_equipment_to_stockpile = {
-                type = pwc_platform_uav_gen0
-                amount = pwc_focus_equipment_amount
-                producer = ROOT
-                variant_name = "PWC AI Supply uav G0"
+                set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
+                multiply_variable = { pwc_focus_equipment_amount = 3 }
+                add_equipment_to_stockpile = {
+                    type = pwc_platform_uav_gen0
+                    amount = pwc_focus_equipment_amount
+                    producer = ROOT
+                    variant_name = "PWC AI Supply uav G0"
+                }
             }
         }
         if = {
-            limit = { any_owned_state = { is_coastal = yes } }
+            limit = {
+                any_owned_state = { is_coastal = yes }
+                has_equipment = { convoy < 40 }
+            }
             set_variable = { pwc_focus_equipment_amount = pwc_focus_equipment_scale }
             multiply_variable = { pwc_focus_equipment_amount = 2 }
             add_equipment_to_stockpile = {

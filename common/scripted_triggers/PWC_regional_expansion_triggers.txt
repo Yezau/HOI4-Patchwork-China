@@ -2004,8 +2004,8 @@ pwc_st_regional_has_province_candidate = {
             pwc_st_regional_candidate_viable = yes
         }
         AND = {
-            pwc_st_amphibious_equipped = yes
-            has_war = no
+            pwc_st_amphibious_transport_ready = yes
+            NOT = { surrender_progress > 0.25 }
             OR = {
                 237 = {
                     owner = {
@@ -2308,8 +2308,8 @@ pwc_st_regional_has_macroregion_candidate = {
             pwc_st_regional_candidate_viable = yes
         }
         AND = {
-            pwc_st_amphibious_equipped = yes
-            has_war = no
+            pwc_st_amphibious_transport_ready = yes
+            NOT = { surrender_progress > 0.25 }
             OR = {
                 237 = {
                     owner = {
@@ -2543,16 +2543,25 @@ pwc_st_regional_candidate_viable = {
             pwc_st_amphibious_port_opponent = yes
             pwc_st_amphibious_root_fleet_sufficient = yes
             ROOT = {
-                pwc_st_amphibious_equipped = yes
-                has_war = no
-                check_variable = { num_owned_states > 2 }
+                pwc_st_amphibious_transport_ready = yes
+                NOT = { surrender_progress > 0.25 }
+                OR = {
+                    has_navy_size = { unit = pwc_unit_destroyer size > 1 }
+                    PREV = { NOT = { OR = {
+                        has_navy_size = { unit = pwc_unit_destroyer size > 0 }
+                        has_navy_size = { unit = pwc_unit_cruiser size > 0 }
+                        has_navy_size = { unit = pwc_unit_submarine size > 0 }
+                        has_navy_size = { unit = pwc_unit_carrier size > 0 }
+                    } } }
+                }
+                check_variable = { num_owned_states > 0 }
                 OR = {
                     AND = {
                         pwc_st_has_mainland_port = yes
                         PREV = { pwc_st_has_taiwan_port = yes }
                     }
                     AND = {
-                        pwc_st_taiwan_region_unified = yes
+                        pwc_st_taiwan_bank_consolidated = yes
                         PREV = { pwc_st_has_mainland_port = yes }
                     }
                 }

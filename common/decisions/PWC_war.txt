@@ -77,7 +77,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.45 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.45 }
+						NOT = { enemies_strength_ratio < 0.689655 }
 					}
 				}
 			}
@@ -92,7 +92,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.25 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.25 }
+						NOT = { enemies_strength_ratio < 0.8 }
 					}
 				}
 			}
@@ -104,7 +104,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.1 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.1 }
+						NOT = { enemies_strength_ratio < 0.909091 }
 					}
 				}
 			}
@@ -116,7 +116,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.5 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.5 }
+						NOT = { enemies_strength_ratio < 0.666667 }
 					}
 				}
 			}
@@ -131,7 +131,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.3 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.3 }
+						NOT = { enemies_strength_ratio < 0.769231 }
 					}
 				}
 			}
@@ -143,7 +143,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.15 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.15 }
+						NOT = { enemies_strength_ratio < 0.869565 }
 					}
 				}
 			}
@@ -155,7 +155,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.55 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.55 }
+						NOT = { enemies_strength_ratio < 0.645161 }
 					}
 				}
 			}
@@ -170,7 +170,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.35 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.35 }
+						NOT = { enemies_strength_ratio < 0.740741 }
 					}
 				}
 			}
@@ -182,7 +182,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.2 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.2 }
+						NOT = { enemies_strength_ratio < 0.833333 }
 					}
 				}
 			}
@@ -194,7 +194,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.4 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.4 }
+						NOT = { enemies_strength_ratio < 0.714286 }
 					}
 				}
 			}
@@ -209,7 +209,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.2 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.2 }
+						NOT = { enemies_strength_ratio < 0.833333 }
 					}
 				}
 			}
@@ -221,7 +221,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.05 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.05 }
+						NOT = { enemies_strength_ratio < 0.952381 }
 					}
 				}
 			}
@@ -233,7 +233,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.45 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.45 }
+						NOT = { enemies_strength_ratio < 0.689655 }
 					}
 				}
 			}
@@ -248,7 +248,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.25 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.25 }
+						NOT = { enemies_strength_ratio < 0.8 }
 					}
 				}
 			}
@@ -260,7 +260,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.1 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.1 }
+						NOT = { enemies_strength_ratio < 0.909091 }
 					}
 				}
 			}
@@ -272,7 +272,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.42 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.42 }
+						NOT = { enemies_strength_ratio < 0.704225 }
 					}
 				}
 			}
@@ -287,7 +287,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.22 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.22 }
+						NOT = { enemies_strength_ratio < 0.819672 }
 					}
 				}
 			}
@@ -299,7 +299,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.07 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.07 }
+						NOT = { enemies_strength_ratio < 0.934579 }
 					}
 				}
 			}
@@ -350,7 +350,7 @@ PWC_war_category = {
 				any_enemy_country = { count > 6 }
 			}
             modifier = {
-                factor = 0
+                factor = 0.15
                 pwc_st_regional_target_preferred = no
             }
             modifier = {
@@ -430,7 +430,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.45 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.45 }
+						NOT = { enemies_strength_ratio < 0.689655 }
 					}
 				}
 			}
@@ -445,7 +445,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.25 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.25 }
+						NOT = { enemies_strength_ratio < 0.8 }
 					}
 				}
 			}
@@ -457,7 +457,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.1 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.1 }
+						NOT = { enemies_strength_ratio < 0.909091 }
 					}
 				}
 			}
@@ -469,7 +469,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.5 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.5 }
+						NOT = { enemies_strength_ratio < 0.666667 }
 					}
 				}
 			}
@@ -484,7 +484,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.3 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.3 }
+						NOT = { enemies_strength_ratio < 0.769231 }
 					}
 				}
 			}
@@ -496,7 +496,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.15 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.15 }
+						NOT = { enemies_strength_ratio < 0.869565 }
 					}
 				}
 			}
@@ -508,7 +508,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.55 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.55 }
+						NOT = { enemies_strength_ratio < 0.645161 }
 					}
 				}
 			}
@@ -523,7 +523,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.35 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.35 }
+						NOT = { enemies_strength_ratio < 0.740741 }
 					}
 				}
 			}
@@ -535,7 +535,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.2 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.2 }
+						NOT = { enemies_strength_ratio < 0.833333 }
 					}
 				}
 			}
@@ -547,7 +547,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.4 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.4 }
+						NOT = { enemies_strength_ratio < 0.714286 }
 					}
 				}
 			}
@@ -562,7 +562,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.2 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.2 }
+						NOT = { enemies_strength_ratio < 0.833333 }
 					}
 				}
 			}
@@ -574,7 +574,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.05 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.05 }
+						NOT = { enemies_strength_ratio < 0.952381 }
 					}
 				}
 			}
@@ -586,7 +586,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.45 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.45 }
+						NOT = { enemies_strength_ratio < 0.689655 }
 					}
 				}
 			}
@@ -601,7 +601,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.25 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.25 }
+						NOT = { enemies_strength_ratio < 0.8 }
 					}
 				}
 			}
@@ -613,7 +613,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.1 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.1 }
+						NOT = { enemies_strength_ratio < 0.909091 }
 					}
 				}
 			}
@@ -625,7 +625,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.42 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.42 }
+						NOT = { enemies_strength_ratio < 0.704225 }
 					}
 				}
 			}
@@ -640,7 +640,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.22 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.22 }
+						NOT = { enemies_strength_ratio < 0.819672 }
 					}
 				}
 			}
@@ -652,7 +652,7 @@ PWC_war_category = {
 					NOT = { strength_ratio = { tag = FROM ratio > 1.07 } }
 					AND = {
 						has_war = yes
-						NOT = { enemies_strength_ratio > 1.07 }
+						NOT = { enemies_strength_ratio < 0.934579 }
 					}
 				}
 			}
@@ -703,7 +703,7 @@ PWC_war_category = {
 				any_enemy_country = { count > 6 }
 			}
             modifier = {
-                factor = 0
+                factor = 0.15
                 pwc_st_regional_target_preferred = no
             }
             modifier = {

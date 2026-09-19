@@ -32,7 +32,7 @@ fire_concentration = {
      enable_tactic = tactic_overwhelming_fire
 
     category_line_artillery = {
-        defense = 0.05
+        breakthrough = 0.1
         max_organisation = 5
     }
 
@@ -42,7 +42,7 @@ fire_concentration = {
         predicted_fire = {
         
             category_line_artillery = {
-                defense = 0.05
+                breakthrough = 0.1
             }
         }
 
@@ -58,18 +58,10 @@ fire_concentration = {
 
         artillery_groups = {
         
-           category_regimental_support_artillery = {
-                soft_attack = 0.05
-                breakthrough = 0.1
-		   }
-		   category_support_artillery = {
-                soft_attack = 0.05
-                breakthrough = 0.1
-		   }
-		   category_line_artillery  = {
-                soft_attack = 0.05
-                breakthrough = 0.1
-		   }
+           category_artillery = {
+                soft_attack = 0.1
+                defense = 0.1
+           }
         }
 
         dedicated_air_support = {
@@ -85,11 +77,9 @@ fire_concentration = {
                 ap_attack = 0.1
                 hard_attack = 0.1
             }
-            pwc_unit_artillery = {
-                soft_attack = 0.05
-            }
-            pwc_unit_rocket_artillery = {
-                soft_attack = 0.05
+            category_regimental_support_artillery = {
+                defense = 0.1
+                breakthrough = 0.1
             }
         }
     }
@@ -127,9 +117,11 @@ anti_tank_frontline = {
 			pwc_unit_anti_tank = {
                 ap_attack = 0.1
 			}
+            pwc_unit_support_anti_tank = {
+                ap_attack = 0.1
+            }
             pwc_unit_regimental_anti_tank = {
-                ap_attack = 0.2
-                hard_attack = 0.2
+                ap_attack = 0.1
 			}
         }
         emplacement_rotation = {
@@ -208,14 +200,14 @@ flying_batteries = {
         deployment_drills = {
             pwc_unit_rocket_artillery = {
                 max_organisation = 2
+                soft_attack = 0.05
+                breakthrough = 0.1
             }
             pwc_unit_artillery = {
                 max_organisation = 2
+                soft_attack = 0.05
+                breakthrough = 0.1
             }
-			pwc_unit_regimental_motorized_fire = {
-                max_organisation = 10
-                soft_attack = 0.1
-			}
         }
         counter_battery_tasks = {
 
@@ -238,9 +230,13 @@ flying_batteries = {
         wide_dispersal_positions = {
             pwc_unit_rocket_artillery = {
                 max_organisation = 3
+                soft_attack = 0.05
+                defense = 0.1
             }
             pwc_unit_artillery = {
                 max_organisation = 3
+                soft_attack = 0.05
+                defense = 0.1
             }
         }
     }
@@ -285,8 +281,12 @@ air_cavalry = {
             }
         }
         service_and_support = {
-            category_helicopter_support_companies = {
-                max_strength = 0.03
+            pwc_unit_maintenance = {
+                battalion_mult = {
+                    category = category_helicopter_support_companies
+                    max_strength = 0.5
+                    add = yes
+                }
             }
         }
 
@@ -384,10 +384,10 @@ mobile_recon_and_assault = {
                 breakthrough = 0.1
             }
 			category_tank_destroyer_regimental_support = {
-                breakthrough = 0.2
+                hard_attack = 0.05
 			}
 			category_self_propelled_anti_air_regimental_support = {
-                breakthrough = 0.2
+                air_attack = 0.05
 			}
         }
     }
@@ -483,10 +483,10 @@ mobile_recon_and_assault_no_lar = {
             }
 
 			category_tank_destroyer_regimental_support = {
-                breakthrough = 0.2
+                hard_attack = 0.05
 			}
 			category_self_propelled_anti_air_regimental_support = {
-                breakthrough = 0.2
+                air_attack = 0.05
 			}
         }
     }
@@ -514,10 +514,10 @@ self_propelled_support = {
 
 
     category_self_propelled_artillery = {
-        soft_attack = 0.1
+        soft_attack = 0.05
     }
-    category_self_propelled_anti_air= {
-        air_attack = 0.1
+    category_self_propelled_anti_air = {
+        air_attack = 0.05
     }
     category_tank_destroyers = {
         hard_attack = 0.05
@@ -530,7 +530,7 @@ self_propelled_support = {
             category_self_propelled_artillery = {
                 max_organisation = 10
             }
-            category_self_propelled_anti_air= {
+            category_self_propelled_anti_air = {
                 max_organisation = 10
             }
             category_tank_destroyers = {
@@ -542,32 +542,30 @@ self_propelled_support = {
             pwc_unit_recon = {
                 battalion_mult = {
                     category = category_self_propelled_artillery
-                    soft_attack = 0.1
+                    soft_attack = 0.05
                     default_morale = 0.1
                 }
             }
         }
         all_terrain_mobility = {
             category_self_propelled_artillery = {
-                maximum_speed = 0.3
+                maximum_speed = 0.1
             }
             category_self_propelled_anti_air = {
-                maximum_speed = 0.3
+                maximum_speed = 0.1
             }
             category_tank_destroyers = {
-                maximum_speed = 0.3
+                maximum_speed = 0.1
             }
         }
         multirole_support_vehicles = {
 			category_tank_destroyer_regimental_support = {
-                max_organisation = 10
-                hard_attack = 0.1
-                breakthrough = 0.2
+                max_organisation = 5
+                hard_attack = 0.05
 			}
 			category_self_propelled_anti_air_regimental_support = {
-                max_organisation = 10
-				air_attack = 0.1
-                breakthrough = 0.2
+                max_organisation = 5
+				air_attack = 0.05
 			}
         }
         shoot_and_scoot = {
@@ -646,9 +644,7 @@ siege_artillery = {
                 default_morale = 0.1
             }
             pwc_unit_artillery = {
-                plains = {
-                    movement = 0.1
-                }
+                default_morale = 0.1
             }
 
             equipment_bonus = {
@@ -677,14 +673,15 @@ siege_artillery = {
             }
             pwc_unit_artillery = {
                 urban = {
-                    attack = 0.2
+                    attack = 0.1
+                    defence = 0.1
                 }
             }
 			pwc_unit_regimental_fire_support = {
                 soft_attack = 0.1
 			}
 			category_regimental_support_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.05
 			}
         }
         mobile_artillery_command = {

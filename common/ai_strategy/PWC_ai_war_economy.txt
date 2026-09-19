@@ -979,6 +979,12 @@ PWC_ai_recover_pwc_equipment_infantry = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         has_equipment = { pwc_equipment_infantry < 0 }
     }
     abort = {
@@ -987,9 +993,49 @@ PWC_ai_recover_pwc_equipment_infantry = {
                 AND = {
                     is_ai = yes
                     pwc_st_is_city_country = yes
+                    NOT = {
+                        OR = {
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                        }
+                    }
                 }
             }
             has_equipment = { pwc_equipment_infantry > 669 }
+        }
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = infantry
+        value = 50
+    }
+}
+PWC_ai_recover_pwc_equipment_infantry_high = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_equipment = { pwc_equipment_infantry < 670 }
+    }
+    abort = {
+        OR = {
+            NOT = {
+                AND = {
+                    is_ai = yes
+                    pwc_st_is_city_country = yes
+                    OR = {
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                    }
+                }
+            }
+            has_equipment = { pwc_equipment_infantry > 1339 }
         }
     }
     ai_strategy = {
@@ -1005,6 +1051,12 @@ PWC_ai_recover_pwc_equipment_support = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
         has_equipment = { pwc_equipment_support < 0 }
     }
     abort = {
@@ -1013,9 +1065,49 @@ PWC_ai_recover_pwc_equipment_support = {
                 AND = {
                     is_ai = yes
                     pwc_st_is_city_country = yes
+                    NOT = {
+                        OR = {
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                        }
+                    }
                 }
             }
             has_equipment = { pwc_equipment_support > 39 }
+        }
+    }
+    ai_strategy = {
+        type = equipment_variant_production_factor
+        id = pwc_equipment_support
+        value = 50
+    }
+}
+PWC_ai_recover_pwc_equipment_support_high = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_equipment = { pwc_equipment_support < 40 }
+    }
+    abort = {
+        OR = {
+            NOT = {
+                AND = {
+                    is_ai = yes
+                    pwc_st_is_city_country = yes
+                    OR = {
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                    }
+                }
+            }
+            has_equipment = { pwc_equipment_support > 79 }
         }
     }
     ai_strategy = {
@@ -1031,15 +1123,42 @@ PWC_ai_conserve_equipment = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+        has_war = yes
         OR = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_equipment = { pwc_equipment_infantry < 0 }
+            has_equipment = { pwc_equipment_support < 0 }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = front_control
+        country_trigger = { has_war_with = FROM }
+        ratio = 0
+        priority = 20
+        ordertype = front
+        execution_type = careful
+    }
+    ai_strategy = {
+        type = force_concentration_factor
+        value = -20
+    }
+}
+PWC_ai_conserve_equipment_high = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_war = yes
         OR = {
-            has_equipment = { pwc_equipment_infantry < 0 }
-            has_equipment = { pwc_equipment_support < 0 }
+            has_equipment = { pwc_equipment_infantry < 670 }
+            has_equipment = { pwc_equipment_support < 40 }
         }
     }
     abort_when_not_enabled = yes
@@ -1084,6 +1203,108 @@ PWC_ai_fund_template_upgrades = {
         type = land_xp_spend_priority
         id = division_template
         value = 75
+    }
+}
+PWC_ai_infantry_floor = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        NOT = {
+            OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            }
+        }
+    }
+    abort = {
+        OR = {
+            NOT = {
+                AND = {
+                    is_ai = yes
+                    NOT = {
+                        OR = {
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = infantry
+        value = 1
+    }
+}
+PWC_ai_infantry_floor_high = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_equipment = { pwc_equipment_infantry < 1508 }
+    }
+    abort = {
+        OR = {
+            NOT = {
+                AND = {
+                    is_ai = yes
+                    pwc_st_is_city_country = yes
+                    OR = {
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                    }
+                }
+            }
+            has_equipment = { pwc_equipment_infantry > 2177 }
+        }
+    }
+    ai_strategy = {
+        type = equipment_production_min_factories
+        id = infantry
+        value = 1
+    }
+}
+PWC_ai_rifle_surplus_brake = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_equipment = { pwc_equipment_infantry > 2679 }
+    }
+    abort = {
+        OR = {
+            NOT = {
+                AND = {
+                    is_ai = yes
+                    pwc_st_is_city_country = yes
+                    OR = {
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+                        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                    }
+                }
+            }
+            has_equipment = { pwc_equipment_infantry < 1340 }
+        }
+    }
+    ai_strategy = {
+        type = equipment_variant_production_factor
+        id = pwc_equipment_infantry
+        value = -60
     }
 }
 PWC_ai_upgrade_pwc_equipment_infantry_gen1 = {

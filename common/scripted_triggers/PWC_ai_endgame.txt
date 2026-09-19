@@ -65,5 +65,5 @@ pwc_st_ai_finish_war = {
     pwc_st_ai_only_war = yes
     has_country_flag = pwc_flag_ai_war_tracked
     NOT = { has_country_flag = pwc_flag_ai_war_grace }
-    enemies_strength_ratio > 1.25
+    enemies_strength_ratio < 0.8
 }

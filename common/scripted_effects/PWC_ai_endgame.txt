@@ -22,18 +22,18 @@ pwc_se_coalition_prepare_member = {
         flag = pwc_flag_coalition_reserved days = 75 value = 1
     }
     set_variable = { pwc_coalition_target = event_target:pwc_coalition_player }
-    add_ai_strategy = {
-        type = prepare_for_war id = event_target:pwc_coalition_player value = 200
-    }
     add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 60 }
 }
+
+
+
+
+
+
 
 pwc_se_coalition_release_member = {
     if = {
         limit = { has_variable = pwc_coalition_target }
-        remove_ai_strategy = {
-            type = prepare_for_war id = var:pwc_coalition_target
-        }
         
         if = {
             limit = {
@@ -73,7 +73,9 @@ pwc_se_coalition_monthly = {
             pwc_st_coalition_player = yes
             NOT = { date < 2028.1.1 }
             num_of_factories > 39
-            num_owned_states > 5
+            check_variable = {
+                var = num_owned_states value = 5 compare = greater_than
+            }
             NOT = { has_country_flag = pwc_flag_coalition_pending }
             NOT = { has_country_flag = pwc_flag_coalition_cooldown }
         }

@@ -109,148 +109,156 @@ instant_effect = {
 		name = "0阶·储备轻型坦克"
 		type = pwc_platform_light_tank_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-			fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+			pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t0
+			pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t0
+			pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t0
+			pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t0
+			pwc_light_tank_engine_4 = pwc_module_tank_light_power_t0
+			pwc_light_tank_special_5 = pwc_module_tank_fcs_t0
+			pwc_light_tank_special_6 = pwc_module_tank_radio_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备现代坦克"
 		type = pwc_platform_medium_tank_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-			fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-			fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+			pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t0
+			pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t0
+			pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t0
+			pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t0
+			pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t0
+			pwc_medium_tank_special_5 = pwc_module_tank_fcs_t0
+			pwc_medium_tank_special_6 = pwc_module_tank_radio_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备重装突击平台"
 		type = pwc_platform_heavy_tank_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-			fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-			fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+			pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t0
+			pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t0
+			pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t0
+			pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t0
+			pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t0
+			pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t0
+			pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备反坦克歼击平台"
 		type = pwc_platform_tank_destroyer_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-			fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-			fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-			pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-			pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-			fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+			pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t0
+			pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t0
+			pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t0
+			pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t0
+			pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t0
+			pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备战斗机"
 		type = pwc_platform_fighter_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t0
+			fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t0
+			fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t0
+			fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备攻击机"
 		type = pwc_platform_cas_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t0
+			fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t0
+			fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t0
+			fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备轰炸机"
 		type = pwc_platform_bomber_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-			fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
-			pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack_t0
-			pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t0
+			fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t0
+			fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t0
+			fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t0
+			fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备无人机"
 		type = pwc_platform_uav_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t0
+			fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t0
+			fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备驱逐舰"
 		type = pwc_platform_destroyer_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
-			pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light_t0
-			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
-			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+			fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t0
+			fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t0
+			fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t0
+			fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t0
+			pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t0
+			pwc_destroyer_missile_1 = pwc_module_navy_sam_t0
+			pwc_destroyer_missile_2 = pwc_module_navy_asw_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备巡洋舰"
 		type = pwc_platform_cruiser_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
-			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
-			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+			fixed_pwc_cruiser_gun_0 = pwc_module_navy_heavy_gun_t0
+			fixed_pwc_cruiser_engine_1 = pwc_module_navy_surface_cruise_t0
+			fixed_pwc_cruiser_radar_2 = pwc_module_navy_radar_t0
+			fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t0
+			pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t0
+			pwc_cruiser_missile_1 = pwc_module_navy_sam_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备潜艇"
 		type = pwc_platform_submarine_gen0
 		modules = {
-			pwc_slot_missile_1 = pwc_module_navy_missile_torpedo_light_t0
-			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
+			fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t0
+			fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t0
+			fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备航空母舰"
 		type = pwc_platform_carrier_gen0
 		modules = {
-			fixed_pwc_slot_gun_1 = pwc_module_navy_gun_76mm_t0
-			fixed_pwc_slot_engine_1 = pwc_module_navy_engine_diesel_t0
-			pwc_slot_radar_1 = pwc_module_navy_radar_search_gen1_t0
+			fixed_pwc_carrier_flight_deck_0 = pwc_module_navy_flight_deck_t0
+			fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t0
+			fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t0
+			pwc_carrier_missile_0 = pwc_module_navy_sam_t0
+			pwc_carrier_special_2 = pwc_module_navy_hangar_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备舰载战斗机"
 		type = pwc_platform_cv_fighter_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t0
+			fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t0
+			fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t0
+			fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备舰载攻击机"
 		type = pwc_platform_cv_cas_gen0
 		modules = {
-			fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-			fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-			pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-			pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+			fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t0
+			fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t0
+			fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t0
+			fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t0
 		}
 	}
 	add_equipment_to_stockpile = {

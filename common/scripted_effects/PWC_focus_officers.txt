@@ -1,0 +1,144 @@
+pwc_se_repair_focus_officers_once = {
+    if = {
+        limit = { NOT = { has_global_flag = pwc_flag_focus_officers_v1 } }
+        every_possible_country = {
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_admiral_t1
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_navy_leader = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 2
+                        maneuvering_skill = 2
+                        coordination_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_focus_mil_officer_academy_1
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_corps_commander = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 3
+                        planning_skill = 2
+                        logistics_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_focus_mil_officer_academy_2
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_corps_commander = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 3
+                        planning_skill = 2
+                        logistics_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_focus_mil_combined_arms_1
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_corps_commander = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 3
+                        planning_skill = 2
+                        logistics_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_focus_mil_logistics_command_1
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_corps_commander = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 3
+                        planning_skill = 2
+                        logistics_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_admiral_t2
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_navy_leader = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 2
+                        maneuvering_skill = 2
+                        coordination_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_admiral_t4
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_navy_leader = {
+                        skill = 2
+                        attack_skill = 2
+                        defense_skill = 2
+                        maneuvering_skill = 2
+                        coordination_skill = 2
+                    }
+                    retire_character = PREV
+                }
+            }
+            every_character = {
+                include_invisible = yes
+                limit = {
+                    is_character = pwc_marshal
+                    is_unit_leader = no
+                }
+                PREV = {
+                    create_field_marshal = {
+                        skill = 3
+                        attack_skill = 3
+                        defense_skill = 3
+                        planning_skill = 3
+                        logistics_skill = 3
+                    }
+                    retire_character = PREV
+                }
+            }
+        }
+        set_global_flag = pwc_flag_focus_officers_v1
+    }
+}

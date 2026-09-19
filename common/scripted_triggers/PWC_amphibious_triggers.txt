@@ -464,6 +464,157 @@ pwc_st_taiwan_region_unified = {
     owns_state = 524
     has_full_control_of_state = 524
 }
+pwc_st_taiwan_island_war = {
+    any_enemy_country = {
+        pwc_st_is_city_country = yes
+        any_owned_state = {
+            OR = {
+                state = 334
+                state = 338
+                state = 348
+                state = 352
+                state = 358
+                state = 361
+                state = 362
+                state = 505
+                state = 506
+                state = 507
+                state = 508
+                state = 509
+                state = 510
+                state = 511
+                state = 512
+                state = 513
+                state = 524
+            }
+        }
+    }
+}
+
+pwc_st_taiwan_invasion_threat = {
+    any_enemy_country = {
+        OR = {
+            AND = {
+                334 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 334
+            }
+            AND = {
+                338 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 338
+            }
+            AND = {
+                348 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 348
+            }
+            AND = {
+                352 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 352
+            }
+            AND = {
+                358 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 358
+            }
+            AND = {
+                361 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 361
+            }
+            AND = {
+                362 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 362
+            }
+            AND = {
+                505 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 505
+            }
+            AND = {
+                506 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 506
+            }
+            AND = {
+                507 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 507
+            }
+            AND = {
+                508 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 508
+            }
+            AND = {
+                509 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 509
+            }
+            AND = {
+                510 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 510
+            }
+            AND = {
+                511 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 511
+            }
+            AND = {
+                512 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 512
+            }
+            AND = {
+                513 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 513
+            }
+            AND = {
+                524 = { is_controlled_by = ROOT }
+                has_naval_invasion_against_state = 524
+            }
+        }
+    }
+}
+
+
+pwc_st_taiwan_bank_consolidated = {
+    count_triggers = {
+        amount = 9
+        AND = { owns_state = 334 has_full_control_of_state = 334 }
+        AND = { owns_state = 338 has_full_control_of_state = 338 }
+        AND = { owns_state = 348 has_full_control_of_state = 348 }
+        AND = { owns_state = 352 has_full_control_of_state = 352 }
+        AND = { owns_state = 358 has_full_control_of_state = 358 }
+        AND = { owns_state = 361 has_full_control_of_state = 361 }
+        AND = { owns_state = 362 has_full_control_of_state = 362 }
+        AND = { owns_state = 505 has_full_control_of_state = 505 }
+        AND = { owns_state = 506 has_full_control_of_state = 506 }
+        AND = { owns_state = 507 has_full_control_of_state = 507 }
+        AND = { owns_state = 508 has_full_control_of_state = 508 }
+        AND = { owns_state = 509 has_full_control_of_state = 509 }
+        AND = { owns_state = 510 has_full_control_of_state = 510 }
+        AND = { owns_state = 511 has_full_control_of_state = 511 }
+        AND = { owns_state = 512 has_full_control_of_state = 512 }
+        AND = { owns_state = 513 has_full_control_of_state = 513 }
+        AND = { owns_state = 524 has_full_control_of_state = 524 }
+    }
+    NOT = {
+        any_enemy_country = {
+            pwc_st_is_city_country = yes
+            any_owned_state = {
+                OR = {
+                    state = 334
+                    state = 338
+                    state = 348
+                    state = 352
+                    state = 358
+                    state = 361
+                    state = 362
+                    state = 505
+                    state = 506
+                    state = 507
+                    state = 508
+                    state = 509
+                    state = 510
+                    state = 511
+                    state = 512
+                    state = 513
+                    state = 524
+                }
+            }
+        }
+    }
+}
 
 pwc_st_cross_strait_target = {
     OR = {
@@ -486,16 +637,34 @@ pwc_st_target_reachable = {
 pwc_st_amphibious_equipped = {
     has_tech = pwc_tech_navy_t1
     num_divisions > 7
-    has_navy_size = { type = convoy size > 29 }
-    has_navy_size = { unit = pwc_unit_destroyer size > 3 }
+    has_navy_size = { type = convoy size > 9 }
+    has_navy_size = { unit = pwc_unit_destroyer size > 1 }
+    NOT = { has_fuel < 2000 }
+}
+
+
+pwc_st_amphibious_transport_ready = {
+    has_tech = pwc_tech_navy_t1
+    num_divisions > 7
+    has_navy_size = { type = convoy size > 9 }
     NOT = { has_fuel < 2000 }
 }
 
 pwc_st_ai_cross_strait_target_ready = {
     pwc_st_cross_strait_target = yes
-    pwc_st_amphibious_equipped = yes
-    has_war = no
-    check_variable = { num_owned_states > 2 }
+    pwc_st_amphibious_transport_ready = yes
+    NOT = { surrender_progress > 0.25 }
+    OR = {
+        has_navy_size = { unit = pwc_unit_destroyer size > 1 }
+        FROM = {
+            NOT = { OR = {
+                has_navy_size = { unit = pwc_unit_destroyer size > 0 }
+                has_navy_size = { unit = pwc_unit_cruiser size > 0 }
+                has_navy_size = { unit = pwc_unit_submarine size > 0 }
+                has_navy_size = { unit = pwc_unit_carrier size > 0 }
+            } }
+        }
+    }
     OR = {
         FROM = {
             NOT = { OR = {
@@ -522,16 +691,19 @@ pwc_st_ai_cross_strait_target_ready = {
             FROM = { pwc_st_has_taiwan_port = yes }
         }
         AND = {
-            pwc_st_taiwan_region_unified = yes
+            pwc_st_taiwan_bank_consolidated = yes
             FROM = { pwc_st_has_mainland_port = yes }
         }
     }
 }
 
+
+
+
+
 pwc_st_amphibious_preparation_needed = {
     is_ai = yes
     pwc_st_is_city_country = yes
-    check_variable = { num_owned_states > 2 }
     OR = {
         AND = {
             pwc_st_has_taiwan_port = yes

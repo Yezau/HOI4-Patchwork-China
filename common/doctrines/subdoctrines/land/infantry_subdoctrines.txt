@@ -43,6 +43,10 @@ mobile_infantry = {
             category_cavalry = {
                 breakthrough = 0.20
             }
+            pwc_unit_recon = {
+                breakthrough = 0.1
+                defense = 0.1
+            }
         }
         combined_arms_planning = {
             category_all_infantry = {
@@ -55,7 +59,9 @@ mobile_infantry = {
                 max_organisation = 20
             }
 			category_regimental_support_artillery = {
-                soft_attack = 0.15
+                soft_attack = 0.1
+                breakthrough = 0.05
+                defense = 0.05
             }
         }
         delegated_authority = {
@@ -70,7 +76,7 @@ mobile_infantry = {
                 maximum_speed = 0.2
             }
 			pwc_unit_regimental_motorized_fire = {
-                max_organisation = 5
+                max_organisation = 10
 				soft_attack = 0.1
 			}
         }
@@ -121,6 +127,7 @@ defensive_postures = {
 			pwc_unit_regimental_fire_support = {
                 supply_consumption = -0.01
                 soft_attack = 0.2
+                entrenchment = 0.2
 			}
         }
         elastic_operations = {
@@ -139,7 +146,7 @@ defensive_postures = {
                 soft_attack = 0.1
             }
 			category_regimental_support_artillery = {
-                soft_attack = 0.2
+                soft_attack = 0.1
 			}
         }
         field_construction_training = {
@@ -267,7 +274,7 @@ assault_infantry = {
 
     
     pwc_unit_support_artillery = {
-        soft_attack = 0.1
+        soft_attack = 0.2
     }
 
     rewards = {
@@ -279,9 +286,6 @@ assault_infantry = {
                     soft_attack = 0.2
                 }
             }
-            pwc_unit_regimental_artillery = {
-				soft_attack = 0.2
-            }
         }
         organic_battalion_fire_support = {
         
@@ -289,13 +293,12 @@ assault_infantry = {
                 soft_attack = 0.1
             }
             pwc_unit_regimental_anti_tank = {
-                ap_attack = 0.1
-                hard_attack = 0.1
+                ap_attack = 0.05
+                hard_attack = 0.05
             }
             pwc_unit_regimental_anti_air = {
-                air_attack = 0.1
+                air_attack = 0.05
             }
-
         }
 
         integrated_support_batteries = {
@@ -315,8 +318,8 @@ assault_infantry = {
                 max_organisation = 20
                 air_attack = 0.05
             }
-
         }
+
         breakthrough_fireteams = {
         
             pwc_unit_recon = {
@@ -331,9 +334,8 @@ assault_infantry = {
                     add = yes
                 }
             }
-
-
         }
+
         assault_detachments = {
         
             category_support_artillery = {
@@ -363,7 +365,6 @@ assault_infantry = {
                     soft_attack = 0.1
                 }
             }
-
         }
     }
 }
@@ -443,25 +444,30 @@ mounted_infantry = {
 
 		beasts_of_war = {
             category_cavalry = {
-                maximum_speed = 0.5
+                maximum_speed = 0.4
                 max_strength = 0.05
             }
             pwc_unit_recon = {
-                maximum_speed = 0.5
+                maximum_speed = 0.4
+                battalion_mult = {
+                    category = category_cavalry
+                    max_strength = 5
+                    add = yes
+                }
             }
         }
         limbered_combat_support = {
             pwc_unit_artillery = {
-                maximum_speed = 0.5
+                maximum_speed = 1
             }
             pwc_unit_anti_tank = {
-                maximum_speed = 0.5
+                maximum_speed = 1
             }
             pwc_unit_anti_air = {
-                maximum_speed = 0.5
+                maximum_speed = 1
             }
             pwc_unit_rocket_artillery = {
-                maximum_speed = 0.5
+                maximum_speed = 1
             }
         }
 
@@ -751,12 +757,14 @@ peoples_war = {
                 equipment_capture_factor = 0.01
             }
 			pwc_unit_regimental_artillery = {
-				soft_attack = 0.15
+				soft_attack = 0.1
+                breakthrough = 0.1
 			}
         }
 
         quick_decision_offensive_warfare = {
         
+            mastery = 50
             pwc_unit_infantry = {
                initiative = 0.015
                max_organisation = 10
@@ -837,11 +845,11 @@ great_war_infantry = {
                 battalion_mult = {
                     category = category_light_infantry
                     soft_attack = 0.1
-                    breakthrough = 0.05
+                    breakthrough = 0.1
                 }
             }
 			category_regimental_support_artillery = {
-                soft_attack = 0.2
+                soft_attack = 0.1
 			}
         }
         field_fortification_emphasis = {
@@ -853,6 +861,7 @@ great_war_infantry = {
         }
         redoubt_networks = {
             dig_in_speed_factor = 0.10
+            max_dig_in = 5
         }
 
     }

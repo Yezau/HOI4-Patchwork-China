@@ -679,6 +679,7 @@ sub_units = {
 		ai_priority = 0
 		active = no
 		affects_speed = no
+		can_be_parachuted = yes
 		type = {
 			infantry
 			support
@@ -743,6 +744,7 @@ sub_units = {
 		ai_priority = 0
 		active = no
 		affects_speed = no
+		can_be_parachuted = yes
 		type = {
 			infantry
 			support
@@ -808,6 +810,7 @@ sub_units = {
 		ai_priority = 0
 		active = no
 		affects_speed = no
+		can_be_parachuted = yes
 		type = {
 			infantry
 			support
@@ -1357,6 +1360,7 @@ sub_units = {
 		default_morale = 0.3
 		training_time = 90
 		weight = 0.75
+		supply_consumption = 0.08
 		suppression = 2.2
 		transport = pwc_equipment_motorized
 		need = {

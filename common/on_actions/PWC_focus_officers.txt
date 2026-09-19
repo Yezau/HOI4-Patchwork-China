@@ -1,0 +1,8 @@
+on_actions = {
+    on_startup = {
+        effect = { set_global_flag = pwc_flag_focus_officers_v1 }
+    }
+    on_daily_NTR = {
+        effect = { pwc_se_repair_focus_officers_once = yes }
+    }
+}

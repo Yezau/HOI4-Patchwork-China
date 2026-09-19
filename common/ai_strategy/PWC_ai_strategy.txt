@@ -28,7 +28,6 @@ PWC_ai_default_policy = {
 	
 	
 	ai_strategy = { type = equipment_production_min_factories id = convoy value = 1 }
-	ai_strategy = { type = equipment_production_min_factories id = infantry value = 1 }
 
 	
 	ai_strategy = { type = unit_ratio id = convoy value = 15 }
@@ -158,7 +157,6 @@ PWC_ai_strategy_air_power = {
 	ai_strategy = { type = equipment_production_factor id = artillery value = -44 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -58 }
 	ai_strategy = { type = equipment_production_factor id = cas value = -2 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 0 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = 40 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -58 }
@@ -169,15 +167,6 @@ PWC_ai_strategy_air_power = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 6 }
 	ai_strategy = { type = unit_ratio id = cas value = 14 }
 	ai_strategy = { type = unit_ratio id = fighter value = 20 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 0 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 100 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_strategy_balanced = {
 	allowed = {
@@ -341,7 +330,6 @@ PWC_ai_strategy_balanced = {
 	ai_strategy = { type = equipment_production_factor id = artillery value = 5 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
 	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 0 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = -30 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -30 }
@@ -352,15 +340,6 @@ PWC_ai_strategy_balanced = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 4 }
 	ai_strategy = { type = unit_ratio id = cas value = 5 }
 	ai_strategy = { type = unit_ratio id = fighter value = 10 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 0 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 100 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_strategy_coastal = {
 	allowed = {
@@ -491,10 +470,8 @@ PWC_ai_strategy_coastal = {
 	ai_strategy = { type = equipment_production_factor id = artillery value = -20 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
 	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 4 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = -20 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
-	ai_strategy = { type = equipment_production_factor id = submarine value = -4 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -60 }
 
 	
@@ -503,17 +480,6 @@ PWC_ai_strategy_coastal = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 5 }
 	ai_strategy = { type = unit_ratio id = cas value = 5 }
 	ai_strategy = { type = unit_ratio id = fighter value = 10 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 4 }
-	ai_strategy = { type = unit_ratio id = submarine value = -4 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 52 }
-	ai_strategy = { type = role_ratio id = naval_submarine value = 48 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_strategy_defense = {
 	allowed = {
@@ -677,7 +643,6 @@ PWC_ai_strategy_defense = {
 	ai_strategy = { type = equipment_production_factor id = artillery value = 26 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
 	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 0 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = -44 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -60 }
@@ -688,15 +653,6 @@ PWC_ai_strategy_defense = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 4 }
 	ai_strategy = { type = unit_ratio id = cas value = 4 }
 	ai_strategy = { type = unit_ratio id = fighter value = 8 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 0 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 100 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_strategy_industrial = {
 	allowed = {
@@ -824,7 +780,6 @@ PWC_ai_strategy_industrial = {
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = -16 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 0 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = -60 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -52 }
@@ -835,15 +790,6 @@ PWC_ai_strategy_industrial = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 5 }
 	ai_strategy = { type = unit_ratio id = cas value = 0 }
 	ai_strategy = { type = unit_ratio id = fighter value = 6 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 0 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 100 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_strategy_mobility = {
 	allowed = {
@@ -1007,7 +953,6 @@ PWC_ai_strategy_mobility = {
 	ai_strategy = { type = equipment_production_factor id = artillery value = -16 }
 	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -30 }
 	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = screen_ship value = 0 }
 	ai_strategy = { type = equipment_production_factor id = fighter value = -44 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = 54 }
@@ -1018,15 +963,6 @@ PWC_ai_strategy_mobility = {
 	ai_strategy = { type = unit_ratio id = strategic_bomber value = 10 }
 	ai_strategy = { type = unit_ratio id = cas value = 5 }
 	ai_strategy = { type = unit_ratio id = fighter value = 8 }
-
-	
-	
-	ai_strategy = { type = unit_ratio id = screen_ship value = 0 }
-	ai_strategy = { type = unit_ratio id = capital_ship value = -80 }
-	ai_strategy = { type = unit_ratio id = carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_destroyer value = 100 }
-	ai_strategy = { type = role_ratio id = naval_carrier value = -80 }
-	ai_strategy = { type = role_ratio id = naval_cruiser value = -80 }
 }
 PWC_ai_role_18w_air_power = {
 	allowed = {
@@ -45965,5 +45901,1331 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank_enhanced = {
         type = equipment_production_min_factories_archetype
         id = pwc_platform_medium_tank
         value = 15
+    }
+}
+PWC_ai_naval_mix_air_power_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_air_power
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 79
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 58
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 58
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 21
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -58
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -58
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_air_power_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_air_power
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 61
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 17
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -49
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -49
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 22
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -34
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -34
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_air_power_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_air_power
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 55
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 15
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -40
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -40
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 10
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_balanced_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_balanced
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 75
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 50
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 50
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 25
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -50
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -50
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_balanced_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_balanced
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 63
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 21
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -37
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -37
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 16
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -52
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -52
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_balanced_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_balanced
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 60
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 15
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -40
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -40
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 5
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_coastal_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_coastal
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 67
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 34
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 34
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 33
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -34
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -34
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_coastal_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_coastal
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 53
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 59
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 59
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 26
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -22
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -22
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 21
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -37
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -37
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_coastal_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_coastal
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 50
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 25
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = 0
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = 0
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 5
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_defense_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_defense
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 78
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 56
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 56
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 22
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -56
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -56
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_defense_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_defense
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 72
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -40
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -40
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 8
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_defense_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_defense
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 70
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 8
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 2
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_industrial_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_industrial
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 73
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 46
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 46
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 27
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -46
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -46
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_industrial_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_industrial
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 58
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 21
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -37
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -37
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 21
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -37
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -37
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_industrial_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_industrial
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 55
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 20
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -20
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 5
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_mobility_1 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_mobility
+        num_of_naval_factories > 0
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 10
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 72
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 44
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 44
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 28
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -44
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -44
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_mobility_10 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_mobility
+        num_of_naval_factories > 9
+        pwc_st_naval_port = yes
+        num_of_naval_factories < 30
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 66
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 26
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = -22
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = -22
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 8
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -100
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
+    }
+}
+PWC_ai_naval_mix_mobility_30 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_country_flag = pwc_ai_mobility
+        num_of_naval_factories > 29
+        pwc_st_naval_port = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = role_ratio
+        id = naval_destroyer
+        value = 65
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = screen_ship
+        value = 60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_submarine
+        value = 25
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = submarine
+        value = 0
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = submarine
+        value = 0
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_cruiser
+        value = 8
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = capital_ship
+        value = -60
+    }
+    ai_strategy = {
+        type = role_ratio
+        id = naval_carrier
+        value = 2
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = carrier
+        value = -60
+    }
+    ai_strategy = {
+        type = equipment_production_factor
+        id = carrier
+        value = -60
     }
 }

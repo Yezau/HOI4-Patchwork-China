@@ -94,7 +94,7 @@ support_integrated_operations = {
 		}
 		blue_water_training = {
 			equipment_bonus ={
-                ship_hull_cruiser = {
+                pwc_platform_cruiser = {
 				    naval_weather_penalty_factor = -0.25
                 }
             }
@@ -143,7 +143,7 @@ hunter_killers = {
     rewards = {
 		search_and_destroy = {
 			pwc_unit_destroyer = {
-				sub_detection = 0.15
+				sub_detection = 0.2
 			}
 		}
 		flotilla_leader = {
@@ -153,7 +153,7 @@ hunter_killers = {
 		}
 		group_operations = {
 			pwc_unit_destroyer = {
-				sub_attack = 0.10
+				sub_attack = 0.2
 			}
 		}
 		combat_readiness = {
@@ -200,7 +200,7 @@ torpedo_primacy = {
 
         modern_broadsides = {
             pwc_unit_destroyer = {
-                torpedo_attack = 0.2
+                torpedo_attack = 0.1
             }
         }
         coordinated_fire_patterns = {
@@ -210,13 +210,13 @@ torpedo_primacy = {
         }
         dedicated_torpedo_task_forces = {
             pwc_unit_destroyer = {
-                sub_attack = 0.2
+                sub_attack = 0.1
             }
 
         }
         improved_escort_role = {
             pwc_unit_destroyer = {
-                sub_detection = 0.2
+                sub_detection = 0.15
             }
         }
 
@@ -226,7 +226,7 @@ torpedo_primacy = {
             }
             pwc_unit_cruiser = {
                 max_organisation = 20
-                sub_detection = 0.2
+                sub_detection = 0.1
             }
         }
     }
@@ -248,7 +248,10 @@ anti_aircraft_cruisers = {
     visible = {
         has_dlc = "No Compromise, No Surrender"
     }
-    navy_anti_air_attack_factor = 0.2
+    navy_anti_air_attack_factor = 0.1
+    pwc_unit_cruiser = {
+        armor_value = 0.1
+    }
 
     rewards = {
         calibrated_deck_guns = {
@@ -274,8 +277,8 @@ anti_aircraft_cruisers = {
 
         air_interdiction_screening = {
             pwc_unit_destroyer = {
-                anti_air_attack = 0.2
-                lg_attack = 0.2
+                anti_air_attack = 0.1
+                lg_attack = 0.05
             }
         }
         sustained_engagements = {
@@ -430,7 +433,7 @@ patrol_boats = {
         small_craft_harassment = {
             amphibious_invasion_defence = 0.10
             pwc_unit_destroyer = {
-                torpedo_attack = 0.20
+                torpedo_attack = 0.1
             }
         }
         lie_in_wait = {

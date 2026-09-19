@@ -111,24 +111,75 @@ PWC_amphibious_landing_from_mainland = {
         value = 30
     }
 }
+PWC_amphibious_home_front_priority = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        capital_scope = {
+            OR = {
+                state = 334
+                state = 338
+                state = 348
+                state = 352
+                state = 358
+                state = 361
+                state = 362
+                state = 505
+                state = 506
+                state = 507
+                state = 508
+                state = 509
+                state = 510
+                state = 511
+                state = 512
+                state = 513
+                state = 524
+            }
+        }
+        OR = {
+            pwc_st_taiwan_island_war = yes
+            pwc_st_taiwan_invasion_threat = no
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = garrison value = -60 }
+}
 PWC_amphibious_home_guard = {
     allowed = { always = yes }
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        pwc_st_has_taiwan_port = yes
-        capital_scope = { pwc_st_in_taiwan_region = yes }
-        OR = {
-            pwc_st_taiwan_region_unified = yes
-            pwc_st_amphibious_war_from_taiwan = yes
+        capital_scope = {
+            OR = {
+                state = 334
+                state = 338
+                state = 348
+                state = 352
+                state = 358
+                state = 361
+                state = 362
+                state = 505
+                state = 506
+                state = 507
+                state = 508
+                state = 509
+                state = 510
+                state = 511
+                state = 512
+                state = 513
+                state = 524
+            }
         }
+        pwc_st_taiwan_island_war = no
+        pwc_st_taiwan_invasion_threat = yes
     }
     abort_when_not_enabled = yes
-    ai_strategy = { type = garrison value = 50 }
     ai_strategy = {
         type = put_unit_buffers
-        ratio = 0.25
+        ratio = 0.1
         order_id = 20260909
+        area = pwc_taiwan
         states = {
             334
             338
@@ -148,8 +199,8 @@ PWC_amphibious_home_guard = {
             513
             524
         }
-        subtract_invasions_from_need = no
-        subtract_fronts_from_need = no
+        subtract_invasions_from_need = yes
+        subtract_fronts_from_need = yes
     }
 }
 
@@ -5252,12 +5303,34 @@ PWC_amphibious_invasion_target_X65 = {
     ai_strategy = { type = invade id = X65 value = 80 }
 }
 
+PWC_amphibious_destroyer_reserve_2 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        num_of_naval_factories > 1
+        pwc_st_naval_port = yes
+        has_tech = pwc_tech_navy_t1
+        has_design_based_on = pwc_platform_destroyer
+        num_of_naval_factories > 1
+        num_of_naval_factories < 3
+        OR = {
+            NOT = { has_navy_size = { unit = pwc_unit_destroyer size > 1 } }
+            AND = {
+                pwc_st_amphibious_preparation_needed = yes
+                pwc_st_amphibious_escort_shortfall = yes
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories id = screen_ship value = 1 }
+}
 PWC_amphibious_destroyer_reserve_3 = {
     allowed = { always = yes }
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
@@ -5279,7 +5352,7 @@ PWC_amphibious_destroyer_reserve_10 = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
@@ -5301,7 +5374,7 @@ PWC_amphibious_destroyer_reserve_20 = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
@@ -5323,7 +5396,7 @@ PWC_amphibious_destroyer_reserve_50 = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
@@ -5345,7 +5418,7 @@ PWC_amphibious_destroyer_reserve_100 = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
@@ -5367,7 +5440,7 @@ PWC_amphibious_convoy_high_stock = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        num_of_naval_factories > 2
+        num_of_naval_factories > 1
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer

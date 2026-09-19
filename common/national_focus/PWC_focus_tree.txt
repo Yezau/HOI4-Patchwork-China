@@ -1223,22 +1223,13 @@ focus = {
 		navy_experience = 25
 		set_country_flag = pwc_flag_mio_surface_naval
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_surface_naval
-		generate_character = {
-			token_base = pwc_admiral_t1
-			name = PWC_TITLE_NAVY_01
-			portraits = {
-				navy = {
-					large = GFX_PWC_PORTRAIT_ADMIRAL_01
-					small = GFX_PWC_PORTRAIT_ADMIRAL_01
-				}
-			}
-			navy_leader = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				maneuvering_skill = 2
-				coordination_skill = 2
-			}
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_NAVAL_PROGRAM
+		create_navy_leader = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 2
+		    maneuvering_skill = 2
+		    coordination_skill = 2
 		}
 		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_NAVAL_PROGRAM
 		pwc_se_focus_progress_tick = yes
@@ -1309,39 +1300,20 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
-		generate_character = {
-		    token_base = pwc_focus_mil_officer_academy_1
-		    gender = female
-		    portraits = {
-		        army = {
-		            large = GFX_PWC_PORTRAIT_GENERAL_13
-		            small = GFX_PWC_PORTRAIT_GENERAL_13_small
-		        }
-		    }
-		    corps_commander = {
-		        skill = 2
-		        attack_skill = 2
-		        defense_skill = 3
-		        planning_skill = 2
-		        logistics_skill = 2
-		    }
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_OFFICER_ACADEMY
+		create_corps_commander = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 3
+		    planning_skill = 2
+		    logistics_skill = 2
 		}
-		generate_character = {
-		    token_base = pwc_focus_mil_officer_academy_2
-		    gender = female
-		    portraits = {
-		        army = {
-		            large = GFX_PWC_PORTRAIT_GENERAL_14
-		            small = GFX_PWC_PORTRAIT_GENERAL_14_small
-		        }
-		    }
-		    corps_commander = {
-		        skill = 2
-		        attack_skill = 2
-		        defense_skill = 3
-		        planning_skill = 2
-		        logistics_skill = 2
-		    }
+		create_corps_commander = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 3
+		    planning_skill = 2
+		    logistics_skill = 2
 		}
 		army_experience = 25
 		effect_tooltip = {
@@ -1427,22 +1399,13 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
-		generate_character = {
-		    token_base = pwc_focus_mil_combined_arms_1
-		    gender = female
-		    portraits = {
-		        army = {
-		            large = GFX_PWC_PORTRAIT_GENERAL_15
-		            small = GFX_PWC_PORTRAIT_GENERAL_15_small
-		        }
-		    }
-		    corps_commander = {
-		        skill = 2
-		        attack_skill = 2
-		        defense_skill = 3
-		        planning_skill = 2
-		        logistics_skill = 2
-		    }
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_COMBINED_ARMS
+		create_corps_commander = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 3
+		    planning_skill = 2
+		    logistics_skill = 2
 		}
 		set_country_flag = pwc_flag_mio_firepower
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
@@ -1486,22 +1449,13 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
-		generate_character = {
-		    token_base = pwc_focus_mil_logistics_command_1
-		    gender = female
-		    portraits = {
-		        army = {
-		            large = GFX_PWC_PORTRAIT_GENERAL_16
-		            small = GFX_PWC_PORTRAIT_GENERAL_16_small
-		        }
-		    }
-		    corps_commander = {
-		        skill = 2
-		        attack_skill = 2
-		        defense_skill = 3
-		        planning_skill = 2
-		        logistics_skill = 2
-		    }
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_LOGISTICS_COMMAND
+		create_corps_commander = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 3
+		    planning_skill = 2
+		    logistics_skill = 2
 		}
 		set_country_flag = pwc_flag_mio_logistics
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_logistics
@@ -1544,22 +1498,13 @@ focus = {
 		navy_experience = 25
 		set_country_flag = pwc_flag_mio_submarine
 		unlock_military_industrial_organization_tooltip = mio:pwc_mio_submarine
-		generate_character = {
-			token_base = pwc_admiral_t2
-			name = PWC_TITLE_NAVY_02
-			portraits = {
-				navy = {
-					large = GFX_PWC_PORTRAIT_ADMIRAL_02
-					small = GFX_PWC_PORTRAIT_ADMIRAL_02
-				}
-			}
-			navy_leader = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				maneuvering_skill = 2
-				coordination_skill = 2
-			}
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_NAVAL_EXPANSION
+		create_navy_leader = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 2
+		    maneuvering_skill = 2
+		    coordination_skill = 2
 		}
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
@@ -1592,22 +1537,13 @@ focus = {
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
 		navy_experience = 25
-		generate_character = {
-			token_base = pwc_admiral_t4
-			name = PWC_TITLE_NAVY_03
-			portraits = {
-				navy = {
-					large = GFX_PWC_PORTRAIT_ADMIRAL_03
-					small = GFX_PWC_PORTRAIT_ADMIRAL_03
-				}
-			}
-			navy_leader = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				maneuvering_skill = 2
-				coordination_skill = 2
-			}
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_NAVAL_COMMAND
+		create_navy_leader = {
+		    skill = 2
+		    attack_skill = 2
+		    defense_skill = 2
+		    maneuvering_skill = 2
+		    coordination_skill = 2
 		}
 		effect_tooltip = {
 			add_ideas = pwc_idea_mil_naval_command
@@ -1727,22 +1663,13 @@ focus = {
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
-		generate_character = {
-			token_base = pwc_marshal
-			name = PWC_TITLE_MARSHAL_01
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_MARSHAL_01
-					small = GFX_PWC_PORTRAIT_MARSHAL_01
-				}
-			}
-			field_marshal = {
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 3
-			}
+		custom_effect_tooltip = PWC_FOCUS_OFFICERS_MIL_APEX_CITY_MARSHAL
+		create_field_marshal = {
+		    skill = 3
+		    attack_skill = 3
+		    defense_skill = 3
+		    planning_skill = 3
+		    logistics_skill = 3
 		}
 		effect_tooltip = {
 			add_ideas = pwc_idea_mil_apex_city_marshal
