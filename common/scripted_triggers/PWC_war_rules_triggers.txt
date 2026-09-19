@@ -1,5 +1,5 @@
 pwc_st_is_city_country = {
-	OR = { has_country_flag = pwc_geo_island has_country_flag = pwc_geo_coastal has_country_flag = pwc_geo_frontier has_country_flag = pwc_geo_inland }
+    hidden_trigger = { NOT = { tag = NTR } }
 }
 
 

@@ -11,6 +11,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_executive_coordination_coordinator
             modifier = {
+                political_power_factor = 0.1
+                supply_consumption_factor = -0.05
+                custom_modifier_tooltip = pwc_cand_executive_coordination_coordinator_effects
             }
             ai_will_do = {
                 factor = 10
@@ -39,6 +42,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_executive_coordination_industrial
             modifier = {
+                industrial_capacity_factory = 0.1
+                production_speed_buildings_factor = 0.05
+                custom_modifier_tooltip = pwc_cand_executive_coordination_industrial_effects
             }
             ai_will_do = {
                 factor = 10
@@ -67,6 +73,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_executive_coordination_defense
             modifier = {
+                training_time_army_factor = -0.1
+                army_org_factor = 0.05
+                custom_modifier_tooltip = pwc_cand_executive_coordination_defense_effects
             }
             ai_will_do = {
                 factor = 10
@@ -95,6 +104,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_executive_coordination_civic
             modifier = {
+                stability_factor = 0.1
+                consumer_goods_factor = -0.05
+                custom_modifier_tooltip = pwc_cand_executive_coordination_civic_effects
             }
             ai_will_do = {
                 factor = 10
@@ -123,6 +135,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_executive_coordination_integration
             modifier = {
+                compliance_growth_on_our_occupied_states = 0.1
+                line_change_production_efficiency_factor = 0.05
+                custom_modifier_tooltip = pwc_cand_executive_coordination_integration_effects
             }
             ai_will_do = {
                 factor = 10
@@ -153,6 +168,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_government_oversight_civic
             modifier = {
+                consumer_goods_factor = -0.1
+                stability_factor = 0.05
+                custom_modifier_tooltip = pwc_cand_government_oversight_civic_effects
             }
             ai_will_do = {
                 factor = 10
@@ -181,6 +199,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_government_oversight_industry
             modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+                industrial_capacity_factory = 0.05
+                custom_modifier_tooltip = pwc_cand_government_oversight_industry_effects
             }
             ai_will_do = {
                 factor = 10
@@ -209,6 +230,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_government_oversight_logistics
             modifier = {
+                supply_consumption_factor = -0.1
+                army_fuel_consumption_factor = -0.05
+                custom_modifier_tooltip = pwc_cand_government_oversight_logistics_effects
             }
             ai_will_do = {
                 factor = 10
@@ -237,6 +261,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_government_oversight_military
             modifier = {
+                attrition = -0.1
+                army_morale_factor = 0.05
+                custom_modifier_tooltip = pwc_cand_government_oversight_military_effects
             }
             ai_will_do = {
                 factor = 10
@@ -265,6 +292,9 @@ ideas = {
             ledger = civilian
             picture = pwc_cabinet_cand_cand_government_oversight_administration
             modifier = {
+                political_power_factor = 0.1
+                compliance_growth_on_our_occupied_states = 0.05
+                custom_modifier_tooltip = pwc_cand_government_oversight_administration_effects
             }
             ai_will_do = {
                 factor = 10
@@ -295,8 +325,8 @@ ideas = {
             ledger = army
             picture = pwc_cabinet_cand_cand_general_staff_joint
             modifier = {
-                command_power_gain_mult = 0.05
-                max_command_power_mult = 0.05
+                command_power_gain_mult = 0.15
+                max_command_power_mult = 0.15
             }
             ai_will_do = {
                 factor = 10
@@ -325,7 +355,8 @@ ideas = {
             ledger = army
             picture = pwc_cabinet_cand_cand_general_staff_defense
             modifier = {
-                dig_in_speed = 0.05
+                max_dig_in = 5
+                dig_in_speed_factor = 0.15
                 planning_speed = -0.03
             }
             ai_will_do = {
@@ -355,7 +386,7 @@ ideas = {
             ledger = army
             picture = pwc_cabinet_cand_cand_general_staff_mobility
             modifier = {
-                org_loss_when_moving = -0.05
+                org_loss_when_moving = -0.2
                 max_planning = -0.03
             }
             ai_will_do = {
@@ -385,7 +416,7 @@ ideas = {
             ledger = army
             picture = pwc_cabinet_cand_cand_general_staff_planning
             modifier = {
-                max_planning = 0.05
+                max_planning = 0.15
                 planning_speed = -0.05
             }
             ai_will_do = {
@@ -415,7 +446,7 @@ ideas = {
             ledger = army
             picture = pwc_cabinet_cand_cand_general_staff_refit
             modifier = {
-                line_change_production_efficiency_factor = 0.05
+                line_change_production_efficiency_factor = 0.2
                 training_time_army_factor = 0.03
             }
             ai_will_do = {
@@ -448,7 +479,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_infantry_recruit
             modifier = {
                 experience_gain_army = 0.12
-                training_time_army_factor = -0.05
+                training_time_army_factor = -0.15
                 army_morale_factor = -0.02
             }
             ai_will_do = {
@@ -475,7 +506,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_infantry_defense
             modifier = {
                 experience_gain_army = 0.12
-                army_infantry_defence_factor = 0.05
+                army_infantry_defence_factor = 0.15
                 army_infantry_attack_factor = -0.02
             }
             ai_will_do = {
@@ -502,7 +533,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_infantry_special
             modifier = {
                 experience_gain_army = 0.12
-                special_forces_training_time_factor = -0.1
+                special_forces_training_time_factor = -0.25
                 training_time_army_factor = 0.02
             }
             ai_will_do = {
@@ -531,7 +562,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_armor_assault
             modifier = {
                 experience_gain_army = 0.12
-                army_armor_attack_factor = 0.05
+                army_armor_attack_factor = 0.15
                 army_armor_defence_factor = -0.02
             }
             ai_will_do = {
@@ -558,7 +589,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_armor_mobile
             modifier = {
                 experience_gain_army = 0.12
-                army_armor_speed_factor = 0.05
+                army_armor_speed_factor = 0.15
                 army_fuel_consumption_factor = 0.03
             }
             ai_will_do = {
@@ -585,7 +616,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_armor_defense
             modifier = {
                 experience_gain_army = 0.12
-                army_armor_defence_factor = 0.05
+                army_armor_defence_factor = 0.15
                 army_armor_attack_factor = -0.02
             }
             ai_will_do = {
@@ -614,7 +645,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_surface_gunnery
             modifier = {
                 experience_gain_navy = 0.12
-                navy_capital_ship_attack_factor = 0.05
+                navy_capital_ship_attack_factor = 0.15
                 navy_capital_ship_defence_factor = -0.02
             }
             ai_will_do = {
@@ -649,7 +680,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_surface_escort
             modifier = {
                 experience_gain_navy = 0.12
-                convoy_escort_efficiency = 0.08
+                convoy_escort_efficiency = 0.2
                 convoy_raiding_efficiency_factor = -0.03
             }
             ai_will_do = {
@@ -684,7 +715,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_surface_screen
             modifier = {
                 experience_gain_navy = 0.12
-                navy_screen_defence_factor = 0.05
+                navy_screen_defence_factor = 0.15
                 navy_screen_attack_factor = -0.02
             }
             ai_will_do = {
@@ -721,7 +752,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_submarine_ambush
             modifier = {
                 experience_gain_navy = 0.12
-                navy_submarine_attack_factor = 0.05
+                navy_submarine_attack_factor = 0.15
                 navy_submarine_defence_factor = -0.02
             }
             ai_will_do = {
@@ -756,7 +787,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_submarine_raiding
             modifier = {
                 experience_gain_navy = 0.12
-                convoy_raiding_efficiency_factor = 0.08
+                convoy_raiding_efficiency_factor = 0.2
                 convoy_escort_efficiency = -0.03
             }
             ai_will_do = {
@@ -791,7 +822,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_submarine_survival
             modifier = {
                 experience_gain_navy = 0.12
-                navy_submarine_defence_factor = 0.05
+                navy_submarine_defence_factor = 0.15
                 navy_submarine_attack_factor = -0.02
             }
             ai_will_do = {
@@ -828,7 +859,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_superiority_interception
             modifier = {
                 experience_gain_air = 0.12
-                air_intercept_efficiency = 0.08
+                air_intercept_efficiency = 0.2
                 air_superiority_efficiency = -0.03
             }
             ai_will_do = {
@@ -863,7 +894,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_superiority_patrol
             modifier = {
                 experience_gain_air = 0.12
-                air_superiority_efficiency = 0.08
+                air_superiority_efficiency = 0.2
                 air_intercept_efficiency = -0.03
             }
             ai_will_do = {
@@ -898,7 +929,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_superiority_training
             modifier = {
                 experience_gain_air = 0.12
-                air_training_xp_gain_factor = 0.08
+                air_training_xp_gain_factor = 0.2
                 air_mission_efficiency = -0.02
             }
             ai_will_do = {
@@ -935,7 +966,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_support_coordination
             modifier = {
                 experience_gain_air = 0.12
-                air_cas_present_factor = 0.05
+                air_cas_present_factor = 0.15
                 air_superiority_efficiency = -0.02
             }
             ai_will_do = {
@@ -970,7 +1001,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_support_strike
             modifier = {
                 experience_gain_air = 0.12
-                ground_attack_factor = 0.05
+                ground_attack_factor = 0.15
                 air_intercept_efficiency = -0.02
             }
             ai_will_do = {
@@ -1005,7 +1036,7 @@ ideas = {
             picture = pwc_cabinet_cand_advisor_support_mission
             modifier = {
                 experience_gain_air = 0.12
-                air_cas_efficiency = 0.08
+                air_cas_efficiency = 0.2
                 air_superiority_efficiency = -0.02
             }
             ai_will_do = {
@@ -1053,11 +1084,12 @@ ideas = {
                 }
             }
             modifier = {
-                stability_factor = 0.03
-                political_power_factor = -0.03
+                stability_factor = 0.15
+                production_speed_buildings_factor = 0.1
+                political_power_factor = -0.1
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_defense }
@@ -1085,11 +1117,12 @@ ideas = {
                 }
             }
             modifier = {
-                political_power_factor = 0.02
-                consumer_goods_factor = 0.01
+                political_power_factor = 0.2
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = 0.05
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_balanced }
@@ -1117,11 +1150,12 @@ ideas = {
                 }
             }
             modifier = {
-                compliance_growth = 0.03
-                stability_factor = -0.03
+                compliance_growth = 0.2
+                resistance_target = -0.1
+                stability_factor = -0.1
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_mobility }
@@ -1153,11 +1187,12 @@ ideas = {
                 }
             }
             modifier = {
-                stability_factor = 0.03
-                industrial_capacity_factory = -0.02
+                stability_factor = 0.15
+                production_factory_max_efficiency_factor = 0.1
+                industrial_capacity_factory = -0.05
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_defense }
@@ -1185,11 +1220,12 @@ ideas = {
                 }
             }
             modifier = {
-                production_factory_efficiency_gain_factor = 0.03
-                political_power_factor = -0.02
+                production_factory_efficiency_gain_factor = 0.2
+                production_factory_max_efficiency_factor = 0.1
+                political_power_factor = -0.05
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_industrial }
@@ -1219,11 +1255,12 @@ ideas = {
                 }
             }
             modifier = {
-                industrial_capacity_factory = 0.03
-                stability_factor = -0.05
+                industrial_capacity_factory = 0.25
+                industrial_capacity_dockyard = 0.25
+                stability_factor = -0.1
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_mobility }
@@ -1255,11 +1292,12 @@ ideas = {
                 }
             }
             modifier = {
-                compliance_growth = 0.02
-                consumer_goods_factor = 0.02
+                research_speed_factor = 0.15
+                compliance_growth = 0.1
+                consumer_goods_factor = 0.1
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_balanced has_country_flag = pwc_ai_defense }
@@ -1287,11 +1325,12 @@ ideas = {
                 }
             }
             modifier = {
-                line_change_production_efficiency_factor = 0.03
-                consumer_goods_factor = 0.02
+                line_change_production_efficiency_factor = 0.25
+                production_factory_efficiency_gain_factor = 0.15
+                consumer_goods_factor = 0.05
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_industrial }
@@ -1319,13 +1358,14 @@ ideas = {
                 }
             }
             modifier = {
-                experience_gain_army_factor = 0.03
-                experience_gain_air_factor = 0.03
-                experience_gain_navy_factor = 0.03
-                political_power_factor = -0.03
+                experience_gain_army_factor = 0.25
+                experience_gain_air_factor = 0.25
+                experience_gain_navy_factor = 0.25
+                training_time_factor = -0.1
+                political_power_factor = -0.1
             }
             ai_will_do = {
-                factor = 10
+                factor = 100
                 modifier = {
                     factor = 2
                     OR = { has_country_flag = pwc_ai_mobility has_country_flag = pwc_ai_coastal has_country_flag = pwc_ai_air_power }

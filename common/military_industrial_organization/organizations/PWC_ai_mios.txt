@@ -1,0 +1,990 @@
+pwc_mio_armor_ai_20 = {
+    include = pwc_mio_armor
+    name = pwc_mio_armor_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_armor
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_armor_ai_20_initial
+        equipment_bonus = {
+            armor_value = 0.09
+            reliability_factor = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_armor_ai_30 = {
+    include = pwc_mio_armor
+    name = pwc_mio_armor_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_armor
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_armor_ai_30_initial
+        equipment_bonus = {
+            armor_value = 0.15
+            reliability_factor = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_infantry_ai_20 = {
+    include = pwc_mio_infantry
+    name = pwc_mio_infantry_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_infantry
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_infantry_ai_20_initial
+        equipment_bonus = {
+            build_cost_ic = -0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_infantry_ai_30 = {
+    include = pwc_mio_infantry
+    name = pwc_mio_infantry_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_infantry
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_infantry_ai_30_initial
+        equipment_bonus = {
+            build_cost_ic = -0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_firepower_ai_20 = {
+    include = pwc_mio_firepower
+    name = pwc_mio_firepower_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_firepower
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_firepower_ai_20_initial
+        equipment_bonus = {
+            hard_attack = 0.09
+            soft_attack = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_firepower_ai_30 = {
+    include = pwc_mio_firepower
+    name = pwc_mio_firepower_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_firepower
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_firepower_ai_30_initial
+        equipment_bonus = {
+            hard_attack = 0.15
+            soft_attack = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_logistics_ai_20 = {
+    include = pwc_mio_logistics
+    name = pwc_mio_logistics_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_logistics
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_logistics_ai_20_initial
+        equipment_bonus = {
+            reliability_factor = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.13
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_logistics_ai_30 = {
+    include = pwc_mio_logistics
+    name = pwc_mio_logistics_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_logistics
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_logistics_ai_30_initial
+        equipment_bonus = {
+            reliability_factor = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.23
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_air_superiority_ai_20 = {
+    include = pwc_mio_air_superiority
+    name = pwc_mio_air_superiority_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_air_superiority
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_air_superiority_ai_20_initial
+        equipment_bonus = {
+            air_agility = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_air_superiority_ai_30 = {
+    include = pwc_mio_air_superiority
+    name = pwc_mio_air_superiority_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_air_superiority
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_air_superiority_ai_30_initial
+        equipment_bonus = {
+            air_agility = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_ground_attack_ai_20 = {
+    include = pwc_mio_ground_attack
+    name = pwc_mio_ground_attack_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_ground_attack
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_ground_attack_ai_20_initial
+        equipment_bonus = {
+            air_bombing = 0.09
+            air_ground_attack = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_ground_attack_ai_30 = {
+    include = pwc_mio_ground_attack
+    name = pwc_mio_ground_attack_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_ground_attack
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_ground_attack_ai_30_initial
+        equipment_bonus = {
+            air_bombing = 0.15
+            air_ground_attack = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_unmanned_ai_20 = {
+    include = pwc_mio_unmanned
+    name = pwc_mio_unmanned_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_unmanned
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_unmanned_ai_20_initial
+        equipment_bonus = {
+            build_cost_ic = -0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.13
+        }
+    }
+}
+
+pwc_mio_unmanned_ai_30 = {
+    include = pwc_mio_unmanned
+    name = pwc_mio_unmanned_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_unmanned
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_unmanned_ai_30_initial
+        equipment_bonus = {
+            build_cost_ic = -0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.23
+        }
+    }
+}
+
+pwc_mio_surface_naval_ai_20 = {
+    include = pwc_mio_surface_naval
+    name = pwc_mio_surface_naval_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_surface_naval
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_surface_naval_ai_20_initial
+        equipment_bonus = {
+            reliability_factor = 0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_surface_naval_ai_30 = {
+    include = pwc_mio_surface_naval
+    name = pwc_mio_surface_naval_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_surface_naval
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_surface_naval_ai_30_initial
+        equipment_bonus = {
+            reliability_factor = 0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_submarine_ai_20 = {
+    include = pwc_mio_submarine
+    name = pwc_mio_submarine_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            has_country_flag = pwc_flag_mio_submarine
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_submarine_ai_20_initial
+        equipment_bonus = {
+            sub_visibility = -0.09
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_submarine_ai_30 = {
+    include = pwc_mio_submarine
+    name = pwc_mio_submarine_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            has_country_flag = pwc_flag_mio_submarine
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_submarine_ai_30_initial
+        equipment_bonus = {
+            sub_visibility = -0.15
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+
+pwc_mio_special_forces_ai_20 = {
+    include = pwc_mio_special_forces
+    name = pwc_mio_special_forces_ai_20
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_20
+            }
+            OR = {
+                has_tech = pwc_tech_sf_mountain_t1
+            }
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_special_forces_ai_20_initial
+        equipment_bonus = {
+            reliability_factor = 0.15000000000000002
+        }
+        production_bonus = {
+            production_capacity_factor = 0.1
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.1
+        }
+    }
+}
+
+pwc_mio_special_forces_ai_30 = {
+    include = pwc_mio_special_forces
+    name = pwc_mio_special_forces_ai_30
+    allowed = {
+        has_dlc = "Arms Against Tyranny"
+    }
+    visible = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+        }
+    }
+    available = {
+        FROM = {
+            is_ai = yes
+            pwc_st_is_city_country = yes
+            has_dlc = "Arms Against Tyranny"
+            has_game_rule = {
+                rule = pwc_ai_difficulty
+                option = TIER_30
+            }
+            OR = {
+                has_tech = pwc_tech_sf_mountain_t1
+            }
+        }
+    }
+    ai_will_do = {
+        base = 3000
+    }
+    delete_included_values = {
+        initial_trait
+    }
+    initial_trait = {
+        name = pwc_mio_special_forces_ai_30_initial
+        equipment_bonus = {
+            reliability_factor = 0.25
+        }
+        production_bonus = {
+            production_capacity_factor = 0.2
+        }
+        organization_modifier = {
+            military_industrial_organization_research_bonus = 0.2
+        }
+    }
+}
+

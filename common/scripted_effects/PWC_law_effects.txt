@@ -1,38 +1,56 @@
 pwc_se_rebuild_law_conscription = {
 	if = {
 		limit = { check_variable = { var = pwc_law_conscription value = 1 compare = equals } }
-		set_variable = { var = pwc_law_conscription_v_conscription value = 0.01 }
-		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.015 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.1 }
 		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_conscription value = 2 compare = equals } }
-		set_variable = { var = pwc_law_conscription_v_conscription value = 0.015 }
-		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.03 }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.025 }
+		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0.05 }
 		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_conscription value = 3 compare = equals } }
-		set_variable = { var = pwc_law_conscription_v_conscription value = 0.025 }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.05 }
 		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
-		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_conscription value = 4 compare = equals } }
-		set_variable = { var = pwc_law_conscription_v_conscription value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.1 }
 		set_variable = { var = pwc_law_conscription_v_stability_factor value = -0.05 }
-		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.05 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.1 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = -0.05 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = -0.05 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_conscription value = 5 compare = equals } }
-		set_variable = { var = pwc_law_conscription_v_conscription value = 0.1 }
+		set_variable = { var = pwc_law_conscription_v_conscription value = 0.15 }
 		set_variable = { var = pwc_law_conscription_v_stability_factor value = -0.1 }
-		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.1 }
+		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0.2 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = -0.1 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = -0.1 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = -0.1 }
 	}
 	else = {
 		set_variable = { var = pwc_law_conscription_v_conscription value = 0 }
 		set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
 		set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	}
 }
 
@@ -282,49 +300,61 @@ pwc_se_set_law_conscription_5 = {
 pwc_se_rebuild_law_economy_mobilization = {
 	if = {
 		limit = { check_variable = { var = pwc_law_economy_mobilization value = 1 compare = equals } }
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0.06 }
-		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0.05 }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0.3 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0.2 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_economy_mobilization value = 2 compare = equals } }
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0.03 }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0.25 }
 		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.05 }
-		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.05 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0.05 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_economy_mobilization value = 3 compare = equals } }
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0.2 }
 		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.1 }
-		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.03 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
-	}
-	else_if = {
-		limit = { check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals } }
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = -0.03 }
-		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.15 }
-		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.06 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.2 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0.1 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0.05 }
 	}
 	else_if = {
+		limit = { check_variable = { var = pwc_law_economy_mobilization value = 4 compare = equals } }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0.15 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.3 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.2 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0.2 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0.1 }
+	}
+	else_if = {
 		limit = { check_variable = { var = pwc_law_economy_mobilization value = 5 compare = equals } }
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = -0.06 }
-		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = -0.05 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.2 }
-		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.1 }
-		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = -0.1 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0.4 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0.3 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0.3 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0.15 }
 	}
 	else = {
-		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0 }
 		set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
 	}
 }
@@ -576,16 +606,22 @@ pwc_se_rebuild_law_trade_control = {
 	if = {
 		limit = { check_variable = { var = pwc_law_trade_control value = 1 compare = equals } }
 		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.8 }
-		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.09 }
-		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.06 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.15 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0.2 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0.2 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0.2 }
 		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_trade_control value = 2 compare = equals } }
-		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.66 }
-		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.06 }
-		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.65 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0.15 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0.15 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0.15 }
 		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	}
@@ -594,29 +630,41 @@ pwc_se_rebuild_law_trade_control = {
 		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.5 }
 		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.05 }
 		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0.1 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0.1 }
 		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_trade_control value = 4 compare = equals } }
-		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.33 }
-		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0.03 }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.25 }
+		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
-		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0.05 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.15 }
 		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { var = pwc_law_trade_control value = 5 compare = equals } }
-		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.2 }
+		set_variable = { var = pwc_law_trade_control_v_min_export value = 0.1 }
 		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
-		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
-		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.1 }
-		set_variable = { var = pwc_law_trade_control_v_stability_factor value = -0.03 }
+		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0.15 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0.25 }
+		set_variable = { var = pwc_law_trade_control_v_stability_factor value = -0.05 }
 	}
 	else = {
 		set_variable = { var = pwc_law_trade_control_v_min_export value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0 }
+		set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
 		set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	}
@@ -870,14 +918,19 @@ pwc_se_init_laws = {
 	set_variable = { var = pwc_law_conscription_v_conscription value = 0 }
 	set_variable = { var = pwc_law_conscription_v_stability_factor value = 0 }
 	set_variable = { var = pwc_law_conscription_v_training_time_factor value = 0 }
+	set_variable = { var = pwc_law_conscription_v_industrial_capacity_factory value = 0 }
+	set_variable = { var = pwc_law_conscription_v_industrial_capacity_dockyard value = 0 }
+	set_variable = { var = pwc_law_conscription_v_production_speed_buildings_factor value = 0 }
 	pwc_se_rebuild_law_conscription = yes
 	add_ideas = pwc_law_conscription_1
 	set_variable = { var = pwc_law_conscription_ver value = 0 }
 	set_variable = { var = pwc_law_economy_mobilization value = 2 }
-	set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_factor value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_consumer_goods_expected_value value = 0 }
 	set_variable = { var = pwc_law_economy_mobilization_v_stability_factor value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_production_speed_industrial_complex_factor value = 0 }
 	set_variable = { var = pwc_law_economy_mobilization_v_production_speed_arms_factory_factor value = 0 }
 	set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_factory value = 0 }
+	set_variable = { var = pwc_law_economy_mobilization_v_industrial_capacity_dockyard value = 0 }
 	set_variable = { var = pwc_law_economy_mobilization_v_production_speed_buildings_factor value = 0 }
 	pwc_se_rebuild_law_economy_mobilization = yes
 	add_ideas = pwc_law_economy_mobilization_2
@@ -886,6 +939,9 @@ pwc_se_init_laws = {
 	set_variable = { var = pwc_law_trade_control_v_min_export value = 0 }
 	set_variable = { var = pwc_law_trade_control_v_research_speed_factor value = 0 }
 	set_variable = { var = pwc_law_trade_control_v_fuel_gain_factor value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_industrial_capacity_factory value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_industrial_capacity_dockyard value = 0 }
+	set_variable = { var = pwc_law_trade_control_v_production_speed_buildings_factor value = 0 }
 	set_variable = { var = pwc_law_trade_control_v_local_resources_factor value = 0 }
 	set_variable = { var = pwc_law_trade_control_v_stability_factor value = 0 }
 	pwc_se_rebuild_law_trade_control = yes
