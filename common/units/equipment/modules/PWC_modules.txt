@@ -5650,6 +5650,1357 @@ equipment_modules = {
 		}
 	}
 
+	pwc_module_tank_torsion_t0 = {
+		category = pwc_modcat_family_tank_torsion
+		gfx = pwc_module_tank_torsion_t0
+		add_stats = {
+			maximum_speed = 0.12
+			reliability = 0.024
+			build_cost_ic = 0.21
+		}
+	}
+
+	pwc_module_tank_torsion_t1 = {
+		category = pwc_modcat_family_tank_torsion
+		gfx = pwc_module_tank_torsion_t1
+		parent = pwc_module_tank_torsion_t0
+		add_stats = {
+			maximum_speed = 0.15
+			reliability = 0.03
+			build_cost_ic = 0.35
+		}
+	}
+
+	pwc_module_tank_torsion_t2 = {
+		category = pwc_modcat_family_tank_torsion
+		gfx = pwc_module_tank_torsion_t2
+		parent = pwc_module_tank_torsion_t1
+		add_stats = {
+			maximum_speed = 0.165
+			reliability = 0.033
+			build_cost_ic = 0.472
+		}
+	}
+
+	pwc_module_tank_torsion_t3 = {
+		category = pwc_modcat_family_tank_torsion
+		gfx = pwc_module_tank_torsion_t3
+		parent = pwc_module_tank_torsion_t2
+		add_stats = {
+			maximum_speed = 0.18
+			reliability = 0.036000000000000004
+			build_cost_ic = 0.595
+		}
+	}
+
+	pwc_module_tank_torsion_t4 = {
+		category = pwc_modcat_family_tank_torsion
+		gfx = pwc_module_tank_torsion_t4
+		parent = pwc_module_tank_torsion_t3
+		add_stats = {
+			maximum_speed = 0.195
+			reliability = 0.039
+			build_cost_ic = 0.717
+		}
+	}
+
+	pwc_module_tank_light_steel_t0 = {
+		category = pwc_modcat_family_tank_light_steel
+		gfx = pwc_module_tank_light_steel_t0
+		add_stats = {
+			armor_value = 3.6
+			reliability = 0.016
+			maximum_speed = -0.1
+			build_cost_ic = 0.27
+		}
+	}
+
+	pwc_module_tank_light_steel_t1 = {
+		category = pwc_modcat_family_tank_light_steel
+		gfx = pwc_module_tank_light_steel_t1
+		parent = pwc_module_tank_light_steel_t0
+		add_stats = {
+			armor_value = 6
+			reliability = 0.02
+			maximum_speed = -0.1
+			build_cost_ic = 0.45
+		}
+	}
+
+	pwc_module_tank_light_steel_t2 = {
+		category = pwc_modcat_family_tank_light_steel
+		gfx = pwc_module_tank_light_steel_t2
+		parent = pwc_module_tank_light_steel_t1
+		add_stats = {
+			armor_value = 8.1
+			reliability = 0.022000000000000002
+			maximum_speed = -0.1
+			build_cost_ic = 0.608
+		}
+	}
+
+	pwc_module_tank_light_steel_t3 = {
+		category = pwc_modcat_family_tank_light_steel
+		gfx = pwc_module_tank_light_steel_t3
+		parent = pwc_module_tank_light_steel_t2
+		add_stats = {
+			armor_value = 10.2
+			reliability = 0.024
+			maximum_speed = -0.1
+			build_cost_ic = 0.765
+		}
+	}
+
+	pwc_module_tank_light_steel_t4 = {
+		category = pwc_modcat_family_tank_light_steel
+		gfx = pwc_module_tank_light_steel_t4
+		parent = pwc_module_tank_light_steel_t3
+		add_stats = {
+			armor_value = 12.3
+			reliability = 0.026000000000000002
+			maximum_speed = -0.1
+			build_cost_ic = 0.922
+		}
+	}
+
+	pwc_module_tank_smoke_t0 = {
+		category = pwc_modcat_family_tank_smoke
+		gfx = pwc_module_tank_smoke_t0
+		add_stats = {
+			defense = 0.8
+			breakthrough = 0.4
+			build_cost_ic = 0.24
+		}
+	}
+
+	pwc_module_tank_smoke_t1 = {
+		category = pwc_modcat_family_tank_smoke
+		gfx = pwc_module_tank_smoke_t1
+		parent = pwc_module_tank_smoke_t0
+		add_stats = {
+			defense = 1
+			breakthrough = 0.5
+			build_cost_ic = 0.4
+		}
+	}
+
+	pwc_module_tank_smoke_t2 = {
+		category = pwc_modcat_family_tank_smoke
+		gfx = pwc_module_tank_smoke_t2
+		parent = pwc_module_tank_smoke_t1
+		add_stats = {
+			defense = 1.1
+			breakthrough = 0.55
+			build_cost_ic = 0.54
+		}
+	}
+
+	pwc_module_tank_smoke_t3 = {
+		category = pwc_modcat_family_tank_smoke
+		gfx = pwc_module_tank_smoke_t3
+		parent = pwc_module_tank_smoke_t2
+		add_stats = {
+			defense = 1.2
+			breakthrough = 0.6
+			build_cost_ic = 0.68
+		}
+	}
+
+	pwc_module_tank_smoke_t4 = {
+		category = pwc_modcat_family_tank_smoke
+		gfx = pwc_module_tank_smoke_t4
+		parent = pwc_module_tank_smoke_t3
+		add_stats = {
+			defense = 1.3
+			breakthrough = 0.65
+			build_cost_ic = 0.82
+		}
+	}
+
+	pwc_module_tank_apu_t0 = {
+		category = pwc_modcat_family_tank_apu
+		gfx = pwc_module_tank_apu_t0
+		add_stats = {
+			fuel_consumption = -0.15
+			reliability = 0.008
+			maximum_speed = -0.1
+			build_cost_ic = 0.42
+		}
+	}
+
+	pwc_module_tank_apu_t1 = {
+		category = pwc_modcat_family_tank_apu
+		gfx = pwc_module_tank_apu_t1
+		parent = pwc_module_tank_apu_t0
+		add_stats = {
+			fuel_consumption = -0.15
+			reliability = 0.01
+			maximum_speed = -0.1
+			build_cost_ic = 0.7
+		}
+	}
+
+	pwc_module_tank_apu_t2 = {
+		category = pwc_modcat_family_tank_apu
+		gfx = pwc_module_tank_apu_t2
+		parent = pwc_module_tank_apu_t1
+		add_stats = {
+			fuel_consumption = -0.15
+			reliability = 0.011000000000000001
+			maximum_speed = -0.1
+			build_cost_ic = 0.945
+		}
+	}
+
+	pwc_module_tank_apu_t3 = {
+		category = pwc_modcat_family_tank_apu
+		gfx = pwc_module_tank_apu_t3
+		parent = pwc_module_tank_apu_t2
+		add_stats = {
+			fuel_consumption = -0.15
+			reliability = 0.012
+			maximum_speed = -0.1
+			build_cost_ic = 1.19
+		}
+	}
+
+	pwc_module_tank_apu_t4 = {
+		category = pwc_modcat_family_tank_apu
+		gfx = pwc_module_tank_apu_t4
+		parent = pwc_module_tank_apu_t3
+		add_stats = {
+			fuel_consumption = -0.15
+			reliability = 0.013000000000000001
+			maximum_speed = -0.1
+			build_cost_ic = 1.435
+		}
+	}
+
+	pwc_module_tank_ammo_safety_t0 = {
+		category = pwc_modcat_family_tank_ammo_safety
+		gfx = pwc_module_tank_ammo_safety_t0
+		add_stats = {
+			reliability = 0.04
+			defense = 1.2
+			maximum_speed = -0.15
+			build_cost_ic = 0.57
+		}
+	}
+
+	pwc_module_tank_ammo_safety_t1 = {
+		category = pwc_modcat_family_tank_ammo_safety
+		gfx = pwc_module_tank_ammo_safety_t1
+		parent = pwc_module_tank_ammo_safety_t0
+		add_stats = {
+			reliability = 0.05
+			defense = 1.5
+			maximum_speed = -0.15
+			build_cost_ic = 0.95
+		}
+	}
+
+	pwc_module_tank_ammo_safety_t2 = {
+		category = pwc_modcat_family_tank_ammo_safety
+		gfx = pwc_module_tank_ammo_safety_t2
+		parent = pwc_module_tank_ammo_safety_t1
+		add_stats = {
+			reliability = 0.055
+			defense = 1.65
+			maximum_speed = -0.15
+			build_cost_ic = 1.282
+		}
+	}
+
+	pwc_module_tank_ammo_safety_t3 = {
+		category = pwc_modcat_family_tank_ammo_safety
+		gfx = pwc_module_tank_ammo_safety_t3
+		parent = pwc_module_tank_ammo_safety_t2
+		add_stats = {
+			reliability = 0.06
+			defense = 1.8
+			maximum_speed = -0.15
+			build_cost_ic = 1.615
+		}
+	}
+
+	pwc_module_tank_ammo_safety_t4 = {
+		category = pwc_modcat_family_tank_ammo_safety
+		gfx = pwc_module_tank_ammo_safety_t4
+		parent = pwc_module_tank_ammo_safety_t3
+		add_stats = {
+			reliability = 0.065
+			defense = 1.95
+			maximum_speed = -0.15
+			build_cost_ic = 1.947
+		}
+	}
+
+	pwc_module_tank_maintenance_t0 = {
+		category = pwc_modcat_family_tank_maintenance
+		gfx = pwc_module_tank_maintenance_t0
+		add_stats = {
+			reliability = 0.048
+			build_cost_ic = 0.39
+		}
+	}
+
+	pwc_module_tank_maintenance_t1 = {
+		category = pwc_modcat_family_tank_maintenance
+		gfx = pwc_module_tank_maintenance_t1
+		parent = pwc_module_tank_maintenance_t0
+		add_stats = {
+			reliability = 0.06
+			build_cost_ic = 0.65
+		}
+	}
+
+	pwc_module_tank_maintenance_t2 = {
+		category = pwc_modcat_family_tank_maintenance
+		gfx = pwc_module_tank_maintenance_t2
+		parent = pwc_module_tank_maintenance_t1
+		add_stats = {
+			reliability = 0.066
+			build_cost_ic = 0.878
+		}
+	}
+
+	pwc_module_tank_maintenance_t3 = {
+		category = pwc_modcat_family_tank_maintenance
+		gfx = pwc_module_tank_maintenance_t3
+		parent = pwc_module_tank_maintenance_t2
+		add_stats = {
+			reliability = 0.07200000000000001
+			build_cost_ic = 1.105
+		}
+	}
+
+	pwc_module_tank_maintenance_t4 = {
+		category = pwc_modcat_family_tank_maintenance
+		gfx = pwc_module_tank_maintenance_t4
+		parent = pwc_module_tank_maintenance_t3
+		add_stats = {
+			reliability = 0.078
+			build_cost_ic = 1.333
+		}
+	}
+
+	pwc_module_tank_rws_t0 = {
+		category = pwc_modcat_family_tank_rws
+		gfx = pwc_module_tank_rws_t0
+		add_stats = {
+			soft_attack = 2.4
+			defense = 0.4
+			maximum_speed = -0.1
+			build_cost_ic = 0.51
+		}
+	}
+
+	pwc_module_tank_rws_t1 = {
+		category = pwc_modcat_family_tank_rws
+		gfx = pwc_module_tank_rws_t1
+		parent = pwc_module_tank_rws_t0
+		add_stats = {
+			soft_attack = 4
+			defense = 0.5
+			maximum_speed = -0.1
+			build_cost_ic = 0.85
+		}
+	}
+
+	pwc_module_tank_rws_t2 = {
+		category = pwc_modcat_family_tank_rws
+		gfx = pwc_module_tank_rws_t2
+		parent = pwc_module_tank_rws_t1
+		add_stats = {
+			soft_attack = 5.4
+			defense = 0.55
+			maximum_speed = -0.1
+			build_cost_ic = 1.147
+		}
+	}
+
+	pwc_module_tank_rws_t3 = {
+		category = pwc_modcat_family_tank_rws
+		gfx = pwc_module_tank_rws_t3
+		parent = pwc_module_tank_rws_t2
+		add_stats = {
+			soft_attack = 6.8
+			defense = 0.6
+			maximum_speed = -0.1
+			build_cost_ic = 1.445
+		}
+	}
+
+	pwc_module_tank_rws_t4 = {
+		category = pwc_modcat_family_tank_rws
+		gfx = pwc_module_tank_rws_t4
+		parent = pwc_module_tank_rws_t3
+		add_stats = {
+			soft_attack = 8.2
+			defense = 0.65
+			maximum_speed = -0.1
+			build_cost_ic = 1.742
+		}
+	}
+
+	pwc_module_air_ew_t0 = {
+		category = pwc_modcat_family_air_ew
+		gfx = pwc_module_air_ew_t0
+		add_stats = {
+			air_defence = 3.04
+			air_agility = -1
+			air_range = -25
+			build_cost_ic = 2.28
+		}
+	}
+
+	pwc_module_air_ew_t1 = {
+		category = pwc_modcat_family_air_ew
+		gfx = pwc_module_air_ew_t1
+		parent = pwc_module_air_ew_t0
+		add_stats = {
+			air_defence = 3.8
+			air_agility = -1
+			air_range = -25
+			build_cost_ic = 3.8
+		}
+	}
+
+	pwc_module_air_ew_t2 = {
+		category = pwc_modcat_family_air_ew
+		gfx = pwc_module_air_ew_t2
+		parent = pwc_module_air_ew_t1
+		add_stats = {
+			air_defence = 4.18
+			air_agility = -1
+			air_range = -25
+			build_cost_ic = 5.13
+		}
+	}
+
+	pwc_module_air_ew_t3 = {
+		category = pwc_modcat_family_air_ew
+		gfx = pwc_module_air_ew_t3
+		parent = pwc_module_air_ew_t2
+		add_stats = {
+			air_defence = 4.56
+			air_agility = -1
+			air_range = -25
+			build_cost_ic = 6.46
+		}
+	}
+
+	pwc_module_air_ew_t4 = {
+		category = pwc_modcat_family_air_ew
+		gfx = pwc_module_air_ew_t4
+		parent = pwc_module_air_ew_t3
+		add_stats = {
+			air_defence = 4.94
+			air_agility = -1
+			air_range = -25
+			build_cost_ic = 7.79
+		}
+	}
+
+	pwc_module_air_irst_t0 = {
+		category = pwc_modcat_family_air_irst
+		gfx = pwc_module_air_irst_t0
+		add_stats = {
+			air_attack = 2.56
+			air_agility = -0.3
+			build_cost_ic = 1.62
+		}
+	}
+
+	pwc_module_air_irst_t1 = {
+		category = pwc_modcat_family_air_irst
+		gfx = pwc_module_air_irst_t1
+		parent = pwc_module_air_irst_t0
+		add_stats = {
+			air_attack = 3.2
+			air_agility = -0.3
+			build_cost_ic = 2.7
+		}
+	}
+
+	pwc_module_air_irst_t2 = {
+		category = pwc_modcat_family_air_irst
+		gfx = pwc_module_air_irst_t2
+		parent = pwc_module_air_irst_t1
+		add_stats = {
+			air_attack = 3.52
+			air_agility = -0.3
+			build_cost_ic = 3.645
+		}
+	}
+
+	pwc_module_air_irst_t3 = {
+		category = pwc_modcat_family_air_irst
+		gfx = pwc_module_air_irst_t3
+		parent = pwc_module_air_irst_t2
+		add_stats = {
+			air_attack = 3.84
+			air_agility = -0.3
+			build_cost_ic = 4.59
+		}
+	}
+
+	pwc_module_air_irst_t4 = {
+		category = pwc_modcat_family_air_irst
+		gfx = pwc_module_air_irst_t4
+		parent = pwc_module_air_irst_t3
+		add_stats = {
+			air_attack = 4.16
+			air_agility = -0.3
+			build_cost_ic = 5.535
+		}
+	}
+
+	pwc_module_air_self_sealing_t0 = {
+		category = pwc_modcat_family_air_self_sealing
+		gfx = pwc_module_air_self_sealing_t0
+		add_stats = {
+			air_defence = 2
+			reliability = 0.016
+			air_range = -90
+			build_cost_ic = 0.9
+		}
+	}
+
+	pwc_module_air_self_sealing_t1 = {
+		category = pwc_modcat_family_air_self_sealing
+		gfx = pwc_module_air_self_sealing_t1
+		parent = pwc_module_air_self_sealing_t0
+		add_stats = {
+			air_defence = 2.5
+			reliability = 0.02
+			air_range = -90
+			build_cost_ic = 1.5
+		}
+	}
+
+	pwc_module_air_self_sealing_t2 = {
+		category = pwc_modcat_family_air_self_sealing
+		gfx = pwc_module_air_self_sealing_t2
+		parent = pwc_module_air_self_sealing_t1
+		add_stats = {
+			air_defence = 2.75
+			reliability = 0.022000000000000002
+			air_range = -90
+			build_cost_ic = 2.025
+		}
+	}
+
+	pwc_module_air_self_sealing_t3 = {
+		category = pwc_modcat_family_air_self_sealing
+		gfx = pwc_module_air_self_sealing_t3
+		parent = pwc_module_air_self_sealing_t2
+		add_stats = {
+			air_defence = 3
+			reliability = 0.024
+			air_range = -90
+			build_cost_ic = 2.55
+		}
+	}
+
+	pwc_module_air_self_sealing_t4 = {
+		category = pwc_modcat_family_air_self_sealing
+		gfx = pwc_module_air_self_sealing_t4
+		parent = pwc_module_air_self_sealing_t3
+		add_stats = {
+			air_defence = 3.25
+			reliability = 0.026000000000000002
+			air_range = -90
+			build_cost_ic = 3.075
+		}
+	}
+
+	pwc_module_air_armor_t0 = {
+		category = pwc_modcat_family_air_armor
+		gfx = pwc_module_air_armor_t0
+		add_stats = {
+			air_defence = 3.6
+			air_agility = -2
+			maximum_speed = -15
+			build_cost_ic = 1.08
+		}
+	}
+
+	pwc_module_air_armor_t1 = {
+		category = pwc_modcat_family_air_armor
+		gfx = pwc_module_air_armor_t1
+		parent = pwc_module_air_armor_t0
+		add_stats = {
+			air_defence = 4.5
+			air_agility = -2
+			maximum_speed = -15
+			build_cost_ic = 1.8
+		}
+	}
+
+	pwc_module_air_armor_t2 = {
+		category = pwc_modcat_family_air_armor
+		gfx = pwc_module_air_armor_t2
+		parent = pwc_module_air_armor_t1
+		add_stats = {
+			air_defence = 4.95
+			air_agility = -2
+			maximum_speed = -15
+			build_cost_ic = 2.43
+		}
+	}
+
+	pwc_module_air_armor_t3 = {
+		category = pwc_modcat_family_air_armor
+		gfx = pwc_module_air_armor_t3
+		parent = pwc_module_air_armor_t2
+		add_stats = {
+			air_defence = 5.4
+			air_agility = -2
+			maximum_speed = -15
+			build_cost_ic = 3.06
+		}
+	}
+
+	pwc_module_air_armor_t4 = {
+		category = pwc_modcat_family_air_armor
+		gfx = pwc_module_air_armor_t4
+		parent = pwc_module_air_armor_t3
+		add_stats = {
+			air_defence = 5.85
+			air_agility = -2
+			maximum_speed = -15
+			build_cost_ic = 3.69
+		}
+	}
+
+	pwc_module_air_rockets_t0 = {
+		category = pwc_modcat_family_air_rockets
+		gfx = pwc_module_air_rockets_t0
+		add_stats = {
+			air_ground_attack = 3.72
+			air_agility = -0.8
+			air_range = -50
+			build_cost_ic = 0.9
+		}
+	}
+
+	pwc_module_air_rockets_t1 = {
+		category = pwc_modcat_family_air_rockets
+		gfx = pwc_module_air_rockets_t1
+		parent = pwc_module_air_rockets_t0
+		add_stats = {
+			air_ground_attack = 6.2
+			air_agility = -0.8
+			air_range = -50
+			build_cost_ic = 1.5
+		}
+	}
+
+	pwc_module_air_rockets_t2 = {
+		category = pwc_modcat_family_air_rockets
+		gfx = pwc_module_air_rockets_t2
+		parent = pwc_module_air_rockets_t1
+		add_stats = {
+			air_ground_attack = 8.37
+			air_agility = -0.8
+			air_range = -50
+			build_cost_ic = 2.025
+		}
+	}
+
+	pwc_module_air_rockets_t3 = {
+		category = pwc_modcat_family_air_rockets
+		gfx = pwc_module_air_rockets_t3
+		parent = pwc_module_air_rockets_t2
+		add_stats = {
+			air_ground_attack = 10.54
+			air_agility = -0.8
+			air_range = -50
+			build_cost_ic = 2.55
+		}
+	}
+
+	pwc_module_air_rockets_t4 = {
+		category = pwc_modcat_family_air_rockets
+		gfx = pwc_module_air_rockets_t4
+		parent = pwc_module_air_rockets_t3
+		add_stats = {
+			air_ground_attack = 12.71
+			air_agility = -0.8
+			air_range = -50
+			build_cost_ic = 3.075
+		}
+	}
+
+	pwc_module_air_anti_armor_t0 = {
+		category = pwc_modcat_family_air_anti_armor
+		gfx = pwc_module_air_anti_armor_t0
+		add_stats = {
+			air_ground_attack = 4.8
+			air_agility = -0.3
+			air_range = -15
+			build_cost_ic = 1.68
+		}
+	}
+
+	pwc_module_air_anti_armor_t1 = {
+		category = pwc_modcat_family_air_anti_armor
+		gfx = pwc_module_air_anti_armor_t1
+		parent = pwc_module_air_anti_armor_t0
+		add_stats = {
+			air_ground_attack = 8
+			air_agility = -0.3
+			air_range = -15
+			build_cost_ic = 2.8
+		}
+	}
+
+	pwc_module_air_anti_armor_t2 = {
+		category = pwc_modcat_family_air_anti_armor
+		gfx = pwc_module_air_anti_armor_t2
+		parent = pwc_module_air_anti_armor_t1
+		add_stats = {
+			air_ground_attack = 10.8
+			air_agility = -0.3
+			air_range = -15
+			build_cost_ic = 3.78
+		}
+	}
+
+	pwc_module_air_anti_armor_t3 = {
+		category = pwc_modcat_family_air_anti_armor
+		gfx = pwc_module_air_anti_armor_t3
+		parent = pwc_module_air_anti_armor_t2
+		add_stats = {
+			air_ground_attack = 13.6
+			air_agility = -0.3
+			air_range = -15
+			build_cost_ic = 4.76
+		}
+	}
+
+	pwc_module_air_anti_armor_t4 = {
+		category = pwc_modcat_family_air_anti_armor
+		gfx = pwc_module_air_anti_armor_t4
+		parent = pwc_module_air_anti_armor_t3
+		add_stats = {
+			air_ground_attack = 16.4
+			air_agility = -0.3
+			air_range = -15
+			build_cost_ic = 5.74
+		}
+	}
+
+	pwc_module_air_iron_bombs_t0 = {
+		category = pwc_modcat_family_air_iron_bombs
+		gfx = pwc_module_air_iron_bombs_t0
+		add_stats = {
+			air_bombing = 5.4
+			air_agility = -1.4
+			air_range = -130
+			build_cost_ic = 1.8
+		}
+	}
+
+	pwc_module_air_iron_bombs_t1 = {
+		category = pwc_modcat_family_air_iron_bombs
+		gfx = pwc_module_air_iron_bombs_t1
+		parent = pwc_module_air_iron_bombs_t0
+		add_stats = {
+			air_bombing = 9
+			air_agility = -1.4
+			air_range = -130
+			build_cost_ic = 3
+		}
+	}
+
+	pwc_module_air_iron_bombs_t2 = {
+		category = pwc_modcat_family_air_iron_bombs
+		gfx = pwc_module_air_iron_bombs_t2
+		parent = pwc_module_air_iron_bombs_t1
+		add_stats = {
+			air_bombing = 12.15
+			air_agility = -1.4
+			air_range = -130
+			build_cost_ic = 4.05
+		}
+	}
+
+	pwc_module_air_iron_bombs_t3 = {
+		category = pwc_modcat_family_air_iron_bombs
+		gfx = pwc_module_air_iron_bombs_t3
+		parent = pwc_module_air_iron_bombs_t2
+		add_stats = {
+			air_bombing = 15.3
+			air_agility = -1.4
+			air_range = -130
+			build_cost_ic = 5.1
+		}
+	}
+
+	pwc_module_air_iron_bombs_t4 = {
+		category = pwc_modcat_family_air_iron_bombs
+		gfx = pwc_module_air_iron_bombs_t4
+		parent = pwc_module_air_iron_bombs_t3
+		add_stats = {
+			air_bombing = 18.45
+			air_agility = -1.4
+			air_range = -130
+			build_cost_ic = 6.15
+		}
+	}
+
+	pwc_module_air_standoff_t0 = {
+		category = pwc_modcat_family_air_standoff
+		gfx = pwc_module_air_standoff_t0
+		add_stats = {
+			air_bombing = 4.8
+			air_defence = 1.2
+			air_range = 48
+			air_agility = -1.2
+			build_cost_ic = 3.72
+		}
+	}
+
+	pwc_module_air_standoff_t1 = {
+		category = pwc_modcat_family_air_standoff
+		gfx = pwc_module_air_standoff_t1
+		parent = pwc_module_air_standoff_t0
+		add_stats = {
+			air_bombing = 8
+			air_defence = 1.5
+			air_range = 60
+			air_agility = -1.2
+			build_cost_ic = 6.2
+		}
+	}
+
+	pwc_module_air_standoff_t2 = {
+		category = pwc_modcat_family_air_standoff
+		gfx = pwc_module_air_standoff_t2
+		parent = pwc_module_air_standoff_t1
+		add_stats = {
+			air_bombing = 10.8
+			air_defence = 1.65
+			air_range = 66
+			air_agility = -1.2
+			build_cost_ic = 8.37
+		}
+	}
+
+	pwc_module_air_standoff_t3 = {
+		category = pwc_modcat_family_air_standoff
+		gfx = pwc_module_air_standoff_t3
+		parent = pwc_module_air_standoff_t2
+		add_stats = {
+			air_bombing = 13.6
+			air_defence = 1.8
+			air_range = 72
+			air_agility = -1.2
+			build_cost_ic = 10.54
+		}
+	}
+
+	pwc_module_air_standoff_t4 = {
+		category = pwc_modcat_family_air_standoff
+		gfx = pwc_module_air_standoff_t4
+		parent = pwc_module_air_standoff_t3
+		add_stats = {
+			air_bombing = 16.4
+			air_defence = 1.95
+			air_range = 78
+			air_agility = -1.2
+			build_cost_ic = 12.71
+		}
+	}
+
+	pwc_module_navy_ciws_t0 = {
+		category = pwc_modcat_family_navy_ciws
+		gfx = pwc_module_navy_ciws_t0
+		add_stats = {
+			anti_air_attack = 4.2
+			naval_speed = -0.1
+			build_cost_ic = 18
+		}
+	}
+
+	pwc_module_navy_ciws_t1 = {
+		category = pwc_modcat_family_navy_ciws
+		gfx = pwc_module_navy_ciws_t1
+		parent = pwc_module_navy_ciws_t0
+		add_stats = {
+			anti_air_attack = 7
+			naval_speed = -0.1
+			build_cost_ic = 30
+		}
+	}
+
+	pwc_module_navy_ciws_t2 = {
+		category = pwc_modcat_family_navy_ciws
+		gfx = pwc_module_navy_ciws_t2
+		parent = pwc_module_navy_ciws_t1
+		add_stats = {
+			anti_air_attack = 9.45
+			naval_speed = -0.1
+			build_cost_ic = 40.5
+		}
+	}
+
+	pwc_module_navy_ciws_t3 = {
+		category = pwc_modcat_family_navy_ciws
+		gfx = pwc_module_navy_ciws_t3
+		parent = pwc_module_navy_ciws_t2
+		add_stats = {
+			anti_air_attack = 11.9
+			naval_speed = -0.1
+			build_cost_ic = 51
+		}
+	}
+
+	pwc_module_navy_ciws_t4 = {
+		category = pwc_modcat_family_navy_ciws
+		gfx = pwc_module_navy_ciws_t4
+		parent = pwc_module_navy_ciws_t3
+		add_stats = {
+			anti_air_attack = 14.35
+			naval_speed = -0.1
+			build_cost_ic = 61.5
+		}
+	}
+
+	pwc_module_navy_point_sam_t0 = {
+		category = pwc_modcat_family_navy_point_sam
+		gfx = pwc_module_navy_point_sam_t0
+		add_stats = {
+			anti_air_attack = 6.6
+			naval_speed = -0.1
+			build_cost_ic = 30
+		}
+	}
+
+	pwc_module_navy_point_sam_t1 = {
+		category = pwc_modcat_family_navy_point_sam
+		gfx = pwc_module_navy_point_sam_t1
+		parent = pwc_module_navy_point_sam_t0
+		add_stats = {
+			anti_air_attack = 11
+			naval_speed = -0.1
+			build_cost_ic = 50
+		}
+	}
+
+	pwc_module_navy_point_sam_t2 = {
+		category = pwc_modcat_family_navy_point_sam
+		gfx = pwc_module_navy_point_sam_t2
+		parent = pwc_module_navy_point_sam_t1
+		add_stats = {
+			anti_air_attack = 14.85
+			naval_speed = -0.1
+			build_cost_ic = 67.5
+		}
+	}
+
+	pwc_module_navy_point_sam_t3 = {
+		category = pwc_modcat_family_navy_point_sam
+		gfx = pwc_module_navy_point_sam_t3
+		parent = pwc_module_navy_point_sam_t2
+		add_stats = {
+			anti_air_attack = 18.7
+			naval_speed = -0.1
+			build_cost_ic = 85
+		}
+	}
+
+	pwc_module_navy_point_sam_t4 = {
+		category = pwc_modcat_family_navy_point_sam
+		gfx = pwc_module_navy_point_sam_t4
+		parent = pwc_module_navy_point_sam_t3
+		add_stats = {
+			anti_air_attack = 22.55
+			naval_speed = -0.1
+			build_cost_ic = 102.5
+		}
+	}
+
+	pwc_module_navy_fuel_t0 = {
+		category = pwc_modcat_family_navy_fuel
+		gfx = pwc_module_navy_fuel_t0
+		add_stats = {
+			naval_range = 560
+			naval_speed = -0.6
+			reliability = -0.01
+			build_cost_ic = 21
+		}
+	}
+
+	pwc_module_navy_fuel_t1 = {
+		category = pwc_modcat_family_navy_fuel
+		gfx = pwc_module_navy_fuel_t1
+		parent = pwc_module_navy_fuel_t0
+		add_stats = {
+			naval_range = 700
+			naval_speed = -0.6
+			reliability = -0.01
+			build_cost_ic = 35
+		}
+	}
+
+	pwc_module_navy_fuel_t2 = {
+		category = pwc_modcat_family_navy_fuel
+		gfx = pwc_module_navy_fuel_t2
+		parent = pwc_module_navy_fuel_t1
+		add_stats = {
+			naval_range = 770
+			naval_speed = -0.6
+			reliability = -0.01
+			build_cost_ic = 47.25
+		}
+	}
+
+	pwc_module_navy_fuel_t3 = {
+		category = pwc_modcat_family_navy_fuel
+		gfx = pwc_module_navy_fuel_t3
+		parent = pwc_module_navy_fuel_t2
+		add_stats = {
+			naval_range = 840
+			naval_speed = -0.6
+			reliability = -0.01
+			build_cost_ic = 59.5
+		}
+	}
+
+	pwc_module_navy_fuel_t4 = {
+		category = pwc_modcat_family_navy_fuel
+		gfx = pwc_module_navy_fuel_t4
+		parent = pwc_module_navy_fuel_t3
+		add_stats = {
+			naval_range = 910
+			naval_speed = -0.6
+			reliability = -0.01
+			build_cost_ic = 71.75
+		}
+	}
+
+	pwc_module_navy_decoy_t0 = {
+		category = pwc_modcat_family_navy_decoy
+		gfx = pwc_module_navy_decoy_t0
+		add_stats = {
+			max_strength = 2.4
+			reliability = -0.01
+			build_cost_ic = 13.2
+		}
+	}
+
+	pwc_module_navy_decoy_t1 = {
+		category = pwc_modcat_family_navy_decoy
+		gfx = pwc_module_navy_decoy_t1
+		parent = pwc_module_navy_decoy_t0
+		add_stats = {
+			max_strength = 3
+			reliability = -0.01
+			build_cost_ic = 22
+		}
+	}
+
+	pwc_module_navy_decoy_t2 = {
+		category = pwc_modcat_family_navy_decoy
+		gfx = pwc_module_navy_decoy_t2
+		parent = pwc_module_navy_decoy_t1
+		add_stats = {
+			max_strength = 3.3
+			reliability = -0.01
+			build_cost_ic = 29.7
+		}
+	}
+
+	pwc_module_navy_decoy_t3 = {
+		category = pwc_modcat_family_navy_decoy
+		gfx = pwc_module_navy_decoy_t3
+		parent = pwc_module_navy_decoy_t2
+		add_stats = {
+			max_strength = 3.6
+			reliability = -0.01
+			build_cost_ic = 37.4
+		}
+	}
+
+	pwc_module_navy_decoy_t4 = {
+		category = pwc_modcat_family_navy_decoy
+		gfx = pwc_module_navy_decoy_t4
+		parent = pwc_module_navy_decoy_t3
+		add_stats = {
+			max_strength = 3.9
+			reliability = -0.01
+			build_cost_ic = 45.1
+		}
+	}
+
+	pwc_module_navy_asw_aviation_t0 = {
+		category = pwc_modcat_family_navy_asw_aviation
+		gfx = pwc_module_navy_asw_aviation_t0
+		add_stats = {
+			sub_detection = 3.2
+			sub_attack = 2.4
+			naval_speed = -0.8
+			build_cost_ic = 57
+		}
+	}
+
+	pwc_module_navy_asw_aviation_t1 = {
+		category = pwc_modcat_family_navy_asw_aviation
+		gfx = pwc_module_navy_asw_aviation_t1
+		parent = pwc_module_navy_asw_aviation_t0
+		add_stats = {
+			sub_detection = 4
+			sub_attack = 3
+			naval_speed = -0.8
+			build_cost_ic = 95
+		}
+	}
+
+	pwc_module_navy_asw_aviation_t2 = {
+		category = pwc_modcat_family_navy_asw_aviation
+		gfx = pwc_module_navy_asw_aviation_t2
+		parent = pwc_module_navy_asw_aviation_t1
+		add_stats = {
+			sub_detection = 4.4
+			sub_attack = 3.3
+			naval_speed = -0.8
+			build_cost_ic = 128.25
+		}
+	}
+
+	pwc_module_navy_asw_aviation_t3 = {
+		category = pwc_modcat_family_navy_asw_aviation
+		gfx = pwc_module_navy_asw_aviation_t3
+		parent = pwc_module_navy_asw_aviation_t2
+		add_stats = {
+			sub_detection = 4.8
+			sub_attack = 3.6
+			naval_speed = -0.8
+			build_cost_ic = 161.5
+		}
+	}
+
+	pwc_module_navy_asw_aviation_t4 = {
+		category = pwc_modcat_family_navy_asw_aviation
+		gfx = pwc_module_navy_asw_aviation_t4
+		parent = pwc_module_navy_asw_aviation_t3
+		add_stats = {
+			sub_detection = 5.2
+			sub_attack = 3.9
+			naval_speed = -0.8
+			build_cost_ic = 194.75
+		}
+	}
+
+	pwc_module_navy_minelayer_t0 = {
+		category = pwc_modcat_family_navy_minelayer
+		gfx = pwc_module_navy_minelayer_t0
+		add_stats = {
+			mines_planting = 0.8
+			naval_speed = -0.5
+			build_cost_ic = 48
+		}
+	}
+
+	pwc_module_navy_minelayer_t1 = {
+		category = pwc_modcat_family_navy_minelayer
+		gfx = pwc_module_navy_minelayer_t1
+		parent = pwc_module_navy_minelayer_t0
+		add_stats = {
+			mines_planting = 1
+			naval_speed = -0.5
+			build_cost_ic = 80
+		}
+	}
+
+	pwc_module_navy_minelayer_t2 = {
+		category = pwc_modcat_family_navy_minelayer
+		gfx = pwc_module_navy_minelayer_t2
+		parent = pwc_module_navy_minelayer_t1
+		add_stats = {
+			mines_planting = 1.1
+			naval_speed = -0.5
+			build_cost_ic = 108
+		}
+	}
+
+	pwc_module_navy_minelayer_t3 = {
+		category = pwc_modcat_family_navy_minelayer
+		gfx = pwc_module_navy_minelayer_t3
+		parent = pwc_module_navy_minelayer_t2
+		add_stats = {
+			mines_planting = 1.2
+			naval_speed = -0.5
+			build_cost_ic = 136
+		}
+	}
+
+	pwc_module_navy_minelayer_t4 = {
+		category = pwc_modcat_family_navy_minelayer
+		gfx = pwc_module_navy_minelayer_t4
+		parent = pwc_module_navy_minelayer_t3
+		add_stats = {
+			mines_planting = 1.3
+			naval_speed = -0.5
+			build_cost_ic = 164
+		}
+	}
+
+	pwc_module_navy_minesweeper_t0 = {
+		category = pwc_modcat_family_navy_minesweeper
+		gfx = pwc_module_navy_minesweeper_t0
+		add_stats = {
+			mines_sweeping = 0.8
+			naval_speed = -0.6
+			build_cost_ic = 33
+		}
+	}
+
+	pwc_module_navy_minesweeper_t1 = {
+		category = pwc_modcat_family_navy_minesweeper
+		gfx = pwc_module_navy_minesweeper_t1
+		parent = pwc_module_navy_minesweeper_t0
+		add_stats = {
+			mines_sweeping = 1
+			naval_speed = -0.6
+			build_cost_ic = 55
+		}
+	}
+
+	pwc_module_navy_minesweeper_t2 = {
+		category = pwc_modcat_family_navy_minesweeper
+		gfx = pwc_module_navy_minesweeper_t2
+		parent = pwc_module_navy_minesweeper_t1
+		add_stats = {
+			mines_sweeping = 1.1
+			naval_speed = -0.6
+			build_cost_ic = 74.25
+		}
+	}
+
+	pwc_module_navy_minesweeper_t3 = {
+		category = pwc_modcat_family_navy_minesweeper
+		gfx = pwc_module_navy_minesweeper_t3
+		parent = pwc_module_navy_minesweeper_t2
+		add_stats = {
+			mines_sweeping = 1.2
+			naval_speed = -0.6
+			build_cost_ic = 93.5
+		}
+	}
+
+	pwc_module_navy_minesweeper_t4 = {
+		category = pwc_modcat_family_navy_minesweeper
+		gfx = pwc_module_navy_minesweeper_t4
+		parent = pwc_module_navy_minesweeper_t3
+		add_stats = {
+			mines_sweeping = 1.3
+			naval_speed = -0.6
+			build_cost_ic = 112.75
+		}
+	}
+
+	pwc_module_navy_search_radar_t0 = {
+		category = pwc_modcat_family_navy_search_radar
+		gfx = pwc_module_navy_search_radar_t0
+		add_stats = {
+			surface_detection = 11.2
+			build_cost_ic = 12
+		}
+	}
+
+	pwc_module_navy_search_radar_t1 = {
+		category = pwc_modcat_family_navy_search_radar
+		gfx = pwc_module_navy_search_radar_t1
+		parent = pwc_module_navy_search_radar_t0
+		add_stats = {
+			surface_detection = 14
+			build_cost_ic = 20
+		}
+	}
+
+	pwc_module_navy_search_radar_t2 = {
+		category = pwc_modcat_family_navy_search_radar
+		gfx = pwc_module_navy_search_radar_t2
+		parent = pwc_module_navy_search_radar_t1
+		add_stats = {
+			surface_detection = 15.4
+			build_cost_ic = 27
+		}
+	}
+
+	pwc_module_navy_search_radar_t3 = {
+		category = pwc_modcat_family_navy_search_radar
+		gfx = pwc_module_navy_search_radar_t3
+		parent = pwc_module_navy_search_radar_t2
+		add_stats = {
+			surface_detection = 16.8
+			build_cost_ic = 34
+		}
+	}
+
+	pwc_module_navy_search_radar_t4 = {
+		category = pwc_modcat_family_navy_search_radar
+		gfx = pwc_module_navy_search_radar_t4
+		parent = pwc_module_navy_search_radar_t3
+		add_stats = {
+			surface_detection = 18.2
+			build_cost_ic = 41
+		}
+	}
+
+	pwc_module_navy_passive_sonar_t0 = {
+		category = pwc_modcat_family_navy_passive_sonar
+		gfx = pwc_module_navy_passive_sonar_t0
+		add_stats = {
+			sub_detection = 8
+			build_cost_ic = 7.2
+		}
+	}
+
+	pwc_module_navy_passive_sonar_t1 = {
+		category = pwc_modcat_family_navy_passive_sonar
+		gfx = pwc_module_navy_passive_sonar_t1
+		parent = pwc_module_navy_passive_sonar_t0
+		add_stats = {
+			sub_detection = 10
+			build_cost_ic = 12
+		}
+	}
+
+	pwc_module_navy_passive_sonar_t2 = {
+		category = pwc_modcat_family_navy_passive_sonar
+		gfx = pwc_module_navy_passive_sonar_t2
+		parent = pwc_module_navy_passive_sonar_t1
+		add_stats = {
+			sub_detection = 11
+			build_cost_ic = 16.2
+		}
+	}
+
+	pwc_module_navy_passive_sonar_t3 = {
+		category = pwc_modcat_family_navy_passive_sonar
+		gfx = pwc_module_navy_passive_sonar_t3
+		parent = pwc_module_navy_passive_sonar_t2
+		add_stats = {
+			sub_detection = 12
+			build_cost_ic = 20.4
+		}
+	}
+
+	pwc_module_navy_passive_sonar_t4 = {
+		category = pwc_modcat_family_navy_passive_sonar
+		gfx = pwc_module_navy_passive_sonar_t4
+		parent = pwc_module_navy_passive_sonar_t3
+		add_stats = {
+			sub_detection = 13
+			build_cost_ic = 24.6
+		}
+	}
+
 	pwc_module_tank_gun_140mm_etc = {
 		category = pwc_modcat_project_pwc_module_tank_gun_140mm_etc
 		forbid_module_categories = {

@@ -1,8 +1,8 @@
 generic_naval_invasion_support = {
     objective_type = naval_invasion_support
     blocked_for = { ENG FRA GER ITA JAP SOV USA }
-    min_priority = 20
-    max_priority = 30
+    min_priority = 31
+    max_priority = 40
 }
 generic_mine_sweeping = {
     objective_type = mines_sweeping
@@ -37,7 +37,7 @@ generic_convoy_raiding = {
 generic_naval_dominance = {
     objective_type = naval_dominance
     blocked_for = { ENG FRA GER ITA JAP SOV USA }
-    min_priority = 20
+    min_priority = 10
     max_priority = 30
 }
 generic_mine_laying = {

@@ -29,4 +29,12 @@ spriteTypes = {
         noOfFrames = 1
         effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
     }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_main_menu_background"
+        texturefile = "gfx/interface/main_menu_background.dds"
+        borderSize = { x = 0 y = 0 }
+        size = { x = 3680 y = 1740 }
+        tilingCenter = no
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
 }

@@ -21,7 +21,7 @@ PWC_ai_design_bomber_gen0 = {
 			modules = {
 				fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t0
 				fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t0
-				fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t0
+				fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t0
 				fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t0
 				fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t0
 				pwc_bomber_special_0 = empty
@@ -55,7 +55,7 @@ PWC_ai_design_bomber_gen1 = {
 			modules = {
 				fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t1
 				fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t1
-				fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t1
+				fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t1
 				fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t1
 				fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t1
 				pwc_bomber_special_0 = empty
@@ -89,7 +89,7 @@ PWC_ai_design_bomber_gen2 = {
 			modules = {
 				fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t2
 				fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t2
-				fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t2
+				fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t2
 				fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t2
 				fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t2
 				pwc_bomber_special_0 = empty
@@ -123,7 +123,7 @@ PWC_ai_design_bomber_gen3 = {
 			modules = {
 				fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t3
 				fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t3
-				fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t3
+				fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t3
 				fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t3
 				fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t3
 				pwc_bomber_special_0 = empty
@@ -318,7 +318,7 @@ PWC_ai_design_carrier_gen0 = {
 				fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t0
 				fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t0
 				pwc_carrier_missile_0 = pwc_module_navy_sam_t0
-				pwc_carrier_missile_1 = empty
+				pwc_carrier_missile_1 = pwc_module_navy_point_sam_t0
 				pwc_carrier_special_2 = pwc_module_navy_hangar_t0
 				pwc_carrier_special_3 = empty
 			}
@@ -352,7 +352,7 @@ PWC_ai_design_carrier_gen1 = {
 				fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t1
 				fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t1
 				pwc_carrier_missile_0 = pwc_module_navy_sam_t1
-				pwc_carrier_missile_1 = empty
+				pwc_carrier_missile_1 = pwc_module_navy_point_sam_t1
 				pwc_carrier_special_2 = pwc_module_navy_hangar_t1
 				pwc_carrier_special_3 = empty
 			}
@@ -386,7 +386,7 @@ PWC_ai_design_carrier_gen2 = {
 				fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t2
 				fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t2
 				pwc_carrier_missile_0 = pwc_module_navy_sam_t2
-				pwc_carrier_missile_1 = empty
+				pwc_carrier_missile_1 = pwc_module_navy_point_sam_t2
 				pwc_carrier_special_2 = pwc_module_navy_hangar_t2
 				pwc_carrier_special_3 = empty
 			}
@@ -420,7 +420,7 @@ PWC_ai_design_carrier_gen3 = {
 				fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t3
 				fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t3
 				pwc_carrier_missile_0 = pwc_module_navy_sam_t3
-				pwc_carrier_missile_1 = empty
+				pwc_carrier_missile_1 = pwc_module_navy_point_sam_t3
 				pwc_carrier_special_2 = pwc_module_navy_hangar_t3
 				pwc_carrier_special_3 = empty
 			}
@@ -478,7 +478,7 @@ PWC_ai_design_carrier_gen4 = {
 				fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t4
 				fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t4
 				pwc_carrier_missile_0 = pwc_module_navy_sam_t4
-				pwc_carrier_missile_1 = empty
+				pwc_carrier_missile_1 = pwc_module_navy_point_sam_t4
 				pwc_carrier_special_2 = pwc_module_navy_hangar_t4
 				pwc_carrier_special_3 = empty
 			}
@@ -582,7 +582,7 @@ PWC_ai_design_cas_gen0 = {
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t0
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t0
 				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t0
-				pwc_cas_special_0 = empty
+				pwc_cas_special_0 = pwc_module_air_armor_t0
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
 			}
@@ -603,6 +603,7 @@ PWC_ai_design_cas_gen1 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
@@ -617,7 +618,7 @@ PWC_ai_design_cas_gen1 = {
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
 				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
-				pwc_cas_special_0 = empty
+				pwc_cas_special_0 = pwc_module_air_armor_t1
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
 			}
@@ -638,6 +639,7 @@ PWC_ai_design_cas_gen2 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
@@ -652,7 +654,7 @@ PWC_ai_design_cas_gen2 = {
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
 				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
-				pwc_cas_special_0 = empty
+				pwc_cas_special_0 = pwc_module_air_armor_t2
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
 			}
@@ -699,6 +701,7 @@ PWC_ai_design_cas_gen3 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
@@ -713,7 +716,7 @@ PWC_ai_design_cas_gen3 = {
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t3
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t3
 				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t3
-				pwc_cas_special_0 = empty
+				pwc_cas_special_0 = pwc_module_air_armor_t3
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
 			}
@@ -939,7 +942,7 @@ PWC_ai_design_cruiser_gen0 = {
 				fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t0
 				pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t0
 				pwc_cruiser_missile_1 = pwc_module_navy_sam_t0
-				pwc_cruiser_missile_2 = empty
+				pwc_cruiser_missile_2 = pwc_module_navy_ciws_t0
 				pwc_cruiser_gun_3 = empty
 				pwc_cruiser_special_4 = empty
 				pwc_cruiser_special_5 = empty
@@ -978,7 +981,7 @@ PWC_ai_design_cruiser_gen1 = {
 				fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t1
 				pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t1
 				pwc_cruiser_missile_1 = pwc_module_navy_sam_t1
-				pwc_cruiser_missile_2 = empty
+				pwc_cruiser_missile_2 = pwc_module_navy_ciws_t1
 				pwc_cruiser_gun_3 = empty
 				pwc_cruiser_special_4 = empty
 				pwc_cruiser_special_5 = empty
@@ -1017,7 +1020,7 @@ PWC_ai_design_cruiser_gen2 = {
 				fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t2
 				pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t2
 				pwc_cruiser_missile_1 = pwc_module_navy_sam_t2
-				pwc_cruiser_missile_2 = empty
+				pwc_cruiser_missile_2 = pwc_module_navy_ciws_t2
 				pwc_cruiser_gun_3 = empty
 				pwc_cruiser_special_4 = empty
 				pwc_cruiser_special_5 = empty
@@ -1086,7 +1089,7 @@ PWC_ai_design_cruiser_gen3 = {
 				fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t3
 				pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t3
 				pwc_cruiser_missile_1 = pwc_module_navy_sam_t3
-				pwc_cruiser_missile_2 = empty
+				pwc_cruiser_missile_2 = pwc_module_navy_ciws_t3
 				pwc_cruiser_gun_3 = empty
 				pwc_cruiser_special_4 = empty
 				pwc_cruiser_special_5 = empty
@@ -1184,7 +1187,7 @@ PWC_ai_design_cruiser_gen4 = {
 				fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t4
 				pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t4
 				pwc_cruiser_missile_1 = pwc_module_navy_sam_t4
-				pwc_cruiser_missile_2 = empty
+				pwc_cruiser_missile_2 = pwc_module_navy_ciws_t4
 				pwc_cruiser_gun_3 = empty
 				pwc_cruiser_special_4 = empty
 				pwc_cruiser_special_5 = empty
@@ -1362,7 +1365,7 @@ PWC_ai_design_cv_cas_gen0 = {
 				fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t0
 				fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t0
 				fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t0
-				pwc_cv_cas_special_0 = empty
+				pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t0
 				pwc_cv_cas_special_1 = empty
 				pwc_cv_cas_special_2 = empty
 			}
@@ -1383,6 +1386,7 @@ PWC_ai_design_cv_cas_gen1 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
@@ -1397,7 +1401,7 @@ PWC_ai_design_cv_cas_gen1 = {
 				fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t1
 				fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t1
 				fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t1
-				pwc_cv_cas_special_0 = empty
+				pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t1
 				pwc_cv_cas_special_1 = empty
 				pwc_cv_cas_special_2 = empty
 			}
@@ -1418,6 +1422,7 @@ PWC_ai_design_cv_cas_gen2 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
@@ -1432,7 +1437,7 @@ PWC_ai_design_cv_cas_gen2 = {
 				fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t2
 				fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t2
 				fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t2
-				pwc_cv_cas_special_0 = empty
+				pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t2
 				pwc_cv_cas_special_1 = empty
 				pwc_cv_cas_special_2 = empty
 			}
@@ -1479,6 +1484,7 @@ PWC_ai_design_cv_cas_gen3 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
@@ -1493,7 +1499,7 @@ PWC_ai_design_cv_cas_gen3 = {
 				fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t3
 				fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t3
 				fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t3
-				pwc_cv_cas_special_0 = empty
+				pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t3
 				pwc_cv_cas_special_1 = empty
 				pwc_cv_cas_special_2 = empty
 			}
@@ -1566,6 +1572,7 @@ PWC_ai_design_cv_cas_gen4 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
@@ -1580,7 +1587,7 @@ PWC_ai_design_cv_cas_gen4 = {
 				fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t4
 				fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t4
 				fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t4
-				pwc_cv_cas_special_0 = empty
+				pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t4
 				pwc_cv_cas_special_1 = empty
 				pwc_cv_cas_special_2 = empty
 			}
@@ -1716,7 +1723,7 @@ PWC_ai_design_cv_fighter_gen0 = {
 				fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t0
 				fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t0
 				fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t0
-				pwc_cv_fighter_special_0 = empty
+				pwc_cv_fighter_special_0 = pwc_module_air_irst_t0
 				pwc_cv_fighter_special_1 = empty
 				pwc_cv_fighter_special_2 = empty
 			}
@@ -1750,7 +1757,7 @@ PWC_ai_design_cv_fighter_gen1 = {
 				fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t1
 				fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t1
 				fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t1
-				pwc_cv_fighter_special_0 = empty
+				pwc_cv_fighter_special_0 = pwc_module_air_irst_t1
 				pwc_cv_fighter_special_1 = empty
 				pwc_cv_fighter_special_2 = empty
 			}
@@ -1784,7 +1791,7 @@ PWC_ai_design_cv_fighter_gen2 = {
 				fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t2
 				fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t2
 				fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t2
-				pwc_cv_fighter_special_0 = empty
+				pwc_cv_fighter_special_0 = pwc_module_air_irst_t2
 				pwc_cv_fighter_special_1 = empty
 				pwc_cv_fighter_special_2 = empty
 			}
@@ -1818,7 +1825,7 @@ PWC_ai_design_cv_fighter_gen3 = {
 				fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t3
 				fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t3
 				fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t3
-				pwc_cv_fighter_special_0 = empty
+				pwc_cv_fighter_special_0 = pwc_module_air_irst_t3
 				pwc_cv_fighter_special_1 = empty
 				pwc_cv_fighter_special_2 = empty
 			}
@@ -1902,7 +1909,7 @@ PWC_ai_design_cv_fighter_gen4 = {
 				fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t4
 				fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t4
 				fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t4
-				pwc_cv_fighter_special_0 = empty
+				pwc_cv_fighter_special_0 = pwc_module_air_irst_t4
 				pwc_cv_fighter_special_1 = empty
 				pwc_cv_fighter_special_2 = empty
 			}
@@ -2038,7 +2045,7 @@ PWC_ai_design_destroyer_gen0 = {
 				pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t0
 				pwc_destroyer_missile_1 = pwc_module_navy_sam_t0
 				pwc_destroyer_missile_2 = pwc_module_navy_asw_t0
-				pwc_destroyer_special_3 = empty
+				pwc_destroyer_special_3 = pwc_module_navy_decoy_t0
 				pwc_destroyer_special_4 = empty
 			}
 		}
@@ -2058,6 +2065,7 @@ PWC_ai_design_destroyer_gen1 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t1 has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_submarine_t1 has_tech = pwc_tech_navy_t1 }
 			OR = { has_tech = pwc_tech_navy_carrier_t1 has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_t1 }
 			OR = { has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_submarine_t1 has_tech = pwc_tech_navy_t1 }
 			OR = { has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_t1 }
@@ -2076,7 +2084,7 @@ PWC_ai_design_destroyer_gen1 = {
 				pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t1
 				pwc_destroyer_missile_1 = pwc_module_navy_sam_t1
 				pwc_destroyer_missile_2 = pwc_module_navy_asw_t1
-				pwc_destroyer_special_3 = empty
+				pwc_destroyer_special_3 = pwc_module_navy_decoy_t1
 				pwc_destroyer_special_4 = empty
 			}
 		}
@@ -2096,6 +2104,7 @@ PWC_ai_design_destroyer_gen2 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t2 has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_submarine_t2 has_tech = pwc_tech_navy_t2 }
 			OR = { has_tech = pwc_tech_navy_carrier_t2 has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_t2 }
 			OR = { has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_submarine_t2 has_tech = pwc_tech_navy_t2 }
 			OR = { has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_t2 }
@@ -2114,7 +2123,7 @@ PWC_ai_design_destroyer_gen2 = {
 				pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t2
 				pwc_destroyer_missile_1 = pwc_module_navy_sam_t2
 				pwc_destroyer_missile_2 = pwc_module_navy_asw_t2
-				pwc_destroyer_special_3 = empty
+				pwc_destroyer_special_3 = pwc_module_navy_decoy_t2
 				pwc_destroyer_special_4 = empty
 			}
 		}
@@ -2163,6 +2172,7 @@ PWC_ai_design_destroyer_gen3 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t3 has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_t3 }
 			OR = { has_tech = pwc_tech_navy_carrier_t3 has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_t3 }
 			OR = { has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_t3 }
 			OR = { has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_t3 }
@@ -2181,7 +2191,7 @@ PWC_ai_design_destroyer_gen3 = {
 				pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t3
 				pwc_destroyer_missile_1 = pwc_module_navy_sam_t3
 				pwc_destroyer_missile_2 = pwc_module_navy_asw_t3
-				pwc_destroyer_special_3 = empty
+				pwc_destroyer_special_3 = pwc_module_navy_decoy_t3
 				pwc_destroyer_special_4 = empty
 			}
 		}
@@ -2447,7 +2457,7 @@ PWC_ai_design_fighter_gen0 = {
 				fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t0
 				fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t0
 				fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t0
-				pwc_fighter_special_0 = empty
+				pwc_fighter_special_0 = pwc_module_air_irst_t0
 				pwc_fighter_special_1 = empty
 				pwc_fighter_special_2 = empty
 			}
@@ -2481,7 +2491,7 @@ PWC_ai_design_fighter_gen1 = {
 				fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t1
 				fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t1
 				fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t1
-				pwc_fighter_special_0 = empty
+				pwc_fighter_special_0 = pwc_module_air_irst_t1
 				pwc_fighter_special_1 = empty
 				pwc_fighter_special_2 = empty
 			}
@@ -2515,7 +2525,7 @@ PWC_ai_design_fighter_gen2 = {
 				fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t2
 				fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t2
 				fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t2
-				pwc_fighter_special_0 = empty
+				pwc_fighter_special_0 = pwc_module_air_irst_t2
 				pwc_fighter_special_1 = empty
 				pwc_fighter_special_2 = empty
 			}
@@ -2549,7 +2559,7 @@ PWC_ai_design_fighter_gen3 = {
 				fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t3
 				fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t3
 				fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t3
-				pwc_fighter_special_0 = empty
+				pwc_fighter_special_0 = pwc_module_air_irst_t3
 				pwc_fighter_special_1 = empty
 				pwc_fighter_special_2 = empty
 			}
@@ -2768,7 +2778,7 @@ PWC_ai_design_heavy_tank_gen0 = {
 				pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t0
 				pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t0
 				pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t0
-				pwc_heavy_tank_special_7 = empty
+				pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t0
 				pwc_heavy_tank_special_8 = empty
 			}
 		}
@@ -2803,7 +2813,7 @@ PWC_ai_design_heavy_tank_gen1 = {
 				pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t1
 				pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t1
 				pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t1
-				pwc_heavy_tank_special_7 = empty
+				pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t1
 				pwc_heavy_tank_special_8 = empty
 			}
 		}
@@ -2838,7 +2848,7 @@ PWC_ai_design_heavy_tank_gen2 = {
 				pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t2
 				pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t2
 				pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t2
-				pwc_heavy_tank_special_7 = empty
+				pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t2
 				pwc_heavy_tank_special_8 = empty
 			}
 		}
@@ -2873,7 +2883,7 @@ PWC_ai_design_heavy_tank_gen3 = {
 				pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t3
 				pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t3
 				pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t3
-				pwc_heavy_tank_special_7 = empty
+				pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t3
 				pwc_heavy_tank_special_8 = empty
 			}
 		}
@@ -2908,7 +2918,7 @@ PWC_ai_design_heavy_tank_gen4 = {
 				pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t4
 				pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t4
 				pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t4
-				pwc_heavy_tank_special_7 = empty
+				pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t4
 				pwc_heavy_tank_special_8 = empty
 			}
 		}
@@ -3067,12 +3077,12 @@ PWC_ai_design_light_tank_gen0 = {
 			modules = {
 				pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t0
 				pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t0
-				pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t0
+				pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t0
 				pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t0
 				pwc_light_tank_engine_4 = pwc_module_tank_light_power_t0
 				pwc_light_tank_special_5 = pwc_module_tank_fcs_t0
 				pwc_light_tank_special_6 = pwc_module_tank_radio_t0
-				pwc_light_tank_special_7 = empty
+				pwc_light_tank_special_7 = pwc_module_tank_smoke_t0
 				pwc_light_tank_special_8 = empty
 			}
 		}
@@ -3102,12 +3112,12 @@ PWC_ai_design_light_tank_gen1 = {
 			modules = {
 				pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t1
 				pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t1
-				pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t1
+				pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t1
 				pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t1
 				pwc_light_tank_engine_4 = pwc_module_tank_light_power_t1
 				pwc_light_tank_special_5 = pwc_module_tank_fcs_t1
 				pwc_light_tank_special_6 = pwc_module_tank_radio_t1
-				pwc_light_tank_special_7 = empty
+				pwc_light_tank_special_7 = pwc_module_tank_smoke_t1
 				pwc_light_tank_special_8 = empty
 			}
 		}
@@ -3137,12 +3147,12 @@ PWC_ai_design_light_tank_gen2 = {
 			modules = {
 				pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t2
 				pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t2
-				pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t2
+				pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t2
 				pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t2
 				pwc_light_tank_engine_4 = pwc_module_tank_light_power_t2
 				pwc_light_tank_special_5 = pwc_module_tank_fcs_t2
 				pwc_light_tank_special_6 = pwc_module_tank_radio_t2
-				pwc_light_tank_special_7 = empty
+				pwc_light_tank_special_7 = pwc_module_tank_smoke_t2
 				pwc_light_tank_special_8 = empty
 			}
 		}
@@ -3172,12 +3182,12 @@ PWC_ai_design_light_tank_gen3 = {
 			modules = {
 				pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t3
 				pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t3
-				pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t3
+				pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t3
 				pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t3
 				pwc_light_tank_engine_4 = pwc_module_tank_light_power_t3
 				pwc_light_tank_special_5 = pwc_module_tank_fcs_t3
 				pwc_light_tank_special_6 = pwc_module_tank_radio_t3
-				pwc_light_tank_special_7 = empty
+				pwc_light_tank_special_7 = pwc_module_tank_smoke_t3
 				pwc_light_tank_special_8 = empty
 			}
 		}
@@ -3207,12 +3217,12 @@ PWC_ai_design_light_tank_gen4 = {
 			modules = {
 				pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t4
 				pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t4
-				pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t4
+				pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t4
 				pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t4
 				pwc_light_tank_engine_4 = pwc_module_tank_light_power_t4
 				pwc_light_tank_special_5 = pwc_module_tank_fcs_t4
 				pwc_light_tank_special_6 = pwc_module_tank_radio_t4
-				pwc_light_tank_special_7 = empty
+				pwc_light_tank_special_7 = pwc_module_tank_smoke_t4
 				pwc_light_tank_special_8 = empty
 			}
 		}
@@ -3350,7 +3360,7 @@ PWC_ai_design_medium_tank_gen0 = {
 				pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t0
 				pwc_medium_tank_special_5 = pwc_module_tank_fcs_t0
 				pwc_medium_tank_special_6 = pwc_module_tank_radio_t0
-				pwc_medium_tank_special_7 = empty
+				pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t0
 				pwc_medium_tank_special_8 = empty
 			}
 		}
@@ -3385,7 +3395,7 @@ PWC_ai_design_medium_tank_gen1 = {
 				pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t1
 				pwc_medium_tank_special_5 = pwc_module_tank_fcs_t1
 				pwc_medium_tank_special_6 = pwc_module_tank_radio_t1
-				pwc_medium_tank_special_7 = empty
+				pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t1
 				pwc_medium_tank_special_8 = empty
 			}
 		}
@@ -3420,7 +3430,7 @@ PWC_ai_design_medium_tank_gen2 = {
 				pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t2
 				pwc_medium_tank_special_5 = pwc_module_tank_fcs_t2
 				pwc_medium_tank_special_6 = pwc_module_tank_radio_t2
-				pwc_medium_tank_special_7 = empty
+				pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t2
 				pwc_medium_tank_special_8 = empty
 			}
 		}
@@ -3455,7 +3465,7 @@ PWC_ai_design_medium_tank_gen3 = {
 				pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t3
 				pwc_medium_tank_special_5 = pwc_module_tank_fcs_t3
 				pwc_medium_tank_special_6 = pwc_module_tank_radio_t3
-				pwc_medium_tank_special_7 = empty
+				pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t3
 				pwc_medium_tank_special_8 = empty
 			}
 		}
@@ -3490,7 +3500,7 @@ PWC_ai_design_medium_tank_gen4 = {
 				pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t4
 				pwc_medium_tank_special_5 = pwc_module_tank_fcs_t4
 				pwc_medium_tank_special_6 = pwc_module_tank_radio_t4
-				pwc_medium_tank_special_7 = empty
+				pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t4
 				pwc_medium_tank_special_8 = empty
 			}
 		}
@@ -3652,7 +3662,7 @@ PWC_ai_design_submarine_gen0 = {
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t0
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t0
 				pwc_submarine_missile_0 = empty
-				pwc_submarine_special_1 = empty
+				pwc_submarine_special_1 = pwc_module_navy_fuel_t0
 				pwc_submarine_special_2 = empty
 				pwc_submarine_special_3 = empty
 			}
@@ -3673,6 +3683,7 @@ PWC_ai_design_submarine_gen1 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t1 has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_submarine_t1 has_tech = pwc_tech_navy_t1 }
 			OR = { has_tech = pwc_tech_navy_fleet_t1 has_tech = pwc_tech_navy_submarine_t1 has_tech = pwc_tech_navy_t1 }
 			has_tech = pwc_tech_navy_submarine_t1
 			NOT = { OR = { has_tech = pwc_tech_navy_submarine_t2 has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_submarine_t4 } }
@@ -3686,7 +3697,7 @@ PWC_ai_design_submarine_gen1 = {
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t1
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t1
 				pwc_submarine_missile_0 = empty
-				pwc_submarine_special_1 = empty
+				pwc_submarine_special_1 = pwc_module_navy_fuel_t1
 				pwc_submarine_special_2 = empty
 				pwc_submarine_special_3 = empty
 			}
@@ -3707,6 +3718,7 @@ PWC_ai_design_submarine_gen2 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t2 has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_submarine_t2 has_tech = pwc_tech_navy_t2 }
 			OR = { has_tech = pwc_tech_navy_fleet_t2 has_tech = pwc_tech_navy_submarine_t2 has_tech = pwc_tech_navy_t2 }
 			has_tech = pwc_tech_navy_submarine_t2
 			NOT = { OR = { has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_submarine_t4 } }
@@ -3720,7 +3732,7 @@ PWC_ai_design_submarine_gen2 = {
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t2
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t2
 				pwc_submarine_missile_0 = empty
-				pwc_submarine_special_1 = empty
+				pwc_submarine_special_1 = pwc_module_navy_fuel_t2
 				pwc_submarine_special_2 = empty
 				pwc_submarine_special_3 = empty
 			}
@@ -3741,6 +3753,7 @@ PWC_ai_design_submarine_gen3 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t3 has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_t3 }
 			OR = { has_tech = pwc_tech_navy_fleet_t3 has_tech = pwc_tech_navy_submarine_t3 has_tech = pwc_tech_navy_t3 }
 			has_tech = pwc_tech_navy_submarine_t3
 			NOT = { OR = { has_tech = pwc_tech_navy_submarine_t4 } }
@@ -3754,7 +3767,7 @@ PWC_ai_design_submarine_gen3 = {
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t3
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t3
 				pwc_submarine_missile_0 = empty
-				pwc_submarine_special_1 = empty
+				pwc_submarine_special_1 = pwc_module_navy_fuel_t3
 				pwc_submarine_special_2 = empty
 				pwc_submarine_special_3 = empty
 			}
@@ -3825,6 +3838,7 @@ PWC_ai_design_submarine_gen4 = {
 			factor = 10
 		}
 		enable = {
+			OR = { has_tech = pwc_tech_navy_carrier_t4 has_tech = pwc_tech_navy_fleet_t4 has_tech = pwc_tech_navy_submarine_t4 has_tech = pwc_tech_navy_t4 }
 			OR = { has_tech = pwc_tech_navy_fleet_t4 has_tech = pwc_tech_navy_submarine_t4 has_tech = pwc_tech_navy_t4 }
 			has_tech = pwc_tech_navy_submarine_t4
 		}
@@ -3837,7 +3851,7 @@ PWC_ai_design_submarine_gen4 = {
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t4
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t4
 				pwc_submarine_missile_0 = empty
-				pwc_submarine_special_1 = empty
+				pwc_submarine_special_1 = pwc_module_navy_fuel_t4
 				pwc_submarine_special_2 = empty
 				pwc_submarine_special_3 = empty
 			}
@@ -3967,7 +3981,7 @@ PWC_ai_design_tank_destroyer_gen0 = {
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t0
 				pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t0
 				pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t0
-				pwc_tank_destroyer_special_6 = empty
+				pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t0
 				pwc_tank_destroyer_special_7 = empty
 				pwc_tank_destroyer_special_8 = empty
 			}
@@ -4002,7 +4016,7 @@ PWC_ai_design_tank_destroyer_gen1 = {
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
 				pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t1
 				pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t1
-				pwc_tank_destroyer_special_6 = empty
+				pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t1
 				pwc_tank_destroyer_special_7 = empty
 				pwc_tank_destroyer_special_8 = empty
 			}
@@ -4037,7 +4051,7 @@ PWC_ai_design_tank_destroyer_gen2 = {
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
 				pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t2
 				pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t2
-				pwc_tank_destroyer_special_6 = empty
+				pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t2
 				pwc_tank_destroyer_special_7 = empty
 				pwc_tank_destroyer_special_8 = empty
 			}
@@ -4072,7 +4086,7 @@ PWC_ai_design_tank_destroyer_gen3 = {
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t3
 				pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t3
 				pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t3
-				pwc_tank_destroyer_special_6 = empty
+				pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t3
 				pwc_tank_destroyer_special_7 = empty
 				pwc_tank_destroyer_special_8 = empty
 			}
@@ -4107,7 +4121,7 @@ PWC_ai_design_tank_destroyer_gen4 = {
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t4
 				pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t4
 				pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t4
-				pwc_tank_destroyer_special_6 = empty
+				pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t4
 				pwc_tank_destroyer_special_7 = empty
 				pwc_tank_destroyer_special_8 = empty
 			}
@@ -4215,7 +4229,7 @@ PWC_ai_design_uav_gen0 = {
 			modules = {
 				fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t0
 				fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t0
-				fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t0
+				fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t0
 				fixed_pwc_uav_weapon_3 = empty
 				pwc_uav_special_0 = empty
 				pwc_uav_special_1 = empty
@@ -4248,7 +4262,7 @@ PWC_ai_design_uav_gen1 = {
 			modules = {
 				fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t1
 				fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t1
-				fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t1
+				fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t1
 				fixed_pwc_uav_weapon_3 = empty
 				pwc_uav_special_0 = empty
 				pwc_uav_special_1 = empty
@@ -4281,7 +4295,7 @@ PWC_ai_design_uav_gen2 = {
 			modules = {
 				fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t2
 				fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t2
-				fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t2
+				fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t2
 				fixed_pwc_uav_weapon_3 = empty
 				pwc_uav_special_0 = empty
 				pwc_uav_special_1 = empty
@@ -4338,7 +4352,7 @@ PWC_ai_design_uav_gen3 = {
 			modules = {
 				fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t3
 				fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t3
-				fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t3
+				fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t3
 				fixed_pwc_uav_weapon_3 = empty
 				pwc_uav_special_0 = empty
 				pwc_uav_special_1 = empty
@@ -4443,7 +4457,7 @@ PWC_ai_design_uav_gen4 = {
 			modules = {
 				fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t4
 				fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t4
-				fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t4
+				fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t4
 				fixed_pwc_uav_weapon_3 = empty
 				pwc_uav_special_0 = empty
 				pwc_uav_special_1 = empty

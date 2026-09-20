@@ -109,11 +109,12 @@ instant_effect = {
 		modules = {
 			pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t0
 			pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t0
-			pwc_light_tank_suspension_2 = pwc_module_tank_suspension_t0
+			pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t0
 			pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t0
 			pwc_light_tank_engine_4 = pwc_module_tank_light_power_t0
 			pwc_light_tank_special_5 = pwc_module_tank_fcs_t0
 			pwc_light_tank_special_6 = pwc_module_tank_radio_t0
+			pwc_light_tank_special_7 = pwc_module_tank_smoke_t0
 		}
 	}
 	create_equipment_variant = {
@@ -127,6 +128,7 @@ instant_effect = {
 			pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t0
 			pwc_medium_tank_special_5 = pwc_module_tank_fcs_t0
 			pwc_medium_tank_special_6 = pwc_module_tank_radio_t0
+			pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t0
 		}
 	}
 	create_equipment_variant = {
@@ -140,6 +142,7 @@ instant_effect = {
 			pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t0
 			pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t0
 			pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t0
+			pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t0
 		}
 	}
 	create_equipment_variant = {
@@ -152,6 +155,7 @@ instant_effect = {
 			pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t0
 			pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t0
 			pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t0
+			pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t0
 		}
 	}
 	create_equipment_variant = {
@@ -162,6 +166,7 @@ instant_effect = {
 			fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t0
 			fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t0
 			fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t0
+			pwc_fighter_special_0 = pwc_module_air_irst_t0
 		}
 	}
 	create_equipment_variant = {
@@ -172,6 +177,7 @@ instant_effect = {
 			fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t0
 			fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t0
 			fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t0
+			pwc_cas_special_0 = pwc_module_air_armor_t0
 		}
 	}
 	create_equipment_variant = {
@@ -180,7 +186,7 @@ instant_effect = {
 		modules = {
 			fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t0
 			fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t0
-			fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t0
+			fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t0
 			fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t0
 			fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t0
 		}
@@ -191,7 +197,7 @@ instant_effect = {
 		modules = {
 			fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t0
 			fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t0
-			fixed_pwc_uav_weapon_2 = pwc_module_air_ground_t0
+			fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t0
 		}
 	}
 	create_equipment_variant = {
@@ -205,6 +211,7 @@ instant_effect = {
 			pwc_destroyer_missile_0 = pwc_module_navy_anti_ship_t0
 			pwc_destroyer_missile_1 = pwc_module_navy_sam_t0
 			pwc_destroyer_missile_2 = pwc_module_navy_asw_t0
+			pwc_destroyer_special_3 = pwc_module_navy_decoy_t0
 		}
 	}
 	create_equipment_variant = {
@@ -217,6 +224,7 @@ instant_effect = {
 			fixed_pwc_cruiser_sonar_3 = pwc_module_navy_sonar_hull_t0
 			pwc_cruiser_missile_0 = pwc_module_navy_anti_ship_t0
 			pwc_cruiser_missile_1 = pwc_module_navy_sam_t0
+			pwc_cruiser_missile_2 = pwc_module_navy_ciws_t0
 		}
 	}
 	create_equipment_variant = {
@@ -226,6 +234,7 @@ instant_effect = {
 			fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t0
 			fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t0
 			fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t0
+			pwc_submarine_special_1 = pwc_module_navy_fuel_t0
 		}
 	}
 	create_equipment_variant = {
@@ -236,6 +245,7 @@ instant_effect = {
 			fixed_pwc_carrier_engine_1 = pwc_module_navy_carrier_cruise_t0
 			fixed_pwc_carrier_radar_2 = pwc_module_navy_radar_t0
 			pwc_carrier_missile_0 = pwc_module_navy_sam_t0
+			pwc_carrier_missile_1 = pwc_module_navy_point_sam_t0
 			pwc_carrier_special_2 = pwc_module_navy_hangar_t0
 		}
 	}
@@ -247,6 +257,7 @@ instant_effect = {
 			fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t0
 			fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t0
 			fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t0
+			pwc_cv_fighter_special_0 = pwc_module_air_irst_t0
 		}
 	}
 	create_equipment_variant = {
@@ -257,6 +268,7 @@ instant_effect = {
 			fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t0
 			fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t0
 			fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t0
+			pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t0
 		}
 	}
 	add_equipment_to_stockpile = {

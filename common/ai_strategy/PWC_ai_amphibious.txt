@@ -212,29 +212,24 @@ PWC_amphibious_sea_control_30 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_30 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 224
-                            state = 238
-                            state = 240
-                            state = 244
-                            state = 275
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_30 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 30 value = 85 }
+}
+PWC_amphibious_home_sea_control_30 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_30 = yes
+        pwc_st_naval_enemy_coast_region_30 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 30 value = 20 }
 }
 PWC_amphibious_sea_control_31 = {
     allowed = { always = yes }
@@ -244,31 +239,24 @@ PWC_amphibious_sea_control_31 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_31 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 224
-                            state = 244
-                            state = 246
-                            state = 250
-                            state = 254
-                            state = 259
-                            state = 265
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_31 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 31 value = 85 }
+}
+PWC_amphibious_home_sea_control_31 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_31 = yes
+        pwc_st_naval_enemy_coast_region_31 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 31 value = 20 }
 }
 PWC_amphibious_sea_control_32 = {
     allowed = { always = yes }
@@ -278,34 +266,24 @@ PWC_amphibious_sea_control_32 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_32 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 212
-                            state = 226
-                            state = 230
-                            state = 231
-                            state = 233
-                            state = 242
-                            state = 246
-                            state = 254
-                            state = 257
-                            state = 266
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_32 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 32 value = 85 }
+}
+PWC_amphibious_home_sea_control_32 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_32 = yes
+        pwc_st_naval_enemy_coast_region_32 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 32 value = 20 }
 }
 PWC_amphibious_sea_control_33 = {
     allowed = { always = yes }
@@ -315,33 +293,24 @@ PWC_amphibious_sea_control_33 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_33 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 197
-                            state = 200
-                            state = 205
-                            state = 212
-                            state = 213
-                            state = 214
-                            state = 215
-                            state = 216
-                            state = 219
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_33 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 33 value = 85 }
+}
+PWC_amphibious_home_sea_control_33 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_33 = yes
+        pwc_st_naval_enemy_coast_region_33 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 33 value = 20 }
 }
 PWC_amphibious_sea_control_34 = {
     allowed = { always = yes }
@@ -351,48 +320,26 @@ PWC_amphibious_sea_control_34 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_34 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 353
-                            state = 355
-                            state = 357
-                            state = 359
-                            state = 360
-                            state = 364
-                            state = 369
-                            state = 370
-                            state = 371
-                            state = 372
-                            state = 373
-                            state = 374
-                            state = 375
-                            state = 377
-                            state = 379
-                            state = 380
-                            state = 381
-                            state = 383
-                            state = 384
-                            state = 385
-                            state = 387
-                            state = 388
-                            state = 391
-                            state = 513
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_hainan_needed = no
+        pwc_st_naval_enemy_coast_region_34 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 34 value = 85 }
+}
+PWC_amphibious_home_sea_control_34 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_hainan_needed = no
+        pwc_st_naval_port_region_34 = yes
+        pwc_st_naval_enemy_coast_region_34 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 34 value = 20 }
 }
 PWC_amphibious_sea_control_35 = {
     allowed = { always = yes }
@@ -402,59 +349,24 @@ PWC_amphibious_sea_control_35 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_35 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 205
-                            state = 216
-                            state = 221
-                            state = 228
-                            state = 237
-                            state = 248
-                            state = 255
-                            state = 256
-                            state = 258
-                            state = 276
-                            state = 289
-                            state = 306
-                            state = 319
-                            state = 328
-                            state = 330
-                            state = 336
-                            state = 338
-                            state = 343
-                            state = 348
-                            state = 352
-                            state = 353
-                            state = 358
-                            state = 361
-                            state = 362
-                            state = 505
-                            state = 506
-                            state = 507
-                            state = 508
-                            state = 510
-                            state = 511
-                            state = 512
-                            state = 513
-                            state = 524
-                            state = 525
-                            state = 526
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_35 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 35 value = 85 }
+}
+PWC_amphibious_home_sea_control_35 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_35 = yes
+        pwc_st_naval_enemy_coast_region_35 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 35 value = 20 }
 }
 PWC_amphibious_sea_control_36 = {
     allowed = { always = yes }
@@ -464,33 +376,24 @@ PWC_amphibious_sea_control_36 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_36 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 73
-                            state = 83
-                            state = 111
-                            state = 115
-                            state = 126
-                            state = 143
-                            state = 163
-                            state = 176
-                            state = 205
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_36 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 36 value = 85 }
+}
+PWC_amphibious_home_sea_control_36 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_36 = yes
+        pwc_st_naval_enemy_coast_region_36 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 36 value = 20 }
 }
 PWC_amphibious_sea_control_37 = {
     allowed = { always = yes }
@@ -500,37 +403,52 @@ PWC_amphibious_sea_control_37 = {
         OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
         pwc_st_naval_combat_fleet = yes
         pwc_st_naval_port = yes
-        OR = {
-            pwc_st_naval_port_region_37 = yes
-            AND = {
-                pwc_st_naval_planning_needed = yes
-                any_enemy_country = {
-                    pwc_st_naval_target_coast = yes
-                    any_owned_state = {
-                        OR = {
-                            state = 64
-                            state = 69
-                            state = 72
-                            state = 75
-                            state = 78
-                            state = 79
-                            state = 82
-                            state = 83
-                            state = 96
-                            state = 106
-                            state = 108
-                            state = 111
-                            state = 118
-                        }
-                        is_coastal = yes
-                        NOT = { is_fully_controlled_by = ROOT }
-                    }
-                }
-            }
-        }
+        pwc_st_naval_enemy_coast_region_37 = yes
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 37 value = 85 }
+}
+PWC_amphibious_home_sea_control_37 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = { has_war = yes has_country_flag = pwc_flag_warning_active }
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port = yes
+        pwc_st_naval_port_region_37 = yes
+        pwc_st_naval_enemy_coast_region_37 = no
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 37 value = 20 }
+}
+PWC_amphibious_hainan_sea_control = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_hainan_needed = yes
+        pwc_st_naval_combat_fleet = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 34 value = 95 }
+}
+PWC_amphibious_landing_hainan = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_hainan_needed = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = invasion_unit_request
+        state = 385
+        state = 387
+        state = 388
+        state = 391
+        value = 60
+    }
 }
 PWC_amphibious_naval_planning = {
     allowed = { always = yes }
@@ -552,7 +470,12 @@ PWC_amphibious_invasion_target_U00 = {
         has_war_with = U00
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U00 = { pwc_st_naval_target_coast = yes }
+        U00 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U00 value = 80 }
@@ -565,7 +488,12 @@ PWC_amphibious_invasion_target_U01 = {
         has_war_with = U01
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U01 = { pwc_st_naval_target_coast = yes }
+        U01 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U01 value = 80 }
@@ -578,7 +506,12 @@ PWC_amphibious_invasion_target_U02 = {
         has_war_with = U02
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U02 = { pwc_st_naval_target_coast = yes }
+        U02 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U02 value = 80 }
@@ -591,7 +524,12 @@ PWC_amphibious_invasion_target_U03 = {
         has_war_with = U03
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U03 = { pwc_st_naval_target_coast = yes }
+        U03 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U03 value = 80 }
@@ -604,7 +542,12 @@ PWC_amphibious_invasion_target_U04 = {
         has_war_with = U04
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U04 = { pwc_st_naval_target_coast = yes }
+        U04 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U04 value = 80 }
@@ -617,7 +560,12 @@ PWC_amphibious_invasion_target_U05 = {
         has_war_with = U05
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U05 = { pwc_st_naval_target_coast = yes }
+        U05 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U05 value = 80 }
@@ -630,7 +578,12 @@ PWC_amphibious_invasion_target_U06 = {
         has_war_with = U06
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U06 = { pwc_st_naval_target_coast = yes }
+        U06 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U06 value = 80 }
@@ -643,7 +596,12 @@ PWC_amphibious_invasion_target_U07 = {
         has_war_with = U07
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U07 = { pwc_st_naval_target_coast = yes }
+        U07 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U07 value = 80 }
@@ -656,7 +614,12 @@ PWC_amphibious_invasion_target_U08 = {
         has_war_with = U08
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U08 = { pwc_st_naval_target_coast = yes }
+        U08 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U08 value = 80 }
@@ -669,7 +632,12 @@ PWC_amphibious_invasion_target_U09 = {
         has_war_with = U09
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U09 = { pwc_st_naval_target_coast = yes }
+        U09 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U09 value = 80 }
@@ -682,7 +650,12 @@ PWC_amphibious_invasion_target_U10 = {
         has_war_with = U10
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U10 = { pwc_st_naval_target_coast = yes }
+        U10 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U10 value = 80 }
@@ -695,7 +668,12 @@ PWC_amphibious_invasion_target_U11 = {
         has_war_with = U11
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U11 = { pwc_st_naval_target_coast = yes }
+        U11 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U11 value = 80 }
@@ -708,7 +686,12 @@ PWC_amphibious_invasion_target_U12 = {
         has_war_with = U12
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U12 = { pwc_st_naval_target_coast = yes }
+        U12 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U12 value = 80 }
@@ -721,7 +704,12 @@ PWC_amphibious_invasion_target_U13 = {
         has_war_with = U13
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U13 = { pwc_st_naval_target_coast = yes }
+        U13 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U13 value = 80 }
@@ -734,7 +722,12 @@ PWC_amphibious_invasion_target_U14 = {
         has_war_with = U14
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U14 = { pwc_st_naval_target_coast = yes }
+        U14 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U14 value = 80 }
@@ -747,7 +740,12 @@ PWC_amphibious_invasion_target_U15 = {
         has_war_with = U15
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U15 = { pwc_st_naval_target_coast = yes }
+        U15 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U15 value = 80 }
@@ -760,7 +758,12 @@ PWC_amphibious_invasion_target_U16 = {
         has_war_with = U16
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U16 = { pwc_st_naval_target_coast = yes }
+        U16 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U16 value = 80 }
@@ -773,7 +776,12 @@ PWC_amphibious_invasion_target_U17 = {
         has_war_with = U17
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U17 = { pwc_st_naval_target_coast = yes }
+        U17 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U17 value = 80 }
@@ -786,7 +794,12 @@ PWC_amphibious_invasion_target_U18 = {
         has_war_with = U18
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U18 = { pwc_st_naval_target_coast = yes }
+        U18 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U18 value = 80 }
@@ -799,7 +812,12 @@ PWC_amphibious_invasion_target_U19 = {
         has_war_with = U19
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U19 = { pwc_st_naval_target_coast = yes }
+        U19 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U19 value = 80 }
@@ -812,7 +830,12 @@ PWC_amphibious_invasion_target_U20 = {
         has_war_with = U20
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U20 = { pwc_st_naval_target_coast = yes }
+        U20 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U20 value = 80 }
@@ -825,7 +848,12 @@ PWC_amphibious_invasion_target_U21 = {
         has_war_with = U21
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U21 = { pwc_st_naval_target_coast = yes }
+        U21 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U21 value = 80 }
@@ -838,7 +866,12 @@ PWC_amphibious_invasion_target_U22 = {
         has_war_with = U22
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U22 = { pwc_st_naval_target_coast = yes }
+        U22 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U22 value = 80 }
@@ -851,7 +884,12 @@ PWC_amphibious_invasion_target_U23 = {
         has_war_with = U23
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U23 = { pwc_st_naval_target_coast = yes }
+        U23 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U23 value = 80 }
@@ -864,7 +902,12 @@ PWC_amphibious_invasion_target_U24 = {
         has_war_with = U24
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U24 = { pwc_st_naval_target_coast = yes }
+        U24 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U24 value = 80 }
@@ -877,7 +920,12 @@ PWC_amphibious_invasion_target_U25 = {
         has_war_with = U25
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U25 = { pwc_st_naval_target_coast = yes }
+        U25 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U25 value = 80 }
@@ -890,7 +938,12 @@ PWC_amphibious_invasion_target_U26 = {
         has_war_with = U26
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U26 = { pwc_st_naval_target_coast = yes }
+        U26 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U26 value = 80 }
@@ -903,7 +956,12 @@ PWC_amphibious_invasion_target_U27 = {
         has_war_with = U27
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U27 = { pwc_st_naval_target_coast = yes }
+        U27 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U27 value = 80 }
@@ -916,7 +974,12 @@ PWC_amphibious_invasion_target_U28 = {
         has_war_with = U28
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U28 = { pwc_st_naval_target_coast = yes }
+        U28 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U28 value = 80 }
@@ -929,7 +992,12 @@ PWC_amphibious_invasion_target_U29 = {
         has_war_with = U29
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U29 = { pwc_st_naval_target_coast = yes }
+        U29 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U29 value = 80 }
@@ -942,7 +1010,12 @@ PWC_amphibious_invasion_target_U30 = {
         has_war_with = U30
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U30 = { pwc_st_naval_target_coast = yes }
+        U30 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U30 value = 80 }
@@ -955,7 +1028,12 @@ PWC_amphibious_invasion_target_U31 = {
         has_war_with = U31
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U31 = { pwc_st_naval_target_coast = yes }
+        U31 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U31 value = 80 }
@@ -968,7 +1046,12 @@ PWC_amphibious_invasion_target_U32 = {
         has_war_with = U32
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U32 = { pwc_st_naval_target_coast = yes }
+        U32 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U32 value = 80 }
@@ -981,7 +1064,12 @@ PWC_amphibious_invasion_target_U33 = {
         has_war_with = U33
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U33 = { pwc_st_naval_target_coast = yes }
+        U33 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U33 value = 80 }
@@ -994,7 +1082,12 @@ PWC_amphibious_invasion_target_U34 = {
         has_war_with = U34
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U34 = { pwc_st_naval_target_coast = yes }
+        U34 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U34 value = 80 }
@@ -1007,7 +1100,12 @@ PWC_amphibious_invasion_target_U35 = {
         has_war_with = U35
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U35 = { pwc_st_naval_target_coast = yes }
+        U35 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U35 value = 80 }
@@ -1020,7 +1118,12 @@ PWC_amphibious_invasion_target_U36 = {
         has_war_with = U36
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U36 = { pwc_st_naval_target_coast = yes }
+        U36 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U36 value = 80 }
@@ -1033,7 +1136,12 @@ PWC_amphibious_invasion_target_U37 = {
         has_war_with = U37
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U37 = { pwc_st_naval_target_coast = yes }
+        U37 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U37 value = 80 }
@@ -1046,7 +1154,12 @@ PWC_amphibious_invasion_target_U38 = {
         has_war_with = U38
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U38 = { pwc_st_naval_target_coast = yes }
+        U38 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U38 value = 80 }
@@ -1059,7 +1172,12 @@ PWC_amphibious_invasion_target_U39 = {
         has_war_with = U39
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U39 = { pwc_st_naval_target_coast = yes }
+        U39 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U39 value = 80 }
@@ -1072,7 +1190,12 @@ PWC_amphibious_invasion_target_U40 = {
         has_war_with = U40
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U40 = { pwc_st_naval_target_coast = yes }
+        U40 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U40 value = 80 }
@@ -1085,7 +1208,12 @@ PWC_amphibious_invasion_target_U41 = {
         has_war_with = U41
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U41 = { pwc_st_naval_target_coast = yes }
+        U41 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U41 value = 80 }
@@ -1098,7 +1226,12 @@ PWC_amphibious_invasion_target_U42 = {
         has_war_with = U42
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U42 = { pwc_st_naval_target_coast = yes }
+        U42 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U42 value = 80 }
@@ -1111,7 +1244,12 @@ PWC_amphibious_invasion_target_U43 = {
         has_war_with = U43
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U43 = { pwc_st_naval_target_coast = yes }
+        U43 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U43 value = 80 }
@@ -1124,7 +1262,12 @@ PWC_amphibious_invasion_target_U44 = {
         has_war_with = U44
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U44 = { pwc_st_naval_target_coast = yes }
+        U44 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U44 value = 80 }
@@ -1137,7 +1280,12 @@ PWC_amphibious_invasion_target_U45 = {
         has_war_with = U45
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U45 = { pwc_st_naval_target_coast = yes }
+        U45 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U45 value = 80 }
@@ -1150,7 +1298,12 @@ PWC_amphibious_invasion_target_U46 = {
         has_war_with = U46
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U46 = { pwc_st_naval_target_coast = yes }
+        U46 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U46 value = 80 }
@@ -1163,7 +1316,12 @@ PWC_amphibious_invasion_target_U47 = {
         has_war_with = U47
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U47 = { pwc_st_naval_target_coast = yes }
+        U47 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U47 value = 80 }
@@ -1176,7 +1334,12 @@ PWC_amphibious_invasion_target_U48 = {
         has_war_with = U48
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U48 = { pwc_st_naval_target_coast = yes }
+        U48 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U48 value = 80 }
@@ -1189,7 +1352,12 @@ PWC_amphibious_invasion_target_U49 = {
         has_war_with = U49
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U49 = { pwc_st_naval_target_coast = yes }
+        U49 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U49 value = 80 }
@@ -1202,7 +1370,12 @@ PWC_amphibious_invasion_target_U50 = {
         has_war_with = U50
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U50 = { pwc_st_naval_target_coast = yes }
+        U50 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U50 value = 80 }
@@ -1215,7 +1388,12 @@ PWC_amphibious_invasion_target_U51 = {
         has_war_with = U51
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U51 = { pwc_st_naval_target_coast = yes }
+        U51 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U51 value = 80 }
@@ -1228,7 +1406,12 @@ PWC_amphibious_invasion_target_U52 = {
         has_war_with = U52
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U52 = { pwc_st_naval_target_coast = yes }
+        U52 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U52 value = 80 }
@@ -1241,7 +1424,12 @@ PWC_amphibious_invasion_target_U53 = {
         has_war_with = U53
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U53 = { pwc_st_naval_target_coast = yes }
+        U53 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U53 value = 80 }
@@ -1254,7 +1442,12 @@ PWC_amphibious_invasion_target_U54 = {
         has_war_with = U54
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U54 = { pwc_st_naval_target_coast = yes }
+        U54 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U54 value = 80 }
@@ -1267,7 +1460,12 @@ PWC_amphibious_invasion_target_U55 = {
         has_war_with = U55
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U55 = { pwc_st_naval_target_coast = yes }
+        U55 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U55 value = 80 }
@@ -1280,7 +1478,12 @@ PWC_amphibious_invasion_target_U56 = {
         has_war_with = U56
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U56 = { pwc_st_naval_target_coast = yes }
+        U56 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U56 value = 80 }
@@ -1293,7 +1496,12 @@ PWC_amphibious_invasion_target_U57 = {
         has_war_with = U57
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U57 = { pwc_st_naval_target_coast = yes }
+        U57 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U57 value = 80 }
@@ -1306,7 +1514,12 @@ PWC_amphibious_invasion_target_U58 = {
         has_war_with = U58
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U58 = { pwc_st_naval_target_coast = yes }
+        U58 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U58 value = 80 }
@@ -1319,7 +1532,12 @@ PWC_amphibious_invasion_target_U59 = {
         has_war_with = U59
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U59 = { pwc_st_naval_target_coast = yes }
+        U59 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U59 value = 80 }
@@ -1332,7 +1550,12 @@ PWC_amphibious_invasion_target_U60 = {
         has_war_with = U60
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U60 = { pwc_st_naval_target_coast = yes }
+        U60 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U60 value = 80 }
@@ -1345,7 +1568,12 @@ PWC_amphibious_invasion_target_U61 = {
         has_war_with = U61
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U61 = { pwc_st_naval_target_coast = yes }
+        U61 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U61 value = 80 }
@@ -1358,7 +1586,12 @@ PWC_amphibious_invasion_target_U62 = {
         has_war_with = U62
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U62 = { pwc_st_naval_target_coast = yes }
+        U62 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U62 value = 80 }
@@ -1371,7 +1604,12 @@ PWC_amphibious_invasion_target_U63 = {
         has_war_with = U63
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U63 = { pwc_st_naval_target_coast = yes }
+        U63 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U63 value = 80 }
@@ -1384,7 +1622,12 @@ PWC_amphibious_invasion_target_U64 = {
         has_war_with = U64
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U64 = { pwc_st_naval_target_coast = yes }
+        U64 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U64 value = 80 }
@@ -1397,7 +1640,12 @@ PWC_amphibious_invasion_target_U65 = {
         has_war_with = U65
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U65 = { pwc_st_naval_target_coast = yes }
+        U65 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U65 value = 80 }
@@ -1410,7 +1658,12 @@ PWC_amphibious_invasion_target_U66 = {
         has_war_with = U66
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U66 = { pwc_st_naval_target_coast = yes }
+        U66 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U66 value = 80 }
@@ -1423,7 +1676,12 @@ PWC_amphibious_invasion_target_U67 = {
         has_war_with = U67
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U67 = { pwc_st_naval_target_coast = yes }
+        U67 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U67 value = 80 }
@@ -1436,7 +1694,12 @@ PWC_amphibious_invasion_target_U68 = {
         has_war_with = U68
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U68 = { pwc_st_naval_target_coast = yes }
+        U68 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U68 value = 80 }
@@ -1449,7 +1712,12 @@ PWC_amphibious_invasion_target_U69 = {
         has_war_with = U69
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U69 = { pwc_st_naval_target_coast = yes }
+        U69 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U69 value = 80 }
@@ -1462,7 +1730,12 @@ PWC_amphibious_invasion_target_U70 = {
         has_war_with = U70
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U70 = { pwc_st_naval_target_coast = yes }
+        U70 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U70 value = 80 }
@@ -1475,7 +1748,12 @@ PWC_amphibious_invasion_target_U71 = {
         has_war_with = U71
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U71 = { pwc_st_naval_target_coast = yes }
+        U71 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U71 value = 80 }
@@ -1488,7 +1766,12 @@ PWC_amphibious_invasion_target_U72 = {
         has_war_with = U72
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U72 = { pwc_st_naval_target_coast = yes }
+        U72 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U72 value = 80 }
@@ -1501,7 +1784,12 @@ PWC_amphibious_invasion_target_U73 = {
         has_war_with = U73
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U73 = { pwc_st_naval_target_coast = yes }
+        U73 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U73 value = 80 }
@@ -1514,7 +1802,12 @@ PWC_amphibious_invasion_target_U74 = {
         has_war_with = U74
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U74 = { pwc_st_naval_target_coast = yes }
+        U74 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U74 value = 80 }
@@ -1527,7 +1820,12 @@ PWC_amphibious_invasion_target_U75 = {
         has_war_with = U75
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U75 = { pwc_st_naval_target_coast = yes }
+        U75 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U75 value = 80 }
@@ -1540,7 +1838,12 @@ PWC_amphibious_invasion_target_U76 = {
         has_war_with = U76
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U76 = { pwc_st_naval_target_coast = yes }
+        U76 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U76 value = 80 }
@@ -1553,7 +1856,12 @@ PWC_amphibious_invasion_target_U77 = {
         has_war_with = U77
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U77 = { pwc_st_naval_target_coast = yes }
+        U77 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U77 value = 80 }
@@ -1566,7 +1874,12 @@ PWC_amphibious_invasion_target_U78 = {
         has_war_with = U78
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U78 = { pwc_st_naval_target_coast = yes }
+        U78 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U78 value = 80 }
@@ -1579,7 +1892,12 @@ PWC_amphibious_invasion_target_U79 = {
         has_war_with = U79
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U79 = { pwc_st_naval_target_coast = yes }
+        U79 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U79 value = 80 }
@@ -1592,7 +1910,12 @@ PWC_amphibious_invasion_target_U80 = {
         has_war_with = U80
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U80 = { pwc_st_naval_target_coast = yes }
+        U80 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U80 value = 80 }
@@ -1605,7 +1928,12 @@ PWC_amphibious_invasion_target_U81 = {
         has_war_with = U81
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U81 = { pwc_st_naval_target_coast = yes }
+        U81 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U81 value = 80 }
@@ -1618,7 +1946,12 @@ PWC_amphibious_invasion_target_U82 = {
         has_war_with = U82
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U82 = { pwc_st_naval_target_coast = yes }
+        U82 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U82 value = 80 }
@@ -1631,7 +1964,12 @@ PWC_amphibious_invasion_target_U83 = {
         has_war_with = U83
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U83 = { pwc_st_naval_target_coast = yes }
+        U83 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U83 value = 80 }
@@ -1644,7 +1982,12 @@ PWC_amphibious_invasion_target_U84 = {
         has_war_with = U84
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U84 = { pwc_st_naval_target_coast = yes }
+        U84 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U84 value = 80 }
@@ -1657,7 +2000,12 @@ PWC_amphibious_invasion_target_U85 = {
         has_war_with = U85
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U85 = { pwc_st_naval_target_coast = yes }
+        U85 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U85 value = 80 }
@@ -1670,7 +2018,12 @@ PWC_amphibious_invasion_target_U86 = {
         has_war_with = U86
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U86 = { pwc_st_naval_target_coast = yes }
+        U86 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U86 value = 80 }
@@ -1683,7 +2036,12 @@ PWC_amphibious_invasion_target_U87 = {
         has_war_with = U87
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U87 = { pwc_st_naval_target_coast = yes }
+        U87 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U87 value = 80 }
@@ -1696,7 +2054,12 @@ PWC_amphibious_invasion_target_U88 = {
         has_war_with = U88
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U88 = { pwc_st_naval_target_coast = yes }
+        U88 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U88 value = 80 }
@@ -1709,7 +2072,12 @@ PWC_amphibious_invasion_target_U89 = {
         has_war_with = U89
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U89 = { pwc_st_naval_target_coast = yes }
+        U89 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U89 value = 80 }
@@ -1722,7 +2090,12 @@ PWC_amphibious_invasion_target_U90 = {
         has_war_with = U90
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U90 = { pwc_st_naval_target_coast = yes }
+        U90 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U90 value = 80 }
@@ -1735,7 +2108,12 @@ PWC_amphibious_invasion_target_U91 = {
         has_war_with = U91
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U91 = { pwc_st_naval_target_coast = yes }
+        U91 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U91 value = 80 }
@@ -1748,7 +2126,12 @@ PWC_amphibious_invasion_target_U92 = {
         has_war_with = U92
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U92 = { pwc_st_naval_target_coast = yes }
+        U92 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U92 value = 80 }
@@ -1761,7 +2144,12 @@ PWC_amphibious_invasion_target_U93 = {
         has_war_with = U93
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U93 = { pwc_st_naval_target_coast = yes }
+        U93 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U93 value = 80 }
@@ -1774,7 +2162,12 @@ PWC_amphibious_invasion_target_U94 = {
         has_war_with = U94
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U94 = { pwc_st_naval_target_coast = yes }
+        U94 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U94 value = 80 }
@@ -1787,7 +2180,12 @@ PWC_amphibious_invasion_target_U95 = {
         has_war_with = U95
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U95 = { pwc_st_naval_target_coast = yes }
+        U95 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U95 value = 80 }
@@ -1800,7 +2198,12 @@ PWC_amphibious_invasion_target_U96 = {
         has_war_with = U96
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U96 = { pwc_st_naval_target_coast = yes }
+        U96 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U96 value = 80 }
@@ -1813,7 +2216,12 @@ PWC_amphibious_invasion_target_U97 = {
         has_war_with = U97
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U97 = { pwc_st_naval_target_coast = yes }
+        U97 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U97 value = 80 }
@@ -1826,7 +2234,12 @@ PWC_amphibious_invasion_target_U98 = {
         has_war_with = U98
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U98 = { pwc_st_naval_target_coast = yes }
+        U98 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U98 value = 80 }
@@ -1839,7 +2252,12 @@ PWC_amphibious_invasion_target_U99 = {
         has_war_with = U99
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        U99 = { pwc_st_naval_target_coast = yes }
+        U99 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = U99 value = 80 }
@@ -1852,7 +2270,12 @@ PWC_amphibious_invasion_target_V00 = {
         has_war_with = V00
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V00 = { pwc_st_naval_target_coast = yes }
+        V00 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V00 value = 80 }
@@ -1865,7 +2288,12 @@ PWC_amphibious_invasion_target_V01 = {
         has_war_with = V01
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V01 = { pwc_st_naval_target_coast = yes }
+        V01 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V01 value = 80 }
@@ -1878,7 +2306,12 @@ PWC_amphibious_invasion_target_V02 = {
         has_war_with = V02
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V02 = { pwc_st_naval_target_coast = yes }
+        V02 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V02 value = 80 }
@@ -1891,7 +2324,12 @@ PWC_amphibious_invasion_target_V03 = {
         has_war_with = V03
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V03 = { pwc_st_naval_target_coast = yes }
+        V03 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V03 value = 80 }
@@ -1904,7 +2342,12 @@ PWC_amphibious_invasion_target_V04 = {
         has_war_with = V04
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V04 = { pwc_st_naval_target_coast = yes }
+        V04 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V04 value = 80 }
@@ -1917,7 +2360,12 @@ PWC_amphibious_invasion_target_V05 = {
         has_war_with = V05
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V05 = { pwc_st_naval_target_coast = yes }
+        V05 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V05 value = 80 }
@@ -1930,7 +2378,12 @@ PWC_amphibious_invasion_target_V06 = {
         has_war_with = V06
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V06 = { pwc_st_naval_target_coast = yes }
+        V06 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V06 value = 80 }
@@ -1943,7 +2396,12 @@ PWC_amphibious_invasion_target_V07 = {
         has_war_with = V07
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V07 = { pwc_st_naval_target_coast = yes }
+        V07 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V07 value = 80 }
@@ -1956,7 +2414,12 @@ PWC_amphibious_invasion_target_V08 = {
         has_war_with = V08
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V08 = { pwc_st_naval_target_coast = yes }
+        V08 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V08 value = 80 }
@@ -1969,7 +2432,12 @@ PWC_amphibious_invasion_target_V09 = {
         has_war_with = V09
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V09 = { pwc_st_naval_target_coast = yes }
+        V09 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V09 value = 80 }
@@ -1982,7 +2450,12 @@ PWC_amphibious_invasion_target_V10 = {
         has_war_with = V10
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V10 = { pwc_st_naval_target_coast = yes }
+        V10 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V10 value = 80 }
@@ -1995,7 +2468,12 @@ PWC_amphibious_invasion_target_V11 = {
         has_war_with = V11
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V11 = { pwc_st_naval_target_coast = yes }
+        V11 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V11 value = 80 }
@@ -2008,7 +2486,12 @@ PWC_amphibious_invasion_target_V12 = {
         has_war_with = V12
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V12 = { pwc_st_naval_target_coast = yes }
+        V12 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V12 value = 80 }
@@ -2021,7 +2504,12 @@ PWC_amphibious_invasion_target_V13 = {
         has_war_with = V13
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V13 = { pwc_st_naval_target_coast = yes }
+        V13 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V13 value = 80 }
@@ -2034,7 +2522,12 @@ PWC_amphibious_invasion_target_V14 = {
         has_war_with = V14
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V14 = { pwc_st_naval_target_coast = yes }
+        V14 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V14 value = 80 }
@@ -2047,7 +2540,12 @@ PWC_amphibious_invasion_target_V15 = {
         has_war_with = V15
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V15 = { pwc_st_naval_target_coast = yes }
+        V15 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V15 value = 80 }
@@ -2060,7 +2558,12 @@ PWC_amphibious_invasion_target_V16 = {
         has_war_with = V16
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V16 = { pwc_st_naval_target_coast = yes }
+        V16 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V16 value = 80 }
@@ -2073,7 +2576,12 @@ PWC_amphibious_invasion_target_V17 = {
         has_war_with = V17
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V17 = { pwc_st_naval_target_coast = yes }
+        V17 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V17 value = 80 }
@@ -2086,7 +2594,12 @@ PWC_amphibious_invasion_target_V18 = {
         has_war_with = V18
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V18 = { pwc_st_naval_target_coast = yes }
+        V18 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V18 value = 80 }
@@ -2099,7 +2612,12 @@ PWC_amphibious_invasion_target_V19 = {
         has_war_with = V19
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V19 = { pwc_st_naval_target_coast = yes }
+        V19 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V19 value = 80 }
@@ -2112,7 +2630,12 @@ PWC_amphibious_invasion_target_V20 = {
         has_war_with = V20
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V20 = { pwc_st_naval_target_coast = yes }
+        V20 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V20 value = 80 }
@@ -2125,7 +2648,12 @@ PWC_amphibious_invasion_target_V21 = {
         has_war_with = V21
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V21 = { pwc_st_naval_target_coast = yes }
+        V21 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V21 value = 80 }
@@ -2138,7 +2666,12 @@ PWC_amphibious_invasion_target_V22 = {
         has_war_with = V22
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V22 = { pwc_st_naval_target_coast = yes }
+        V22 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V22 value = 80 }
@@ -2151,7 +2684,12 @@ PWC_amphibious_invasion_target_V23 = {
         has_war_with = V23
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V23 = { pwc_st_naval_target_coast = yes }
+        V23 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V23 value = 80 }
@@ -2164,7 +2702,12 @@ PWC_amphibious_invasion_target_V24 = {
         has_war_with = V24
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V24 = { pwc_st_naval_target_coast = yes }
+        V24 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V24 value = 80 }
@@ -2177,7 +2720,12 @@ PWC_amphibious_invasion_target_V25 = {
         has_war_with = V25
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V25 = { pwc_st_naval_target_coast = yes }
+        V25 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V25 value = 80 }
@@ -2190,7 +2738,12 @@ PWC_amphibious_invasion_target_V26 = {
         has_war_with = V26
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V26 = { pwc_st_naval_target_coast = yes }
+        V26 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V26 value = 80 }
@@ -2203,7 +2756,12 @@ PWC_amphibious_invasion_target_V27 = {
         has_war_with = V27
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V27 = { pwc_st_naval_target_coast = yes }
+        V27 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V27 value = 80 }
@@ -2216,7 +2774,12 @@ PWC_amphibious_invasion_target_V28 = {
         has_war_with = V28
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V28 = { pwc_st_naval_target_coast = yes }
+        V28 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V28 value = 80 }
@@ -2229,7 +2792,12 @@ PWC_amphibious_invasion_target_V29 = {
         has_war_with = V29
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V29 = { pwc_st_naval_target_coast = yes }
+        V29 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V29 value = 80 }
@@ -2242,7 +2810,12 @@ PWC_amphibious_invasion_target_V30 = {
         has_war_with = V30
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V30 = { pwc_st_naval_target_coast = yes }
+        V30 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V30 value = 80 }
@@ -2255,7 +2828,12 @@ PWC_amphibious_invasion_target_V31 = {
         has_war_with = V31
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V31 = { pwc_st_naval_target_coast = yes }
+        V31 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V31 value = 80 }
@@ -2268,7 +2846,12 @@ PWC_amphibious_invasion_target_V32 = {
         has_war_with = V32
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V32 = { pwc_st_naval_target_coast = yes }
+        V32 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V32 value = 80 }
@@ -2281,7 +2864,12 @@ PWC_amphibious_invasion_target_V33 = {
         has_war_with = V33
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V33 = { pwc_st_naval_target_coast = yes }
+        V33 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V33 value = 80 }
@@ -2294,7 +2882,12 @@ PWC_amphibious_invasion_target_V34 = {
         has_war_with = V34
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V34 = { pwc_st_naval_target_coast = yes }
+        V34 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V34 value = 80 }
@@ -2307,7 +2900,12 @@ PWC_amphibious_invasion_target_V35 = {
         has_war_with = V35
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V35 = { pwc_st_naval_target_coast = yes }
+        V35 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V35 value = 80 }
@@ -2320,7 +2918,12 @@ PWC_amphibious_invasion_target_V36 = {
         has_war_with = V36
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V36 = { pwc_st_naval_target_coast = yes }
+        V36 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V36 value = 80 }
@@ -2333,7 +2936,12 @@ PWC_amphibious_invasion_target_V37 = {
         has_war_with = V37
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V37 = { pwc_st_naval_target_coast = yes }
+        V37 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V37 value = 80 }
@@ -2346,7 +2954,12 @@ PWC_amphibious_invasion_target_V38 = {
         has_war_with = V38
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V38 = { pwc_st_naval_target_coast = yes }
+        V38 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V38 value = 80 }
@@ -2359,7 +2972,12 @@ PWC_amphibious_invasion_target_V39 = {
         has_war_with = V39
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V39 = { pwc_st_naval_target_coast = yes }
+        V39 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V39 value = 80 }
@@ -2372,7 +2990,12 @@ PWC_amphibious_invasion_target_V40 = {
         has_war_with = V40
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V40 = { pwc_st_naval_target_coast = yes }
+        V40 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V40 value = 80 }
@@ -2385,7 +3008,12 @@ PWC_amphibious_invasion_target_V41 = {
         has_war_with = V41
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V41 = { pwc_st_naval_target_coast = yes }
+        V41 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V41 value = 80 }
@@ -2398,7 +3026,12 @@ PWC_amphibious_invasion_target_V42 = {
         has_war_with = V42
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V42 = { pwc_st_naval_target_coast = yes }
+        V42 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V42 value = 80 }
@@ -2411,7 +3044,12 @@ PWC_amphibious_invasion_target_V43 = {
         has_war_with = V43
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V43 = { pwc_st_naval_target_coast = yes }
+        V43 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V43 value = 80 }
@@ -2424,7 +3062,12 @@ PWC_amphibious_invasion_target_V44 = {
         has_war_with = V44
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V44 = { pwc_st_naval_target_coast = yes }
+        V44 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V44 value = 80 }
@@ -2437,7 +3080,12 @@ PWC_amphibious_invasion_target_V45 = {
         has_war_with = V45
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V45 = { pwc_st_naval_target_coast = yes }
+        V45 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V45 value = 80 }
@@ -2450,7 +3098,12 @@ PWC_amphibious_invasion_target_V46 = {
         has_war_with = V46
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V46 = { pwc_st_naval_target_coast = yes }
+        V46 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V46 value = 80 }
@@ -2463,7 +3116,12 @@ PWC_amphibious_invasion_target_V47 = {
         has_war_with = V47
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V47 = { pwc_st_naval_target_coast = yes }
+        V47 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V47 value = 80 }
@@ -2476,7 +3134,12 @@ PWC_amphibious_invasion_target_V48 = {
         has_war_with = V48
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V48 = { pwc_st_naval_target_coast = yes }
+        V48 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V48 value = 80 }
@@ -2489,7 +3152,12 @@ PWC_amphibious_invasion_target_V49 = {
         has_war_with = V49
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V49 = { pwc_st_naval_target_coast = yes }
+        V49 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V49 value = 80 }
@@ -2502,7 +3170,12 @@ PWC_amphibious_invasion_target_V50 = {
         has_war_with = V50
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V50 = { pwc_st_naval_target_coast = yes }
+        V50 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V50 value = 80 }
@@ -2515,7 +3188,12 @@ PWC_amphibious_invasion_target_V51 = {
         has_war_with = V51
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V51 = { pwc_st_naval_target_coast = yes }
+        V51 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V51 value = 80 }
@@ -2528,7 +3206,12 @@ PWC_amphibious_invasion_target_V52 = {
         has_war_with = V52
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V52 = { pwc_st_naval_target_coast = yes }
+        V52 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V52 value = 80 }
@@ -2541,7 +3224,12 @@ PWC_amphibious_invasion_target_V53 = {
         has_war_with = V53
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V53 = { pwc_st_naval_target_coast = yes }
+        V53 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V53 value = 80 }
@@ -2554,7 +3242,12 @@ PWC_amphibious_invasion_target_V54 = {
         has_war_with = V54
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V54 = { pwc_st_naval_target_coast = yes }
+        V54 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V54 value = 80 }
@@ -2567,7 +3260,12 @@ PWC_amphibious_invasion_target_V55 = {
         has_war_with = V55
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V55 = { pwc_st_naval_target_coast = yes }
+        V55 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V55 value = 80 }
@@ -2580,7 +3278,12 @@ PWC_amphibious_invasion_target_V56 = {
         has_war_with = V56
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V56 = { pwc_st_naval_target_coast = yes }
+        V56 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V56 value = 80 }
@@ -2593,7 +3296,12 @@ PWC_amphibious_invasion_target_V57 = {
         has_war_with = V57
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V57 = { pwc_st_naval_target_coast = yes }
+        V57 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V57 value = 80 }
@@ -2606,7 +3314,12 @@ PWC_amphibious_invasion_target_V58 = {
         has_war_with = V58
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V58 = { pwc_st_naval_target_coast = yes }
+        V58 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V58 value = 80 }
@@ -2619,7 +3332,12 @@ PWC_amphibious_invasion_target_V59 = {
         has_war_with = V59
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V59 = { pwc_st_naval_target_coast = yes }
+        V59 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V59 value = 80 }
@@ -2632,7 +3350,12 @@ PWC_amphibious_invasion_target_V60 = {
         has_war_with = V60
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V60 = { pwc_st_naval_target_coast = yes }
+        V60 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V60 value = 80 }
@@ -2645,7 +3368,12 @@ PWC_amphibious_invasion_target_V61 = {
         has_war_with = V61
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V61 = { pwc_st_naval_target_coast = yes }
+        V61 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V61 value = 80 }
@@ -2658,7 +3386,12 @@ PWC_amphibious_invasion_target_V62 = {
         has_war_with = V62
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V62 = { pwc_st_naval_target_coast = yes }
+        V62 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V62 value = 80 }
@@ -2671,7 +3404,12 @@ PWC_amphibious_invasion_target_V63 = {
         has_war_with = V63
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V63 = { pwc_st_naval_target_coast = yes }
+        V63 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V63 value = 80 }
@@ -2684,7 +3422,12 @@ PWC_amphibious_invasion_target_V64 = {
         has_war_with = V64
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V64 = { pwc_st_naval_target_coast = yes }
+        V64 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V64 value = 80 }
@@ -2697,7 +3440,12 @@ PWC_amphibious_invasion_target_V65 = {
         has_war_with = V65
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V65 = { pwc_st_naval_target_coast = yes }
+        V65 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V65 value = 80 }
@@ -2710,7 +3458,12 @@ PWC_amphibious_invasion_target_V66 = {
         has_war_with = V66
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V66 = { pwc_st_naval_target_coast = yes }
+        V66 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V66 value = 80 }
@@ -2723,7 +3476,12 @@ PWC_amphibious_invasion_target_V67 = {
         has_war_with = V67
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V67 = { pwc_st_naval_target_coast = yes }
+        V67 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V67 value = 80 }
@@ -2736,7 +3494,12 @@ PWC_amphibious_invasion_target_V68 = {
         has_war_with = V68
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V68 = { pwc_st_naval_target_coast = yes }
+        V68 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V68 value = 80 }
@@ -2749,7 +3512,12 @@ PWC_amphibious_invasion_target_V69 = {
         has_war_with = V69
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V69 = { pwc_st_naval_target_coast = yes }
+        V69 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V69 value = 80 }
@@ -2762,7 +3530,12 @@ PWC_amphibious_invasion_target_V70 = {
         has_war_with = V70
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V70 = { pwc_st_naval_target_coast = yes }
+        V70 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V70 value = 80 }
@@ -2775,7 +3548,12 @@ PWC_amphibious_invasion_target_V71 = {
         has_war_with = V71
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V71 = { pwc_st_naval_target_coast = yes }
+        V71 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V71 value = 80 }
@@ -2788,7 +3566,12 @@ PWC_amphibious_invasion_target_V72 = {
         has_war_with = V72
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V72 = { pwc_st_naval_target_coast = yes }
+        V72 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V72 value = 80 }
@@ -2801,7 +3584,12 @@ PWC_amphibious_invasion_target_V73 = {
         has_war_with = V73
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V73 = { pwc_st_naval_target_coast = yes }
+        V73 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V73 value = 80 }
@@ -2814,7 +3602,12 @@ PWC_amphibious_invasion_target_V74 = {
         has_war_with = V74
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V74 = { pwc_st_naval_target_coast = yes }
+        V74 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V74 value = 80 }
@@ -2827,7 +3620,12 @@ PWC_amphibious_invasion_target_V75 = {
         has_war_with = V75
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V75 = { pwc_st_naval_target_coast = yes }
+        V75 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V75 value = 80 }
@@ -2840,7 +3638,12 @@ PWC_amphibious_invasion_target_V76 = {
         has_war_with = V76
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V76 = { pwc_st_naval_target_coast = yes }
+        V76 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V76 value = 80 }
@@ -2853,7 +3656,12 @@ PWC_amphibious_invasion_target_V77 = {
         has_war_with = V77
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V77 = { pwc_st_naval_target_coast = yes }
+        V77 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V77 value = 80 }
@@ -2866,7 +3674,12 @@ PWC_amphibious_invasion_target_V78 = {
         has_war_with = V78
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V78 = { pwc_st_naval_target_coast = yes }
+        V78 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V78 value = 80 }
@@ -2879,7 +3692,12 @@ PWC_amphibious_invasion_target_V79 = {
         has_war_with = V79
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V79 = { pwc_st_naval_target_coast = yes }
+        V79 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V79 value = 80 }
@@ -2892,7 +3710,12 @@ PWC_amphibious_invasion_target_V80 = {
         has_war_with = V80
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V80 = { pwc_st_naval_target_coast = yes }
+        V80 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V80 value = 80 }
@@ -2905,7 +3728,12 @@ PWC_amphibious_invasion_target_V81 = {
         has_war_with = V81
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V81 = { pwc_st_naval_target_coast = yes }
+        V81 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V81 value = 80 }
@@ -2918,7 +3746,12 @@ PWC_amphibious_invasion_target_V82 = {
         has_war_with = V82
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V82 = { pwc_st_naval_target_coast = yes }
+        V82 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V82 value = 80 }
@@ -2931,7 +3764,12 @@ PWC_amphibious_invasion_target_V83 = {
         has_war_with = V83
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V83 = { pwc_st_naval_target_coast = yes }
+        V83 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V83 value = 80 }
@@ -2944,7 +3782,12 @@ PWC_amphibious_invasion_target_V84 = {
         has_war_with = V84
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V84 = { pwc_st_naval_target_coast = yes }
+        V84 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V84 value = 80 }
@@ -2957,7 +3800,12 @@ PWC_amphibious_invasion_target_V85 = {
         has_war_with = V85
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V85 = { pwc_st_naval_target_coast = yes }
+        V85 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V85 value = 80 }
@@ -2970,7 +3818,12 @@ PWC_amphibious_invasion_target_V86 = {
         has_war_with = V86
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V86 = { pwc_st_naval_target_coast = yes }
+        V86 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V86 value = 80 }
@@ -2983,7 +3836,12 @@ PWC_amphibious_invasion_target_V87 = {
         has_war_with = V87
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V87 = { pwc_st_naval_target_coast = yes }
+        V87 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V87 value = 80 }
@@ -2996,7 +3854,12 @@ PWC_amphibious_invasion_target_V88 = {
         has_war_with = V88
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V88 = { pwc_st_naval_target_coast = yes }
+        V88 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V88 value = 80 }
@@ -3009,7 +3872,12 @@ PWC_amphibious_invasion_target_V89 = {
         has_war_with = V89
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V89 = { pwc_st_naval_target_coast = yes }
+        V89 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V89 value = 80 }
@@ -3022,7 +3890,12 @@ PWC_amphibious_invasion_target_V90 = {
         has_war_with = V90
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V90 = { pwc_st_naval_target_coast = yes }
+        V90 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V90 value = 80 }
@@ -3035,7 +3908,12 @@ PWC_amphibious_invasion_target_V91 = {
         has_war_with = V91
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V91 = { pwc_st_naval_target_coast = yes }
+        V91 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V91 value = 80 }
@@ -3048,7 +3926,12 @@ PWC_amphibious_invasion_target_V92 = {
         has_war_with = V92
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V92 = { pwc_st_naval_target_coast = yes }
+        V92 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V92 value = 80 }
@@ -3061,7 +3944,12 @@ PWC_amphibious_invasion_target_V93 = {
         has_war_with = V93
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V93 = { pwc_st_naval_target_coast = yes }
+        V93 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V93 value = 80 }
@@ -3074,7 +3962,12 @@ PWC_amphibious_invasion_target_V94 = {
         has_war_with = V94
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V94 = { pwc_st_naval_target_coast = yes }
+        V94 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V94 value = 80 }
@@ -3087,7 +3980,12 @@ PWC_amphibious_invasion_target_V95 = {
         has_war_with = V95
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V95 = { pwc_st_naval_target_coast = yes }
+        V95 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V95 value = 80 }
@@ -3100,7 +3998,12 @@ PWC_amphibious_invasion_target_V96 = {
         has_war_with = V96
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V96 = { pwc_st_naval_target_coast = yes }
+        V96 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V96 value = 80 }
@@ -3113,7 +4016,12 @@ PWC_amphibious_invasion_target_V97 = {
         has_war_with = V97
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V97 = { pwc_st_naval_target_coast = yes }
+        V97 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V97 value = 80 }
@@ -3126,7 +4034,12 @@ PWC_amphibious_invasion_target_V98 = {
         has_war_with = V98
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V98 = { pwc_st_naval_target_coast = yes }
+        V98 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V98 value = 80 }
@@ -3139,7 +4052,12 @@ PWC_amphibious_invasion_target_V99 = {
         has_war_with = V99
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        V99 = { pwc_st_naval_target_coast = yes }
+        V99 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = V99 value = 80 }
@@ -3152,7 +4070,12 @@ PWC_amphibious_invasion_target_W00 = {
         has_war_with = W00
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W00 = { pwc_st_naval_target_coast = yes }
+        W00 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W00 value = 80 }
@@ -3165,7 +4088,12 @@ PWC_amphibious_invasion_target_W01 = {
         has_war_with = W01
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W01 = { pwc_st_naval_target_coast = yes }
+        W01 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W01 value = 80 }
@@ -3178,7 +4106,12 @@ PWC_amphibious_invasion_target_W02 = {
         has_war_with = W02
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W02 = { pwc_st_naval_target_coast = yes }
+        W02 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W02 value = 80 }
@@ -3191,7 +4124,12 @@ PWC_amphibious_invasion_target_W03 = {
         has_war_with = W03
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W03 = { pwc_st_naval_target_coast = yes }
+        W03 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W03 value = 80 }
@@ -3204,7 +4142,12 @@ PWC_amphibious_invasion_target_W04 = {
         has_war_with = W04
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W04 = { pwc_st_naval_target_coast = yes }
+        W04 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W04 value = 80 }
@@ -3217,7 +4160,12 @@ PWC_amphibious_invasion_target_W05 = {
         has_war_with = W05
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W05 = { pwc_st_naval_target_coast = yes }
+        W05 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W05 value = 80 }
@@ -3230,7 +4178,12 @@ PWC_amphibious_invasion_target_W06 = {
         has_war_with = W06
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W06 = { pwc_st_naval_target_coast = yes }
+        W06 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W06 value = 80 }
@@ -3243,7 +4196,12 @@ PWC_amphibious_invasion_target_W07 = {
         has_war_with = W07
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W07 = { pwc_st_naval_target_coast = yes }
+        W07 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W07 value = 80 }
@@ -3256,7 +4214,12 @@ PWC_amphibious_invasion_target_W08 = {
         has_war_with = W08
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W08 = { pwc_st_naval_target_coast = yes }
+        W08 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W08 value = 80 }
@@ -3269,7 +4232,12 @@ PWC_amphibious_invasion_target_W09 = {
         has_war_with = W09
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W09 = { pwc_st_naval_target_coast = yes }
+        W09 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W09 value = 80 }
@@ -3282,7 +4250,12 @@ PWC_amphibious_invasion_target_W10 = {
         has_war_with = W10
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W10 = { pwc_st_naval_target_coast = yes }
+        W10 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W10 value = 80 }
@@ -3295,7 +4268,12 @@ PWC_amphibious_invasion_target_W11 = {
         has_war_with = W11
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W11 = { pwc_st_naval_target_coast = yes }
+        W11 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W11 value = 80 }
@@ -3308,7 +4286,12 @@ PWC_amphibious_invasion_target_W12 = {
         has_war_with = W12
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W12 = { pwc_st_naval_target_coast = yes }
+        W12 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W12 value = 80 }
@@ -3321,7 +4304,12 @@ PWC_amphibious_invasion_target_W13 = {
         has_war_with = W13
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W13 = { pwc_st_naval_target_coast = yes }
+        W13 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W13 value = 80 }
@@ -3334,7 +4322,12 @@ PWC_amphibious_invasion_target_W14 = {
         has_war_with = W14
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W14 = { pwc_st_naval_target_coast = yes }
+        W14 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W14 value = 80 }
@@ -3347,7 +4340,12 @@ PWC_amphibious_invasion_target_W15 = {
         has_war_with = W15
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W15 = { pwc_st_naval_target_coast = yes }
+        W15 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W15 value = 80 }
@@ -3360,7 +4358,12 @@ PWC_amphibious_invasion_target_W16 = {
         has_war_with = W16
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W16 = { pwc_st_naval_target_coast = yes }
+        W16 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W16 value = 80 }
@@ -3373,7 +4376,12 @@ PWC_amphibious_invasion_target_W17 = {
         has_war_with = W17
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W17 = { pwc_st_naval_target_coast = yes }
+        W17 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W17 value = 80 }
@@ -3386,7 +4394,12 @@ PWC_amphibious_invasion_target_W18 = {
         has_war_with = W18
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W18 = { pwc_st_naval_target_coast = yes }
+        W18 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W18 value = 80 }
@@ -3399,7 +4412,12 @@ PWC_amphibious_invasion_target_W19 = {
         has_war_with = W19
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W19 = { pwc_st_naval_target_coast = yes }
+        W19 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W19 value = 80 }
@@ -3412,7 +4430,12 @@ PWC_amphibious_invasion_target_W20 = {
         has_war_with = W20
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W20 = { pwc_st_naval_target_coast = yes }
+        W20 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W20 value = 80 }
@@ -3425,7 +4448,12 @@ PWC_amphibious_invasion_target_W21 = {
         has_war_with = W21
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W21 = { pwc_st_naval_target_coast = yes }
+        W21 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W21 value = 80 }
@@ -3438,7 +4466,12 @@ PWC_amphibious_invasion_target_W22 = {
         has_war_with = W22
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W22 = { pwc_st_naval_target_coast = yes }
+        W22 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W22 value = 80 }
@@ -3451,7 +4484,12 @@ PWC_amphibious_invasion_target_W23 = {
         has_war_with = W23
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W23 = { pwc_st_naval_target_coast = yes }
+        W23 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W23 value = 80 }
@@ -3464,7 +4502,12 @@ PWC_amphibious_invasion_target_W24 = {
         has_war_with = W24
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W24 = { pwc_st_naval_target_coast = yes }
+        W24 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W24 value = 80 }
@@ -3477,7 +4520,12 @@ PWC_amphibious_invasion_target_W25 = {
         has_war_with = W25
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W25 = { pwc_st_naval_target_coast = yes }
+        W25 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W25 value = 80 }
@@ -3490,7 +4538,12 @@ PWC_amphibious_invasion_target_W26 = {
         has_war_with = W26
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W26 = { pwc_st_naval_target_coast = yes }
+        W26 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W26 value = 80 }
@@ -3503,7 +4556,12 @@ PWC_amphibious_invasion_target_W27 = {
         has_war_with = W27
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W27 = { pwc_st_naval_target_coast = yes }
+        W27 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W27 value = 80 }
@@ -3516,7 +4574,12 @@ PWC_amphibious_invasion_target_W28 = {
         has_war_with = W28
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W28 = { pwc_st_naval_target_coast = yes }
+        W28 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W28 value = 80 }
@@ -3529,7 +4592,12 @@ PWC_amphibious_invasion_target_W29 = {
         has_war_with = W29
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W29 = { pwc_st_naval_target_coast = yes }
+        W29 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W29 value = 80 }
@@ -3542,7 +4610,12 @@ PWC_amphibious_invasion_target_W30 = {
         has_war_with = W30
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W30 = { pwc_st_naval_target_coast = yes }
+        W30 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W30 value = 80 }
@@ -3555,7 +4628,12 @@ PWC_amphibious_invasion_target_W31 = {
         has_war_with = W31
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W31 = { pwc_st_naval_target_coast = yes }
+        W31 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W31 value = 80 }
@@ -3568,7 +4646,12 @@ PWC_amphibious_invasion_target_W32 = {
         has_war_with = W32
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W32 = { pwc_st_naval_target_coast = yes }
+        W32 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W32 value = 80 }
@@ -3581,7 +4664,12 @@ PWC_amphibious_invasion_target_W33 = {
         has_war_with = W33
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W33 = { pwc_st_naval_target_coast = yes }
+        W33 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W33 value = 80 }
@@ -3594,7 +4682,12 @@ PWC_amphibious_invasion_target_W34 = {
         has_war_with = W34
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W34 = { pwc_st_naval_target_coast = yes }
+        W34 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W34 value = 80 }
@@ -3607,7 +4700,12 @@ PWC_amphibious_invasion_target_W35 = {
         has_war_with = W35
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W35 = { pwc_st_naval_target_coast = yes }
+        W35 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W35 value = 80 }
@@ -3620,7 +4718,12 @@ PWC_amphibious_invasion_target_W36 = {
         has_war_with = W36
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W36 = { pwc_st_naval_target_coast = yes }
+        W36 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W36 value = 80 }
@@ -3633,7 +4736,12 @@ PWC_amphibious_invasion_target_W37 = {
         has_war_with = W37
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W37 = { pwc_st_naval_target_coast = yes }
+        W37 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W37 value = 80 }
@@ -3646,7 +4754,12 @@ PWC_amphibious_invasion_target_W38 = {
         has_war_with = W38
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W38 = { pwc_st_naval_target_coast = yes }
+        W38 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W38 value = 80 }
@@ -3659,7 +4772,12 @@ PWC_amphibious_invasion_target_W39 = {
         has_war_with = W39
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W39 = { pwc_st_naval_target_coast = yes }
+        W39 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W39 value = 80 }
@@ -3672,7 +4790,12 @@ PWC_amphibious_invasion_target_W40 = {
         has_war_with = W40
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W40 = { pwc_st_naval_target_coast = yes }
+        W40 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W40 value = 80 }
@@ -3685,7 +4808,12 @@ PWC_amphibious_invasion_target_W41 = {
         has_war_with = W41
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W41 = { pwc_st_naval_target_coast = yes }
+        W41 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W41 value = 80 }
@@ -3698,7 +4826,12 @@ PWC_amphibious_invasion_target_W42 = {
         has_war_with = W42
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W42 = { pwc_st_naval_target_coast = yes }
+        W42 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W42 value = 80 }
@@ -3711,7 +4844,12 @@ PWC_amphibious_invasion_target_W43 = {
         has_war_with = W43
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W43 = { pwc_st_naval_target_coast = yes }
+        W43 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W43 value = 80 }
@@ -3724,7 +4862,12 @@ PWC_amphibious_invasion_target_W44 = {
         has_war_with = W44
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W44 = { pwc_st_naval_target_coast = yes }
+        W44 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W44 value = 80 }
@@ -3737,7 +4880,12 @@ PWC_amphibious_invasion_target_W45 = {
         has_war_with = W45
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W45 = { pwc_st_naval_target_coast = yes }
+        W45 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W45 value = 80 }
@@ -3750,7 +4898,12 @@ PWC_amphibious_invasion_target_W46 = {
         has_war_with = W46
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W46 = { pwc_st_naval_target_coast = yes }
+        W46 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W46 value = 80 }
@@ -3763,7 +4916,12 @@ PWC_amphibious_invasion_target_W47 = {
         has_war_with = W47
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W47 = { pwc_st_naval_target_coast = yes }
+        W47 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W47 value = 80 }
@@ -3776,7 +4934,12 @@ PWC_amphibious_invasion_target_W48 = {
         has_war_with = W48
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W48 = { pwc_st_naval_target_coast = yes }
+        W48 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W48 value = 80 }
@@ -3789,7 +4952,12 @@ PWC_amphibious_invasion_target_W49 = {
         has_war_with = W49
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W49 = { pwc_st_naval_target_coast = yes }
+        W49 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W49 value = 80 }
@@ -3802,7 +4970,12 @@ PWC_amphibious_invasion_target_W50 = {
         has_war_with = W50
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W50 = { pwc_st_naval_target_coast = yes }
+        W50 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W50 value = 80 }
@@ -3815,7 +4988,12 @@ PWC_amphibious_invasion_target_W51 = {
         has_war_with = W51
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W51 = { pwc_st_naval_target_coast = yes }
+        W51 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W51 value = 80 }
@@ -3828,7 +5006,12 @@ PWC_amphibious_invasion_target_W52 = {
         has_war_with = W52
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W52 = { pwc_st_naval_target_coast = yes }
+        W52 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W52 value = 80 }
@@ -3841,7 +5024,12 @@ PWC_amphibious_invasion_target_W53 = {
         has_war_with = W53
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W53 = { pwc_st_naval_target_coast = yes }
+        W53 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W53 value = 80 }
@@ -3854,7 +5042,12 @@ PWC_amphibious_invasion_target_W54 = {
         has_war_with = W54
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W54 = { pwc_st_naval_target_coast = yes }
+        W54 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W54 value = 80 }
@@ -3867,7 +5060,12 @@ PWC_amphibious_invasion_target_W55 = {
         has_war_with = W55
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W55 = { pwc_st_naval_target_coast = yes }
+        W55 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W55 value = 80 }
@@ -3880,7 +5078,12 @@ PWC_amphibious_invasion_target_W56 = {
         has_war_with = W56
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W56 = { pwc_st_naval_target_coast = yes }
+        W56 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W56 value = 80 }
@@ -3893,7 +5096,12 @@ PWC_amphibious_invasion_target_W57 = {
         has_war_with = W57
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W57 = { pwc_st_naval_target_coast = yes }
+        W57 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W57 value = 80 }
@@ -3906,7 +5114,12 @@ PWC_amphibious_invasion_target_W58 = {
         has_war_with = W58
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W58 = { pwc_st_naval_target_coast = yes }
+        W58 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W58 value = 80 }
@@ -3919,7 +5132,12 @@ PWC_amphibious_invasion_target_W59 = {
         has_war_with = W59
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W59 = { pwc_st_naval_target_coast = yes }
+        W59 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W59 value = 80 }
@@ -3932,7 +5150,12 @@ PWC_amphibious_invasion_target_W60 = {
         has_war_with = W60
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W60 = { pwc_st_naval_target_coast = yes }
+        W60 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W60 value = 80 }
@@ -3945,7 +5168,12 @@ PWC_amphibious_invasion_target_W61 = {
         has_war_with = W61
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W61 = { pwc_st_naval_target_coast = yes }
+        W61 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W61 value = 80 }
@@ -3958,7 +5186,12 @@ PWC_amphibious_invasion_target_W62 = {
         has_war_with = W62
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W62 = { pwc_st_naval_target_coast = yes }
+        W62 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W62 value = 80 }
@@ -3971,7 +5204,12 @@ PWC_amphibious_invasion_target_W63 = {
         has_war_with = W63
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W63 = { pwc_st_naval_target_coast = yes }
+        W63 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W63 value = 80 }
@@ -3984,7 +5222,12 @@ PWC_amphibious_invasion_target_W64 = {
         has_war_with = W64
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W64 = { pwc_st_naval_target_coast = yes }
+        W64 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W64 value = 80 }
@@ -3997,7 +5240,12 @@ PWC_amphibious_invasion_target_W65 = {
         has_war_with = W65
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W65 = { pwc_st_naval_target_coast = yes }
+        W65 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W65 value = 80 }
@@ -4010,7 +5258,12 @@ PWC_amphibious_invasion_target_W66 = {
         has_war_with = W66
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W66 = { pwc_st_naval_target_coast = yes }
+        W66 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W66 value = 80 }
@@ -4023,7 +5276,12 @@ PWC_amphibious_invasion_target_W67 = {
         has_war_with = W67
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W67 = { pwc_st_naval_target_coast = yes }
+        W67 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W67 value = 80 }
@@ -4036,7 +5294,12 @@ PWC_amphibious_invasion_target_W68 = {
         has_war_with = W68
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W68 = { pwc_st_naval_target_coast = yes }
+        W68 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W68 value = 80 }
@@ -4049,7 +5312,12 @@ PWC_amphibious_invasion_target_W69 = {
         has_war_with = W69
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W69 = { pwc_st_naval_target_coast = yes }
+        W69 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W69 value = 80 }
@@ -4062,7 +5330,12 @@ PWC_amphibious_invasion_target_W70 = {
         has_war_with = W70
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W70 = { pwc_st_naval_target_coast = yes }
+        W70 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W70 value = 80 }
@@ -4075,7 +5348,12 @@ PWC_amphibious_invasion_target_W71 = {
         has_war_with = W71
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W71 = { pwc_st_naval_target_coast = yes }
+        W71 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W71 value = 80 }
@@ -4088,7 +5366,12 @@ PWC_amphibious_invasion_target_W72 = {
         has_war_with = W72
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W72 = { pwc_st_naval_target_coast = yes }
+        W72 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W72 value = 80 }
@@ -4101,7 +5384,12 @@ PWC_amphibious_invasion_target_W73 = {
         has_war_with = W73
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W73 = { pwc_st_naval_target_coast = yes }
+        W73 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W73 value = 80 }
@@ -4114,7 +5402,12 @@ PWC_amphibious_invasion_target_W74 = {
         has_war_with = W74
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W74 = { pwc_st_naval_target_coast = yes }
+        W74 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W74 value = 80 }
@@ -4127,7 +5420,12 @@ PWC_amphibious_invasion_target_W75 = {
         has_war_with = W75
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W75 = { pwc_st_naval_target_coast = yes }
+        W75 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W75 value = 80 }
@@ -4140,7 +5438,12 @@ PWC_amphibious_invasion_target_W76 = {
         has_war_with = W76
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W76 = { pwc_st_naval_target_coast = yes }
+        W76 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W76 value = 80 }
@@ -4153,7 +5456,12 @@ PWC_amphibious_invasion_target_W77 = {
         has_war_with = W77
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W77 = { pwc_st_naval_target_coast = yes }
+        W77 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W77 value = 80 }
@@ -4166,7 +5474,12 @@ PWC_amphibious_invasion_target_W78 = {
         has_war_with = W78
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W78 = { pwc_st_naval_target_coast = yes }
+        W78 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W78 value = 80 }
@@ -4179,7 +5492,12 @@ PWC_amphibious_invasion_target_W79 = {
         has_war_with = W79
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W79 = { pwc_st_naval_target_coast = yes }
+        W79 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W79 value = 80 }
@@ -4192,7 +5510,12 @@ PWC_amphibious_invasion_target_W80 = {
         has_war_with = W80
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W80 = { pwc_st_naval_target_coast = yes }
+        W80 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W80 value = 80 }
@@ -4205,7 +5528,12 @@ PWC_amphibious_invasion_target_W81 = {
         has_war_with = W81
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W81 = { pwc_st_naval_target_coast = yes }
+        W81 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W81 value = 80 }
@@ -4218,7 +5546,12 @@ PWC_amphibious_invasion_target_W82 = {
         has_war_with = W82
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W82 = { pwc_st_naval_target_coast = yes }
+        W82 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W82 value = 80 }
@@ -4231,7 +5564,12 @@ PWC_amphibious_invasion_target_W83 = {
         has_war_with = W83
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W83 = { pwc_st_naval_target_coast = yes }
+        W83 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W83 value = 80 }
@@ -4244,7 +5582,12 @@ PWC_amphibious_invasion_target_W84 = {
         has_war_with = W84
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W84 = { pwc_st_naval_target_coast = yes }
+        W84 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W84 value = 80 }
@@ -4257,7 +5600,12 @@ PWC_amphibious_invasion_target_W85 = {
         has_war_with = W85
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W85 = { pwc_st_naval_target_coast = yes }
+        W85 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W85 value = 80 }
@@ -4270,7 +5618,12 @@ PWC_amphibious_invasion_target_W86 = {
         has_war_with = W86
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W86 = { pwc_st_naval_target_coast = yes }
+        W86 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W86 value = 80 }
@@ -4283,7 +5636,12 @@ PWC_amphibious_invasion_target_W87 = {
         has_war_with = W87
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W87 = { pwc_st_naval_target_coast = yes }
+        W87 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W87 value = 80 }
@@ -4296,7 +5654,12 @@ PWC_amphibious_invasion_target_W88 = {
         has_war_with = W88
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W88 = { pwc_st_naval_target_coast = yes }
+        W88 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W88 value = 80 }
@@ -4309,7 +5672,12 @@ PWC_amphibious_invasion_target_W89 = {
         has_war_with = W89
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W89 = { pwc_st_naval_target_coast = yes }
+        W89 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W89 value = 80 }
@@ -4322,7 +5690,12 @@ PWC_amphibious_invasion_target_W90 = {
         has_war_with = W90
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W90 = { pwc_st_naval_target_coast = yes }
+        W90 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W90 value = 80 }
@@ -4335,7 +5708,12 @@ PWC_amphibious_invasion_target_W91 = {
         has_war_with = W91
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W91 = { pwc_st_naval_target_coast = yes }
+        W91 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W91 value = 80 }
@@ -4348,7 +5726,12 @@ PWC_amphibious_invasion_target_W92 = {
         has_war_with = W92
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W92 = { pwc_st_naval_target_coast = yes }
+        W92 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W92 value = 80 }
@@ -4361,7 +5744,12 @@ PWC_amphibious_invasion_target_W93 = {
         has_war_with = W93
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W93 = { pwc_st_naval_target_coast = yes }
+        W93 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W93 value = 80 }
@@ -4374,7 +5762,12 @@ PWC_amphibious_invasion_target_W94 = {
         has_war_with = W94
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W94 = { pwc_st_naval_target_coast = yes }
+        W94 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W94 value = 80 }
@@ -4387,7 +5780,12 @@ PWC_amphibious_invasion_target_W95 = {
         has_war_with = W95
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W95 = { pwc_st_naval_target_coast = yes }
+        W95 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W95 value = 80 }
@@ -4400,7 +5798,12 @@ PWC_amphibious_invasion_target_W96 = {
         has_war_with = W96
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W96 = { pwc_st_naval_target_coast = yes }
+        W96 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W96 value = 80 }
@@ -4413,7 +5816,12 @@ PWC_amphibious_invasion_target_W97 = {
         has_war_with = W97
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W97 = { pwc_st_naval_target_coast = yes }
+        W97 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W97 value = 80 }
@@ -4426,7 +5834,12 @@ PWC_amphibious_invasion_target_W98 = {
         has_war_with = W98
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W98 = { pwc_st_naval_target_coast = yes }
+        W98 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W98 value = 80 }
@@ -4439,7 +5852,12 @@ PWC_amphibious_invasion_target_W99 = {
         has_war_with = W99
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        W99 = { pwc_st_naval_target_coast = yes }
+        W99 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = W99 value = 80 }
@@ -4452,7 +5870,12 @@ PWC_amphibious_invasion_target_X00 = {
         has_war_with = X00
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X00 = { pwc_st_naval_target_coast = yes }
+        X00 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X00 value = 80 }
@@ -4465,7 +5888,12 @@ PWC_amphibious_invasion_target_X01 = {
         has_war_with = X01
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X01 = { pwc_st_naval_target_coast = yes }
+        X01 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X01 value = 80 }
@@ -4478,7 +5906,12 @@ PWC_amphibious_invasion_target_X02 = {
         has_war_with = X02
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X02 = { pwc_st_naval_target_coast = yes }
+        X02 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X02 value = 80 }
@@ -4491,7 +5924,12 @@ PWC_amphibious_invasion_target_X03 = {
         has_war_with = X03
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X03 = { pwc_st_naval_target_coast = yes }
+        X03 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X03 value = 80 }
@@ -4504,7 +5942,12 @@ PWC_amphibious_invasion_target_X04 = {
         has_war_with = X04
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X04 = { pwc_st_naval_target_coast = yes }
+        X04 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X04 value = 80 }
@@ -4517,7 +5960,12 @@ PWC_amphibious_invasion_target_X05 = {
         has_war_with = X05
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X05 = { pwc_st_naval_target_coast = yes }
+        X05 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X05 value = 80 }
@@ -4530,7 +5978,12 @@ PWC_amphibious_invasion_target_X06 = {
         has_war_with = X06
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X06 = { pwc_st_naval_target_coast = yes }
+        X06 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X06 value = 80 }
@@ -4543,7 +5996,12 @@ PWC_amphibious_invasion_target_X07 = {
         has_war_with = X07
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X07 = { pwc_st_naval_target_coast = yes }
+        X07 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X07 value = 80 }
@@ -4556,7 +6014,12 @@ PWC_amphibious_invasion_target_X08 = {
         has_war_with = X08
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X08 = { pwc_st_naval_target_coast = yes }
+        X08 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X08 value = 80 }
@@ -4569,7 +6032,12 @@ PWC_amphibious_invasion_target_X09 = {
         has_war_with = X09
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X09 = { pwc_st_naval_target_coast = yes }
+        X09 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X09 value = 80 }
@@ -4582,7 +6050,12 @@ PWC_amphibious_invasion_target_X10 = {
         has_war_with = X10
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X10 = { pwc_st_naval_target_coast = yes }
+        X10 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X10 value = 80 }
@@ -4595,7 +6068,12 @@ PWC_amphibious_invasion_target_X11 = {
         has_war_with = X11
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X11 = { pwc_st_naval_target_coast = yes }
+        X11 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X11 value = 80 }
@@ -4608,7 +6086,12 @@ PWC_amphibious_invasion_target_X12 = {
         has_war_with = X12
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X12 = { pwc_st_naval_target_coast = yes }
+        X12 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X12 value = 80 }
@@ -4621,7 +6104,12 @@ PWC_amphibious_invasion_target_X13 = {
         has_war_with = X13
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X13 = { pwc_st_naval_target_coast = yes }
+        X13 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X13 value = 80 }
@@ -4634,7 +6122,12 @@ PWC_amphibious_invasion_target_X14 = {
         has_war_with = X14
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X14 = { pwc_st_naval_target_coast = yes }
+        X14 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X14 value = 80 }
@@ -4647,7 +6140,12 @@ PWC_amphibious_invasion_target_X15 = {
         has_war_with = X15
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X15 = { pwc_st_naval_target_coast = yes }
+        X15 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X15 value = 80 }
@@ -4660,7 +6158,12 @@ PWC_amphibious_invasion_target_X16 = {
         has_war_with = X16
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X16 = { pwc_st_naval_target_coast = yes }
+        X16 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X16 value = 80 }
@@ -4673,7 +6176,12 @@ PWC_amphibious_invasion_target_X17 = {
         has_war_with = X17
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X17 = { pwc_st_naval_target_coast = yes }
+        X17 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X17 value = 80 }
@@ -4686,7 +6194,12 @@ PWC_amphibious_invasion_target_X18 = {
         has_war_with = X18
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X18 = { pwc_st_naval_target_coast = yes }
+        X18 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X18 value = 80 }
@@ -4699,7 +6212,12 @@ PWC_amphibious_invasion_target_X19 = {
         has_war_with = X19
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X19 = { pwc_st_naval_target_coast = yes }
+        X19 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X19 value = 80 }
@@ -4712,7 +6230,12 @@ PWC_amphibious_invasion_target_X20 = {
         has_war_with = X20
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X20 = { pwc_st_naval_target_coast = yes }
+        X20 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X20 value = 80 }
@@ -4725,7 +6248,12 @@ PWC_amphibious_invasion_target_X21 = {
         has_war_with = X21
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X21 = { pwc_st_naval_target_coast = yes }
+        X21 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X21 value = 80 }
@@ -4738,7 +6266,12 @@ PWC_amphibious_invasion_target_X22 = {
         has_war_with = X22
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X22 = { pwc_st_naval_target_coast = yes }
+        X22 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X22 value = 80 }
@@ -4751,7 +6284,12 @@ PWC_amphibious_invasion_target_X23 = {
         has_war_with = X23
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X23 = { pwc_st_naval_target_coast = yes }
+        X23 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X23 value = 80 }
@@ -4764,7 +6302,12 @@ PWC_amphibious_invasion_target_X24 = {
         has_war_with = X24
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X24 = { pwc_st_naval_target_coast = yes }
+        X24 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X24 value = 80 }
@@ -4777,7 +6320,12 @@ PWC_amphibious_invasion_target_X25 = {
         has_war_with = X25
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X25 = { pwc_st_naval_target_coast = yes }
+        X25 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X25 value = 80 }
@@ -4790,7 +6338,12 @@ PWC_amphibious_invasion_target_X26 = {
         has_war_with = X26
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X26 = { pwc_st_naval_target_coast = yes }
+        X26 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X26 value = 80 }
@@ -4803,7 +6356,12 @@ PWC_amphibious_invasion_target_X27 = {
         has_war_with = X27
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X27 = { pwc_st_naval_target_coast = yes }
+        X27 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X27 value = 80 }
@@ -4816,7 +6374,12 @@ PWC_amphibious_invasion_target_X28 = {
         has_war_with = X28
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X28 = { pwc_st_naval_target_coast = yes }
+        X28 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X28 value = 80 }
@@ -4829,7 +6392,12 @@ PWC_amphibious_invasion_target_X29 = {
         has_war_with = X29
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X29 = { pwc_st_naval_target_coast = yes }
+        X29 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X29 value = 80 }
@@ -4842,7 +6410,12 @@ PWC_amphibious_invasion_target_X30 = {
         has_war_with = X30
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X30 = { pwc_st_naval_target_coast = yes }
+        X30 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X30 value = 80 }
@@ -4855,7 +6428,12 @@ PWC_amphibious_invasion_target_X31 = {
         has_war_with = X31
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X31 = { pwc_st_naval_target_coast = yes }
+        X31 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X31 value = 80 }
@@ -4868,7 +6446,12 @@ PWC_amphibious_invasion_target_X32 = {
         has_war_with = X32
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X32 = { pwc_st_naval_target_coast = yes }
+        X32 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X32 value = 80 }
@@ -4881,7 +6464,12 @@ PWC_amphibious_invasion_target_X33 = {
         has_war_with = X33
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X33 = { pwc_st_naval_target_coast = yes }
+        X33 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X33 value = 80 }
@@ -4894,7 +6482,12 @@ PWC_amphibious_invasion_target_X34 = {
         has_war_with = X34
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X34 = { pwc_st_naval_target_coast = yes }
+        X34 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X34 value = 80 }
@@ -4907,7 +6500,12 @@ PWC_amphibious_invasion_target_X35 = {
         has_war_with = X35
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X35 = { pwc_st_naval_target_coast = yes }
+        X35 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X35 value = 80 }
@@ -4920,7 +6518,12 @@ PWC_amphibious_invasion_target_X36 = {
         has_war_with = X36
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X36 = { pwc_st_naval_target_coast = yes }
+        X36 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X36 value = 80 }
@@ -4933,7 +6536,12 @@ PWC_amphibious_invasion_target_X37 = {
         has_war_with = X37
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X37 = { pwc_st_naval_target_coast = yes }
+        X37 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X37 value = 80 }
@@ -4946,7 +6554,12 @@ PWC_amphibious_invasion_target_X38 = {
         has_war_with = X38
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X38 = { pwc_st_naval_target_coast = yes }
+        X38 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X38 value = 80 }
@@ -4959,7 +6572,12 @@ PWC_amphibious_invasion_target_X39 = {
         has_war_with = X39
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X39 = { pwc_st_naval_target_coast = yes }
+        X39 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X39 value = 80 }
@@ -4972,7 +6590,12 @@ PWC_amphibious_invasion_target_X40 = {
         has_war_with = X40
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X40 = { pwc_st_naval_target_coast = yes }
+        X40 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X40 value = 80 }
@@ -4985,7 +6608,12 @@ PWC_amphibious_invasion_target_X41 = {
         has_war_with = X41
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X41 = { pwc_st_naval_target_coast = yes }
+        X41 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X41 value = 80 }
@@ -4998,7 +6626,12 @@ PWC_amphibious_invasion_target_X42 = {
         has_war_with = X42
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X42 = { pwc_st_naval_target_coast = yes }
+        X42 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X42 value = 80 }
@@ -5011,7 +6644,12 @@ PWC_amphibious_invasion_target_X43 = {
         has_war_with = X43
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X43 = { pwc_st_naval_target_coast = yes }
+        X43 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X43 value = 80 }
@@ -5024,7 +6662,12 @@ PWC_amphibious_invasion_target_X44 = {
         has_war_with = X44
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X44 = { pwc_st_naval_target_coast = yes }
+        X44 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X44 value = 80 }
@@ -5037,7 +6680,12 @@ PWC_amphibious_invasion_target_X45 = {
         has_war_with = X45
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X45 = { pwc_st_naval_target_coast = yes }
+        X45 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X45 value = 80 }
@@ -5050,7 +6698,12 @@ PWC_amphibious_invasion_target_X46 = {
         has_war_with = X46
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X46 = { pwc_st_naval_target_coast = yes }
+        X46 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X46 value = 80 }
@@ -5063,7 +6716,12 @@ PWC_amphibious_invasion_target_X47 = {
         has_war_with = X47
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X47 = { pwc_st_naval_target_coast = yes }
+        X47 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X47 value = 80 }
@@ -5076,7 +6734,12 @@ PWC_amphibious_invasion_target_X48 = {
         has_war_with = X48
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X48 = { pwc_st_naval_target_coast = yes }
+        X48 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X48 value = 80 }
@@ -5089,7 +6752,12 @@ PWC_amphibious_invasion_target_X49 = {
         has_war_with = X49
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X49 = { pwc_st_naval_target_coast = yes }
+        X49 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X49 value = 80 }
@@ -5102,7 +6770,12 @@ PWC_amphibious_invasion_target_X50 = {
         has_war_with = X50
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X50 = { pwc_st_naval_target_coast = yes }
+        X50 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X50 value = 80 }
@@ -5115,7 +6788,12 @@ PWC_amphibious_invasion_target_X51 = {
         has_war_with = X51
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X51 = { pwc_st_naval_target_coast = yes }
+        X51 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X51 value = 80 }
@@ -5128,7 +6806,12 @@ PWC_amphibious_invasion_target_X52 = {
         has_war_with = X52
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X52 = { pwc_st_naval_target_coast = yes }
+        X52 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X52 value = 80 }
@@ -5141,7 +6824,12 @@ PWC_amphibious_invasion_target_X53 = {
         has_war_with = X53
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X53 = { pwc_st_naval_target_coast = yes }
+        X53 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X53 value = 80 }
@@ -5154,7 +6842,12 @@ PWC_amphibious_invasion_target_X54 = {
         has_war_with = X54
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X54 = { pwc_st_naval_target_coast = yes }
+        X54 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X54 value = 80 }
@@ -5167,7 +6860,12 @@ PWC_amphibious_invasion_target_X55 = {
         has_war_with = X55
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X55 = { pwc_st_naval_target_coast = yes }
+        X55 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X55 value = 80 }
@@ -5180,7 +6878,12 @@ PWC_amphibious_invasion_target_X56 = {
         has_war_with = X56
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X56 = { pwc_st_naval_target_coast = yes }
+        X56 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X56 value = 80 }
@@ -5193,7 +6896,12 @@ PWC_amphibious_invasion_target_X57 = {
         has_war_with = X57
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X57 = { pwc_st_naval_target_coast = yes }
+        X57 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X57 value = 80 }
@@ -5206,7 +6914,12 @@ PWC_amphibious_invasion_target_X58 = {
         has_war_with = X58
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X58 = { pwc_st_naval_target_coast = yes }
+        X58 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X58 value = 80 }
@@ -5219,7 +6932,12 @@ PWC_amphibious_invasion_target_X59 = {
         has_war_with = X59
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X59 = { pwc_st_naval_target_coast = yes }
+        X59 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X59 value = 80 }
@@ -5232,7 +6950,12 @@ PWC_amphibious_invasion_target_X60 = {
         has_war_with = X60
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X60 = { pwc_st_naval_target_coast = yes }
+        X60 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X60 value = 80 }
@@ -5245,7 +6968,12 @@ PWC_amphibious_invasion_target_X61 = {
         has_war_with = X61
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X61 = { pwc_st_naval_target_coast = yes }
+        X61 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X61 value = 80 }
@@ -5258,7 +6986,12 @@ PWC_amphibious_invasion_target_X62 = {
         has_war_with = X62
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X62 = { pwc_st_naval_target_coast = yes }
+        X62 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X62 value = 80 }
@@ -5271,7 +7004,12 @@ PWC_amphibious_invasion_target_X63 = {
         has_war_with = X63
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X63 = { pwc_st_naval_target_coast = yes }
+        X63 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X63 value = 80 }
@@ -5284,7 +7022,12 @@ PWC_amphibious_invasion_target_X64 = {
         has_war_with = X64
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X64 = { pwc_st_naval_target_coast = yes }
+        X64 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X64 value = 80 }
@@ -5297,7 +7040,12 @@ PWC_amphibious_invasion_target_X65 = {
         has_war_with = X65
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
-        X65 = { pwc_st_naval_target_coast = yes }
+        X65 = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
+        }
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = invade id = X65 value = 80 }

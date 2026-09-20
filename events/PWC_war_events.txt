@@ -22,14 +22,14 @@ news_event = {
 }
 
 
-country_event = {
+news_event = {
 	id = pwc_ev_last_city_champion.1
 	title = PWC_EV_LAST_CITY_CHAMPION_TITLE
 	desc = PWC_EV_LAST_CITY_CHAMPION_DESC
+	major = yes
 	is_triggered_only = yes
 	option = {
 		name = PWC_EV_OK
-		add_stability = 0.05
 	}
 }
 

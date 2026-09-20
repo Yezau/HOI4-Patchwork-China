@@ -1,5 +1,6 @@
 PWC_ai_sf_mountaineers = {
     role = mountaineers
+    blocked_for = { NTR }
     upgrade_prio = {
         base = 3
         modifier = {
@@ -31,6 +32,7 @@ PWC_ai_sf_mountaineers = {
 }
 PWC_ai_sf_marines = {
     role = marines
+    blocked_for = { NTR }
     upgrade_prio = {
         base = 3
         modifier = {
@@ -47,17 +49,77 @@ PWC_ai_sf_marines = {
         enable = {
             pwc_st_ai_sf_ready = yes
             pwc_st_ai_sf_amphibious_need = yes
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech_sf_mountain_t1
         }
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = yes
+            num_of_military_factories > 14
+            num_divisions > 17
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_logistics_t1
+            has_tech = pwc_tech_sf_mountain_t1
+            has_equipment = { pwc_equipment_anti_air > 19 }
+            has_equipment = { pwc_equipment_artillery > 15 }
+            has_equipment = { pwc_equipment_infantry > 1389 }
+            has_equipment = { pwc_equipment_motorized > 9 }
+            has_equipment = { pwc_equipment_special_forces > 179 }
+            has_equipment = { pwc_equipment_support > 54 }
+        }
         target_template = {
             regiments = {
                 pwc_unit_marine = 6
+            }
+            support = {
+                pwc_unit_engineer = 1
+                pwc_unit_support_artillery = 1
+            }
+        }
+        replace_at_match = 0.9
+        target_min_match = 0.6
+        replace_with = PWC_ai_sf_marines_18w
+    }
+    PWC_ai_sf_marines_18w = {
+        reinforce_prio = 2
+        upgrade_prio = { base = 2 }
+        enable = {
+            pwc_st_ai_sf_ready = yes
+            pwc_st_ai_sf_amphibious_need = yes
+            num_of_military_factories > 14
+            num_divisions > 17
+            has_tech = pwc_tech0_basic_infantry
+            has_tech = pwc_tech0_engineers
+            has_tech = pwc_tech0_transport
+            has_tech = pwc_tech_logistics_t1
+            has_tech = pwc_tech_sf_mountain_t1
+        }
+        can_upgrade_in_field = {
+            always = no
+        }
+        target_template = {
+            regiments = {
+                pwc_unit_marine = 9
+            }
+            support = {
+                pwc_unit_engineer = 1
+                pwc_unit_support_artillery = 1
+                pwc_unit_support_anti_air = 1
+                pwc_unit_logistics = 1
+            }
+            regimental_support = {
+                pwc_unit_regimental_fire_support = 1
+                pwc_unit_regimental_artillery = 1
             }
         }
     }
 }
 PWC_ai_sf_paratroopers = {
     role = paratroopers
+    blocked_for = { NTR }
     upgrade_prio = {
         base = 3
         modifier = {
@@ -87,6 +149,7 @@ PWC_ai_sf_paratroopers = {
 }
 PWC_ai_sf_pwc_role_rangers = {
     role = pwc_role_rangers
+    blocked_for = { NTR }
     upgrade_prio = {
         base = 3
         modifier = {

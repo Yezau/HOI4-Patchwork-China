@@ -483,27 +483,45 @@ pwc_se_mark_city_eliminated = {
 	}
 }
 
-
-
-
 pwc_se_check_champion = {
-	pwc_se_check_war_milestones = yes
-	if = {
-		limit = {
-			check_variable = { var = global.pwc_alive_count value = 1 compare = equals }
-			NOT = { has_global_flag = pwc_flag_champion_crowned }
-		}
-		set_global_flag = pwc_flag_champion_crowned
-		every_country = {
-			limit = {
-				pwc_st_is_city_country = yes
-				pwc_st_city_alive = yes
-				exists = yes
-			}
-			country_event = { id = pwc_ev_last_city_champion.1 }
-		}
-		log = "PWC CHAMPION crowned alive=[?global.pwc_alive_count]"
-	}
+    pwc_se_check_war_milestones = yes
+    pwc_se_restore_victory_presentation = yes
+}
+
+pwc_se_restore_victory_presentation = {
+    if = {
+        limit = {
+            check_variable = { global.pwc_alive_count = 1 }
+            NOT = { has_global_flag = pwc_flag_victory_event_sent }
+        }
+        clear_array = global.pwc_victory_countries
+        every_country = {
+            limit = {
+                pwc_st_is_city_country = yes
+                pwc_st_city_alive = yes
+                exists = yes
+            }
+            add_to_array = { array = global.pwc_victory_countries value = THIS }
+        }
+        if = {
+            limit = { check_variable = { global.pwc_victory_countries^num = 1 } }
+            if = {
+                limit = { NOT = { has_global_flag = pwc_flag_champion_crowned } }
+                for_each_scope_loop = {
+                    array = global.pwc_victory_countries
+                    add_stability = 0.05
+                }
+                set_global_flag = pwc_flag_champion_crowned
+            }
+            set_global_flag = pwc_flag_victory_event_sent
+            for_each_scope_loop = {
+                array = global.pwc_victory_countries
+                save_global_event_target_as = pwc_champion
+                news_event = { id = pwc_ev_last_city_champion.1 }
+            }
+            log = "PWC VICTORY event sent alive=[?global.pwc_alive_count]"
+        }
+    }
 }
 
 

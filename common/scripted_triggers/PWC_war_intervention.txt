@@ -28,6 +28,7 @@ pwc_st_support_recipient = {
     is_in_faction = no
     NOT = { tag = ROOT }
     NOT = { has_country_flag = pwc_support_requested }
+    NOT = { has_country_flag = pwc_support_neutral }
 }
 pwc_st_support_selection = {
     has_variable = pwc_support_enemy
