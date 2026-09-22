@@ -1,0 +1,3734 @@
+entity = {
+    name = "pwc_fighter_gen0_entity"
+    pdxmesh = "pwc_fighter_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.28
+}
+entity = {
+    name = "pwc_fighter_gen1_entity"
+    pdxmesh = "pwc_fighter_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.266197
+}
+entity = {
+    name = "pwc_fighter_gen2_entity"
+    pdxmesh = "pwc_fighter_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.239241
+}
+entity = {
+    name = "pwc_fighter_gen3_entity"
+    pdxmesh = "pwc_fighter_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.21236
+}
+entity = {
+    name = "pwc_fighter_gen4_entity"
+    pdxmesh = "pwc_fighter_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.198947
+}
+entity = {
+    name = "pwc_cas_gen0_entity"
+    pdxmesh = "pwc_cas_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.223214
+}
+entity = {
+    name = "pwc_cas_gen1_entity"
+    pdxmesh = "pwc_cas_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.237342
+}
+entity = {
+    name = "pwc_cas_gen2_entity"
+    pdxmesh = "pwc_cas_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.220588
+}
+entity = {
+    name = "pwc_cas_gen3_entity"
+    pdxmesh = "pwc_cas_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.201613
+}
+entity = {
+    name = "pwc_cas_gen4_entity"
+    pdxmesh = "pwc_cas_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.182927
+}
+entity = {
+    name = "pwc_bomber_gen0_entity"
+    pdxmesh = "pwc_bomber_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.1725
+}
+entity = {
+    name = "pwc_bomber_gen1_entity"
+    pdxmesh = "pwc_bomber_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.178065
+}
+entity = {
+    name = "pwc_bomber_gen2_entity"
+    pdxmesh = "pwc_bomber_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.167273
+}
+entity = {
+    name = "pwc_bomber_gen3_entity"
+    pdxmesh = "pwc_bomber_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.138
+}
+entity = {
+    name = "pwc_bomber_gen4_entity"
+    pdxmesh = "pwc_bomber_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.128372
+}
+entity = {
+    name = "pwc_uav_gen0_entity"
+    pdxmesh = "pwc_uav_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.202162
+}
+entity = {
+    name = "pwc_uav_gen1_entity"
+    pdxmesh = "pwc_uav_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.155833
+}
+entity = {
+    name = "pwc_uav_gen2_entity"
+    pdxmesh = "pwc_uav_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.116875
+}
+entity = {
+    name = "pwc_uav_gen3_entity"
+    pdxmesh = "pwc_uav_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.191795
+}
+entity = {
+    name = "pwc_uav_gen4_entity"
+    pdxmesh = "pwc_uav_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.162609
+}
+entity = {
+    name = "pwc_destroyer_gen0_entity"
+    pdxmesh = "pwc_destroyer_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.783529
+}
+entity = {
+    name = "pwc_destroyer_gen1_entity"
+    pdxmesh = "pwc_destroyer_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.701053
+}
+entity = {
+    name = "pwc_destroyer_gen2_entity"
+    pdxmesh = "pwc_destroyer_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.634286
+}
+entity = {
+    name = "pwc_destroyer_gen3_entity"
+    pdxmesh = "pwc_destroyer_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.57913
+}
+entity = {
+    name = "pwc_destroyer_gen4_entity"
+    pdxmesh = "pwc_destroyer_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.5328
+}
+entity = {
+    name = "pwc_cruiser_gen0_entity"
+    pdxmesh = "pwc_cruiser_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.715
+}
+entity = {
+    name = "pwc_cruiser_gen1_entity"
+    pdxmesh = "pwc_cruiser_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.635556
+}
+entity = {
+    name = "pwc_cruiser_gen2_entity"
+    pdxmesh = "pwc_cruiser_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.591724
+}
+entity = {
+    name = "pwc_cruiser_gen3_entity"
+    pdxmesh = "pwc_cruiser_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.544762
+}
+entity = {
+    name = "pwc_cruiser_gen4_entity"
+    pdxmesh = "pwc_cruiser_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "front1_cannon_muzzle"
+            particle = "ship_fire_small_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.504706
+}
+entity = {
+    name = "pwc_submarine_gen0_entity"
+    pdxmesh = "pwc_submarine_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.772414
+}
+entity = {
+    name = "pwc_submarine_gen1_entity"
+    pdxmesh = "pwc_submarine_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.658824
+}
+entity = {
+    name = "pwc_submarine_gen2_entity"
+    pdxmesh = "pwc_submarine_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.589474
+}
+entity = {
+    name = "pwc_submarine_gen3_entity"
+    pdxmesh = "pwc_submarine_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.448
+}
+entity = {
+    name = "pwc_submarine_gen4_entity"
+    pdxmesh = "pwc_submarine_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_defend"
+        animation = "attack"
+        event = {
+            node = "left_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "right_torpedo"
+            particle = "submarine_torpedo_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "damaged_attack_looping"
+        animation = "attack"
+    }
+    state = {
+        name = "damaged_defend_loop"
+        animation = "attack"
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.509091
+}
+entity = {
+    name = "pwc_carrier_gen0_entity"
+    pdxmesh = "pwc_carrier_gen0_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.793333
+}
+entity = {
+    name = "pwc_carrier_gen1_entity"
+    pdxmesh = "pwc_carrier_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.656552
+}
+entity = {
+    name = "pwc_carrier_gen2_entity"
+    pdxmesh = "pwc_carrier_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.56
+}
+entity = {
+    name = "pwc_carrier_gen3_entity"
+    pdxmesh = "pwc_carrier_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.488205
+}
+entity = {
+    name = "pwc_carrier_gen4_entity"
+    pdxmesh = "pwc_carrier_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "move"
+        animation = "idle"
+        event = {
+            node = "front_moving_water_effect"
+            particle = "ship_moving_front_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "back_moving_water_effect"
+            particle = "ship_moving_back_fleet_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "death"
+        animation = "death"
+        looping = no
+    }
+    scale = 0.453333
+}
+entity = {
+    name = "pwc_carrier_aircraft_entity"
+    pdxmesh = "pwc_carrier_aircraft_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.251333
+}
+entity = {
+    name = "pwc_transport_gen1_entity"
+    pdxmesh = "pwc_transport_gen1_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.212963
+}
+entity = {
+    name = "pwc_transport_gen2_entity"
+    pdxmesh = "pwc_transport_gen2_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.179688
+}
+entity = {
+    name = "pwc_transport_gen3_entity"
+    pdxmesh = "pwc_transport_gen3_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.159722
+}
+entity = {
+    name = "pwc_transport_gen4_entity"
+    pdxmesh = "pwc_transport_gen4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+    }
+    state = {
+        name = "fire"
+        animation = "idle"
+        event = {
+            node = "gun1"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+        event = {
+            node = "gun2"
+            particle = "plane_mg_muzzle_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "bomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "bomb_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "firebomb"
+        animation = "idle"
+        event = {
+            node = "bomb"
+            particle = "napalm_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "supply"
+        animation = "idle"
+    }
+    state = {
+        name = "crash"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "explosion_particle"
+            time = 0 keep_particle = yes
+        }
+    }
+    state = {
+        name = "explode"
+        animation = "death"
+        looping = no
+        event = {
+            node = "impact"
+            particle = "vehicle_explode_effect"
+            time = 0 keep_particle = yes
+        }
+    }
+    scale = 0.136905
+}
+entity = {
+    name = "asian_gfx_pwc_bomber_gen0_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_bomber_gen1_entity"
+    clone = "pwc_bomber_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_bomber_gen2_entity"
+    clone = "pwc_bomber_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_bomber_gen3_entity"
+    clone = "pwc_bomber_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_bomber_gen4_entity"
+    clone = "pwc_bomber_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_aircraft_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_gen0_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_gen1_entity"
+    clone = "pwc_carrier_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_gen2_entity"
+    clone = "pwc_carrier_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_gen3_entity"
+    clone = "pwc_carrier_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_carrier_gen4_entity"
+    clone = "pwc_carrier_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cas_gen0_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cas_gen1_entity"
+    clone = "pwc_cas_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cas_gen2_entity"
+    clone = "pwc_cas_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cas_gen3_entity"
+    clone = "pwc_cas_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cas_gen4_entity"
+    clone = "pwc_cas_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cruiser_gen0_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cruiser_gen1_entity"
+    clone = "pwc_cruiser_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cruiser_gen2_entity"
+    clone = "pwc_cruiser_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cruiser_gen3_entity"
+    clone = "pwc_cruiser_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_cruiser_gen4_entity"
+    clone = "pwc_cruiser_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_destroyer_gen0_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_destroyer_gen1_entity"
+    clone = "pwc_destroyer_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_destroyer_gen2_entity"
+    clone = "pwc_destroyer_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_destroyer_gen3_entity"
+    clone = "pwc_destroyer_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_destroyer_gen4_entity"
+    clone = "pwc_destroyer_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_fighter_gen0_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_fighter_gen1_entity"
+    clone = "pwc_fighter_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_fighter_gen2_entity"
+    clone = "pwc_fighter_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_fighter_gen3_entity"
+    clone = "pwc_fighter_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_fighter_gen4_entity"
+    clone = "pwc_fighter_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_submarine_gen0_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_submarine_gen1_entity"
+    clone = "pwc_submarine_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_submarine_gen2_entity"
+    clone = "pwc_submarine_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_submarine_gen3_entity"
+    clone = "pwc_submarine_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_submarine_gen4_entity"
+    clone = "pwc_submarine_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_transport_gen1_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_transport_gen2_entity"
+    clone = "pwc_transport_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_transport_gen3_entity"
+    clone = "pwc_transport_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_transport_gen4_entity"
+    clone = "pwc_transport_gen4_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_uav_gen0_entity"
+    clone = "pwc_uav_gen0_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_uav_gen1_entity"
+    clone = "pwc_uav_gen1_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_uav_gen2_entity"
+    clone = "pwc_uav_gen2_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_uav_gen3_entity"
+    clone = "pwc_uav_gen3_entity"
+}
+entity = {
+    name = "asian_gfx_pwc_uav_gen4_entity"
+    clone = "pwc_uav_gen4_entity"
+}
+entity = {
+    name = "pwc_bomber_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "pwc_carrier_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "pwc_cas_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "pwc_cruiser_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "pwc_cv_cas_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_cv_fighter_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_destroyer_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "pwc_equipment_transport_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "pwc_equipment_transport_gen1_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "pwc_equipment_transport_gen2_entity"
+    clone = "pwc_transport_gen2_entity"
+}
+entity = {
+    name = "pwc_equipment_transport_gen3_entity"
+    clone = "pwc_transport_gen3_entity"
+}
+entity = {
+    name = "pwc_equipment_transport_gen4_entity"
+    clone = "pwc_transport_gen4_entity"
+}
+entity = {
+    name = "pwc_fighter_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_gen0_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_gen1_entity"
+    clone = "pwc_bomber_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_gen2_entity"
+    clone = "pwc_bomber_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_gen3_entity"
+    clone = "pwc_bomber_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_bomber_gen4_entity"
+    clone = "pwc_bomber_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_gen0_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_gen1_entity"
+    clone = "pwc_carrier_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_gen2_entity"
+    clone = "pwc_carrier_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_gen3_entity"
+    clone = "pwc_carrier_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_carrier_gen4_entity"
+    clone = "pwc_carrier_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_cas_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_cas_gen0_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_cas_gen1_entity"
+    clone = "pwc_cas_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_cas_gen2_entity"
+    clone = "pwc_cas_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_cas_gen3_entity"
+    clone = "pwc_cas_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_cas_gen4_entity"
+    clone = "pwc_cas_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_gen0_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_gen1_entity"
+    clone = "pwc_cruiser_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_gen2_entity"
+    clone = "pwc_cruiser_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_gen3_entity"
+    clone = "pwc_cruiser_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_cruiser_gen4_entity"
+    clone = "pwc_cruiser_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_gen0_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_gen1_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_gen2_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_gen3_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_cas_gen4_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_gen0_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_gen1_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_gen2_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_gen3_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_cv_fighter_gen4_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_gen0_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_gen1_entity"
+    clone = "pwc_destroyer_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_gen2_entity"
+    clone = "pwc_destroyer_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_gen3_entity"
+    clone = "pwc_destroyer_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_destroyer_gen4_entity"
+    clone = "pwc_destroyer_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_gen0_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_gen1_entity"
+    clone = "pwc_fighter_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_gen2_entity"
+    clone = "pwc_fighter_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_gen3_entity"
+    clone = "pwc_fighter_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_fighter_gen4_entity"
+    clone = "pwc_fighter_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_gen0_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_gen1_entity"
+    clone = "pwc_submarine_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_gen2_entity"
+    clone = "pwc_submarine_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_gen3_entity"
+    clone = "pwc_submarine_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_submarine_gen4_entity"
+    clone = "pwc_submarine_gen4_entity"
+}
+entity = {
+    name = "pwc_platform_uav_entity"
+    clone = "pwc_uav_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_uav_gen0_entity"
+    clone = "pwc_uav_gen0_entity"
+}
+entity = {
+    name = "pwc_platform_uav_gen1_entity"
+    clone = "pwc_uav_gen1_entity"
+}
+entity = {
+    name = "pwc_platform_uav_gen2_entity"
+    clone = "pwc_uav_gen2_entity"
+}
+entity = {
+    name = "pwc_platform_uav_gen3_entity"
+    clone = "pwc_uav_gen3_entity"
+}
+entity = {
+    name = "pwc_platform_uav_gen4_entity"
+    clone = "pwc_uav_gen4_entity"
+}
+entity = {
+    name = "pwc_submarine_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "pwc_transport_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "pwc_uav_entity"
+    clone = "pwc_uav_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_0_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_1_entity"
+    clone = "pwc_bomber_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_2_entity"
+    clone = "pwc_bomber_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_3_entity"
+    clone = "pwc_bomber_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_4_entity"
+    clone = "pwc_bomber_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_bomber_entity"
+    clone = "pwc_bomber_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_0_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_1_entity"
+    clone = "pwc_carrier_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_2_entity"
+    clone = "pwc_carrier_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_3_entity"
+    clone = "pwc_carrier_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_4_entity"
+    clone = "pwc_carrier_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_carrier_entity"
+    clone = "pwc_carrier_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_cas_0_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_cas_1_entity"
+    clone = "pwc_cas_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_cas_2_entity"
+    clone = "pwc_cas_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_cas_3_entity"
+    clone = "pwc_cas_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_cas_4_entity"
+    clone = "pwc_cas_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_cas_entity"
+    clone = "pwc_cas_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_0_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_1_entity"
+    clone = "pwc_cruiser_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_2_entity"
+    clone = "pwc_cruiser_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_3_entity"
+    clone = "pwc_cruiser_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_4_entity"
+    clone = "pwc_cruiser_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_cruiser_entity"
+    clone = "pwc_cruiser_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_0_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_1_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_2_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_3_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_4_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_cas_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_0_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_1_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_2_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_3_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_4_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_cv_fighter_entity"
+    clone = "pwc_carrier_aircraft_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_0_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_1_entity"
+    clone = "pwc_destroyer_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_2_entity"
+    clone = "pwc_destroyer_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_3_entity"
+    clone = "pwc_destroyer_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_4_entity"
+    clone = "pwc_destroyer_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_destroyer_entity"
+    clone = "pwc_destroyer_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_0_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_1_entity"
+    clone = "pwc_fighter_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_2_entity"
+    clone = "pwc_fighter_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_3_entity"
+    clone = "pwc_fighter_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_4_entity"
+    clone = "pwc_fighter_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_fighter_entity"
+    clone = "pwc_fighter_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_0_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_1_entity"
+    clone = "pwc_submarine_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_2_entity"
+    clone = "pwc_submarine_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_3_entity"
+    clone = "pwc_submarine_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_4_entity"
+    clone = "pwc_submarine_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_submarine_entity"
+    clone = "pwc_submarine_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_transport_1_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_transport_2_entity"
+    clone = "pwc_transport_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_transport_3_entity"
+    clone = "pwc_transport_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_transport_4_entity"
+    clone = "pwc_transport_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_transport_entity"
+    clone = "pwc_transport_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_uav_0_entity"
+    clone = "pwc_uav_gen0_entity"
+}
+entity = {
+    name = "pwc_unit_uav_1_entity"
+    clone = "pwc_uav_gen1_entity"
+}
+entity = {
+    name = "pwc_unit_uav_2_entity"
+    clone = "pwc_uav_gen2_entity"
+}
+entity = {
+    name = "pwc_unit_uav_3_entity"
+    clone = "pwc_uav_gen3_entity"
+}
+entity = {
+    name = "pwc_unit_uav_4_entity"
+    clone = "pwc_uav_gen4_entity"
+}
+entity = {
+    name = "pwc_unit_uav_entity"
+    clone = "pwc_uav_gen0_entity"
+}

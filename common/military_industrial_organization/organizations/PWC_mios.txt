@@ -14,6 +14,7 @@ pwc_mio_armor = {
 		pwc_platform_medium_tank
 		pwc_platform_heavy_tank
 		pwc_platform_tank_destroyer
+		pwc_platform_amphibious_tank
 	}
 	research_categories = {
 		pwc_mio_research_pwc_tech_missile_defense_t2
@@ -25,6 +26,10 @@ pwc_mio_armor = {
 		pwc_mio_research_pwc_tech_army_t2
 		pwc_mio_research_pwc_tech_army_t3
 		pwc_mio_research_pwc_tech_army_t4
+		pwc_mio_research_pwc_tech_army_amphibious_t1
+		pwc_mio_research_pwc_tech_army_amphibious_t2
+		pwc_mio_research_pwc_tech_army_amphibious_t3
+		pwc_mio_research_pwc_tech_army_amphibious_t4
 	}
 	initial_trait = {
 		name = PWC_MIO_ARMOR_INITIAL
@@ -846,6 +851,7 @@ pwc_mio_logistics = {
 		pwc_equipment_armored_recovery_vehicle
 		pwc_equipment_mechanized
 		pwc_equipment_transport
+		pwc_equipment_amphibious_mechanized
 		convoy
 	}
 	research_categories = {

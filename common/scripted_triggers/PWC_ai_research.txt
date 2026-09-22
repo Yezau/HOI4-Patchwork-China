@@ -439,6 +439,45 @@ pwc_st_ai_needs_institute_armor = {
 				}
 			}
 		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t2 }
+			has_tech = pwc_tech_army_amphibious_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t3 }
+			has_tech = pwc_tech_army_amphibious_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t4 }
+			has_tech = pwc_tech_army_amphibious_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
 	}
 }
 pwc_st_ai_needs_institute_air = {
@@ -899,6 +938,10 @@ pwc_st_ai_needs_tech_center = {
 		NOT = { has_tech = pwc_tech_sf_mountain_t2 }
 		NOT = { has_tech = pwc_tech_sf_mountain_t3 }
 		NOT = { has_tech = pwc_tech_sf_mountain_t4 }
+		NOT = { has_tech = pwc_tech_army_amphibious_t1 }
+		NOT = { has_tech = pwc_tech_army_amphibious_t2 }
+		NOT = { has_tech = pwc_tech_army_amphibious_t3 }
+		NOT = { has_tech = pwc_tech_army_amphibious_t4 }
 	}
 	OR = {
 		AND = {
@@ -1687,6 +1730,45 @@ pwc_st_ai_needs_tech_center = {
 			}
 		}
 		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t2 }
+			has_tech = pwc_tech_army_amphibious_t1
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t3 }
+			has_tech = pwc_tech_army_amphibious_t2
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_tech = pwc_tech_army_amphibious_t4 }
+			has_tech = pwc_tech_army_amphibious_t3
+			NOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+			}
+		}
+		AND = {
 			OR = {
 				has_tech = pwc_tech_army_infantry_t2
 				has_tech = pwc_tech_army_infantry_t3
@@ -1748,6 +1830,9 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_sf_mountain_t2
 				has_tech = pwc_tech_sf_mountain_t3
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t2
+				has_tech = pwc_tech_army_amphibious_t3
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			NOT = {
 				any_owned_state = {
@@ -1801,6 +1886,8 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t3
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t3
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 5
 			NOT = {
@@ -1855,6 +1942,8 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t3
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t3
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 7
 			NOT = {
@@ -1909,6 +1998,8 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t3
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t3
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 9
 			NOT = {
@@ -1943,6 +2034,7 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_t4
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 13
 			NOT = {
@@ -1977,6 +2069,7 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_t4
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 17
 			NOT = {
@@ -2011,6 +2104,7 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_t4
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 21
 			NOT = {
@@ -2045,6 +2139,7 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_t4
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 25
 			NOT = {
@@ -2079,6 +2174,7 @@ pwc_st_ai_needs_tech_center = {
 				has_tech = pwc_tech_electronics_t4
 				has_tech = pwc_tech_electronics_radar_t4
 				has_tech = pwc_tech_sf_mountain_t4
+				has_tech = pwc_tech_army_amphibious_t4
 			}
 			num_of_civilian_factories > 29
 			NOT = {

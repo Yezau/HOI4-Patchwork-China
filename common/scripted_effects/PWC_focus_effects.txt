@@ -593,11 +593,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply light_tank G4"
                         type = pwc_platform_light_tank_gen4
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                            pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t4
+                            pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t4
+                            pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t4
+                            pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t4
+                            pwc_light_tank_engine_4 = pwc_module_tank_light_power_t4
+                            pwc_light_tank_special_5 = pwc_module_tank_fcs_t4
+                            pwc_light_tank_special_6 = pwc_module_tank_radio_t4
+                            pwc_light_tank_special_7 = pwc_module_tank_smoke_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_light_tank_g4
@@ -623,13 +626,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply light_tank G3"
                         type = pwc_platform_light_tank_gen3
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                            pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t3
+                            pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t3
+                            pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t3
+                            pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t3
+                            pwc_light_tank_engine_4 = pwc_module_tank_light_power_t3
+                            pwc_light_tank_special_5 = pwc_module_tank_fcs_t3
+                            pwc_light_tank_special_6 = pwc_module_tank_radio_t3
+                            pwc_light_tank_special_7 = pwc_module_tank_smoke_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_light_tank_g3
@@ -655,14 +659,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply light_tank G2"
                         type = pwc_platform_light_tank_gen2
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                            pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t2
+                            pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t2
+                            pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t2
+                            pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t2
+                            pwc_light_tank_engine_4 = pwc_module_tank_light_power_t2
+                            pwc_light_tank_special_5 = pwc_module_tank_fcs_t2
+                            pwc_light_tank_special_6 = pwc_module_tank_radio_t2
+                            pwc_light_tank_special_7 = pwc_module_tank_smoke_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_light_tank_g2
@@ -688,13 +692,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply light_tank G1"
                         type = pwc_platform_light_tank_gen1
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                            pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t1
+                            pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t1
+                            pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t1
+                            pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t1
+                            pwc_light_tank_engine_4 = pwc_module_tank_light_power_t1
+                            pwc_light_tank_special_5 = pwc_module_tank_fcs_t1
+                            pwc_light_tank_special_6 = pwc_module_tank_radio_t1
+                            pwc_light_tank_special_7 = pwc_module_tank_smoke_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_light_tank_g1
@@ -720,12 +725,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply light_tank G0"
                         type = pwc_platform_light_tank_gen0
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                            fixed_pwc_slot_kit_light_tank_1 = pwc_module_tank_kit_light
+                            pwc_light_tank_turret_0 = pwc_module_tank_turret_manual_t0
+                            pwc_light_tank_gun_1 = pwc_module_tank_light_gun_t0
+                            pwc_light_tank_suspension_2 = pwc_module_tank_torsion_t0
+                            pwc_light_tank_armor_3 = pwc_module_tank_light_armor_t0
+                            pwc_light_tank_engine_4 = pwc_module_tank_light_power_t0
+                            pwc_light_tank_special_5 = pwc_module_tank_fcs_t0
+                            pwc_light_tank_special_6 = pwc_module_tank_radio_t0
+                            pwc_light_tank_special_7 = pwc_module_tank_smoke_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_light_tank_g0
@@ -756,13 +763,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply medium_tank G4"
                         type = pwc_platform_medium_tank_gen4
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                            pwc_slot_special_1 = pwc_module_tank_special_nbc
-                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                            pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t4
+                            pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t4
+                            pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t4
+                            pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t4
+                            pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t4
+                            pwc_medium_tank_special_5 = pwc_module_tank_fcs_t4
+                            pwc_medium_tank_special_6 = pwc_module_tank_radio_t4
+                            pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_medium_tank_g4
@@ -788,13 +796,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply medium_tank G3"
                         type = pwc_platform_medium_tank_gen3
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                            pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t3
+                            pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t3
+                            pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t3
+                            pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t3
+                            pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t3
+                            pwc_medium_tank_special_5 = pwc_module_tank_fcs_t3
+                            pwc_medium_tank_special_6 = pwc_module_tank_radio_t3
+                            pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_medium_tank_g3
@@ -820,14 +829,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply medium_tank G2"
                         type = pwc_platform_medium_tank_gen2
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                            pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t2
+                            pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t2
+                            pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t2
+                            pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t2
+                            pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t2
+                            pwc_medium_tank_special_5 = pwc_module_tank_fcs_t2
+                            pwc_medium_tank_special_6 = pwc_module_tank_radio_t2
+                            pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_medium_tank_g2
@@ -853,14 +862,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply medium_tank G1"
                         type = pwc_platform_medium_tank_gen1
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                            pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t1
+                            pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t1
+                            pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t1
+                            pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t1
+                            pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t1
+                            pwc_medium_tank_special_5 = pwc_module_tank_fcs_t1
+                            pwc_medium_tank_special_6 = pwc_module_tank_radio_t1
+                            pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_medium_tank_g1
@@ -886,13 +895,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply medium_tank G0"
                         type = pwc_platform_medium_tank_gen0
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                            fixed_pwc_slot_kit_medium_tank_1 = pwc_module_tank_kit_medium
+                            pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t0
+                            pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t0
+                            pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t0
+                            pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t0
+                            pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t0
+                            pwc_medium_tank_special_5 = pwc_module_tank_fcs_t0
+                            pwc_medium_tank_special_6 = pwc_module_tank_radio_t0
+                            pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_medium_tank_g0
@@ -923,13 +933,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply heavy_tank G4"
                         type = pwc_platform_heavy_tank_gen4
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_support_t4
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                            pwc_slot_special_1 = pwc_module_tank_special_nbc
-                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                            pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t4
+                            pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t4
+                            pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t4
+                            pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t4
+                            pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t4
+                            pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t4
+                            pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t4
+                            pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_heavy_tank_g4
@@ -955,13 +966,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply heavy_tank G3"
                         type = pwc_platform_heavy_tank_gen3
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_special_1 = pwc_module_tank_special_dozer
-                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                            pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t3
+                            pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t3
+                            pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t3
+                            pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t3
+                            pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t3
+                            pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t3
+                            pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t3
+                            pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_heavy_tank_g3
@@ -987,14 +999,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply heavy_tank G2"
                         type = pwc_platform_heavy_tank_gen2
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_125mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                            pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t2
+                            pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t2
+                            pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t2
+                            pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t2
+                            pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t2
+                            pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t2
+                            pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t2
+                            pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_heavy_tank_g2
@@ -1020,14 +1032,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply heavy_tank G1"
                         type = pwc_platform_heavy_tank_gen1
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_120mm
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_turbine_1200
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                            pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t1
+                            pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t1
+                            pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t1
+                            pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t1
+                            pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t1
+                            pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t1
+                            pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t1
+                            pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_heavy_tank_g1
@@ -1053,13 +1065,14 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply heavy_tank G0"
                         type = pwc_platform_heavy_tank_gen0
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                            fixed_pwc_slot_turret_1 = pwc_module_tank_turret_autoloader_t0
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                            fixed_pwc_slot_kit_heavy_tank_1 = pwc_module_tank_kit_heavy
+                            pwc_heavy_tank_turret_0 = pwc_module_tank_turret_auto_t0
+                            pwc_heavy_tank_gun_1 = pwc_module_tank_main_gun_t0
+                            pwc_heavy_tank_suspension_2 = pwc_module_tank_suspension_t0
+                            pwc_heavy_tank_armor_3 = pwc_module_tank_composite_armor_t0
+                            pwc_heavy_tank_engine_4 = pwc_module_tank_heavy_power_t0
+                            pwc_heavy_tank_special_5 = pwc_module_tank_addon_armor_t0
+                            pwc_heavy_tank_special_6 = pwc_module_tank_fcs_t0
+                            pwc_heavy_tank_special_7 = pwc_module_tank_ammo_safety_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_heavy_tank_g0
@@ -1090,11 +1103,13 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply tank_destroyer G4"
                         type = pwc_platform_tank_destroyer_gen4
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_hybrid_1500
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_modular
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_adaptive
-                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                            pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t4
+                            pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t4
+                            pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t4
+                            pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t4
+                            pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t4
+                            pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t4
+                            pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_tank_destroyer_g4
@@ -1120,12 +1135,13 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply tank_destroyer G3"
                         type = pwc_platform_tank_destroyer_gen3
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_atgm_multipurpose
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_era
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                            pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t3
+                            pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t3
+                            pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t3
+                            pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t3
+                            pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t3
+                            pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t3
+                            pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_tank_destroyer_g3
@@ -1151,13 +1167,13 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply tank_destroyer G2"
                         type = pwc_platform_tank_destroyer_gen2
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_advanced
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen2
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_hydropneumatic
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                            pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t2
+                            pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t2
+                            pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t2
+                            pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
+                            pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t2
+                            pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t2
+                            pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_tank_destroyer_g2
@@ -1183,13 +1199,13 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply tank_destroyer G1"
                         type = pwc_platform_tank_destroyer_gen1
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_atgm_basic
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_900
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_composite_gen1
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion
-                            pwc_slot_radio_1 = pwc_module_tank_radio_digital
-                            pwc_slot_special_1 = pwc_module_tank_fcs_thermal
-                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                            pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t1
+                            pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t1
+                            pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t1
+                            pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
+                            pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t1
+                            pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t1
+                            pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_tank_destroyer_g1
@@ -1215,12 +1231,13 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply tank_destroyer G0"
                         type = pwc_platform_tank_destroyer_gen0
                         modules = {
-                            fixed_pwc_slot_gun_1 = pwc_module_tank_gun_105mm_t0
-                            fixed_pwc_slot_engine_1 = pwc_module_tank_engine_diesel_600_t0
-                            fixed_pwc_slot_armor_1 = pwc_module_tank_armor_steel_t0
-                            pwc_slot_suspension_1 = pwc_module_tank_suspension_torsion_t0
-                            pwc_slot_radio_1 = pwc_module_tank_radio_vhf_t0
-                            fixed_pwc_slot_kit_tank_destroyer_1 = pwc_module_tank_kit_td
+                            pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t0
+                            pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t0
+                            pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t0
+                            pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t0
+                            pwc_tank_destroyer_engine_4 = pwc_module_tank_heavy_economy_t0
+                            pwc_tank_destroyer_special_5 = pwc_module_tank_radio_t0
+                            pwc_tank_destroyer_special_6 = pwc_module_tank_apu_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_tank_destroyer_g0
@@ -1251,9 +1268,10 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply fighter G4"
                         type = pwc_platform_fighter_gen4
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_advanced
-                            pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+                            fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t4
+                            fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t4
+                            fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t4
+                            fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_fighter_g4
@@ -1279,10 +1297,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply fighter G3"
                         type = pwc_platform_fighter_gen3
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_aam_bvr
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t3
+                            fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t3
+                            fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t3
+                            fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t3
+                            pwc_fighter_special_0 = pwc_module_air_irst_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_fighter_g3
@@ -1308,9 +1327,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply fighter G2"
                         type = pwc_platform_fighter_gen2
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t2
+                            fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t2
+                            fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t2
+                            fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t2
+                            pwc_fighter_special_0 = pwc_module_air_irst_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_fighter_g2
@@ -1336,10 +1357,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply fighter G1"
                         type = pwc_platform_fighter_gen1
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t1
+                            fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t1
+                            fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t1
+                            fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t1
+                            pwc_fighter_special_0 = pwc_module_air_irst_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_fighter_g1
@@ -1365,10 +1387,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply fighter G0"
                         type = pwc_platform_fighter_gen0
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                            fixed_pwc_fighter_engine_0 = pwc_module_air_small_sprint_t0
+                            fixed_pwc_fighter_avionics_1 = pwc_module_air_radar_t0
+                            fixed_pwc_fighter_weapon_2 = pwc_module_air_aam_medium_t0
+                            fixed_pwc_fighter_weapon_3 = pwc_module_air_cannon_t0
+                            pwc_fighter_special_0 = pwc_module_air_irst_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_fighter_g0
@@ -1399,10 +1422,10 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply cas G4"
                         type = pwc_platform_cas_gen4
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_targeting_pod
-                            pwc_slot_payload_1 = pwc_module_air_payload_standoff_bomb
+                            fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t4
+                            fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t4
+                            fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t4
+                            fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_cas_g4
@@ -1428,9 +1451,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply cas G3"
                         type = pwc_platform_cas_gen3
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t3
+                            fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t3
+                            fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t3
+                            fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t3
+                            pwc_cas_special_0 = pwc_module_air_armor_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_cas_g3
@@ -1456,9 +1481,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply cas G2"
                         type = pwc_platform_cas_gen2
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t2
+                            fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
+                            fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
+                            fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
+                            pwc_cas_special_0 = pwc_module_air_armor_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_cas_g2
@@ -1484,10 +1511,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply cas G1"
                         type = pwc_platform_cas_gen1
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t1
+                            fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
+                            fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
+                            fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
+                            pwc_cas_special_0 = pwc_module_air_armor_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_cas_g1
@@ -1513,10 +1541,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply cas G0"
                         type = pwc_platform_cas_gen0
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                            pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                            fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t0
+                            fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t0
+                            fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t0
+                            fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t0
+                            pwc_cas_special_0 = pwc_module_air_armor_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_cas_g0
@@ -1547,12 +1576,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply bomber G4"
                         type = pwc_platform_bomber_gen4
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t4
+                            fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t4
+                            fixed_pwc_bomber_weapon_2 = pwc_module_air_strategic_t4
+                            fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t4
+                            fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_bomber_g4
@@ -1578,13 +1606,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply bomber G3"
                         type = pwc_platform_bomber_gen3
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_pod
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t3
+                            fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t3
+                            fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t3
+                            fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t3
+                            fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_bomber_g3
@@ -1610,13 +1636,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply bomber G2"
                         type = pwc_platform_bomber_gen2
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t2
+                            fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t2
+                            fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t2
+                            fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t2
+                            fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_bomber_g2
@@ -1642,14 +1666,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply bomber G1"
                         type = pwc_platform_bomber_gen1
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack
-                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t1
+                            fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t1
+                            fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t1
+                            fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t1
+                            fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_bomber_g1
@@ -1675,14 +1696,11 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply bomber G0"
                         type = pwc_platform_bomber_gen0
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_engine_2 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_engine_3 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_weapon_1 = pwc_module_air_weapon_gun_20mm_rotary_t0
-                            pwc_slot_avionics_1 = pwc_module_air_avionics_ins_t0
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
-                            pwc_slot_payload_2 = pwc_module_air_payload_bomb_rack_t0
-                            pwc_slot_payload_3 = pwc_module_air_payload_bomb_rack_t0
+                            fixed_pwc_bomber_engine_0 = pwc_module_air_large_endurance_t0
+                            fixed_pwc_bomber_avionics_1 = pwc_module_air_navigation_t0
+                            fixed_pwc_bomber_weapon_2 = pwc_module_air_standoff_t0
+                            fixed_pwc_bomber_weapon_3 = pwc_module_air_strategic_t0
+                            fixed_pwc_bomber_weapon_4 = pwc_module_air_strategic_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_bomber_g0
@@ -1713,8 +1731,9 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply uav G4"
                         type = pwc_platform_uav_gen4
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen4
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_cruise_missile
+                            fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t4
+                            fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t4
+                            fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t4
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_uav_g4
@@ -1740,8 +1759,9 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply uav G3"
                         type = pwc_platform_uav_gen3
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen3
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t3
+                            fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t3
+                            fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t3
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_uav_g3
@@ -1767,8 +1787,9 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply uav G2"
                         type = pwc_platform_uav_gen2
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen2
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t2
+                            fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t2
+                            fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t2
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_uav_g2
@@ -1794,8 +1815,9 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply uav G1"
                         type = pwc_platform_uav_gen1
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack
+                            fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t1
+                            fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t1
+                            fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t1
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_uav_g1
@@ -1821,8 +1843,9 @@ pwc_se_focus_ai_equipment = {
                         name = "PWC AI Supply uav G0"
                         type = pwc_platform_uav_gen0
                         modules = {
-                            fixed_pwc_slot_engine_1 = pwc_module_air_engine_turbofan_gen1_t0
-                            fixed_pwc_slot_payload_1 = pwc_module_air_payload_bomb_rack_t0
+                            fixed_pwc_uav_engine_0 = pwc_module_air_uav_endurance_t0
+                            fixed_pwc_uav_avionics_1 = pwc_module_air_navigation_t0
+                            fixed_pwc_uav_weapon_2 = pwc_module_air_anti_armor_t0
                         }
                     }
                     set_country_flag = pwc_flag_supply_design_uav_g0

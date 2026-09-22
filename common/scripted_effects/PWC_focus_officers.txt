@@ -1,144 +1,1130 @@
-pwc_se_repair_focus_officers_once = {
+pwc_se_officer_assign_general = {
+    add_corps_commander_role = {
+        skill = 2
+        attack_skill = 2
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 2
+    }
+    random_list = {
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_01" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_02" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_03" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_04" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_05" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_06" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_07" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_08" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_09" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_10" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_11" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_12" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_13" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_14" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_15" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_16" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_17" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_18" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_19" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_20" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_21" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_22" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_23" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_GENERAL_24" } }
+        }
+    }
+}
+
+pwc_se_officer_assign_admiral = {
+    add_naval_commander_role = {
+        skill = 2
+        attack_skill = 2
+        defense_skill = 2
+        maneuvering_skill = 2
+        coordination_skill = 2
+    }
+    random_list = {
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_01" } }
+        }
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_02" } }
+        }
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_03" } }
+        }
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_04" } }
+        }
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_05" } }
+        }
+        1 = {
+            set_portraits = { navy = { large = "GFX_PWC_PORTRAIT_ADMIRAL_06" } }
+        }
+    }
+}
+
+pwc_se_officer_assign_marshal = {
+    add_field_marshal_role = {
+        skill = 3
+        attack_skill = 3
+        defense_skill = 3
+        planning_skill = 3
+        logistics_skill = 3
+    }
+    random_list = {
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_MARSHAL_01" } }
+        }
+        1 = {
+            set_portraits = { army = { large = "GFX_PWC_PORTRAIT_MARSHAL_02" } }
+        }
+    }
+}
+
+pwc_se_officer_grant_admiral_t1 = {
     if = {
-        limit = { NOT = { has_global_flag = pwc_flag_focus_officers_v1 } }
-        every_possible_country = {
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_admiral_t1
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_navy_leader = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 2
-                        maneuvering_skill = 2
-                        coordination_skill = 2
-                    }
-                    retire_character = PREV
-                }
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t1 } }
+        every_character = {
+            limit = { is_character = pwc_admiral_t1 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_admiral = yes
             }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_focus_mil_officer_academy_1
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_corps_commander = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 3
-                        planning_skill = 2
-                        logistics_skill = 2
-                    }
-                    retire_character = PREV
-                }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t1 }
             }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t1 } }
+            generate_character = { token_base = pwc_admiral_t1_v3 }
             every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_focus_mil_officer_academy_2
-                    is_unit_leader = no
+                limit = { is_character = pwc_admiral_t1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
                 }
-                PREV = {
-                    create_corps_commander = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 3
-                        planning_skill = 2
-                        logistics_skill = 2
-                    }
-                    retire_character = PREV
-                }
-            }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_focus_mil_combined_arms_1
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_corps_commander = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 3
-                        planning_skill = 2
-                        logistics_skill = 2
-                    }
-                    retire_character = PREV
-                }
-            }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_focus_mil_logistics_command_1
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_corps_commander = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 3
-                        planning_skill = 2
-                        logistics_skill = 2
-                    }
-                    retire_character = PREV
-                }
-            }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_admiral_t2
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_navy_leader = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 2
-                        maneuvering_skill = 2
-                        coordination_skill = 2
-                    }
-                    retire_character = PREV
-                }
-            }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_admiral_t4
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_navy_leader = {
-                        skill = 2
-                        attack_skill = 2
-                        defense_skill = 2
-                        maneuvering_skill = 2
-                        coordination_skill = 2
-                    }
-                    retire_character = PREV
-                }
-            }
-            every_character = {
-                include_invisible = yes
-                limit = {
-                    is_character = pwc_marshal
-                    is_unit_leader = no
-                }
-                PREV = {
-                    create_field_marshal = {
-                        skill = 3
-                        attack_skill = 3
-                        defense_skill = 3
-                        planning_skill = 3
-                        logistics_skill = 3
-                    }
-                    retire_character = PREV
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t1 }
                 }
             }
         }
-        set_global_flag = pwc_flag_focus_officers_v1
+    }
+}
+
+pwc_se_officer_grant_focus_mil_officer_academy_1 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 } }
+        every_character = {
+            limit = { is_character = pwc_focus_mil_officer_academy_1 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_general = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 } }
+            generate_character = { token_base = pwc_focus_mil_officer_academy_1_v3 }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_focus_mil_officer_academy_2 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 } }
+        every_character = {
+            limit = { is_character = pwc_focus_mil_officer_academy_2 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_general = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 } }
+            generate_character = { token_base = pwc_focus_mil_officer_academy_2_v3 }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_2_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_focus_mil_combined_arms_1 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 } }
+        every_character = {
+            limit = { is_character = pwc_focus_mil_combined_arms_1 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_general = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 } }
+            generate_character = { token_base = pwc_focus_mil_combined_arms_1_v3 }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_combined_arms_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_focus_mil_logistics_command_1 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 } }
+        every_character = {
+            limit = { is_character = pwc_focus_mil_logistics_command_1 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_general = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 } }
+            generate_character = { token_base = pwc_focus_mil_logistics_command_1_v3 }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_logistics_command_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_admiral_t2 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t2 } }
+        every_character = {
+            limit = { is_character = pwc_admiral_t2 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_admiral = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t2 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t2 } }
+            generate_character = { token_base = pwc_admiral_t2_v3 }
+            every_character = {
+                limit = { is_character = pwc_admiral_t2_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t2 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_admiral_t4 = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t4 } }
+        every_character = {
+            limit = { is_character = pwc_admiral_t4 }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_admiral = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t4 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t4 } }
+            generate_character = { token_base = pwc_admiral_t4_v3 }
+            every_character = {
+                limit = { is_character = pwc_admiral_t4_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t4 }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_officer_grant_marshal = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_flag_officer_paid_marshal } }
+        every_character = {
+            limit = { is_character = pwc_marshal }
+            if = {
+                limit = { is_unit_leader = no }
+                pwc_se_officer_assign_marshal = yes
+            }
+            if = {
+                limit = { is_unit_leader = yes }
+                PREV = { set_country_flag = pwc_flag_officer_paid_marshal }
+            }
+        }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_flag_officer_paid_marshal } }
+            generate_character = { token_base = pwc_marshal_v3 }
+            every_character = {
+                limit = { is_character = pwc_marshal_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_marshal = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_marshal }
+                }
+            }
+        }
+    }
+}
+
+pwc_se_repair_focus_officers_once = {
+    if = {
+        limit = { NOT = { has_global_flag = pwc_flag_focus_officers_v3 } }
+        every_possible_country = {
+            every_character = {
+                limit = { is_character = pwc_admiral_t1 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_admiral_t1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_1 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_2 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_officer_academy_2_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_combined_arms_1 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_combined_arms_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_logistics_command_1 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_focus_mil_logistics_command_1_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_general = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_admiral_t2 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t2 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_admiral_t2_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t2 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_admiral_t4 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t4 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_admiral_t4_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_admiral = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t4 }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_marshal }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_marshal = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_marshal }
+                }
+            }
+            every_character = {
+                limit = { is_character = pwc_marshal_v3 }
+                if = {
+                    limit = { is_unit_leader = no }
+                    pwc_se_officer_assign_marshal = yes
+                }
+                if = {
+                    limit = { is_unit_leader = yes }
+                    PREV = { set_country_flag = pwc_flag_officer_paid_marshal }
+                }
+            }
+            every_character = {
+                limit = {
+                    is_unit_leader = yes
+                    NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                    OR = {
+                        is_character = U00_
+                        is_character = U01_
+                        is_character = U02_
+                        is_character = U03_
+                        is_character = U04_
+                        is_character = U05_
+                        is_character = U06_
+                        is_character = U07_
+                        is_character = U08_
+                        is_character = U09_
+                        is_character = U10_
+                        is_character = U11_
+                        is_character = U12_
+                        is_character = U13_
+                        is_character = U14_
+                        is_character = U15_
+                        is_character = U16_
+                        is_character = U17_
+                        is_character = U18_
+                        is_character = U19_
+                        is_character = U20_
+                        is_character = U21_
+                        is_character = U22_
+                        is_character = U23_
+                        is_character = U24_
+                        is_character = U25_
+                        is_character = U26_
+                        is_character = U27_
+                        is_character = U28_
+                        is_character = U29_
+                        is_character = U30_
+                        is_character = U31_
+                        is_character = U32_
+                        is_character = U33_
+                        is_character = U34_
+                        is_character = U35_
+                        is_character = U36_
+                        is_character = U37_
+                        is_character = U38_
+                        is_character = U39_
+                        is_character = U40_
+                        is_character = U41_
+                        is_character = U42_
+                        is_character = U43_
+                        is_character = U44_
+                        is_character = U45_
+                        is_character = U46_
+                        is_character = U47_
+                        is_character = U48_
+                        is_character = U49_
+                        is_character = U50_
+                        is_character = U51_
+                        is_character = U52_
+                        is_character = U53_
+                        is_character = U54_
+                        is_character = U55_
+                        is_character = U56_
+                        is_character = U57_
+                        is_character = U58_
+                        is_character = U59_
+                        is_character = U60_
+                        is_character = U61_
+                        is_character = U62_
+                        is_character = U63_
+                        is_character = U64_
+                        is_character = U65_
+                        is_character = U66_
+                        is_character = U67_
+                        is_character = U68_
+                        is_character = U69_
+                        is_character = U70_
+                        is_character = U71_
+                        is_character = U72_
+                        is_character = U73_
+                        is_character = U74_
+                        is_character = U75_
+                        is_character = U76_
+                        is_character = U77_
+                        is_character = U78_
+                        is_character = U79_
+                        is_character = U80_
+                        is_character = U81_
+                        is_character = U82_
+                        is_character = U83_
+                        is_character = U84_
+                        is_character = U85_
+                        is_character = U86_
+                        is_character = U87_
+                        is_character = U88_
+                        is_character = U89_
+                        is_character = U90_
+                        is_character = U91_
+                        is_character = U92_
+                        is_character = U93_
+                        is_character = U94_
+                        is_character = U95_
+                        is_character = U96_
+                        is_character = U97_
+                        is_character = U98_
+                        is_character = U99_
+                        is_character = V00_
+                        is_character = V01_
+                        is_character = V02_
+                        is_character = V03_
+                        is_character = V04_
+                        is_character = V05_
+                        is_character = V06_
+                        is_character = V07_
+                        is_character = V08_
+                        is_character = V09_
+                        is_character = V10_
+                        is_character = V11_
+                        is_character = V12_
+                        is_character = V13_
+                        is_character = V14_
+                        is_character = V15_
+                        is_character = V16_
+                        is_character = V17_
+                        is_character = V18_
+                        is_character = V19_
+                        is_character = V20_
+                        is_character = V21_
+                        is_character = V22_
+                        is_character = V23_
+                        is_character = V24_
+                        is_character = V25_
+                        is_character = V26_
+                        is_character = V27_
+                        is_character = V28_
+                        is_character = V29_
+                        is_character = V30_
+                        is_character = V31_
+                        is_character = V32_
+                        is_character = V33_
+                        is_character = V34_
+                        is_character = V35_
+                        is_character = V36_
+                        is_character = V37_
+                        is_character = V38_
+                        is_character = V39_
+                        is_character = V40_
+                        is_character = V41_
+                        is_character = V42_
+                        is_character = V43_
+                        is_character = V44_
+                        is_character = V45_
+                        is_character = V46_
+                        is_character = V47_
+                        is_character = V48_
+                        is_character = V49_
+                        is_character = V50_
+                        is_character = V51_
+                        is_character = V52_
+                        is_character = V53_
+                        is_character = V54_
+                        is_character = V55_
+                        is_character = V56_
+                        is_character = V57_
+                        is_character = V58_
+                        is_character = V59_
+                        is_character = V60_
+                        is_character = V61_
+                        is_character = V62_
+                        is_character = V63_
+                        is_character = V64_
+                        is_character = V65_
+                        is_character = V66_
+                        is_character = V67_
+                        is_character = V68_
+                        is_character = V69_
+                        is_character = V70_
+                        is_character = V71_
+                        is_character = V72_
+                        is_character = V73_
+                        is_character = V74_
+                        is_character = V75_
+                        is_character = V76_
+                        is_character = V77_
+                        is_character = V78_
+                        is_character = V79_
+                        is_character = V80_
+                        is_character = V81_
+                        is_character = V82_
+                        is_character = V83_
+                        is_character = V84_
+                        is_character = V85_
+                        is_character = V86_
+                        is_character = V87_
+                        is_character = V88_
+                        is_character = V89_
+                        is_character = V90_
+                        is_character = V91_
+                        is_character = V92_
+                        is_character = V93_
+                        is_character = V94_
+                        is_character = V95_
+                        is_character = V96_
+                        is_character = V97_
+                        is_character = V98_
+                        is_character = V99_
+                        is_character = W00_
+                        is_character = W01_
+                        is_character = W02_
+                        is_character = W03_
+                        is_character = W04_
+                        is_character = W05_
+                        is_character = W06_
+                        is_character = W07_
+                        is_character = W08_
+                        is_character = W09_
+                        is_character = W10_
+                        is_character = W11_
+                        is_character = W12_
+                        is_character = W13_
+                        is_character = W14_
+                        is_character = W15_
+                        is_character = W16_
+                        is_character = W17_
+                        is_character = W18_
+                        is_character = W19_
+                        is_character = W20_
+                        is_character = W21_
+                        is_character = W22_
+                        is_character = W23_
+                        is_character = W24_
+                        is_character = W25_
+                        is_character = W26_
+                        is_character = W27_
+                        is_character = W28_
+                        is_character = W29_
+                        is_character = W30_
+                        is_character = W31_
+                        is_character = W32_
+                        is_character = W33_
+                        is_character = W34_
+                        is_character = W35_
+                        is_character = W36_
+                        is_character = W37_
+                        is_character = W38_
+                        is_character = W39_
+                        is_character = W40_
+                        is_character = W41_
+                        is_character = W42_
+                        is_character = W43_
+                        is_character = W44_
+                        is_character = W45_
+                        is_character = W46_
+                        is_character = W47_
+                        is_character = W48_
+                        is_character = W49_
+                        is_character = W50_
+                        is_character = W51_
+                        is_character = W52_
+                        is_character = W53_
+                        is_character = W54_
+                        is_character = W55_
+                        is_character = W56_
+                        is_character = W57_
+                        is_character = W58_
+                        is_character = W59_
+                        is_character = W60_
+                        is_character = W61_
+                        is_character = W62_
+                        is_character = W63_
+                        is_character = W64_
+                        is_character = W65_
+                        is_character = W66_
+                        is_character = W67_
+                        is_character = W68_
+                        is_character = W69_
+                        is_character = W70_
+                        is_character = W71_
+                        is_character = W72_
+                        is_character = W73_
+                        is_character = W74_
+                        is_character = W75_
+                        is_character = W76_
+                        is_character = W77_
+                        is_character = W78_
+                        is_character = W79_
+                        is_character = W80_
+                        is_character = W81_
+                        is_character = W82_
+                        is_character = W83_
+                        is_character = W84_
+                        is_character = W85_
+                        is_character = W86_
+                        is_character = W87_
+                        is_character = W88_
+                        is_character = W89_
+                        is_character = W90_
+                        is_character = W91_
+                        is_character = W92_
+                        is_character = W93_
+                        is_character = W94_
+                        is_character = W95_
+                        is_character = W96_
+                        is_character = W97_
+                        is_character = W98_
+                        is_character = W99_
+                        is_character = X00_
+                        is_character = X01_
+                        is_character = X02_
+                        is_character = X03_
+                        is_character = X04_
+                        is_character = X05_
+                        is_character = X06_
+                        is_character = X07_
+                        is_character = X08_
+                        is_character = X09_
+                        is_character = X10_
+                        is_character = X11_
+                        is_character = X12_
+                        is_character = X13_
+                        is_character = X14_
+                        is_character = X15_
+                        is_character = X16_
+                        is_character = X17_
+                        is_character = X18_
+                        is_character = X19_
+                        is_character = X20_
+                        is_character = X21_
+                        is_character = X22_
+                        is_character = X23_
+                        is_character = X24_
+                        is_character = X25_
+                        is_character = X26_
+                        is_character = X27_
+                        is_character = X28_
+                        is_character = X29_
+                        is_character = X30_
+                        is_character = X31_
+                        is_character = X32_
+                        is_character = X33_
+                        is_character = X34_
+                        is_character = X35_
+                        is_character = X36_
+                        is_character = X37_
+                        is_character = X38_
+                        is_character = X39_
+                        is_character = X40_
+                        is_character = X41_
+                        is_character = X42_
+                        is_character = X43_
+                        is_character = X44_
+                        is_character = X45_
+                        is_character = X46_
+                        is_character = X47_
+                        is_character = X48_
+                        is_character = X49_
+                        is_character = X50_
+                        is_character = X51_
+                        is_character = X52_
+                        is_character = X53_
+                        is_character = X54_
+                        is_character = X55_
+                        is_character = X56_
+                        is_character = X57_
+                        is_character = X58_
+                        is_character = X59_
+                        is_character = X60_
+                        is_character = X61_
+                        is_character = X62_
+                        is_character = X63_
+                        is_character = X64_
+                        is_character = X65_
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        is_field_marshal = yes
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_marshal }
+                            OR = {
+                                has_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
+                                has_idea = pwc_idea_mil_apex_city_marshal
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_marshal }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        is_navy_leader = yes
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t1 }
+                            OR = {
+                                has_country_flag = pwc_flag_mio_surface_naval
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t1 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        is_navy_leader = yes
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t2 }
+                            OR = {
+                                has_country_flag = pwc_flag_mio_submarine
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t2 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        is_navy_leader = yes
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_admiral_t4 }
+                            OR = {
+                                has_country_flag = pwc_flag_focus_reward_mil_naval_command
+                                has_idea = pwc_idea_mil_naval_command
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_admiral_t4 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        OR = { is_corps_commander = yes is_field_marshal = yes }
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+                            OR = {
+                                has_country_flag = pwc_flag_focus_reward_mil_officer_academy
+                                has_idea = pwc_idea_mil_officer_academy
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_1 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        OR = { is_corps_commander = yes is_field_marshal = yes }
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+                            OR = {
+                                has_country_flag = pwc_flag_focus_reward_mil_officer_academy
+                                has_idea = pwc_idea_mil_officer_academy
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_officer_academy_2 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        OR = { is_corps_commander = yes is_field_marshal = yes }
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+                            OR = {
+                                has_country_flag = pwc_flag_mio_firepower
+                                has_country_flag = pwc_flag_focus_reward_mil_combined_arms
+                                has_idea = pwc_idea_mil_combined_arms
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_combined_arms_1 }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_character_flag = pwc_focus_officer_legacy_counted }
+                        OR = { is_corps_commander = yes is_field_marshal = yes }
+                        PREV = {
+                            NOT = { has_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+                            OR = {
+                                has_country_flag = pwc_flag_mio_logistics
+                                has_country_flag = pwc_flag_focus_reward_mil_logistics_command
+                                has_idea = pwc_idea_mil_logistics_command
+                            }
+                        }
+                    }
+                    set_character_flag = pwc_focus_officer_legacy_counted
+                    PREV = { set_country_flag = pwc_flag_officer_paid_focus_mil_logistics_command_1 }
+                }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_mio_surface_naval
+                    }
+                }
+                pwc_se_officer_grant_admiral_t1 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_focus_reward_mil_officer_academy
+                        has_idea = pwc_idea_mil_officer_academy
+                    }
+                }
+                pwc_se_officer_grant_focus_mil_officer_academy_1 = yes
+                pwc_se_officer_grant_focus_mil_officer_academy_2 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_mio_firepower
+                        has_country_flag = pwc_flag_focus_reward_mil_combined_arms
+                        has_idea = pwc_idea_mil_combined_arms
+                    }
+                }
+                pwc_se_officer_grant_focus_mil_combined_arms_1 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_mio_logistics
+                        has_country_flag = pwc_flag_focus_reward_mil_logistics_command
+                        has_idea = pwc_idea_mil_logistics_command
+                    }
+                }
+                pwc_se_officer_grant_focus_mil_logistics_command_1 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_mio_submarine
+                    }
+                }
+                pwc_se_officer_grant_admiral_t2 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_focus_reward_mil_naval_command
+                        has_idea = pwc_idea_mil_naval_command
+                    }
+                }
+                pwc_se_officer_grant_admiral_t4 = yes
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
+                        has_idea = pwc_idea_mil_apex_city_marshal
+                    }
+                }
+                pwc_se_officer_grant_marshal = yes
+            }
+        }
+        set_global_flag = pwc_flag_focus_officers_v3
     }
 }

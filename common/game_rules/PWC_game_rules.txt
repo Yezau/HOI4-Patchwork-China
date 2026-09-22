@@ -140,6 +140,22 @@ pwc_war_warning = {
         allow_achievements = no
     }
 }
+pwc_province_priority = {
+    name = "PWC_RULE_PROVINCE_PRIORITY"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_PROVINCE_PRIORITY_OFF"
+        desc = "PWC_RULE_PROVINCE_PRIORITY_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_PROVINCE_PRIORITY_ON"
+        desc = "PWC_RULE_PROVINCE_PRIORITY_ON_DESC"
+        allow_achievements = no
+    }
+}
 pwc_integration_speed = {
     name = "PWC_RULE_INTEGRATION_SPEED"
     group = "PWC_RULE_GROUP_COMMON"

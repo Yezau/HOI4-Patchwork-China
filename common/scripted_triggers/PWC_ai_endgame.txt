@@ -21,6 +21,12 @@ pwc_st_coalition_partner = {
     NOT = { is_in_peace_conference = yes }
     num_divisions > 2
     is_neighbor_of = event_target:pwc_coalition_player
+    OR = {
+        has_war_with = event_target:pwc_coalition_player
+        event_target:pwc_coalition_player = {
+            pwc_st_province_priority_target_allowed = yes
+        }
+    }
     NOT = { has_non_aggression_pact_with = event_target:pwc_coalition_player }
     NOT = { has_truce_with = event_target:pwc_coalition_player }
     NOT = { has_guaranteed = event_target:pwc_coalition_player }

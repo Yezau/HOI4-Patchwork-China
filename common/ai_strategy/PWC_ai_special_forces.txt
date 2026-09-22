@@ -69,6 +69,55 @@ PWC_ai_sf_amphibious_research = {
     ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = 100 }
     ai_strategy = { type = research_weight_factor id = pwc_tech_logistics_t1 value = 80 }
 }
+PWC_ai_sf_amphibious_armor_research = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_amphibious_need = yes
+        num_of_military_factories > 14
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_amphibious_t1 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_amphibious_t2 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_amphibious_t3 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_amphibious_t4 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_mobility_t1 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_mobility_t2 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_mobility_t3 value = 100 }
+    ai_strategy = { type = research_weight_factor id = pwc_tech_army_mobility_t4 value = 100 }
+}
+PWC_ai_sf_pwc_equipment_amphibious_mechanized = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = yes
+        num_of_military_factories > 24
+        has_tech = pwc_tech_army_mobility_t1
+        NOT = { has_equipment = { pwc_equipment_amphibious_mechanized > 299 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = pwc_equipment_amphibious_mechanized value = 1 }
+    ai_strategy = { type = equipment_production_surplus_management id = pwc_equipment_amphibious_mechanized value = 10 }
+}
+PWC_ai_sf_pwc_platform_amphibious_tank = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = yes
+        num_of_military_factories > 24
+        has_tech = pwc_tech_army_amphibious_t1
+        NOT = { has_equipment = { pwc_platform_amphibious_tank > 199 } }
+        has_design_based_on = pwc_platform_amphibious_tank
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = pwc_platform_amphibious_tank value = 1 }
+    ai_strategy = { type = equipment_production_surplus_management id = pwc_platform_amphibious_tank value = 10 }
+}
 PWC_ai_sf_equipment = {
     allowed = { always = yes }
     enable = {

@@ -1285,6 +1285,7 @@ technologies = {
 	pwc_tech_army_mobility_t1 = {
 		enable_equipments = {
 			pwc_equipment_mechanized_gen1
+			pwc_equipment_amphibious_mechanized_gen1
 			pwc_platform_light_tank_gen1
 		}
 		enable_equipment_modules = {
@@ -1308,6 +1309,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t1
 			pwc_module_tank_maintenance_t1
 			pwc_module_tank_rws_t1
+		}
+		enable_subunits = {
+			pwc_unit_amphibious_mechanized
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1372,6 +1376,7 @@ technologies = {
 		}
 		enable_equipments = {
 			pwc_equipment_mechanized_gen2
+			pwc_equipment_amphibious_mechanized_gen2
 			pwc_platform_light_tank_gen2
 		}
 		enable_equipment_modules = {
@@ -1459,6 +1464,7 @@ technologies = {
 		}
 		enable_equipments = {
 			pwc_equipment_mechanized_gen3
+			pwc_equipment_amphibious_mechanized_gen3
 			pwc_platform_light_tank_gen3
 		}
 		enable_equipment_modules = {
@@ -1546,6 +1552,7 @@ technologies = {
 		}
 		enable_equipments = {
 			pwc_equipment_mechanized_gen4
+			pwc_equipment_amphibious_mechanized_gen4
 			pwc_platform_light_tank_gen4
 		}
 		enable_equipment_modules = {
@@ -3904,7 +3911,6 @@ technologies = {
 			pwc_module_air_cannon_t1
 			pwc_module_air_aam_short_t1
 			pwc_module_air_aam_medium_t1
-			pwc_module_air_ground_t1
 			pwc_module_air_maritime_t1
 			pwc_module_air_radar_t1
 			pwc_module_air_navigation_t1
@@ -3923,8 +3929,6 @@ technologies = {
 			pwc_module_air_irst_t1
 			pwc_module_air_self_sealing_t1
 			pwc_module_air_armor_t1
-			pwc_module_air_rockets_t1
-			pwc_module_air_anti_armor_t1
 			pwc_module_navy_ciws_t1
 			pwc_module_navy_point_sam_t1
 			pwc_module_navy_fuel_t1
@@ -3938,22 +3942,21 @@ technologies = {
 					name = "一代舰载战斗机"
 					type = pwc_platform_cv_fighter_gen1
 					modules = {
-						fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t1
-						fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t1
-						fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t1
-						fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t1
-						pwc_cv_fighter_special_0 = pwc_module_air_irst_t1
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_sprint_t1
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_radar_t1
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_aam_medium_t1
+						fixed_pwc_carrier_weapon_3 = pwc_module_air_cannon_t1
+						pwc_carrier_special_0 = pwc_module_air_irst_t1
 					}
 				}
 				create_equipment_variant = {
 					name = "一代舰载攻击机"
 					type = pwc_platform_cv_cas_gen1
 					modules = {
-						fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t1
-						fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t1
-						fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t1
-						fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t1
-						pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t1
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t1
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t1
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t1
+						pwc_carrier_special_0 = pwc_module_air_self_sealing_t1
 					}
 				}
 				create_equipment_variant = {
@@ -4024,7 +4027,6 @@ technologies = {
 			pwc_module_air_cannon_t2
 			pwc_module_air_aam_short_t2
 			pwc_module_air_aam_medium_t2
-			pwc_module_air_ground_t2
 			pwc_module_air_maritime_t2
 			pwc_module_air_radar_t2
 			pwc_module_air_navigation_t2
@@ -4043,8 +4045,6 @@ technologies = {
 			pwc_module_air_irst_t2
 			pwc_module_air_self_sealing_t2
 			pwc_module_air_armor_t2
-			pwc_module_air_rockets_t2
-			pwc_module_air_anti_armor_t2
 			pwc_module_navy_ciws_t2
 			pwc_module_navy_point_sam_t2
 			pwc_module_navy_fuel_t2
@@ -4058,22 +4058,21 @@ technologies = {
 					name = "二代舰载战斗机"
 					type = pwc_platform_cv_fighter_gen2
 					modules = {
-						fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t2
-						fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t2
-						fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t2
-						fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t2
-						pwc_cv_fighter_special_0 = pwc_module_air_irst_t2
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_sprint_t2
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_radar_t2
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_aam_medium_t2
+						fixed_pwc_carrier_weapon_3 = pwc_module_air_cannon_t2
+						pwc_carrier_special_0 = pwc_module_air_irst_t2
 					}
 				}
 				create_equipment_variant = {
 					name = "二代舰载攻击机"
 					type = pwc_platform_cv_cas_gen2
 					modules = {
-						fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t2
-						fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t2
-						fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t2
-						fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t2
-						pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t2
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t2
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t2
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t2
+						pwc_carrier_special_0 = pwc_module_air_self_sealing_t2
 					}
 				}
 				create_equipment_variant = {
@@ -4144,7 +4143,6 @@ technologies = {
 			pwc_module_air_cannon_t3
 			pwc_module_air_aam_short_t3
 			pwc_module_air_aam_medium_t3
-			pwc_module_air_ground_t3
 			pwc_module_air_maritime_t3
 			pwc_module_air_radar_t3
 			pwc_module_air_navigation_t3
@@ -4163,8 +4161,6 @@ technologies = {
 			pwc_module_air_irst_t3
 			pwc_module_air_self_sealing_t3
 			pwc_module_air_armor_t3
-			pwc_module_air_rockets_t3
-			pwc_module_air_anti_armor_t3
 			pwc_module_navy_ciws_t3
 			pwc_module_navy_point_sam_t3
 			pwc_module_navy_fuel_t3
@@ -4178,22 +4174,21 @@ technologies = {
 					name = "三代舰载战斗机"
 					type = pwc_platform_cv_fighter_gen3
 					modules = {
-						fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t3
-						fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t3
-						fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t3
-						fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t3
-						pwc_cv_fighter_special_0 = pwc_module_air_irst_t3
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_sprint_t3
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_radar_t3
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_aam_medium_t3
+						fixed_pwc_carrier_weapon_3 = pwc_module_air_cannon_t3
+						pwc_carrier_special_0 = pwc_module_air_irst_t3
 					}
 				}
 				create_equipment_variant = {
 					name = "三代舰载攻击机"
 					type = pwc_platform_cv_cas_gen3
 					modules = {
-						fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t3
-						fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t3
-						fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t3
-						fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t3
-						pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t3
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t3
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t3
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t3
+						pwc_carrier_special_0 = pwc_module_air_self_sealing_t3
 					}
 				}
 				create_equipment_variant = {
@@ -4265,7 +4260,6 @@ technologies = {
 			pwc_module_air_cannon_t4
 			pwc_module_air_aam_short_t4
 			pwc_module_air_aam_medium_t4
-			pwc_module_air_ground_t4
 			pwc_module_air_maritime_t4
 			pwc_module_air_radar_t4
 			pwc_module_air_navigation_t4
@@ -4284,8 +4278,6 @@ technologies = {
 			pwc_module_air_irst_t4
 			pwc_module_air_self_sealing_t4
 			pwc_module_air_armor_t4
-			pwc_module_air_rockets_t4
-			pwc_module_air_anti_armor_t4
 			pwc_module_navy_ciws_t4
 			pwc_module_navy_point_sam_t4
 			pwc_module_navy_fuel_t4
@@ -4299,22 +4291,21 @@ technologies = {
 					name = "四代舰载战斗机"
 					type = pwc_platform_cv_fighter_gen4
 					modules = {
-						fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t4
-						fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t4
-						fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t4
-						fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t4
-						pwc_cv_fighter_special_0 = pwc_module_air_irst_t4
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_sprint_t4
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_radar_t4
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_aam_medium_t4
+						fixed_pwc_carrier_weapon_3 = pwc_module_air_cannon_t4
+						pwc_carrier_special_0 = pwc_module_air_irst_t4
 					}
 				}
 				create_equipment_variant = {
 					name = "四代舰载攻击机"
 					type = pwc_platform_cv_cas_gen4
 					modules = {
-						fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t4
-						fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t4
-						fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t4
-						fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t4
-						pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t4
+						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t4
+						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t4
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t4
+						pwc_carrier_special_0 = pwc_module_air_self_sealing_t4
 					}
 				}
 				create_equipment_variant = {
@@ -5297,6 +5288,331 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 30
+		}
+	}
+
+	pwc_tech_army_amphibious_t1 = {
+		enable_equipments = {
+			pwc_platform_amphibious_tank_gen1
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_light_gun_t1
+			pwc_module_tank_atgm_t1
+			pwc_module_tank_light_economy_t1
+			pwc_module_tank_light_power_t1
+			pwc_module_tank_turret_manual_t1
+			pwc_module_tank_turret_auto_t1
+			pwc_module_tank_suspension_t1
+			pwc_module_tank_light_armor_t1
+			pwc_module_tank_addon_armor_t1
+			pwc_module_tank_fcs_t1
+			pwc_module_tank_radio_t1
+			pwc_module_tank_engineering_t1
+			pwc_module_tank_survival_t1
+			pwc_module_tank_torsion_t1
+			pwc_module_tank_light_steel_t1
+			pwc_module_tank_smoke_t1
+			pwc_module_tank_apu_t1
+			pwc_module_tank_ammo_safety_t1
+			pwc_module_tank_maintenance_t1
+			pwc_module_tank_rws_t1
+		}
+		enable_subunits = {
+			pwc_unit_amphibious_tank
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "现代两栖坦克"
+					type = pwc_platform_amphibious_tank_gen1
+					modules = {
+						pwc_amphibious_tank_turret_0 = pwc_module_tank_turret_manual_t1
+						pwc_amphibious_tank_gun_1 = pwc_module_tank_light_gun_t1
+						pwc_amphibious_tank_suspension_2 = pwc_module_tank_torsion_t1
+						pwc_amphibious_tank_armor_3 = pwc_module_tank_light_armor_t1
+						pwc_amphibious_tank_engine_4 = pwc_module_tank_light_power_t1
+						pwc_amphibious_tank_special_5 = pwc_module_tank_fcs_t1
+						pwc_amphibious_tank_special_6 = pwc_module_tank_radio_t1
+						pwc_amphibious_tank_special_7 = pwc_module_tank_smoke_t1
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_amphibious_t2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.3636363636363635
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+			pwc_mio_research_pwc_tech_army_amphibious_t1
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_army_amphibious_t2 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 0
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 0
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_amphibious_tank_gen2
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_light_gun_t2
+			pwc_module_tank_atgm_t2
+			pwc_module_tank_light_economy_t2
+			pwc_module_tank_light_power_t2
+			pwc_module_tank_turret_manual_t2
+			pwc_module_tank_turret_auto_t2
+			pwc_module_tank_suspension_t2
+			pwc_module_tank_light_armor_t2
+			pwc_module_tank_addon_armor_t2
+			pwc_module_tank_fcs_t2
+			pwc_module_tank_radio_t2
+			pwc_module_tank_engineering_t2
+			pwc_module_tank_survival_t2
+			pwc_module_tank_torsion_t2
+			pwc_module_tank_light_steel_t2
+			pwc_module_tank_smoke_t2
+			pwc_module_tank_apu_t2
+			pwc_module_tank_ammo_safety_t2
+			pwc_module_tank_maintenance_t2
+			pwc_module_tank_rws_t2
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "模块化两栖坦克"
+					type = pwc_platform_amphibious_tank_gen2
+					modules = {
+						pwc_amphibious_tank_turret_0 = pwc_module_tank_turret_manual_t2
+						pwc_amphibious_tank_gun_1 = pwc_module_tank_light_gun_t2
+						pwc_amphibious_tank_suspension_2 = pwc_module_tank_torsion_t2
+						pwc_amphibious_tank_armor_3 = pwc_module_tank_light_armor_t2
+						pwc_amphibious_tank_engine_4 = pwc_module_tank_light_power_t2
+						pwc_amphibious_tank_special_5 = pwc_module_tank_fcs_t2
+						pwc_amphibious_tank_special_6 = pwc_module_tank_radio_t2
+						pwc_amphibious_tank_special_7 = pwc_module_tank_smoke_t2
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_amphibious_t3
+			research_cost_coeff = 1
+		}
+		research_cost = 2.4545454545454546
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+			pwc_mio_research_pwc_tech_army_amphibious_t2
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_army_amphibious_t3 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 1
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 1
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_amphibious_tank_gen3
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_light_gun_t3
+			pwc_module_tank_atgm_t3
+			pwc_module_tank_light_economy_t3
+			pwc_module_tank_light_power_t3
+			pwc_module_tank_turret_manual_t3
+			pwc_module_tank_turret_auto_t3
+			pwc_module_tank_suspension_t3
+			pwc_module_tank_light_armor_t3
+			pwc_module_tank_addon_armor_t3
+			pwc_module_tank_fcs_t3
+			pwc_module_tank_radio_t3
+			pwc_module_tank_engineering_t3
+			pwc_module_tank_survival_t3
+			pwc_module_tank_torsion_t3
+			pwc_module_tank_light_steel_t3
+			pwc_module_tank_smoke_t3
+			pwc_module_tank_apu_t3
+			pwc_module_tank_ammo_safety_t3
+			pwc_module_tank_maintenance_t3
+			pwc_module_tank_rws_t3
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "智能防护两栖坦克"
+					type = pwc_platform_amphibious_tank_gen3
+					modules = {
+						pwc_amphibious_tank_turret_0 = pwc_module_tank_turret_manual_t3
+						pwc_amphibious_tank_gun_1 = pwc_module_tank_light_gun_t3
+						pwc_amphibious_tank_suspension_2 = pwc_module_tank_torsion_t3
+						pwc_amphibious_tank_armor_3 = pwc_module_tank_light_armor_t3
+						pwc_amphibious_tank_engine_4 = pwc_module_tank_light_power_t3
+						pwc_amphibious_tank_special_5 = pwc_module_tank_fcs_t3
+						pwc_amphibious_tank_special_6 = pwc_module_tank_radio_t3
+						pwc_amphibious_tank_special_7 = pwc_module_tank_smoke_t3
+					}
+				}
+			}
+		}
+		path = {
+			leads_to_tech = pwc_tech_army_amphibious_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 3.8181818181818183
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+			pwc_mio_research_pwc_tech_army_amphibious_t3
+		}
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	pwc_tech_army_amphibious_t4 = {
+		allow = {
+			ROOT = {
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_tech_center
+						level > 2
+					}
+				}
+				any_owned_state = {
+					is_fully_controlled_by = PREV
+					non_damaged_building_level = {
+						building = pwc_building_domain_armor
+						level > 2
+					}
+				}
+			}
+		}
+		enable_equipments = {
+			pwc_platform_amphibious_tank_gen4
+		}
+		enable_equipment_modules = {
+			pwc_module_tank_light_gun_t4
+			pwc_module_tank_atgm_t4
+			pwc_module_tank_light_economy_t4
+			pwc_module_tank_light_power_t4
+			pwc_module_tank_turret_manual_t4
+			pwc_module_tank_turret_auto_t4
+			pwc_module_tank_suspension_t4
+			pwc_module_tank_light_armor_t4
+			pwc_module_tank_addon_armor_t4
+			pwc_module_tank_fcs_t4
+			pwc_module_tank_radio_t4
+			pwc_module_tank_engineering_t4
+			pwc_module_tank_survival_t4
+			pwc_module_tank_torsion_t4
+			pwc_module_tank_light_steel_t4
+			pwc_module_tank_smoke_t4
+			pwc_module_tank_apu_t4
+			pwc_module_tank_ammo_safety_t4
+			pwc_module_tank_maintenance_t4
+			pwc_module_tank_rws_t4
+		}
+		on_research_complete = {
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "无人协同两栖坦克"
+					type = pwc_platform_amphibious_tank_gen4
+					modules = {
+						pwc_amphibious_tank_turret_0 = pwc_module_tank_turret_manual_t4
+						pwc_amphibious_tank_gun_1 = pwc_module_tank_light_gun_t4
+						pwc_amphibious_tank_suspension_2 = pwc_module_tank_torsion_t4
+						pwc_amphibious_tank_armor_3 = pwc_module_tank_light_armor_t4
+						pwc_amphibious_tank_engine_4 = pwc_module_tank_light_power_t4
+						pwc_amphibious_tank_special_5 = pwc_module_tank_fcs_t4
+						pwc_amphibious_tank_special_6 = pwc_module_tank_radio_t4
+						pwc_amphibious_tank_special_7 = pwc_module_tank_smoke_t4
+					}
+				}
+			}
+		}
+		research_cost = 5.454545454545454
+		folder = {
+			name = armour_folder
+			position = {
+				x = 0
+				y = 3
+			}
+		}
+		special_project_specialization = {
+			specialization_land
+		}
+		categories = {
+			pwc_tech_armor
+			pwc_mio_research_pwc_tech_army_amphibious_t4
+		}
+		ai_will_do = {
+			factor = 35
 		}
 	}
 

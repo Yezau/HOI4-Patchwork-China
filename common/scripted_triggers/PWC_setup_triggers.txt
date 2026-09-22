@@ -28,6 +28,7 @@ pwc_st_legal_war_request = {
         pwc_st_is_city_country = yes
         pwc_st_city_alive = yes
         pwc_st_target_reachable = yes
+        pwc_st_province_priority_allows_target = yes
         OR = {
             is_ai = no
             pwc_st_target_adjacent = yes
@@ -45,4 +46,2012 @@ pwc_st_legal_war_request = {
         pwc_st_protection_active = no
     }
     NOT = { has_war_with = FROM }
+}
+pwc_st_province_priority_anhui_home = {
+    OR = {
+        tag = V49
+        tag = V50
+        tag = V61
+        tag = V62
+        tag = V68
+        tag = V70
+        tag = V73
+        tag = V77
+        tag = V81
+        tag = V86
+        tag = W03
+        tag = W04
+        tag = W05
+        tag = W06
+        tag = W15
+        tag = W22
+    }
+}
+pwc_st_province_priority_anhui_state = {
+    OR = {
+        state = 172
+        state = 173
+        state = 185
+        state = 186
+        state = 193
+        state = 196
+        state = 199
+        state = 203
+        state = 207
+        state = 212
+        state = 230
+        state = 231
+        state = 232
+        state = 233
+        state = 242
+        state = 249
+    }
+}
+pwc_st_province_priority_anhui_unified = {
+    owns_state = 172
+    has_full_control_of_state = 172
+    owns_state = 173
+    has_full_control_of_state = 173
+    owns_state = 185
+    has_full_control_of_state = 185
+    owns_state = 186
+    has_full_control_of_state = 186
+    owns_state = 193
+    has_full_control_of_state = 193
+    owns_state = 196
+    has_full_control_of_state = 196
+    owns_state = 199
+    has_full_control_of_state = 199
+    owns_state = 203
+    has_full_control_of_state = 203
+    owns_state = 207
+    has_full_control_of_state = 207
+    owns_state = 212
+    has_full_control_of_state = 212
+    owns_state = 230
+    has_full_control_of_state = 230
+    owns_state = 231
+    has_full_control_of_state = 231
+    owns_state = 232
+    has_full_control_of_state = 232
+    owns_state = 233
+    has_full_control_of_state = 233
+    owns_state = 242
+    has_full_control_of_state = 242
+    owns_state = 249
+    has_full_control_of_state = 249
+}
+pwc_st_province_priority_fujian_home = {
+    OR = {
+        tag = W62
+        tag = W73
+        tag = W80
+        tag = W86
+        tag = W93
+        tag = W94
+        tag = W96
+        tag = X02
+        tag = X09
+        tag = X64
+        tag = X65
+    }
+}
+pwc_st_province_priority_fujian_state = {
+    OR = {
+        state = 293
+        state = 306
+        state = 313
+        state = 319
+        state = 327
+        state = 328
+        state = 330
+        state = 336
+        state = 343
+        state = 525
+        state = 526
+    }
+}
+pwc_st_province_priority_fujian_unified = {
+    owns_state = 293
+    has_full_control_of_state = 293
+    owns_state = 306
+    has_full_control_of_state = 306
+    owns_state = 313
+    has_full_control_of_state = 313
+    owns_state = 319
+    has_full_control_of_state = 319
+    owns_state = 327
+    has_full_control_of_state = 327
+    owns_state = 328
+    has_full_control_of_state = 328
+    owns_state = 330
+    has_full_control_of_state = 330
+    owns_state = 336
+    has_full_control_of_state = 336
+    owns_state = 343
+    has_full_control_of_state = 343
+    owns_state = 525
+    has_full_control_of_state = 525
+    owns_state = 526
+    has_full_control_of_state = 526
+}
+pwc_st_province_priority_gansu_home = {
+    OR = {
+        tag = U20
+        tag = U42
+        tag = U72
+        tag = U77
+        tag = U81
+        tag = U97
+        tag = V04
+        tag = V10
+        tag = V21
+        tag = V22
+        tag = V30
+        tag = V34
+        tag = V39
+        tag = V51
+    }
+}
+pwc_st_province_priority_gansu_state = {
+    OR = {
+        state = 31
+        state = 55
+        state = 86
+        state = 91
+        state = 95
+        state = 114
+        state = 122
+        state = 129
+        state = 140
+        state = 141
+        state = 149
+        state = 155
+        state = 161
+        state = 174
+    }
+}
+pwc_st_province_priority_gansu_unified = {
+    owns_state = 31
+    has_full_control_of_state = 31
+    owns_state = 55
+    has_full_control_of_state = 55
+    owns_state = 86
+    has_full_control_of_state = 86
+    owns_state = 91
+    has_full_control_of_state = 91
+    owns_state = 95
+    has_full_control_of_state = 95
+    owns_state = 114
+    has_full_control_of_state = 114
+    owns_state = 122
+    has_full_control_of_state = 122
+    owns_state = 129
+    has_full_control_of_state = 129
+    owns_state = 140
+    has_full_control_of_state = 140
+    owns_state = 141
+    has_full_control_of_state = 141
+    owns_state = 149
+    has_full_control_of_state = 149
+    owns_state = 155
+    has_full_control_of_state = 155
+    owns_state = 161
+    has_full_control_of_state = 161
+    owns_state = 174
+    has_full_control_of_state = 174
+}
+pwc_st_province_priority_guangdong_home = {
+    OR = {
+        tag = W98
+        tag = X01
+        tag = X08
+        tag = X11
+        tag = X17
+        tag = X19
+        tag = X21
+        tag = X23
+        tag = X25
+        tag = X26
+        tag = X29
+        tag = X30
+        tag = X32
+        tag = X34
+        tag = X35
+        tag = X36
+        tag = X37
+        tag = X39
+        tag = X40
+        tag = X42
+        tag = X43
+        tag = X45
+        tag = X47
+    }
+}
+pwc_st_province_priority_guangdong_state = {
+    OR = {
+        state = 332
+        state = 335
+        state = 342
+        state = 345
+        state = 351
+        state = 353
+        state = 355
+        state = 357
+        state = 359
+        state = 360
+        state = 363
+        state = 364
+        state = 367
+        state = 369
+        state = 370
+        state = 371
+        state = 372
+        state = 374
+        state = 375
+        state = 377
+        state = 379
+        state = 381
+        state = 384
+    }
+}
+pwc_st_province_priority_guangdong_unified = {
+    owns_state = 332
+    has_full_control_of_state = 332
+    owns_state = 335
+    has_full_control_of_state = 335
+    owns_state = 342
+    has_full_control_of_state = 342
+    owns_state = 345
+    has_full_control_of_state = 345
+    owns_state = 351
+    has_full_control_of_state = 351
+    owns_state = 353
+    has_full_control_of_state = 353
+    owns_state = 355
+    has_full_control_of_state = 355
+    owns_state = 357
+    has_full_control_of_state = 357
+    owns_state = 359
+    has_full_control_of_state = 359
+    owns_state = 360
+    has_full_control_of_state = 360
+    owns_state = 363
+    has_full_control_of_state = 363
+    owns_state = 364
+    has_full_control_of_state = 364
+    owns_state = 367
+    has_full_control_of_state = 367
+    owns_state = 369
+    has_full_control_of_state = 369
+    owns_state = 370
+    has_full_control_of_state = 370
+    owns_state = 371
+    has_full_control_of_state = 371
+    owns_state = 372
+    has_full_control_of_state = 372
+    owns_state = 374
+    has_full_control_of_state = 374
+    owns_state = 375
+    has_full_control_of_state = 375
+    owns_state = 377
+    has_full_control_of_state = 377
+    owns_state = 379
+    has_full_control_of_state = 379
+    owns_state = 381
+    has_full_control_of_state = 381
+    owns_state = 384
+    has_full_control_of_state = 384
+}
+pwc_st_province_priority_guangxi_home = {
+    OR = {
+        tag = W90
+        tag = W92
+        tag = W97
+        tag = X03
+        tag = X05
+        tag = X15
+        tag = X16
+        tag = X20
+        tag = X22
+        tag = X31
+        tag = X33
+        tag = X38
+        tag = X44
+        tag = X46
+    }
+}
+pwc_st_province_priority_guangxi_state = {
+    OR = {
+        state = 324
+        state = 326
+        state = 331
+        state = 337
+        state = 339
+        state = 349
+        state = 350
+        state = 354
+        state = 356
+        state = 366
+        state = 368
+        state = 373
+        state = 380
+        state = 383
+    }
+}
+pwc_st_province_priority_guangxi_unified = {
+    owns_state = 324
+    has_full_control_of_state = 324
+    owns_state = 326
+    has_full_control_of_state = 326
+    owns_state = 331
+    has_full_control_of_state = 331
+    owns_state = 337
+    has_full_control_of_state = 337
+    owns_state = 339
+    has_full_control_of_state = 339
+    owns_state = 349
+    has_full_control_of_state = 349
+    owns_state = 350
+    has_full_control_of_state = 350
+    owns_state = 354
+    has_full_control_of_state = 354
+    owns_state = 356
+    has_full_control_of_state = 356
+    owns_state = 366
+    has_full_control_of_state = 366
+    owns_state = 368
+    has_full_control_of_state = 368
+    owns_state = 373
+    has_full_control_of_state = 373
+    owns_state = 380
+    has_full_control_of_state = 380
+    owns_state = 383
+    has_full_control_of_state = 383
+}
+pwc_st_province_priority_guizhou_home = {
+    OR = {
+        tag = W51
+        tag = W54
+        tag = W71
+        tag = W74
+        tag = W76
+        tag = W78
+        tag = W84
+        tag = W87
+        tag = W91
+    }
+}
+pwc_st_province_priority_guizhou_state = {
+    OR = {
+        state = 280
+        state = 283
+        state = 304
+        state = 307
+        state = 309
+        state = 311
+        state = 317
+        state = 320
+        state = 325
+    }
+}
+pwc_st_province_priority_guizhou_unified = {
+    owns_state = 280
+    has_full_control_of_state = 280
+    owns_state = 283
+    has_full_control_of_state = 283
+    owns_state = 304
+    has_full_control_of_state = 304
+    owns_state = 307
+    has_full_control_of_state = 307
+    owns_state = 309
+    has_full_control_of_state = 309
+    owns_state = 311
+    has_full_control_of_state = 311
+    owns_state = 317
+    has_full_control_of_state = 317
+    owns_state = 320
+    has_full_control_of_state = 320
+    owns_state = 325
+    has_full_control_of_state = 325
+}
+pwc_st_province_priority_hainan_home = {
+    OR = {
+        tag = X48
+        tag = X49
+        tag = X50
+        tag = X51
+    }
+}
+pwc_st_province_priority_hainan_state = {
+    OR = {
+        state = 385
+        state = 387
+        state = 388
+        state = 391
+    }
+}
+pwc_st_province_priority_hainan_unified = {
+    owns_state = 385
+    has_full_control_of_state = 385
+    owns_state = 387
+    has_full_control_of_state = 387
+    owns_state = 388
+    has_full_control_of_state = 388
+    owns_state = 391
+    has_full_control_of_state = 391
+}
+pwc_st_province_priority_hebei_home = {
+    OR = {
+        tag = U46
+        tag = U50
+        tag = U60
+        tag = U64
+        tag = U65
+        tag = U68
+        tag = U71
+        tag = U76
+        tag = U82
+        tag = U84
+        tag = U86
+        tag = U96
+        tag = V09
+    }
+}
+pwc_st_province_priority_hebei_state = {
+    OR = {
+        state = 59
+        state = 63
+        state = 74
+        state = 78
+        state = 79
+        state = 82
+        state = 85
+        state = 90
+        state = 96
+        state = 98
+        state = 103
+        state = 113
+        state = 128
+    }
+}
+pwc_st_province_priority_hebei_unified = {
+    owns_state = 59
+    has_full_control_of_state = 59
+    owns_state = 63
+    has_full_control_of_state = 63
+    owns_state = 74
+    has_full_control_of_state = 74
+    owns_state = 78
+    has_full_control_of_state = 78
+    owns_state = 79
+    has_full_control_of_state = 79
+    owns_state = 82
+    has_full_control_of_state = 82
+    owns_state = 85
+    has_full_control_of_state = 85
+    owns_state = 90
+    has_full_control_of_state = 90
+    owns_state = 96
+    has_full_control_of_state = 96
+    owns_state = 98
+    has_full_control_of_state = 98
+    owns_state = 103
+    has_full_control_of_state = 103
+    owns_state = 113
+    has_full_control_of_state = 113
+    owns_state = 128
+    has_full_control_of_state = 128
+}
+pwc_st_province_priority_heilongjiang_home = {
+    OR = {
+        tag = U00
+        tag = U02
+        tag = U03
+        tag = U05
+        tag = U06
+        tag = U07
+        tag = U08
+        tag = U10
+        tag = U11
+        tag = U14
+        tag = U15
+        tag = U17
+        tag = U18
+    }
+}
+pwc_st_province_priority_heilongjiang_state = {
+    OR = {
+        state = 8
+        state = 12
+        state = 13
+        state = 15
+        state = 16
+        state = 17
+        state = 18
+        state = 20
+        state = 21
+        state = 24
+        state = 25
+        state = 27
+        state = 29
+    }
+}
+pwc_st_province_priority_heilongjiang_unified = {
+    owns_state = 8
+    has_full_control_of_state = 8
+    owns_state = 12
+    has_full_control_of_state = 12
+    owns_state = 13
+    has_full_control_of_state = 13
+    owns_state = 15
+    has_full_control_of_state = 15
+    owns_state = 16
+    has_full_control_of_state = 16
+    owns_state = 17
+    has_full_control_of_state = 17
+    owns_state = 18
+    has_full_control_of_state = 18
+    owns_state = 20
+    has_full_control_of_state = 20
+    owns_state = 21
+    has_full_control_of_state = 21
+    owns_state = 24
+    has_full_control_of_state = 24
+    owns_state = 25
+    has_full_control_of_state = 25
+    owns_state = 27
+    has_full_control_of_state = 27
+    owns_state = 29
+    has_full_control_of_state = 29
+}
+pwc_st_province_priority_henan_home = {
+    OR = {
+        tag = V16
+        tag = V18
+        tag = V27
+        tag = V37
+        tag = V38
+        tag = V42
+        tag = V43
+        tag = V44
+        tag = V45
+        tag = V47
+        tag = V54
+        tag = V55
+        tag = V56
+        tag = V57
+        tag = V60
+        tag = V67
+        tag = V69
+        tag = V80
+    }
+}
+pwc_st_province_priority_henan_state = {
+    OR = {
+        state = 135
+        state = 137
+        state = 146
+        state = 159
+        state = 160
+        state = 164
+        state = 165
+        state = 166
+        state = 167
+        state = 169
+        state = 177
+        state = 178
+        state = 179
+        state = 180
+        state = 184
+        state = 192
+        state = 194
+        state = 206
+    }
+}
+pwc_st_province_priority_henan_unified = {
+    owns_state = 135
+    has_full_control_of_state = 135
+    owns_state = 137
+    has_full_control_of_state = 137
+    owns_state = 146
+    has_full_control_of_state = 146
+    owns_state = 159
+    has_full_control_of_state = 159
+    owns_state = 160
+    has_full_control_of_state = 160
+    owns_state = 164
+    has_full_control_of_state = 164
+    owns_state = 165
+    has_full_control_of_state = 165
+    owns_state = 166
+    has_full_control_of_state = 166
+    owns_state = 167
+    has_full_control_of_state = 167
+    owns_state = 169
+    has_full_control_of_state = 169
+    owns_state = 177
+    has_full_control_of_state = 177
+    owns_state = 178
+    has_full_control_of_state = 178
+    owns_state = 179
+    has_full_control_of_state = 179
+    owns_state = 180
+    has_full_control_of_state = 180
+    owns_state = 184
+    has_full_control_of_state = 184
+    owns_state = 192
+    has_full_control_of_state = 192
+    owns_state = 194
+    has_full_control_of_state = 194
+    owns_state = 206
+    has_full_control_of_state = 206
+}
+pwc_st_province_priority_hubei_home = {
+    OR = {
+        tag = V72
+        tag = V82
+        tag = V84
+        tag = V92
+        tag = V94
+        tag = V98
+        tag = V99
+        tag = W00
+        tag = W13
+        tag = W17
+        tag = W19
+        tag = W20
+        tag = W23
+        tag = W24
+        tag = W26
+        tag = W29
+        tag = W31
+    }
+}
+pwc_st_province_priority_hubei_state = {
+    OR = {
+        state = 198
+        state = 208
+        state = 210
+        state = 218
+        state = 220
+        state = 224
+        state = 225
+        state = 226
+        state = 240
+        state = 244
+        state = 246
+        state = 247
+        state = 250
+        state = 251
+        state = 254
+        state = 257
+        state = 259
+    }
+}
+pwc_st_province_priority_hubei_unified = {
+    owns_state = 198
+    has_full_control_of_state = 198
+    owns_state = 208
+    has_full_control_of_state = 208
+    owns_state = 210
+    has_full_control_of_state = 210
+    owns_state = 218
+    has_full_control_of_state = 218
+    owns_state = 220
+    has_full_control_of_state = 220
+    owns_state = 224
+    has_full_control_of_state = 224
+    owns_state = 225
+    has_full_control_of_state = 225
+    owns_state = 226
+    has_full_control_of_state = 226
+    owns_state = 240
+    has_full_control_of_state = 240
+    owns_state = 244
+    has_full_control_of_state = 244
+    owns_state = 246
+    has_full_control_of_state = 246
+    owns_state = 247
+    has_full_control_of_state = 247
+    owns_state = 250
+    has_full_control_of_state = 250
+    owns_state = 251
+    has_full_control_of_state = 251
+    owns_state = 254
+    has_full_control_of_state = 254
+    owns_state = 257
+    has_full_control_of_state = 257
+    owns_state = 259
+    has_full_control_of_state = 259
+}
+pwc_st_province_priority_hunan_home = {
+    OR = {
+        tag = W32
+        tag = W36
+        tag = W37
+        tag = W43
+        tag = W44
+        tag = W55
+        tag = W58
+        tag = W64
+        tag = W66
+        tag = W67
+        tag = W72
+        tag = W75
+        tag = W82
+        tag = W83
+    }
+}
+pwc_st_province_priority_hunan_state = {
+    OR = {
+        state = 260
+        state = 264
+        state = 265
+        state = 271
+        state = 272
+        state = 284
+        state = 287
+        state = 296
+        state = 299
+        state = 300
+        state = 305
+        state = 308
+        state = 315
+        state = 316
+    }
+}
+pwc_st_province_priority_hunan_unified = {
+    owns_state = 260
+    has_full_control_of_state = 260
+    owns_state = 264
+    has_full_control_of_state = 264
+    owns_state = 265
+    has_full_control_of_state = 265
+    owns_state = 271
+    has_full_control_of_state = 271
+    owns_state = 272
+    has_full_control_of_state = 272
+    owns_state = 284
+    has_full_control_of_state = 284
+    owns_state = 287
+    has_full_control_of_state = 287
+    owns_state = 296
+    has_full_control_of_state = 296
+    owns_state = 299
+    has_full_control_of_state = 299
+    owns_state = 300
+    has_full_control_of_state = 300
+    owns_state = 305
+    has_full_control_of_state = 305
+    owns_state = 308
+    has_full_control_of_state = 308
+    owns_state = 315
+    has_full_control_of_state = 315
+    owns_state = 316
+    has_full_control_of_state = 316
+}
+pwc_st_province_priority_inner_mongolia_home = {
+    OR = {
+        tag = U01
+        tag = U09
+        tag = U13
+        tag = U19
+        tag = U25
+        tag = U31
+        tag = U37
+        tag = U43
+        tag = U44
+        tag = U48
+        tag = U57
+        tag = U62
+    }
+}
+pwc_st_province_priority_inner_mongolia_state = {
+    OR = {
+        state = 9
+        state = 19
+        state = 23
+        state = 30
+        state = 37
+        state = 43
+        state = 49
+        state = 56
+        state = 57
+        state = 61
+        state = 71
+        state = 76
+    }
+}
+pwc_st_province_priority_inner_mongolia_unified = {
+    owns_state = 9
+    has_full_control_of_state = 9
+    owns_state = 19
+    has_full_control_of_state = 19
+    owns_state = 23
+    has_full_control_of_state = 23
+    owns_state = 30
+    has_full_control_of_state = 30
+    owns_state = 37
+    has_full_control_of_state = 37
+    owns_state = 43
+    has_full_control_of_state = 43
+    owns_state = 49
+    has_full_control_of_state = 49
+    owns_state = 56
+    has_full_control_of_state = 56
+    owns_state = 57
+    has_full_control_of_state = 57
+    owns_state = 61
+    has_full_control_of_state = 61
+    owns_state = 71
+    has_full_control_of_state = 71
+    owns_state = 76
+    has_full_control_of_state = 76
+}
+pwc_st_province_priority_jiangsu_home = {
+    OR = {
+        tag = V41
+        tag = V46
+        tag = V53
+        tag = V58
+        tag = V63
+        tag = V71
+        tag = V74
+        tag = V79
+        tag = V87
+        tag = V88
+        tag = V89
+        tag = V90
+        tag = V93
+        tag = V95
+        tag = W01
+    }
+}
+pwc_st_province_priority_jiangsu_state = {
+    OR = {
+        state = 163
+        state = 168
+        state = 176
+        state = 181
+        state = 187
+        state = 197
+        state = 200
+        state = 205
+        state = 213
+        state = 214
+        state = 215
+        state = 216
+        state = 219
+        state = 221
+        state = 228
+    }
+}
+pwc_st_province_priority_jiangsu_unified = {
+    owns_state = 163
+    has_full_control_of_state = 163
+    owns_state = 168
+    has_full_control_of_state = 168
+    owns_state = 176
+    has_full_control_of_state = 176
+    owns_state = 181
+    has_full_control_of_state = 181
+    owns_state = 187
+    has_full_control_of_state = 187
+    owns_state = 197
+    has_full_control_of_state = 197
+    owns_state = 200
+    has_full_control_of_state = 200
+    owns_state = 205
+    has_full_control_of_state = 205
+    owns_state = 213
+    has_full_control_of_state = 213
+    owns_state = 214
+    has_full_control_of_state = 214
+    owns_state = 215
+    has_full_control_of_state = 215
+    owns_state = 216
+    has_full_control_of_state = 216
+    owns_state = 219
+    has_full_control_of_state = 219
+    owns_state = 221
+    has_full_control_of_state = 221
+    owns_state = 228
+    has_full_control_of_state = 228
+}
+pwc_st_province_priority_jiangxi_home = {
+    OR = {
+        tag = W34
+        tag = W38
+        tag = W41
+        tag = W52
+        tag = W53
+        tag = W59
+        tag = W61
+        tag = W65
+        tag = W68
+        tag = W69
+        tag = W79
+    }
+}
+pwc_st_province_priority_jiangxi_state = {
+    OR = {
+        state = 262
+        state = 266
+        state = 269
+        state = 281
+        state = 282
+        state = 288
+        state = 292
+        state = 298
+        state = 301
+        state = 302
+        state = 312
+    }
+}
+pwc_st_province_priority_jiangxi_unified = {
+    owns_state = 262
+    has_full_control_of_state = 262
+    owns_state = 266
+    has_full_control_of_state = 266
+    owns_state = 269
+    has_full_control_of_state = 269
+    owns_state = 281
+    has_full_control_of_state = 281
+    owns_state = 282
+    has_full_control_of_state = 282
+    owns_state = 288
+    has_full_control_of_state = 288
+    owns_state = 292
+    has_full_control_of_state = 292
+    owns_state = 298
+    has_full_control_of_state = 298
+    owns_state = 301
+    has_full_control_of_state = 301
+    owns_state = 302
+    has_full_control_of_state = 302
+    owns_state = 312
+    has_full_control_of_state = 312
+}
+pwc_st_province_priority_jilin_home = {
+    OR = {
+        tag = U16
+        tag = U22
+        tag = U24
+        tag = U28
+        tag = U29
+        tag = U30
+        tag = U32
+        tag = U39
+        tag = U41
+    }
+}
+pwc_st_province_priority_jilin_state = {
+    OR = {
+        state = 26
+        state = 34
+        state = 36
+        state = 40
+        state = 41
+        state = 42
+        state = 44
+        state = 51
+        state = 54
+    }
+}
+pwc_st_province_priority_jilin_unified = {
+    owns_state = 26
+    has_full_control_of_state = 26
+    owns_state = 34
+    has_full_control_of_state = 34
+    owns_state = 36
+    has_full_control_of_state = 36
+    owns_state = 40
+    has_full_control_of_state = 40
+    owns_state = 41
+    has_full_control_of_state = 41
+    owns_state = 42
+    has_full_control_of_state = 42
+    owns_state = 44
+    has_full_control_of_state = 44
+    owns_state = 51
+    has_full_control_of_state = 51
+    owns_state = 54
+    has_full_control_of_state = 54
+}
+pwc_st_province_priority_liaoning_home = {
+    OR = {
+        tag = U36
+        tag = U38
+        tag = U40
+        tag = U47
+        tag = U49
+        tag = U51
+        tag = U52
+        tag = U53
+        tag = U54
+        tag = U55
+        tag = U58
+        tag = U59
+        tag = U61
+        tag = U69
+    }
+}
+pwc_st_province_priority_liaoning_state = {
+    OR = {
+        state = 48
+        state = 50
+        state = 53
+        state = 60
+        state = 62
+        state = 64
+        state = 65
+        state = 66
+        state = 67
+        state = 69
+        state = 72
+        state = 73
+        state = 75
+        state = 83
+    }
+}
+pwc_st_province_priority_liaoning_unified = {
+    owns_state = 48
+    has_full_control_of_state = 48
+    owns_state = 50
+    has_full_control_of_state = 50
+    owns_state = 53
+    has_full_control_of_state = 53
+    owns_state = 60
+    has_full_control_of_state = 60
+    owns_state = 62
+    has_full_control_of_state = 62
+    owns_state = 64
+    has_full_control_of_state = 64
+    owns_state = 65
+    has_full_control_of_state = 65
+    owns_state = 66
+    has_full_control_of_state = 66
+    owns_state = 67
+    has_full_control_of_state = 67
+    owns_state = 69
+    has_full_control_of_state = 69
+    owns_state = 72
+    has_full_control_of_state = 72
+    owns_state = 73
+    has_full_control_of_state = 73
+    owns_state = 75
+    has_full_control_of_state = 75
+    owns_state = 83
+    has_full_control_of_state = 83
+}
+pwc_st_province_priority_ningxia_home = {
+    OR = {
+        tag = U83
+        tag = U88
+        tag = U90
+        tag = U95
+        tag = V13
+    }
+}
+pwc_st_province_priority_ningxia_state = {
+    OR = {
+        state = 97
+        state = 105
+        state = 107
+        state = 112
+        state = 132
+    }
+}
+pwc_st_province_priority_ningxia_unified = {
+    owns_state = 97
+    has_full_control_of_state = 97
+    owns_state = 105
+    has_full_control_of_state = 105
+    owns_state = 107
+    has_full_control_of_state = 107
+    owns_state = 112
+    has_full_control_of_state = 112
+    owns_state = 132
+    has_full_control_of_state = 132
+}
+pwc_st_province_priority_qinghai_home = {
+    OR = {
+        tag = U78
+        tag = U79
+        tag = V00
+        tag = V03
+        tag = V06
+        tag = V17
+        tag = V20
+        tag = V32
+    }
+}
+pwc_st_province_priority_qinghai_state = {
+    OR = {
+        state = 92
+        state = 93
+        state = 117
+        state = 120
+        state = 124
+        state = 136
+        state = 139
+        state = 152
+    }
+}
+pwc_st_province_priority_qinghai_unified = {
+    owns_state = 92
+    has_full_control_of_state = 92
+    owns_state = 93
+    has_full_control_of_state = 93
+    owns_state = 117
+    has_full_control_of_state = 117
+    owns_state = 120
+    has_full_control_of_state = 120
+    owns_state = 124
+    has_full_control_of_state = 124
+    owns_state = 136
+    has_full_control_of_state = 136
+    owns_state = 139
+    has_full_control_of_state = 139
+    owns_state = 152
+    has_full_control_of_state = 152
+}
+pwc_st_province_priority_shaanxi_home = {
+    OR = {
+        tag = U75
+        tag = U99
+        tag = V28
+        tag = V33
+        tag = V35
+        tag = V40
+        tag = V48
+        tag = V52
+        tag = V65
+        tag = V66
+    }
+}
+pwc_st_province_priority_shaanxi_state = {
+    OR = {
+        state = 89
+        state = 116
+        state = 147
+        state = 154
+        state = 157
+        state = 162
+        state = 170
+        state = 175
+        state = 190
+        state = 191
+    }
+}
+pwc_st_province_priority_shaanxi_unified = {
+    owns_state = 89
+    has_full_control_of_state = 89
+    owns_state = 116
+    has_full_control_of_state = 116
+    owns_state = 147
+    has_full_control_of_state = 147
+    owns_state = 154
+    has_full_control_of_state = 154
+    owns_state = 157
+    has_full_control_of_state = 157
+    owns_state = 162
+    has_full_control_of_state = 162
+    owns_state = 170
+    has_full_control_of_state = 170
+    owns_state = 175
+    has_full_control_of_state = 175
+    owns_state = 190
+    has_full_control_of_state = 190
+    owns_state = 191
+    has_full_control_of_state = 191
+}
+pwc_st_province_priority_shandong_home = {
+    OR = {
+        tag = U89
+        tag = U91
+        tag = U93
+        tag = U94
+        tag = U98
+        tag = V01
+        tag = V02
+        tag = V05
+        tag = V08
+        tag = V11
+        tag = V15
+        tag = V19
+        tag = V24
+        tag = V25
+        tag = V26
+        tag = V36
+    }
+}
+pwc_st_province_priority_shandong_state = {
+    OR = {
+        state = 106
+        state = 108
+        state = 110
+        state = 111
+        state = 115
+        state = 118
+        state = 119
+        state = 123
+        state = 126
+        state = 130
+        state = 134
+        state = 138
+        state = 143
+        state = 144
+        state = 145
+        state = 158
+    }
+}
+pwc_st_province_priority_shandong_unified = {
+    owns_state = 106
+    has_full_control_of_state = 106
+    owns_state = 108
+    has_full_control_of_state = 108
+    owns_state = 110
+    has_full_control_of_state = 110
+    owns_state = 111
+    has_full_control_of_state = 111
+    owns_state = 115
+    has_full_control_of_state = 115
+    owns_state = 118
+    has_full_control_of_state = 118
+    owns_state = 119
+    has_full_control_of_state = 119
+    owns_state = 123
+    has_full_control_of_state = 123
+    owns_state = 126
+    has_full_control_of_state = 126
+    owns_state = 130
+    has_full_control_of_state = 130
+    owns_state = 134
+    has_full_control_of_state = 134
+    owns_state = 138
+    has_full_control_of_state = 138
+    owns_state = 143
+    has_full_control_of_state = 143
+    owns_state = 144
+    has_full_control_of_state = 144
+    owns_state = 145
+    has_full_control_of_state = 145
+    owns_state = 158
+    has_full_control_of_state = 158
+}
+pwc_st_province_priority_shanxi_home = {
+    OR = {
+        tag = U63
+        tag = U66
+        tag = U73
+        tag = U80
+        tag = U85
+        tag = U87
+        tag = U92
+        tag = V07
+        tag = V12
+        tag = V23
+        tag = V29
+    }
+}
+pwc_st_province_priority_shanxi_state = {
+    OR = {
+        state = 77
+        state = 80
+        state = 87
+        state = 94
+        state = 99
+        state = 104
+        state = 109
+        state = 125
+        state = 131
+        state = 142
+        state = 148
+    }
+}
+pwc_st_province_priority_shanxi_unified = {
+    owns_state = 77
+    has_full_control_of_state = 77
+    owns_state = 80
+    has_full_control_of_state = 80
+    owns_state = 87
+    has_full_control_of_state = 87
+    owns_state = 94
+    has_full_control_of_state = 94
+    owns_state = 99
+    has_full_control_of_state = 99
+    owns_state = 104
+    has_full_control_of_state = 104
+    owns_state = 109
+    has_full_control_of_state = 109
+    owns_state = 125
+    has_full_control_of_state = 125
+    owns_state = 131
+    has_full_control_of_state = 131
+    owns_state = 142
+    has_full_control_of_state = 142
+    owns_state = 148
+    has_full_control_of_state = 148
+}
+pwc_st_province_priority_sichuan_home = {
+    OR = {
+        tag = V59
+        tag = V64
+        tag = V75
+        tag = V76
+        tag = V78
+        tag = V85
+        tag = V91
+        tag = V97
+        tag = W02
+        tag = W07
+        tag = W11
+        tag = W12
+        tag = W14
+        tag = W16
+        tag = W25
+        tag = W33
+        tag = W35
+        tag = W42
+        tag = W46
+        tag = W48
+        tag = W49
+        tag = W77
+    }
+}
+pwc_st_province_priority_sichuan_state = {
+    OR = {
+        state = 183
+        state = 188
+        state = 201
+        state = 202
+        state = 204
+        state = 211
+        state = 217
+        state = 223
+        state = 229
+        state = 234
+        state = 238
+        state = 239
+        state = 241
+        state = 243
+        state = 253
+        state = 261
+        state = 263
+        state = 270
+        state = 275
+        state = 277
+        state = 278
+        state = 310
+    }
+}
+pwc_st_province_priority_sichuan_unified = {
+    owns_state = 183
+    has_full_control_of_state = 183
+    owns_state = 188
+    has_full_control_of_state = 188
+    owns_state = 201
+    has_full_control_of_state = 201
+    owns_state = 202
+    has_full_control_of_state = 202
+    owns_state = 204
+    has_full_control_of_state = 204
+    owns_state = 211
+    has_full_control_of_state = 211
+    owns_state = 217
+    has_full_control_of_state = 217
+    owns_state = 223
+    has_full_control_of_state = 223
+    owns_state = 229
+    has_full_control_of_state = 229
+    owns_state = 234
+    has_full_control_of_state = 234
+    owns_state = 238
+    has_full_control_of_state = 238
+    owns_state = 239
+    has_full_control_of_state = 239
+    owns_state = 241
+    has_full_control_of_state = 241
+    owns_state = 243
+    has_full_control_of_state = 243
+    owns_state = 253
+    has_full_control_of_state = 253
+    owns_state = 261
+    has_full_control_of_state = 261
+    owns_state = 263
+    has_full_control_of_state = 263
+    owns_state = 270
+    has_full_control_of_state = 270
+    owns_state = 275
+    has_full_control_of_state = 275
+    owns_state = 277
+    has_full_control_of_state = 277
+    owns_state = 278
+    has_full_control_of_state = 278
+    owns_state = 310
+    has_full_control_of_state = 310
+}
+pwc_st_province_priority_taiwan_home = {
+    OR = {
+        tag = X00
+        tag = X04
+        tag = X14
+        tag = X18
+        tag = X24
+        tag = X27
+        tag = X28
+        tag = X54
+        tag = X55
+        tag = X56
+        tag = X57
+        tag = X58
+        tag = X59
+        tag = X60
+        tag = X61
+        tag = X62
+        tag = X63
+    }
+}
+pwc_st_province_priority_taiwan_state = {
+    OR = {
+        state = 334
+        state = 338
+        state = 348
+        state = 352
+        state = 358
+        state = 361
+        state = 362
+        state = 505
+        state = 506
+        state = 507
+        state = 508
+        state = 509
+        state = 510
+        state = 511
+        state = 512
+        state = 513
+        state = 524
+    }
+}
+pwc_st_province_priority_taiwan_unified = {
+    owns_state = 334
+    has_full_control_of_state = 334
+    owns_state = 338
+    has_full_control_of_state = 338
+    owns_state = 348
+    has_full_control_of_state = 348
+    owns_state = 352
+    has_full_control_of_state = 352
+    owns_state = 358
+    has_full_control_of_state = 358
+    owns_state = 361
+    has_full_control_of_state = 361
+    owns_state = 362
+    has_full_control_of_state = 362
+    owns_state = 505
+    has_full_control_of_state = 505
+    owns_state = 506
+    has_full_control_of_state = 506
+    owns_state = 507
+    has_full_control_of_state = 507
+    owns_state = 508
+    has_full_control_of_state = 508
+    owns_state = 509
+    has_full_control_of_state = 509
+    owns_state = 510
+    has_full_control_of_state = 510
+    owns_state = 511
+    has_full_control_of_state = 511
+    owns_state = 512
+    has_full_control_of_state = 512
+    owns_state = 513
+    has_full_control_of_state = 513
+    owns_state = 524
+    has_full_control_of_state = 524
+}
+pwc_st_province_priority_xinjiang_home = {
+    OR = {
+        tag = U04
+        tag = U12
+        tag = U21
+        tag = U23
+        tag = U26
+        tag = U27
+        tag = U33
+        tag = U34
+        tag = U35
+        tag = U45
+        tag = U56
+        tag = U67
+        tag = U70
+        tag = U74
+    }
+}
+pwc_st_province_priority_xinjiang_state = {
+    OR = {
+        state = 14
+        state = 22
+        state = 32
+        state = 35
+        state = 38
+        state = 39
+        state = 45
+        state = 46
+        state = 47
+        state = 58
+        state = 70
+        state = 81
+        state = 84
+        state = 88
+    }
+}
+pwc_st_province_priority_xinjiang_unified = {
+    owns_state = 14
+    has_full_control_of_state = 14
+    owns_state = 22
+    has_full_control_of_state = 22
+    owns_state = 32
+    has_full_control_of_state = 32
+    owns_state = 35
+    has_full_control_of_state = 35
+    owns_state = 38
+    has_full_control_of_state = 38
+    owns_state = 39
+    has_full_control_of_state = 39
+    owns_state = 45
+    has_full_control_of_state = 45
+    owns_state = 46
+    has_full_control_of_state = 46
+    owns_state = 47
+    has_full_control_of_state = 47
+    owns_state = 58
+    has_full_control_of_state = 58
+    owns_state = 70
+    has_full_control_of_state = 70
+    owns_state = 81
+    has_full_control_of_state = 81
+    owns_state = 84
+    has_full_control_of_state = 84
+    owns_state = 88
+    has_full_control_of_state = 88
+}
+pwc_st_province_priority_xizang_home = {
+    OR = {
+        tag = V14
+        tag = V31
+        tag = V83
+        tag = V96
+        tag = W09
+        tag = W18
+        tag = W39
+        tag = X52
+        tag = X53
+    }
+}
+pwc_st_province_priority_xizang_state = {
+    OR = {
+        state = 133
+        state = 151
+        state = 209
+        state = 222
+        state = 236
+        state = 245
+        state = 267
+        state = 434
+        state = 435
+    }
+}
+pwc_st_province_priority_xizang_unified = {
+    owns_state = 133
+    has_full_control_of_state = 133
+    owns_state = 151
+    has_full_control_of_state = 151
+    owns_state = 209
+    has_full_control_of_state = 209
+    owns_state = 222
+    has_full_control_of_state = 222
+    owns_state = 236
+    has_full_control_of_state = 236
+    owns_state = 245
+    has_full_control_of_state = 245
+    owns_state = 267
+    has_full_control_of_state = 267
+    owns_state = 434
+    has_full_control_of_state = 434
+    owns_state = 435
+    has_full_control_of_state = 435
+}
+pwc_st_province_priority_yunnan_home = {
+    OR = {
+        tag = W50
+        tag = W57
+        tag = W63
+        tag = W70
+        tag = W81
+        tag = W85
+        tag = W88
+        tag = W89
+        tag = W95
+        tag = W99
+        tag = X06
+        tag = X07
+        tag = X10
+        tag = X12
+        tag = X13
+        tag = X41
+    }
+}
+pwc_st_province_priority_yunnan_state = {
+    OR = {
+        state = 279
+        state = 286
+        state = 295
+        state = 303
+        state = 314
+        state = 318
+        state = 321
+        state = 323
+        state = 329
+        state = 333
+        state = 340
+        state = 341
+        state = 344
+        state = 346
+        state = 347
+        state = 376
+    }
+}
+pwc_st_province_priority_yunnan_unified = {
+    owns_state = 279
+    has_full_control_of_state = 279
+    owns_state = 286
+    has_full_control_of_state = 286
+    owns_state = 295
+    has_full_control_of_state = 295
+    owns_state = 303
+    has_full_control_of_state = 303
+    owns_state = 314
+    has_full_control_of_state = 314
+    owns_state = 318
+    has_full_control_of_state = 318
+    owns_state = 321
+    has_full_control_of_state = 321
+    owns_state = 323
+    has_full_control_of_state = 323
+    owns_state = 329
+    has_full_control_of_state = 329
+    owns_state = 333
+    has_full_control_of_state = 333
+    owns_state = 340
+    has_full_control_of_state = 340
+    owns_state = 341
+    has_full_control_of_state = 341
+    owns_state = 344
+    has_full_control_of_state = 344
+    owns_state = 346
+    has_full_control_of_state = 346
+    owns_state = 347
+    has_full_control_of_state = 347
+    owns_state = 376
+    has_full_control_of_state = 376
+}
+pwc_st_province_priority_zhejiang_home = {
+    OR = {
+        tag = W08
+        tag = W10
+        tag = W21
+        tag = W27
+        tag = W28
+        tag = W30
+        tag = W40
+        tag = W45
+        tag = W47
+        tag = W56
+        tag = W60
+    }
+}
+pwc_st_province_priority_zhejiang_state = {
+    OR = {
+        state = 235
+        state = 237
+        state = 248
+        state = 255
+        state = 256
+        state = 258
+        state = 268
+        state = 273
+        state = 276
+        state = 285
+        state = 289
+    }
+}
+pwc_st_province_priority_zhejiang_unified = {
+    owns_state = 235
+    has_full_control_of_state = 235
+    owns_state = 237
+    has_full_control_of_state = 237
+    owns_state = 248
+    has_full_control_of_state = 248
+    owns_state = 255
+    has_full_control_of_state = 255
+    owns_state = 256
+    has_full_control_of_state = 256
+    owns_state = 258
+    has_full_control_of_state = 258
+    owns_state = 268
+    has_full_control_of_state = 268
+    owns_state = 273
+    has_full_control_of_state = 273
+    owns_state = 276
+    has_full_control_of_state = 276
+    owns_state = 285
+    has_full_control_of_state = 285
+    owns_state = 289
+    has_full_control_of_state = 289
+}
+pwc_st_province_priority_allows_target = {
+    OR = {
+        NOT = { has_game_rule = { rule = pwc_province_priority option = ON } }
+        FROM = { pwc_st_province_priority_target_allowed = yes }
+    }
+}
+
+pwc_st_province_priority_target_allowed = {
+    OR = {
+        NOT = { has_game_rule = { rule = pwc_province_priority option = ON } }
+        AND = {
+            PREV = { pwc_st_province_priority_anhui_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_anhui_unified = yes }
+                pwc_st_province_priority_anhui_home = yes
+                any_owned_state = { pwc_st_province_priority_anhui_state = yes }
+                any_controlled_state = { pwc_st_province_priority_anhui_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_fujian_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_fujian_unified = yes }
+                pwc_st_province_priority_fujian_home = yes
+                any_owned_state = { pwc_st_province_priority_fujian_state = yes }
+                any_controlled_state = { pwc_st_province_priority_fujian_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_gansu_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_gansu_unified = yes }
+                pwc_st_province_priority_gansu_home = yes
+                any_owned_state = { pwc_st_province_priority_gansu_state = yes }
+                any_controlled_state = { pwc_st_province_priority_gansu_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_guangdong_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_guangdong_unified = yes }
+                pwc_st_province_priority_guangdong_home = yes
+                any_owned_state = { pwc_st_province_priority_guangdong_state = yes }
+                any_controlled_state = { pwc_st_province_priority_guangdong_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_guangxi_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_guangxi_unified = yes }
+                pwc_st_province_priority_guangxi_home = yes
+                any_owned_state = { pwc_st_province_priority_guangxi_state = yes }
+                any_controlled_state = { pwc_st_province_priority_guangxi_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_guizhou_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_guizhou_unified = yes }
+                pwc_st_province_priority_guizhou_home = yes
+                any_owned_state = { pwc_st_province_priority_guizhou_state = yes }
+                any_controlled_state = { pwc_st_province_priority_guizhou_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_hainan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_hainan_unified = yes }
+                pwc_st_province_priority_hainan_home = yes
+                any_owned_state = { pwc_st_province_priority_hainan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_hainan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_hebei_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_hebei_unified = yes }
+                pwc_st_province_priority_hebei_home = yes
+                any_owned_state = { pwc_st_province_priority_hebei_state = yes }
+                any_controlled_state = { pwc_st_province_priority_hebei_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_heilongjiang_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_heilongjiang_unified = yes }
+                pwc_st_province_priority_heilongjiang_home = yes
+                any_owned_state = { pwc_st_province_priority_heilongjiang_state = yes }
+                any_controlled_state = { pwc_st_province_priority_heilongjiang_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_henan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_henan_unified = yes }
+                pwc_st_province_priority_henan_home = yes
+                any_owned_state = { pwc_st_province_priority_henan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_henan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_hubei_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_hubei_unified = yes }
+                pwc_st_province_priority_hubei_home = yes
+                any_owned_state = { pwc_st_province_priority_hubei_state = yes }
+                any_controlled_state = { pwc_st_province_priority_hubei_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_hunan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_hunan_unified = yes }
+                pwc_st_province_priority_hunan_home = yes
+                any_owned_state = { pwc_st_province_priority_hunan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_hunan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_inner_mongolia_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_inner_mongolia_unified = yes }
+                pwc_st_province_priority_inner_mongolia_home = yes
+                any_owned_state = { pwc_st_province_priority_inner_mongolia_state = yes }
+                any_controlled_state = { pwc_st_province_priority_inner_mongolia_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_jiangsu_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_jiangsu_unified = yes }
+                pwc_st_province_priority_jiangsu_home = yes
+                any_owned_state = { pwc_st_province_priority_jiangsu_state = yes }
+                any_controlled_state = { pwc_st_province_priority_jiangsu_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_jiangxi_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_jiangxi_unified = yes }
+                pwc_st_province_priority_jiangxi_home = yes
+                any_owned_state = { pwc_st_province_priority_jiangxi_state = yes }
+                any_controlled_state = { pwc_st_province_priority_jiangxi_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_jilin_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_jilin_unified = yes }
+                pwc_st_province_priority_jilin_home = yes
+                any_owned_state = { pwc_st_province_priority_jilin_state = yes }
+                any_controlled_state = { pwc_st_province_priority_jilin_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_liaoning_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_liaoning_unified = yes }
+                pwc_st_province_priority_liaoning_home = yes
+                any_owned_state = { pwc_st_province_priority_liaoning_state = yes }
+                any_controlled_state = { pwc_st_province_priority_liaoning_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_ningxia_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_ningxia_unified = yes }
+                pwc_st_province_priority_ningxia_home = yes
+                any_owned_state = { pwc_st_province_priority_ningxia_state = yes }
+                any_controlled_state = { pwc_st_province_priority_ningxia_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_qinghai_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_qinghai_unified = yes }
+                pwc_st_province_priority_qinghai_home = yes
+                any_owned_state = { pwc_st_province_priority_qinghai_state = yes }
+                any_controlled_state = { pwc_st_province_priority_qinghai_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_shaanxi_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_shaanxi_unified = yes }
+                pwc_st_province_priority_shaanxi_home = yes
+                any_owned_state = { pwc_st_province_priority_shaanxi_state = yes }
+                any_controlled_state = { pwc_st_province_priority_shaanxi_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_shandong_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_shandong_unified = yes }
+                pwc_st_province_priority_shandong_home = yes
+                any_owned_state = { pwc_st_province_priority_shandong_state = yes }
+                any_controlled_state = { pwc_st_province_priority_shandong_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_shanxi_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_shanxi_unified = yes }
+                pwc_st_province_priority_shanxi_home = yes
+                any_owned_state = { pwc_st_province_priority_shanxi_state = yes }
+                any_controlled_state = { pwc_st_province_priority_shanxi_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_sichuan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_sichuan_unified = yes }
+                pwc_st_province_priority_sichuan_home = yes
+                any_owned_state = { pwc_st_province_priority_sichuan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_sichuan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_taiwan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_taiwan_unified = yes }
+                pwc_st_province_priority_taiwan_home = yes
+                any_owned_state = { pwc_st_province_priority_taiwan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_taiwan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_xinjiang_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_xinjiang_unified = yes }
+                pwc_st_province_priority_xinjiang_home = yes
+                any_owned_state = { pwc_st_province_priority_xinjiang_state = yes }
+                any_controlled_state = { pwc_st_province_priority_xinjiang_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_xizang_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_xizang_unified = yes }
+                pwc_st_province_priority_xizang_home = yes
+                any_owned_state = { pwc_st_province_priority_xizang_state = yes }
+                any_controlled_state = { pwc_st_province_priority_xizang_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_yunnan_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_yunnan_unified = yes }
+                pwc_st_province_priority_yunnan_home = yes
+                any_owned_state = { pwc_st_province_priority_yunnan_state = yes }
+                any_controlled_state = { pwc_st_province_priority_yunnan_state = yes }
+            }
+        }
+        AND = {
+            PREV = { pwc_st_province_priority_zhejiang_home = yes }
+            OR = {
+                PREV = { pwc_st_province_priority_zhejiang_unified = yes }
+                pwc_st_province_priority_zhejiang_home = yes
+                any_owned_state = { pwc_st_province_priority_zhejiang_state = yes }
+                any_controlled_state = { pwc_st_province_priority_zhejiang_state = yes }
+            }
+        }
+    }
 }

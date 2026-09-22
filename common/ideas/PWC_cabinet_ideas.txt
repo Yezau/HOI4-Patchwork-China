@@ -428,7 +428,7 @@ ideas = {
 			removal_cost = 0
 			picture = pwc_cabinet_cand_sci_civic_teacher
 			modifier = {
-				compliance_growth_on_our_occupied_states = 0.15
+				compliance_growth = 0.15
 				research_speed_factor = 0.1
 				experience_gain_army_factor = 0.1
 			}
@@ -993,7 +993,7 @@ ideas = {
 			removal_cost = 0
 			picture = pwc_cabinet_cand_mob_reinforcement_specialist
 			modifier = {
-				land_reinforce_rate = 0.15
+				land_reinforce_rate = 0.03
 				weekly_manpower = 1000
 				training_time_factor = -0.1
 			}
@@ -1017,7 +1017,7 @@ ideas = {
 			modifier = {
 				org_loss_when_moving = -0.15
 				army_morale_factor = 0.1
-				land_reinforce_rate = 0.1
+				army_speed_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 10

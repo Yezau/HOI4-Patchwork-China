@@ -156,7 +156,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			modifier = {
 				army_org_factor = 0.05
-				land_reinforce_rate = 0.03
+				land_reinforce_rate = 0.01
 			}
 		}
 
@@ -285,7 +285,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_war_preparation
 			modifier = {
-				compliance_growth_on_our_occupied_states = 0.03
+				compliance_growth = 0.03
 				required_garrison_factor = -0.05
 			}
 		}
@@ -328,8 +328,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_intel_bonus
 			modifier = {
-				compliance_growth_on_our_occupied_states = 0.06
-				resistance_growth_on_our_occupied_states = -0.09
+				compliance_growth = 0.06
+				resistance_growth = -0.09
 				non_core_manpower = 0.1
 			}
 		}
@@ -340,7 +340,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			modifier = {
 				max_command_power = 30
-				land_reinforce_rate = 0.05
+				land_reinforce_rate = 0.02
 			}
 		}
 
@@ -400,7 +400,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			modifier = {
 				army_org_regain = 0.1
-				land_reinforce_rate = 0.05
+				land_reinforce_rate = 0.02
 			}
 		}
 
@@ -459,7 +459,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_infantry_bonus
 			modifier = {
-				land_reinforce_rate = 0.05
+				land_reinforce_rate = 0.02
 				max_dig_in_factor = 0.05
 			}
 		}

@@ -2698,6 +2698,10 @@ pwc_st_regional_target_preferred = {
     }
 }
 pwc_st_regional_identity_central = {
+    check_variable = {
+        var = num_owned_states value = 244
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 243
         AND = { owns_state = 8
@@ -3435,6 +3439,10 @@ pwc_st_regional_identity_central = {
     }
 }
 pwc_st_regional_identity_east_china = {
+    check_variable = {
+        var = num_owned_states value = 65
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 64
         AND = { owns_state = 106
@@ -3634,6 +3642,10 @@ pwc_st_regional_identity_east_china = {
     }
 }
 pwc_st_regional_identity_southwest_china = {
+    check_variable = {
+        var = num_owned_states value = 38
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 37
         AND = { owns_state = 133
@@ -3751,6 +3763,10 @@ pwc_st_regional_identity_southwest_china = {
     }
 }
 pwc_st_regional_identity_northwest_china = {
+    check_variable = {
+        var = num_owned_states value = 34
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 33
         AND = { owns_state = 14
@@ -3858,6 +3874,10 @@ pwc_st_regional_identity_northwest_china = {
     }
 }
 pwc_st_regional_identity_central_china = {
+    check_variable = {
+        var = num_owned_states value = 33
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 32
         AND = { owns_state = 135
@@ -3961,6 +3981,10 @@ pwc_st_regional_identity_central_china = {
     }
 }
 pwc_st_regional_identity_south_china = {
+    check_variable = {
+        var = num_owned_states value = 28
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 27
         AND = { owns_state = 324
@@ -4048,6 +4072,10 @@ pwc_st_regional_identity_south_china = {
     }
 }
 pwc_st_regional_identity_north_china = {
+    check_variable = {
+        var = num_owned_states value = 24
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 23
         AND = { owns_state = 9
@@ -4125,6 +4153,10 @@ pwc_st_regional_identity_north_china = {
     }
 }
 pwc_st_regional_identity_northeast_china = {
+    check_variable = {
+        var = num_owned_states value = 24
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 23
         AND = { owns_state = 8
@@ -4202,6 +4234,10 @@ pwc_st_regional_identity_northeast_china = {
     }
 }
 pwc_st_regional_identity_guangdong = {
+    check_variable = {
+        var = num_owned_states value = 14
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 13
         AND = { owns_state = 332
@@ -4249,6 +4285,10 @@ pwc_st_regional_identity_guangdong = {
     }
 }
 pwc_st_regional_identity_sichuan = {
+    check_variable = {
+        var = num_owned_states value = 14
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 13
         AND = { owns_state = 183
@@ -4296,6 +4336,10 @@ pwc_st_regional_identity_sichuan = {
     }
 }
 pwc_st_regional_identity_henan = {
+    check_variable = {
+        var = num_owned_states value = 12
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 11
         AND = { owns_state = 135
@@ -4337,6 +4381,10 @@ pwc_st_regional_identity_henan = {
     }
 }
 pwc_st_regional_identity_hubei = {
+    check_variable = {
+        var = num_owned_states value = 12
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 11
         AND = { owns_state = 198
@@ -4376,6 +4424,10 @@ pwc_st_regional_identity_hubei = {
     }
 }
 pwc_st_regional_identity_taiwan = {
+    check_variable = {
+        var = num_owned_states value = 12
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 11
         AND = { owns_state = 334
@@ -4415,6 +4467,10 @@ pwc_st_regional_identity_taiwan = {
     }
 }
 pwc_st_regional_identity_anhui = {
+    check_variable = {
+        var = num_owned_states value = 11
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 10
         AND = { owns_state = 172
@@ -4452,6 +4508,10 @@ pwc_st_regional_identity_anhui = {
     }
 }
 pwc_st_regional_identity_shandong = {
+    check_variable = {
+        var = num_owned_states value = 11
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 10
         AND = { owns_state = 106
@@ -4489,6 +4549,10 @@ pwc_st_regional_identity_shandong = {
     }
 }
 pwc_st_regional_identity_yunnan = {
+    check_variable = {
+        var = num_owned_states value = 11
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 10
         AND = { owns_state = 279
@@ -4526,6 +4590,10 @@ pwc_st_regional_identity_yunnan = {
     }
 }
 pwc_st_regional_identity_gansu = {
+    check_variable = {
+        var = num_owned_states value = 10
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 9
         AND = { owns_state = 31
@@ -4559,6 +4627,10 @@ pwc_st_regional_identity_gansu = {
     }
 }
 pwc_st_regional_identity_guangxi = {
+    check_variable = {
+        var = num_owned_states value = 10
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 9
         AND = { owns_state = 324
@@ -4592,6 +4664,10 @@ pwc_st_regional_identity_guangxi = {
     }
 }
 pwc_st_regional_identity_hunan = {
+    check_variable = {
+        var = num_owned_states value = 10
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 9
         AND = { owns_state = 260
@@ -4625,6 +4701,10 @@ pwc_st_regional_identity_hunan = {
     }
 }
 pwc_st_regional_identity_liaoning = {
+    check_variable = {
+        var = num_owned_states value = 10
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 9
         AND = { owns_state = 48
@@ -4658,6 +4738,10 @@ pwc_st_regional_identity_liaoning = {
     }
 }
 pwc_st_regional_identity_xinjiang = {
+    check_variable = {
+        var = num_owned_states value = 10
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 9
         AND = { owns_state = 14
@@ -4691,6 +4775,10 @@ pwc_st_regional_identity_xinjiang = {
     }
 }
 pwc_st_regional_identity_heilongjiang = {
+    check_variable = {
+        var = num_owned_states value = 9
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 8
         AND = { owns_state = 8
@@ -4722,6 +4810,10 @@ pwc_st_regional_identity_heilongjiang = {
     }
 }
 pwc_st_regional_identity_jiangsu = {
+    check_variable = {
+        var = num_owned_states value = 9
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 8
         AND = { owns_state = 163
@@ -4753,6 +4845,10 @@ pwc_st_regional_identity_jiangsu = {
     }
 }
 pwc_st_regional_identity_inner_mongolia = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 9
@@ -4782,6 +4878,10 @@ pwc_st_regional_identity_inner_mongolia = {
     }
 }
 pwc_st_regional_identity_fujian = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 293
@@ -4809,6 +4909,10 @@ pwc_st_regional_identity_fujian = {
     }
 }
 pwc_st_regional_identity_hebei = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 59
@@ -4836,6 +4940,10 @@ pwc_st_regional_identity_hebei = {
     }
 }
 pwc_st_regional_identity_jiangxi = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 262
@@ -4863,6 +4971,10 @@ pwc_st_regional_identity_jiangxi = {
     }
 }
 pwc_st_regional_identity_shanxi = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 77
@@ -4890,6 +5002,10 @@ pwc_st_regional_identity_shanxi = {
     }
 }
 pwc_st_regional_identity_zhejiang = {
+    check_variable = {
+        var = num_owned_states value = 8
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 7
         AND = { owns_state = 235
@@ -4917,6 +5033,10 @@ pwc_st_regional_identity_zhejiang = {
     }
 }
 pwc_st_regional_identity_shaanxi = {
+    check_variable = {
+        var = num_owned_states value = 7
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 6
         AND = { owns_state = 89
@@ -4942,6 +5062,10 @@ pwc_st_regional_identity_shaanxi = {
     }
 }
 pwc_st_regional_identity_guizhou = {
+    check_variable = {
+        var = num_owned_states value = 6
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 5
         AND = { owns_state = 280
@@ -4965,6 +5089,10 @@ pwc_st_regional_identity_guizhou = {
     }
 }
 pwc_st_regional_identity_jilin = {
+    check_variable = {
+        var = num_owned_states value = 6
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 5
         AND = { owns_state = 26
@@ -4988,6 +5116,10 @@ pwc_st_regional_identity_jilin = {
     }
 }
 pwc_st_regional_identity_xizang = {
+    check_variable = {
+        var = num_owned_states value = 6
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 5
         AND = { owns_state = 133
@@ -5011,6 +5143,10 @@ pwc_st_regional_identity_xizang = {
     }
 }
 pwc_st_regional_identity_qinghai = {
+    check_variable = {
+        var = num_owned_states value = 6
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 5
         AND = { owns_state = 92
@@ -5032,6 +5168,10 @@ pwc_st_regional_identity_qinghai = {
     }
 }
 pwc_st_regional_identity_ningxia = {
+    check_variable = {
+        var = num_owned_states value = 4
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 3
         AND = { owns_state = 97
@@ -5047,6 +5187,10 @@ pwc_st_regional_identity_ningxia = {
     }
 }
 pwc_st_regional_identity_hainan = {
+    check_variable = {
+        var = num_owned_states value = 3
+        compare = greater_than_or_equals
+    }
     count_triggers = {
         amount > 2
         AND = { owns_state = 385

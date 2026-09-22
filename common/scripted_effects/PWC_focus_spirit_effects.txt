@@ -210,7 +210,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_defense_corps }
 		add_to_variable = { pwc_fs_defense_count = 1 }
 		add_to_variable = { pwc_fs_defense_v_army_org_factor = 0.05 }
-		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.03 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.01 }
 	}
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_urban_fortification }
@@ -252,7 +252,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_staff_wargames }
 		add_to_variable = { pwc_fs_defense_count = 1 }
 		add_to_variable = { pwc_fs_defense_v_max_command_power = 30 }
-		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.02 }
 	}
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_operational_intelligence }
@@ -288,7 +288,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_mobile_reserves }
 		add_to_variable = { pwc_fs_defense_count = 1 }
 		add_to_variable = { pwc_fs_defense_v_army_org_regain = 0.1 }
-		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.02 }
 	}
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_deep_exploitation }
@@ -323,7 +323,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_defense_in_depth }
 		add_to_variable = { pwc_fs_defense_count = 1 }
-		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_land_reinforce_rate = 0.02 }
 		add_to_variable = { pwc_fs_defense_v_max_dig_in_factor = 0.05 }
 	}
 	if = {
@@ -476,7 +476,7 @@ pwc_se_rebuild_focus_spirit_diplomacy = {
 	set_variable = { pwc_fs_diplomacy_v_army_speed_factor = 0 }
 	set_variable = { pwc_fs_diplomacy_v_civilian_intel_factor = 0 }
 	set_variable = { pwc_fs_diplomacy_v_command_power_gain = 0 }
-	set_variable = { pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states = 0 }
+	set_variable = { pwc_fs_diplomacy_v_compliance_growth = 0 }
 	set_variable = { pwc_fs_diplomacy_v_defensive_war_stability_factor = 0 }
 	set_variable = { pwc_fs_diplomacy_v_enemy_justify_war_goal_time = 0 }
 	set_variable = { pwc_fs_diplomacy_v_improve_relations_maintain_cost_factor = 0 }
@@ -525,7 +525,7 @@ pwc_se_rebuild_focus_spirit_diplomacy = {
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_war_occupation_authority }
 		add_to_variable = { pwc_fs_diplomacy_count = 1 }
-		add_to_variable = { pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states = 0.03 }
+		add_to_variable = { pwc_fs_diplomacy_v_compliance_growth = 0.03 }
 		add_to_variable = { pwc_fs_diplomacy_v_required_garrison_factor = -0.05 }
 	}
 	if = {
@@ -820,7 +820,7 @@ pwc_se_rebuild_focus_spirit_geography = {
 
 pwc_se_grant_focus_spirit_gov_public_order = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_gov_public_order
@@ -833,7 +833,7 @@ pwc_se_grant_focus_spirit_gov_public_order = {
 
 pwc_se_grant_focus_spirit_gov_civil_defense = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_gov_civil_defense
@@ -846,7 +846,7 @@ pwc_se_grant_focus_spirit_gov_civil_defense = {
 
 pwc_se_grant_focus_spirit_gov_streamlined_administration = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
@@ -859,7 +859,7 @@ pwc_se_grant_focus_spirit_gov_streamlined_administration = {
 
 pwc_se_grant_focus_spirit_law_civil_service_exam = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_law_civil_service_exam
@@ -872,7 +872,7 @@ pwc_se_grant_focus_spirit_law_civil_service_exam = {
 
 pwc_se_grant_focus_spirit_law_emergency_powers = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_law_emergency_powers
@@ -885,7 +885,7 @@ pwc_se_grant_focus_spirit_law_emergency_powers = {
 
 pwc_se_grant_focus_spirit_law_oversight_committee = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_law_oversight_committee
@@ -898,7 +898,7 @@ pwc_se_grant_focus_spirit_law_oversight_committee = {
 
 pwc_se_grant_focus_spirit_eco_construction_bureau = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_construction_bureau
@@ -911,7 +911,7 @@ pwc_se_grant_focus_spirit_eco_construction_bureau = {
 
 pwc_se_grant_focus_spirit_eco_resource_survey = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_resource_survey
@@ -924,7 +924,7 @@ pwc_se_grant_focus_spirit_eco_resource_survey = {
 
 pwc_se_grant_focus_spirit_eco_finance_reform = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_finance_reform
@@ -937,7 +937,7 @@ pwc_se_grant_focus_spirit_eco_finance_reform = {
 
 pwc_se_grant_focus_spirit_eco_municipal_energy = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_municipal_energy
@@ -950,7 +950,7 @@ pwc_se_grant_focus_spirit_eco_municipal_energy = {
 
 pwc_se_grant_focus_spirit_eco_research_institute = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_research_institute
@@ -963,7 +963,7 @@ pwc_se_grant_focus_spirit_eco_research_institute = {
 
 pwc_se_grant_focus_spirit_eco_trade_hub = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_trade_hub
@@ -976,7 +976,7 @@ pwc_se_grant_focus_spirit_eco_trade_hub = {
 
 pwc_se_grant_focus_spirit_eco_metropolitan_economy = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
@@ -989,7 +989,7 @@ pwc_se_grant_focus_spirit_eco_metropolitan_economy = {
 
 pwc_se_grant_focus_spirit_eco_commerce_district = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_commerce_district
@@ -1002,7 +1002,7 @@ pwc_se_grant_focus_spirit_eco_commerce_district = {
 
 pwc_se_grant_focus_spirit_eco_apex_powerhouse = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
@@ -1015,7 +1015,7 @@ pwc_se_grant_focus_spirit_eco_apex_powerhouse = {
 
 pwc_se_grant_focus_spirit_mil_defense_corps = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_defense_corps
@@ -1028,7 +1028,7 @@ pwc_se_grant_focus_spirit_mil_defense_corps = {
 
 pwc_se_grant_focus_spirit_mil_urban_fortification = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_urban_fortification
@@ -1041,7 +1041,7 @@ pwc_se_grant_focus_spirit_mil_urban_fortification = {
 
 pwc_se_grant_focus_spirit_mil_officer_academy = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_officer_academy
@@ -1054,7 +1054,7 @@ pwc_se_grant_focus_spirit_mil_officer_academy = {
 
 pwc_se_grant_focus_spirit_mil_combined_arms = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_combined_arms
@@ -1067,7 +1067,7 @@ pwc_se_grant_focus_spirit_mil_combined_arms = {
 
 pwc_se_grant_focus_spirit_mil_logistics_command = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_logistics_command
@@ -1080,7 +1080,7 @@ pwc_se_grant_focus_spirit_mil_logistics_command = {
 
 pwc_se_grant_focus_spirit_mil_naval_command = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_naval_command
@@ -1093,7 +1093,7 @@ pwc_se_grant_focus_spirit_mil_naval_command = {
 
 pwc_se_grant_focus_spirit_mil_apex_city_marshal = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
@@ -1106,7 +1106,7 @@ pwc_se_grant_focus_spirit_mil_apex_city_marshal = {
 
 pwc_se_grant_focus_spirit_war_foreign_office = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_foreign_office
@@ -1119,7 +1119,7 @@ pwc_se_grant_focus_spirit_war_foreign_office = {
 
 pwc_se_grant_focus_spirit_war_nap_framework = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_nap_framework
@@ -1132,7 +1132,7 @@ pwc_se_grant_focus_spirit_war_nap_framework = {
 
 pwc_se_grant_focus_spirit_war_access_agreements = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_access_agreements
@@ -1145,7 +1145,7 @@ pwc_se_grant_focus_spirit_war_access_agreements = {
 
 pwc_se_grant_focus_spirit_war_intelligence_bureau = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
@@ -1158,7 +1158,7 @@ pwc_se_grant_focus_spirit_war_intelligence_bureau = {
 
 pwc_se_grant_focus_spirit_war_war_room = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_war_room
@@ -1171,7 +1171,7 @@ pwc_se_grant_focus_spirit_war_war_room = {
 
 pwc_se_grant_focus_spirit_war_propaganda_office = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_propaganda_office
@@ -1184,7 +1184,7 @@ pwc_se_grant_focus_spirit_war_propaganda_office = {
 
 pwc_se_grant_focus_spirit_war_occupation_authority = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_war_occupation_authority
@@ -1197,7 +1197,7 @@ pwc_se_grant_focus_spirit_war_occupation_authority = {
 
 pwc_se_grant_focus_spirit_mil_staff_wargames = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_staff_wargames
@@ -1210,7 +1210,7 @@ pwc_se_grant_focus_spirit_mil_staff_wargames = {
 
 pwc_se_grant_focus_spirit_mil_operational_intelligence = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
@@ -1223,7 +1223,7 @@ pwc_se_grant_focus_spirit_mil_operational_intelligence = {
 
 pwc_se_grant_focus_spirit_mil_reserve_system = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_reserve_system
@@ -1236,7 +1236,7 @@ pwc_se_grant_focus_spirit_mil_reserve_system = {
 
 pwc_se_grant_focus_spirit_mil_armaments_standardization = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
@@ -1249,7 +1249,7 @@ pwc_se_grant_focus_spirit_mil_armaments_standardization = {
 
 pwc_se_grant_focus_spirit_mil_joint_operations = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_joint_operations
@@ -1262,7 +1262,7 @@ pwc_se_grant_focus_spirit_mil_joint_operations = {
 
 pwc_se_grant_focus_spirit_mil_mobile_operations = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_mobile_operations
@@ -1275,7 +1275,7 @@ pwc_se_grant_focus_spirit_mil_mobile_operations = {
 
 pwc_se_grant_focus_spirit_mil_mobile_reserves = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
@@ -1288,7 +1288,7 @@ pwc_se_grant_focus_spirit_mil_mobile_reserves = {
 
 pwc_se_grant_focus_spirit_mil_deep_exploitation = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
@@ -1301,7 +1301,7 @@ pwc_se_grant_focus_spirit_mil_deep_exploitation = {
 
 pwc_se_grant_focus_spirit_mil_firepower_operations = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_firepower_operations
@@ -1314,7 +1314,7 @@ pwc_se_grant_focus_spirit_mil_firepower_operations = {
 
 pwc_se_grant_focus_spirit_mil_sensor_shooter_network = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
@@ -1327,7 +1327,7 @@ pwc_se_grant_focus_spirit_mil_sensor_shooter_network = {
 
 pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
@@ -1340,7 +1340,7 @@ pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = {
 
 pwc_se_grant_focus_spirit_mil_elastic_operations = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_elastic_operations
@@ -1353,7 +1353,7 @@ pwc_se_grant_focus_spirit_mil_elastic_operations = {
 
 pwc_se_grant_focus_spirit_mil_defense_in_depth = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
@@ -1366,7 +1366,7 @@ pwc_se_grant_focus_spirit_mil_defense_in_depth = {
 
 pwc_se_grant_focus_spirit_mil_counterstroke = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_counterstroke
@@ -1379,7 +1379,7 @@ pwc_se_grant_focus_spirit_mil_counterstroke = {
 
 pwc_se_grant_focus_spirit_mil_air_denial = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_air_denial
@@ -1392,7 +1392,7 @@ pwc_se_grant_focus_spirit_mil_air_denial = {
 
 pwc_se_grant_focus_spirit_mil_dispersed_airbases = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
@@ -1405,7 +1405,7 @@ pwc_se_grant_focus_spirit_mil_dispersed_airbases = {
 
 pwc_se_grant_focus_spirit_mil_interception_network = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_interception_network
@@ -1418,7 +1418,7 @@ pwc_se_grant_focus_spirit_mil_interception_network = {
 
 pwc_se_grant_focus_spirit_mil_air_joint_strike = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
@@ -1431,7 +1431,7 @@ pwc_se_grant_focus_spirit_mil_air_joint_strike = {
 
 pwc_se_grant_focus_spirit_mil_forward_air_control = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_forward_air_control
@@ -1444,7 +1444,7 @@ pwc_se_grant_focus_spirit_mil_forward_air_control = {
 
 pwc_se_grant_focus_spirit_mil_battlefield_interdiction = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
@@ -1457,7 +1457,7 @@ pwc_se_grant_focus_spirit_mil_battlefield_interdiction = {
 
 pwc_se_grant_focus_spirit_mil_littoral_denial = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_littoral_denial
@@ -1470,7 +1470,7 @@ pwc_se_grant_focus_spirit_mil_littoral_denial = {
 
 pwc_se_grant_focus_spirit_mil_coastal_sensor_line = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
@@ -1483,7 +1483,7 @@ pwc_se_grant_focus_spirit_mil_coastal_sensor_line = {
 
 pwc_se_grant_focus_spirit_mil_ambush_flotillas = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
@@ -1496,7 +1496,7 @@ pwc_se_grant_focus_spirit_mil_ambush_flotillas = {
 
 pwc_se_grant_focus_spirit_mil_sea_control = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_sea_control
@@ -1509,7 +1509,7 @@ pwc_se_grant_focus_spirit_mil_sea_control = {
 
 pwc_se_grant_focus_spirit_mil_convoy_command = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_convoy_command
@@ -1522,7 +1522,7 @@ pwc_se_grant_focus_spirit_mil_convoy_command = {
 
 pwc_se_grant_focus_spirit_mil_expeditionary_support = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
@@ -1535,7 +1535,7 @@ pwc_se_grant_focus_spirit_mil_expeditionary_support = {
 
 pwc_se_grant_focus_spirit_mil_field_workshops = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_field_workshops
@@ -1548,7 +1548,7 @@ pwc_se_grant_focus_spirit_mil_field_workshops = {
 
 pwc_se_grant_focus_spirit_mil_medical_evacuation = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
@@ -1561,7 +1561,7 @@ pwc_se_grant_focus_spirit_mil_medical_evacuation = {
 
 pwc_se_grant_focus_spirit_geo_island_maritime_identity = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
@@ -1574,7 +1574,7 @@ pwc_se_grant_focus_spirit_geo_island_maritime_identity = {
 
 pwc_se_grant_focus_spirit_geo_island_fishing_fleet = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
@@ -1587,7 +1587,7 @@ pwc_se_grant_focus_spirit_geo_island_fishing_fleet = {
 
 pwc_se_grant_focus_spirit_geo_island_amphibious_training = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
@@ -1600,7 +1600,7 @@ pwc_se_grant_focus_spirit_geo_island_amphibious_training = {
 
 pwc_se_grant_focus_spirit_geo_island_coastal_watch = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
@@ -1613,7 +1613,7 @@ pwc_se_grant_focus_spirit_geo_island_coastal_watch = {
 
 pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
@@ -1626,7 +1626,7 @@ pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = {
 
 pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
@@ -1639,7 +1639,7 @@ pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = {
 
 pwc_se_grant_focus_spirit_geo_coast_sea_defense = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
@@ -1652,7 +1652,7 @@ pwc_se_grant_focus_spirit_geo_coast_sea_defense = {
 
 pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
@@ -1665,7 +1665,7 @@ pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = {
 
 pwc_se_grant_focus_spirit_geo_coast_maritime_trade = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
@@ -1678,7 +1678,7 @@ pwc_se_grant_focus_spirit_geo_coast_maritime_trade = {
 
 pwc_se_grant_focus_spirit_geo_coast_beachhead_training = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
@@ -1691,7 +1691,7 @@ pwc_se_grant_focus_spirit_geo_coast_beachhead_training = {
 
 pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
@@ -1704,7 +1704,7 @@ pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = {
 
 pwc_se_grant_focus_spirit_geo_frontier_border_guard = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
@@ -1717,7 +1717,7 @@ pwc_se_grant_focus_spirit_geo_frontier_border_guard = {
 
 pwc_se_grant_focus_spirit_geo_frontier_fortification_line = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
@@ -1730,7 +1730,7 @@ pwc_se_grant_focus_spirit_geo_frontier_fortification_line = {
 
 pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
@@ -1743,7 +1743,7 @@ pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = {
 
 pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
@@ -1756,7 +1756,7 @@ pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = {
 
 pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
@@ -1769,7 +1769,7 @@ pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = {
 
 pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
@@ -1782,7 +1782,7 @@ pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = {
 
 pwc_se_grant_focus_spirit_geo_inland_food_security = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_food_security
@@ -1795,7 +1795,7 @@ pwc_se_grant_focus_spirit_geo_inland_food_security = {
 
 pwc_se_grant_focus_spirit_geo_inland_labor_reserve = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
@@ -1808,7 +1808,7 @@ pwc_se_grant_focus_spirit_geo_inland_labor_reserve = {
 
 pwc_se_grant_focus_spirit_geo_inland_militia_tradition = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
@@ -1821,7 +1821,7 @@ pwc_se_grant_focus_spirit_geo_inland_militia_tradition = {
 
 pwc_se_grant_focus_spirit_geo_inland_interior_lines = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
@@ -1834,7 +1834,7 @@ pwc_se_grant_focus_spirit_geo_inland_interior_lines = {
 
 pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
@@ -1847,7 +1847,7 @@ pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = {
 
 pwc_se_grant_focus_spirit_geo_generic_city_cooperation = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
@@ -1860,7 +1860,7 @@ pwc_se_grant_focus_spirit_geo_generic_city_cooperation = {
 
 pwc_se_grant_focus_spirit_geo_generic_public_welfare = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
@@ -1873,7 +1873,7 @@ pwc_se_grant_focus_spirit_geo_generic_public_welfare = {
 
 pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
@@ -1886,7 +1886,7 @@ pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = {
 
 pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
@@ -1899,7 +1899,7 @@ pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = {
 
 pwc_se_grant_focus_spirit_geo_generic_local_mobilization = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
@@ -1912,7 +1912,7 @@ pwc_se_grant_focus_spirit_geo_generic_local_mobilization = {
 
 pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
@@ -1925,7 +1925,7 @@ pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = {
 
 pwc_se_grant_focus_spirit_geo_generic_emergency_support = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
@@ -1938,7 +1938,7 @@ pwc_se_grant_focus_spirit_geo_generic_emergency_support = {
 
 pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = {
 	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v6 } }
+		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
 		pwc_se_migrate_focus_spirits_country = yes
 	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
@@ -1950,6 +1950,7 @@ pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = {
 }
 
 pwc_se_migrate_focus_spirits_country = {
+	clear_variable = pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states
 	if = {
 		limit = { has_idea = pwc_idea_gov_public_order }
 		set_country_flag = pwc_flag_focus_reward_gov_public_order
@@ -2390,18 +2391,18 @@ pwc_se_migrate_focus_spirits_country = {
 	pwc_se_rebuild_focus_spirit_defense = yes
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 	pwc_se_rebuild_focus_spirit_geography = yes
-	set_country_flag = pwc_flag_focus_spirits_v6
+	set_country_flag = pwc_flag_focus_spirits_v7
 }
 
 
 
 pwc_se_migrate_focus_spirits_once = {
 	if = {
-		limit = { NOT = { has_global_flag = pwc_flag_focus_spirits_world_v6 } }
+		limit = { NOT = { has_global_flag = pwc_flag_focus_spirits_world_v7 } }
 		every_possible_country = {
 			limit = { pwc_st_is_city_country = yes }
 			pwc_se_migrate_focus_spirits_country = yes
 		}
-		set_global_flag = pwc_flag_focus_spirits_world_v6
+		set_global_flag = pwc_flag_focus_spirits_world_v7
 	}
 }

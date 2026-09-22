@@ -1755,6 +1755,175 @@ PWC_ai_upgrade_pwc_equipment_mechanized_gen4 = {
         value = 100
     }
 }
+PWC_ai_upgrade_pwc_equipment_amphibious_mechanized_gen2 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_mobility_t2
+        NOT = {
+            OR = {
+                has_tech = pwc_tech_army_mobility_t3
+                has_tech = pwc_tech_army_mobility_t4
+            }
+        }
+        has_equipment = { pwc_equipment_amphibious_mechanized > 29 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_equipment_amphibious_mechanized_gen2
+        value = 100
+    }
+}
+PWC_ai_upgrade_pwc_equipment_amphibious_mechanized_gen3 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_mobility_t3
+        NOT = {
+            OR = {
+                has_tech = pwc_tech_army_mobility_t4
+            }
+        }
+        has_equipment = { pwc_equipment_amphibious_mechanized > 29 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_equipment_amphibious_mechanized_gen3
+        value = 100
+    }
+}
+PWC_ai_upgrade_pwc_equipment_amphibious_mechanized_gen4 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_mobility_t4
+        has_equipment = { pwc_equipment_amphibious_mechanized > 29 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_equipment_amphibious_mechanized_gen4
+        value = 100
+    }
+}
+PWC_ai_upgrade_pwc_platform_amphibious_tank_gen2 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_amphibious_t2
+        NOT = {
+            OR = {
+                has_tech = pwc_tech_army_amphibious_t3
+                has_tech = pwc_tech_army_amphibious_t4
+            }
+        }
+        has_equipment = { pwc_platform_amphibious_tank > 23 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+        has_design_based_on = pwc_platform_amphibious_tank
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_platform_amphibious_tank_gen2
+        value = 100
+    }
+}
+PWC_ai_upgrade_pwc_platform_amphibious_tank_gen3 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_amphibious_t3
+        NOT = {
+            OR = {
+                has_tech = pwc_tech_army_amphibious_t4
+            }
+        }
+        has_equipment = { pwc_platform_amphibious_tank > 23 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+        has_design_based_on = pwc_platform_amphibious_tank
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_platform_amphibious_tank_gen3
+        value = 100
+    }
+}
+PWC_ai_upgrade_pwc_platform_amphibious_tank_gen4 = {
+    allowed = {
+        always = yes
+    }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        has_tech = pwc_tech_army_amphibious_t4
+        has_equipment = { pwc_platform_amphibious_tank > 23 }
+        NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
+        NOT = { has_equipment = { pwc_equipment_support < 0 } }
+        has_design_based_on = pwc_platform_amphibious_tank
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = production_upgrade_desire_offset
+        id = pwc_platform_amphibious_tank_gen4
+        value = 100
+    }
+}
 PWC_ai_upgrade_pwc_equipment_anti_air_gen1 = {
     allowed = {
         always = yes

@@ -3769,6 +3769,14 @@ equipment_modules = {
 
 	pwc_module_air_cannon_t0 = {
 		category = pwc_modcat_family_air_cannon
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_cannon_t0
 		add_stats = {
 			air_attack = 3.66
@@ -3779,6 +3787,14 @@ equipment_modules = {
 
 	pwc_module_air_cannon_t1 = {
 		category = pwc_modcat_family_air_cannon
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_cannon_t1
 		parent = pwc_module_air_cannon_t0
 		add_stats = {
@@ -3790,6 +3806,14 @@ equipment_modules = {
 
 	pwc_module_air_cannon_t2 = {
 		category = pwc_modcat_family_air_cannon
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_cannon_t2
 		parent = pwc_module_air_cannon_t1
 		add_stats = {
@@ -3801,6 +3825,14 @@ equipment_modules = {
 
 	pwc_module_air_cannon_t3 = {
 		category = pwc_modcat_family_air_cannon
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_cannon_t3
 		parent = pwc_module_air_cannon_t2
 		add_stats = {
@@ -3812,6 +3844,14 @@ equipment_modules = {
 
 	pwc_module_air_cannon_t4 = {
 		category = pwc_modcat_family_air_cannon
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_cannon_t4
 		parent = pwc_module_air_cannon_t3
 		add_stats = {
@@ -3823,6 +3863,14 @@ equipment_modules = {
 
 	pwc_module_air_aam_short_t0 = {
 		category = pwc_modcat_family_air_aam_short
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_aam_short_t0
 		add_stats = {
 			air_attack = 6
@@ -3833,6 +3881,14 @@ equipment_modules = {
 
 	pwc_module_air_aam_short_t1 = {
 		category = pwc_modcat_family_air_aam_short
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_aam_short_t1
 		parent = pwc_module_air_aam_short_t0
 		add_stats = {
@@ -3844,6 +3900,14 @@ equipment_modules = {
 
 	pwc_module_air_aam_short_t2 = {
 		category = pwc_modcat_family_air_aam_short
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_aam_short_t2
 		parent = pwc_module_air_aam_short_t1
 		add_stats = {
@@ -3855,6 +3919,14 @@ equipment_modules = {
 
 	pwc_module_air_aam_short_t3 = {
 		category = pwc_modcat_family_air_aam_short
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_aam_short_t3
 		parent = pwc_module_air_aam_short_t2
 		add_stats = {
@@ -3866,6 +3938,14 @@ equipment_modules = {
 
 	pwc_module_air_aam_short_t4 = {
 		category = pwc_modcat_family_air_aam_short
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
+		}
 		gfx = pwc_module_air_aam_short_t4
 		parent = pwc_module_air_aam_short_t3
 		add_stats = {
@@ -3877,8 +3957,16 @@ equipment_modules = {
 
 	pwc_module_air_aam_medium_t0 = {
 		category = pwc_modcat_family_air_aam_medium
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 		forbid_module_categories = {
 			pwc_modcat_family_air_navigation
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
 		}
 		gfx = pwc_module_air_aam_medium_t0
 		add_stats = {
@@ -3890,8 +3978,16 @@ equipment_modules = {
 
 	pwc_module_air_aam_medium_t1 = {
 		category = pwc_modcat_family_air_aam_medium
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 		forbid_module_categories = {
 			pwc_modcat_family_air_navigation
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
 		}
 		gfx = pwc_module_air_aam_medium_t1
 		parent = pwc_module_air_aam_medium_t0
@@ -3904,8 +4000,16 @@ equipment_modules = {
 
 	pwc_module_air_aam_medium_t2 = {
 		category = pwc_modcat_family_air_aam_medium
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 		forbid_module_categories = {
 			pwc_modcat_family_air_navigation
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
 		}
 		gfx = pwc_module_air_aam_medium_t2
 		parent = pwc_module_air_aam_medium_t1
@@ -3918,8 +4022,16 @@ equipment_modules = {
 
 	pwc_module_air_aam_medium_t3 = {
 		category = pwc_modcat_family_air_aam_medium
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 		forbid_module_categories = {
 			pwc_modcat_family_air_navigation
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
 		}
 		gfx = pwc_module_air_aam_medium_t3
 		parent = pwc_module_air_aam_medium_t2
@@ -3932,8 +4044,16 @@ equipment_modules = {
 
 	pwc_module_air_aam_medium_t4 = {
 		category = pwc_modcat_family_air_aam_medium
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 		forbid_module_categories = {
 			pwc_modcat_family_air_navigation
+		}
+		add_equipment_type = {
+			fighter
+			heavy_fighter
 		}
 		gfx = pwc_module_air_aam_medium_t4
 		parent = pwc_module_air_aam_medium_t3
@@ -3946,6 +4066,14 @@ equipment_modules = {
 
 	pwc_module_air_ground_t0 = {
 		category = pwc_modcat_family_air_ground
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_ground_t0
 		add_stats = {
 			air_ground_attack = 5.4
@@ -3957,6 +4085,14 @@ equipment_modules = {
 
 	pwc_module_air_ground_t1 = {
 		category = pwc_modcat_family_air_ground
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_ground_t1
 		parent = pwc_module_air_ground_t0
 		add_stats = {
@@ -3969,6 +4105,14 @@ equipment_modules = {
 
 	pwc_module_air_ground_t2 = {
 		category = pwc_modcat_family_air_ground
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_ground_t2
 		parent = pwc_module_air_ground_t1
 		add_stats = {
@@ -3981,6 +4125,14 @@ equipment_modules = {
 
 	pwc_module_air_ground_t3 = {
 		category = pwc_modcat_family_air_ground
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_ground_t3
 		parent = pwc_module_air_ground_t2
 		add_stats = {
@@ -3993,6 +4145,14 @@ equipment_modules = {
 
 	pwc_module_air_ground_t4 = {
 		category = pwc_modcat_family_air_ground
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_ground_t4
 		parent = pwc_module_air_ground_t3
 		add_stats = {
@@ -4068,6 +4228,10 @@ equipment_modules = {
 			naval_bomber
 			port_strike
 		}
+		add_equipment_type = {
+			naval_bomber
+			maritime_patrol_plane
+		}
 		gfx = pwc_module_air_maritime_t0
 		add_stats = {
 			naval_strike_attack = 4.2
@@ -4083,6 +4247,10 @@ equipment_modules = {
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		add_equipment_type = {
+			naval_bomber
+			maritime_patrol_plane
 		}
 		gfx = pwc_module_air_maritime_t1
 		parent = pwc_module_air_maritime_t0
@@ -4101,6 +4269,10 @@ equipment_modules = {
 			naval_bomber
 			port_strike
 		}
+		add_equipment_type = {
+			naval_bomber
+			maritime_patrol_plane
+		}
 		gfx = pwc_module_air_maritime_t2
 		parent = pwc_module_air_maritime_t1
 		add_stats = {
@@ -4118,6 +4290,10 @@ equipment_modules = {
 			naval_bomber
 			port_strike
 		}
+		add_equipment_type = {
+			naval_bomber
+			maritime_patrol_plane
+		}
 		gfx = pwc_module_air_maritime_t3
 		parent = pwc_module_air_maritime_t2
 		add_stats = {
@@ -4134,6 +4310,10 @@ equipment_modules = {
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		add_equipment_type = {
+			naval_bomber
+			maritime_patrol_plane
 		}
 		gfx = pwc_module_air_maritime_t4
 		parent = pwc_module_air_maritime_t3
@@ -6276,6 +6456,14 @@ equipment_modules = {
 
 	pwc_module_air_rockets_t0 = {
 		category = pwc_modcat_family_air_rockets
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_rockets_t0
 		add_stats = {
 			air_ground_attack = 3.72
@@ -6287,6 +6475,14 @@ equipment_modules = {
 
 	pwc_module_air_rockets_t1 = {
 		category = pwc_modcat_family_air_rockets
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_rockets_t1
 		parent = pwc_module_air_rockets_t0
 		add_stats = {
@@ -6299,6 +6495,14 @@ equipment_modules = {
 
 	pwc_module_air_rockets_t2 = {
 		category = pwc_modcat_family_air_rockets
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_rockets_t2
 		parent = pwc_module_air_rockets_t1
 		add_stats = {
@@ -6311,6 +6515,14 @@ equipment_modules = {
 
 	pwc_module_air_rockets_t3 = {
 		category = pwc_modcat_family_air_rockets
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_rockets_t3
 		parent = pwc_module_air_rockets_t2
 		add_stats = {
@@ -6323,6 +6535,14 @@ equipment_modules = {
 
 	pwc_module_air_rockets_t4 = {
 		category = pwc_modcat_family_air_rockets
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_rockets_t4
 		parent = pwc_module_air_rockets_t3
 		add_stats = {
@@ -6335,6 +6555,14 @@ equipment_modules = {
 
 	pwc_module_air_anti_armor_t0 = {
 		category = pwc_modcat_family_air_anti_armor
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_anti_armor_t0
 		add_stats = {
 			air_ground_attack = 4.8
@@ -6346,6 +6574,14 @@ equipment_modules = {
 
 	pwc_module_air_anti_armor_t1 = {
 		category = pwc_modcat_family_air_anti_armor
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_anti_armor_t1
 		parent = pwc_module_air_anti_armor_t0
 		add_stats = {
@@ -6358,6 +6594,14 @@ equipment_modules = {
 
 	pwc_module_air_anti_armor_t2 = {
 		category = pwc_modcat_family_air_anti_armor
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_anti_armor_t2
 		parent = pwc_module_air_anti_armor_t1
 		add_stats = {
@@ -6370,6 +6614,14 @@ equipment_modules = {
 
 	pwc_module_air_anti_armor_t3 = {
 		category = pwc_modcat_family_air_anti_armor
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_anti_armor_t3
 		parent = pwc_module_air_anti_armor_t2
 		add_stats = {
@@ -6382,6 +6634,14 @@ equipment_modules = {
 
 	pwc_module_air_anti_armor_t4 = {
 		category = pwc_modcat_family_air_anti_armor
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_equipment_type = {
+			cas
+			tactical_bomber
+		}
 		gfx = pwc_module_air_anti_armor_t4
 		parent = pwc_module_air_anti_armor_t3
 		add_stats = {

@@ -2,33 +2,23 @@ on_actions = {
     on_startup = {
         effect = {
             every_country = {
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_north_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_north_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_northeast_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_northeast_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_east_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_east_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_central_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_central_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_south_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_south_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_southwest_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_southwest_china }
-                }
-                if = {
-                    limit = { has_dynamic_modifier = pwc_frontend_region_northwest_china }
-                    remove_dynamic_modifier = { modifier = pwc_frontend_region_northwest_china }
+                remove_ideas = {
+                    pwc_frontend_region_spirit_0_idea
+                    pwc_frontend_region_spirit_1_idea
+                    pwc_frontend_region_spirit_2_idea
+                    pwc_frontend_region_spirit_3_idea
+                    pwc_frontend_region_spirit_4_idea
+                    pwc_frontend_region_spirit_5_idea
+                    pwc_frontend_region_spirit_6_idea
+                    pwc_frontend_region_spirit_7_idea
+                    pwc_frontend_region_spirit_8_idea
+                    pwc_frontend_region_spirit_9_idea
+                    pwc_frontend_region_spirit_10_idea
+                    pwc_frontend_region_spirit_11_idea
+                    pwc_frontend_region_spirit_12_idea
+                    pwc_frontend_region_spirit_13_idea
+                    pwc_frontend_region_spirit_14_idea
+                    pwc_frontend_region_spirit_15_idea
                 }
             }
         }

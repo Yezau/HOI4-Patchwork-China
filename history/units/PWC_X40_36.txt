@@ -253,22 +253,21 @@ instant_effect = {
 		name = "0阶·储备舰载战斗机"
 		type = pwc_platform_cv_fighter_gen0
 		modules = {
-			fixed_pwc_cv_fighter_engine_0 = pwc_module_air_small_sprint_t0
-			fixed_pwc_cv_fighter_avionics_1 = pwc_module_air_radar_t0
-			fixed_pwc_cv_fighter_weapon_2 = pwc_module_air_aam_medium_t0
-			fixed_pwc_cv_fighter_weapon_3 = pwc_module_air_cannon_t0
-			pwc_cv_fighter_special_0 = pwc_module_air_irst_t0
+			fixed_pwc_carrier_engine_0 = pwc_module_air_small_sprint_t0
+			fixed_pwc_carrier_avionics_1 = pwc_module_air_radar_t0
+			fixed_pwc_carrier_weapon_2 = pwc_module_air_aam_medium_t0
+			fixed_pwc_carrier_weapon_3 = pwc_module_air_cannon_t0
+			pwc_carrier_special_0 = pwc_module_air_irst_t0
 		}
 	}
 	create_equipment_variant = {
 		name = "0阶·储备舰载攻击机"
 		type = pwc_platform_cv_cas_gen0
 		modules = {
-			fixed_pwc_cv_cas_engine_0 = pwc_module_air_small_endurance_t0
-			fixed_pwc_cv_cas_avionics_1 = pwc_module_air_targeting_t0
-			fixed_pwc_cv_cas_weapon_2 = pwc_module_air_ground_t0
-			fixed_pwc_cv_cas_weapon_3 = pwc_module_air_maritime_t0
-			pwc_cv_cas_special_0 = pwc_module_air_self_sealing_t0
+			fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t0
+			fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t0
+			fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t0
+			pwc_carrier_special_0 = pwc_module_air_self_sealing_t0
 		}
 	}
 	add_equipment_to_stockpile = {

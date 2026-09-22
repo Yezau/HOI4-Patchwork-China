@@ -414,7 +414,7 @@ pwc_se_rebuild_seat_science_education = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_1 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -435,7 +435,7 @@ pwc_se_appoint_seat_science_education_1 = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_2 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -456,7 +456,7 @@ pwc_se_appoint_seat_science_education_2 = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_3 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -477,7 +477,7 @@ pwc_se_appoint_seat_science_education_3 = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_4 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -498,7 +498,7 @@ pwc_se_appoint_seat_science_education_4 = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_5 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -519,7 +519,7 @@ pwc_se_appoint_seat_science_education_5 = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_dismiss_seat_science_education = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -539,7 +539,7 @@ pwc_se_dismiss_seat_science_education = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_rebuild_seat_army_command = {
     if = {
@@ -1159,6 +1159,7 @@ pwc_se_rebuild_seat_mobilization_command = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_1 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1182,6 +1183,7 @@ pwc_se_appoint_seat_mobilization_command_1 = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_2 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1205,6 +1207,7 @@ pwc_se_appoint_seat_mobilization_command_2 = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_3 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1228,6 +1231,7 @@ pwc_se_appoint_seat_mobilization_command_3 = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_4 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1251,6 +1255,7 @@ pwc_se_appoint_seat_mobilization_command_4 = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_5 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1274,6 +1279,7 @@ pwc_se_appoint_seat_mobilization_command_5 = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_dismiss_seat_mobilization_command = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1296,6 +1302,7 @@ pwc_se_dismiss_seat_mobilization_command = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_reconcile_cabinet = {
     if = {
@@ -1438,7 +1445,7 @@ pwc_se_reconcile_cabinet = {
     clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
     clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
     clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth_on_our_occupied_states
+    clear_variable = pwc_seat_science_education_v_compliance_growth
     if = {
         limit = { NOT = { OR = { has_idea = pwc_cand_arm_iron_fist_commander has_idea = pwc_cand_arm_bulwark_commander has_idea = pwc_cand_arm_urban_assault_leader has_idea = pwc_cand_arm_fortress_warden has_idea = pwc_cand_arm_iron_organizer } } has_country_flag = pwc_flag_seat_army_command_active }
         if = {
@@ -1627,4 +1634,5 @@ pwc_se_reconcile_cabinet = {
     clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
     clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
     clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
+    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
