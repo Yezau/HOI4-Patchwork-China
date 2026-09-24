@@ -28,7 +28,6 @@ pwc_st_legal_war_request = {
         pwc_st_is_city_country = yes
         pwc_st_city_alive = yes
         pwc_st_target_reachable = yes
-        pwc_st_province_priority_allows_target = yes
         OR = {
             is_ai = no
             pwc_st_target_adjacent = yes
@@ -44,6 +43,12 @@ pwc_st_legal_war_request = {
     custom_trigger_tooltip = {
         tooltip = PWC_WAR_PROTECTION_READY_TT
         pwc_st_protection_active = no
+    }
+    
+    
+    custom_trigger_tooltip = {
+        tooltip = PWC_WAR_PROVINCE_PRIORITY_TT
+        pwc_st_province_priority_allows_target = yes
     }
     NOT = { has_war_with = FROM }
 }

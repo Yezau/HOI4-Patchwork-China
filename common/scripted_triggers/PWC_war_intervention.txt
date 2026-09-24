@@ -30,6 +30,8 @@ pwc_st_support_recipient = {
     NOT = { has_country_flag = pwc_support_requested }
     NOT = { has_country_flag = pwc_support_neutral }
     var:ROOT.pwc_support_enemy = {
+        is_neighbor_of = PREV
+        NOT = { has_non_aggression_pact_with = PREV }
         hidden_trigger = { pwc_st_province_priority_target_allowed = yes }
     }
 }
@@ -61,6 +63,7 @@ pwc_st_support_accept = {
         exists = yes
         pwc_st_city_alive = yes
         has_capitulated = no
+        is_neighbor_of = ROOT
         NOT = { has_non_aggression_pact_with = ROOT }
         hidden_trigger = {
             pwc_st_province_priority_target_allowed = yes

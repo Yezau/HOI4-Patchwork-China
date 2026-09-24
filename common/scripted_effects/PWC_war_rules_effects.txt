@@ -338,10 +338,6 @@ pwc_se_on_warning_expiry = {
 	if = {
 		limit = { has_country_flag = pwc_flag_warning_to_@FROM }
 		pwc_se_clear_war_warning = yes
-		if = {
-			limit = { FROM = { exists = yes } }
-			remove_targeted_decision = { target = FROM decision = pwc_dec_war_warning_countdown }
-		}
 		pwc_se_declare_war_on_warning_expiry = yes
 		if = {
 			limit = {
@@ -472,7 +468,6 @@ pwc_se_mark_city_eliminated = {
 			pwc_st_is_city_country = yes
 			NOT = { has_country_flag = pwc_flag_city_eliminated }
 		}
-	pwc_se_init_war_reports = yes
 	clr_country_flag = pwc_flag_city_alive
 	set_country_flag = pwc_flag_city_eliminated
 	pwc_se_clear_eliminated_war_warnings = yes
@@ -503,14 +498,11 @@ pwc_se_restore_victory_presentation = {
         }
         if = {
             limit = { check_variable = { global.pwc_victory_countries^num = 1 } }
-            if = {
-                limit = { NOT = { has_global_flag = pwc_flag_champion_crowned } }
-                for_each_scope_loop = {
-                    array = global.pwc_victory_countries
-                    add_stability = 0.05
-                }
-                set_global_flag = pwc_flag_champion_crowned
+            for_each_scope_loop = {
+                array = global.pwc_victory_countries
+                add_stability = 0.05
             }
+            set_global_flag = pwc_flag_champion_crowned
             set_global_flag = pwc_flag_victory_event_sent
             for_each_scope_loop = {
                 array = global.pwc_victory_countries
@@ -4076,7 +4068,7 @@ pwc_se_arm_war_phase = {
 }
 pwc_se_arm_war_phase_offset = {
 	if = {
-		limit = { NOT = { OR = { has_game_rule = { rule = pwc_ai_war_pacing option = OFF } has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } } } }
+		limit = { has_game_rule = { rule = pwc_ai_war_pacing option = STAGGERED } }
 		if = {
 			limit = { OR = {
 				tag = U69 tag = U77 tag = X00 tag = X37 tag = U75 tag = W40 tag = X21 tag = U88 tag = W18 tag = V57
@@ -4332,7 +4324,7 @@ pwc_se_apply_war_cooldown = {
 	if = {
 		limit = { is_ai = yes }
 		if = {
-			limit = { NOT = { OR = { has_game_rule = { rule = pwc_ai_war_pacing option = OFF } has_game_rule = { rule = pwc_ai_war_pacing option = SLOW } } } }
+			limit = { has_game_rule = { rule = pwc_ai_war_pacing option = STAGGERED } }
 			set_country_flag = { flag = pwc_flag_war_cooldown days = 30 value = 1 }
 		}
 		else_if = {

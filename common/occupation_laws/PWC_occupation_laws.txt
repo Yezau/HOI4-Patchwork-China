@@ -1,11 +1,19 @@
 pwc_city_military_administration = {
 	icon = 1
-available = {
-    NOT = { OR = {
-        has_game_rule = { rule = pwc_integration_speed option = FAST }
-        has_game_rule = { rule = pwc_integration_speed option = STRICT }
-    } }
-}
+    visible = {
+        pwc_st_is_city_country = yes
+        NOT = { OR = {
+            has_game_rule = { rule = pwc_integration_speed option = FAST }
+            has_game_rule = { rule = pwc_integration_speed option = STRICT }
+        } }
+    }
+    available = {
+        pwc_st_is_city_country = yes
+        NOT = { OR = {
+            has_game_rule = { rule = pwc_integration_speed option = FAST }
+            has_game_rule = { rule = pwc_integration_speed option = STRICT }
+        } }
+    }
 	state_modifier = {
 		compliance_gain = 0.3
 		required_garrison_factor = -0.9
@@ -14,16 +22,20 @@ available = {
 		local_factories = 0.1
 		local_resources = 0.1
 	}
-	visible = {
-		always = yes
-	}
 	ai_will_do = {
 		base = 1000
 	}
 }
 pwc_city_administration_fast = {
     icon = 1
-    available = { pwc_st_is_city_country = yes has_game_rule = { rule = pwc_integration_speed option = FAST } }
+    visible = {
+        pwc_st_is_city_country = yes
+        has_game_rule = { rule = pwc_integration_speed option = FAST }
+    }
+    available = {
+        pwc_st_is_city_country = yes
+        has_game_rule = { rule = pwc_integration_speed option = FAST }
+    }
     ai_will_do = { base = 1000 }
     state_modifier = {
         compliance_gain = 0.6
@@ -36,7 +48,14 @@ pwc_city_administration_fast = {
 }
 pwc_city_administration_strict = {
     icon = 1
-    available = { pwc_st_is_city_country = yes has_game_rule = { rule = pwc_integration_speed option = STRICT } }
+    visible = {
+        pwc_st_is_city_country = yes
+        has_game_rule = { rule = pwc_integration_speed option = STRICT }
+    }
+    available = {
+        pwc_st_is_city_country = yes
+        has_game_rule = { rule = pwc_integration_speed option = STRICT }
+    }
     ai_will_do = { base = 1000 }
     state_modifier = {
         compliance_gain = 0.15

@@ -26,12 +26,7 @@ PWC_diplomacy_category = {
             pwc_st_support_actor = yes
             pwc_st_support_selection = yes
         }
-        target_trigger = {
-            FROM = { pwc_st_support_recipient = yes }
-            var:pwc_support_enemy = {
-                NOT = { has_non_aggression_pact_with = FROM }
-            }
-        }
+        target_trigger = { FROM = { pwc_st_support_recipient = yes } }
         visible = {
             pwc_st_support_actor = yes
             pwc_st_support_selection = yes
@@ -41,20 +36,26 @@ PWC_diplomacy_category = {
             pwc_st_support_actor = yes
             pwc_st_support_selection = yes
             FROM = { pwc_st_support_recipient = yes }
-            var:pwc_support_enemy = {
-                NOT = { has_non_aggression_pact_with = FROM }
-            }
         }
         complete_effect = {
-            save_event_target_as = pwc_support_host
-            var:pwc_support_enemy = {
-                save_event_target_as = pwc_support_opponent
+            if = {
+                limit = {
+                    pwc_st_support_selection = yes
+                    FROM = { pwc_st_support_recipient = yes }
+                }
+                save_event_target_as = pwc_support_host
+                var:pwc_support_enemy = {
+                    save_event_target_as = pwc_support_opponent
+                }
+                set_country_flag = { flag = pwc_support_pending days = 10 }
+                set_variable = { pwc_support_invitee = FROM }
+                FROM = {
+                    set_country_flag = { flag = pwc_support_requested days = 10 }
+                    country_event = { id = pwc_support.1 }
+                }
             }
-            set_country_flag = { flag = pwc_support_pending days = 10 }
-            set_variable = { pwc_support_invitee = FROM }
-            FROM = {
-                set_country_flag = { flag = pwc_support_requested days = 10 }
-                country_event = { id = pwc_support.1 }
+            else = {
+                add_political_power = 25
             }
         }
         ai_will_do = { factor = 0.01 }

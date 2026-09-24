@@ -4,8 +4,7 @@ PWC_ai_template_armored_combined = {
 		base = 1
 		modifier = {
 			factor = 3
-			num_of_military_factories > 11
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
 		}
 	}
 	pwc_template_armored_36w_project_assault_engineer_armored_recovery = {
@@ -13,7 +12,7 @@ PWC_ai_template_armored_combined = {
 			base = 6
 		}
 		enable = {
-			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -57,7 +56,7 @@ PWC_ai_template_armored_combined = {
 			base = 4
 		}
 		enable = {
-			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -100,7 +99,7 @@ PWC_ai_template_armored_combined = {
 			base = 4
 		}
 		enable = {
-			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -142,7 +141,7 @@ PWC_ai_template_armored_combined = {
 			base = 2
 		}
 		enable = {
-			OR = { ai_wants_divisions > 29 num_divisions > 29 }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -264,9 +263,9 @@ PWC_ai_template_infantry_city_defense = {
 			is_special_project_completed = sp:pwc_project_precision_production
 		}
 		can_upgrade_in_field = {
-			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = yes
+			pwc_st_ai_recruitment_infantry_counter_armor_12w_project_assault_engineer_support_heavy_mortar_field_ready = yes
 		}
-		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar
+		replace_with = pwc_template_infantry_counter_armor_12w_project_assault_engineer_support_heavy_mortar
 		replace_at_match = 0.9
 		target_min_match = 0.1
 		target_template = {
@@ -293,9 +292,9 @@ PWC_ai_template_infantry_city_defense = {
 			is_special_project_completed = sp:pwc_project_flexible_manufacturing
 		}
 		can_upgrade_in_field = {
-			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = yes
+			pwc_st_ai_recruitment_infantry_counter_armor_12w_project_assault_engineer_field_ready = yes
 		}
-		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer
+		replace_with = pwc_template_infantry_counter_armor_12w_project_assault_engineer
 		replace_at_match = 0.9
 		target_min_match = 0.1
 		target_template = {
@@ -321,9 +320,9 @@ PWC_ai_template_infantry_city_defense = {
 			is_special_project_completed = sp:pwc_project_precision_production
 		}
 		can_upgrade_in_field = {
-			pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = yes
+			pwc_st_ai_recruitment_infantry_counter_armor_12w_project_support_heavy_mortar_field_ready = yes
 		}
-		replace_with = pwc_template_infantry_reinforced_18w_project_support_heavy_mortar
+		replace_with = pwc_template_infantry_counter_armor_12w_project_support_heavy_mortar
 		replace_at_match = 0.9
 		target_min_match = 0.1
 		target_template = {
@@ -348,9 +347,9 @@ PWC_ai_template_infantry_city_defense = {
 			has_tech = pwc_tech0_engineers
 		}
 		can_upgrade_in_field = {
-			pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = yes
+			pwc_st_ai_recruitment_infantry_counter_armor_12w_default_field_ready = yes
 		}
-		replace_with = pwc_template_infantry_reinforced_18w_default
+		replace_with = pwc_template_infantry_counter_armor_12w_default
 		replace_at_match = 0.9
 		target_min_match = 0.1
 		target_template = {
@@ -365,12 +364,143 @@ PWC_ai_template_infantry_city_defense = {
 			}
 		}
 	}
+	pwc_template_infantry_counter_armor_12w_project_assault_engineer_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 6
+		}
+		enable = {
+			OR = { ai_wants_divisions > 4 num_divisions > 4 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t3
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			is_special_project_completed = sp:pwc_project_precision_production
+			num_of_military_factories > 3
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_support_anti_tank = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_counter_armor_12w_project_assault_engineer = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			OR = { ai_wants_divisions > 4 num_divisions > 4 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_infantry_t2
+			is_special_project_completed = sp:pwc_project_flexible_manufacturing
+			num_of_military_factories > 3
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_assault_engineer
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_assault_engineer = 1
+				pwc_unit_support_anti_tank = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_counter_armor_12w_project_support_heavy_mortar = {
+		upgrade_prio = {
+			base = 4
+		}
+		enable = {
+			OR = { ai_wants_divisions > 4 num_divisions > 4 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			has_tech = pwc_tech_army_firepower_t3
+			is_special_project_completed = sp:pwc_project_precision_production
+			num_of_military_factories > 3
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_project_support_heavy_mortar
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_support_anti_tank = 1
+				pwc_unit_support_heavy_mortar = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
+	pwc_template_infantry_counter_armor_12w_default = {
+		upgrade_prio = {
+			base = 2
+		}
+		enable = {
+			OR = { ai_wants_divisions > 4 num_divisions > 4 }
+			has_tech = pwc_tech0_basic_industry
+			has_tech = pwc_tech0_basic_infantry
+			has_tech = pwc_tech0_engineers
+			num_of_military_factories > 3
+		}
+		can_upgrade_in_field = {
+			pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = yes
+		}
+		replace_with = pwc_template_infantry_reinforced_18w_default
+		replace_at_match = 0.9
+		target_min_match = 0.1
+		target_template = {
+			support = {
+				pwc_unit_engineer = 1
+				pwc_unit_support_anti_tank = 1
+			}
+			regimental_support = {
+				pwc_unit_regimental_fire_support = 2
+			}
+			regiments = {
+				pwc_unit_infantry = 6
+			}
+		}
+	}
 	pwc_template_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar = {
 		upgrade_prio = {
 			base = 12
 		}
 		enable = {
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
 			has_tech = pwc_tech0_engineers
@@ -379,7 +509,6 @@ PWC_ai_template_infantry_city_defense = {
 			has_tech = pwc_tech_army_infantry_t2
 			is_special_project_completed = sp:pwc_project_flexible_manufacturing
 			is_special_project_completed = sp:pwc_project_precision_production
-			num_of_military_factories > 11
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_support_heavy_mortar_field_ready = yes
@@ -388,6 +517,7 @@ PWC_ai_template_infantry_city_defense = {
 			support = {
 				pwc_unit_assault_engineer = 1
 				pwc_unit_recon = 1
+				pwc_unit_support_anti_tank = 1
 				pwc_unit_support_heavy_mortar = 1
 			}
 			regimental_support = {
@@ -404,14 +534,14 @@ PWC_ai_template_infantry_city_defense = {
 			base = 8
 		}
 		enable = {
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
 			has_tech = pwc_tech0_engineers
 			has_tech = pwc_tech_army_firepower_t1
 			has_tech = pwc_tech_army_infantry_t2
 			is_special_project_completed = sp:pwc_project_flexible_manufacturing
-			num_of_military_factories > 11
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_infantry_reinforced_18w_project_assault_engineer_field_ready = yes
@@ -420,6 +550,7 @@ PWC_ai_template_infantry_city_defense = {
 			support = {
 				pwc_unit_assault_engineer = 1
 				pwc_unit_recon = 1
+				pwc_unit_support_anti_tank = 1
 			}
 			regimental_support = {
 				pwc_unit_regimental_fire_support = 2
@@ -435,14 +566,14 @@ PWC_ai_template_infantry_city_defense = {
 			base = 8
 		}
 		enable = {
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
 			has_tech = pwc_tech0_engineers
 			has_tech = pwc_tech_army_firepower_t1
 			has_tech = pwc_tech_army_firepower_t3
 			is_special_project_completed = sp:pwc_project_precision_production
-			num_of_military_factories > 11
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_infantry_reinforced_18w_project_support_heavy_mortar_field_ready = yes
@@ -451,6 +582,7 @@ PWC_ai_template_infantry_city_defense = {
 			support = {
 				pwc_unit_engineer = 1
 				pwc_unit_recon = 1
+				pwc_unit_support_anti_tank = 1
 				pwc_unit_support_heavy_mortar = 1
 			}
 			regimental_support = {
@@ -467,12 +599,12 @@ PWC_ai_template_infantry_city_defense = {
 			base = 4
 		}
 		enable = {
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
 			has_tech = pwc_tech0_engineers
 			has_tech = pwc_tech_army_firepower_t1
-			num_of_military_factories > 11
 		}
 		can_upgrade_in_field = {
 			pwc_st_ai_recruitment_infantry_reinforced_18w_default_field_ready = yes
@@ -481,6 +613,7 @@ PWC_ai_template_infantry_city_defense = {
 			support = {
 				pwc_unit_engineer = 1
 				pwc_unit_recon = 1
+				pwc_unit_support_anti_tank = 1
 			}
 			regimental_support = {
 				pwc_unit_regimental_fire_support = 2
@@ -498,8 +631,7 @@ PWC_ai_template_mobility_mountain = {
 		base = 1
 		modifier = {
 			factor = 3
-			num_of_military_factories > 11
-			OR = { ai_wants_divisions > 23 num_divisions > 23 }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
 		}
 	}
 	pwc_template_mobile_18w_project_assault_engineer_armored_recovery = {

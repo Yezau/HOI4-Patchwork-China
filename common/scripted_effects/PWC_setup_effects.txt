@@ -1028,3 +1028,127 @@ pwc_se_apply_integration_speed = {
         else = { set_occupation_law = pwc_city_military_administration }
     }
 }
+pwc_se_reconcile_integration_speed = {
+    if = {
+        limit = { pwc_st_is_city_country = yes exists = yes }
+        THIS = {
+            if = {
+                limit = {
+                    pwc_st_is_city_country = yes
+                    NOT = { OR = {
+                        has_game_rule = { rule = pwc_integration_speed option = FAST }
+                        has_game_rule = { rule = pwc_integration_speed option = STRICT }
+                    } }
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            occupation_law = pwc_city_administration_fast
+                            occupation_law = pwc_city_administration_strict
+                        }
+                    }
+                    set_occupation_law = pwc_city_military_administration
+                }
+                every_occupied_country = {
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_administration_fast
+                                occupation_law = pwc_city_administration_strict
+                            }
+                        }
+                        set_occupation_law = pwc_city_military_administration
+                    }
+                }
+                every_controlled_state = {
+                    limit = { NOT = { is_core_of = PREV } }
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_administration_fast
+                                occupation_law = pwc_city_administration_strict
+                            }
+                        }
+                        set_occupation_law = pwc_city_military_administration
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    pwc_st_is_city_country = yes
+                    has_game_rule = { rule = pwc_integration_speed option = FAST }
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            occupation_law = pwc_city_military_administration
+                            occupation_law = pwc_city_administration_strict
+                        }
+                    }
+                    set_occupation_law = pwc_city_administration_fast
+                }
+                every_occupied_country = {
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_military_administration
+                                occupation_law = pwc_city_administration_strict
+                            }
+                        }
+                        set_occupation_law = pwc_city_administration_fast
+                    }
+                }
+                every_controlled_state = {
+                    limit = { NOT = { is_core_of = PREV } }
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_military_administration
+                                occupation_law = pwc_city_administration_strict
+                            }
+                        }
+                        set_occupation_law = pwc_city_administration_fast
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    pwc_st_is_city_country = yes
+                    has_game_rule = { rule = pwc_integration_speed option = STRICT }
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            occupation_law = pwc_city_military_administration
+                            occupation_law = pwc_city_administration_fast
+                        }
+                    }
+                    set_occupation_law = pwc_city_administration_strict
+                }
+                every_occupied_country = {
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_military_administration
+                                occupation_law = pwc_city_administration_fast
+                            }
+                        }
+                        set_occupation_law = pwc_city_administration_strict
+                    }
+                }
+                every_controlled_state = {
+                    limit = { NOT = { is_core_of = PREV } }
+                    if = {
+                        limit = {
+                            OR = {
+                                occupation_law = pwc_city_military_administration
+                                occupation_law = pwc_city_administration_fast
+                            }
+                        }
+                        set_occupation_law = pwc_city_administration_strict
+                    }
+                }
+            }
+        }
+    }
+}

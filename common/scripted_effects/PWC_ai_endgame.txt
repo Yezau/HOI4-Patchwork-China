@@ -1,3 +1,154 @@
+pwc_se_coalition_parameters = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        set_variable = { pwc_coalition_dominance = 1.5 }
+        set_variable = { pwc_coalition_max_members = 6 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        set_variable = { pwc_coalition_dominance = 1.25 }
+        set_variable = { pwc_coalition_max_members = 8 }
+    }
+    else = {
+        set_variable = { pwc_coalition_dominance = 1.75 }
+        set_variable = { pwc_coalition_max_members = 6 }
+    }
+}
+pwc_se_coalition_reserve = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_reserved days = 60 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 45 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_reserved days = 45 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 30 }
+    }
+    else = {
+        set_country_flag = { flag = pwc_flag_coalition_reserved days = 75 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 60 }
+    }
+}
+pwc_se_coalition_warn = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_warning days = 45 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_warning days = 45 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_warning days = 30 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_warning days = 30 }
+    }
+    else = {
+        set_country_flag = { flag = pwc_flag_coalition_warning days = 60 value = 1 }
+        add_dynamic_modifier = { modifier = pwc_dm_coalition_warning days = 60 }
+    }
+}
+pwc_se_coalition_cooldown = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 365 value = 1 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 240 value = 1 }
+    }
+    else = {
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 365 value = 1 }
+    }
+}
+pwc_se_coalition_aborted = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 90 value = 1 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        }
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 60 value = 1 }
+    }
+    else = {
+        set_country_flag = { flag = pwc_flag_coalition_cooldown days = 90 value = 1 }
+    }
+}
+pwc_se_coalition_track_expansion = {
+    if = {
+        limit = { is_ai = no pwc_st_city_alive = yes pwc_st_is_city_country = yes }
+        if = {
+            limit = { NOT = { has_variable = pwc_coalition_states_5 } }
+            set_variable = { pwc_coalition_states_0 = num_owned_states }
+            set_variable = { pwc_coalition_states_1 = num_owned_states }
+            set_variable = { pwc_coalition_states_2 = num_owned_states }
+            set_variable = { pwc_coalition_states_3 = num_owned_states }
+            set_variable = { pwc_coalition_states_4 = num_owned_states }
+            set_variable = { pwc_coalition_states_5 = num_owned_states }
+        }
+        set_variable = { pwc_coalition_expansion = num_owned_states }
+        subtract_from_variable = { pwc_coalition_expansion = pwc_coalition_states_5 }
+        set_variable = { pwc_coalition_states_5 = pwc_coalition_states_4 }
+        set_variable = { pwc_coalition_states_4 = pwc_coalition_states_3 }
+        set_variable = { pwc_coalition_states_3 = pwc_coalition_states_2 }
+        set_variable = { pwc_coalition_states_2 = pwc_coalition_states_1 }
+        set_variable = { pwc_coalition_states_1 = pwc_coalition_states_0 }
+        set_variable = { pwc_coalition_states_0 = num_owned_states }
+    }
+    else = {
+        clear_variable = pwc_coalition_states_0
+        clear_variable = pwc_coalition_states_1
+        clear_variable = pwc_coalition_states_2
+        clear_variable = pwc_coalition_states_3
+        clear_variable = pwc_coalition_states_4
+        clear_variable = pwc_coalition_states_5
+        clear_variable = pwc_coalition_expansion
+    }
+}
+pwc_se_coalition_selection_gaps = {
+    set_variable = { pwc_coalition_best_score = -1 }
+    set_variable = { pwc_coalition_best_manpower = -1 }
+    set_variable = { pwc_coalition_gap_manpower = pwc_coalition_required_manpower }
+    subtract_from_variable = { pwc_coalition_gap_manpower = pwc_coalition_manpower }
+    clamp_variable = { var = pwc_coalition_gap_manpower min = 0 }
+    set_variable = { pwc_coalition_scale_manpower = pwc_coalition_required_manpower }
+    clamp_variable = { var = pwc_coalition_scale_manpower min = 1 }
+    set_variable = { pwc_coalition_gap_industry = pwc_coalition_required_industry }
+    subtract_from_variable = { pwc_coalition_gap_industry = pwc_coalition_industry }
+    clamp_variable = { var = pwc_coalition_gap_industry min = 0 }
+    set_variable = { pwc_coalition_scale_industry = pwc_coalition_required_industry }
+    clamp_variable = { var = pwc_coalition_scale_industry min = 1 }
+}
+pwc_se_coalition_score_candidate = {
+    set_variable = { pwc_coalition_candidate_score = 0 }
+    set_variable = { pwc_coalition_contribution = deployed_army_manpower_k }
+    clamp_variable = { var = pwc_coalition_contribution min = 0 max = PREV.pwc_coalition_gap_manpower }
+    divide_variable = { pwc_coalition_contribution = PREV.pwc_coalition_scale_manpower }
+    add_to_variable = { pwc_coalition_candidate_score = pwc_coalition_contribution }
+    set_variable = { pwc_coalition_contribution = num_of_factories }
+    clamp_variable = { var = pwc_coalition_contribution min = 0 max = PREV.pwc_coalition_gap_industry }
+    divide_variable = { pwc_coalition_contribution = PREV.pwc_coalition_scale_industry }
+    add_to_variable = { pwc_coalition_candidate_score = pwc_coalition_contribution }
+    clear_variable = pwc_coalition_contribution
+}
 pwc_se_coalition_reset_totals = {
     set_variable = { pwc_coalition_count = 0 }
     set_variable = { pwc_coalition_manpower = 0 }
@@ -18,11 +169,8 @@ pwc_se_coalition_count_member = {
 }
 
 pwc_se_coalition_prepare_member = {
-    set_country_flag = {
-        flag = pwc_flag_coalition_reserved days = 75 value = 1
-    }
+    pwc_se_coalition_reserve = yes
     set_variable = { pwc_coalition_target = event_target:pwc_coalition_player }
-    add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 60 }
 }
 
 
@@ -68,14 +216,11 @@ pwc_se_coalition_cleanup = {
 }
 
 pwc_se_coalition_monthly = {
+    pwc_se_coalition_track_expansion = yes
     if = {
         limit = {
             pwc_st_coalition_player = yes
-            NOT = { date < 2028.1.1 }
-            num_of_factories > 39
-            check_variable = {
-                var = num_owned_states value = 5 compare = greater_than
-            }
+            pwc_st_coalition_scale = yes
             NOT = { has_country_flag = pwc_flag_coalition_pending }
             NOT = { has_country_flag = pwc_flag_coalition_cooldown }
         }
@@ -84,6 +229,7 @@ pwc_se_coalition_monthly = {
         clear_array = pwc_coalition_members
         set_variable = { pwc_coalition_largest_ai = 0 }
         pwc_se_coalition_reset_totals = yes
+        pwc_se_coalition_parameters = yes
         
         every_other_country = {
             limit = {
@@ -91,7 +237,9 @@ pwc_se_coalition_monthly = {
                 has_capitulated = no
             }
             if = {
-                limit = { check_variable = {
+                limit = {
+                    pwc_st_coalition_candidate = yes
+                    check_variable = {
                     var = num_of_factories value = PREV.pwc_coalition_largest_ai
                     compare = greater_than
                 } }
@@ -101,31 +249,101 @@ pwc_se_coalition_monthly = {
             }
             if = {
                 limit = {
-                    pwc_st_coalition_partner = yes
-                    has_war = no
-                    pwc_st_ai_war_pacing_ready = yes
-                    NOT = { has_country_flag = pwc_flag_warning_active }
-                    NOT = { has_country_flag = pwc_flag_coalition_reserved }
-                    NOT = { has_variable = pwc_coalition_target }
+                    pwc_st_coalition_candidate = yes
                 }
                 event_target:pwc_coalition_player = {
                     add_to_array = { array = pwc_coalition_candidates value = PREV }
                 }
             }
         }
-        multiply_variable = { pwc_coalition_largest_ai = 2 }
+        multiply_variable = { pwc_coalition_largest_ai = pwc_coalition_dominance }
         if = {
-            limit = { check_variable = {
+            limit = { OR = { check_variable = {
                 var = num_of_factories value = pwc_coalition_largest_ai
                 compare = greater_than_or_equals
-            } }
+            } AND = {
+                check_variable = {
+                    var = pwc_coalition_expansion value = 2
+                    compare = greater_than_or_equals
+                }
+            } } }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -133,12 +351,82 @@ pwc_se_coalition_monthly = {
                 }
             }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -146,12 +434,82 @@ pwc_se_coalition_monthly = {
                 }
             }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -159,12 +517,82 @@ pwc_se_coalition_monthly = {
                 }
             }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -172,12 +600,82 @@ pwc_se_coalition_monthly = {
                 }
             }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -185,12 +683,248 @@ pwc_se_coalition_monthly = {
                 }
             }
             if = {
-                limit = { pwc_st_coalition_size_ready = no }
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 random_scope_in_array = {
                     array = pwc_coalition_candidates
-                    limit = { NOT = { is_in_array = {
-                        array = PREV.pwc_coalition_members value = THIS
-                    } } }
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
+                    event_target:pwc_coalition_player = {
+                        add_to_array = { array = pwc_coalition_members value = PREV }
+                    }
+                    pwc_se_coalition_count_member = yes
+                }
+            }
+            if = {
+                limit = {
+                    pwc_st_coalition_size_ready = no
+                    check_variable = {
+                        var = pwc_coalition_count value = pwc_coalition_max_members
+                        compare = less_than
+                    }
+                }
+                if = {
+                    limit = { pwc_st_coalition_high = yes }
+                    pwc_se_coalition_selection_gaps = yes
+                    for_each_scope_loop = {
+                        array = pwc_coalition_candidates
+                        if = {
+                            limit = {
+                                NOT = { is_in_array = {
+                                    array = PREV.pwc_coalition_members value = THIS
+                                } }
+                            }
+                            pwc_se_coalition_score_candidate = yes
+                            if = {
+                                limit = {
+                                    OR = {
+                                        check_variable = {
+                                            var = pwc_coalition_candidate_score
+                                            value = PREV.pwc_coalition_best_score
+                                            compare = greater_than
+                                        }
+                                        AND = {
+                                            check_variable = {
+                                                var = pwc_coalition_candidate_score
+                                                value = PREV.pwc_coalition_best_score
+                                                compare = equals
+                                            }
+                                            check_variable = {
+                                                var = deployed_army_manpower_k
+                                                value = PREV.pwc_coalition_best_manpower
+                                                compare = greater_than
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:pwc_coalition_player = {
+                                    set_variable = {
+                                        var = pwc_coalition_best_score
+                                        value = PREV.pwc_coalition_candidate_score
+                                    }
+                                    set_variable = {
+                                        pwc_coalition_best_manpower = PREV.deployed_army_manpower_k
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                random_scope_in_array = {
+                    array = pwc_coalition_candidates
+                    limit = {
+                        NOT = { is_in_array = {
+                            array = PREV.pwc_coalition_members value = THIS
+                        } }
+                        OR = {
+                            pwc_st_coalition_high = no
+                            AND = {
+                                check_variable = {
+                                    var = pwc_coalition_candidate_score
+                                    value = PREV.pwc_coalition_best_score
+                                    compare = equals
+                                }
+                                check_variable = {
+                                    var = deployed_army_manpower_k
+                                    value = PREV.pwc_coalition_best_manpower
+                                    compare = equals
+                                }
+                            }
+                        }
+                    }
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_members value = PREV }
                     }
@@ -200,18 +934,26 @@ pwc_se_coalition_monthly = {
 if = {
                 limit = { pwc_st_coalition_size_ready = yes }
                 set_country_flag = pwc_flag_coalition_pending
-                set_country_flag = {
-                    flag = pwc_flag_coalition_warning days = 60 value = 1
-                }
-                add_dynamic_modifier = {
-                    modifier = pwc_dm_coalition_warning days = 60
-                }
+                pwc_se_coalition_warn = yes
                 for_each_scope_loop = {
                     array = pwc_coalition_members
                     pwc_se_coalition_prepare_member = yes
                 }
             }
             else = { clear_array = pwc_coalition_members }
+        }
+        if = {
+            limit = { pwc_st_coalition_high = yes }
+            for_each_scope_loop = {
+                array = pwc_coalition_candidates
+                clear_variable = pwc_coalition_candidate_score
+            }
+            clear_variable = pwc_coalition_best_score
+            clear_variable = pwc_coalition_best_manpower
+            clear_variable = pwc_coalition_gap_manpower
+            clear_variable = pwc_coalition_gap_industry
+            clear_variable = pwc_coalition_scale_manpower
+            clear_variable = pwc_coalition_scale_industry
         }
         clear_array = pwc_coalition_candidates
     }
@@ -247,9 +989,7 @@ pwc_se_coalition_weekly = {
             }
             if = {
                 limit = { pwc_st_coalition_size_ready = yes }
-                set_country_flag = {
-                    flag = pwc_flag_coalition_cooldown days = 730 value = 1
-                }
+                pwc_se_coalition_cooldown = yes
                 for_each_scope_loop = {
                     array = pwc_coalition_valid_members
                     if = {
@@ -264,9 +1004,7 @@ pwc_se_coalition_weekly = {
                 }
             }
             else = {
-                set_country_flag = {
-                    flag = pwc_flag_coalition_cooldown days = 180 value = 1
-                }
+                pwc_se_coalition_aborted = yes
             }
             clear_array = pwc_coalition_valid_members
             pwc_se_coalition_cleanup = yes

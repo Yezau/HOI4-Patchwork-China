@@ -1,4 +1,3 @@
-add_namespace = pwc_ev_city_eliminated
 add_namespace = pwc_ev_last_city_champion
 add_namespace = pwc_ev_integration_tick
 add_namespace = pwc_ev_conference_reconcile
@@ -11,18 +10,6 @@ country_event = {
 
 
 news_event = {
-	id = pwc_ev_city_eliminated.1
-	title = PWC_EV_CITY_ELIMINATED_TITLE
-	desc = PWC_EV_CITY_ELIMINATED_DESC
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = PWC_EV_OK
-	}
-}
-
-
-news_event = {
 	id = pwc_ev_last_city_champion.1
 	title = PWC_EV_LAST_CITY_CHAMPION_TITLE
 	desc = PWC_EV_LAST_CITY_CHAMPION_DESC
@@ -31,14 +18,6 @@ news_event = {
 	option = {
 		name = PWC_EV_OK
 	}
-}
-
-
-country_event = {
-    id = pwc_ev_integration_tick.1
-    hidden = yes
-    is_triggered_only = yes
-    immediate = { pwc_se_ensure_integration_tick = yes }
 }
 
 

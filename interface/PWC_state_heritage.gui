@@ -1,0 +1,862 @@
+guiTypes = {
+    containerWindowType = {
+        name = "PWC_state_heritage_window"
+        position = { x = 37 y = 518 }
+        size = { width = 108 height = 24 }
+        orientation = upper_left
+        clipping = no
+        moveable = no
+        iconType = {
+            name = "pwc_heritage_wunu_mountain_city"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WUNU_MOUNTAIN_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_shenyang_palace_and_tombs"
+            spriteType = "PWC_GFX_heritage_palace"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SHENYANG_PALACE_AND_TOMBS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yongling_tomb"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YONGLING_TOMB_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_niuheliang_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_NIUHELIANG_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_koguryo_jian"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_KOGURYO_JIAN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jilin_confucian_temple_and_ashihada"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JILIN_CONFUCIAN_TEMPLE_AND_ASHIHADA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jin_shangjing"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIN_SHANGJING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yagou_carvings"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YAGOU_CARVINGS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_bohai_shangjing"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BOHAI_SHANGJING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_beijing_central_axis"
+            spriteType = "PWC_GFX_heritage_palace"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BEIJING_CENTRAL_AXIS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yunju_temple_stone_sutras"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YUNJU_TEMPLE_STONE_SUTRAS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_juyongguan_badaling"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JUYONGGUAN_BADALING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dule_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DULE_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qianxiang_temple_carvings"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QIANXIANG_TEMPLE_CARVINGS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_grand_canal_tianjin"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GRAND_CANAL_TIANJIN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_shanhaiguan"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SHANHAIGUAN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zhengding_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZHENGDING_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zhaozhou_bridge"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZHAOZHOU_BRIDGE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_chengde_mountain_resort"
+            spriteType = "PWC_GFX_heritage_palace"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_CHENGDE_MOUNTAIN_RESORT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_pingyao_ancient_city"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_PINGYAO_ANCIENT_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yungang_grottoes"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YUNGANG_GROTTOES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_mount_wutai"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MOUNT_WUTAI_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yingxian_wooden_pagoda"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YINGXIAN_WOODEN_PAGODA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_mount_tai"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MOUNT_TAI_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qufu_three_confucian_sites"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QUFU_THREE_CONFUCIAN_SITES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qi_great_wall_changqing"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QI_GREAT_WALL_CHANGQING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_grand_canal_nanwang"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GRAND_CANAL_NANWANG_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_grand_canal_taierzhuang"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GRAND_CANAL_TAIERZHUANG_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yinxu"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YINXU_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_longmen_grottoes"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LONGMEN_GROTTOES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dengfeng_centre_of_heaven_and_earth"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DENGFENG_CENTRE_OF_HEAVEN_AND_EARTH_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_white_horse_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WHITE_HORSE_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_guangfulin_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GUANGFULIN_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qinglong_town_site"
+            spriteType = "PWC_GFX_heritage_port"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QINGLONG_TOWN_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zhujiajiao_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZHUJIAJIAO_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_songjiang_square_pagoda"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 84 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SONGJIANG_SQUARE_PAGODA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_suzhou_classical_gardens"
+            spriteType = "PWC_GFX_heritage_palace"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SUZHOU_CLASSICAL_GARDENS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yangzhou_canal_and_salt"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YANGZHOU_CANAL_AND_SALT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qingkou_hydraulic_hub"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QINGKOU_HYDRAULIC_HUB_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_ming_xiaoling"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MING_XIAOLING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_liangzhu_ancient_city"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LIANGZHU_ANCIENT_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_west_lake"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WEST_LAKE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_grand_canal_hangzhou"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GRAND_CANAL_HANGZHOU_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_longquan_kilns"
+            spriteType = "PWC_GFX_heritage_kiln"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LONGQUAN_KILNS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_xidi_hongcun"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_XIDI_HONGCUN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_huizhou_old_town_and_tangyue"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HUIZHOU_OLD_TOWN_AND_TANGYUE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_shouxian_city_wall"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SHOUXIAN_CITY_WALL_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_quanzhou_maritime_heritage"
+            spriteType = "PWC_GFX_heritage_port"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QUANZHOU_MARITIME_HERITAGE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_fujian_tulou_yongding"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_FUJIAN_TULOU_YONGDING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_fujian_tulou_zhangzhou"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_FUJIAN_TULOU_ZHANGZHOU_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_chengcun_han_city"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_CHENGCUN_HAN_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_fuzhou_three_lanes_seven_alleys"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_FUZHOU_THREE_LANES_SEVEN_ALLEYS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tamsui_fort_santo_domingo"
+            spriteType = "PWC_GFX_heritage_port"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TAMSUI_FORT_SANTO_DOMINGO_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_anping_fort"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ANPING_FORT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_lukang_old_street"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LUKANG_OLD_STREET_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_kinmen_settlements"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_KINMEN_SETTLEMENTS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_wudang_mountains"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WUDANG_MOUNTAINS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jingzhou_city_wall"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JINGZHOU_CITY_WALL_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_gulongzhong"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GULONGZHONG_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_ming_xianling"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MING_XIANLING_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yuelu_academy"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YUELU_ACADEMY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_fenghuang_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_FENGHUANG_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tongguan_kilns"
+            spriteType = "PWC_GFX_heritage_kiln"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TONGGUAN_KILNS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yueyang_tower"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YUEYANG_TOWER_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_lushan_bailudong_academy"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LUSHAN_BAILUDONG_ACADEMY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jingdezhen_imperial_kilns"
+            spriteType = "PWC_GFX_heritage_kiln"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JINGDEZHEN_IMPERIAL_KILNS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_longhu_mountain"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LONGHU_MOUNTAIN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tengwang_pavilion"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TENGWANG_PAVILION_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_nanyue_palace_and_tomb"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_NANYUE_PALACE_AND_TOMB_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_nanhai_god_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_NANHAI_GOD_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_huaisheng_lighthouse_minaret"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HUAISHENG_LIGHTHOUSE_MINARET_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_chaozhou_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_CHAOZHOU_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_lingqu_canal"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LINGQU_CANAL_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zuojiang_huashan_rock_art"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZUOJIANG_HUASHAN_ROCK_ART_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_hepu_han_tombs_and_port"
+            spriteType = "PWC_GFX_heritage_port"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HEPU_HAN_TOMBS_AND_PORT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_huangyao_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HUANGYAO_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yazhou_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YAZHOU_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dongpo_academy"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DONGPO_ACADEMY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_li_boat_shaped_houses"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LI_BOAT_SHAPED_HOUSES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_ping_shan_heritage_trail"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_PING_SHAN_HERITAGE_TRAIL_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_walled_villages_lung_yeuk_tau_kam_tin"
+            spriteType = "PWC_GFX_heritage_village"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WALLED_VILLAGES_LUNG_YEUK_TAU_KAM_TIN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tung_lung_fort"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TUNG_LUNG_FORT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_historic_centre_of_macao"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HISTORIC_CENTRE_OF_MACAO_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_macao_a_ma_temple_and_ruins"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MACAO_A_MA_TEMPLE_AND_RUINS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dujiangyan_and_qingcheng"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DUJIANGYAN_AND_QINGCHENG_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_sanxingdui_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SANXINGDUI_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jinsha_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JINSHA_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jianmen_shu_road"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIANMEN_SHU_ROAD_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dazu_rock_carvings"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DAZU_ROCK_CARVINGS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_diaoyu_fortress"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DIAOYU_FORTRESS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_baidi_city"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BAIDI_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_lijiang_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LIJIANG_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_honghe_hani_terraces"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HONGHE_HANI_TERRACES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dali_three_pagodas"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DALI_THREE_PAGODAS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jianshui_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIANSHUI_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_shaxi_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SHAXI_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_hailongtun"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HAILONGTUN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zhenyuan_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZHENYUAN_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qingyan_old_town"
+            spriteType = "PWC_GFX_heritage_historic_town"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QINGYAN_OLD_TOWN_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_baojiatun_waterworks"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BAOJIATUN_WATERWORKS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_xanadu_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_XANADU_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_juyan_site"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JUYAN_SITE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qin_straight_road"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QIN_STRAIGHT_ROAD_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yilin_post_station"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YILIN_POST_STATION_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dazhao_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DAZHAO_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_weiyang_palace"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WEIYANG_PALACE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qin_mausoleum"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QIN_MAUSOLEUM_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_zhang_qian_tomb_baoxie_road"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_ZHANG_QIAN_TOMB_BAOXIE_ROAD_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_famen_temple_crypt"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_FAMEN_TEMPLE_CRYPT_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_mogao_caves"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MOGAO_CAVES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_yumen_and_yang_passes"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_YUMEN_AND_YANG_PASSES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_maijishan_grottoes"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_MAIJISHAN_GROTTOES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_bingling_temple_grottoes"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BINGLING_TEMPLE_GROTTOES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_leitai_han_tomb"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LEITAI_HAN_TOMB_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_western_xia_tombs"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_WESTERN_XIA_TOMBS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_xumishan_grottoes"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_XUMISHAN_GROTTOES_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_helan_rock_art"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_HELAN_ROCK_ART_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_guyuan_old_city"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GUYUAN_OLD_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jiaohe_gaochang"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIAOHE_GAOCHANG_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_kizil_subashi"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_KIZIL_SUBASHI_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_beiting_ancient_city"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_BEITING_ANCIENT_CITY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_turpan_karez"
+            spriteType = "PWC_GFX_heritage_waterworks"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TURPAN_KAREZ_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jirzankal_cemetery"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIRZANKAL_CEMETERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_riyue_mountain_tang_tibet_road"
+            spriteType = "PWC_GFX_heritage_route"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_RIYUE_MOUNTAIN_TANG_TIBET_ROAD_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_kumbum_monastery"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_KUMBUM_MONASTERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_dulan_reshui_tombs"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_DULAN_RESHUI_TOMBS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_potala_jokhang_norbulingka"
+            spriteType = "PWC_GFX_heritage_palace"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_POTALA_JOKHANG_NORBULINGKA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_samye_monastery"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SAMYE_MONASTERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_sakya_monastery"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_SAKYA_MONASTERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tashilhunpo_monastery"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TASHILHUNPO_MONASTERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_pelkor_chode_monastery"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 56 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_PELKOR_CHODE_MONASTERY_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_guge_kingdom_ruins"
+            spriteType = "PWC_GFX_heritage_ruins"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GUGE_KINGDOM_RUINS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_leshan_giant_buddha"
+            spriteType = "PWC_GFX_heritage_grotto"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_LESHAN_GIANT_BUDDHA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jiayuguan_pass"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JIAYUGUAN_PASS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jinci_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JINCI_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_eastern_qing_tombs"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_EASTERN_QING_TOMBS_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_xuankong_temple"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 28 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_XUANKONG_TEMPLE_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_kaifeng_iron_pagoda"
+            spriteType = "PWC_GFX_heritage_temple"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_KAIFENG_IRON_PAGODA_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_tianyi_pavilion"
+            spriteType = "PWC_GFX_heritage_academy"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_TIANYI_PAVILION_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_qianling_mausoleum"
+            spriteType = "PWC_GFX_heritage_tomb"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_QIANLING_MAUSOLEUM_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_ganzhou_song_city_wall"
+            spriteType = "PWC_GFX_heritage_fortification"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_GANZHOU_SONG_CITY_WALL_TT"
+        }
+        iconType = {
+            name = "pwc_heritage_jingmai_tea_forest"
+            spriteType = "PWC_GFX_heritage_landscape"
+            position = { x = 0 y = 0 }
+            pdx_tooltip = "PWC_HERITAGE_JINGMAI_TEA_FOREST_TT"
+        }
+    }
+}

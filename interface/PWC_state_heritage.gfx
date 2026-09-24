@@ -1,0 +1,782 @@
+spriteTypes = {
+    spriteType = {
+        name = "PWC_GFX_heritage_palace"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_palace.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_tomb"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_tomb.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_temple"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_temple.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_grotto"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_grotto.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_ruins"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_ruins.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_historic_town"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_historic_town.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_village"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_village.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_fortification"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_fortification.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_waterworks"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_waterworks.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_route"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_route.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_academy"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_academy.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_kiln"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_kiln.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_port"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_port.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "PWC_GFX_heritage_landscape"
+        texturefile = "gfx/interface/pwc/heritage/PWC_heritage_landscape.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_anping_fort_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_anping_fort_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_baidi_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_baidi_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_baojiatun_waterworks_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_baojiatun_waterworks_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_beijing_central_axis_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_beijing_central_axis_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_beiting_ancient_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_beiting_ancient_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_bingling_temple_grottoes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_bingling_temple_grottoes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_bohai_shangjing_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_bohai_shangjing_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_chaozhou_guangji_bridge_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_chaozhou_guangji_bridge_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_chengcun_han_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_chengcun_han_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_chengde_mountain_resort_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_chengde_mountain_resort_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dali_three_pagodas_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dali_three_pagodas_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dazhao_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dazhao_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dazu_rock_carvings_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dazu_rock_carvings_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dengfeng_centre_of_heaven_and_earth_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dengfeng_centre_of_heaven_and_earth_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_diaoyu_fortress_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_diaoyu_fortress_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dongpo_academy_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dongpo_academy_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dujiangyan_and_qingcheng_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dujiangyan_and_qingcheng_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dulan_reshui_tombs_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dulan_reshui_tombs_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_dule_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_dule_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_eastern_qing_tombs_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_eastern_qing_tombs_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_famen_temple_crypt_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_famen_temple_crypt_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_fenghuang_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_fenghuang_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_fujian_tulou_yongding_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_fujian_tulou_yongding_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_fujian_tulou_zhangzhou_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_fujian_tulou_zhangzhou_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_fuzhou_three_lanes_seven_alleys_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_fuzhou_three_lanes_seven_alleys_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_ganzhou_song_city_wall_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_ganzhou_song_city_wall_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_grand_canal_hangzhou_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_grand_canal_hangzhou_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_grand_canal_nanwang_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_grand_canal_nanwang_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_grand_canal_taierzhuang_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_grand_canal_taierzhuang_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_grand_canal_tianjin_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_grand_canal_tianjin_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_guangfulin_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_guangfulin_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_guge_kingdom_ruins_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_guge_kingdom_ruins_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_gulongzhong_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_gulongzhong_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_guyuan_old_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_guyuan_old_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_hailongtun_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_hailongtun_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_helan_rock_art_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_helan_rock_art_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_hepu_han_tombs_and_port_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_hepu_han_tombs_and_port_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_historic_centre_of_macao_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_historic_centre_of_macao_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_honghe_hani_terraces_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_honghe_hani_terraces_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_huaisheng_lighthouse_minaret_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_huaisheng_lighthouse_minaret_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_huangyao_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_huangyao_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_huizhou_old_town_and_tangyue_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_huizhou_old_town_and_tangyue_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jianmen_shu_road_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jianmen_shu_road_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jianshui_old_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jianshui_old_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jiaohe_gaochang_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jiaohe_gaochang_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jiayuguan_pass_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jiayuguan_pass_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jilin_confucian_temple_and_ashihada_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jilin_confucian_temple_and_ashihada_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jin_shangjing_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jin_shangjing_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jinci_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jinci_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jingdezhen_imperial_kilns_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jingdezhen_imperial_kilns_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jingmai_tea_forest_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jingmai_tea_forest_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jingzhou_city_wall_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jingzhou_city_wall_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jinsha_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jinsha_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_jirzankal_cemetery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_jirzankal_cemetery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_juyan_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_juyan_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_juyongguan_badaling_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_juyongguan_badaling_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_kaifeng_iron_pagoda_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_kaifeng_iron_pagoda_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_kinmen_shuitou_village_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_kinmen_shuitou_village_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_kizil_subashi_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_kizil_subashi_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_koguryo_jian_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_koguryo_jian_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_kumbum_monastery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_kumbum_monastery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_leitai_han_tomb_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_leitai_han_tomb_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_leshan_giant_buddha_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_leshan_giant_buddha_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_li_boat_shaped_houses_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_li_boat_shaped_houses_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_liangzhu_ancient_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_liangzhu_ancient_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_lijiang_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_lijiang_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_lingqu_canal_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_lingqu_canal_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_longhu_mountain_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_longhu_mountain_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_longmen_grottoes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_longmen_grottoes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_longquan_kilns_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_longquan_kilns_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_lukang_longshan_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_lukang_longshan_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_lushan_bailudong_academy_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_lushan_bailudong_academy_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_macao_a_ma_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_macao_a_ma_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_maijishan_grottoes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_maijishan_grottoes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_ming_xianling_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_ming_xianling_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_ming_xiaoling_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_ming_xiaoling_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_mogao_caves_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_mogao_caves_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_mount_tai_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_mount_tai_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_mount_wutai_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_mount_wutai_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_nanhai_god_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_nanhai_god_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_nanyue_palace_and_tomb_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_nanyue_palace_and_tomb_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_niuheliang_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_niuheliang_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_pelkor_chode_monastery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_pelkor_chode_monastery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_ping_shan_heritage_trail_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_ping_shan_heritage_trail_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_pingyao_ancient_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_pingyao_ancient_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_potala_jokhang_norbulingka_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_potala_jokhang_norbulingka_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qi_great_wall_changqing_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qi_great_wall_changqing_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qianling_mausoleum_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qianling_mausoleum_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qianxiang_temple_carvings_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qianxiang_temple_carvings_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qin_mausoleum_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qin_mausoleum_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qin_straight_road_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qin_straight_road_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qingkou_hydraulic_hub_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qingkou_hydraulic_hub_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qinglong_town_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qinglong_town_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qingyan_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qingyan_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_quanzhou_maritime_heritage_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_quanzhou_maritime_heritage_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_qufu_three_confucian_sites_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_qufu_three_confucian_sites_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_riyue_mountain_tang_tibet_road_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_riyue_mountain_tang_tibet_road_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_sakya_monastery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_sakya_monastery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_samye_monastery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_samye_monastery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_sanxingdui_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_sanxingdui_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_shanhaiguan_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_shanhaiguan_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_shaxi_old_theatre_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_shaxi_old_theatre_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_shenyang_palace_and_tombs_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_shenyang_palace_and_tombs_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_shouxian_city_wall_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_shouxian_city_wall_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_songjiang_fangta_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_songjiang_fangta_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_suzhou_classical_gardens_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_suzhou_classical_gardens_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tamsui_fort_santo_domingo_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tamsui_fort_santo_domingo_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tashilhunpo_monastery_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tashilhunpo_monastery_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tengwang_pavilion_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tengwang_pavilion_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tianyi_pavilion_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tianyi_pavilion_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tongguan_kilns_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tongguan_kilns_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_tung_lung_fort_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_tung_lung_fort_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_turpan_karez_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_turpan_karez_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_walled_villages_lung_yeuk_tau_kam_tin_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_walled_villages_lung_yeuk_tau_kam_tin_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_weiyang_palace_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_weiyang_palace_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_west_lake_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_west_lake_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_western_xia_tombs_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_western_xia_tombs_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_white_horse_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_white_horse_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_wudang_mountains_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_wudang_mountains_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_wunu_mountain_city_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_wunu_mountain_city_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_xanadu_site_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_xanadu_site_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_xidi_hongcun_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_xidi_hongcun_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_xuankong_temple_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_xuankong_temple_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_xumishan_grottoes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_xumishan_grottoes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yagou_carvings_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yagou_carvings_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yangzhou_canal_and_salt_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yangzhou_canal_and_salt_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yazhou_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yazhou_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yilin_post_station_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yilin_post_station_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yingxian_wooden_pagoda_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yingxian_wooden_pagoda_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yinxu_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yinxu_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yongling_tomb_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yongling_tomb_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yuelu_academy_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yuelu_academy_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yueyang_tower_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yueyang_tower_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yumen_and_yang_passes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yumen_and_yang_passes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yungang_grottoes_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yungang_grottoes_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_yunju_temple_stone_sutras_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_yunju_temple_stone_sutras_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zhang_qian_tomb_baoxie_road_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zhang_qian_tomb_baoxie_road_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zhaozhou_bridge_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zhaozhou_bridge_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zhengding_old_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zhengding_old_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zhenyuan_ancient_town_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zhenyuan_ancient_town_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zhujiajiao_canal_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zhujiajiao_canal_photo.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_PWC_HERITAGE_ART_zuojiang_huashan_rock_art_photo"
+        texturefile = "gfx/interface/pwc/heritage/tooltip/PWC_heritage_zuojiang_huashan_rock_art_photo.dds"
+        legacy_lazy_load = no
+    }
+}

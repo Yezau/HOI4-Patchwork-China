@@ -18,7 +18,7 @@
 ## 游玩说明
 
 - **适配游戏版本：** `1.19.*`
-- **当前 MOD 版本：** `0.1.6`
+- **当前 MOD 版本：** `0.1.7`
 
 本次更新内容见[更新日志](CHANGELOG.md)。
 
@@ -52,4 +52,5 @@
 
 ## 素材署名
 
-照片来源见[照片署名](gfx/loadingscreens/CREDITS_LOADING_PHOTOS.md)，音乐来源见[音乐署名](music/CREDITS.md)。
+照片来源见[照片署名](gfx/loadingscreens/CREDITS_LOADING_PHOTOS.md)，音乐来源见[音乐署名](music/CREDITS.md)，
+地方风物图片来源见[风物署名](gfx/interface/pwc/heritage/ATTRIBUTION.md)。

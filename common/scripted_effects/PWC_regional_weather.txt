@@ -1,0 +1,945 @@
+pwc_weather_apply_typhoon = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_typhoon days = 3 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_typhoon days = 5 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 14 value = 1 }
+    }
+}
+pwc_weather_apply_fog = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_fog days = 2 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_fog days = 3 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 10 value = 1 }
+    }
+}
+pwc_weather_apply_freezing_rain = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_freezing_rain days = 3 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_freezing_rain days = 5 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 14 value = 1 }
+    }
+}
+pwc_weather_apply_meiyu = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_meiyu days = 5 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_meiyu days = 7 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 14 value = 1 }
+    }
+}
+pwc_weather_apply_cold_wave = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_cold_wave days = 3 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_cold_wave days = 5 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 14 value = 1 }
+    }
+}
+pwc_weather_apply_heat_wave = {
+    if = {
+        limit = { NOT = { has_state_flag = pwc_regional_weather_cooldown } }
+        random_list = {
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_heat_wave days = 3 }
+            }
+            1 = {
+                add_dynamic_modifier = { modifier = pwc_weather_heat_wave days = 5 }
+            }
+        }
+        set_state_flag = { flag = pwc_regional_weather_cooldown days = 14 value = 1 }
+    }
+}
+pwc_weather_roll_typhoon_south = {
+    random_state = {
+        limit = {
+            pwc_weather_in_typhoon_south = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_typhoon = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_typhoon_south = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_typhoon = yes
+        }
+    }
+}
+pwc_weather_roll_typhoon_southeast = {
+    random_state = {
+        limit = {
+            pwc_weather_in_typhoon_southeast = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_typhoon = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_typhoon_southeast = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_typhoon = yes
+        }
+    }
+}
+pwc_weather_roll_typhoon_jiangsu = {
+    random_state = {
+        limit = {
+            pwc_weather_in_typhoon_jiangsu = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_typhoon = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_typhoon_jiangsu = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 1
+            pwc_weather_apply_typhoon = yes
+        }
+    }
+}
+pwc_weather_roll_fog_sichuan = {
+    random_state = {
+        limit = {
+            pwc_weather_in_fog_sichuan = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_fog = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_fog_sichuan = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_fog = yes
+        }
+    }
+}
+pwc_weather_roll_fog_yangtze = {
+    random_state = {
+        limit = {
+            pwc_weather_in_fog_yangtze = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_fog = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_fog_yangtze = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_fog = yes
+        }
+    }
+}
+pwc_weather_roll_fog_north_coast = {
+    random_state = {
+        limit = {
+            pwc_weather_in_fog_north_coast = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_fog = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_fog_north_coast = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 1
+            pwc_weather_apply_fog = yes
+        }
+    }
+}
+pwc_weather_roll_freezing_guizhou = {
+    random_state = {
+        limit = {
+            pwc_weather_in_freezing_guizhou = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_freezing_rain = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_freezing_guizhou = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_freezing_rain = yes
+        }
+    }
+}
+pwc_weather_roll_freezing_transition = {
+    random_state = {
+        limit = {
+            pwc_weather_in_freezing_transition = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_freezing_rain = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_freezing_transition = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_freezing_rain = yes
+        }
+    }
+}
+pwc_weather_roll_meiyu_middle = {
+    random_state = {
+        limit = {
+            pwc_weather_in_meiyu_middle = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_meiyu = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_meiyu_middle = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_meiyu = yes
+        }
+    }
+}
+pwc_weather_roll_meiyu_lower = {
+    random_state = {
+        limit = {
+            pwc_weather_in_meiyu_lower = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_meiyu = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_meiyu_lower = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_meiyu = yes
+        }
+    }
+}
+pwc_weather_roll_cold_north = {
+    random_state = {
+        limit = {
+            pwc_weather_in_cold_north = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_cold_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_cold_north = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_cold_wave = yes
+        }
+    }
+}
+pwc_weather_roll_cold_north_xinjiang = {
+    random_state = {
+        limit = {
+            pwc_weather_in_cold_north_xinjiang = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_cold_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_cold_north_xinjiang = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_cold_wave = yes
+        }
+    }
+}
+pwc_weather_roll_cold_south_xinjiang = {
+    random_state = {
+        limit = {
+            pwc_weather_in_cold_south_xinjiang = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_cold_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_cold_south_xinjiang = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 1
+            pwc_weather_apply_cold_wave = yes
+        }
+    }
+}
+pwc_weather_roll_cold_plateau = {
+    random_state = {
+        limit = {
+            pwc_weather_in_cold_plateau = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_cold_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_cold_plateau = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_cold_wave = yes
+        }
+    }
+}
+pwc_weather_roll_cold_south = {
+    random_state = {
+        limit = {
+            pwc_weather_in_cold_south = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_cold_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_cold_south = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_cold_wave = yes
+        }
+    }
+}
+pwc_weather_roll_heat_northwest = {
+    random_state = {
+        limit = {
+            pwc_weather_in_heat_northwest = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_heat_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_heat_northwest = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_heat_wave = yes
+        }
+    }
+}
+pwc_weather_roll_heat_huabei = {
+    random_state = {
+        limit = {
+            pwc_weather_in_heat_huabei = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_heat_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_heat_huabei = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_heat_wave = yes
+        }
+    }
+}
+pwc_weather_roll_heat_yangtze = {
+    random_state = {
+        limit = {
+            pwc_weather_in_heat_yangtze = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_heat_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_heat_yangtze = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_heat_wave = yes
+        }
+    }
+}
+pwc_weather_roll_heat_lingnan = {
+    random_state = {
+        limit = {
+            pwc_weather_in_heat_lingnan = yes
+            NOT = { has_state_flag = pwc_regional_weather_cooldown }
+        }
+        pwc_weather_apply_heat_wave = yes
+        every_neighbor_state = {
+            limit = {
+                pwc_weather_in_heat_lingnan = yes
+                NOT = { has_state_flag = pwc_regional_weather_cooldown }
+            }
+            random_select_amount = 2
+            pwc_weather_apply_heat_wave = yes
+        }
+    }
+}
+pwc_weather_weekly = {
+    if = {
+        limit = { NOT = { has_global_flag = pwc_weather_weekly_done } }
+        set_global_flag = { flag = pwc_weather_weekly_done days = 6 value = 1 }
+        if = {
+            limit = { pwc_weather_month_1 = yes }
+            random_list = {
+                76 = { }
+                24 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_freezing_guizhou = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_freezing_transition = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_cold_south = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_2 = yes }
+            random_list = {
+                80 = { }
+                20 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_freezing_guizhou = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_freezing_transition = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_south = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_3 = yes }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_freezing_guizhou = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_freezing_transition = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_south = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_4 = yes }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                97 = { }
+                3 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_plateau = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_5 = yes }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                76 = { }
+                24 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_meiyu_middle = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_meiyu_lower = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_heat_northwest = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_heat_huabei = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_heat_yangtze = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_6 = yes }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                97 = { }
+                3 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                74 = { }
+                26 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                72 = { }
+                28 = { pwc_weather_roll_meiyu_middle = yes }
+            }
+            random_list = {
+                76 = { }
+                24 = { pwc_weather_roll_meiyu_lower = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_heat_northwest = yes }
+            }
+            random_list = {
+                80 = { }
+                20 = { pwc_weather_roll_heat_huabei = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_heat_yangtze = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_7 = yes }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_typhoon_jiangsu = yes }
+            }
+            random_list = {
+                97 = { }
+                3 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_meiyu_middle = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_meiyu_lower = yes }
+            }
+            random_list = {
+                78 = { }
+                22 = { pwc_weather_roll_heat_northwest = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_heat_huabei = yes }
+            }
+            random_list = {
+                78 = { }
+                22 = { pwc_weather_roll_heat_yangtze = yes }
+            }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_8 = yes }
+            random_list = {
+                80 = { }
+                20 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                80 = { }
+                20 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_typhoon_jiangsu = yes }
+            }
+            random_list = {
+                97 = { }
+                3 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_heat_northwest = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_heat_huabei = yes }
+            }
+            random_list = {
+                76 = { }
+                24 = { pwc_weather_roll_heat_yangtze = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_9 = yes }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                97 = { }
+                3 = { pwc_weather_roll_typhoon_jiangsu = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_heat_northwest = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_heat_huabei = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_heat_yangtze = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_10 = yes }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_typhoon_southeast = yes }
+            }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_heat_lingnan = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_11 = yes }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_typhoon_south = yes }
+            }
+            random_list = {
+                76 = { }
+                24 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_freezing_guizhou = yes }
+            }
+            random_list = {
+                98 = { }
+                2 = { pwc_weather_roll_freezing_transition = yes }
+            }
+            random_list = {
+                88 = { }
+                12 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                94 = { }
+                6 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                90 = { }
+                10 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_cold_south = yes }
+            }
+        }
+        else_if = {
+            limit = { pwc_weather_month_12 = yes }
+            random_list = {
+                74 = { }
+                26 = { pwc_weather_roll_fog_sichuan = yes }
+            }
+            random_list = {
+                84 = { }
+                16 = { pwc_weather_roll_fog_yangtze = yes }
+            }
+            random_list = {
+                96 = { }
+                4 = { pwc_weather_roll_fog_north_coast = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_freezing_guizhou = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_freezing_transition = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_cold_north = yes }
+            }
+            random_list = {
+                82 = { }
+                18 = { pwc_weather_roll_cold_north_xinjiang = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_south_xinjiang = yes }
+            }
+            random_list = {
+                86 = { }
+                14 = { pwc_weather_roll_cold_plateau = yes }
+            }
+            random_list = {
+                92 = { }
+                8 = { pwc_weather_roll_cold_south = yes }
+            }
+        }
+    }
+}

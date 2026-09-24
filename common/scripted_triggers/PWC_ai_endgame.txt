@@ -1,3 +1,28 @@
+pwc_st_coalition_high = {
+    OR = {
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+    }
+}
+pwc_st_coalition_scale = {
+    OR = {
+        AND = {
+            pwc_st_coalition_high = no
+            num_of_factories > 29
+            check_variable = { var = num_owned_states value = 5 compare = greater_than_or_equals }
+        }
+        AND = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
+            num_of_factories > 23
+            check_variable = { var = num_owned_states value = 4 compare = greater_than_or_equals }
+        }
+        AND = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            num_of_factories > 17
+            check_variable = { var = num_owned_states value = 3 compare = greater_than_or_equals }
+        }
+    }
+}
 pwc_st_coalition_player = {
     exists = yes
     is_ai = no
@@ -55,6 +80,15 @@ pwc_st_coalition_size_ready = {
         var = pwc_coalition_industry value = pwc_coalition_required_industry
         compare = greater_than_or_equals
     }
+}
+
+pwc_st_coalition_candidate = {
+    pwc_st_coalition_partner = yes
+    has_war = no
+    pwc_st_ai_war_pacing_ready = yes
+    NOT = { has_country_flag = pwc_flag_warning_active }
+    NOT = { has_country_flag = pwc_flag_coalition_reserved }
+    NOT = { has_variable = pwc_coalition_target }
 }
 
 pwc_st_ai_only_war = {

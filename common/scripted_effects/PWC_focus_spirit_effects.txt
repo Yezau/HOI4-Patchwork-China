@@ -819,1590 +819,436 @@ pwc_se_rebuild_focus_spirit_geography = {
 }
 
 pwc_se_grant_focus_spirit_gov_public_order = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_gov_public_order
-	if = {
-		limit = { has_idea = pwc_idea_gov_public_order }
-		remove_ideas = pwc_idea_gov_public_order
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_gov_civil_defense = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_gov_civil_defense
-	if = {
-		limit = { has_idea = pwc_idea_gov_civil_defense }
-		remove_ideas = pwc_idea_gov_civil_defense
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_gov_streamlined_administration = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
-	if = {
-		limit = { has_idea = pwc_idea_gov_streamlined_administration }
-		remove_ideas = pwc_idea_gov_streamlined_administration
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_law_civil_service_exam = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_law_civil_service_exam
-	if = {
-		limit = { has_idea = pwc_idea_law_civil_service_exam }
-		remove_ideas = pwc_idea_law_civil_service_exam
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_law_emergency_powers = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_law_emergency_powers
-	if = {
-		limit = { has_idea = pwc_idea_law_emergency_powers }
-		remove_ideas = pwc_idea_law_emergency_powers
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_law_oversight_committee = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_law_oversight_committee
-	if = {
-		limit = { has_idea = pwc_idea_law_oversight_committee }
-		remove_ideas = pwc_idea_law_oversight_committee
-	}
 	pwc_se_rebuild_focus_spirit_governance = yes
 }
 
 pwc_se_grant_focus_spirit_eco_construction_bureau = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_construction_bureau
-	if = {
-		limit = { has_idea = pwc_idea_eco_construction_bureau }
-		remove_ideas = pwc_idea_eco_construction_bureau
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_resource_survey = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_resource_survey
-	if = {
-		limit = { has_idea = pwc_idea_eco_resource_survey }
-		remove_ideas = pwc_idea_eco_resource_survey
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_finance_reform = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_finance_reform
-	if = {
-		limit = { has_idea = pwc_idea_eco_finance_reform }
-		remove_ideas = pwc_idea_eco_finance_reform
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_municipal_energy = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_municipal_energy
-	if = {
-		limit = { has_idea = pwc_idea_eco_municipal_energy }
-		remove_ideas = pwc_idea_eco_municipal_energy
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_research_institute = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_research_institute
-	if = {
-		limit = { has_idea = pwc_idea_eco_research_institute }
-		remove_ideas = pwc_idea_eco_research_institute
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_trade_hub = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_trade_hub
-	if = {
-		limit = { has_idea = pwc_idea_eco_trade_hub }
-		remove_ideas = pwc_idea_eco_trade_hub
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_metropolitan_economy = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
-	if = {
-		limit = { has_idea = pwc_idea_eco_metropolitan_economy }
-		remove_ideas = pwc_idea_eco_metropolitan_economy
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_commerce_district = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_commerce_district
-	if = {
-		limit = { has_idea = pwc_idea_eco_commerce_district }
-		remove_ideas = pwc_idea_eco_commerce_district
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_eco_apex_powerhouse = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
-	if = {
-		limit = { has_idea = pwc_idea_eco_apex_powerhouse }
-		remove_ideas = pwc_idea_eco_apex_powerhouse
-	}
 	pwc_se_rebuild_focus_spirit_economy = yes
 }
 
 pwc_se_grant_focus_spirit_mil_defense_corps = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_defense_corps
-	if = {
-		limit = { has_idea = pwc_idea_mil_defense_corps }
-		remove_ideas = pwc_idea_mil_defense_corps
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_urban_fortification = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_urban_fortification
-	if = {
-		limit = { has_idea = pwc_idea_mil_urban_fortification }
-		remove_ideas = pwc_idea_mil_urban_fortification
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_officer_academy = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_officer_academy
-	if = {
-		limit = { has_idea = pwc_idea_mil_officer_academy }
-		remove_ideas = pwc_idea_mil_officer_academy
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_combined_arms = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_combined_arms
-	if = {
-		limit = { has_idea = pwc_idea_mil_combined_arms }
-		remove_ideas = pwc_idea_mil_combined_arms
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_logistics_command = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_logistics_command
-	if = {
-		limit = { has_idea = pwc_idea_mil_logistics_command }
-		remove_ideas = pwc_idea_mil_logistics_command
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_naval_command = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_naval_command
-	if = {
-		limit = { has_idea = pwc_idea_mil_naval_command }
-		remove_ideas = pwc_idea_mil_naval_command
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_apex_city_marshal = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
-	if = {
-		limit = { has_idea = pwc_idea_mil_apex_city_marshal }
-		remove_ideas = pwc_idea_mil_apex_city_marshal
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_war_foreign_office = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_foreign_office
-	if = {
-		limit = { has_idea = pwc_idea_war_foreign_office }
-		remove_ideas = pwc_idea_war_foreign_office
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_nap_framework = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_nap_framework
-	if = {
-		limit = { has_idea = pwc_idea_war_nap_framework }
-		remove_ideas = pwc_idea_war_nap_framework
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_access_agreements = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_access_agreements
-	if = {
-		limit = { has_idea = pwc_idea_war_access_agreements }
-		remove_ideas = pwc_idea_war_access_agreements
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_intelligence_bureau = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
-	if = {
-		limit = { has_idea = pwc_idea_war_intelligence_bureau }
-		remove_ideas = pwc_idea_war_intelligence_bureau
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_war_room = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_war_room
-	if = {
-		limit = { has_idea = pwc_idea_war_war_room }
-		remove_ideas = pwc_idea_war_war_room
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_propaganda_office = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_propaganda_office
-	if = {
-		limit = { has_idea = pwc_idea_war_propaganda_office }
-		remove_ideas = pwc_idea_war_propaganda_office
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_war_occupation_authority = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_war_occupation_authority
-	if = {
-		limit = { has_idea = pwc_idea_war_occupation_authority }
-		remove_ideas = pwc_idea_war_occupation_authority
-	}
 	pwc_se_rebuild_focus_spirit_diplomacy = yes
 }
 
 pwc_se_grant_focus_spirit_mil_staff_wargames = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_staff_wargames
-	if = {
-		limit = { has_idea = pwc_idea_mil_staff_wargames }
-		remove_ideas = pwc_idea_mil_staff_wargames
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_operational_intelligence = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
-	if = {
-		limit = { has_idea = pwc_idea_mil_operational_intelligence }
-		remove_ideas = pwc_idea_mil_operational_intelligence
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_reserve_system = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_reserve_system
-	if = {
-		limit = { has_idea = pwc_idea_mil_reserve_system }
-		remove_ideas = pwc_idea_mil_reserve_system
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_armaments_standardization = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
-	if = {
-		limit = { has_idea = pwc_idea_mil_armaments_standardization }
-		remove_ideas = pwc_idea_mil_armaments_standardization
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_joint_operations = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_joint_operations
-	if = {
-		limit = { has_idea = pwc_idea_mil_joint_operations }
-		remove_ideas = pwc_idea_mil_joint_operations
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_mobile_operations = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_mobile_operations
-	if = {
-		limit = { has_idea = pwc_idea_mil_mobile_operations }
-		remove_ideas = pwc_idea_mil_mobile_operations
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_mobile_reserves = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
-	if = {
-		limit = { has_idea = pwc_idea_mil_mobile_reserves }
-		remove_ideas = pwc_idea_mil_mobile_reserves
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_deep_exploitation = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
-	if = {
-		limit = { has_idea = pwc_idea_mil_deep_exploitation }
-		remove_ideas = pwc_idea_mil_deep_exploitation
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_firepower_operations = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_firepower_operations
-	if = {
-		limit = { has_idea = pwc_idea_mil_firepower_operations }
-		remove_ideas = pwc_idea_mil_firepower_operations
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_sensor_shooter_network = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
-	if = {
-		limit = { has_idea = pwc_idea_mil_sensor_shooter_network }
-		remove_ideas = pwc_idea_mil_sensor_shooter_network
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_deliberate_breakthrough = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
-	if = {
-		limit = { has_idea = pwc_idea_mil_deliberate_breakthrough }
-		remove_ideas = pwc_idea_mil_deliberate_breakthrough
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_elastic_operations = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_elastic_operations
-	if = {
-		limit = { has_idea = pwc_idea_mil_elastic_operations }
-		remove_ideas = pwc_idea_mil_elastic_operations
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_defense_in_depth = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
-	if = {
-		limit = { has_idea = pwc_idea_mil_defense_in_depth }
-		remove_ideas = pwc_idea_mil_defense_in_depth
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_counterstroke = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_counterstroke
-	if = {
-		limit = { has_idea = pwc_idea_mil_counterstroke }
-		remove_ideas = pwc_idea_mil_counterstroke
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_air_denial = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_air_denial
-	if = {
-		limit = { has_idea = pwc_idea_mil_air_denial }
-		remove_ideas = pwc_idea_mil_air_denial
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_dispersed_airbases = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
-	if = {
-		limit = { has_idea = pwc_idea_mil_dispersed_airbases }
-		remove_ideas = pwc_idea_mil_dispersed_airbases
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_interception_network = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_interception_network
-	if = {
-		limit = { has_idea = pwc_idea_mil_interception_network }
-		remove_ideas = pwc_idea_mil_interception_network
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_air_joint_strike = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
-	if = {
-		limit = { has_idea = pwc_idea_mil_air_joint_strike }
-		remove_ideas = pwc_idea_mil_air_joint_strike
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_forward_air_control = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_forward_air_control
-	if = {
-		limit = { has_idea = pwc_idea_mil_forward_air_control }
-		remove_ideas = pwc_idea_mil_forward_air_control
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_battlefield_interdiction = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
-	if = {
-		limit = { has_idea = pwc_idea_mil_battlefield_interdiction }
-		remove_ideas = pwc_idea_mil_battlefield_interdiction
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_littoral_denial = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_littoral_denial
-	if = {
-		limit = { has_idea = pwc_idea_mil_littoral_denial }
-		remove_ideas = pwc_idea_mil_littoral_denial
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_coastal_sensor_line = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
-	if = {
-		limit = { has_idea = pwc_idea_mil_coastal_sensor_line }
-		remove_ideas = pwc_idea_mil_coastal_sensor_line
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_ambush_flotillas = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
-	if = {
-		limit = { has_idea = pwc_idea_mil_ambush_flotillas }
-		remove_ideas = pwc_idea_mil_ambush_flotillas
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_sea_control = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_sea_control
-	if = {
-		limit = { has_idea = pwc_idea_mil_sea_control }
-		remove_ideas = pwc_idea_mil_sea_control
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_convoy_command = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_convoy_command
-	if = {
-		limit = { has_idea = pwc_idea_mil_convoy_command }
-		remove_ideas = pwc_idea_mil_convoy_command
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_expeditionary_support = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
-	if = {
-		limit = { has_idea = pwc_idea_mil_expeditionary_support }
-		remove_ideas = pwc_idea_mil_expeditionary_support
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_field_workshops = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_field_workshops
-	if = {
-		limit = { has_idea = pwc_idea_mil_field_workshops }
-		remove_ideas = pwc_idea_mil_field_workshops
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_mil_medical_evacuation = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
-	if = {
-		limit = { has_idea = pwc_idea_mil_medical_evacuation }
-		remove_ideas = pwc_idea_mil_medical_evacuation
-	}
 	pwc_se_rebuild_focus_spirit_defense = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_maritime_identity = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_maritime_identity }
-		remove_ideas = pwc_idea_geo_island_maritime_identity
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_fishing_fleet = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_fishing_fleet }
-		remove_ideas = pwc_idea_geo_island_fishing_fleet
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_amphibious_training = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_amphibious_training }
-		remove_ideas = pwc_idea_geo_island_amphibious_training
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_coastal_watch = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_coastal_watch }
-		remove_ideas = pwc_idea_geo_island_coastal_watch
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_typhoon_readiness = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_typhoon_readiness }
-		remove_ideas = pwc_idea_geo_island_typhoon_readiness
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_island_apex_ocean_lord = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_apex_ocean_lord }
-		remove_ideas = pwc_idea_geo_island_apex_ocean_lord
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_coast_sea_defense = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_sea_defense }
-		remove_ideas = pwc_idea_geo_coast_sea_defense
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_coast_marine_fisheries = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_marine_fisheries }
-		remove_ideas = pwc_idea_geo_coast_marine_fisheries
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_coast_maritime_trade = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_maritime_trade }
-		remove_ideas = pwc_idea_geo_coast_maritime_trade
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_coast_beachhead_training = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_beachhead_training }
-		remove_ideas = pwc_idea_geo_coast_beachhead_training
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_coast_apex_harbor_master = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_apex_harbor_master }
-		remove_ideas = pwc_idea_geo_coast_apex_harbor_master
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_frontier_border_guard = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_border_guard }
-		remove_ideas = pwc_idea_geo_frontier_border_guard
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_frontier_fortification_line = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_fortification_line }
-		remove_ideas = pwc_idea_geo_frontier_fortification_line
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_frontier_strategic_depth = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_strategic_depth }
-		remove_ideas = pwc_idea_geo_frontier_strategic_depth
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_frontier_martial_tradition = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_martial_tradition }
-		remove_ideas = pwc_idea_geo_frontier_martial_tradition
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_frontier_apex_gatekeeper = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_apex_gatekeeper }
-		remove_ideas = pwc_idea_geo_frontier_apex_gatekeeper
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_agrarian_heartland = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_agrarian_heartland }
-		remove_ideas = pwc_idea_geo_inland_agrarian_heartland
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_food_security = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_food_security
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_food_security }
-		remove_ideas = pwc_idea_geo_inland_food_security
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_labor_reserve = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_labor_reserve }
-		remove_ideas = pwc_idea_geo_inland_labor_reserve
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_militia_tradition = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_militia_tradition }
-		remove_ideas = pwc_idea_geo_inland_militia_tradition
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_interior_lines = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_interior_lines }
-		remove_ideas = pwc_idea_geo_inland_interior_lines
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_inland_apex_heartland_fortress = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_apex_heartland_fortress }
-		remove_ideas = pwc_idea_geo_inland_apex_heartland_fortress
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_city_cooperation = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_city_cooperation }
-		remove_ideas = pwc_idea_geo_generic_city_cooperation
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_public_welfare = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_public_welfare }
-		remove_ideas = pwc_idea_geo_generic_public_welfare
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_industrial_cooperation = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_industrial_cooperation }
-		remove_ideas = pwc_idea_geo_generic_industrial_cooperation
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_logistics_coordination = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_logistics_coordination }
-		remove_ideas = pwc_idea_geo_generic_logistics_coordination
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_local_mobilization = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_local_mobilization }
-		remove_ideas = pwc_idea_geo_generic_local_mobilization
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_defense_cooperation = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_defense_cooperation }
-		remove_ideas = pwc_idea_geo_generic_defense_cooperation
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_emergency_support = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_emergency_support }
-		remove_ideas = pwc_idea_geo_generic_emergency_support
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
 }
 
 pwc_se_grant_focus_spirit_geo_generic_apex_city_commonwealth = {
-	if = {
-		limit = { NOT = { has_country_flag = pwc_flag_focus_spirits_v7 } }
-		pwc_se_migrate_focus_spirits_country = yes
-	}
 	set_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_apex_city_commonwealth }
-		remove_ideas = pwc_idea_geo_generic_apex_city_commonwealth
-	}
 	pwc_se_rebuild_focus_spirit_geography = yes
-}
-
-pwc_se_migrate_focus_spirits_country = {
-	clear_variable = pwc_fs_diplomacy_v_compliance_growth_on_our_occupied_states
-	if = {
-		limit = { has_idea = pwc_idea_gov_public_order }
-		set_country_flag = pwc_flag_focus_reward_gov_public_order
-		remove_ideas = pwc_idea_gov_public_order
-	}
-	if = {
-		limit = { has_idea = pwc_idea_gov_civil_defense }
-		set_country_flag = pwc_flag_focus_reward_gov_civil_defense
-		remove_ideas = pwc_idea_gov_civil_defense
-	}
-	if = {
-		limit = { has_idea = pwc_idea_gov_streamlined_administration }
-		set_country_flag = pwc_flag_focus_reward_gov_streamlined_administration
-		remove_ideas = pwc_idea_gov_streamlined_administration
-	}
-	if = {
-		limit = { has_idea = pwc_idea_law_civil_service_exam }
-		set_country_flag = pwc_flag_focus_reward_law_civil_service_exam
-		remove_ideas = pwc_idea_law_civil_service_exam
-	}
-	if = {
-		limit = { has_idea = pwc_idea_law_emergency_powers }
-		set_country_flag = pwc_flag_focus_reward_law_emergency_powers
-		remove_ideas = pwc_idea_law_emergency_powers
-	}
-	if = {
-		limit = { has_idea = pwc_idea_law_oversight_committee }
-		set_country_flag = pwc_flag_focus_reward_law_oversight_committee
-		remove_ideas = pwc_idea_law_oversight_committee
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_construction_bureau }
-		set_country_flag = pwc_flag_focus_reward_eco_construction_bureau
-		remove_ideas = pwc_idea_eco_construction_bureau
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_resource_survey }
-		set_country_flag = pwc_flag_focus_reward_eco_resource_survey
-		remove_ideas = pwc_idea_eco_resource_survey
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_finance_reform }
-		set_country_flag = pwc_flag_focus_reward_eco_finance_reform
-		remove_ideas = pwc_idea_eco_finance_reform
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_municipal_energy }
-		set_country_flag = pwc_flag_focus_reward_eco_municipal_energy
-		remove_ideas = pwc_idea_eco_municipal_energy
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_research_institute }
-		set_country_flag = pwc_flag_focus_reward_eco_research_institute
-		remove_ideas = pwc_idea_eco_research_institute
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_trade_hub }
-		set_country_flag = pwc_flag_focus_reward_eco_trade_hub
-		remove_ideas = pwc_idea_eco_trade_hub
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_metropolitan_economy }
-		set_country_flag = pwc_flag_focus_reward_eco_metropolitan_economy
-		remove_ideas = pwc_idea_eco_metropolitan_economy
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_commerce_district }
-		set_country_flag = pwc_flag_focus_reward_eco_commerce_district
-		remove_ideas = pwc_idea_eco_commerce_district
-	}
-	if = {
-		limit = { has_idea = pwc_idea_eco_apex_powerhouse }
-		set_country_flag = pwc_flag_focus_reward_eco_apex_powerhouse
-		remove_ideas = pwc_idea_eco_apex_powerhouse
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_defense_corps }
-		set_country_flag = pwc_flag_focus_reward_mil_defense_corps
-		remove_ideas = pwc_idea_mil_defense_corps
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_urban_fortification }
-		set_country_flag = pwc_flag_focus_reward_mil_urban_fortification
-		remove_ideas = pwc_idea_mil_urban_fortification
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_officer_academy }
-		set_country_flag = pwc_flag_focus_reward_mil_officer_academy
-		remove_ideas = pwc_idea_mil_officer_academy
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_combined_arms }
-		set_country_flag = pwc_flag_focus_reward_mil_combined_arms
-		remove_ideas = pwc_idea_mil_combined_arms
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_logistics_command }
-		set_country_flag = pwc_flag_focus_reward_mil_logistics_command
-		remove_ideas = pwc_idea_mil_logistics_command
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_naval_command }
-		set_country_flag = pwc_flag_focus_reward_mil_naval_command
-		remove_ideas = pwc_idea_mil_naval_command
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_apex_city_marshal }
-		set_country_flag = pwc_flag_focus_reward_mil_apex_city_marshal
-		remove_ideas = pwc_idea_mil_apex_city_marshal
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_foreign_office }
-		set_country_flag = pwc_flag_focus_reward_war_foreign_office
-		remove_ideas = pwc_idea_war_foreign_office
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_nap_framework }
-		set_country_flag = pwc_flag_focus_reward_war_nap_framework
-		remove_ideas = pwc_idea_war_nap_framework
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_access_agreements }
-		set_country_flag = pwc_flag_focus_reward_war_access_agreements
-		remove_ideas = pwc_idea_war_access_agreements
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_intelligence_bureau }
-		set_country_flag = pwc_flag_focus_reward_war_intelligence_bureau
-		remove_ideas = pwc_idea_war_intelligence_bureau
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_war_room }
-		set_country_flag = pwc_flag_focus_reward_war_war_room
-		remove_ideas = pwc_idea_war_war_room
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_propaganda_office }
-		set_country_flag = pwc_flag_focus_reward_war_propaganda_office
-		remove_ideas = pwc_idea_war_propaganda_office
-	}
-	if = {
-		limit = { has_idea = pwc_idea_war_occupation_authority }
-		set_country_flag = pwc_flag_focus_reward_war_occupation_authority
-		remove_ideas = pwc_idea_war_occupation_authority
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_staff_wargames }
-		set_country_flag = pwc_flag_focus_reward_mil_staff_wargames
-		remove_ideas = pwc_idea_mil_staff_wargames
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_operational_intelligence }
-		set_country_flag = pwc_flag_focus_reward_mil_operational_intelligence
-		remove_ideas = pwc_idea_mil_operational_intelligence
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_reserve_system }
-		set_country_flag = pwc_flag_focus_reward_mil_reserve_system
-		remove_ideas = pwc_idea_mil_reserve_system
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_armaments_standardization }
-		set_country_flag = pwc_flag_focus_reward_mil_armaments_standardization
-		remove_ideas = pwc_idea_mil_armaments_standardization
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_joint_operations }
-		set_country_flag = pwc_flag_focus_reward_mil_joint_operations
-		remove_ideas = pwc_idea_mil_joint_operations
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_mobile_operations }
-		set_country_flag = pwc_flag_focus_reward_mil_mobile_operations
-		remove_ideas = pwc_idea_mil_mobile_operations
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_mobile_reserves }
-		set_country_flag = pwc_flag_focus_reward_mil_mobile_reserves
-		remove_ideas = pwc_idea_mil_mobile_reserves
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_deep_exploitation }
-		set_country_flag = pwc_flag_focus_reward_mil_deep_exploitation
-		remove_ideas = pwc_idea_mil_deep_exploitation
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_firepower_operations }
-		set_country_flag = pwc_flag_focus_reward_mil_firepower_operations
-		remove_ideas = pwc_idea_mil_firepower_operations
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_sensor_shooter_network }
-		set_country_flag = pwc_flag_focus_reward_mil_sensor_shooter_network
-		remove_ideas = pwc_idea_mil_sensor_shooter_network
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_deliberate_breakthrough }
-		set_country_flag = pwc_flag_focus_reward_mil_deliberate_breakthrough
-		remove_ideas = pwc_idea_mil_deliberate_breakthrough
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_elastic_operations }
-		set_country_flag = pwc_flag_focus_reward_mil_elastic_operations
-		remove_ideas = pwc_idea_mil_elastic_operations
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_defense_in_depth }
-		set_country_flag = pwc_flag_focus_reward_mil_defense_in_depth
-		remove_ideas = pwc_idea_mil_defense_in_depth
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_counterstroke }
-		set_country_flag = pwc_flag_focus_reward_mil_counterstroke
-		remove_ideas = pwc_idea_mil_counterstroke
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_air_denial }
-		set_country_flag = pwc_flag_focus_reward_mil_air_denial
-		remove_ideas = pwc_idea_mil_air_denial
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_dispersed_airbases }
-		set_country_flag = pwc_flag_focus_reward_mil_dispersed_airbases
-		remove_ideas = pwc_idea_mil_dispersed_airbases
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_interception_network }
-		set_country_flag = pwc_flag_focus_reward_mil_interception_network
-		remove_ideas = pwc_idea_mil_interception_network
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_air_joint_strike }
-		set_country_flag = pwc_flag_focus_reward_mil_air_joint_strike
-		remove_ideas = pwc_idea_mil_air_joint_strike
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_forward_air_control }
-		set_country_flag = pwc_flag_focus_reward_mil_forward_air_control
-		remove_ideas = pwc_idea_mil_forward_air_control
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_battlefield_interdiction }
-		set_country_flag = pwc_flag_focus_reward_mil_battlefield_interdiction
-		remove_ideas = pwc_idea_mil_battlefield_interdiction
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_littoral_denial }
-		set_country_flag = pwc_flag_focus_reward_mil_littoral_denial
-		remove_ideas = pwc_idea_mil_littoral_denial
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_coastal_sensor_line }
-		set_country_flag = pwc_flag_focus_reward_mil_coastal_sensor_line
-		remove_ideas = pwc_idea_mil_coastal_sensor_line
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_ambush_flotillas }
-		set_country_flag = pwc_flag_focus_reward_mil_ambush_flotillas
-		remove_ideas = pwc_idea_mil_ambush_flotillas
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_sea_control }
-		set_country_flag = pwc_flag_focus_reward_mil_sea_control
-		remove_ideas = pwc_idea_mil_sea_control
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_convoy_command }
-		set_country_flag = pwc_flag_focus_reward_mil_convoy_command
-		remove_ideas = pwc_idea_mil_convoy_command
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_expeditionary_support }
-		set_country_flag = pwc_flag_focus_reward_mil_expeditionary_support
-		remove_ideas = pwc_idea_mil_expeditionary_support
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_field_workshops }
-		set_country_flag = pwc_flag_focus_reward_mil_field_workshops
-		remove_ideas = pwc_idea_mil_field_workshops
-	}
-	if = {
-		limit = { has_idea = pwc_idea_mil_medical_evacuation }
-		set_country_flag = pwc_flag_focus_reward_mil_medical_evacuation
-		remove_ideas = pwc_idea_mil_medical_evacuation
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_maritime_identity }
-		set_country_flag = pwc_flag_focus_reward_geo_island_maritime_identity
-		remove_ideas = pwc_idea_geo_island_maritime_identity
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_fishing_fleet }
-		set_country_flag = pwc_flag_focus_reward_geo_island_fishing_fleet
-		remove_ideas = pwc_idea_geo_island_fishing_fleet
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_amphibious_training }
-		set_country_flag = pwc_flag_focus_reward_geo_island_amphibious_training
-		remove_ideas = pwc_idea_geo_island_amphibious_training
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_coastal_watch }
-		set_country_flag = pwc_flag_focus_reward_geo_island_coastal_watch
-		remove_ideas = pwc_idea_geo_island_coastal_watch
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_typhoon_readiness }
-		set_country_flag = pwc_flag_focus_reward_geo_island_typhoon_readiness
-		remove_ideas = pwc_idea_geo_island_typhoon_readiness
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_island_apex_ocean_lord }
-		set_country_flag = pwc_flag_focus_reward_geo_island_apex_ocean_lord
-		remove_ideas = pwc_idea_geo_island_apex_ocean_lord
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_sea_defense }
-		set_country_flag = pwc_flag_focus_reward_geo_coast_sea_defense
-		remove_ideas = pwc_idea_geo_coast_sea_defense
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_marine_fisheries }
-		set_country_flag = pwc_flag_focus_reward_geo_coast_marine_fisheries
-		remove_ideas = pwc_idea_geo_coast_marine_fisheries
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_maritime_trade }
-		set_country_flag = pwc_flag_focus_reward_geo_coast_maritime_trade
-		remove_ideas = pwc_idea_geo_coast_maritime_trade
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_beachhead_training }
-		set_country_flag = pwc_flag_focus_reward_geo_coast_beachhead_training
-		remove_ideas = pwc_idea_geo_coast_beachhead_training
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_coast_apex_harbor_master }
-		set_country_flag = pwc_flag_focus_reward_geo_coast_apex_harbor_master
-		remove_ideas = pwc_idea_geo_coast_apex_harbor_master
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_border_guard }
-		set_country_flag = pwc_flag_focus_reward_geo_frontier_border_guard
-		remove_ideas = pwc_idea_geo_frontier_border_guard
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_fortification_line }
-		set_country_flag = pwc_flag_focus_reward_geo_frontier_fortification_line
-		remove_ideas = pwc_idea_geo_frontier_fortification_line
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_strategic_depth }
-		set_country_flag = pwc_flag_focus_reward_geo_frontier_strategic_depth
-		remove_ideas = pwc_idea_geo_frontier_strategic_depth
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_martial_tradition }
-		set_country_flag = pwc_flag_focus_reward_geo_frontier_martial_tradition
-		remove_ideas = pwc_idea_geo_frontier_martial_tradition
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_frontier_apex_gatekeeper }
-		set_country_flag = pwc_flag_focus_reward_geo_frontier_apex_gatekeeper
-		remove_ideas = pwc_idea_geo_frontier_apex_gatekeeper
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_agrarian_heartland }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_agrarian_heartland
-		remove_ideas = pwc_idea_geo_inland_agrarian_heartland
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_food_security }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_food_security
-		remove_ideas = pwc_idea_geo_inland_food_security
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_labor_reserve }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_labor_reserve
-		remove_ideas = pwc_idea_geo_inland_labor_reserve
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_militia_tradition }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_militia_tradition
-		remove_ideas = pwc_idea_geo_inland_militia_tradition
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_interior_lines }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_interior_lines
-		remove_ideas = pwc_idea_geo_inland_interior_lines
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_inland_apex_heartland_fortress }
-		set_country_flag = pwc_flag_focus_reward_geo_inland_apex_heartland_fortress
-		remove_ideas = pwc_idea_geo_inland_apex_heartland_fortress
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_city_cooperation }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_city_cooperation
-		remove_ideas = pwc_idea_geo_generic_city_cooperation
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_public_welfare }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_public_welfare
-		remove_ideas = pwc_idea_geo_generic_public_welfare
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_industrial_cooperation }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_industrial_cooperation
-		remove_ideas = pwc_idea_geo_generic_industrial_cooperation
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_logistics_coordination }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_logistics_coordination
-		remove_ideas = pwc_idea_geo_generic_logistics_coordination
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_local_mobilization }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_local_mobilization
-		remove_ideas = pwc_idea_geo_generic_local_mobilization
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_defense_cooperation }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_defense_cooperation
-		remove_ideas = pwc_idea_geo_generic_defense_cooperation
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_emergency_support }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_emergency_support
-		remove_ideas = pwc_idea_geo_generic_emergency_support
-	}
-	if = {
-		limit = { has_idea = pwc_idea_geo_generic_apex_city_commonwealth }
-		set_country_flag = pwc_flag_focus_reward_geo_generic_apex_city_commonwealth
-		remove_ideas = pwc_idea_geo_generic_apex_city_commonwealth
-	}
-	pwc_se_rebuild_focus_spirit_governance = yes
-	pwc_se_rebuild_focus_spirit_economy = yes
-	pwc_se_rebuild_focus_spirit_defense = yes
-	pwc_se_rebuild_focus_spirit_diplomacy = yes
-	pwc_se_rebuild_focus_spirit_geography = yes
-	set_country_flag = pwc_flag_focus_spirits_v7
-}
-
-
-
-pwc_se_migrate_focus_spirits_once = {
-	if = {
-		limit = { NOT = { has_global_flag = pwc_flag_focus_spirits_world_v7 } }
-		every_possible_country = {
-			limit = { pwc_st_is_city_country = yes }
-			pwc_se_migrate_focus_spirits_country = yes
-		}
-		set_global_flag = pwc_flag_focus_spirits_world_v7
-	}
 }

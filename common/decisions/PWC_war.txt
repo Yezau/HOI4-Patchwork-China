@@ -22,6 +22,10 @@ PWC_war_category = {
 			}
 			pwc_st_target_reachable = yes
 		}
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_states_trigger = { is_owned_by = FROM }
+		}
 		visible = {
 			pwc_st_is_city_country = yes
 			NOT = { has_game_rule = { rule = pwc_war_warning option = OFF } }
@@ -59,11 +63,6 @@ PWC_war_category = {
 				num_divisions < 5
 			}
 			
-			
-			modifier = {
-				factor = 0
-				has_country_flag = pwc_flag_warning_active
-			}
 			
 			modifier = {
 				factor = 0
@@ -387,6 +386,10 @@ PWC_war_category = {
 			}
 			pwc_st_target_reachable = yes
 		}
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_states_trigger = { is_owned_by = FROM }
+		}
 		visible = {
 			pwc_st_is_city_country = yes
 			has_game_rule = { rule = pwc_war_warning option = OFF }
@@ -412,11 +415,6 @@ PWC_war_category = {
 				num_divisions < 5
 			}
 			
-			
-			modifier = {
-				factor = 0
-				has_country_flag = pwc_flag_warning_active
-			}
 			
 			modifier = {
 				factor = 0
@@ -715,89 +713,6 @@ PWC_war_category = {
                 pwc_st_regional_target_in_capital_region = no
                 pwc_st_regional_target_in_held_region = yes
             }
-		}
-	}
-
-	
-	
-	
-	pwc_dec_war_warning_countdown = {
-		icon = GFX_decision_PWC_war_warning
-		allowed = { always = no }
-		available = { hidden_trigger = { always = no } }
-		war_with_target_on_timeout = yes
-		days_mission_timeout = 30
-		fire_only_once = yes
-		is_good = yes
-		ai_will_do = { factor = 0 }
-		cancel_trigger = {
-			hidden_trigger = {
-				pwc_st_legal_war_request = no
-			}
-		}
-		cancel_effect = {
-			hidden_effect = { pwc_se_clear_war_warning = yes }
-		}
-		timeout_effect = {
-			pwc_se_on_warning_expiry = yes
-		}
-	}
-
-	
-	
-	pwc_dec_war_warning_countdown_defender = {
-		icon = GFX_decision_PWC_war_warning
-		allowed = { always = no }
-		available = { hidden_trigger = { always = no } }
-		days_mission_timeout = 30
-		fire_only_once = yes
-		is_good = no
-		ai_will_do = { factor = 0 }
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					FROM = { exists = no }
-					FROM = { has_war_with = ROOT }
-				}
-			}
-		}
-		cancel_effect = {
-			if = {
-				limit = {
-					is_in_array = {
-						array = pwc_war_warning_attackers
-						value = FROM
-					}
-				}
-				remove_from_array = {
-					array = pwc_war_warning_attackers
-					value = FROM
-				}
-				set_variable_to_random = global.pwc_alerts_dirty
-			}
-		}
-		timeout_effect = {
-			if = {
-				limit = { has_country_flag = pwc_flag_warning_from_@FROM }
-				log = "PWC WARNING countdown expired defender=[ROOT.GetName] attacker=[FROM.GetName]"
-				if = {
-					limit = { FROM = { exists = yes } }
-					remove_targeted_decision = { target = FROM decision = pwc_dec_war_warning_countdown_defender }
-				}
-				if = {
-					limit = {
-						is_in_array = {
-							array = pwc_war_warning_attackers
-							value = FROM
-						}
-					}
-					remove_from_array = {
-						array = pwc_war_warning_attackers
-						value = FROM
-					}
-					set_variable_to_random = global.pwc_alerts_dirty
-				}
-			}
 		}
 	}
 

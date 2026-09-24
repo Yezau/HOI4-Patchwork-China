@@ -46,7 +46,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "spirit_idea_entry"
-		size = { width = 300 height = 68 }
+		size = { width=60 height=68 }
 		clipping = no
 
 		iconType = {
@@ -54,13 +54,12 @@ guiTypes = {
 			quadTextureSprite ="GFX_idea_unknown"
 			orientation = "CENTER"
 			centerPosition = yes
-		    scale = 1.0
-}
+		}
 	}
 
 	containerWindowType = {
 		name = "spirit_idea_entry_small"
-		size = { width = 300 height = 68 }
+		size = { width=33 height=37 }
 		clipping = no
 
 		iconType = {
@@ -68,7 +67,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_idea_unknown"
 			orientation = "CENTER"
 			centerposition = yes
-			scale = 1.0
+			scale = 0.55
 		}
 	}
 
@@ -1254,18 +1253,18 @@ instantTextBoxType = {
 
 		gridboxtype = {
 			name = "spirit_grid"
-			position = { x = 160 y = 18 }
-			size = { width = 300 height = 68 }
-			slotsize = { width = 300 height = 68 }
+			position = { x = 280 y = 18 }
+			size = { width = 60 height = 68 }
+			slotsize = { width = 60 height = 68 }
 			max_slots = { x = 1 y = 1 }
 			format = "UPPER_LEFT"
 		}
 
 		gridboxtype = {
 			name = "spirit_grid_over_defined"
-			position = { x = 160 y = 18 }
-			size = { width = 300 height = 68 }
-			slotsize = { width = 300 height = 68 }
+			position = { x = 226 y = 18 }
+			size = { width = 33 height = 37 }
+			slotsize = { width = 33 height = 37 }
 			max_slots = { x = 1 y = 1 }
 			format = "UPPER_LEFT"
 		}

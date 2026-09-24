@@ -3,13 +3,7 @@ on_actions = {
 		effect = {
 			NTR = {
 				set_global_flag = pwc_flag_focus_startup_done
-				pwc_se_migrate_focus_spirits_once = yes
 			}
-		}
-	}
-	on_daily_NTR = {
-		effect = {
-			pwc_se_migrate_focus_spirits_once = yes
 		}
 	}
 }

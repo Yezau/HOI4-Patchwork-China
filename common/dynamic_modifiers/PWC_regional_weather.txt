@@ -1,0 +1,47 @@
+pwc_weather_typhoon = {
+    enable = { always = yes }
+    icon = GFX_modifiers_flooded_icon
+    army_speed_factor_for_controller = -0.15
+    enemy_army_speed_factor = -0.15
+    supply_factor = -0.1
+    state_production_speed_buildings_factor = -0.2
+}
+pwc_weather_fog = {
+    enable = { always = yes }
+    icon = GFX_modifiers_generic_supply
+    army_speed_factor_for_controller = -0.1
+    enemy_army_speed_factor = -0.1
+    supply_factor = -0.05
+}
+pwc_weather_freezing_rain = {
+    enable = { always = yes }
+    icon = GFX_modifiers_snow_icons
+    army_speed_factor_for_controller = -0.2
+    enemy_army_speed_factor = -0.2
+    supply_factor = -0.1
+    state_production_speed_buildings_factor = -0.1
+}
+pwc_weather_meiyu = {
+    enable = { always = yes }
+    icon = GFX_modifiers_mud_icon
+    army_speed_factor_for_controller = -0.05
+    enemy_army_speed_factor = -0.05
+    supply_factor = -0.05
+    state_production_speed_buildings_factor = -0.15
+}
+pwc_weather_cold_wave = {
+    enable = { always = yes }
+    icon = GFX_modifiers_snow_icons
+    army_speed_factor_for_controller = -0.1
+    enemy_army_speed_factor = -0.1
+    supply_factor = -0.05
+    state_production_speed_buildings_factor = -0.1
+}
+pwc_weather_heat_wave = {
+    enable = { always = yes }
+    icon = GFX_modifiers_generic_supply
+    army_speed_factor_for_controller = -0.05
+    enemy_army_speed_factor = -0.05
+    local_org_regain = -0.1
+    state_production_speed_buildings_factor = -0.1
+}

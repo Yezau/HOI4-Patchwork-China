@@ -4,7 +4,10 @@ country_event = {
     title = pwc_support_title
     desc = pwc_support_desc
     is_triggered_only = yes
-    trigger = { NOT = { has_country_flag = pwc_support_neutral } }
+    trigger = {
+        has_country_flag = pwc_support_requested
+        NOT = { has_country_flag = pwc_support_neutral }
+    }
     timeout_days = 7
     option = {
         name = pwc_support_decline

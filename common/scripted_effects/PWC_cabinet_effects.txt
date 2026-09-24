@@ -1,20 +1,5 @@
 pwc_se_init_cabinet_state = {
     set_country_flag = pwc_flag_cabinet_unlocked
-    pwc_se_reconcile_cabinet = yes
-}
-pwc_se_rebuild_seat_civil_admin = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_appoint_seat_civil_admin_1 = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -23,18 +8,6 @@ pwc_se_appoint_seat_civil_admin_1 = {
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
     add_ideas = pwc_cand_civil_city_anchor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_appoint_seat_civil_admin_2 = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -43,18 +16,6 @@ pwc_se_appoint_seat_civil_admin_2 = {
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
     add_ideas = pwc_cand_civil_veteran_administrator
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_appoint_seat_civil_admin_3 = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -63,18 +24,6 @@ pwc_se_appoint_seat_civil_admin_3 = {
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
     add_ideas = pwc_cand_civil_welfare_officer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_appoint_seat_civil_admin_4 = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -83,18 +32,6 @@ pwc_se_appoint_seat_civil_admin_4 = {
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
     add_ideas = pwc_cand_civil_city_psychologist
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_appoint_seat_civil_admin_5 = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -103,18 +40,6 @@ pwc_se_appoint_seat_civil_admin_5 = {
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
     add_ideas = pwc_cand_civil_rally_orator
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
 }
 pwc_se_dismiss_seat_civil_admin = {
     remove_ideas = pwc_cand_civil_city_anchor
@@ -122,32 +47,6 @@ pwc_se_dismiss_seat_civil_admin = {
     remove_ideas = pwc_cand_civil_welfare_officer
     remove_ideas = pwc_cand_civil_city_psychologist
     remove_ideas = pwc_cand_civil_rally_orator
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
-}
-pwc_se_rebuild_seat_economic_planning = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_appoint_seat_economic_planning_1 = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -156,18 +55,6 @@ pwc_se_appoint_seat_economic_planning_1 = {
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
     add_ideas = pwc_cand_eco_industrial_czar
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_appoint_seat_economic_planning_2 = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -176,18 +63,6 @@ pwc_se_appoint_seat_economic_planning_2 = {
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
     add_ideas = pwc_cand_eco_master_builder
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_appoint_seat_economic_planning_3 = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -196,18 +71,6 @@ pwc_se_appoint_seat_economic_planning_3 = {
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
     add_ideas = pwc_cand_eco_civilian_factory_director
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_appoint_seat_economic_planning_4 = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -216,18 +79,6 @@ pwc_se_appoint_seat_economic_planning_4 = {
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
     add_ideas = pwc_cand_eco_arsenal_director
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_appoint_seat_economic_planning_5 = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -236,18 +87,6 @@ pwc_se_appoint_seat_economic_planning_5 = {
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
     add_ideas = pwc_cand_eco_infrastructure_engineer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
 }
 pwc_se_dismiss_seat_economic_planning = {
     remove_ideas = pwc_cand_eco_industrial_czar
@@ -255,32 +94,6 @@ pwc_se_dismiss_seat_economic_planning = {
     remove_ideas = pwc_cand_eco_civilian_factory_director
     remove_ideas = pwc_cand_eco_arsenal_director
     remove_ideas = pwc_cand_eco_infrastructure_engineer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
-}
-pwc_se_rebuild_seat_finance_trade = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_appoint_seat_finance_trade_1 = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -289,18 +102,6 @@ pwc_se_appoint_seat_finance_trade_1 = {
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
     add_ideas = pwc_cand_fin_energy_broker
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_appoint_seat_finance_trade_2 = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -309,18 +110,6 @@ pwc_se_appoint_seat_finance_trade_2 = {
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
     add_ideas = pwc_cand_fin_resource_surveyor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_appoint_seat_finance_trade_3 = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -329,18 +118,6 @@ pwc_se_appoint_seat_finance_trade_3 = {
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
     add_ideas = pwc_cand_fin_lean_manager
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_appoint_seat_finance_trade_4 = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -349,18 +126,6 @@ pwc_se_appoint_seat_finance_trade_4 = {
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
     add_ideas = pwc_cand_fin_conversion_planner
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_appoint_seat_finance_trade_5 = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -369,18 +134,6 @@ pwc_se_appoint_seat_finance_trade_5 = {
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
     add_ideas = pwc_cand_fin_output_optimizer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
 }
 pwc_se_dismiss_seat_finance_trade = {
     remove_ideas = pwc_cand_fin_energy_broker
@@ -388,33 +141,6 @@ pwc_se_dismiss_seat_finance_trade = {
     remove_ideas = pwc_cand_fin_lean_manager
     remove_ideas = pwc_cand_fin_conversion_planner
     remove_ideas = pwc_cand_fin_output_optimizer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
-}
-pwc_se_rebuild_seat_science_education = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_1 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -423,19 +149,6 @@ pwc_se_appoint_seat_science_education_1 = {
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
     add_ideas = pwc_cand_sci_research_dean
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_2 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -444,19 +157,6 @@ pwc_se_appoint_seat_science_education_2 = {
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
     add_ideas = pwc_cand_sci_military_educator
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_3 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -465,19 +165,6 @@ pwc_se_appoint_seat_science_education_3 = {
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
     add_ideas = pwc_cand_sci_naval_academician
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_4 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -486,19 +173,6 @@ pwc_se_appoint_seat_science_education_4 = {
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
     add_ideas = pwc_cand_sci_flight_instructor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_appoint_seat_science_education_5 = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -507,19 +181,6 @@ pwc_se_appoint_seat_science_education_5 = {
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
     add_ideas = pwc_cand_sci_civic_teacher
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
 }
 pwc_se_dismiss_seat_science_education = {
     remove_ideas = pwc_cand_sci_research_dean
@@ -527,37 +188,6 @@ pwc_se_dismiss_seat_science_education = {
     remove_ideas = pwc_cand_sci_naval_academician
     remove_ideas = pwc_cand_sci_flight_instructor
     remove_ideas = pwc_cand_sci_civic_teacher
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
-}
-pwc_se_rebuild_seat_army_command = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_appoint_seat_army_command_1 = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -566,22 +196,6 @@ pwc_se_appoint_seat_army_command_1 = {
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
     add_ideas = pwc_cand_arm_iron_fist_commander
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_appoint_seat_army_command_2 = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -590,22 +204,6 @@ pwc_se_appoint_seat_army_command_2 = {
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
     add_ideas = pwc_cand_arm_bulwark_commander
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_appoint_seat_army_command_3 = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -614,22 +212,6 @@ pwc_se_appoint_seat_army_command_3 = {
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
     add_ideas = pwc_cand_arm_urban_assault_leader
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_appoint_seat_army_command_4 = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -638,22 +220,6 @@ pwc_se_appoint_seat_army_command_4 = {
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
     add_ideas = pwc_cand_arm_fortress_warden
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_appoint_seat_army_command_5 = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -662,22 +228,6 @@ pwc_se_appoint_seat_army_command_5 = {
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
     add_ideas = pwc_cand_arm_iron_organizer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
 }
 pwc_se_dismiss_seat_army_command = {
     remove_ideas = pwc_cand_arm_iron_fist_commander
@@ -685,39 +235,6 @@ pwc_se_dismiss_seat_army_command = {
     remove_ideas = pwc_cand_arm_urban_assault_leader
     remove_ideas = pwc_cand_arm_fortress_warden
     remove_ideas = pwc_cand_arm_iron_organizer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
-}
-pwc_se_rebuild_seat_navy_command = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_appoint_seat_navy_command_1 = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -726,21 +243,6 @@ pwc_se_appoint_seat_navy_command_1 = {
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
     add_ideas = pwc_cand_navy_blue_water_admiral
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_appoint_seat_navy_command_2 = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -749,21 +251,6 @@ pwc_se_appoint_seat_navy_command_2 = {
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
     add_ideas = pwc_cand_navy_landing_master
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_appoint_seat_navy_command_3 = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -772,21 +259,6 @@ pwc_se_appoint_seat_navy_command_3 = {
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
     add_ideas = pwc_cand_navy_amphibious_chief
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_appoint_seat_navy_command_4 = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -795,21 +267,6 @@ pwc_se_appoint_seat_navy_command_4 = {
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
     add_ideas = pwc_cand_navy_shipbuilding_superuser
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_appoint_seat_navy_command_5 = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -818,21 +275,6 @@ pwc_se_appoint_seat_navy_command_5 = {
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
     add_ideas = pwc_cand_navy_silent_commodore
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
 }
 pwc_se_dismiss_seat_navy_command = {
     remove_ideas = pwc_cand_navy_blue_water_admiral
@@ -840,37 +282,6 @@ pwc_se_dismiss_seat_navy_command = {
     remove_ideas = pwc_cand_navy_amphibious_chief
     remove_ideas = pwc_cand_navy_shipbuilding_superuser
     remove_ideas = pwc_cand_navy_silent_commodore
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
-}
-pwc_se_rebuild_seat_air_command = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_appoint_seat_air_command_1 = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -879,20 +290,6 @@ pwc_se_appoint_seat_air_command_1 = {
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
     add_ideas = pwc_cand_air_dogfight_ace
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_appoint_seat_air_command_2 = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -901,20 +298,6 @@ pwc_se_appoint_seat_air_command_2 = {
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
     add_ideas = pwc_cand_air_sky_shield
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_appoint_seat_air_command_3 = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -923,20 +306,6 @@ pwc_se_appoint_seat_air_command_3 = {
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
     add_ideas = pwc_cand_air_agility_instructor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_appoint_seat_air_command_4 = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -945,20 +314,6 @@ pwc_se_appoint_seat_air_command_4 = {
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
     add_ideas = pwc_cand_air_ground_crew_inspector
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_appoint_seat_air_command_5 = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -967,20 +322,6 @@ pwc_se_appoint_seat_air_command_5 = {
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
     add_ideas = pwc_cand_air_ace_talent_scout
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
 }
 pwc_se_dismiss_seat_air_command = {
     remove_ideas = pwc_cand_air_dogfight_ace
@@ -988,35 +329,6 @@ pwc_se_dismiss_seat_air_command = {
     remove_ideas = pwc_cand_air_agility_instructor
     remove_ideas = pwc_cand_air_ground_crew_inspector
     remove_ideas = pwc_cand_air_ace_talent_scout
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
-}
-pwc_se_rebuild_seat_logistics_command = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_appoint_seat_logistics_command_1 = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1025,19 +337,6 @@ pwc_se_appoint_seat_logistics_command_1 = {
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
     add_ideas = pwc_cand_log_supply_guardian
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_appoint_seat_logistics_command_2 = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1046,19 +345,6 @@ pwc_se_appoint_seat_logistics_command_2 = {
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
     add_ideas = pwc_cand_log_supply_line_engineer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_appoint_seat_logistics_command_3 = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1067,19 +353,6 @@ pwc_se_appoint_seat_logistics_command_3 = {
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
     add_ideas = pwc_cand_log_fuel_steward
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_appoint_seat_logistics_command_4 = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1088,19 +361,6 @@ pwc_se_appoint_seat_logistics_command_4 = {
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
     add_ideas = pwc_cand_log_retooling_master
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_appoint_seat_logistics_command_5 = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1109,19 +369,6 @@ pwc_se_appoint_seat_logistics_command_5 = {
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
     add_ideas = pwc_cand_log_salvage_expert
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
 }
 pwc_se_dismiss_seat_logistics_command = {
     remove_ideas = pwc_cand_log_supply_guardian
@@ -1129,37 +376,6 @@ pwc_se_dismiss_seat_logistics_command = {
     remove_ideas = pwc_cand_log_fuel_steward
     remove_ideas = pwc_cand_log_retooling_master
     remove_ideas = pwc_cand_log_salvage_expert
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
-}
-pwc_se_rebuild_seat_mobilization_command = {
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_1 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1168,22 +384,6 @@ pwc_se_appoint_seat_mobilization_command_1 = {
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
     add_ideas = pwc_cand_mob_morale_inspirer
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_2 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1192,22 +392,6 @@ pwc_se_appoint_seat_mobilization_command_2 = {
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
     add_ideas = pwc_cand_mob_grand_planner
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_3 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1216,22 +400,6 @@ pwc_se_appoint_seat_mobilization_command_3 = {
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
     add_ideas = pwc_cand_mob_deep_operations_scholar
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_4 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1240,22 +408,6 @@ pwc_se_appoint_seat_mobilization_command_4 = {
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
     add_ideas = pwc_cand_mob_reinforcement_specialist
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_appoint_seat_mobilization_command_5 = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1264,22 +416,6 @@ pwc_se_appoint_seat_mobilization_command_5 = {
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
     add_ideas = pwc_cand_mob_forced_march_instructor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }
 pwc_se_dismiss_seat_mobilization_command = {
     remove_ideas = pwc_cand_mob_morale_inspirer
@@ -1287,352 +423,4 @@ pwc_se_dismiss_seat_mobilization_command = {
     remove_ideas = pwc_cand_mob_deep_operations_scholar
     remove_ideas = pwc_cand_mob_reinforcement_specialist
     remove_ideas = pwc_cand_mob_forced_march_instructor
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
-}
-pwc_se_reconcile_cabinet = {
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_civil_city_anchor has_idea = pwc_cand_civil_veteran_administrator has_idea = pwc_cand_civil_welfare_officer has_idea = pwc_cand_civil_city_psychologist has_idea = pwc_cand_civil_rally_orator } } has_country_flag = pwc_flag_seat_civil_admin_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_civil_city_anchor
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_civil_veteran_administrator
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_civil_welfare_officer
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_civil_city_psychologist
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_civil_admin_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_civil_rally_orator
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_civil_admin }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_civil_admin }
-    }
-    clr_country_flag = pwc_flag_seat_civil_admin_active
-    clear_variable = pwc_seat_civil_admin_cand
-    clear_variable = pwc_seat_civil_admin_ver
-    clear_variable = pwc_seat_civil_admin_v_stability_factor
-    clear_variable = pwc_seat_civil_admin_v_political_power_factor
-    clear_variable = pwc_seat_civil_admin_v_war_support_factor
-    clear_variable = pwc_seat_civil_admin_v_stability_weekly
-    clear_variable = pwc_seat_civil_admin_v_consumer_goods_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_eco_industrial_czar has_idea = pwc_cand_eco_master_builder has_idea = pwc_cand_eco_civilian_factory_director has_idea = pwc_cand_eco_arsenal_director has_idea = pwc_cand_eco_infrastructure_engineer } } has_country_flag = pwc_flag_seat_economic_planning_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_eco_industrial_czar
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_eco_master_builder
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_eco_civilian_factory_director
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_eco_arsenal_director
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_economic_planning_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_eco_infrastructure_engineer
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_economic_planning }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_economic_planning }
-    }
-    clr_country_flag = pwc_flag_seat_economic_planning_active
-    clear_variable = pwc_seat_economic_planning_cand
-    clear_variable = pwc_seat_economic_planning_ver
-    clear_variable = pwc_seat_economic_planning_v_industrial_capacity_factory
-    clear_variable = pwc_seat_economic_planning_v_production_speed_industrial_complex_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_arms_factory_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_buildings_factor
-    clear_variable = pwc_seat_economic_planning_v_production_speed_infrastructure_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_fin_energy_broker has_idea = pwc_cand_fin_resource_surveyor has_idea = pwc_cand_fin_lean_manager has_idea = pwc_cand_fin_conversion_planner has_idea = pwc_cand_fin_output_optimizer } } has_country_flag = pwc_flag_seat_finance_trade_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_fin_energy_broker
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_fin_resource_surveyor
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_fin_lean_manager
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_fin_conversion_planner
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_finance_trade_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_fin_output_optimizer
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_finance_trade }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_finance_trade }
-    }
-    clr_country_flag = pwc_flag_seat_finance_trade_active
-    clear_variable = pwc_seat_finance_trade_cand
-    clear_variable = pwc_seat_finance_trade_ver
-    clear_variable = pwc_seat_finance_trade_v_fuel_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_local_resources_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_efficiency_gain_factor
-    clear_variable = pwc_seat_finance_trade_v_production_factory_max_efficiency_factor
-    clear_variable = pwc_seat_finance_trade_v_conversion_cost_civ_to_mil_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_sci_research_dean has_idea = pwc_cand_sci_military_educator has_idea = pwc_cand_sci_naval_academician has_idea = pwc_cand_sci_flight_instructor has_idea = pwc_cand_sci_civic_teacher } } has_country_flag = pwc_flag_seat_science_education_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_science_education_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_sci_research_dean
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_science_education_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_sci_military_educator
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_science_education_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_sci_naval_academician
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_science_education_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_sci_flight_instructor
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_science_education_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_sci_civic_teacher
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_science_education }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_science_education }
-    }
-    clr_country_flag = pwc_flag_seat_science_education_active
-    clear_variable = pwc_seat_science_education_cand
-    clear_variable = pwc_seat_science_education_ver
-    clear_variable = pwc_seat_science_education_v_research_speed_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_army_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_navy_factor
-    clear_variable = pwc_seat_science_education_v_experience_gain_air_factor
-    clear_variable = pwc_seat_science_education_v_civilian_intel_factor
-    clear_variable = pwc_seat_science_education_v_compliance_growth
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_arm_iron_fist_commander has_idea = pwc_cand_arm_bulwark_commander has_idea = pwc_cand_arm_urban_assault_leader has_idea = pwc_cand_arm_fortress_warden has_idea = pwc_cand_arm_iron_organizer } } has_country_flag = pwc_flag_seat_army_command_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_army_command_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_arm_iron_fist_commander
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_army_command_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_arm_bulwark_commander
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_army_command_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_arm_urban_assault_leader
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_army_command_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_arm_fortress_warden
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_army_command_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_arm_iron_organizer
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_army_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_army_command }
-    }
-    clr_country_flag = pwc_flag_seat_army_command_active
-    clear_variable = pwc_seat_army_command_cand
-    clear_variable = pwc_seat_army_command_ver
-    clear_variable = pwc_seat_army_command_v_army_attack_factor
-    clear_variable = pwc_seat_army_command_v_army_core_attack_factor
-    clear_variable = pwc_seat_army_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_army_command_v_experience_gain_army
-    clear_variable = pwc_seat_army_command_v_army_defence_factor
-    clear_variable = pwc_seat_army_command_v_army_core_defence_factor
-    clear_variable = pwc_seat_army_command_v_max_dig_in
-    clear_variable = pwc_seat_army_command_v_special_forces_cap_flat
-    clear_variable = pwc_seat_army_command_v_army_org_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_navy_blue_water_admiral has_idea = pwc_cand_navy_landing_master has_idea = pwc_cand_navy_amphibious_chief has_idea = pwc_cand_navy_shipbuilding_superuser has_idea = pwc_cand_navy_silent_commodore } } has_country_flag = pwc_flag_seat_navy_command_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_navy_command_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_navy_blue_water_admiral
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_navy_command_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_navy_landing_master
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_navy_command_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_navy_amphibious_chief
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_navy_command_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_navy_shipbuilding_superuser
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_navy_command_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_navy_silent_commodore
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_navy_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_navy_command }
-    }
-    clr_country_flag = pwc_flag_seat_navy_command_active
-    clear_variable = pwc_seat_navy_command_cand
-    clear_variable = pwc_seat_navy_command_ver
-    clear_variable = pwc_seat_navy_command_v_navy_max_range_factor
-    clear_variable = pwc_seat_navy_command_v_experience_gain_navy
-    clear_variable = pwc_seat_navy_command_v_convoy_escort_efficiency
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_prep_speed
-    clear_variable = pwc_seat_navy_command_v_naval_invasion_capacity
-    clear_variable = pwc_seat_navy_command_v_industrial_capacity_dockyard
-    clear_variable = pwc_seat_navy_command_v_naval_hit_chance
-    clear_variable = pwc_seat_navy_command_v_navy_visibility
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_air_dogfight_ace has_idea = pwc_cand_air_sky_shield has_idea = pwc_cand_air_agility_instructor has_idea = pwc_cand_air_ground_crew_inspector has_idea = pwc_cand_air_ace_talent_scout } } has_country_flag = pwc_flag_seat_air_command_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_air_command_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_air_dogfight_ace
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_air_command_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_air_sky_shield
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_air_command_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_air_agility_instructor
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_air_command_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_air_ground_crew_inspector
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_air_command_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_air_ace_talent_scout
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_air_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_air_command }
-    }
-    clr_country_flag = pwc_flag_seat_air_command_active
-    clear_variable = pwc_seat_air_command_cand
-    clear_variable = pwc_seat_air_command_ver
-    clear_variable = pwc_seat_air_command_v_air_attack_factor
-    clear_variable = pwc_seat_air_command_v_air_agility_factor
-    clear_variable = pwc_seat_air_command_v_air_superiority_detect_factor
-    clear_variable = pwc_seat_air_command_v_experience_gain_air
-    clear_variable = pwc_seat_air_command_v_air_defence_factor
-    clear_variable = pwc_seat_air_command_v_air_accidents_factor
-    clear_variable = pwc_seat_air_command_v_air_ace_generation_chance_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_log_supply_guardian has_idea = pwc_cand_log_supply_line_engineer has_idea = pwc_cand_log_fuel_steward has_idea = pwc_cand_log_retooling_master has_idea = pwc_cand_log_salvage_expert } } has_country_flag = pwc_flag_seat_logistics_command_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_log_supply_guardian
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_log_supply_line_engineer
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_log_fuel_steward
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_log_retooling_master
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_logistics_command_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_log_salvage_expert
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_logistics_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_logistics_command }
-    }
-    clr_country_flag = pwc_flag_seat_logistics_command_active
-    clear_variable = pwc_seat_logistics_command_cand
-    clear_variable = pwc_seat_logistics_command_ver
-    clear_variable = pwc_seat_logistics_command_v_attrition
-    clear_variable = pwc_seat_logistics_command_v_out_of_supply_factor
-    clear_variable = pwc_seat_logistics_command_v_supply_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_army_fuel_consumption_factor
-    clear_variable = pwc_seat_logistics_command_v_line_change_production_efficiency_factor
-    clear_variable = pwc_seat_logistics_command_v_equipment_capture_factor
-    if = {
-        limit = { NOT = { OR = { has_idea = pwc_cand_mob_morale_inspirer has_idea = pwc_cand_mob_grand_planner has_idea = pwc_cand_mob_deep_operations_scholar has_idea = pwc_cand_mob_reinforcement_specialist has_idea = pwc_cand_mob_forced_march_instructor } } has_country_flag = pwc_flag_seat_mobilization_command_active }
-        if = {
-            limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 1 compare = equals } }
-            add_ideas = pwc_cand_mob_morale_inspirer
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 2 compare = equals } }
-            add_ideas = pwc_cand_mob_grand_planner
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 3 compare = equals } }
-            add_ideas = pwc_cand_mob_deep_operations_scholar
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 4 compare = equals } }
-            add_ideas = pwc_cand_mob_reinforcement_specialist
-        }
-        else_if = {
-            limit = { check_variable = { var = pwc_seat_mobilization_command_cand value = 5 compare = equals } }
-            add_ideas = pwc_cand_mob_forced_march_instructor
-        }
-    }
-    if = {
-        limit = { has_dynamic_modifier = pwc_dm_seat_mobilization_command }
-        remove_dynamic_modifier = { modifier = pwc_dm_seat_mobilization_command }
-    }
-    clr_country_flag = pwc_flag_seat_mobilization_command_active
-    clear_variable = pwc_seat_mobilization_command_cand
-    clear_variable = pwc_seat_mobilization_command_ver
-    clear_variable = pwc_seat_mobilization_command_v_army_morale_factor
-    clear_variable = pwc_seat_mobilization_command_v_planning_speed
-    clear_variable = pwc_seat_mobilization_command_v_training_time_factor
-    clear_variable = pwc_seat_mobilization_command_v_max_planning
-    clear_variable = pwc_seat_mobilization_command_v_dig_in_speed_factor
-    clear_variable = pwc_seat_mobilization_command_v_land_reinforce_rate
-    clear_variable = pwc_seat_mobilization_command_v_weekly_manpower
-    clear_variable = pwc_seat_mobilization_command_v_org_loss_when_moving
-    clear_variable = pwc_seat_mobilization_command_v_army_speed_factor
 }

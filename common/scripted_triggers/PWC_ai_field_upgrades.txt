@@ -8,8 +8,17 @@ pwc_st_ai_refit_allowed = {
         has_country_flag = pwc_ai_coastal
         has_country_flag = pwc_ai_air_power
     }
-    num_of_military_factories > 11
-    num_divisions > 23
+    OR = {
+        AND = {
+            num_of_military_factories > 11
+            num_divisions > 23
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            num_of_military_factories > 7
+            num_divisions > 7
+        }
+    }
     surrender_progress < 0.15
     NOT = {
         has_country_flag = pwc_ai_refit_cooldown
@@ -17,11 +26,6 @@ pwc_st_ai_refit_allowed = {
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 15929
     has_equipment = { pwc_equipment_anti_air > 26 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
@@ -33,15 +37,27 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_1 = 
     has_equipment = { pwc_platform_heavy_tank > 179 }
     has_equipment = { pwc_platform_medium_tank > 899 }
     has_equipment = { pwc_platform_tank_destroyer > 202 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 31859
     has_equipment = { pwc_equipment_anti_air > 38 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
@@ -53,15 +69,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_2 = 
     has_equipment = { pwc_platform_heavy_tank > 259 }
     has_equipment = { pwc_platform_medium_tank > 1299 }
     has_equipment = { pwc_platform_tank_destroyer > 292 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 63719
     has_equipment = { pwc_equipment_anti_air > 62 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
@@ -73,15 +89,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_4 = 
     has_equipment = { pwc_platform_heavy_tank > 419 }
     has_equipment = { pwc_platform_medium_tank > 2099 }
     has_equipment = { pwc_platform_tank_destroyer > 472 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 127439
     has_equipment = { pwc_equipment_anti_air > 110 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
@@ -93,15 +109,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_armored_recovery_batch_8 = 
     has_equipment = { pwc_platform_heavy_tank > 739 }
     has_equipment = { pwc_platform_medium_tank > 3699 }
     has_equipment = { pwc_platform_tank_destroyer > 832 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 15929
     has_equipment = { pwc_equipment_anti_air > 26 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 26 }
@@ -112,15 +128,27 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_1 = {
     has_equipment = { pwc_platform_heavy_tank > 179 }
     has_equipment = { pwc_platform_medium_tank > 899 }
     has_equipment = { pwc_platform_tank_destroyer > 202 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 31859
     has_equipment = { pwc_equipment_anti_air > 38 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 38 }
@@ -131,15 +159,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_2 = {
     has_equipment = { pwc_platform_heavy_tank > 259 }
     has_equipment = { pwc_platform_medium_tank > 1299 }
     has_equipment = { pwc_platform_tank_destroyer > 292 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_4 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 63719
     has_equipment = { pwc_equipment_anti_air > 62 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 62 }
@@ -150,15 +178,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_4 = {
     has_equipment = { pwc_platform_heavy_tank > 419 }
     has_equipment = { pwc_platform_medium_tank > 2099 }
     has_equipment = { pwc_platform_tank_destroyer > 472 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_8 = {
     pwc_st_ai_recruitment_armored_36w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 127439
     has_equipment = { pwc_equipment_anti_air > 110 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 110 }
@@ -169,15 +197,15 @@ pwc_st_ai_refit_armored_36w_project_assault_engineer_batch_8 = {
     has_equipment = { pwc_platform_heavy_tank > 739 }
     has_equipment = { pwc_platform_medium_tank > 3699 }
     has_equipment = { pwc_platform_tank_destroyer > 832 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_armored_36w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 15879
     has_equipment = { pwc_equipment_anti_air > 26 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
@@ -188,15 +216,27 @@ pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_1 = {
     has_equipment = { pwc_platform_heavy_tank > 179 }
     has_equipment = { pwc_platform_medium_tank > 899 }
     has_equipment = { pwc_platform_tank_destroyer > 202 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_armored_36w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 31759
     has_equipment = { pwc_equipment_anti_air > 38 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
@@ -207,15 +247,15 @@ pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_2 = {
     has_equipment = { pwc_platform_heavy_tank > 259 }
     has_equipment = { pwc_platform_medium_tank > 1299 }
     has_equipment = { pwc_platform_tank_destroyer > 292 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_armored_36w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 63519
     has_equipment = { pwc_equipment_anti_air > 62 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
@@ -226,15 +266,15 @@ pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_4 = {
     has_equipment = { pwc_platform_heavy_tank > 419 }
     has_equipment = { pwc_platform_medium_tank > 2099 }
     has_equipment = { pwc_platform_tank_destroyer > 472 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_armored_36w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 127039
     has_equipment = { pwc_equipment_anti_air > 110 }
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
@@ -245,15 +285,15 @@ pwc_st_ai_refit_armored_36w_project_armored_recovery_batch_8 = {
     has_equipment = { pwc_platform_heavy_tank > 739 }
     has_equipment = { pwc_platform_medium_tank > 3699 }
     has_equipment = { pwc_platform_tank_destroyer > 832 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_default_batch_1 = {
     pwc_st_ai_recruitment_armored_36w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 15879
     has_equipment = { pwc_equipment_anti_air > 26 }
     has_equipment = { pwc_equipment_infantry > 1507 }
@@ -263,15 +303,27 @@ pwc_st_ai_refit_armored_36w_default_batch_1 = {
     has_equipment = { pwc_platform_heavy_tank > 179 }
     has_equipment = { pwc_platform_medium_tank > 899 }
     has_equipment = { pwc_platform_tank_destroyer > 202 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_default_batch_2 = {
     pwc_st_ai_recruitment_armored_36w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 31759
     has_equipment = { pwc_equipment_anti_air > 38 }
     has_equipment = { pwc_equipment_infantry > 2177 }
@@ -281,15 +333,15 @@ pwc_st_ai_refit_armored_36w_default_batch_2 = {
     has_equipment = { pwc_platform_heavy_tank > 259 }
     has_equipment = { pwc_platform_medium_tank > 1299 }
     has_equipment = { pwc_platform_tank_destroyer > 292 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_default_batch_4 = {
     pwc_st_ai_recruitment_armored_36w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 63519
     has_equipment = { pwc_equipment_anti_air > 62 }
     has_equipment = { pwc_equipment_infantry > 3517 }
@@ -299,15 +351,15 @@ pwc_st_ai_refit_armored_36w_default_batch_4 = {
     has_equipment = { pwc_platform_heavy_tank > 419 }
     has_equipment = { pwc_platform_medium_tank > 2099 }
     has_equipment = { pwc_platform_tank_destroyer > 472 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_36w_default_batch_8 = {
     pwc_st_ai_recruitment_armored_36w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 127039
     has_equipment = { pwc_equipment_anti_air > 110 }
     has_equipment = { pwc_equipment_infantry > 6197 }
@@ -317,15 +369,15 @@ pwc_st_ai_refit_armored_36w_default_batch_8 = {
     has_equipment = { pwc_platform_heavy_tank > 739 }
     has_equipment = { pwc_platform_medium_tank > 3699 }
     has_equipment = { pwc_platform_tank_destroyer > 832 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_18w_default_batch_1 = {
     pwc_st_ai_recruitment_armored_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 10559
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_mechanized > 539 }
@@ -333,15 +385,27 @@ pwc_st_ai_refit_armored_18w_default_batch_1 = {
     has_equipment = { pwc_equipment_support > 157 }
     has_equipment = { pwc_platform_medium_tank > 337 }
     has_equipment = { pwc_platform_tank_destroyer > 22 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_18w_default_batch_2 = {
     pwc_st_ai_recruitment_armored_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 21119
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_mechanized > 779 }
@@ -349,15 +413,15 @@ pwc_st_ai_refit_armored_18w_default_batch_2 = {
     has_equipment = { pwc_equipment_support > 227 }
     has_equipment = { pwc_platform_medium_tank > 487 }
     has_equipment = { pwc_platform_tank_destroyer > 32 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_18w_default_batch_4 = {
     pwc_st_ai_recruitment_armored_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 42239
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_mechanized > 1259 }
@@ -365,15 +429,15 @@ pwc_st_ai_refit_armored_18w_default_batch_4 = {
     has_equipment = { pwc_equipment_support > 367 }
     has_equipment = { pwc_platform_medium_tank > 787 }
     has_equipment = { pwc_platform_tank_destroyer > 52 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_18w_default_batch_8 = {
     pwc_st_ai_recruitment_armored_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 84479
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_mechanized > 2219 }
@@ -381,75 +445,87 @@ pwc_st_ai_refit_armored_18w_default_batch_8 = {
     has_equipment = { pwc_equipment_support > 647 }
     has_equipment = { pwc_platform_medium_tank > 1387 }
     has_equipment = { pwc_platform_tank_destroyer > 92 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_entry_18w_default_batch_1 = {
     pwc_st_ai_recruitment_armored_entry_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 10379
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_mechanized > 539 }
     has_equipment = { pwc_equipment_motorized > 67 }
     has_equipment = { pwc_equipment_support > 157 }
     has_equipment = { pwc_platform_medium_tank > 337 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_entry_18w_default_batch_2 = {
     pwc_st_ai_recruitment_armored_entry_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 20759
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_mechanized > 779 }
     has_equipment = { pwc_equipment_motorized > 97 }
     has_equipment = { pwc_equipment_support > 227 }
     has_equipment = { pwc_platform_medium_tank > 487 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_entry_18w_default_batch_4 = {
     pwc_st_ai_recruitment_armored_entry_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 41519
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_mechanized > 1259 }
     has_equipment = { pwc_equipment_motorized > 157 }
     has_equipment = { pwc_equipment_support > 367 }
     has_equipment = { pwc_platform_medium_tank > 787 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_armored_entry_18w_default_batch_8 = {
     pwc_st_ai_recruitment_armored_entry_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 83039
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_mechanized > 2219 }
     has_equipment = { pwc_equipment_motorized > 277 }
     has_equipment = { pwc_equipment_support > 647 }
     has_equipment = { pwc_platform_medium_tank > 1387 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9929
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
     has_equipment = { pwc_equipment_artillery > 107 }
@@ -457,15 +533,27 @@ pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_1 = {
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_motorized > 517 }
     has_equipment = { pwc_equipment_support > 123 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 19859
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
     has_equipment = { pwc_equipment_artillery > 155 }
@@ -473,15 +561,15 @@ pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_2 = {
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_motorized > 747 }
     has_equipment = { pwc_equipment_support > 178 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 39719
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
     has_equipment = { pwc_equipment_artillery > 251 }
@@ -489,15 +577,15 @@ pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_4 = {
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_motorized > 1207 }
     has_equipment = { pwc_equipment_support > 288 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 79439
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
     has_equipment = { pwc_equipment_artillery > 443 }
@@ -505,191 +593,227 @@ pwc_st_ai_refit_mobile_18w_project_assault_engineer_armored_recovery_batch_8 = {
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_motorized > 2127 }
     has_equipment = { pwc_equipment_support > 508 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_1 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9429
     has_equipment = { pwc_equipment_artillery > 107 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 26 }
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_motorized > 517 }
     has_equipment = { pwc_equipment_support > 89 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_2 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 18859
     has_equipment = { pwc_equipment_artillery > 155 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 38 }
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_motorized > 747 }
     has_equipment = { pwc_equipment_support > 129 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_4 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 37719
     has_equipment = { pwc_equipment_artillery > 251 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 62 }
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_motorized > 1207 }
     has_equipment = { pwc_equipment_support > 209 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_assault_engineer_batch_8 = {
     pwc_st_ai_recruitment_mobile_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 75439
     has_equipment = { pwc_equipment_artillery > 443 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 110 }
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_motorized > 2127 }
     has_equipment = { pwc_equipment_support > 369 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9879
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
     has_equipment = { pwc_equipment_artillery > 107 }
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_motorized > 517 }
     has_equipment = { pwc_equipment_support > 146 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 19759
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
     has_equipment = { pwc_equipment_artillery > 155 }
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_motorized > 747 }
     has_equipment = { pwc_equipment_support > 211 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 39519
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
     has_equipment = { pwc_equipment_artillery > 251 }
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_motorized > 1207 }
     has_equipment = { pwc_equipment_support > 341 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mobile_18w_project_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_mobile_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 79039
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
     has_equipment = { pwc_equipment_artillery > 443 }
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_motorized > 2127 }
     has_equipment = { pwc_equipment_support > 601 }
-    has_fuel > 1999
-}
-pwc_st_ai_refit_mobile_18w_default_batch_1 = {
-    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
-    has_manpower > 9379
-    has_equipment = { pwc_equipment_artillery > 107 }
-    has_equipment = { pwc_equipment_infantry > 1597 }
-    has_equipment = { pwc_equipment_motorized > 517 }
-    has_equipment = { pwc_equipment_support > 112 }
-    has_fuel > 1999
-}
-pwc_st_ai_refit_mobile_18w_default_batch_2 = {
-    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
-    has_manpower > 18759
-    has_equipment = { pwc_equipment_artillery > 155 }
-    has_equipment = { pwc_equipment_infantry > 2307 }
-    has_equipment = { pwc_equipment_motorized > 747 }
-    has_equipment = { pwc_equipment_support > 162 }
-    has_fuel > 1999
-}
-pwc_st_ai_refit_mobile_18w_default_batch_4 = {
-    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
-    has_manpower > 37519
-    has_equipment = { pwc_equipment_artillery > 251 }
-    has_equipment = { pwc_equipment_infantry > 3727 }
-    has_equipment = { pwc_equipment_motorized > 1207 }
-    has_equipment = { pwc_equipment_support > 262 }
-    has_fuel > 1999
-}
-pwc_st_ai_refit_mobile_18w_default_batch_8 = {
-    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
     check_variable = {
         var = pwc_ai_refit_total
         value = 400
         compare = greater_than_or_equals
     }
+    has_fuel > 1999
+}
+pwc_st_ai_refit_mobile_18w_default_batch_1 = {
+    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
+    has_manpower > 9379
+    has_equipment = { pwc_equipment_artillery > 107 }
+    has_equipment = { pwc_equipment_infantry > 1597 }
+    has_equipment = { pwc_equipment_motorized > 517 }
+    has_equipment = { pwc_equipment_support > 112 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
+    has_fuel > 1999
+}
+pwc_st_ai_refit_mobile_18w_default_batch_2 = {
+    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
+    has_manpower > 18759
+    has_equipment = { pwc_equipment_artillery > 155 }
+    has_equipment = { pwc_equipment_infantry > 2307 }
+    has_equipment = { pwc_equipment_motorized > 747 }
+    has_equipment = { pwc_equipment_support > 162 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
+    has_fuel > 1999
+}
+pwc_st_ai_refit_mobile_18w_default_batch_4 = {
+    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
+    has_manpower > 37519
+    has_equipment = { pwc_equipment_artillery > 251 }
+    has_equipment = { pwc_equipment_infantry > 3727 }
+    has_equipment = { pwc_equipment_motorized > 1207 }
+    has_equipment = { pwc_equipment_support > 262 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
+    has_fuel > 1999
+}
+pwc_st_ai_refit_mobile_18w_default_batch_8 = {
+    pwc_st_ai_recruitment_mobile_18w_default_ready = yes
     has_manpower > 75039
     has_equipment = { pwc_equipment_artillery > 443 }
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_motorized > 2127 }
     has_equipment = { pwc_equipment_support > 462 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9929
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
     has_equipment = { pwc_equipment_artillery > 107 }
@@ -698,15 +822,27 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_1
     has_equipment = { pwc_equipment_mechanized > 539 }
     has_equipment = { pwc_equipment_motorized > 44 }
     has_equipment = { pwc_equipment_support > 123 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 19859
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
     has_equipment = { pwc_equipment_artillery > 155 }
@@ -715,15 +851,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_2
     has_equipment = { pwc_equipment_mechanized > 779 }
     has_equipment = { pwc_equipment_motorized > 64 }
     has_equipment = { pwc_equipment_support > 178 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 39719
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
     has_equipment = { pwc_equipment_artillery > 251 }
@@ -732,15 +868,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_4
     has_equipment = { pwc_equipment_mechanized > 1259 }
     has_equipment = { pwc_equipment_motorized > 104 }
     has_equipment = { pwc_equipment_support > 288 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 79439
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
     has_equipment = { pwc_equipment_artillery > 443 }
@@ -749,15 +885,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_armored_recovery_batch_8
     has_equipment = { pwc_equipment_mechanized > 2219 }
     has_equipment = { pwc_equipment_motorized > 184 }
     has_equipment = { pwc_equipment_support > 508 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_1 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9429
     has_equipment = { pwc_equipment_artillery > 107 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 26 }
@@ -765,15 +901,27 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_1 = {
     has_equipment = { pwc_equipment_mechanized > 539 }
     has_equipment = { pwc_equipment_motorized > 44 }
     has_equipment = { pwc_equipment_support > 89 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_2 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 18859
     has_equipment = { pwc_equipment_artillery > 155 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 38 }
@@ -781,15 +929,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_2 = {
     has_equipment = { pwc_equipment_mechanized > 779 }
     has_equipment = { pwc_equipment_motorized > 64 }
     has_equipment = { pwc_equipment_support > 129 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_4 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 37719
     has_equipment = { pwc_equipment_artillery > 251 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 62 }
@@ -797,15 +945,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_4 = {
     has_equipment = { pwc_equipment_mechanized > 1259 }
     has_equipment = { pwc_equipment_motorized > 104 }
     has_equipment = { pwc_equipment_support > 209 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_8 = {
     pwc_st_ai_recruitment_mechanized_18w_project_assault_engineer_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 75439
     has_equipment = { pwc_equipment_artillery > 443 }
     has_equipment = { pwc_equipment_assault_engineer_vehicle > 110 }
@@ -813,15 +961,15 @@ pwc_st_ai_refit_mechanized_18w_project_assault_engineer_batch_8 = {
     has_equipment = { pwc_equipment_mechanized > 2219 }
     has_equipment = { pwc_equipment_motorized > 184 }
     has_equipment = { pwc_equipment_support > 369 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_1 = {
     pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9879
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 33 }
     has_equipment = { pwc_equipment_artillery > 107 }
@@ -829,15 +977,27 @@ pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_1 = {
     has_equipment = { pwc_equipment_mechanized > 539 }
     has_equipment = { pwc_equipment_motorized > 44 }
     has_equipment = { pwc_equipment_support > 146 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_2 = {
     pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 19759
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 48 }
     has_equipment = { pwc_equipment_artillery > 155 }
@@ -845,15 +1005,15 @@ pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_2 = {
     has_equipment = { pwc_equipment_mechanized > 779 }
     has_equipment = { pwc_equipment_motorized > 64 }
     has_equipment = { pwc_equipment_support > 211 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_4 = {
     pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 39519
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 78 }
     has_equipment = { pwc_equipment_artillery > 251 }
@@ -861,15 +1021,15 @@ pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_4 = {
     has_equipment = { pwc_equipment_mechanized > 1259 }
     has_equipment = { pwc_equipment_motorized > 104 }
     has_equipment = { pwc_equipment_support > 341 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_8 = {
     pwc_st_ai_recruitment_mechanized_18w_project_armored_recovery_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 79039
     has_equipment = { pwc_equipment_armored_recovery_vehicle > 138 }
     has_equipment = { pwc_equipment_artillery > 443 }
@@ -877,65 +1037,82 @@ pwc_st_ai_refit_mechanized_18w_project_armored_recovery_batch_8 = {
     has_equipment = { pwc_equipment_mechanized > 2219 }
     has_equipment = { pwc_equipment_motorized > 184 }
     has_equipment = { pwc_equipment_support > 601 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_default_batch_1 = {
     pwc_st_ai_recruitment_mechanized_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 24
-        compare = greater_than_or_equals
-    }
     has_manpower > 9379
     has_equipment = { pwc_equipment_artillery > 107 }
     has_equipment = { pwc_equipment_infantry > 1597 }
     has_equipment = { pwc_equipment_mechanized > 539 }
     has_equipment = { pwc_equipment_motorized > 44 }
     has_equipment = { pwc_equipment_support > 112 }
+    OR = {
+        AND = {
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 24
+                compare = greater_than_or_equals
+            }
+        }
+        AND = {
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            check_variable = {
+                var = pwc_ai_refit_total
+                value = 8
+                compare = greater_than_or_equals
+            }
+        }
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_default_batch_2 = {
     pwc_st_ai_recruitment_mechanized_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 100
-        compare = greater_than_or_equals
-    }
     has_manpower > 18759
     has_equipment = { pwc_equipment_artillery > 155 }
     has_equipment = { pwc_equipment_infantry > 2307 }
     has_equipment = { pwc_equipment_mechanized > 779 }
     has_equipment = { pwc_equipment_motorized > 64 }
     has_equipment = { pwc_equipment_support > 162 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 100
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_default_batch_4 = {
     pwc_st_ai_recruitment_mechanized_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 200
-        compare = greater_than_or_equals
-    }
     has_manpower > 37519
     has_equipment = { pwc_equipment_artillery > 251 }
     has_equipment = { pwc_equipment_infantry > 3727 }
     has_equipment = { pwc_equipment_mechanized > 1259 }
     has_equipment = { pwc_equipment_motorized > 104 }
     has_equipment = { pwc_equipment_support > 262 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 200
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }
 pwc_st_ai_refit_mechanized_18w_default_batch_8 = {
     pwc_st_ai_recruitment_mechanized_18w_default_ready = yes
-    check_variable = {
-        var = pwc_ai_refit_total
-        value = 400
-        compare = greater_than_or_equals
-    }
     has_manpower > 75039
     has_equipment = { pwc_equipment_artillery > 443 }
     has_equipment = { pwc_equipment_infantry > 6567 }
     has_equipment = { pwc_equipment_mechanized > 2219 }
     has_equipment = { pwc_equipment_motorized > 184 }
     has_equipment = { pwc_equipment_support > 462 }
+    check_variable = {
+        var = pwc_ai_refit_total
+        value = 400
+        compare = greater_than_or_equals
+    }
     has_fuel > 1999
 }

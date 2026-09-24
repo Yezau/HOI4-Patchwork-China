@@ -1,0 +1,263 @@
+scripted_gui = {
+    PWC_state_heritage_gui = {
+        context_type = selected_state_context
+        window_name = "PWC_state_heritage_window"
+        parent_window_token = selected_state_view
+        ai_enabled = { always = no }
+        visible = {
+            OR = {
+                state = 23
+                state = 24
+                state = 29
+                state = 31
+                state = 32
+                state = 40
+                state = 46
+                state = 50
+                state = 51
+                state = 55
+                state = 56
+                state = 58
+                state = 59
+                state = 60
+                state = 62
+                state = 65
+                state = 71
+                state = 74
+                state = 76
+                state = 77
+                state = 78
+                state = 79
+                state = 80
+                state = 81
+                state = 82
+                state = 87
+                state = 91
+                state = 92
+                state = 97
+                state = 98
+                state = 104
+                state = 109
+                state = 117
+                state = 119
+                state = 132
+                state = 134
+                state = 135
+                state = 140
+                state = 144
+                state = 151
+                state = 157
+                state = 158
+                state = 161
+                state = 162
+                state = 165
+                state = 166
+                state = 167
+                state = 170
+                state = 173
+                state = 187
+                state = 190
+                state = 197
+                state = 198
+                state = 202
+                state = 208
+                state = 214
+                state = 216
+                state = 222
+                state = 223
+                state = 225
+                state = 228
+                state = 229
+                state = 236
+                state = 238
+                state = 244
+                state = 248
+                state = 249
+                state = 255
+                state = 262
+                state = 263
+                state = 265
+                state = 266
+                state = 267
+                state = 271
+                state = 280
+                state = 281
+                state = 285
+                state = 287
+                state = 288
+                state = 293
+                state = 303
+                state = 307
+                state = 311
+                state = 312
+                state = 318
+                state = 319
+                state = 320
+                state = 324
+                state = 327
+                state = 328
+                state = 336
+                state = 337
+                state = 344
+                state = 346
+                state = 353
+                state = 357
+                state = 358
+                state = 366
+                state = 377
+                state = 381
+                state = 383
+                state = 385
+                state = 387
+                state = 391
+                state = 506
+                state = 510
+                state = 525
+            }
+        }
+        triggers = {
+            pwc_heritage_wunu_mountain_city_visible = { state = 65 }
+            pwc_heritage_shenyang_palace_and_tombs_visible = { state = 50 }
+            pwc_heritage_yongling_tomb_visible = { state = 60 }
+            pwc_heritage_niuheliang_site_visible = { state = 62 }
+            pwc_heritage_koguryo_jian_visible = { state = 51 }
+            pwc_heritage_jilin_confucian_temple_and_ashihada_visible = { state = 40 }
+            pwc_heritage_jin_shangjing_visible = { state = 24 }
+            pwc_heritage_yagou_carvings_visible = { state = 24 }
+            pwc_heritage_bohai_shangjing_visible = { state = 29 }
+            pwc_heritage_beijing_central_axis_visible = { state = 74 }
+            pwc_heritage_yunju_temple_stone_sutras_visible = { state = 74 }
+            pwc_heritage_juyongguan_badaling_visible = { state = 74 }
+            pwc_heritage_dule_temple_visible = { state = 82 }
+            pwc_heritage_qianxiang_temple_carvings_visible = { state = 82 }
+            pwc_heritage_grand_canal_tianjin_visible = { state = 82 }
+            pwc_heritage_shanhaiguan_visible = { state = 78 }
+            pwc_heritage_zhengding_old_town_visible = { state = 98 }
+            pwc_heritage_zhaozhou_bridge_visible = { state = 98 }
+            pwc_heritage_chengde_mountain_resort_visible = { state = 59 }
+            pwc_heritage_pingyao_ancient_city_visible = { state = 109 }
+            pwc_heritage_yungang_grottoes_visible = { state = 77 }
+            pwc_heritage_mount_wutai_visible = { state = 87 }
+            pwc_heritage_yingxian_wooden_pagoda_visible = { state = 80 }
+            pwc_heritage_mount_tai_visible = { state = 134 }
+            pwc_heritage_qufu_three_confucian_sites_visible = { state = 144 }
+            pwc_heritage_qi_great_wall_changqing_visible = { state = 119 }
+            pwc_heritage_grand_canal_nanwang_visible = { state = 144 }
+            pwc_heritage_grand_canal_taierzhuang_visible = { state = 158 }
+            pwc_heritage_yinxu_visible = { state = 135 }
+            pwc_heritage_longmen_grottoes_visible = { state = 166 }
+            pwc_heritage_dengfeng_centre_of_heaven_and_earth_visible = { state = 167 }
+            pwc_heritage_white_horse_temple_visible = { state = 166 }
+            pwc_heritage_guangfulin_site_visible = { state = 228 }
+            pwc_heritage_qinglong_town_site_visible = { state = 228 }
+            pwc_heritage_zhujiajiao_town_visible = { state = 228 }
+            pwc_heritage_songjiang_square_pagoda_visible = { state = 228 }
+            pwc_heritage_suzhou_classical_gardens_visible = { state = 216 }
+            pwc_heritage_yangzhou_canal_and_salt_visible = { state = 197 }
+            pwc_heritage_qingkou_hydraulic_hub_visible = { state = 187 }
+            pwc_heritage_ming_xiaoling_visible = { state = 214 }
+            pwc_heritage_liangzhu_ancient_city_visible = { state = 248 }
+            pwc_heritage_west_lake_visible = { state = 248 }
+            pwc_heritage_grand_canal_hangzhou_visible = { state = 248 }
+            pwc_heritage_longquan_kilns_visible = { state = 285 }
+            pwc_heritage_xidi_hongcun_visible = { state = 249 }
+            pwc_heritage_huizhou_old_town_and_tangyue_visible = { state = 249 }
+            pwc_heritage_shouxian_city_wall_visible = { state = 173 }
+            pwc_heritage_quanzhou_maritime_heritage_visible = { state = 328 }
+            pwc_heritage_fujian_tulou_yongding_visible = { state = 327 }
+            pwc_heritage_fujian_tulou_zhangzhou_visible = { state = 336 }
+            pwc_heritage_chengcun_han_city_visible = { state = 293 }
+            pwc_heritage_fuzhou_three_lanes_seven_alleys_visible = { state = 319 }
+            pwc_heritage_tamsui_fort_santo_domingo_visible = { state = 506 }
+            pwc_heritage_anping_fort_visible = { state = 358 }
+            pwc_heritage_lukang_old_street_visible = { state = 510 }
+            pwc_heritage_kinmen_settlements_visible = { state = 525 }
+            pwc_heritage_wudang_mountains_visible = { state = 198 }
+            pwc_heritage_jingzhou_city_wall_visible = { state = 244 }
+            pwc_heritage_gulongzhong_visible = { state = 208 }
+            pwc_heritage_ming_xianling_visible = { state = 225 }
+            pwc_heritage_yuelu_academy_visible = { state = 287 }
+            pwc_heritage_fenghuang_old_town_visible = { state = 271 }
+            pwc_heritage_tongguan_kilns_visible = { state = 287 }
+            pwc_heritage_yueyang_tower_visible = { state = 265 }
+            pwc_heritage_lushan_bailudong_academy_visible = { state = 266 }
+            pwc_heritage_jingdezhen_imperial_kilns_visible = { state = 262 }
+            pwc_heritage_longhu_mountain_visible = { state = 288 }
+            pwc_heritage_tengwang_pavilion_visible = { state = 281 }
+            pwc_heritage_nanyue_palace_and_tomb_visible = { state = 357 }
+            pwc_heritage_nanhai_god_temple_visible = { state = 357 }
+            pwc_heritage_huaisheng_lighthouse_minaret_visible = { state = 357 }
+            pwc_heritage_chaozhou_old_town_visible = { state = 353 }
+            pwc_heritage_lingqu_canal_visible = { state = 324 }
+            pwc_heritage_zuojiang_huashan_rock_art_visible = { state = 366 }
+            pwc_heritage_hepu_han_tombs_and_port_visible = { state = 383 }
+            pwc_heritage_huangyao_old_town_visible = { state = 337 }
+            pwc_heritage_yazhou_old_town_visible = { state = 391 }
+            pwc_heritage_dongpo_academy_visible = { state = 385 }
+            pwc_heritage_li_boat_shaped_houses_visible = { state = 387 }
+            pwc_heritage_ping_shan_heritage_trail_visible = { state = 377 }
+            pwc_heritage_walled_villages_lung_yeuk_tau_kam_tin_visible = { state = 377 }
+            pwc_heritage_tung_lung_fort_visible = { state = 377 }
+            pwc_heritage_historic_centre_of_macao_visible = { state = 381 }
+            pwc_heritage_macao_a_ma_temple_and_ruins_visible = { state = 381 }
+            pwc_heritage_dujiangyan_and_qingcheng_visible = { state = 229 }
+            pwc_heritage_sanxingdui_site_visible = { state = 223 }
+            pwc_heritage_jinsha_site_visible = { state = 229 }
+            pwc_heritage_jianmen_shu_road_visible = { state = 202 }
+            pwc_heritage_dazu_rock_carvings_visible = { state = 238 }
+            pwc_heritage_diaoyu_fortress_visible = { state = 238 }
+            pwc_heritage_baidi_city_visible = { state = 238 }
+            pwc_heritage_lijiang_old_town_visible = { state = 303 }
+            pwc_heritage_honghe_hani_terraces_visible = { state = 346 }
+            pwc_heritage_dali_three_pagodas_visible = { state = 318 }
+            pwc_heritage_jianshui_old_town_visible = { state = 346 }
+            pwc_heritage_shaxi_old_town_visible = { state = 318 }
+            pwc_heritage_hailongtun_visible = { state = 280 }
+            pwc_heritage_zhenyuan_old_town_visible = { state = 307 }
+            pwc_heritage_qingyan_old_town_visible = { state = 311 }
+            pwc_heritage_baojiatun_waterworks_visible = { state = 320 }
+            pwc_heritage_xanadu_site_visible = { state = 23 }
+            pwc_heritage_juyan_site_visible = { state = 56 }
+            pwc_heritage_qin_straight_road_visible = { state = 76 }
+            pwc_heritage_yilin_post_station_visible = { state = 23 }
+            pwc_heritage_dazhao_temple_visible = { state = 71 }
+            pwc_heritage_weiyang_palace_visible = { state = 170 }
+            pwc_heritage_qin_mausoleum_visible = { state = 170 }
+            pwc_heritage_zhang_qian_tomb_baoxie_road_visible = { state = 190 }
+            pwc_heritage_famen_temple_crypt_visible = { state = 162 }
+            pwc_heritage_mogao_caves_visible = { state = 55 }
+            pwc_heritage_yumen_and_yang_passes_visible = { state = 55 }
+            pwc_heritage_maijishan_grottoes_visible = { state = 161 }
+            pwc_heritage_bingling_temple_grottoes_visible = { state = 140 }
+            pwc_heritage_leitai_han_tomb_visible = { state = 91 }
+            pwc_heritage_western_xia_tombs_visible = { state = 97 }
+            pwc_heritage_xumishan_grottoes_visible = { state = 132 }
+            pwc_heritage_helan_rock_art_visible = { state = 97 }
+            pwc_heritage_guyuan_old_city_visible = { state = 132 }
+            pwc_heritage_jiaohe_gaochang_visible = { state = 46 }
+            pwc_heritage_kizil_subashi_visible = { state = 58 }
+            pwc_heritage_beiting_ancient_city_visible = { state = 32 }
+            pwc_heritage_turpan_karez_visible = { state = 46 }
+            pwc_heritage_jirzankal_cemetery_visible = { state = 81 }
+            pwc_heritage_riyue_mountain_tang_tibet_road_visible = { state = 117 }
+            pwc_heritage_kumbum_monastery_visible = { state = 117 }
+            pwc_heritage_dulan_reshui_tombs_visible = { state = 92 }
+            pwc_heritage_potala_jokhang_norbulingka_visible = { state = 236 }
+            pwc_heritage_samye_monastery_visible = { state = 267 }
+            pwc_heritage_sakya_monastery_visible = { state = 222 }
+            pwc_heritage_tashilhunpo_monastery_visible = { state = 222 }
+            pwc_heritage_pelkor_chode_monastery_visible = { state = 222 }
+            pwc_heritage_guge_kingdom_ruins_visible = { state = 151 }
+            pwc_heritage_leshan_giant_buddha_visible = { state = 263 }
+            pwc_heritage_jiayuguan_pass_visible = { state = 31 }
+            pwc_heritage_jinci_temple_visible = { state = 104 }
+            pwc_heritage_eastern_qing_tombs_visible = { state = 79 }
+            pwc_heritage_xuankong_temple_visible = { state = 77 }
+            pwc_heritage_kaifeng_iron_pagoda_visible = { state = 165 }
+            pwc_heritage_tianyi_pavilion_visible = { state = 255 }
+            pwc_heritage_qianling_mausoleum_visible = { state = 157 }
+            pwc_heritage_ganzhou_song_city_wall_visible = { state = 312 }
+            pwc_heritage_jingmai_tea_forest_visible = { state = 344 }
+        }
+    }
+}
