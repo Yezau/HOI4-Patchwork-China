@@ -46,6 +46,13 @@ scripted_gui = {
 					pwc_se_appoint_seat_civil_admin_5 = yes
 				}
 			}
+			seat_civil_admin_cand_6 = {
+				if = {
+					limit = { pwc_st_can_afford_cabinet_appointment = yes }
+					add_political_power = -100
+					pwc_se_appoint_seat_civil_admin_6 = yes
+				}
+			}
 			seat_civil_admin_dismiss = {
 				pwc_se_dismiss_seat_civil_admin = yes
 			}
@@ -369,6 +376,9 @@ scripted_gui = {
 			}
 			seat_civil_admin_cand_5_visible = {
 				NOT = { pwc_st_seat_civil_admin_cand_5 = yes }
+			}
+			seat_civil_admin_cand_6_visible = {
+				NOT = { pwc_st_seat_civil_admin_cand_6 = yes }
 			}
 			seat_civil_admin_dismiss_visible = {
 				pwc_st_seat_civil_admin_occupied = yes

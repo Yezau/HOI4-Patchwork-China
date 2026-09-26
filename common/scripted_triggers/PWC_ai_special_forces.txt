@@ -1,9 +1,459 @@
-pwc_st_ai_sf_amphibious_need = {
-    pwc_st_naval_port = yes
+pwc_st_ai_sf_strait_front = {
     OR = {
-        pwc_st_amphibious_preparation_needed = yes
-        any_enemy_country = { pwc_st_naval_target_coast = yes }
-        pwc_st_naval_hainan_needed = yes
+        AND = {
+            controls_province = 133
+            any_enemy_country = { controls_province = 1427 }
+        }
+        AND = {
+            controls_province = 1427
+            any_enemy_country = { controls_province = 133 }
+        }
+        AND = {
+            controls_province = 150
+            any_enemy_country = { controls_province = 1226 }
+        }
+        AND = {
+            controls_province = 1226
+            any_enemy_country = { controls_province = 150 }
+        }
+        AND = {
+            controls_province = 150
+            any_enemy_country = { controls_province = 2123 }
+        }
+        AND = {
+            controls_province = 2123
+            any_enemy_country = { controls_province = 150 }
+        }
+        AND = {
+            controls_province = 150
+            any_enemy_country = { controls_province = 3159 }
+        }
+        AND = {
+            controls_province = 3159
+            any_enemy_country = { controls_province = 150 }
+        }
+        AND = {
+            controls_province = 150
+            any_enemy_country = { controls_province = 4301 }
+        }
+        AND = {
+            controls_province = 4301
+            any_enemy_country = { controls_province = 150 }
+        }
+        AND = {
+            controls_province = 324
+            any_enemy_country = { controls_province = 899 }
+        }
+        AND = {
+            controls_province = 899
+            any_enemy_country = { controls_province = 324 }
+        }
+        AND = {
+            controls_province = 393
+            any_enemy_country = { controls_province = 4273 }
+        }
+        AND = {
+            controls_province = 4273
+            any_enemy_country = { controls_province = 393 }
+        }
+        AND = {
+            controls_province = 537
+            any_enemy_country = { controls_province = 2672 }
+        }
+        AND = {
+            controls_province = 2672
+            any_enemy_country = { controls_province = 537 }
+        }
+        AND = {
+            controls_province = 547
+            any_enemy_country = { controls_province = 4277 }
+        }
+        AND = {
+            controls_province = 4277
+            any_enemy_country = { controls_province = 547 }
+        }
+        AND = {
+            controls_province = 796
+            any_enemy_country = { controls_province = 4300 }
+        }
+        AND = {
+            controls_province = 4300
+            any_enemy_country = { controls_province = 796 }
+        }
+        AND = {
+            controls_province = 899
+            any_enemy_country = { controls_province = 3835 }
+        }
+        AND = {
+            controls_province = 3835
+            any_enemy_country = { controls_province = 899 }
+        }
+        AND = {
+            controls_province = 902
+            any_enemy_country = { controls_province = 1740 }
+        }
+        AND = {
+            controls_province = 1740
+            any_enemy_country = { controls_province = 902 }
+        }
+        AND = {
+            controls_province = 947
+            any_enemy_country = { controls_province = 1395 }
+        }
+        AND = {
+            controls_province = 1395
+            any_enemy_country = { controls_province = 947 }
+        }
+        AND = {
+            controls_province = 961
+            any_enemy_country = { controls_province = 1713 }
+        }
+        AND = {
+            controls_province = 1713
+            any_enemy_country = { controls_province = 961 }
+        }
+        AND = {
+            controls_province = 987
+            any_enemy_country = { controls_province = 4276 }
+        }
+        AND = {
+            controls_province = 4276
+            any_enemy_country = { controls_province = 987 }
+        }
+        AND = {
+            controls_province = 1060
+            any_enemy_country = { controls_province = 3227 }
+        }
+        AND = {
+            controls_province = 3227
+            any_enemy_country = { controls_province = 1060 }
+        }
+        AND = {
+            controls_province = 1120
+            any_enemy_country = { controls_province = 3050 }
+        }
+        AND = {
+            controls_province = 3050
+            any_enemy_country = { controls_province = 1120 }
+        }
+        AND = {
+            controls_province = 1224
+            any_enemy_country = { controls_province = 2677 }
+        }
+        AND = {
+            controls_province = 2677
+            any_enemy_country = { controls_province = 1224 }
+        }
+        AND = {
+            controls_province = 1271
+            any_enemy_country = { controls_province = 3800 }
+        }
+        AND = {
+            controls_province = 3800
+            any_enemy_country = { controls_province = 1271 }
+        }
+        AND = {
+            controls_province = 1271
+            any_enemy_country = { controls_province = 3815 }
+        }
+        AND = {
+            controls_province = 3815
+            any_enemy_country = { controls_province = 1271 }
+        }
+        AND = {
+            controls_province = 1332
+            any_enemy_country = { controls_province = 1780 }
+        }
+        AND = {
+            controls_province = 1780
+            any_enemy_country = { controls_province = 1332 }
+        }
+        AND = {
+            controls_province = 1332
+            any_enemy_country = { controls_province = 4302 }
+        }
+        AND = {
+            controls_province = 4302
+            any_enemy_country = { controls_province = 1332 }
+        }
+        AND = {
+            controls_province = 1337
+            any_enemy_country = { controls_province = 2941 }
+        }
+        AND = {
+            controls_province = 2941
+            any_enemy_country = { controls_province = 1337 }
+        }
+        AND = {
+            controls_province = 1514
+            any_enemy_country = { controls_province = 3216 }
+        }
+        AND = {
+            controls_province = 3216
+            any_enemy_country = { controls_province = 1514 }
+        }
+        AND = {
+            controls_province = 1769
+            any_enemy_country = { controls_province = 2512 }
+        }
+        AND = {
+            controls_province = 2512
+            any_enemy_country = { controls_province = 1769 }
+        }
+        AND = {
+            controls_province = 1826
+            any_enemy_country = { controls_province = 2408 }
+        }
+        AND = {
+            controls_province = 2408
+            any_enemy_country = { controls_province = 1826 }
+        }
+        AND = {
+            controls_province = 1826
+            any_enemy_country = { controls_province = 3836 }
+        }
+        AND = {
+            controls_province = 3836
+            any_enemy_country = { controls_province = 1826 }
+        }
+        AND = {
+            controls_province = 1830
+            any_enemy_country = { controls_province = 3736 }
+        }
+        AND = {
+            controls_province = 3736
+            any_enemy_country = { controls_province = 1830 }
+        }
+        AND = {
+            controls_province = 1836
+            any_enemy_country = { controls_province = 2625 }
+        }
+        AND = {
+            controls_province = 2625
+            any_enemy_country = { controls_province = 1836 }
+        }
+        AND = {
+            controls_province = 1856
+            any_enemy_country = { controls_province = 2012 }
+        }
+        AND = {
+            controls_province = 2012
+            any_enemy_country = { controls_province = 1856 }
+        }
+        AND = {
+            controls_province = 1925
+            any_enemy_country = { controls_province = 2625 }
+        }
+        AND = {
+            controls_province = 2625
+            any_enemy_country = { controls_province = 1925 }
+        }
+        AND = {
+            controls_province = 2141
+            any_enemy_country = { controls_province = 3846 }
+        }
+        AND = {
+            controls_province = 3846
+            any_enemy_country = { controls_province = 2141 }
+        }
+        AND = {
+            controls_province = 2200
+            any_enemy_country = { controls_province = 2274 }
+        }
+        AND = {
+            controls_province = 2274
+            any_enemy_country = { controls_province = 2200 }
+        }
+        AND = {
+            controls_province = 2213
+            any_enemy_country = { controls_province = 4279 }
+        }
+        AND = {
+            controls_province = 4279
+            any_enemy_country = { controls_province = 2213 }
+        }
+        AND = {
+            controls_province = 2246
+            any_enemy_country = { controls_province = 3847 }
+        }
+        AND = {
+            controls_province = 3847
+            any_enemy_country = { controls_province = 2246 }
+        }
+        AND = {
+            controls_province = 2373
+            any_enemy_country = { controls_province = 4276 }
+        }
+        AND = {
+            controls_province = 4276
+            any_enemy_country = { controls_province = 2373 }
+        }
+        AND = {
+            controls_province = 2665
+            any_enemy_country = { controls_province = 4274 }
+        }
+        AND = {
+            controls_province = 4274
+            any_enemy_country = { controls_province = 2665 }
+        }
+        AND = {
+            controls_province = 2877
+            any_enemy_country = { controls_province = 4290 }
+        }
+        AND = {
+            controls_province = 4290
+            any_enemy_country = { controls_province = 2877 }
+        }
+        AND = {
+            controls_province = 2877
+            any_enemy_country = { controls_province = 4291 }
+        }
+        AND = {
+            controls_province = 4291
+            any_enemy_country = { controls_province = 2877 }
+        }
+        AND = {
+            controls_province = 2918
+            any_enemy_country = { controls_province = 5089 }
+        }
+        AND = {
+            controls_province = 5089
+            any_enemy_country = { controls_province = 2918 }
+        }
+        AND = {
+            controls_province = 2941
+            any_enemy_country = { controls_province = 2957 }
+        }
+        AND = {
+            controls_province = 2957
+            any_enemy_country = { controls_province = 2941 }
+        }
+        AND = {
+            controls_province = 3023
+            any_enemy_country = { controls_province = 3846 }
+        }
+        AND = {
+            controls_province = 3846
+            any_enemy_country = { controls_province = 3023 }
+        }
+        AND = {
+            controls_province = 3159
+            any_enemy_country = { controls_province = 4302 }
+        }
+        AND = {
+            controls_province = 4302
+            any_enemy_country = { controls_province = 3159 }
+        }
+        AND = {
+            controls_province = 3319
+            any_enemy_country = { controls_province = 4282 }
+        }
+        AND = {
+            controls_province = 4282
+            any_enemy_country = { controls_province = 3319 }
+        }
+        AND = {
+            controls_province = 3319
+            any_enemy_country = { controls_province = 4283 }
+        }
+        AND = {
+            controls_province = 4283
+            any_enemy_country = { controls_province = 3319 }
+        }
+        AND = {
+            controls_province = 3772
+            any_enemy_country = { controls_province = 4275 }
+        }
+        AND = {
+            controls_province = 4275
+            any_enemy_country = { controls_province = 3772 }
+        }
+        AND = {
+            controls_province = 3780
+            any_enemy_country = { controls_province = 4049 }
+        }
+        AND = {
+            controls_province = 4049
+            any_enemy_country = { controls_province = 3780 }
+        }
+        AND = {
+            controls_province = 4223
+            any_enemy_country = { controls_province = 4225 }
+        }
+        AND = {
+            controls_province = 4225
+            any_enemy_country = { controls_province = 4223 }
+        }
+        AND = {
+            controls_province = 4271
+            any_enemy_country = { controls_province = 4272 }
+        }
+        AND = {
+            controls_province = 4272
+            any_enemy_country = { controls_province = 4271 }
+        }
+        AND = {
+            controls_province = 4272
+            any_enemy_country = { controls_province = 4273 }
+        }
+        AND = {
+            controls_province = 4273
+            any_enemy_country = { controls_province = 4272 }
+        }
+        AND = {
+            controls_province = 4284
+            any_enemy_country = { controls_province = 4285 }
+        }
+        AND = {
+            controls_province = 4285
+            any_enemy_country = { controls_province = 4284 }
+        }
+        AND = {
+            controls_province = 4288
+            any_enemy_country = { controls_province = 4289 }
+        }
+        AND = {
+            controls_province = 4289
+            any_enemy_country = { controls_province = 4288 }
+        }
+        AND = {
+            controls_province = 4299
+            any_enemy_country = { controls_province = 4303 }
+        }
+        AND = {
+            controls_province = 4303
+            any_enemy_country = { controls_province = 4299 }
+        }
+        AND = {
+            controls_province = 5090
+            any_enemy_country = { controls_province = 5091 }
+        }
+        AND = {
+            controls_province = 5091
+            any_enemy_country = { controls_province = 5090 }
+        }
+        AND = {
+            controls_province = 5092
+            any_enemy_country = { controls_province = 5093 }
+        }
+        AND = {
+            controls_province = 5093
+            any_enemy_country = { controls_province = 5092 }
+        }
+    }
+}
+pwc_st_ai_sf_amphibious_need = {
+    OR = {
+        pwc_st_ai_sf_strait_front = yes
+        AND = {
+            pwc_st_naval_port = yes
+            OR = {
+                pwc_st_amphibious_preparation_needed = yes
+                pwc_st_naval_active_invasion = yes
+                any_enemy_country = { pwc_st_naval_target_coast = yes }
+                pwc_st_naval_hainan_needed = yes
+            }
+        }
     }
 }
 pwc_st_ai_sf_ready = {

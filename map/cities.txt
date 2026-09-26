@@ -1,0 +1,131 @@
+types_source = "map/cities.bmp"
+pixel_step_x = 2
+pixel_step_y = 2
+
+
+city_group = {
+	color_index = 0
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_city_edge_a_entity"
+			"pwc_city_edge_b_entity"
+			"pwc_city_edge_c_entity"
+			"pwc_city_edge_d_entity"
+		}
+	}
+	building = {
+		distance = 2
+		mesh = {
+			"pwc_city_inner_a_entity"
+			"pwc_city_inner_b_entity"
+		}
+	}
+	building = {
+		distance = 3
+		mesh = {
+			"pwc_city_core_entity"
+		}
+	}
+	building = {
+		distance = 4
+		mesh = {
+			"pwc_city_landmark_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 1
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_village_north_entity"
+			"pwc_village_greenhouse_entity"
+			"pwc_village_town_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 2
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_village_north_entity"
+			"pwc_village_greenhouse_entity"
+			"pwc_village_town_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 3
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_village_south_entity"
+			"pwc_village_south_dense_entity"
+			"pwc_village_town_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 4
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_village_south_entity"
+			"pwc_village_south_dense_entity"
+			"pwc_village_town_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 5
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_energy_wind_entity"
+		}
+	}
+}
+
+
+city_group = {
+	color_index = 6
+	density = 0.00001
+
+	
+	building = {
+		distance = 1
+		mesh = {
+			"pwc_energy_solar_entity"
+		}
+	}
+}

@@ -1,0 +1,65 @@
+PWC_ai_carrier_air_no_fighters = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = unit_ratio
+        id = cv_fighter
+        value = 0
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = cv_cas
+        value = 0
+    }
+    ai_strategy = {
+        type = equipment_variant_production_factor
+        id = pwc_platform_cv_fighter
+        value = -100
+    }
+}
+PWC_ai_carrier_air_inactive = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        NOT = {
+            AND = {
+                has_navy_size = { unit = pwc_unit_carrier size > 0 }
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = unit_ratio
+        id = cv_naval_bomber
+        value = 0
+    }
+    ai_strategy = {
+        type = equipment_variant_production_factor
+        id = pwc_platform_cv_cas
+        value = -100
+    }
+}
+PWC_ai_carrier_air_ready = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_navy_size = { unit = pwc_unit_carrier size > 0 }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = unit_ratio
+        id = cv_naval_bomber
+        value = 100
+    }
+    ai_strategy = {
+        type = equipment_variant_production_factor
+        id = pwc_platform_cv_cas
+        value = -90
+    }
+}

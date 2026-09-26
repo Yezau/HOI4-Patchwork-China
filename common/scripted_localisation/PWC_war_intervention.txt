@@ -1,0 +1,55 @@
+defined_text = {
+    name = GetPwcSupportUnavailableReason
+    text = {
+        trigger = { has_war = yes }
+        localization_key = pwc_support_unavailable_war
+    }
+    text = {
+        trigger = { NOT = { pwc_st_support_invitation_open = yes } }
+        localization_key = pwc_support_unavailable_invitation
+    }
+    text = {
+        trigger = {
+            OR = {
+                exists = no
+                pwc_st_is_city_country = no
+                pwc_st_city_alive = no
+                has_capitulated = yes
+                is_subject = yes
+                is_in_faction = yes
+            }
+        }
+        localization_key = pwc_support_unavailable_status
+    }
+    text = {
+        trigger = { NOT = { pwc_st_support_opponent_alive = yes } }
+        localization_key = pwc_support_unavailable_opponent
+    }
+    text = {
+        trigger = {
+            event_target:pwc_support_opponent = {
+                NOT = { is_neighbor_of = ROOT }
+            }
+        }
+        localization_key = pwc_support_unavailable_border
+    }
+    text = {
+        trigger = {
+            event_target:pwc_support_opponent = {
+                has_non_aggression_pact_with = ROOT
+            }
+        }
+        localization_key = pwc_support_unavailable_pact
+    }
+    text = {
+        trigger = {
+            event_target:pwc_support_opponent = {
+                NOT = { pwc_st_province_priority_target_allowed = yes }
+            }
+        }
+        localization_key = pwc_support_unavailable_province
+    }
+    text = {
+        localization_key = pwc_support_unavailable_invitation
+    }
+}

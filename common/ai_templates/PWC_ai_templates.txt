@@ -4,7 +4,7 @@ PWC_ai_template_armored_combined = {
 		base = 1
 		modifier = {
 			factor = 3
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
 		}
 	}
 	pwc_template_armored_36w_project_assault_engineer_armored_recovery = {
@@ -12,7 +12,7 @@ PWC_ai_template_armored_combined = {
 			base = 6
 		}
 		enable = {
-			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -56,7 +56,7 @@ PWC_ai_template_armored_combined = {
 			base = 4
 		}
 		enable = {
-			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -99,7 +99,7 @@ PWC_ai_template_armored_combined = {
 			base = 4
 		}
 		enable = {
-			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -141,7 +141,7 @@ PWC_ai_template_armored_combined = {
 			base = 2
 		}
 		enable = {
-			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
+			OR = { OR = { ai_wants_divisions > 29 num_divisions > 29 } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } OR = { ai_wants_divisions > 23 num_divisions > 23 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -499,7 +499,7 @@ PWC_ai_template_infantry_city_defense = {
 			base = 12
 		}
 		enable = {
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -534,7 +534,7 @@ PWC_ai_template_infantry_city_defense = {
 			base = 8
 		}
 		enable = {
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -566,7 +566,7 @@ PWC_ai_template_infantry_city_defense = {
 			base = 8
 		}
 		enable = {
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -599,7 +599,7 @@ PWC_ai_template_infantry_city_defense = {
 			base = 4
 		}
 		enable = {
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 3 OR = { ai_wants_divisions > 4 num_divisions > 4 } } }
 			has_tech = pwc_tech0_basic_industry
 			has_tech = pwc_tech0_basic_infantry
 			has_tech = pwc_tech0_communications
@@ -631,7 +631,7 @@ PWC_ai_template_mobility_mountain = {
 		base = 1
 		modifier = {
 			factor = 3
-			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
+			OR = { AND = { num_of_military_factories > 11 OR = { ai_wants_divisions > 23 num_divisions > 23 } } AND = { is_ai = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } } num_of_military_factories > 7 OR = { ai_wants_divisions > 7 num_divisions > 7 } } }
 		}
 	}
 	pwc_template_mobile_18w_project_assault_engineer_armored_recovery = {

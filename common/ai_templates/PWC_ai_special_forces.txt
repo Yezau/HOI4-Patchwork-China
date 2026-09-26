@@ -32,9 +32,10 @@ PWC_ai_sf_mountaineers = {
 }
 PWC_ai_sf_marines = {
     role = marines
+    front_role_override = offence
     blocked_for = { NTR }
     upgrade_prio = {
-        base = 3
+        base = 6
         modifier = {
             factor = 0
             NOT = {

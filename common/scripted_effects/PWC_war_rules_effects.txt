@@ -2,6 +2,7 @@ pwc_se_start_war_warning = {
 	if = {
 		limit = {
 			pwc_st_legal_war_request = yes
+			pwc_st_ai_war_ready = yes
 			NOT = { pwc_st_warning_in_progress = yes }
 		}
 		set_country_flag = pwc_flag_warning_to_@FROM
@@ -321,11 +322,11 @@ pwc_se_warning_cancel_access = {
 
 
 
-
 pwc_se_declare_war_on_warning_expiry = {
 	if = {
 		limit = {
 			pwc_st_legal_war_request = yes
+			pwc_st_ai_war_ready = yes
 		}
 		declare_war_on = {
 			target = FROM
@@ -350,6 +351,20 @@ pwc_se_on_warning_expiry = {
 			log = "PWC WARNING expired without war initiator=[ROOT.GetName]"
 		}
 	}
+}
+
+
+pwc_se_annex_settled_city = {
+    if = {
+        limit = {
+            ROOT = {
+                is_ai = yes
+                has_country_flag = pwc_flag_tagged_aid_received
+            }
+        }
+        annex_country = { target = ROOT transfer_troops = no }
+    }
+    else = { annex_country = { target = ROOT transfer_troops = yes } }
 }
 
 
@@ -445,12 +460,12 @@ pwc_se_on_surrender_settle = {
 		pwc_se_mark_city_eliminated = yes
 		if = {
 			limit = { NOT = { event_target:pwc_capital_controller = { tag = ROOT } } }
-			event_target:pwc_capital_controller = { annex_country = { target = ROOT transfer_troops = yes } }
+			event_target:pwc_capital_controller = { pwc_se_annex_settled_city = yes }
 			log = "PWC SETTLE remnant annexed by capital controller"
 		}
 		else_if = {
 			limit = { NOT = { event_target:pwc_claimant = { tag = ROOT } } }
-			event_target:pwc_claimant = { annex_country = { target = ROOT transfer_troops = yes } }
+			event_target:pwc_claimant = { pwc_se_annex_settled_city = yes }
 			log = "PWC SETTLE remnant annexed by claimant"
 		}
 		log = "PWC SETTLE end runs=[?global.pwc_settle_runs]"
@@ -1074,6 +1089,89 @@ pwc_se_monthly_ai_difficulty = {
 	else = {
 		pwc_se_apply_ai_difficulty = yes
 	}
+}
+
+pwc_se_refresh_ai_league = {
+    if = {
+        limit = {
+            is_ai = yes
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            pwc_st_is_city_country = yes
+            exists = yes
+            has_country_flag = pwc_flag_city_alive
+            NOT = { has_country_flag = pwc_flag_city_eliminated }
+            check_variable = { var = num_owned_states value = 0 compare = greater_than }
+            check_variable = { var = global.pwc_alive_count value = 1 compare = greater_than }
+            check_variable = { var = global.pwc_alive_count value = 100 compare = less_than_or_equals }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    var = global.pwc_alive_count
+                    value = 5
+                    compare = less_than_or_equals
+                }
+            }
+            set_variable = { pwc_ai_league_combat = 0.25 }
+            set_variable = { pwc_ai_league_industry = 0.5 }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    var = global.pwc_alive_count
+                    value = 10
+                    compare = less_than_or_equals
+                }
+            }
+            set_variable = { pwc_ai_league_combat = 0.2 }
+            set_variable = { pwc_ai_league_industry = 0.4 }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    var = global.pwc_alive_count
+                    value = 20
+                    compare = less_than_or_equals
+                }
+            }
+            set_variable = { pwc_ai_league_combat = 0.15 }
+            set_variable = { pwc_ai_league_industry = 0.3 }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    var = global.pwc_alive_count
+                    value = 50
+                    compare = less_than_or_equals
+                }
+            }
+            set_variable = { pwc_ai_league_combat = 0.1 }
+            set_variable = { pwc_ai_league_industry = 0.2 }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    var = global.pwc_alive_count
+                    value = 100
+                    compare = less_than_or_equals
+                }
+            }
+            set_variable = { pwc_ai_league_combat = 0.05 }
+            set_variable = { pwc_ai_league_industry = 0.1 }
+        }
+        if = {
+            limit = { NOT = { has_dynamic_modifier = { modifier = pwc_dm_ai_league } } }
+            add_dynamic_modifier = { modifier = pwc_dm_ai_league }
+        }
+    }
+    else = {
+        if = {
+            limit = { has_dynamic_modifier = { modifier = pwc_dm_ai_league } }
+            remove_dynamic_modifier = { modifier = pwc_dm_ai_league }
+            clear_variable = pwc_ai_league_combat
+            clear_variable = pwc_ai_league_industry
+        }
+    }
 }
 
 

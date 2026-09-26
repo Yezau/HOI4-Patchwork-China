@@ -46,6 +46,21 @@ PWC_ai_sf_pwc_role_rangers = {
     abort_when_not_enabled = yes
     ai_strategy = { type = role_ratio id = pwc_role_rangers value = 2 }
 }
+PWC_ai_sf_marines_assault = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_ai_sf_ready = yes
+        pwc_st_ai_sf_amphibious_need = yes
+        OR = {
+            pwc_st_naval_active_invasion = yes
+            pwc_st_ai_sf_strait_front = yes
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = role_ratio id = marines value = 36 }
+}
 PWC_ai_sf_research = {
     allowed = { always = yes }
     enable = {

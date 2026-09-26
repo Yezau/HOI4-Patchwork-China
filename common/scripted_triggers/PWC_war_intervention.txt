@@ -47,7 +47,20 @@ pwc_st_support_accept = {
     has_war = no
     is_subject = no
     is_in_faction = no
+    pwc_st_support_invitation_open = yes
+    pwc_st_support_opponent_alive = yes
+    event_target:pwc_support_opponent = {
+        is_neighbor_of = ROOT
+        NOT = { has_non_aggression_pact_with = ROOT }
+        hidden_trigger = {
+            pwc_st_province_priority_target_allowed = yes
+        }
+    }
+}
+pwc_st_support_invitation_open = {
     has_country_flag = pwc_support_requested
+    has_event_target = pwc_support_host
+    has_event_target = pwc_support_opponent
     event_target:pwc_support_host = {
         exists = yes
         pwc_st_city_alive = yes
@@ -59,14 +72,12 @@ pwc_st_support_accept = {
         NOT = { has_country_flag = pwc_support_auxiliary }
         has_war_with = event_target:pwc_support_opponent
     }
+}
+pwc_st_support_opponent_alive = {
+    has_event_target = pwc_support_opponent
     event_target:pwc_support_opponent = {
         exists = yes
         pwc_st_city_alive = yes
         has_capitulated = no
-        is_neighbor_of = ROOT
-        NOT = { has_non_aggression_pact_with = ROOT }
-        hidden_trigger = {
-            pwc_st_province_priority_target_allowed = yes
-        }
     }
 }

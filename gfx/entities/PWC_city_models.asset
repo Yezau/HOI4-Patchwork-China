@@ -1,0 +1,270 @@
+entity = {
+    name = "pwc_city_edge_a_entity"
+    pdxmesh = "pwc_city_edge_a_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_edge_b_entity"
+    pdxmesh = "pwc_city_edge_b_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_edge_c_entity"
+    pdxmesh = "pwc_city_edge_c_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_edge_d_entity"
+    pdxmesh = "pwc_city_edge_d_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_inner_a_entity"
+    pdxmesh = "pwc_city_inner_a_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_inner_b_entity"
+    pdxmesh = "pwc_city_inner_b_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_core_entity"
+    pdxmesh = "pwc_city_core_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_city_landmark_entity"
+    pdxmesh = "pwc_city_landmark_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_village_north_entity"
+    pdxmesh = "pwc_village_north_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_village_greenhouse_entity"
+    pdxmesh = "pwc_village_greenhouse_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_village_south_entity"
+    pdxmesh = "pwc_village_south_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_village_south_dense_entity"
+    pdxmesh = "pwc_village_south_dense_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_village_town_entity"
+    pdxmesh = "pwc_village_town_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_energy_wind_entity"
+    pdxmesh = "pwc_energy_wind_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}
+entity = {
+    name = "pwc_energy_solar_entity"
+    pdxmesh = "pwc_energy_solar_mesh"
+    scale = 1
+    locator = { name = "damage_locator_01" position = { 0.4 0.0 0.4 } }
+    locator = { name = "damage_locator_02" position = { -0.1 0.0 -0.3 } }
+    locator = { name = "damage_locator_03" position = { 0.3 0.0 0.5 } }
+    locator = { name = "damage_locator_04" position = { -0.15 0.0 -0.2 } }
+    default_state = "idle"
+    state = { name = "idle" }
+    state = { name = "damaged"
+        event = { time = 0.1 node = "damage_locator_03" particle = "city_smoke_particle" }
+    }
+    state = { name = "burning"
+        event = { time = 0.1 node = "damage_locator_01" particle = "city_fire_l_particle" }
+        event = { time = 0.2 node = "damage_locator_02" particle = "city_fire_2_particle" }
+    }
+}

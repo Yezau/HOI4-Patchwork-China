@@ -1,10 +1,16 @@
 pwc_ai_difficulty = {
     name = "PWC_RULE_AI_DIFFICULTY"
     group = "PWC_RULE_GROUP_COMMON"
-    default = {
+    option = {
         name = "TIER_0"
         text = "PWC_RULE_AI_DIFFICULTY_T0"
         desc = "PWC_RULE_AI_DIFFICULTY_T0_DESC"
+        allow_achievements = no
+    }
+    default = {
+        name = "TIER_STANDARD"
+        text = "PWC_RULE_AI_DIFFICULTY_TSTANDARD"
+        desc = "PWC_RULE_AI_DIFFICULTY_TSTANDARD_DESC"
         allow_achievements = no
     }
     option = {

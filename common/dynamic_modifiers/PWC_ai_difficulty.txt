@@ -4,3 +4,22 @@ pwc_dm_ai_difficulty = {
 	industrial_capacity_factory = pwc_ai_diff_v_industrial_capacity_factory
 	supply_factor = pwc_ai_diff_v_supply_factor
 }
+
+pwc_dm_ai_league = {
+    enable = {
+        is_ai = yes
+        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        pwc_st_is_city_country = yes
+        exists = yes
+        has_country_flag = pwc_flag_city_alive
+        NOT = { has_country_flag = pwc_flag_city_eliminated }
+        check_variable = { var = num_owned_states value = 0 compare = greater_than }
+        check_variable = { var = global.pwc_alive_count value = 1 compare = greater_than }
+        check_variable = { var = global.pwc_alive_count value = 100 compare = less_than_or_equals }
+    }
+    army_attack_factor = pwc_ai_league_combat
+    army_defence_factor = pwc_ai_league_combat
+    army_org_factor = pwc_ai_league_combat
+    industrial_capacity_factory = pwc_ai_league_industry
+    production_speed_buildings_factor = pwc_ai_league_industry
+}

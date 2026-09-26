@@ -81,6 +81,22 @@ PWC_politics_category = {
 	}
 
 	
+	pwc_dec_appoint_seat_civil_admin_6 = {
+		icon = GFX_decision_PWC_cabinet
+		cost = 100
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		visible = { always = no }
+		available = {
+			NOT = { pwc_st_seat_civil_admin_cand_6 = yes }
+		}
+		complete_effect = {
+			pwc_se_appoint_seat_civil_admin_6 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	
 	pwc_dec_dismiss_seat_civil_admin = {
 		icon = GFX_decision_PWC_cabinet
 		cost = 0

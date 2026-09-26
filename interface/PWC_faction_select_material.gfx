@@ -1,0 +1,30 @@
+spriteTypes = {
+    corneredTileSpriteType = {
+        name = "PWC_GFX_faction_select_top"
+        textureFile = "gfx/interface/pwc/ui/faction_select_v2/top.dds"
+        size = { x = 484 y = 128 }
+        borderSize = { x = 70 y = 8 }
+        tilingCenter = yes
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+    corneredTileSpriteType = {
+        name = "PWC_GFX_faction_select_bottom"
+        textureFile = "gfx/interface/pwc/ui/faction_select_v2/bottom.dds"
+        size = { x = 484 y = 128 }
+        borderSize = { x = 70 y = 8 }
+        tilingCenter = yes
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+    spriteType = {
+        name = "PWC_GFX_faction_select_settings"
+        textureFile = "gfx/interface/pwc/ui/faction_select_v2/settings.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+    spriteType = {
+        name = "PWC_GFX_faction_select_identity"
+        textureFile = "gfx/interface/pwc/ui/faction_select_v2/identity.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+}

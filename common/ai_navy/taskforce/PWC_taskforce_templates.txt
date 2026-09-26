@@ -373,7 +373,7 @@ PWC_strait_patrol = {
     keep_updated = yes
     mission = { naval_patrol }
     min_composition = {
-        pwc_unit_destroyer = { amount = 1 }
+        pwc_unit_destroyer = { amount = 3 }
     }
     optimal_composition = {
         pwc_unit_destroyer = { amount = 4 }
@@ -754,7 +754,7 @@ PWC_strait_escort = {
     keep_updated = yes
     mission = { convoy_escort }
     min_composition = {
-        pwc_unit_destroyer = { amount = 1 }
+        pwc_unit_destroyer = { amount = 3 }
     }
     optimal_composition = {
         pwc_unit_destroyer = { amount = 6 }
@@ -1135,7 +1135,7 @@ PWC_strait_strike = {
     keep_updated = yes
     mission = { naval_patrol }
     min_composition = {
-        pwc_unit_destroyer = { amount = 2 }
+        pwc_unit_destroyer = { amount = 6 }
     }
     optimal_composition = {
         pwc_unit_destroyer = { amount = 24 }
@@ -1518,7 +1518,7 @@ PWC_strait_invasion = {
     keep_updated = yes
     mission = { naval_invasion_support }
     min_composition = {
-        pwc_unit_destroyer = { amount = 1 }
+        pwc_unit_destroyer = { amount = 4 }
     }
     optimal_composition = {
         pwc_unit_destroyer = { amount = 6 }
@@ -1899,7 +1899,7 @@ PWC_strait_raiding = {
     keep_updated = yes
     mission = { convoy_raiding }
     min_composition = {
-        pwc_unit_submarine = { amount = 1 }
+        pwc_unit_submarine = { amount = 3 }
     }
     optimal_composition = {
         pwc_unit_submarine = { amount = 12 }

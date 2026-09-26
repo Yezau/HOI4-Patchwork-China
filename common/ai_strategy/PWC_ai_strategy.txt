@@ -1021,7 +1021,13 @@ PWC_ai_role_18w_air_power = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_air_power
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1046,7 +1052,13 @@ PWC_ai_role_36w_air_power = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_air_power
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1178,7 +1190,13 @@ PWC_ai_role_18w_balanced = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_balanced
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1240,7 +1258,13 @@ PWC_ai_role_36w_balanced = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_balanced
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1339,7 +1363,13 @@ PWC_ai_role_18w_coastal = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_coastal
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1368,7 +1398,13 @@ PWC_ai_role_36w_coastal = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_coastal
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1500,7 +1536,13 @@ PWC_ai_role_18w_defense = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_defense
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1562,7 +1604,13 @@ PWC_ai_role_36w_defense = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_defense
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1659,7 +1707,13 @@ PWC_ai_role_18w_industrial = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_industrial
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1686,7 +1740,13 @@ PWC_ai_role_36w_industrial = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_industrial
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1818,7 +1878,13 @@ PWC_ai_role_18w_mobility = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_mobility
-		OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		OR = {
+		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1880,7 +1946,13 @@ PWC_ai_role_36w_mobility = {
 	enable = {
 		is_ai = yes
 		has_country_flag = pwc_ai_mobility
-		OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		OR = {
+		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
+		    AND = {
+		        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+		        pwc_st_ai_recruitment_stage_motorization = yes
+		    }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -45826,12 +45898,15 @@ PWC_ai_armored_reserve_12_pwc_equipment_mechanized = {
         num_of_military_factories < 30
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -45863,11 +45938,14 @@ PWC_ai_armored_reserve_12_pwc_equipment_mechanized_enhanced = {
         num_of_military_factories < 30
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -45899,12 +45977,15 @@ PWC_ai_armored_reserve_12_pwc_platform_medium_tank = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -45937,11 +46018,14 @@ PWC_ai_armored_reserve_12_pwc_platform_medium_tank_enhanced = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -45972,12 +46056,15 @@ PWC_ai_armored_reserve_30_pwc_equipment_mechanized = {
         num_of_military_factories < 75
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46009,11 +46096,14 @@ PWC_ai_armored_reserve_30_pwc_equipment_mechanized_enhanced = {
         num_of_military_factories < 75
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46045,12 +46135,15 @@ PWC_ai_armored_reserve_30_pwc_platform_medium_tank = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46083,11 +46176,14 @@ PWC_ai_armored_reserve_30_pwc_platform_medium_tank_enhanced = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46118,12 +46214,15 @@ PWC_ai_armored_reserve_75_pwc_equipment_mechanized = {
         num_of_military_factories < 100
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46155,11 +46254,14 @@ PWC_ai_armored_reserve_75_pwc_equipment_mechanized_enhanced = {
         num_of_military_factories < 100
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46191,12 +46293,15 @@ PWC_ai_armored_reserve_75_pwc_platform_medium_tank = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46229,11 +46334,14 @@ PWC_ai_armored_reserve_75_pwc_platform_medium_tank_enhanced = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46263,12 +46371,15 @@ PWC_ai_armored_reserve_100_pwc_equipment_mechanized = {
         num_of_military_factories > 99
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46299,11 +46410,14 @@ PWC_ai_armored_reserve_100_pwc_equipment_mechanized_enhanced = {
         num_of_military_factories > 99
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46334,12 +46448,15 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46371,11 +46488,14 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank_enhanced = {
         has_design_based_on = pwc_platform_medium_tank
         NOT = {
             OR = {
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+                has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46406,10 +46526,13 @@ PWC_ai_armored_reserve_8_pwc_equipment_mechanized_high = {
         num_of_military_factories > 7
         num_of_military_factories < 20
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46440,10 +46563,13 @@ PWC_ai_armored_reserve_8_pwc_platform_medium_tank_high = {
         num_of_military_factories < 20
         has_design_based_on = pwc_platform_medium_tank
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46473,10 +46599,13 @@ PWC_ai_armored_reserve_20_pwc_equipment_mechanized_high = {
         num_of_military_factories > 19
         num_of_military_factories < 30
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46507,10 +46636,13 @@ PWC_ai_armored_reserve_20_pwc_platform_medium_tank_high = {
         num_of_military_factories < 30
         has_design_based_on = pwc_platform_medium_tank
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46540,10 +46672,13 @@ PWC_ai_armored_reserve_30_pwc_equipment_mechanized_high = {
         num_of_military_factories > 29
         num_of_military_factories < 50
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46574,10 +46709,13 @@ PWC_ai_armored_reserve_30_pwc_platform_medium_tank_high = {
         num_of_military_factories < 50
         has_design_based_on = pwc_platform_medium_tank
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46607,10 +46745,13 @@ PWC_ai_armored_reserve_50_pwc_equipment_mechanized_high = {
         num_of_military_factories > 49
         num_of_military_factories < 100
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46641,10 +46782,13 @@ PWC_ai_armored_reserve_50_pwc_platform_medium_tank_high = {
         num_of_military_factories < 100
         has_design_based_on = pwc_platform_medium_tank
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46673,10 +46817,13 @@ PWC_ai_armored_reserve_100_pwc_equipment_mechanized_high = {
         has_tech = pwc_tech_army_t1
         num_of_military_factories > 99
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
@@ -46706,10 +46853,13 @@ PWC_ai_armored_reserve_100_pwc_platform_medium_tank_high = {
         num_of_military_factories > 99
         has_design_based_on = pwc_platform_medium_tank
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         OR = {
+            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }

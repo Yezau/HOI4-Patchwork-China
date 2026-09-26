@@ -1210,7 +1210,7 @@ instantTextBoxType = {
 	containerWindowType = {
 		name ="gamesetup_country_details"
 		position = { x=20 y =-490}
-		show_position = { x=20 y =90}
+		show_position = { x = 20 y = 98 }
 		animation_type = decelerated
 		animation_time = 1000
 		size = { width = 492 height = 104 }
@@ -1221,7 +1221,7 @@ instantTextBoxType = {
 
 		background={
 			name ="background"
-			spriteType = "PWC_GFX_country_identity"
+			spriteType = "PWC_GFX_faction_select_identity"
 		}
 
 		iconType = {
@@ -2018,7 +2018,7 @@ background = {
 	containerWindowType = {
 		name ="gamesetup_gameplay_settings_window"
 		position = { x=0 y=196}
-		show_position = { x=5 y =-85}
+		show_position = { x = 5 y = -100 }
 		animation_type = decelerated
 		animation_time = 1000
 
@@ -2028,7 +2028,7 @@ background = {
 
 		Background = {
 			name = "game_settings_bg"
-			quadTextureSprite = "GFX_lobby_lower_right_sidepanel_bg"
+			quadTextureSprite = "PWC_GFX_faction_select_settings"
 		}
 
 
@@ -2187,24 +2187,28 @@ background = {
 		}
 
 		instantTextBoxType={
-			position = {x = 30 y = 148 }
+			position = { x = -10000 y = -10000 }
 			name = "historical_text"
 			font = "hoi_24header"
 			maxWidth = 370
 			maxHeight = 16
-			text = "FE_HISTORICAL"
+			text = ""
 			pdx_tooltip = "FE_HISTORICAL_TOOLTIP"
 			format = left
 			fixedsize = yes
-		}
+		    hide = yes
+    alwaystransparent = yes
+}
 
 		checkboxType = {
 			name = "historical_cb"
-			position = { x=530 y =145}
+			position = { x = -10000 y = -10000 }
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
-		}
-	}
+		    hide = yes
+}
+	    clipping = yes
+}
 
 	containerWindowType = {
 		name ="loading_history"
@@ -2259,7 +2263,7 @@ background = {
                 Background =
                 {
                     name ="top_bg"
-                    spriteType = "GFX_tiled_frontend_upper_bar"
+                    spriteType = "PWC_GFX_faction_select_top"
                     position = { x=-10 y=0 }
                 }
 			}
@@ -2459,7 +2463,7 @@ background = {
                 size = { width=102% height=100% }
                 Background ={
                     name ="bottom_win"
-                    spriteType = "GFX_tiled_frontend_lower_bar"
+                    spriteType = "PWC_GFX_faction_select_bottom"
                     position = { x=-10 y =0}
                 }
 			}

@@ -868,6 +868,30 @@ pwc_st_naval_enemy_coast_region_30 = {
         }
     }
 }
+pwc_st_naval_invasion_region_30 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 224
+            224 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 238
+            238 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 240
+            240 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 244
+            244 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 275
+            275 = { controller = { has_war_with = ROOT } }
+        }
+    }
+}
 pwc_st_naval_port_region_31 = {
     any_owned_state = {
         OR = {
@@ -904,6 +928,38 @@ pwc_st_naval_enemy_coast_region_31 = {
             }
             is_coastal = yes
             NOT = { is_fully_controlled_by = ROOT }
+        }
+    }
+}
+pwc_st_naval_invasion_region_31 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 224
+            224 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 244
+            244 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 246
+            246 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 250
+            250 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 254
+            254 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 259
+            259 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 265
+            265 = { controller = { has_war_with = ROOT } }
         }
     }
 }
@@ -952,6 +1008,50 @@ pwc_st_naval_enemy_coast_region_32 = {
         }
     }
 }
+pwc_st_naval_invasion_region_32 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 212
+            212 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 226
+            226 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 230
+            230 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 231
+            231 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 233
+            233 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 242
+            242 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 246
+            246 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 254
+            254 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 257
+            257 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 266
+            266 = { controller = { has_war_with = ROOT } }
+        }
+    }
+}
 pwc_st_naval_port_region_33 = {
     any_owned_state = {
         OR = {
@@ -992,6 +1092,46 @@ pwc_st_naval_enemy_coast_region_33 = {
             }
             is_coastal = yes
             NOT = { is_fully_controlled_by = ROOT }
+        }
+    }
+}
+pwc_st_naval_invasion_region_33 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 197
+            197 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 200
+            200 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 205
+            205 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 212
+            212 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 213
+            213 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 214
+            214 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 215
+            215 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 216
+            216 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 219
+            219 = { controller = { has_war_with = ROOT } }
         }
     }
 }
@@ -1065,6 +1205,106 @@ pwc_st_naval_enemy_coast_region_34 = {
             }
             is_coastal = yes
             NOT = { is_fully_controlled_by = ROOT }
+        }
+    }
+}
+pwc_st_naval_invasion_region_34 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 353
+            353 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 355
+            355 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 357
+            357 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 359
+            359 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 360
+            360 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 364
+            364 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 369
+            369 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 370
+            370 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 371
+            371 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 372
+            372 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 373
+            373 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 374
+            374 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 375
+            375 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 377
+            377 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 379
+            379 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 380
+            380 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 381
+            381 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 383
+            383 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 384
+            384 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 385
+            385 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 387
+            387 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 388
+            388 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 391
+            391 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 513
+            513 = { controller = { has_war_with = ROOT } }
         }
     }
 }
@@ -1163,6 +1403,150 @@ pwc_st_naval_enemy_coast_region_35 = {
         }
     }
 }
+pwc_st_naval_invasion_region_35 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 205
+            205 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 216
+            216 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 221
+            221 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 228
+            228 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 237
+            237 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 248
+            248 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 255
+            255 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 256
+            256 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 258
+            258 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 276
+            276 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 289
+            289 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 306
+            306 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 319
+            319 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 328
+            328 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 330
+            330 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 336
+            336 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 338
+            338 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 343
+            343 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 348
+            348 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 352
+            352 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 353
+            353 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 358
+            358 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 361
+            361 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 362
+            362 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 505
+            505 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 506
+            506 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 507
+            507 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 508
+            508 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 510
+            510 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 511
+            511 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 512
+            512 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 513
+            513 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 524
+            524 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 525
+            525 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 526
+            526 = { controller = { has_war_with = ROOT } }
+        }
+    }
+}
 pwc_st_naval_port_region_36 = {
     any_owned_state = {
         OR = {
@@ -1203,6 +1587,46 @@ pwc_st_naval_enemy_coast_region_36 = {
             }
             is_coastal = yes
             NOT = { is_fully_controlled_by = ROOT }
+        }
+    }
+}
+pwc_st_naval_invasion_region_36 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 73
+            73 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 83
+            83 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 111
+            111 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 115
+            115 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 126
+            126 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 143
+            143 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 163
+            163 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 176
+            176 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 205
+            205 = { controller = { has_war_with = ROOT } }
         }
     }
 }
@@ -1257,6 +1681,75 @@ pwc_st_naval_enemy_coast_region_37 = {
         }
     }
 }
+pwc_st_naval_invasion_region_37 = {
+    OR = {
+        AND = {
+            has_naval_invasion_against_state = 64
+            64 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 69
+            69 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 72
+            72 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 75
+            75 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 78
+            78 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 79
+            79 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 82
+            82 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 83
+            83 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 96
+            96 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 106
+            106 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 108
+            108 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 111
+            111 = { controller = { has_war_with = ROOT } }
+        }
+        AND = {
+            has_naval_invasion_against_state = 118
+            118 = { controller = { has_war_with = ROOT } }
+        }
+    }
+}
+
+pwc_st_naval_active_invasion = {
+    OR = {
+        pwc_st_naval_invasion_region_30 = yes
+        pwc_st_naval_invasion_region_31 = yes
+        pwc_st_naval_invasion_region_32 = yes
+        pwc_st_naval_invasion_region_33 = yes
+        pwc_st_naval_invasion_region_34 = yes
+        pwc_st_naval_invasion_region_35 = yes
+        pwc_st_naval_invasion_region_36 = yes
+        pwc_st_naval_invasion_region_37 = yes
+    }
+}
 
 pwc_st_naval_hainan_target = {
     OR = {
@@ -1293,10 +1786,13 @@ pwc_st_naval_target_coast = {
 pwc_st_naval_planning_needed = {
     pwc_st_naval_port = yes
     has_tech = pwc_tech_navy_t1
-    any_enemy_country = {
-        OR = {
-            pwc_st_naval_target_coast = yes
-            pwc_st_naval_hainan_target = yes
+    OR = {
+        pwc_st_naval_active_invasion = yes
+        any_enemy_country = {
+            OR = {
+                pwc_st_naval_target_coast = yes
+                pwc_st_naval_hainan_target = yes
+            }
         }
     }
 }

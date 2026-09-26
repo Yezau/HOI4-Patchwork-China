@@ -1176,7 +1176,10 @@ focus = {
 				type = bunker
 				level = 1
 				instant_build = yes
-				province = { all_provinces = yes }
+				province = {
+					all_provinces = yes
+					limit_to_victory_point = yes
+				}
 			}
 		}
 		effect_tooltip = {
@@ -3545,7 +3548,11 @@ focus = {
 				type = coastal_bunker
 				level = 1
 				instant_build = yes
-				province = { all_provinces = yes }
+				province = {
+					all_provinces = yes
+					limit_to_victory_point = yes
+					limit_to_coastal = yes
+				}
 			}
 		}
 		effect_tooltip = {
@@ -3834,7 +3841,10 @@ focus = {
 				type = bunker
 				level = 1
 				instant_build = yes
-				province = { all_provinces = yes }
+				province = {
+					all_provinces = yes
+					limit_to_victory_point = yes
+				}
 			}
 		}
 		pwc_se_focus_progress_tick = yes
@@ -3873,7 +3883,10 @@ focus = {
 				type = bunker
 				level = 1
 				instant_build = yes
-				province = { all_provinces = yes }
+				province = {
+					all_provinces = yes
+					limit_to_victory_point = yes
+				}
 			}
 		}
 		effect_tooltip = {

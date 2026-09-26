@@ -197,7 +197,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 	set_variable = { pwc_fs_defense_v_max_planning = 0 }
 	set_variable = { pwc_fs_defense_v_naval_coordination = 0 }
 	set_variable = { pwc_fs_defense_v_naval_detection = 0 }
-	set_variable = { pwc_fs_defense_v_naval_invasion_prep_speed = 0 }
+	set_variable = { pwc_fs_defense_v_naval_invasion_prep_days = 0 }
 	set_variable = { pwc_fs_defense_v_naval_torpedo_hit_chance_factor = 0 }
 	set_variable = { pwc_fs_defense_v_planning_speed = 0 }
 	set_variable = { pwc_fs_defense_v_production_factory_max_efficiency_factor = 0 }
@@ -402,7 +402,7 @@ pwc_se_rebuild_focus_spirit_defense = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_expeditionary_support }
 		add_to_variable = { pwc_fs_defense_count = 1 }
 		add_to_variable = { pwc_fs_defense_v_amphibious_invasion = 0.03 }
-		add_to_variable = { pwc_fs_defense_v_naval_invasion_prep_speed = 0.05 }
+		add_to_variable = { pwc_fs_defense_v_naval_invasion_prep_days = -15 }
 	}
 	if = {
 		limit = { has_country_flag = pwc_flag_focus_reward_mil_field_workshops }

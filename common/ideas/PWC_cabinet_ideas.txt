@@ -74,7 +74,7 @@ ideas = {
 			removal_cost = 0
 			picture = pwc_cabinet_cand_civil_city_psychologist
 			modifier = {
-				stability_weekly = 0.003
+				stability_weekly = 0.001
 				consumer_goods_factor = -0.1
 				political_power_factor = 0.1
 			}
@@ -101,6 +101,28 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 11
+				modifier = {
+					factor = 2
+					OR = {
+						has_country_flag = pwc_ai_balanced
+						has_country_flag = pwc_ai_mobility
+					}
+				}
+			}
+		}
+
+		pwc_cand_civil_war_propagandist = {
+			allowed = { always = yes }
+			cost = 100
+			removal_cost = 0
+			picture = pwc_cabinet_cand_civil_war_propagandist
+			modifier = {
+				war_support_weekly = 0.001
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 10
 				modifier = {
 					factor = 2
 					OR = {
@@ -593,7 +615,7 @@ ideas = {
 			picture = pwc_cabinet_cand_navy_landing_master
 			modifier = {
 				naval_invasion_prep_speed = 0.15
-				naval_invasion_capacity = 3
+				naval_invasion_plan_cap = 3
 				navy_max_range_factor = 0.1
 				experience_gain_navy = 0.12
 			}
@@ -619,7 +641,7 @@ ideas = {
 			removal_cost = 0
 			picture = pwc_cabinet_cand_navy_amphibious_chief
 			modifier = {
-				naval_invasion_capacity = 5
+				naval_invasion_plan_cap = 5
 				naval_invasion_prep_speed = 0.1
 				industrial_capacity_dockyard = 0.1
 				experience_gain_navy = 0.12
@@ -647,7 +669,7 @@ ideas = {
 			picture = pwc_cabinet_cand_navy_shipbuilding_superuser
 			modifier = {
 				industrial_capacity_dockyard = 0.2
-				naval_invasion_capacity = 3
+				naval_invasion_plan_cap = 3
 				naval_hit_chance = 0.1
 				experience_gain_navy = 0.12
 			}

@@ -17,8 +17,20 @@ on_actions = {
 			}
 		}
 	}
+on_capitulation_immediate = {
+    effect = {
+        if = {
+            limit = { has_country_flag = pwc_flag_tagged_aid_received }
+            pwc_se_remove_defeated_ai_aid = yes
+        }
+    }
+}
 	on_capitulation = {
 		effect = {
+            if = {
+                limit = { has_country_flag = pwc_flag_tagged_aid_received }
+                pwc_se_remove_defeated_ai_aid = yes
+            }
 			if = {
 				limit = { pwc_st_is_city_country = yes }
 				pwc_se_on_surrender_settle_entry = yes
@@ -30,6 +42,10 @@ on_peaceconference_ended = {
 }
 on_annex = {
     effect = {
+        if = {
+            limit = { FROM = { has_country_flag = pwc_flag_tagged_aid_received } }
+            pwc_se_remove_annexed_ai_aid = yes
+        }
         if = {
             limit = { FROM = { pwc_st_is_city_country = yes } }
             FROM = { pwc_se_clear_eliminated_war_warnings = yes }
@@ -54,6 +70,9 @@ on_state_control_changed = {
 }
 on_daily = {
     effect = { pwc_se_ensure_integration_tick = yes }
+}
+on_weekly = {
+    effect = { pwc_se_refresh_ai_league = yes }
 }
 	on_monthly = {
 		effect = {

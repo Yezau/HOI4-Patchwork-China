@@ -1,0 +1,1 @@
+NDefines_Graphics.NGraphics.CITY_SPRAWL_SHRINK_DISTANCE = 600.0

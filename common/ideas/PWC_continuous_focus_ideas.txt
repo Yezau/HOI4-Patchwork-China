@@ -1,0 +1,47 @@
+ideas = {
+    hidden_ideas = {
+        continuous_naval_production = {
+            allowed = { always = no }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_dockyard = 0.2
+            }
+        }
+        continuous_air_production = {
+            allowed = { always = no }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            equipment_bonus = {
+                pwc_equipment_transport = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_bomber = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_cas = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_cv_cas = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_cv_fighter = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_fighter = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                pwc_platform_uav = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+            }
+        }
+    }
+}

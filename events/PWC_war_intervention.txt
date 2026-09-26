@@ -2,7 +2,15 @@ add_namespace = pwc_support
 country_event = {
     id = pwc_support.1
     title = pwc_support_title
-    desc = pwc_support_desc
+    picture = PWC_GFX_event_report_diplomacy
+    desc = {
+        text = pwc_support_desc
+        trigger = { pwc_st_support_accept = yes }
+    }
+    desc = {
+        text = pwc_support_unavailable_desc
+        trigger = { NOT = { pwc_st_support_accept = yes } }
+    }
     is_triggered_only = yes
     trigger = {
         has_country_flag = pwc_support_requested
@@ -11,6 +19,7 @@ country_event = {
     timeout_days = 7
     option = {
         name = pwc_support_decline
+        trigger = { pwc_st_support_accept = yes }
         ai_chance = { base = 20 }
         set_country_flag = { flag = pwc_support_neutral days = 180 }
         clr_country_flag = pwc_support_requested
@@ -48,10 +57,28 @@ country_event = {
             }
         }
     }
+    option = {
+        name = pwc_support_unavailable
+        trigger = { NOT = { pwc_st_support_accept = yes } }
+        ai_chance = { base = 100 }
+        custom_effect_tooltip = pwc_support_unavailable_tt
+        clr_country_flag = pwc_support_requested
+        if = {
+            limit = { has_event_target = pwc_support_host }
+            event_target:pwc_support_host = {
+                if = {
+                    limit = { var:pwc_support_invitee = { tag = ROOT } }
+                    clr_country_flag = pwc_support_pending
+                    clear_variable = pwc_support_invitee
+                }
+            }
+        }
+    }
 }
 country_event = {
     id = pwc_support.2
     title = pwc_support_joined_title
+    picture = PWC_GFX_event_report_diplomacy
     desc = pwc_support_joined_desc
     is_triggered_only = yes
     option = { name = pwc_support_ok }
@@ -59,6 +86,7 @@ country_event = {
 country_event = {
     id = pwc_support.3
     title = pwc_support_declined_title
+    picture = PWC_GFX_event_report_diplomacy
     desc = pwc_support_declined_desc
     is_triggered_only = yes
     option = { name = pwc_support_ok }

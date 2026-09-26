@@ -68,10 +68,33 @@ PWC_diplomacy_category = {
 			NOT = { has_war_with = FROM }
 		}
 		complete_effect = {
-			diplomatic_relation = {
-				country = FROM
-				relation = non_aggression_pact
-				active = yes
+			if = {
+				limit = {
+					hidden_trigger = {
+						exists = yes
+						pwc_st_is_city_country = yes
+						pwc_st_city_alive = yes
+						has_country_flag = pwc_flag_diplomatic_corps
+						FROM = {
+							exists = yes
+							pwc_st_is_city_country = yes
+							pwc_st_city_alive = yes
+							is_neighbor_of = ROOT
+							NOT = { tag = ROOT }
+							NOT = { has_non_aggression_pact_with = ROOT }
+						}
+						NOT = { pwc_st_protection_active = yes }
+						NOT = { has_war_with = FROM }
+					}
+				}
+				diplomatic_relation = {
+					country = FROM
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			else = {
+				hidden_effect = { add_political_power = 25 }
 			}
 		}
 		ai_will_do = { factor = 2 }
