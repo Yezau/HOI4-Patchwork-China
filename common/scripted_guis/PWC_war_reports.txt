@@ -42,9 +42,21 @@ scripted_gui = {
             pwc_war_reports_empty_visible = {
                 check_variable = { pwc_war_reports^num = 0 }
             }
+            pwc_enemy_operation_alerts_mute_visible = {
+                NOT = { has_country_flag = pwc_flag_enemy_operation_alerts_muted }
+            }
+            pwc_enemy_operation_alerts_restore_visible = {
+                has_country_flag = pwc_flag_enemy_operation_alerts_muted
+            }
         }
         effects = {
             pwc_war_reports_close_click = { pwc_se_close_war_reports = yes }
+            pwc_enemy_operation_alerts_mute_click = {
+                pwc_se_mute_enemy_operation_alerts = yes
+            }
+            pwc_enemy_operation_alerts_restore_click = {
+                pwc_se_restore_enemy_operation_alerts = yes
+            }
         }
     }
 }

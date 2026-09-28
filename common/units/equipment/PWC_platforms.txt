@@ -24,6 +24,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -56,10 +57,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -75,10 +78,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -94,10 +99,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -113,10 +120,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -133,6 +142,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -145,11 +158,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -247,6 +268,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -279,10 +301,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -298,10 +322,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -317,10 +343,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -336,10 +364,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -356,6 +386,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -368,11 +402,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -485,6 +527,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -517,10 +560,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -536,10 +581,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -555,10 +602,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -574,10 +623,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -594,6 +645,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -606,11 +661,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -723,6 +786,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -755,10 +819,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -774,10 +840,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -793,10 +861,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -812,10 +882,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -832,6 +904,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -844,11 +920,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -961,6 +1045,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -993,10 +1078,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1012,10 +1099,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1031,10 +1120,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1050,10 +1141,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1070,6 +1163,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -1082,11 +1179,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -1199,6 +1304,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -1231,10 +1337,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1250,10 +1358,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1269,10 +1379,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1288,10 +1400,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1308,6 +1422,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -1320,11 +1438,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -1441,6 +1567,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -1473,10 +1600,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1492,10 +1621,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1511,10 +1642,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1530,10 +1663,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1550,6 +1685,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -1562,11 +1701,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -1664,6 +1811,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -1696,10 +1844,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1715,10 +1865,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1734,10 +1886,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1753,10 +1907,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1773,6 +1929,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -1785,11 +1945,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -1902,6 +2070,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -1934,10 +2103,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1953,10 +2124,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1972,10 +2145,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -1991,10 +2166,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2011,6 +2188,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -2023,11 +2204,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -2140,6 +2329,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -2172,10 +2362,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2191,10 +2383,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2210,10 +2404,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2229,10 +2425,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2249,6 +2447,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -2261,11 +2463,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -2378,6 +2588,7 @@ equipments = {
 				gfx = pwc_slot_tank_gun
 				allowed_module_categories = {
 					pwc_modcat_family_tank_atgm
+					pwc_modcat_family_tank_autocannon
 					pwc_modcat_family_tank_light_gun
 				}
 			}
@@ -2410,10 +2621,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2429,10 +2642,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2448,10 +2663,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2467,10 +2684,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2487,6 +2706,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
@@ -2499,11 +2722,19 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_autocannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_engineering
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -2654,10 +2885,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2673,10 +2906,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2692,10 +2927,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2711,10 +2948,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2728,6 +2967,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -2748,6 +2991,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -2887,10 +3134,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2906,10 +3155,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2925,10 +3176,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2944,10 +3197,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -2961,6 +3216,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -2981,6 +3240,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -3135,10 +3398,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3154,10 +3419,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3173,10 +3440,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3192,10 +3461,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3209,6 +3480,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -3229,6 +3504,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -3384,10 +3663,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3403,10 +3684,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3422,10 +3705,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3441,10 +3726,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3458,6 +3745,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -3478,6 +3769,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -3633,10 +3928,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3652,10 +3949,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3671,10 +3970,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3690,10 +3991,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3707,6 +4010,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -3727,6 +4034,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -3882,10 +4193,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3901,10 +4214,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3920,10 +4235,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3939,10 +4256,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -3956,6 +4275,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -3976,6 +4299,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -4134,10 +4461,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4153,10 +4482,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4172,10 +4503,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4191,10 +4524,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4208,6 +4543,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -4228,6 +4567,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -4362,10 +4705,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4381,10 +4726,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4400,10 +4747,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4419,10 +4768,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4436,6 +4787,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -4456,6 +4811,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -4606,10 +4965,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4625,10 +4986,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4644,10 +5007,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4663,10 +5028,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4680,6 +5047,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -4700,6 +5071,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -4850,10 +5225,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4869,10 +5246,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4888,10 +5267,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4907,10 +5288,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -4924,6 +5307,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -4944,6 +5331,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -5094,10 +5485,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5113,10 +5506,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5132,10 +5527,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5151,10 +5548,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5168,6 +5567,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -5188,6 +5591,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -5338,10 +5745,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5357,10 +5766,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5376,10 +5787,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5395,10 +5808,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5412,6 +5827,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_addon_armor
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
 			count < 2
 		}
 		module_count_limit = {
@@ -5432,6 +5851,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fcs
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -5543,6 +5966,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -5585,10 +6009,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5604,10 +6030,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5623,10 +6051,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5642,10 +6072,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5662,11 +6094,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -5687,6 +6127,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -5766,6 +6210,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -5808,10 +6253,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5827,10 +6274,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5846,10 +6295,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5865,10 +6316,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -5885,11 +6338,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -5910,6 +6371,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -6004,6 +6469,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -6046,10 +6512,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6065,10 +6533,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6084,10 +6554,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6103,10 +6575,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6123,11 +6597,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -6148,6 +6630,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -6242,6 +6728,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -6284,10 +6771,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6303,10 +6792,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6322,10 +6813,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6341,10 +6834,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6361,11 +6856,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -6386,6 +6889,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -6480,6 +6987,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -6522,10 +7030,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6541,10 +7051,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6560,10 +7072,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6579,10 +7093,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6599,11 +7115,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -6624,6 +7148,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -6718,6 +7246,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_tank_turret
 				allowed_module_categories = {
+					pwc_modcat_family_tank_assault_mount
 					pwc_modcat_family_tank_fixed_mount
 				}
 			}
@@ -6760,10 +7289,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6779,10 +7310,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6798,10 +7331,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6817,10 +7352,12 @@ equipments = {
 				gfx = pwc_slot_tank_special
 				allowed_module_categories = {
 					pwc_modcat_family_tank_addon_armor
+					pwc_modcat_family_tank_ammo_rack
 					pwc_modcat_family_tank_ammo_safety
 					pwc_modcat_family_tank_apu
 					pwc_modcat_family_tank_engineering
 					pwc_modcat_family_tank_fcs
+					pwc_modcat_family_tank_fuel
 					pwc_modcat_family_tank_maintenance
 					pwc_modcat_family_tank_radio
 					pwc_modcat_family_tank_rws
@@ -6837,11 +7374,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_tank_ammo_rack
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_tank_ammo_safety
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_apu
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_assault_mount
 			count < 2
 		}
 		module_count_limit = {
@@ -6862,6 +7407,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_tank_fixed_mount
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_tank_fuel
 			count < 2
 		}
 		module_count_limit = {
@@ -6991,6 +7540,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7000,6 +7550,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7081,6 +7632,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -7157,6 +7712,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7166,6 +7722,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7247,6 +7804,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -7339,6 +7900,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7348,6 +7910,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7429,6 +7992,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -7521,6 +8088,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7530,6 +8098,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7611,6 +8180,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -7703,6 +8276,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7712,6 +8286,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7793,6 +8368,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -7885,6 +8464,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			fixed_pwc_fighter_weapon_3 = {
@@ -7894,6 +8474,7 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 				}
 			}
 			pwc_fighter_special_0 = {
@@ -7975,6 +8556,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_fuel
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_irst
@@ -8074,6 +8659,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -8083,8 +8669,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -8094,8 +8682,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -8176,6 +8766,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -8206,6 +8800,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -8245,6 +8847,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -8254,8 +8857,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -8265,8 +8870,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -8347,6 +8954,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -8377,6 +8988,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -8432,6 +9051,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -8441,8 +9061,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -8452,8 +9074,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -8534,6 +9158,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -8564,6 +9192,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -8619,6 +9255,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -8628,8 +9265,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -8639,8 +9278,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -8721,6 +9362,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -8751,6 +9396,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -8806,6 +9459,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -8815,8 +9469,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -8826,8 +9482,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -8908,6 +9566,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -8938,6 +9600,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -8993,6 +9663,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_cas_weapon_2 = {
@@ -9002,8 +9673,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_cas_weapon_3 = {
@@ -9013,8 +9686,10 @@ equipments = {
 					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
 					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_cas_special_0 = {
@@ -9095,6 +9770,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_maritime
 			count < 4
 		}
@@ -9125,6 +9804,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -9195,6 +9882,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -9214,6 +9902,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -9224,6 +9913,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -9236,6 +9926,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9251,6 +9942,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9266,6 +9958,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9325,8 +10018,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -9362,6 +10067,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -9381,6 +10087,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -9391,6 +10098,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -9403,6 +10111,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9418,6 +10127,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9433,6 +10143,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9492,8 +10203,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -9546,6 +10269,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -9565,6 +10289,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -9575,6 +10300,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -9587,6 +10313,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9602,6 +10329,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9617,6 +10345,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9676,8 +10405,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -9730,6 +10471,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -9749,6 +10491,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -9759,6 +10502,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -9771,6 +10515,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9786,6 +10531,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9801,6 +10547,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9860,8 +10607,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -9914,6 +10673,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -9933,6 +10693,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -9943,6 +10704,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -9955,6 +10717,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9970,6 +10733,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -9985,6 +10749,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -10044,8 +10809,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -10098,6 +10875,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_bomber_weapon_2 = {
@@ -10117,6 +10895,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_bomber_weapon_4 = {
@@ -10127,6 +10906,7 @@ equipments = {
 					pwc_modcat_family_air_maritime
 					pwc_modcat_family_air_standoff
 					pwc_modcat_family_air_strategic
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_bomber_special_0 = {
@@ -10139,6 +10919,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -10154,6 +10935,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -10169,6 +10951,7 @@ equipments = {
 					pwc_modcat_family_air_fuel
 					pwc_modcat_family_air_self_sealing
 					pwc_modcat_family_air_structure
+					pwc_modcat_family_air_tail_turret
 					pwc_modcat_project_pwc_module_air_avionics_night_navigation
 					pwc_modcat_project_pwc_module_air_special_defensive_jammer
 					pwc_modcat_project_pwc_module_air_special_stealth_shaping
@@ -10228,8 +11011,20 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_tail_turret
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_night_navigation
@@ -10298,6 +11093,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -10397,6 +11193,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
 			count < 2
 		}
 		module_count_limit = {
@@ -10453,6 +11253,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -10552,6 +11353,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
 			count < 2
 		}
 		module_count_limit = {
@@ -10624,6 +11429,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -10723,6 +11529,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
 			count < 2
 		}
 		module_count_limit = {
@@ -10795,6 +11605,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -10894,6 +11705,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
 			count < 2
 		}
 		module_count_limit = {
@@ -10966,6 +11781,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -11065,6 +11881,10 @@ equipments = {
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
 			count < 2
 		}
 		module_count_limit = {
@@ -11137,6 +11957,7 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_uav_weapon_2 = {
@@ -11239,6 +12060,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_uav_endurance
 			count < 2
 		}
@@ -11308,6 +12133,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -11373,6 +12199,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11392,6 +12219,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11420,6 +12248,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -11430,6 +12262,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -11520,6 +12356,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -11585,6 +12422,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11604,6 +12442,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11632,6 +12471,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -11642,6 +12485,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -11753,6 +12600,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -11818,6 +12666,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11837,6 +12686,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -11865,6 +12715,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -11875,6 +12729,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -11986,6 +12844,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -12051,6 +12910,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12070,6 +12930,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12098,6 +12959,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -12108,6 +12973,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -12219,6 +13088,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -12284,6 +13154,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12303,6 +13174,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12331,6 +13203,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -12341,6 +13217,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -12453,6 +13333,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_medium_gun
 				}
 			}
@@ -12518,6 +13399,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12537,6 +13419,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12565,6 +13448,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -12575,6 +13462,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -12696,6 +13587,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -12761,6 +13653,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -12770,6 +13663,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12787,6 +13681,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -12813,6 +13708,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -12823,6 +13722,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -12909,6 +13812,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -12974,6 +13878,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -12983,6 +13888,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13000,6 +13906,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13026,6 +13933,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -13036,6 +13947,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -13143,6 +14058,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13208,6 +14124,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13217,6 +14134,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13234,6 +14152,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13260,6 +14179,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -13270,6 +14193,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -13378,6 +14305,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13443,6 +14371,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13452,6 +14381,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13469,6 +14399,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13495,6 +14426,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -13505,6 +14440,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -13613,6 +14552,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13678,6 +14618,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13687,6 +14628,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13704,6 +14646,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13730,6 +14673,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -13740,6 +14687,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -13848,6 +14799,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13913,6 +14865,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_gun
 				allowed_module_categories = {
+					pwc_modcat_family_navy_dual_purpose
 					pwc_modcat_family_navy_heavy_gun
 					pwc_modcat_family_navy_medium_gun
 				}
@@ -13922,6 +14875,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13939,6 +14893,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -13965,6 +14920,10 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_ciws
 			count < 4
 		}
@@ -13975,6 +14934,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_navy_decoy
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_dual_purpose
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_fuel
@@ -14092,6 +15055,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14116,6 +15080,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14124,10 +15089,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14139,10 +15106,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14154,10 +15123,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14165,6 +15136,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -14179,11 +15154,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -14243,6 +15226,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14267,6 +15251,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14275,10 +15260,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14290,10 +15277,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14305,10 +15294,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14316,6 +15307,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -14330,11 +15325,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -14416,6 +15419,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14440,6 +15444,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14448,10 +15453,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14463,10 +15470,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14478,10 +15487,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14489,6 +15500,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -14503,11 +15518,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -14589,6 +15612,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14613,6 +15637,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14621,10 +15646,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14636,10 +15663,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14651,10 +15680,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14662,6 +15693,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -14676,11 +15711,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -14762,6 +15805,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14786,6 +15830,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14794,10 +15839,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14809,10 +15856,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14824,10 +15873,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14835,6 +15886,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -14849,11 +15904,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -14936,6 +15999,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_torpedo
 				}
 			}
@@ -14960,6 +16024,7 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_missile
 				allowed_module_categories = {
+					pwc_modcat_family_navy_heavy_torpedo
 					pwc_modcat_family_navy_sub_missile
 					pwc_modcat_family_navy_sub_torpedo
 				}
@@ -14968,10 +16033,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14983,10 +16050,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -14998,10 +16067,12 @@ equipments = {
 				required = no
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
 					pwc_modcat_family_navy_minelayer
+					pwc_modcat_family_navy_snorkel
 					pwc_modcat_family_navy_sonar_towed
 					pwc_modcat_family_navy_weapon_support
 					pwc_modcat_project_pwc_module_navy_aux_automated_damage_control
@@ -15009,6 +16080,10 @@ equipments = {
 					pwc_modcat_project_pwc_module_navy_special_stealth_quieting
 				}
 			}
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
+			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_damage_control
@@ -15023,11 +16098,19 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_heavy_torpedo
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_minelayer
 			count < 2
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_navy_passive_sonar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_snorkel
 			count < 2
 		}
 		module_count_limit = {
@@ -15120,6 +16203,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15162,6 +16246,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15176,6 +16261,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15187,7 +16273,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -15263,6 +16357,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15305,6 +16400,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15319,6 +16415,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15330,7 +16427,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -15428,6 +16533,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15470,6 +16576,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15484,6 +16591,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15495,7 +16603,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -15593,6 +16709,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15635,6 +16752,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15649,6 +16767,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15660,7 +16779,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -15758,6 +16885,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15800,6 +16928,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15814,6 +16943,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15825,7 +16955,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -15923,6 +17061,7 @@ equipments = {
 				required = yes
 				gfx = pwc_slot_navy_flight_deck
 				allowed_module_categories = {
+					pwc_modcat_family_navy_armored_deck
 					pwc_modcat_family_navy_flight_deck
 				}
 			}
@@ -15965,6 +17104,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15979,6 +17119,7 @@ equipments = {
 				gfx = pwc_slot_navy_special
 				allowed_module_categories = {
 					pwc_modcat_family_navy_asw_aviation
+					pwc_modcat_family_navy_bulkheads
 					pwc_modcat_family_navy_damage_control
 					pwc_modcat_family_navy_decoy
 					pwc_modcat_family_navy_fuel
@@ -15990,7 +17131,15 @@ equipments = {
 			}
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_navy_armored_deck
+			count < 2
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_navy_asw_aviation
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_navy_bulkheads
 			count < 2
 		}
 		module_count_limit = {
@@ -16117,6 +17266,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -16126,7 +17276,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -16135,8 +17287,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -16203,6 +17360,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -16223,6 +17384,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -16237,6 +17406,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -16257,6 +17430,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -16301,6 +17482,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -16310,7 +17492,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -16319,8 +17503,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -16387,6 +17576,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -16407,6 +17600,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -16421,6 +17622,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -16441,6 +17646,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -16501,6 +17714,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -16510,7 +17724,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -16519,8 +17735,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -16587,6 +17808,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -16607,6 +17832,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -16621,6 +17854,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -16641,6 +17878,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -16701,6 +17946,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -16710,7 +17956,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -16719,8 +17967,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -16787,6 +18040,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -16807,6 +18064,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -16821,6 +18086,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -16841,6 +18110,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -16901,6 +18178,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -16910,7 +18188,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -16919,8 +18199,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -16987,6 +18272,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -17007,6 +18296,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -17021,6 +18318,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -17041,6 +18342,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -17101,6 +18410,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -17110,7 +18420,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -17119,8 +18431,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -17187,6 +18504,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -17207,6 +18528,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -17221,6 +18550,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -17241,6 +18574,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar

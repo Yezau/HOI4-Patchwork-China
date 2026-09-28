@@ -13,12 +13,12 @@ guiTypes = {
 	
 	positionType = {
 		name = "countrystateview_weathericons_position"
-		position = { x = 375 y= 25 }
+		position = { x = 333 y = -38 }
 	}
 
 	positionType = {
 		name = "countrystateview_weathericons_offset"
-		position = { x = -40 y = 0 }
+		position = { x = -19 y = 0 }
 	}
 	
 	containerWindowType = {
@@ -314,20 +314,24 @@ guiTypes = {
 			}
 			
 			instantTextboxType = {
-				name = "province"
-				position = { x = 7 y = -36 }
-				font = "hoi_18mbs"
-				maxWidth = 327
-				maxHeight = 18
-				format = left
-			}
+                name = "province"
+                position = { x = 7 y = -36 }
+                font = "hoi_18mbs"
+                maxWidth = 190
+                maxHeight = 18
+                format = left
+                fixedsize = yes
+                truncate = yes
+                multiline = no
+            }
 
 			iconType = {
-				name = "province_required_rule"
-				position = { x = 100 y = 15 }
-				spriteType = "GFX_required_rule"
-				Orientation = "UPPER_LEFT"
-			}	
+                name = "province_required_rule"
+                position = { x = 306 y = -86 }
+                spriteType = "GFX_required_rule"
+                Orientation = "UPPER_LEFT"
+                scale = 0.5
+            }
 
 			iconType = {
 				name = "building_modifiers_icon"
@@ -341,42 +345,47 @@ guiTypes = {
 			
 			
 			iconType = {
-				name = "modifiers_mud_icon"
-				position = { x = 0 y= 0 }
-				spriteType = "GFX_modifiers_mud_icon"
-				Orientation = "UPPER_LEFT"
-			}
+                name = "modifiers_mud_icon"
+                position = { x = 0 y= 0 }
+                spriteType = "GFX_modifiers_mud_icon"
+                Orientation = "UPPER_LEFT"
+                scale = 0.5
+            }
 			
 			iconType = {
-				name = "modifiers_snow_icons"
-				position = { x = 0 y= 0 }
-				spriteType = "GFX_modifiers_snow_icons"
-				Orientation = "UPPER_LEFT"
-				frame = 1
-			}
+                name = "modifiers_snow_icons"
+                position = { x = 0 y= 0 }
+                spriteType = "GFX_modifiers_snow_icons"
+                Orientation = "UPPER_LEFT"
+                frame = 1
+                scale = 0.5
+            }
 
 			iconType = {
-				name = "modifiers_weather_icons"
-				position = { x = 0 y= 0 }
-				spriteType = "GFX_modifiers_weather_icons"
-				Orientation = "UPPER_LEFT"
-				frame = 1
-			}
+                name = "modifiers_weather_icons"
+                position = { x = 0 y= 0 }
+                spriteType = "GFX_modifiers_weather_icons"
+                Orientation = "UPPER_LEFT"
+                frame = 1
+                scale = 0.5
+            }
 
 			iconType = {
-				name = "temperature_icons"
-				position = { x = 0 y= 0 }
-				spriteType = "GFX_temperature_icons"
-				Orientation = "UPPER_LEFT"
-				frame = 1				
-			}
+                name = "temperature_icons"
+                position = { x = 0 y= 0 }
+                spriteType = "GFX_temperature_icons"
+                Orientation = "UPPER_LEFT"
+                frame = 1
+                scale = 0.5
+            }
 
 			iconType = {
-				name = "impassability_icon"
-				position = { x = 0 y= 0 }
-				spriteType = "GFX_impassable_icon"
-				Orientation = "UPPER_LEFT"
-			}
+                name = "impassability_icon"
+                position = { x = 0 y= 0 }
+                spriteType = "GFX_impassable_icon"
+                Orientation = "UPPER_LEFT"
+                scale = 0.5
+            }
 
 			instantTextboxType = {
 				name = "state_modifiers"
@@ -412,25 +421,28 @@ guiTypes = {
 				position = { x = 0 y= 0 }
 
 				iconType = {
-					name = "flooded_icon"
-					spriteType = "GFX_modifiers_flooded_icon"
-					position = { x = 0 y = 0 }
-					Orientation = "UPPER_LEFT"			
-				}
+                    name = "flooded_icon"
+                    spriteType = "GFX_modifiers_flooded_icon"
+                    position = { x = 0 y = 0 }
+                    Orientation = "UPPER_LEFT"
+                    scale = 0.5
+                }
 
 				iconType = {
-					name = "unplanned_offensive_icon"
-					spriteType = "GFX_modifiers_unplanned_offensive_icon"
-					position = { x = 0 y = 0 }
-					Orientation = "UPPER_LEFT"			
-				}
+                    name = "unplanned_offensive_icon"
+                    spriteType = "GFX_modifiers_unplanned_offensive_icon"
+                    position = { x = 0 y = 0 }
+                    Orientation = "UPPER_LEFT"
+                    scale = 0.5
+                }
 
 				iconType = {
-					name = "the_great_wall_icon"
-					spriteType = "GFX_modifiers_the_great_wall_icon"
-					position = { x = 0 y = 0 }
-					Orientation = "UPPER_LEFT"			
-				}	
+                    name = "the_great_wall_icon"
+                    spriteType = "GFX_modifiers_the_great_wall_icon"
+                    position = { x = 0 y = 0 }
+                    Orientation = "UPPER_LEFT"
+                    scale = 0.5
+                }
 			}
 
 			gridBoxType = {

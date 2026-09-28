@@ -107,6 +107,15 @@ pwc_se_close_war_reports = {
     add_to_variable = { global.pwc_war_reports_dirty = 1 }
 }
 
+pwc_se_mute_enemy_operation_alerts = {
+    set_country_flag = pwc_flag_enemy_operation_alerts_muted
+    add_to_variable = { global.pwc_war_reports_dirty = 1 }
+}
+pwc_se_restore_enemy_operation_alerts = {
+    clr_country_flag = pwc_flag_enemy_operation_alerts_muted
+    add_to_variable = { global.pwc_war_reports_dirty = 1 }
+}
+
 
 pwc_se_check_war_milestones = {
     if = {

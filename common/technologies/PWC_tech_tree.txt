@@ -1213,6 +1213,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t1
 			pwc_module_tank_maintenance_t1
 			pwc_module_tank_rws_t1
+			pwc_module_tank_autocannon_t1
+			pwc_module_tank_ammo_rack_t1
+			pwc_module_tank_fuel_t1
 		}
 		enable_subunits = {
 			pwc_unit_amphibious_mechanized
@@ -1304,6 +1307,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t2
 			pwc_module_tank_maintenance_t2
 			pwc_module_tank_rws_t2
+			pwc_module_tank_autocannon_t2
+			pwc_module_tank_ammo_rack_t2
+			pwc_module_tank_fuel_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1392,6 +1398,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t3
 			pwc_module_tank_maintenance_t3
 			pwc_module_tank_rws_t3
+			pwc_module_tank_autocannon_t3
+			pwc_module_tank_ammo_rack_t3
+			pwc_module_tank_fuel_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1480,6 +1489,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t4
 			pwc_module_tank_maintenance_t4
 			pwc_module_tank_rws_t4
+			pwc_module_tank_autocannon_t4
+			pwc_module_tank_ammo_rack_t4
+			pwc_module_tank_fuel_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1549,6 +1561,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t1
 			pwc_module_tank_maintenance_t1
 			pwc_module_tank_rws_t1
+			pwc_module_tank_assault_mount_t1
+			pwc_module_tank_ammo_rack_t1
+			pwc_module_tank_fuel_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1584,7 +1599,7 @@ technologies = {
 					name = "一代·履带式反坦克导弹车"
 					type = pwc_platform_tank_destroyer_gen1
 					modules = {
-						pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t1
+						pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t1
 						pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t1
 						pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t1
 						pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
@@ -1667,6 +1682,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t2
 			pwc_module_tank_maintenance_t2
 			pwc_module_tank_rws_t2
+			pwc_module_tank_assault_mount_t2
+			pwc_module_tank_ammo_rack_t2
+			pwc_module_tank_fuel_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1702,7 +1720,7 @@ technologies = {
 					name = "二代·非视距反坦克导弹车"
 					type = pwc_platform_tank_destroyer_gen2
 					modules = {
-						pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t2
+						pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t2
 						pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t2
 						pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t2
 						pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
@@ -1785,6 +1803,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t3
 			pwc_module_tank_maintenance_t3
 			pwc_module_tank_rws_t3
+			pwc_module_tank_assault_mount_t3
+			pwc_module_tank_ammo_rack_t3
+			pwc_module_tank_fuel_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1904,6 +1925,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t4
 			pwc_module_tank_maintenance_t4
 			pwc_module_tank_rws_t4
+			pwc_module_tank_assault_mount_t4
+			pwc_module_tank_ammo_rack_t4
+			pwc_module_tank_fuel_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1989,6 +2013,7 @@ technologies = {
 			pwc_module_air_irst_t1
 			pwc_module_air_self_sealing_t1
 			pwc_module_air_armor_t1
+			pwc_module_air_heavy_cannon_t1
 		}
 		enable_subunits = {
 			limit = {
@@ -2072,6 +2097,7 @@ technologies = {
 			pwc_module_air_irst_t2
 			pwc_module_air_self_sealing_t2
 			pwc_module_air_armor_t2
+			pwc_module_air_heavy_cannon_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2149,6 +2175,7 @@ technologies = {
 			pwc_module_air_irst_t3
 			pwc_module_air_self_sealing_t3
 			pwc_module_air_armor_t3
+			pwc_module_air_heavy_cannon_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2226,6 +2253,7 @@ technologies = {
 			pwc_module_air_irst_t4
 			pwc_module_air_self_sealing_t4
 			pwc_module_air_armor_t4
+			pwc_module_air_heavy_cannon_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2284,6 +2312,9 @@ technologies = {
 			pwc_module_air_armor_t1
 			pwc_module_air_rockets_t1
 			pwc_module_air_anti_armor_t1
+			pwc_module_air_heavy_cannon_t1
+			pwc_module_air_torpedo_t1
+			pwc_module_air_terrain_radar_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2294,7 +2325,7 @@ technologies = {
 						fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t1
 						fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
 						fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
-						fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
+						fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t1
 						pwc_cas_special_0 = pwc_module_air_armor_t1
 					}
 				}
@@ -2374,6 +2405,9 @@ technologies = {
 			pwc_module_air_armor_t2
 			pwc_module_air_rockets_t2
 			pwc_module_air_anti_armor_t2
+			pwc_module_air_heavy_cannon_t2
+			pwc_module_air_torpedo_t2
+			pwc_module_air_terrain_radar_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2384,7 +2418,7 @@ technologies = {
 						fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t2
 						fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
 						fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
-						fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
+						fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t2
 						pwc_cas_special_0 = pwc_module_air_armor_t2
 					}
 				}
@@ -2464,6 +2498,9 @@ technologies = {
 			pwc_module_air_armor_t3
 			pwc_module_air_rockets_t3
 			pwc_module_air_anti_armor_t3
+			pwc_module_air_heavy_cannon_t3
+			pwc_module_air_torpedo_t3
+			pwc_module_air_terrain_radar_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2555,6 +2592,9 @@ technologies = {
 			pwc_module_air_armor_t4
 			pwc_module_air_rockets_t4
 			pwc_module_air_anti_armor_t4
+			pwc_module_air_heavy_cannon_t4
+			pwc_module_air_torpedo_t4
+			pwc_module_air_terrain_radar_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2618,6 +2658,9 @@ technologies = {
 			pwc_module_air_armor_t1
 			pwc_module_air_iron_bombs_t1
 			pwc_module_air_standoff_t1
+			pwc_module_air_torpedo_t1
+			pwc_module_air_tail_turret_t1
+			pwc_module_air_terrain_radar_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2695,6 +2738,9 @@ technologies = {
 			pwc_module_air_armor_t2
 			pwc_module_air_iron_bombs_t2
 			pwc_module_air_standoff_t2
+			pwc_module_air_torpedo_t2
+			pwc_module_air_tail_turret_t2
+			pwc_module_air_terrain_radar_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2772,6 +2818,9 @@ technologies = {
 			pwc_module_air_armor_t3
 			pwc_module_air_iron_bombs_t3
 			pwc_module_air_standoff_t3
+			pwc_module_air_torpedo_t3
+			pwc_module_air_tail_turret_t3
+			pwc_module_air_terrain_radar_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2849,6 +2898,9 @@ technologies = {
 			pwc_module_air_armor_t4
 			pwc_module_air_iron_bombs_t4
 			pwc_module_air_standoff_t4
+			pwc_module_air_torpedo_t4
+			pwc_module_air_tail_turret_t4
+			pwc_module_air_terrain_radar_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -2912,6 +2964,8 @@ technologies = {
 			pwc_module_navy_minesweeper_t1
 			pwc_module_navy_search_radar_t1
 			pwc_module_navy_passive_sonar_t1
+			pwc_module_navy_dual_purpose_t1
+			pwc_module_navy_bulkheads_t1
 		}
 		enable_subunits = {
 			limit = {
@@ -2925,7 +2979,7 @@ technologies = {
 					name = "一代驱逐舰"
 					type = pwc_platform_destroyer_gen1
 					modules = {
-						fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t1
+						fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t1
 						fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t1
 						fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t1
 						fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t1
@@ -3006,6 +3060,8 @@ technologies = {
 			pwc_module_navy_minesweeper_t2
 			pwc_module_navy_search_radar_t2
 			pwc_module_navy_passive_sonar_t2
+			pwc_module_navy_dual_purpose_t2
+			pwc_module_navy_bulkheads_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3013,7 +3069,7 @@ technologies = {
 					name = "二代驱逐舰"
 					type = pwc_platform_destroyer_gen2
 					modules = {
-						fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t2
+						fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t2
 						fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t2
 						fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t2
 						fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t2
@@ -3093,6 +3149,8 @@ technologies = {
 			pwc_module_navy_minesweeper_t3
 			pwc_module_navy_search_radar_t3
 			pwc_module_navy_passive_sonar_t3
+			pwc_module_navy_dual_purpose_t3
+			pwc_module_navy_bulkheads_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3180,6 +3238,8 @@ technologies = {
 			pwc_module_navy_minesweeper_t4
 			pwc_module_navy_search_radar_t4
 			pwc_module_navy_passive_sonar_t4
+			pwc_module_navy_dual_purpose_t4
+			pwc_module_navy_bulkheads_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3235,6 +3295,9 @@ technologies = {
 			pwc_module_navy_decoy_t1
 			pwc_module_navy_minelayer_t1
 			pwc_module_navy_passive_sonar_t1
+			pwc_module_navy_heavy_torpedo_t1
+			pwc_module_navy_snorkel_t1
+			pwc_module_navy_bulkheads_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3242,7 +3305,7 @@ technologies = {
 					name = "一代潜艇"
 					type = pwc_platform_submarine_gen1
 					modules = {
-						fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t1
+						fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t1
 						fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t1
 						fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t1
 						pwc_submarine_special_1 = pwc_module_navy_fuel_t1
@@ -3309,6 +3372,9 @@ technologies = {
 			pwc_module_navy_decoy_t2
 			pwc_module_navy_minelayer_t2
 			pwc_module_navy_passive_sonar_t2
+			pwc_module_navy_heavy_torpedo_t2
+			pwc_module_navy_snorkel_t2
+			pwc_module_navy_bulkheads_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3316,7 +3382,7 @@ technologies = {
 					name = "二代潜艇"
 					type = pwc_platform_submarine_gen2
 					modules = {
-						fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t2
+						fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t2
 						fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t2
 						fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t2
 						pwc_submarine_special_1 = pwc_module_navy_fuel_t2
@@ -3383,6 +3449,9 @@ technologies = {
 			pwc_module_navy_decoy_t3
 			pwc_module_navy_minelayer_t3
 			pwc_module_navy_passive_sonar_t3
+			pwc_module_navy_heavy_torpedo_t3
+			pwc_module_navy_snorkel_t3
+			pwc_module_navy_bulkheads_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3457,6 +3526,9 @@ technologies = {
 			pwc_module_navy_decoy_t4
 			pwc_module_navy_minelayer_t4
 			pwc_module_navy_passive_sonar_t4
+			pwc_module_navy_heavy_torpedo_t4
+			pwc_module_navy_snorkel_t4
+			pwc_module_navy_bulkheads_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3516,6 +3588,8 @@ technologies = {
 			pwc_module_navy_asw_aviation_t1
 			pwc_module_navy_search_radar_t1
 			pwc_module_navy_passive_sonar_t1
+			pwc_module_navy_dual_purpose_t1
+			pwc_module_navy_bulkheads_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3600,6 +3674,8 @@ technologies = {
 			pwc_module_navy_asw_aviation_t2
 			pwc_module_navy_search_radar_t2
 			pwc_module_navy_passive_sonar_t2
+			pwc_module_navy_dual_purpose_t2
+			pwc_module_navy_bulkheads_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3684,6 +3760,8 @@ technologies = {
 			pwc_module_navy_asw_aviation_t3
 			pwc_module_navy_search_radar_t3
 			pwc_module_navy_passive_sonar_t3
+			pwc_module_navy_dual_purpose_t3
+			pwc_module_navy_bulkheads_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3769,6 +3847,8 @@ technologies = {
 			pwc_module_navy_asw_aviation_t4
 			pwc_module_navy_search_radar_t4
 			pwc_module_navy_passive_sonar_t4
+			pwc_module_navy_dual_purpose_t4
+			pwc_module_navy_bulkheads_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3819,6 +3899,7 @@ technologies = {
 			pwc_module_air_cannon_t1
 			pwc_module_air_aam_short_t1
 			pwc_module_air_aam_medium_t1
+			pwc_module_air_ground_t1
 			pwc_module_air_maritime_t1
 			pwc_module_air_radar_t1
 			pwc_module_air_navigation_t1
@@ -3837,12 +3918,19 @@ technologies = {
 			pwc_module_air_irst_t1
 			pwc_module_air_self_sealing_t1
 			pwc_module_air_armor_t1
+			pwc_module_air_rockets_t1
+			pwc_module_air_anti_armor_t1
 			pwc_module_navy_ciws_t1
 			pwc_module_navy_point_sam_t1
 			pwc_module_navy_fuel_t1
 			pwc_module_navy_decoy_t1
 			pwc_module_navy_asw_aviation_t1
 			pwc_module_navy_search_radar_t1
+			pwc_module_air_heavy_cannon_t1
+			pwc_module_air_torpedo_t1
+			pwc_module_air_terrain_radar_t1
+			pwc_module_navy_armored_deck_t1
+			pwc_module_navy_bulkheads_t1
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3863,7 +3951,7 @@ technologies = {
 					modules = {
 						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t1
 						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t1
-						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t1
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t1
 						pwc_carrier_special_0 = pwc_module_air_self_sealing_t1
 					}
 				}
@@ -3935,6 +4023,7 @@ technologies = {
 			pwc_module_air_cannon_t2
 			pwc_module_air_aam_short_t2
 			pwc_module_air_aam_medium_t2
+			pwc_module_air_ground_t2
 			pwc_module_air_maritime_t2
 			pwc_module_air_radar_t2
 			pwc_module_air_navigation_t2
@@ -3953,12 +4042,19 @@ technologies = {
 			pwc_module_air_irst_t2
 			pwc_module_air_self_sealing_t2
 			pwc_module_air_armor_t2
+			pwc_module_air_rockets_t2
+			pwc_module_air_anti_armor_t2
 			pwc_module_navy_ciws_t2
 			pwc_module_navy_point_sam_t2
 			pwc_module_navy_fuel_t2
 			pwc_module_navy_decoy_t2
 			pwc_module_navy_asw_aviation_t2
 			pwc_module_navy_search_radar_t2
+			pwc_module_air_heavy_cannon_t2
+			pwc_module_air_torpedo_t2
+			pwc_module_air_terrain_radar_t2
+			pwc_module_navy_armored_deck_t2
+			pwc_module_navy_bulkheads_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -3979,7 +4075,7 @@ technologies = {
 					modules = {
 						fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t2
 						fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t2
-						fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t2
+						fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t2
 						pwc_carrier_special_0 = pwc_module_air_self_sealing_t2
 					}
 				}
@@ -4051,6 +4147,7 @@ technologies = {
 			pwc_module_air_cannon_t3
 			pwc_module_air_aam_short_t3
 			pwc_module_air_aam_medium_t3
+			pwc_module_air_ground_t3
 			pwc_module_air_maritime_t3
 			pwc_module_air_radar_t3
 			pwc_module_air_navigation_t3
@@ -4069,12 +4166,19 @@ technologies = {
 			pwc_module_air_irst_t3
 			pwc_module_air_self_sealing_t3
 			pwc_module_air_armor_t3
+			pwc_module_air_rockets_t3
+			pwc_module_air_anti_armor_t3
 			pwc_module_navy_ciws_t3
 			pwc_module_navy_point_sam_t3
 			pwc_module_navy_fuel_t3
 			pwc_module_navy_decoy_t3
 			pwc_module_navy_asw_aviation_t3
 			pwc_module_navy_search_radar_t3
+			pwc_module_air_heavy_cannon_t3
+			pwc_module_air_torpedo_t3
+			pwc_module_air_terrain_radar_t3
+			pwc_module_navy_armored_deck_t3
+			pwc_module_navy_bulkheads_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -4168,6 +4272,7 @@ technologies = {
 			pwc_module_air_cannon_t4
 			pwc_module_air_aam_short_t4
 			pwc_module_air_aam_medium_t4
+			pwc_module_air_ground_t4
 			pwc_module_air_maritime_t4
 			pwc_module_air_radar_t4
 			pwc_module_air_navigation_t4
@@ -4186,12 +4291,19 @@ technologies = {
 			pwc_module_air_irst_t4
 			pwc_module_air_self_sealing_t4
 			pwc_module_air_armor_t4
+			pwc_module_air_rockets_t4
+			pwc_module_air_anti_armor_t4
 			pwc_module_navy_ciws_t4
 			pwc_module_navy_point_sam_t4
 			pwc_module_navy_fuel_t4
 			pwc_module_navy_decoy_t4
 			pwc_module_navy_asw_aviation_t4
 			pwc_module_navy_search_radar_t4
+			pwc_module_air_heavy_cannon_t4
+			pwc_module_air_torpedo_t4
+			pwc_module_air_terrain_radar_t4
+			pwc_module_navy_armored_deck_t4
+			pwc_module_navy_bulkheads_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -5224,6 +5336,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t1
 			pwc_module_tank_maintenance_t1
 			pwc_module_tank_rws_t1
+			pwc_module_tank_autocannon_t1
+			pwc_module_tank_ammo_rack_t1
+			pwc_module_tank_fuel_t1
 		}
 		enable_subunits = {
 			pwc_unit_amphibious_tank
@@ -5313,6 +5428,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t2
 			pwc_module_tank_maintenance_t2
 			pwc_module_tank_rws_t2
+			pwc_module_tank_autocannon_t2
+			pwc_module_tank_ammo_rack_t2
+			pwc_module_tank_fuel_t2
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -5399,6 +5517,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t3
 			pwc_module_tank_maintenance_t3
 			pwc_module_tank_rws_t3
+			pwc_module_tank_autocannon_t3
+			pwc_module_tank_ammo_rack_t3
+			pwc_module_tank_fuel_t3
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -5485,6 +5606,9 @@ technologies = {
 			pwc_module_tank_ammo_safety_t4
 			pwc_module_tank_maintenance_t4
 			pwc_module_tank_rws_t4
+			pwc_module_tank_autocannon_t4
+			pwc_module_tank_ammo_rack_t4
+			pwc_module_tank_fuel_t4
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -5700,6 +5824,19 @@ technologies = {
 			pwc_module_navy_minesweeper_t0
 			pwc_module_navy_search_radar_t0
 			pwc_module_navy_passive_sonar_t0
+			pwc_module_tank_autocannon_t0
+			pwc_module_tank_assault_mount_t0
+			pwc_module_tank_ammo_rack_t0
+			pwc_module_tank_fuel_t0
+			pwc_module_air_heavy_cannon_t0
+			pwc_module_air_torpedo_t0
+			pwc_module_air_tail_turret_t0
+			pwc_module_air_terrain_radar_t0
+			pwc_module_navy_dual_purpose_t0
+			pwc_module_navy_heavy_torpedo_t0
+			pwc_module_navy_armored_deck_t0
+			pwc_module_navy_snorkel_t0
+			pwc_module_navy_bulkheads_t0
 		}
 		enable_subunits = {
 			pwc_unit_regimental_anti_tank

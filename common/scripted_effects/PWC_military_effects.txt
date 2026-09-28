@@ -276,8 +276,15 @@ pwc_se_begin_pwc_military_reconnaissance = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.107
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.107
+                }
             }
         }
     }
@@ -327,8 +334,15 @@ pwc_se_begin_pwc_military_war_reserves = {
             days = 7
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.108
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.108
+                }
             }
         }
     }
@@ -378,8 +392,15 @@ pwc_se_begin_pwc_military_field_repairs = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.109
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.109
+                }
             }
         }
     }
@@ -429,8 +450,15 @@ pwc_se_begin_pwc_military_evacuation = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.110
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.110
+                }
             }
         }
     }
@@ -480,8 +508,15 @@ pwc_se_begin_pwc_military_front_rotation = {
             days = 2
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.111
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.111
+                }
             }
         }
     }
@@ -534,8 +569,15 @@ pwc_se_begin_pwc_military_anti_assault = {
             days = 2
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.112
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.112
+                }
             }
         }
     }
@@ -588,8 +630,15 @@ pwc_se_begin_pwc_military_mobile_concentration = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.113
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.113
+                }
             }
         }
     }
@@ -642,8 +691,15 @@ pwc_se_begin_pwc_military_deep_exploitation = {
             days = 7
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.114
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.114
+                }
             }
         }
     }
@@ -696,8 +752,15 @@ pwc_se_begin_pwc_military_fire_coordination = {
             days = 5
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.115
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.115
+                }
             }
         }
     }
@@ -750,8 +813,15 @@ pwc_se_begin_pwc_military_deliberate_offensive = {
             days = 10
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.116
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.116
+                }
             }
         }
     }
@@ -804,8 +874,15 @@ pwc_se_begin_pwc_military_defence_in_depth = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.117
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.117
+                }
             }
         }
     }
@@ -858,8 +935,15 @@ pwc_se_begin_pwc_military_counterstroke = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.118
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.118
+                }
             }
         }
     }
@@ -912,8 +996,15 @@ pwc_se_begin_pwc_military_airfield_dispersal = {
             days = 2
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.119
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.119
+                }
             }
         }
     }
@@ -966,8 +1057,15 @@ pwc_se_begin_pwc_military_interception_surge = {
             days = 2
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.120
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.120
+                }
             }
         }
     }
@@ -1020,8 +1118,15 @@ pwc_se_begin_pwc_military_close_support = {
             days = 4
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.121
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.121
+                }
             }
         }
     }
@@ -1074,8 +1179,15 @@ pwc_se_begin_pwc_military_interdiction = {
             days = 7
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.122
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.122
+                }
             }
         }
     }
@@ -1128,8 +1240,15 @@ pwc_se_begin_pwc_military_coastal_watch = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.123
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.123
+                }
             }
         }
     }
@@ -1197,8 +1316,15 @@ pwc_se_begin_pwc_military_littoral_ambush = {
             days = 7
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.124
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.124
+                }
             }
         }
     }
@@ -1266,8 +1392,15 @@ pwc_se_begin_pwc_military_escort_surge = {
             days = 3
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.125
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.125
+                }
             }
         }
     }
@@ -1335,8 +1468,15 @@ pwc_se_begin_pwc_military_landing_support = {
             days = 10
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.126
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.126
+                }
             }
         }
     }
@@ -1420,8 +1560,15 @@ pwc_se_begin_pwc_military_joint_operation = {
             days = 10
         }
         every_enemy_country = {
-            country_event = {
-                id = pwc_military.127
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = pwc_flag_enemy_operation_alerts_muted
+                    }
+                }
+                country_event = {
+                    id = pwc_military.127
+                }
             }
         }
     }

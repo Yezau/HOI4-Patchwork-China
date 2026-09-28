@@ -44,7 +44,7 @@ guiTypes = {
         name = "pwc_war_reports_panel"
         position = { x = -490 y = 130 }
         orientation = upper_right
-        size = { width = 460 height = 240 }
+        size = { width = 460 height = 280 }
         moveable = yes
         click_to_front = yes
         background = {
@@ -106,6 +106,24 @@ guiTypes = {
             multiline = no
             format = center
             alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwc_enemy_operation_alerts_mute"
+            position = { x = 20 y = 238 }
+            quadTextureSprite = "PWC_GFX_war_reports_notification_toggle"
+            buttonFont = hoi_16mbs
+            buttonText = PWC_ENEMY_OPERATION_ALERTS_MUTE
+            pdx_tooltip = PWC_ENEMY_OPERATION_ALERTS_MUTE_TT
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwc_enemy_operation_alerts_restore"
+            position = { x = 20 y = 238 }
+            quadTextureSprite = "PWC_GFX_war_reports_notification_toggle"
+            buttonFont = hoi_16mbs
+            buttonText = PWC_ENEMY_OPERATION_ALERTS_RESTORE
+            pdx_tooltip = PWC_ENEMY_OPERATION_ALERTS_RESTORE_TT
+            clicksound = click_default
         }
     }
     containerWindowType = {

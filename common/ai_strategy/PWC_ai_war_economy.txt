@@ -2233,10 +2233,12 @@ PWC_ai_rifle_surplus_brake = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
+        has_war = no
         has_equipment = { pwc_equipment_infantry > 2679 }
     }
     abort = {
         OR = {
+            has_war = yes
             NOT = {
                 AND = {
                     is_ai = yes
@@ -3861,6 +3863,7 @@ PWC_ai_upgrade_pwc_platform_fighter_gen1 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_t1
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_t2
@@ -3894,6 +3897,7 @@ PWC_ai_upgrade_pwc_platform_fighter_gen2 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_t2
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_t3
@@ -3926,6 +3930,7 @@ PWC_ai_upgrade_pwc_platform_fighter_gen3 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_t3
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_t4
@@ -3957,6 +3962,7 @@ PWC_ai_upgrade_pwc_platform_fighter_gen4 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_t4
+        always = no
         has_equipment = { pwc_platform_fighter > 11 }
         NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         NOT = { has_equipment = { pwc_equipment_support < 0 } }
@@ -4105,6 +4111,7 @@ PWC_ai_upgrade_pwc_platform_bomber_gen1 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_strike_t1
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_strike_t2
@@ -4138,6 +4145,7 @@ PWC_ai_upgrade_pwc_platform_bomber_gen2 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_strike_t2
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_strike_t3
@@ -4170,6 +4178,7 @@ PWC_ai_upgrade_pwc_platform_bomber_gen3 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_strike_t3
+        always = no
         NOT = {
             OR = {
                 has_tech = pwc_tech_air_strike_t4
@@ -4201,6 +4210,7 @@ PWC_ai_upgrade_pwc_platform_bomber_gen4 = {
             has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
         }
         has_tech = pwc_tech_air_strike_t4
+        always = no
         has_equipment = { pwc_platform_bomber > 7 }
         NOT = { has_equipment = { pwc_equipment_infantry < 0 } }
         NOT = { has_equipment = { pwc_equipment_support < 0 } }

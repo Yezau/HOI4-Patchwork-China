@@ -85,18 +85,18 @@ PWC_ai_strategy_air_power = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = -22 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = -26 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = -36 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = 156 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = 156 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = 140 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = 124 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 124 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 124 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 110 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 96 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = 92 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = 92 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = 80 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = 68 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -60 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -60 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -62.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -65 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 140 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 140 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 125 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 110 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -60 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -60 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -62.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -65 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = -40 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = -50 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = -50 }
@@ -150,18 +150,16 @@ PWC_ai_strategy_air_power = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = -44 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -58 }
-	ai_strategy = { type = equipment_production_factor id = cas value = -2 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = 40 }
+	ai_strategy = { type = equipment_production_factor id = cas value = 60 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -58 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 6 }
-	ai_strategy = { type = unit_ratio id = cas value = 14 }
-	ai_strategy = { type = unit_ratio id = fighter value = 20 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 40 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_strategy_balanced = {
 	allowed = {
@@ -253,18 +251,18 @@ PWC_ai_strategy_balanced = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = 0 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = 0 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = 0 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -75 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = 0 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = 0 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = 0 }
@@ -318,18 +316,16 @@ PWC_ai_strategy_balanced = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = 5 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
-	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = -30 }
+	ai_strategy = { type = equipment_production_factor id = cas value = 33 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -30 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 4 }
-	ai_strategy = { type = unit_ratio id = cas value = 5 }
-	ai_strategy = { type = unit_ratio id = fighter value = 10 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 19 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_strategy_coastal = {
 	allowed = {
@@ -388,18 +384,18 @@ PWC_ai_strategy_coastal = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = -24 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = -24 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = -34 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = 10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = 10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -10 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -72.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 65 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 35 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -72.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -77.5 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = 140 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = 125 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = 110 }
@@ -453,18 +449,16 @@ PWC_ai_strategy_coastal = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = -20 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
-	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = -20 }
+	ai_strategy = { type = equipment_production_factor id = cas value = 60 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -60 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 5 }
-	ai_strategy = { type = unit_ratio id = cas value = 5 }
-	ai_strategy = { type = unit_ratio id = fighter value = 10 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 20 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_strategy_defense = {
 	allowed = {
@@ -556,18 +550,18 @@ PWC_ai_strategy_defense = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = 8 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = 2 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = -4 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -30 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = -30 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -30 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -82.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 35 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 20 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 20 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -82.5 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = -10 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = -20 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = -30 }
@@ -621,18 +615,16 @@ PWC_ai_strategy_defense = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = 26 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
-	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = -44 }
+	ai_strategy = { type = equipment_production_factor id = cas value = 12 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -60 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 4 }
-	ai_strategy = { type = unit_ratio id = cas value = 4 }
-	ai_strategy = { type = unit_ratio id = fighter value = 8 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 16 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_strategy_industrial = {
 	allowed = {
@@ -689,18 +681,18 @@ PWC_ai_strategy_industrial = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = -32 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = -38 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = -38 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -30 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -40 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -40 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = -30 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = -40 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = -40 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -30 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -40 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -40 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -82.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -85 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -85 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 20 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = -10 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = -10 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -82.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -85 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -85 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = -40 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = -50 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = -50 }
@@ -754,17 +746,16 @@ PWC_ai_strategy_industrial = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = -16 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -60 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = -60 }
+	ai_strategy = { type = equipment_production_factor id = cas value = -34 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = -52 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 5 }
-	ai_strategy = { type = unit_ratio id = cas value = 0 }
-	ai_strategy = { type = unit_ratio id = fighter value = 6 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 11 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_strategy_mobility = {
 	allowed = {
@@ -856,18 +847,18 @@ PWC_ai_strategy_mobility = {
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t2 value = 48.2 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t3 value = 40.4 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_army_t4 value = 27.4 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = -20 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = 0 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -10 }
-	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -20 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t1 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t2 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t3 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_t4 value = -80 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t1 value = 50 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t2 value = 35 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t3 value = 35 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_support_t4 value = 20 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t1 value = -75 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t2 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t3 value = -77.5 }
+	ai_strategy = { type = research_weight_factor id = pwc_tech_air_strike_t4 value = -80 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t1 value = -50 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t2 value = -60 }
 	ai_strategy = { type = research_weight_factor id = pwc_tech_navy_t3 value = -60 }
@@ -921,18 +912,16 @@ PWC_ai_strategy_mobility = {
 
 	
 	ai_strategy = { type = equipment_production_factor id = artillery value = -16 }
-	ai_strategy = { type = equipment_production_factor id = strategic_bomber value = -30 }
-	ai_strategy = { type = equipment_production_factor id = cas value = -60 }
-	ai_strategy = { type = equipment_production_factor id = fighter value = -44 }
+	ai_strategy = { type = equipment_production_factor id = cas value = 60 }
 	ai_strategy = { type = equipment_production_factor id = infantry value = 60 }
 	ai_strategy = { type = equipment_production_factor id = armor value = 54 }
 
 	
 	
 	
-	ai_strategy = { type = unit_ratio id = strategic_bomber value = 10 }
-	ai_strategy = { type = unit_ratio id = cas value = 5 }
-	ai_strategy = { type = unit_ratio id = fighter value = 8 }
+	ai_strategy = { type = unit_ratio id = strategic_bomber value = 0 }
+	ai_strategy = { type = unit_ratio id = cas value = 23 }
+	ai_strategy = { type = unit_ratio id = fighter value = 0 }
 }
 PWC_ai_construction_air_power_civil = {
     allowed = {

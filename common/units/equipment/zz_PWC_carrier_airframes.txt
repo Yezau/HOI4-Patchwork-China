@@ -40,6 +40,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -49,7 +50,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -58,8 +61,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -126,6 +134,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -146,6 +158,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -160,6 +180,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -180,6 +204,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -240,6 +272,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -249,7 +282,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -258,8 +293,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -326,6 +366,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -346,6 +390,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -360,6 +412,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -380,6 +436,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -440,6 +504,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -449,7 +514,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -458,8 +525,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -526,6 +598,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -546,6 +622,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -560,6 +644,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -580,6 +668,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -640,6 +736,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -649,7 +746,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -658,8 +757,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -726,6 +830,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -746,6 +854,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -760,6 +876,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -780,6 +900,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar
@@ -840,6 +968,7 @@ equipments = {
 					pwc_modcat_family_air_navigation
 					pwc_modcat_family_air_radar
 					pwc_modcat_family_air_targeting
+					pwc_modcat_family_air_terrain_radar
 				}
 			}
 			fixed_pwc_carrier_weapon_2 = {
@@ -849,7 +978,9 @@ equipments = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			fixed_pwc_carrier_weapon_3 = {
@@ -858,8 +989,13 @@ equipments = {
 				allowed_module_categories = {
 					pwc_modcat_family_air_aam_medium
 					pwc_modcat_family_air_aam_short
+					pwc_modcat_family_air_anti_armor
 					pwc_modcat_family_air_cannon
+					pwc_modcat_family_air_ground
+					pwc_modcat_family_air_heavy_cannon
 					pwc_modcat_family_air_maritime
+					pwc_modcat_family_air_rockets
+					pwc_modcat_family_air_torpedo
 				}
 			}
 			pwc_carrier_special_0 = {
@@ -926,6 +1062,10 @@ equipments = {
 			count < 4
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_anti_armor
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_armor
 			count < 2
 		}
@@ -946,6 +1086,14 @@ equipments = {
 			count < 2
 		}
 		module_count_limit = {
+			category = pwc_modcat_family_air_ground
+			count < 4
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_heavy_cannon
+			count < 4
+		}
+		module_count_limit = {
 			category = pwc_modcat_family_air_irst
 			count < 2
 		}
@@ -960,6 +1108,10 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_radar
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_rockets
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_family_air_self_sealing
@@ -980,6 +1132,14 @@ equipments = {
 		module_count_limit = {
 			category = pwc_modcat_family_air_targeting
 			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_terrain_radar
+			count < 2
+		}
+		module_count_limit = {
+			category = pwc_modcat_family_air_torpedo
+			count < 4
 		}
 		module_count_limit = {
 			category = pwc_modcat_project_pwc_module_air_avionics_maritime_radar

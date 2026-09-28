@@ -817,6 +817,7 @@ PWC_ai_design_bomber_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -840,6 +841,7 @@ PWC_ai_design_bomber_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -871,6 +873,7 @@ PWC_ai_design_bomber_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -913,6 +916,7 @@ PWC_ai_design_bomber_gen1 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_strike_t1
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -937,6 +941,7 @@ PWC_ai_design_bomber_gen1 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_strike_t1
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -969,6 +974,7 @@ PWC_ai_design_bomber_gen1 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_strike_t1
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1011,6 +1017,7 @@ PWC_ai_design_bomber_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_strike_t2
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1035,6 +1042,7 @@ PWC_ai_design_bomber_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_strike_t2
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1067,6 +1075,7 @@ PWC_ai_design_bomber_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_strike_t2
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1109,6 +1118,7 @@ PWC_ai_design_bomber_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1134,6 +1144,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1159,6 +1170,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1183,6 +1195,7 @@ PWC_ai_design_bomber_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1215,6 +1228,7 @@ PWC_ai_design_bomber_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1248,6 +1262,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1281,6 +1296,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1314,6 +1330,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1347,6 +1364,7 @@ PWC_ai_design_bomber_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_strike_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1389,6 +1407,7 @@ PWC_ai_design_bomber_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1414,6 +1433,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1439,6 +1459,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1464,6 +1485,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -1488,6 +1510,7 @@ PWC_ai_design_bomber_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1520,6 +1543,7 @@ PWC_ai_design_bomber_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1553,6 +1577,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1586,6 +1611,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1619,6 +1645,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1652,6 +1679,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1685,6 +1713,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -1718,6 +1747,7 @@ PWC_ai_design_bomber_gen4 = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_strike_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -2692,6 +2722,7 @@ PWC_ai_design_cas_gen1 = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 		}
 		history = yes
@@ -2702,7 +2733,7 @@ PWC_ai_design_cas_gen1 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t1
 				pwc_cas_special_0 = pwc_module_air_armor_t1
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2717,6 +2748,7 @@ PWC_ai_design_cas_gen1 = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -2735,7 +2767,7 @@ PWC_ai_design_cas_gen1 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t1
 				pwc_cas_special_0 = pwc_module_air_armor_t1
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2750,6 +2782,7 @@ PWC_ai_design_cas_gen1 = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -2768,7 +2801,7 @@ PWC_ai_design_cas_gen1 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t1
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t1
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t1
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t1
 				pwc_cas_special_0 = pwc_module_air_armor_t1
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2793,6 +2826,7 @@ PWC_ai_design_cas_gen2 = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 		}
 		history = yes
@@ -2803,7 +2837,7 @@ PWC_ai_design_cas_gen2 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t2
 				pwc_cas_special_0 = pwc_module_air_armor_t2
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2817,6 +2851,7 @@ PWC_ai_design_cas_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -2843,6 +2878,7 @@ PWC_ai_design_cas_gen2 = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -2861,7 +2897,7 @@ PWC_ai_design_cas_gen2 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t2
 				pwc_cas_special_0 = pwc_module_air_armor_t2
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2876,6 +2912,7 @@ PWC_ai_design_cas_gen2 = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -2894,7 +2931,7 @@ PWC_ai_design_cas_gen2 = {
 				fixed_pwc_cas_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_cas_avionics_1 = pwc_module_air_targeting_t2
 				fixed_pwc_cas_weapon_2 = pwc_module_air_ground_t2
-				fixed_pwc_cas_weapon_3 = pwc_module_air_cannon_t2
+				fixed_pwc_cas_weapon_3 = pwc_module_air_heavy_cannon_t2
 				pwc_cas_special_0 = pwc_module_air_armor_t2
 				pwc_cas_special_1 = empty
 				pwc_cas_special_2 = empty
@@ -2908,6 +2945,7 @@ PWC_ai_design_cas_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -2941,6 +2979,7 @@ PWC_ai_design_cas_gen2 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -2985,6 +3024,7 @@ PWC_ai_design_cas_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 		}
 		history = yes
@@ -3009,6 +3049,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -3034,6 +3075,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 		}
@@ -3060,6 +3102,7 @@ PWC_ai_design_cas_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -3093,6 +3136,7 @@ PWC_ai_design_cas_gen3 = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -3125,6 +3169,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -3158,6 +3203,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -3191,6 +3237,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -3224,6 +3271,7 @@ PWC_ai_design_cas_gen3 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -3267,6 +3315,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 		}
 		history = yes
@@ -3291,6 +3340,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 		}
@@ -3316,6 +3366,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -3341,6 +3392,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 		}
@@ -3366,6 +3418,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 		}
@@ -3391,6 +3444,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -3423,6 +3477,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -3455,6 +3510,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -3488,6 +3544,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -3521,6 +3578,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -3554,6 +3612,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -3587,6 +3646,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -3620,6 +3680,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -3653,6 +3714,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 			is_ai = yes
@@ -3686,6 +3748,7 @@ PWC_ai_design_cas_gen4 = {
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 			is_ai = yes
@@ -5221,7 +5284,7 @@ PWC_ai_design_cv_cas_gen1 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t1
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t1
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t1
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t1
 				pwc_carrier_special_1 = empty
@@ -5255,7 +5318,7 @@ PWC_ai_design_cv_cas_gen1 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t1
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t1
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t1
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t1
 				pwc_carrier_special_1 = empty
@@ -5289,7 +5352,7 @@ PWC_ai_design_cv_cas_gen1 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t1
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t1
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t1
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t1
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t1
 				pwc_carrier_special_1 = empty
@@ -5325,7 +5388,7 @@ PWC_ai_design_cv_cas_gen2 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t2
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t2
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t2
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t2
 				pwc_carrier_special_1 = empty
@@ -5385,7 +5448,7 @@ PWC_ai_design_cv_cas_gen2 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t2
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t2
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t2
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t2
 				pwc_carrier_special_1 = empty
@@ -5419,7 +5482,7 @@ PWC_ai_design_cv_cas_gen2 = {
 			modules = {
 				fixed_pwc_carrier_engine_0 = pwc_module_air_small_endurance_t2
 				fixed_pwc_carrier_avionics_1 = pwc_module_air_targeting_t2
-				fixed_pwc_carrier_weapon_2 = pwc_module_air_maritime_t2
+				fixed_pwc_carrier_weapon_2 = pwc_module_air_torpedo_t2
 				fixed_pwc_carrier_weapon_3 = empty
 				pwc_carrier_special_0 = pwc_module_air_self_sealing_t2
 				pwc_carrier_special_1 = empty
@@ -7458,7 +7521,7 @@ PWC_ai_design_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen1
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t1
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t1
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t1
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t1
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t1
@@ -7495,7 +7558,7 @@ PWC_ai_design_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen1
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t1
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t1
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t1
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t1
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t1
@@ -7532,7 +7595,7 @@ PWC_ai_design_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen1
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t1
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t1
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t1
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t1
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t1
@@ -7571,7 +7634,7 @@ PWC_ai_design_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen2
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t2
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t2
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t2
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t2
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t2
@@ -7637,7 +7700,7 @@ PWC_ai_design_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen2
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t2
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t2
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t2
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t2
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t2
@@ -7674,7 +7737,7 @@ PWC_ai_design_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_destroyer_gen2
 			modules = {
-				fixed_pwc_destroyer_gun_0 = pwc_module_navy_medium_gun_t2
+				fixed_pwc_destroyer_gun_0 = pwc_module_navy_dual_purpose_t2
 				fixed_pwc_destroyer_engine_1 = pwc_module_navy_surface_cruise_t2
 				fixed_pwc_destroyer_radar_2 = pwc_module_navy_radar_t2
 				fixed_pwc_destroyer_sonar_3 = pwc_module_navy_sonar_hull_t2
@@ -8702,6 +8765,7 @@ PWC_ai_design_fighter_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -8724,6 +8788,7 @@ PWC_ai_design_fighter_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8754,6 +8819,7 @@ PWC_ai_design_fighter_gen0 = {
 		}
 		enable = {
 			has_tech = pwc_tech0_basic_industry
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8796,6 +8862,7 @@ PWC_ai_design_fighter_gen1 = {
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_t1
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -8820,6 +8887,7 @@ PWC_ai_design_fighter_gen1 = {
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_t1
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8852,6 +8920,7 @@ PWC_ai_design_fighter_gen1 = {
 			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			OR = { has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_t1
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8894,6 +8963,7 @@ PWC_ai_design_fighter_gen2 = {
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_t2
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -8918,6 +8988,7 @@ PWC_ai_design_fighter_gen2 = {
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_t2
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8950,6 +9021,7 @@ PWC_ai_design_fighter_gen2 = {
 			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			OR = { has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_t2
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -8992,6 +9064,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9017,6 +9090,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9042,6 +9116,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9066,6 +9141,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9098,6 +9174,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9131,6 +9208,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9164,6 +9242,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9197,6 +9276,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9230,6 +9310,7 @@ PWC_ai_design_fighter_gen3 = {
 			OR = { has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9272,6 +9353,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9297,6 +9379,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9322,6 +9405,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9347,6 +9431,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9372,6 +9457,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 		}
 		history = yes
 		target_variant = {
@@ -9396,6 +9482,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9428,6 +9515,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9461,6 +9549,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9494,6 +9583,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9527,6 +9617,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9560,6 +9651,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9593,6 +9685,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9626,6 +9719,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9659,6 +9753,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -9692,6 +9787,7 @@ PWC_ai_design_fighter_gen4 = {
 			OR = { has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
+			always = no
 			is_ai = yes
 			NOT = { tag = NTR }
 			has_capitulated = no
@@ -12796,7 +12892,7 @@ PWC_ai_design_submarine_gen1 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen1
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t1
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t1
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t1
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t1
 				pwc_submarine_missile_0 = empty
@@ -12829,7 +12925,7 @@ PWC_ai_design_submarine_gen1 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen1
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t1
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t1
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t1
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t1
 				pwc_submarine_missile_0 = empty
@@ -12862,7 +12958,7 @@ PWC_ai_design_submarine_gen1 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen1
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t1
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t1
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t1
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t1
 				pwc_submarine_missile_0 = empty
@@ -12897,7 +12993,7 @@ PWC_ai_design_submarine_gen2 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen2
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t2
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t2
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t2
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t2
 				pwc_submarine_missile_0 = empty
@@ -12930,7 +13026,7 @@ PWC_ai_design_submarine_gen2 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen2
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t2
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t2
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t2
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t2
 				pwc_submarine_missile_0 = empty
@@ -12963,7 +13059,7 @@ PWC_ai_design_submarine_gen2 = {
 			match_value = 100
 			type = pwc_platform_submarine_gen2
 			modules = {
-				fixed_pwc_submarine_missile_0 = pwc_module_navy_sub_torpedo_t2
+				fixed_pwc_submarine_missile_0 = pwc_module_navy_heavy_torpedo_t2
 				fixed_pwc_submarine_engine_1 = pwc_module_navy_sub_endurance_t2
 				fixed_pwc_submarine_sonar_2 = pwc_module_navy_sonar_hull_t2
 				pwc_submarine_missile_0 = empty
@@ -13827,7 +13923,7 @@ PWC_ai_design_tank_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen1
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t1
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t1
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t1
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t1
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
@@ -13860,7 +13956,7 @@ PWC_ai_design_tank_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen1
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t1
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t1
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t1
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t1
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
@@ -13893,7 +13989,7 @@ PWC_ai_design_tank_destroyer_gen1 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen1
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t1
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t1
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t1
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t1
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t1
@@ -13928,7 +14024,7 @@ PWC_ai_design_tank_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen2
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t2
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t2
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t2
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t2
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
@@ -13961,7 +14057,7 @@ PWC_ai_design_tank_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen2
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t2
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t2
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t2
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t2
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
@@ -13994,7 +14090,7 @@ PWC_ai_design_tank_destroyer_gen2 = {
 			match_value = 100
 			type = pwc_platform_tank_destroyer_gen2
 			modules = {
-				pwc_tank_destroyer_turret_0 = pwc_module_tank_fixed_mount_t2
+				pwc_tank_destroyer_turret_0 = pwc_module_tank_assault_mount_t2
 				pwc_tank_destroyer_gun_1 = pwc_module_tank_atgm_t2
 				pwc_tank_destroyer_suspension_2 = pwc_module_tank_suspension_t2
 				pwc_tank_destroyer_armor_3 = pwc_module_tank_light_armor_t2
@@ -14595,6 +14691,7 @@ PWC_ai_design_uav_gen1 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 		}
 		history = yes
@@ -14617,6 +14714,7 @@ PWC_ai_design_uav_gen1 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -14647,6 +14745,7 @@ PWC_ai_design_uav_gen1 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t1 has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_air_t1 has_tech = pwc_tech_navy_carrier_t1 }
+			OR = { has_tech = pwc_tech_air_support_t1 has_tech = pwc_tech_navy_carrier_t1 }
 			has_tech = pwc_tech_air_support_t1
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -14687,6 +14786,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 		}
 		history = yes
@@ -14709,6 +14809,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -14732,6 +14833,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -14762,6 +14864,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -14792,6 +14895,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -14823,6 +14927,7 @@ PWC_ai_design_uav_gen2 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t2 has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_air_t2 has_tech = pwc_tech_navy_carrier_t2 }
+			OR = { has_tech = pwc_tech_air_support_t2 has_tech = pwc_tech_navy_carrier_t2 }
 			has_tech = pwc_tech_air_support_t2
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -14864,6 +14969,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 		}
 		history = yes
@@ -14886,6 +14992,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
 		}
@@ -14909,6 +15016,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -14932,6 +15040,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 		}
@@ -14955,6 +15064,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -14985,6 +15095,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -15015,6 +15126,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
 			is_ai = yes
@@ -15046,6 +15158,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_stealth_technology
 			is_ai = yes
@@ -15077,6 +15190,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -15108,6 +15222,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -15139,6 +15254,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -15170,6 +15286,7 @@ PWC_ai_design_uav_gen3 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t3 has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_air_t3 has_tech = pwc_tech_navy_carrier_t3 }
+			OR = { has_tech = pwc_tech_air_support_t3 has_tech = pwc_tech_navy_carrier_t3 }
 			has_tech = pwc_tech_air_support_t3
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -15211,6 +15328,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 		}
 		history = yes
@@ -15233,6 +15351,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
 		}
@@ -15256,6 +15375,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 		}
@@ -15279,6 +15399,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 		}
@@ -15302,6 +15423,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 		}
@@ -15325,6 +15447,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 		}
@@ -15348,6 +15471,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 		}
@@ -15371,6 +15495,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -15401,6 +15526,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_ai = yes
 			NOT = { tag = NTR }
@@ -15431,6 +15557,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
 			is_ai = yes
@@ -15462,6 +15589,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_stealth_technology
 			is_ai = yes
@@ -15493,6 +15621,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -15524,6 +15653,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -15555,6 +15685,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -15586,6 +15717,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_strategic_uav
 			is_ai = yes
@@ -15617,6 +15749,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -15648,6 +15781,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_flight_test_instrumentation
 			is_ai = yes
@@ -15679,6 +15813,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -15710,6 +15845,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_integrated_flight_testing
 			is_ai = yes
@@ -15741,6 +15877,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 			is_ai = yes
@@ -15772,6 +15909,7 @@ PWC_ai_design_uav_gen4 = {
 		}
 		enable = {
 			OR = { has_tech = pwc_tech_air_strike_t4 has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_air_t4 has_tech = pwc_tech_navy_carrier_t4 }
+			OR = { has_tech = pwc_tech_air_support_t4 has_tech = pwc_tech_navy_carrier_t4 }
 			has_tech = pwc_tech_air_support_t4
 			is_special_project_completed = sp:pwc_project_night_flight_systems
 			is_ai = yes

@@ -12,6 +12,11 @@ new_strategic_destruction = {
     ai_will_do = {
         base = 1
         modifier = {
+            factor = 0
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
+        modifier = {
             factor = 2
             has_country_flag = pwc_ai_industrial
         }
@@ -107,6 +112,11 @@ new_battlefield_support = {
     ai_will_do = {
         base = 1
         modifier = {
+            factor = 100
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
+        modifier = {
             factor = 2
             has_country_flag = pwc_ai_air_power
         }
@@ -201,6 +211,11 @@ new_operational_integrity = {
     }
     ai_will_do = {
         base = 1
+        modifier = {
+            factor = 0
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
         modifier = {
             factor = 2
             has_country_flag = pwc_ai_defense

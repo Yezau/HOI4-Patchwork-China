@@ -12,6 +12,11 @@ new_mobile_warfare = {
     ai_will_do = {
         base = 1
         modifier = {
+            factor = 0
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
+        modifier = {
             factor = 2
             has_country_flag = pwc_ai_mobility
         }
@@ -137,6 +142,11 @@ superior_firepower = {
     }
     ai_will_do = {
         base = 1
+        modifier = {
+            factor = 0
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
         modifier = {
             factor = 2
             has_country_flag = pwc_ai_industrial
@@ -276,6 +286,11 @@ grand_battleplan = {
     ai_will_do = {
         base = 1
         modifier = {
+            factor = 0
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
+        modifier = {
             factor = 2
             has_country_flag = pwc_ai_balanced
         }
@@ -400,6 +415,11 @@ mass_assault = {
     }
     ai_will_do = {
         base = 1
+        modifier = {
+            factor = 100
+            is_ai = yes
+            NOT = { tag = NTR }
+        }
         modifier = {
             factor = 2
             has_country_flag = pwc_ai_defense
