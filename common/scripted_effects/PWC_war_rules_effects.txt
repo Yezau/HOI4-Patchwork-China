@@ -993,8 +993,6 @@ pwc_se_init_country_runtime = {
 
 
 
-
-
 pwc_se_init_ntr_isolation = {
 	set_rule = {
 		can_not_declare_war = yes
@@ -1011,6 +1009,17 @@ pwc_se_init_ntr_isolation = {
 		can_access_market = no
 		contributes_operatives = no
 	}
+    pwc_se_set_law_trade_control_1 = yes
+    set_research_slots = 0
+    set_political_power = 0
+    country_lock_all_division_template = yes
+    load_focus_tree = { tree = pwc_ntr_NTR_focus_tree }
+    if = {
+        limit = {
+            NOT = { has_dynamic_modifier = { modifier = pwc_dm_neutral_inactivity } }
+        }
+        add_dynamic_modifier = { modifier = pwc_dm_neutral_inactivity }
+    }
 	log = "PWC INIT NTR isolation rules applied"
 }
 

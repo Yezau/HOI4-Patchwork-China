@@ -7,7 +7,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_naval_production
         icon = GFX_goal_continuous_naval_production
-        available = { }
+        available = { NOT = { tag = NTR } }
         idea = continuous_naval_production
         ai_will_do = {
             factor = 1
@@ -19,7 +19,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_air_production
         icon = GFX_goal_continuous_air_production
-        available = { }
+        available = { NOT = { tag = NTR } }
         idea = continuous_air_production
         ai_will_do = {
             factor = 1
@@ -31,7 +31,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_non_factory_construct
         icon = GFX_goal_continuous_non_factory_construct
-        available = { }
+        available = { NOT = { tag = NTR } }
         modifier = {
             production_speed_infrastructure_factor = 0.1
             production_speed_rail_way_factor = 0.1
@@ -66,7 +66,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_reduce_training_time
         icon = GFX_goal_continuous_reduce_training_time
-        available = { }
+        available = { NOT = { tag = NTR } }
         modifier = {
             training_time_army_factor = -0.25
         }
@@ -80,7 +80,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_suppression
         icon = GFX_goal_continuous_suppression
-        available = { }
+        available = { NOT = { tag = NTR } }
         modifier = {
             resistance_target = -0.05
         }
@@ -98,7 +98,7 @@ continuous_focus_palette = {
     focus = {
         id = continuous_repair
         icon = GFX_goal_continuous_repairments
-        available = { }
+        available = { NOT = { tag = NTR } }
         modifier = {
             industry_repair_factor = 0.5
         }

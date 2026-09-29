@@ -1,0 +1,55 @@
+pwc_st_neutral_diplomacy_allowed = {
+    NOT = { tag = NTR }
+    if = {
+        limit = { country_exists = FROM }
+        FROM = { NOT = { tag = NTR } }
+    }
+}
+
+is_diplomatic_action_valid_air_base_access = {
+    pwc_st_neutral_diplomacy_allowed = yes
+}
+
+is_diplomatic_action_valid_offer_air_base_access = {
+    pwc_st_neutral_diplomacy_allowed = yes
+}
+
+is_diplomatic_action_valid_non_aggression_pact = {
+    pwc_st_neutral_diplomacy_allowed = yes
+}
+
+is_diplomatic_action_valid_improve_relation = {
+    pwc_st_neutral_diplomacy_allowed = yes
+}
+
+is_diplomatic_action_valid_send_attache = {
+    pwc_st_neutral_diplomacy_allowed = yes
+}
+
+DIPLOMACY_CANCEL_FOREIGN_MANPOWER_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_CANCEL_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_EMBARGO_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_LEND_LEASE_CANCEL_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_LEND_LEASE_EXISTING_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}
+
+DIPLOMACY_REVOKE_EMBARGO_ENABLE_TRIGGER = {
+    ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+}

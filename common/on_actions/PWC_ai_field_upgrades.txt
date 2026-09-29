@@ -1,7 +1,10 @@
 on_actions = {
     on_weekly = {
         effect = {
-            pwc_se_ai_refit_tick = yes
+            if = {
+                limit = { pwc_st_is_city_country = yes }
+                pwc_se_ai_refit_tick = yes
+            }
         }
     }
 }

@@ -69,10 +69,20 @@ on_state_control_changed = {
     }
 }
 on_daily = {
-    effect = { pwc_se_ensure_integration_tick = yes }
+    effect = {
+        if = {
+            limit = { pwc_st_is_city_country = yes }
+            pwc_se_ensure_integration_tick = yes
+        }
+    }
 }
 on_weekly = {
-    effect = { pwc_se_refresh_ai_league = yes }
+    effect = {
+        if = {
+            limit = { pwc_st_is_city_country = yes }
+            pwc_se_refresh_ai_league = yes
+        }
+    }
 }
 	on_monthly = {
 		effect = {

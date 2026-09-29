@@ -1,0 +1,24 @@
+PWC_neutral_inactivity = {
+    allowed = { tag = NTR }
+    enable = { tag = NTR is_ai = yes }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = intelligence_agency_usable_factories
+        value = -10000
+    }
+    ai_strategy = {
+        type = pp_spend_priority
+        id = relation
+        value = -10000
+    }
+    ai_strategy = {
+        type = pp_spend_priority
+        id = guarantee
+        value = -10000
+    }
+    ai_strategy = {
+        type = pp_spend_priority
+        id = admiral
+        value = -10000
+    }
+}

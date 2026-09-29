@@ -1,13 +1,12 @@
 PWC_ai_default_policy = {
 	allowed = {
-		always = yes
+		pwc_st_is_city_country = yes
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_is_city_country = yes
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 
 	
 	

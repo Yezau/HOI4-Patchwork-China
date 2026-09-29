@@ -2150,6 +2150,7 @@ PWC_ai_infantry_floor = {
     }
     enable = {
         is_ai = yes
+        pwc_st_is_city_country = yes
         NOT = {
             OR = {
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
@@ -2164,6 +2165,7 @@ PWC_ai_infantry_floor = {
             NOT = {
                 AND = {
                     is_ai = yes
+                    pwc_st_is_city_country = yes
                     NOT = {
                         OR = {
                             has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }

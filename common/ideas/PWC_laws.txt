@@ -16,6 +16,9 @@ ideas = {
 					pwc_se_sync_law_conscription_1 = yes
 				}
 			}
+			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
+			}
 			modifier = {
 				conscription = 0.015
 				stability_factor = 0.1
@@ -61,6 +64,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.09
 			}
 			modifier = {
@@ -108,6 +112,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.29
 			}
 			modifier = {
@@ -155,6 +160,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.49
 				has_country_flag = pwc_flag_law_conscription_reformed
 				pwc_st_peacetime_mobilization_allowed = yes
@@ -207,6 +213,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.69
 				has_country_flag = pwc_flag_law_conscription_reformed
 				pwc_st_peacetime_mobilization_allowed = yes
@@ -264,6 +271,9 @@ ideas = {
 					pwc_se_sync_law_economy_mobilization_1 = yes
 				}
 			}
+			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
+			}
 			modifier = {
 				consumer_goods_expected_value = 0.3
 				stability_factor = 0.1
@@ -311,6 +321,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.09
 			}
 			modifier = {
@@ -361,6 +372,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.29
 			}
 			modifier = {
@@ -411,6 +423,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.49
 				has_country_flag = pwc_flag_law_economy_reformed
 				pwc_st_peacetime_mobilization_allowed = yes
@@ -463,6 +476,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.69
 				has_country_flag = pwc_flag_law_economy_reformed
 				pwc_st_peacetime_mobilization_allowed = yes
@@ -520,6 +534,9 @@ ideas = {
 					pwc_se_sync_law_trade_control_1 = yes
 				}
 			}
+			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
+			}
 			modifier = {
 				min_export = 0.8
 				research_speed_factor = 0.15
@@ -556,6 +573,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.09
 			}
 			modifier = {
@@ -598,6 +616,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.29
 			}
 			modifier = {
@@ -635,6 +654,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.49
 				has_country_flag = pwc_flag_law_trade_reformed
 			}
@@ -666,6 +686,7 @@ ideas = {
 				}
 			}
 			available = {
+                hidden_trigger = { NOT = { tag = NTR } }
 				has_war_support > 0.69
 				has_country_flag = pwc_flag_law_trade_reformed
 			}

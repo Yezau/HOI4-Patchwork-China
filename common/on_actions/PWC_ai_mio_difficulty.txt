@@ -9,7 +9,10 @@ on_actions = {
     }
     on_weekly = {
         effect = {
-            pwc_se_ai_mio_difficulty_sync = yes
+            if = {
+                limit = { pwc_st_is_city_country = yes }
+                pwc_se_ai_mio_difficulty_sync = yes
+            }
         }
     }
 }
