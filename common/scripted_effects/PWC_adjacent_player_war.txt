@@ -1,0 +1,46 @@
+pwc_se_check_adjacent_player_wars = {
+    if = {
+        limit = { pwc_st_adjacent_player_war_player = yes }
+        every_neighbor_country = {
+            limit = { pwc_st_adjacent_player_war_attacker = yes }
+            diplomatic_relation = {
+                country = PREV
+                relation = non_aggression_pact
+                active = no
+            }
+            diplomatic_relation = {
+                country = PREV
+                relation = military_access
+                active = no
+            }
+            PREV = {
+                diplomatic_relation = {
+                    country = PREV
+                    relation = military_access
+                    active = no
+                }
+            }
+            declare_war_on = { target = PREV type = annex_everything }
+        }
+    }
+}
+pwc_se_refresh_adjacent_player_wars = {
+    if = {
+        limit = {
+            has_game_rule = { rule = pwc_ai_adjacent_player_war option = ON }
+            pwc_st_is_city_country = yes
+            exists = yes
+            NOT = { pwc_st_protection_active = yes }
+        }
+        if = {
+            limit = { is_ai = no }
+            pwc_se_check_adjacent_player_wars = yes
+        }
+        else = {
+            every_neighbor_country = {
+                limit = { pwc_st_adjacent_player_war_player = yes }
+                pwc_se_check_adjacent_player_wars = yes
+            }
+        }
+    }
+}

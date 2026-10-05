@@ -217,6 +217,21 @@ PWC_amphibious_invasion_sea_control_30 = {
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 30 value = 100 }
 }
+PWC_amphibious_reinforcement_sea_control_30 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_30 = yes
+        pwc_st_naval_invasion_region_30 = no
+        NOT = { has_naval_control = 30 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 30 value = 85 }
+}
 PWC_amphibious_sea_control_30 = {
     allowed = { always = yes }
     enable = {
@@ -258,6 +273,21 @@ PWC_amphibious_invasion_sea_control_31 = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 31 value = 100 }
+}
+PWC_amphibious_reinforcement_sea_control_31 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_31 = yes
+        pwc_st_naval_invasion_region_31 = no
+        NOT = { has_naval_control = 31 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 31 value = 85 }
 }
 PWC_amphibious_sea_control_31 = {
     allowed = { always = yes }
@@ -301,6 +331,21 @@ PWC_amphibious_invasion_sea_control_32 = {
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 32 value = 100 }
 }
+PWC_amphibious_reinforcement_sea_control_32 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_32 = yes
+        pwc_st_naval_invasion_region_32 = no
+        NOT = { has_naval_control = 32 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 32 value = 85 }
+}
 PWC_amphibious_sea_control_32 = {
     allowed = { always = yes }
     enable = {
@@ -343,6 +388,21 @@ PWC_amphibious_invasion_sea_control_33 = {
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 33 value = 100 }
 }
+PWC_amphibious_reinforcement_sea_control_33 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_33 = yes
+        pwc_st_naval_invasion_region_33 = no
+        NOT = { has_naval_control = 33 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 33 value = 85 }
+}
 PWC_amphibious_sea_control_33 = {
     allowed = { always = yes }
     enable = {
@@ -384,6 +444,21 @@ PWC_amphibious_invasion_sea_control_34 = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 34 value = 100 }
+}
+PWC_amphibious_reinforcement_sea_control_34 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_34 = yes
+        pwc_st_naval_invasion_region_34 = no
+        NOT = { has_naval_control = 34 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 34 value = 85 }
 }
 PWC_amphibious_sea_control_34 = {
     allowed = { always = yes }
@@ -429,6 +504,21 @@ PWC_amphibious_invasion_sea_control_35 = {
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 35 value = 100 }
 }
+PWC_amphibious_reinforcement_sea_control_35 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_35 = yes
+        pwc_st_naval_invasion_region_35 = no
+        NOT = { has_naval_control = 35 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 35 value = 85 }
+}
 PWC_amphibious_sea_control_35 = {
     allowed = { always = yes }
     enable = {
@@ -471,6 +561,21 @@ PWC_amphibious_invasion_sea_control_36 = {
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 36 value = 100 }
 }
+PWC_amphibious_reinforcement_sea_control_36 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_36 = yes
+        pwc_st_naval_invasion_region_36 = no
+        NOT = { has_naval_control = 36 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 36 value = 85 }
+}
 PWC_amphibious_sea_control_36 = {
     allowed = { always = yes }
     enable = {
@@ -512,6 +617,21 @@ PWC_amphibious_invasion_sea_control_37 = {
     }
     abort_when_not_enabled = yes
     ai_strategy = { type = naval_dominance id = 37 value = 100 }
+}
+PWC_amphibious_reinforcement_sea_control_37 = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        pwc_st_naval_active_invasion = yes
+        pwc_st_naval_combat_fleet = yes
+        pwc_st_naval_port_region_37 = yes
+        pwc_st_naval_invasion_region_37 = no
+        NOT = { has_naval_control = 37 }
+        has_tech = pwc_tech_navy_t1
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = naval_dominance id = 37 value = 85 }
 }
 PWC_amphibious_sea_control_37 = {
     allowed = { always = yes }

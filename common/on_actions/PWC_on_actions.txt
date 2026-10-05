@@ -8,12 +8,13 @@ on_actions = {
 				pwc_se_init_ntr_isolation = yes
 			}
 			every_country = {
-				limit = { pwc_st_is_city_country = yes }
+				limit = { pwc_st_live_city_country = yes }
                 pwc_se_reconcile_integration_speed = yes
 				pwc_se_reconcile_research_infrastructure = yes
 				pwc_se_arm_war_phase = yes
 				pwc_se_refresh_regional_identity = yes
 				pwc_se_reconcile_war_warnings = yes
+                pwc_se_check_adjacent_player_wars = yes
 			}
 		}
 	}
@@ -66,20 +67,23 @@ on_state_control_changed = {
     effect = {
         pwc_se_refresh_setup_country = yes
         FROM = { pwc_se_refresh_setup_country = yes }
+        pwc_se_refresh_adjacent_player_wars = yes
+        FROM = { pwc_se_refresh_adjacent_player_wars = yes }
     }
 }
 on_daily = {
     effect = {
         if = {
-            limit = { pwc_st_is_city_country = yes }
+            limit = { pwc_st_live_city_country = yes }
             pwc_se_ensure_integration_tick = yes
+            pwc_se_check_adjacent_player_wars = yes
         }
     }
 }
 on_weekly = {
     effect = {
         if = {
-            limit = { pwc_st_is_city_country = yes }
+            limit = { pwc_st_live_city_country = yes }
             pwc_se_refresh_ai_league = yes
         }
     }
@@ -87,7 +91,7 @@ on_weekly = {
 	on_monthly = {
 		effect = {
 			if = {
-				limit = { pwc_st_is_city_country = yes }
+				limit = { pwc_st_live_city_country = yes }
 				pwc_se_monthly_ai_difficulty = yes
 				pwc_se_monthly_general_growth = yes
 				pwc_se_refresh_setup_country = yes

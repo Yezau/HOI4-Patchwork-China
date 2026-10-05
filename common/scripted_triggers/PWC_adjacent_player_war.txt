@@ -1,0 +1,23 @@
+pwc_st_adjacent_player_war_country = {
+    pwc_st_is_city_country = yes
+    pwc_st_city_alive = yes
+    exists = yes
+    has_capitulated = no
+    is_subject = no
+    NOT = { is_in_peace_conference = yes }
+}
+pwc_st_adjacent_player_war_player = {
+    has_game_rule = { rule = pwc_ai_adjacent_player_war option = ON }
+    is_ai = no
+    pwc_st_adjacent_player_war_country = yes
+    NOT = { pwc_st_protection_active = yes }
+}
+pwc_st_adjacent_player_war_attacker = {
+    is_ai = yes
+    pwc_st_adjacent_player_war_country = yes
+    PREV = { pwc_st_adjacent_player_war_player = yes }
+    is_neighbor_of = PREV
+    NOT = { has_war_with = PREV }
+    NOT = { has_truce_with = PREV }
+    NOT = { is_in_faction_with = PREV }
+}

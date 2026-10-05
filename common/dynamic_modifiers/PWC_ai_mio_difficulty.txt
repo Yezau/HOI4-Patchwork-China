@@ -1,7 +1,7 @@
 pwc_dm_ai_mio_20 = {
     enable = {
         is_ai = yes
-        pwc_st_is_city_country = yes
+        pwc_st_live_city_country = yes
         has_dlc = "Arms Against Tyranny"
         has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
     }
@@ -9,7 +9,7 @@ pwc_dm_ai_mio_20 = {
         NOT = {
             AND = {
                 is_ai = yes
-                pwc_st_is_city_country = yes
+                pwc_st_live_city_country = yes
                 has_dlc = "Arms Against Tyranny"
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
             }
@@ -21,7 +21,7 @@ pwc_dm_ai_mio_20 = {
 pwc_dm_ai_mio_30 = {
     enable = {
         is_ai = yes
-        pwc_st_is_city_country = yes
+        pwc_st_live_city_country = yes
         has_dlc = "Arms Against Tyranny"
         has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
     }
@@ -29,7 +29,7 @@ pwc_dm_ai_mio_30 = {
         NOT = {
             AND = {
                 is_ai = yes
-                pwc_st_is_city_country = yes
+                pwc_st_live_city_country = yes
                 has_dlc = "Arms Against Tyranny"
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
             }

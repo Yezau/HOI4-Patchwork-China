@@ -4,7 +4,7 @@ PWC_ai_default_policy = {
 	}
 	enable = {
 		is_ai = yes
-		pwc_st_is_city_country = yes
+		pwc_st_live_city_country = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -1008,6 +1008,7 @@ PWC_ai_role_18w_air_power = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_air_power
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1039,6 +1040,7 @@ PWC_ai_role_36w_air_power = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_air_power
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
@@ -1177,6 +1179,7 @@ PWC_ai_role_18w_balanced = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_balanced
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1245,6 +1248,7 @@ PWC_ai_role_36w_balanced = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_balanced
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
@@ -1350,6 +1354,7 @@ PWC_ai_role_18w_coastal = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_coastal
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1385,6 +1390,7 @@ PWC_ai_role_36w_coastal = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_coastal
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
@@ -1523,6 +1529,7 @@ PWC_ai_role_18w_defense = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_defense
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1591,6 +1598,7 @@ PWC_ai_role_36w_defense = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_defense
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
@@ -1694,6 +1702,7 @@ PWC_ai_role_18w_industrial = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_industrial
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1727,6 +1736,7 @@ PWC_ai_role_36w_industrial = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_industrial
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }
@@ -1865,6 +1875,7 @@ PWC_ai_role_18w_mobility = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_mobility
 		OR = {
 		    OR = { ai_wants_divisions > 11 num_divisions > 11 }
@@ -1933,6 +1944,7 @@ PWC_ai_role_36w_mobility = {
 	}
 	enable = {
 		is_ai = yes
+		pwc_st_live_city_country = yes
 		has_country_flag = pwc_ai_mobility
 		OR = {
 		    OR = { ai_wants_divisions > 17 num_divisions > 17 }

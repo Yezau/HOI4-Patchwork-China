@@ -239,17 +239,20 @@ pwc_se_coalition_monthly = {
             if = {
                 limit = {
                     pwc_st_coalition_candidate = yes
-                    check_variable = {
-                    var = num_of_factories value = PREV.pwc_coalition_largest_ai
-                    compare = greater_than
-                } }
-                event_target:pwc_coalition_player = {
-                    set_variable = { pwc_coalition_largest_ai = PREV.num_of_factories }
                 }
-            }
-            if = {
-                limit = {
-                    pwc_st_coalition_candidate = yes
+                if = {
+                    limit = {
+                        check_variable = {
+                            var = num_of_factories
+                            value = PREV.pwc_coalition_largest_ai
+                            compare = greater_than
+                        }
+                    }
+                    event_target:pwc_coalition_player = {
+                        set_variable = {
+                            pwc_coalition_largest_ai = PREV.num_of_factories
+                        }
+                    }
                 }
                 event_target:pwc_coalition_player = {
                     add_to_array = { array = pwc_coalition_candidates value = PREV }

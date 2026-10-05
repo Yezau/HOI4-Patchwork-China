@@ -2,7 +2,7 @@ on_actions = {
     on_startup = {
         effect = {
             every_country = {
-                limit = { pwc_st_is_city_country = yes }
+                limit = { pwc_st_live_city_country = yes }
                 pwc_se_ai_mio_difficulty_sync = yes
             }
         }
@@ -10,7 +10,7 @@ on_actions = {
     on_weekly = {
         effect = {
             if = {
-                limit = { pwc_st_is_city_country = yes }
+                limit = { pwc_st_live_city_country = yes }
                 pwc_se_ai_mio_difficulty_sync = yes
             }
         }

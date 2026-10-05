@@ -2,7 +2,7 @@ on_actions = {
     on_monthly = {
         effect = {
             if = {
-                limit = { pwc_st_is_city_country = yes }
+                limit = { pwc_st_live_city_country = yes }
                 pwc_se_coalition_monthly = yes
             }
         }
@@ -10,7 +10,7 @@ on_actions = {
     on_weekly = {
         effect = {
             if = {
-                limit = { pwc_st_is_city_country = yes }
+                limit = { pwc_st_live_city_country = yes }
                 pwc_se_coalition_weekly = yes
                 pwc_se_ai_finish_war_weekly = yes
             }

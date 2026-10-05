@@ -1143,6 +1143,22 @@ PWC_strait_strike = {
         pwc_unit_carrier = { amount = 2 }
     }
 }
+PWC_strait_strike_large = {
+    allowed = {
+        always = no
+    }
+    ai_will_do = { factor = 5 }
+    keep_updated = yes
+    mission = { naval_patrol }
+    min_composition = {
+        pwc_unit_destroyer = { amount = 6 }
+    }
+    optimal_composition = {
+        pwc_unit_destroyer = { amount = 24 }
+        pwc_unit_cruiser = { amount = 4 }
+        pwc_unit_carrier = { amount = 2 }
+    }
+}
 PWC_strait_invasion = {
     allowed = {
         OR = {

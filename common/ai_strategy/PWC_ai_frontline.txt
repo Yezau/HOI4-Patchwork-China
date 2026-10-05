@@ -214,6 +214,60 @@ PWC_ai_funded_infantry_expansion = {
         value = 30
     }
 }
+PWC_ai_front_fill = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_war = yes
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = front_unit_request
+        country_trigger = { has_war_with = FROM }
+        value = 50
+    }
+    ai_strategy = {
+        type = garrison_reinforcement_priority
+        value = -100
+    }
+}
+PWC_ai_front_fill_garrison = {
+    allowed = { always = yes }
+    enable = {
+        is_ai = yes
+        pwc_st_is_city_country = yes
+        has_war = yes
+        NOT = {
+            capital_scope = {
+                OR = {
+                    state = 334
+                    state = 338
+                    state = 348
+                    state = 352
+                    state = 358
+                    state = 361
+                    state = 362
+                    state = 505
+                    state = 506
+                    state = 507
+                    state = 508
+                    state = 509
+                    state = 510
+                    state = 511
+                    state = 512
+                    state = 513
+                    state = 524
+                }
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+    ai_strategy = {
+        type = garrison
+        value = -50
+    }
+}
 PWC_ai_multirole_aircraft = {
     allowed = { always = yes }
     enable = {

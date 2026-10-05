@@ -92,6 +92,22 @@ pwc_war_warning = {
         allow_achievements = no
     }
 }
+pwc_ai_adjacent_player_war = {
+    name = "PWC_RULE_AI_ADJACENT_PLAYER_WAR"
+    group = "PWC_RULE_GROUP_WAR"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_AI_ADJACENT_PLAYER_WAR_OFF"
+        desc = "PWC_RULE_AI_ADJACENT_PLAYER_WAR_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_AI_ADJACENT_PLAYER_WAR_ON"
+        desc = "PWC_RULE_AI_ADJACENT_PLAYER_WAR_ON_DESC"
+        allow_achievements = no
+    }
+}
 pwc_province_priority = {
     name = "PWC_RULE_PROVINCE_PRIORITY"
     group = "PWC_RULE_GROUP_WAR"
@@ -149,6 +165,22 @@ pwc_ai_war_pacing = {
         name = "SLOW"
         text = "PWC_RULE_AI_WAR_PACING_SLOW"
         desc = "PWC_RULE_AI_WAR_PACING_SLOW_DESC"
+        allow_achievements = no
+    }
+}
+pwc_player_province_war_priority = {
+    name = "PWC_RULE_PLAYER_PROVINCE_WAR_PRIORITY"
+    group = "PWC_RULE_GROUP_WAR"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_PLAYER_PROVINCE_WAR_PRIORITY_OFF"
+        desc = "PWC_RULE_PLAYER_PROVINCE_WAR_PRIORITY_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_PLAYER_PROVINCE_WAR_PRIORITY_ON"
+        desc = "PWC_RULE_PLAYER_PROVINCE_WAR_PRIORITY_ON_DESC"
         allow_achievements = no
     }
 }

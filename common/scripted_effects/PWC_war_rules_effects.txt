@@ -1193,303 +1193,306 @@ pwc_se_refresh_ai_league = {
 
 
 pwc_se_monthly_general_growth = {
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_02 }
-			has_army_size = {
-				size > 23
-			}
-		}
-		set_country_flag = pwc_flag_general_02
-		generate_character = {
-			token_base = pwc_general_02
-			name = PWC_TITLE_ARMY_02
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_02
-					small = GFX_PWC_PORTRAIT_GENERAL_02
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 2 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_03 }
-			has_army_size = {
-				size > 47
-			}
-		}
-		set_country_flag = pwc_flag_general_03
-		generate_character = {
-			token_base = pwc_general_03
-			name = PWC_TITLE_ARMY_03
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_03
-					small = GFX_PWC_PORTRAIT_GENERAL_03
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 3 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_04 }
-			has_army_size = {
-				size > 71
-			}
-		}
-		set_country_flag = pwc_flag_general_04
-		generate_character = {
-			token_base = pwc_general_04
-			name = PWC_TITLE_ARMY_04
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_04
-					small = GFX_PWC_PORTRAIT_GENERAL_04
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 4 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_05 }
-			has_army_size = {
-				size > 95
-			}
-		}
-		set_country_flag = pwc_flag_general_05
-		generate_character = {
-			token_base = pwc_general_05
-			name = PWC_TITLE_ARMY_05
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_05
-					small = GFX_PWC_PORTRAIT_GENERAL_05
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 5 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_06 }
-			has_army_size = {
-				size > 119
-			}
-		}
-		set_country_flag = pwc_flag_general_06
-		generate_character = {
-			token_base = pwc_general_06
-			name = PWC_TITLE_ARMY_06
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_06
-					small = GFX_PWC_PORTRAIT_GENERAL_06
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 6 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_07 }
-			has_army_size = {
-				size > 143
-			}
-		}
-		set_country_flag = pwc_flag_general_07
-		generate_character = {
-			token_base = pwc_general_07
-			name = PWC_TITLE_ARMY_07
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_07
-					small = GFX_PWC_PORTRAIT_GENERAL_07
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 7 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_08 }
-			has_army_size = {
-				size > 167
-			}
-		}
-		set_country_flag = pwc_flag_general_08
-		generate_character = {
-			token_base = pwc_general_08
-			name = PWC_TITLE_ARMY_08
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_08
-					small = GFX_PWC_PORTRAIT_GENERAL_08
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 8 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_09 }
-			has_army_size = {
-				size > 191
-			}
-		}
-		set_country_flag = pwc_flag_general_09
-		generate_character = {
-			token_base = pwc_general_09
-			name = PWC_TITLE_ARMY_09
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_09
-					small = GFX_PWC_PORTRAIT_GENERAL_09
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 9 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_10 }
-			has_army_size = {
-				size > 215
-			}
-		}
-		set_country_flag = pwc_flag_general_10
-		generate_character = {
-			token_base = pwc_general_10
-			name = PWC_TITLE_ARMY_10
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_10
-					small = GFX_PWC_PORTRAIT_GENERAL_10
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 10 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_11 }
-			has_army_size = {
-				size > 239
-			}
-		}
-		set_country_flag = pwc_flag_general_11
-		generate_character = {
-			token_base = pwc_general_11
-			name = PWC_TITLE_ARMY_11
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_11
-					small = GFX_PWC_PORTRAIT_GENERAL_11
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 11 granted to [THIS.GetName]"
-	}
-	if = {
-		limit = {
-			NOT = { has_country_flag = pwc_flag_general_12 }
-			has_army_size = {
-				size > 263
-			}
-		}
-		set_country_flag = pwc_flag_general_12
-		generate_character = {
-			token_base = pwc_general_12
-			name = PWC_TITLE_ARMY_12
-			portraits = {
-				army = {
-					large = GFX_PWC_PORTRAIT_GENERAL_12
-					small = GFX_PWC_PORTRAIT_GENERAL_12
-				}
-			}
-			corps_commander = {
-				skill = 2
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-		}
-		log = "PWC GENERAL 12 granted to [THIS.GetName]"
-	}
+    if = {
+        limit = { has_army_size = { size > 23 } }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_02 }
+                has_army_size = {
+                    size > 23
+                }
+            }
+            set_country_flag = pwc_flag_general_02
+            generate_character = {
+                token_base = pwc_general_02
+                name = PWC_TITLE_ARMY_02
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_02
+                        small = GFX_PWC_PORTRAIT_GENERAL_02
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 2 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_03 }
+                has_army_size = {
+                    size > 47
+                }
+            }
+            set_country_flag = pwc_flag_general_03
+            generate_character = {
+                token_base = pwc_general_03
+                name = PWC_TITLE_ARMY_03
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_03
+                        small = GFX_PWC_PORTRAIT_GENERAL_03
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 3 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_04 }
+                has_army_size = {
+                    size > 71
+                }
+            }
+            set_country_flag = pwc_flag_general_04
+            generate_character = {
+                token_base = pwc_general_04
+                name = PWC_TITLE_ARMY_04
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_04
+                        small = GFX_PWC_PORTRAIT_GENERAL_04
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 4 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_05 }
+                has_army_size = {
+                    size > 95
+                }
+            }
+            set_country_flag = pwc_flag_general_05
+            generate_character = {
+                token_base = pwc_general_05
+                name = PWC_TITLE_ARMY_05
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_05
+                        small = GFX_PWC_PORTRAIT_GENERAL_05
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 5 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_06 }
+                has_army_size = {
+                    size > 119
+                }
+            }
+            set_country_flag = pwc_flag_general_06
+            generate_character = {
+                token_base = pwc_general_06
+                name = PWC_TITLE_ARMY_06
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_06
+                        small = GFX_PWC_PORTRAIT_GENERAL_06
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 6 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_07 }
+                has_army_size = {
+                    size > 143
+                }
+            }
+            set_country_flag = pwc_flag_general_07
+            generate_character = {
+                token_base = pwc_general_07
+                name = PWC_TITLE_ARMY_07
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_07
+                        small = GFX_PWC_PORTRAIT_GENERAL_07
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 7 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_08 }
+                has_army_size = {
+                    size > 167
+                }
+            }
+            set_country_flag = pwc_flag_general_08
+            generate_character = {
+                token_base = pwc_general_08
+                name = PWC_TITLE_ARMY_08
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_08
+                        small = GFX_PWC_PORTRAIT_GENERAL_08
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 8 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_09 }
+                has_army_size = {
+                    size > 191
+                }
+            }
+            set_country_flag = pwc_flag_general_09
+            generate_character = {
+                token_base = pwc_general_09
+                name = PWC_TITLE_ARMY_09
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_09
+                        small = GFX_PWC_PORTRAIT_GENERAL_09
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 9 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_10 }
+                has_army_size = {
+                    size > 215
+                }
+            }
+            set_country_flag = pwc_flag_general_10
+            generate_character = {
+                token_base = pwc_general_10
+                name = PWC_TITLE_ARMY_10
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_10
+                        small = GFX_PWC_PORTRAIT_GENERAL_10
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 10 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_11 }
+                has_army_size = {
+                    size > 239
+                }
+            }
+            set_country_flag = pwc_flag_general_11
+            generate_character = {
+                token_base = pwc_general_11
+                name = PWC_TITLE_ARMY_11
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_11
+                        small = GFX_PWC_PORTRAIT_GENERAL_11
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 11 granted to [THIS.GetName]"
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_flag_general_12 }
+                has_army_size = {
+                    size > 263
+                }
+            }
+            set_country_flag = pwc_flag_general_12
+            generate_character = {
+                token_base = pwc_general_12
+                name = PWC_TITLE_ARMY_12
+                portraits = {
+                    army = {
+                        large = GFX_PWC_PORTRAIT_GENERAL_12
+                        small = GFX_PWC_PORTRAIT_GENERAL_12
+                    }
+                }
+                corps_commander = {
+                    skill = 2
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 2
+                }
+            }
+            log = "PWC GENERAL 12 granted to [THIS.GetName]"
+        }
+    }
 }
 
 
@@ -3628,6 +3631,7 @@ pwc_se_init_adjacency_flags = {
 			set_country_flag = pwc_adj_W80
 			set_country_flag = pwc_adj_W94
 			set_country_flag = pwc_adj_W96
+			set_country_flag = pwc_adj_X65
 		}
 		W87 = {
 			set_country_flag = pwc_adj_W71
@@ -3784,7 +3788,6 @@ pwc_se_init_adjacency_flags = {
 			set_country_flag = pwc_adj_W94
 			set_country_flag = pwc_adj_X02
 			set_country_flag = pwc_adj_X64
-			set_country_flag = pwc_adj_X65
 		}
 		X10 = {
 			set_country_flag = pwc_adj_W85
@@ -4105,7 +4108,7 @@ pwc_se_init_adjacency_flags = {
 			set_country_flag = pwc_adj_X09
 		}
 		X65 = {
-			set_country_flag = pwc_adj_X09
+			set_country_flag = pwc_adj_W86
 		}
 	}
 }
@@ -4170,7 +4173,10 @@ pwc_se_arm_war_phase = {
 			NOT = { has_country_flag = pwc_flag_war_phase_armed }
 		}
 		set_country_flag = pwc_flag_war_phase_armed
-		pwc_se_arm_war_phase_offset = yes
+        if = {
+            limit = { pwc_st_player_province_war_priority = no }
+            pwc_se_arm_war_phase_offset = yes
+        }
 	}
 }
 pwc_se_arm_war_phase_offset = {

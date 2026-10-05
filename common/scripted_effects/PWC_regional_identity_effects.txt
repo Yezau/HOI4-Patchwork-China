@@ -4,6 +4,49 @@ pwc_se_refresh_regional_identity = {
             pwc_st_is_city_country = yes
             pwc_st_city_alive = yes
             exists = yes
+            OR = {
+                check_variable = {
+                    var = num_owned_states value = 3
+                    compare = greater_than_or_equals
+                }
+                has_cosmetic_tag = PWC_TERRITORY_CENTRAL
+                has_cosmetic_tag = PWC_TERRITORY_EAST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_SOUTHWEST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTHWEST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_CENTRAL_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_SOUTH_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTH_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_NORTHEAST_CHINA
+                has_cosmetic_tag = PWC_TERRITORY_GUANGDONG
+                has_cosmetic_tag = PWC_TERRITORY_SICHUAN
+                has_cosmetic_tag = PWC_TERRITORY_HENAN
+                has_cosmetic_tag = PWC_TERRITORY_HUBEI
+                has_cosmetic_tag = PWC_TERRITORY_TAIWAN
+                has_cosmetic_tag = PWC_TERRITORY_ANHUI
+                has_cosmetic_tag = PWC_TERRITORY_SHANDONG
+                has_cosmetic_tag = PWC_TERRITORY_YUNNAN
+                has_cosmetic_tag = PWC_TERRITORY_GANSU
+                has_cosmetic_tag = PWC_TERRITORY_GUANGXI
+                has_cosmetic_tag = PWC_TERRITORY_HUNAN
+                has_cosmetic_tag = PWC_TERRITORY_LIAONING
+                has_cosmetic_tag = PWC_TERRITORY_XINJIANG
+                has_cosmetic_tag = PWC_TERRITORY_HEILONGJIANG
+                has_cosmetic_tag = PWC_TERRITORY_JIANGSU
+                has_cosmetic_tag = PWC_TERRITORY_INNER_MONGOLIA
+                has_cosmetic_tag = PWC_TERRITORY_FUJIAN
+                has_cosmetic_tag = PWC_TERRITORY_HEBEI
+                has_cosmetic_tag = PWC_TERRITORY_JIANGXI
+                has_cosmetic_tag = PWC_TERRITORY_SHANXI
+                has_cosmetic_tag = PWC_TERRITORY_ZHEJIANG
+                has_cosmetic_tag = PWC_TERRITORY_SHAANXI
+                has_cosmetic_tag = PWC_TERRITORY_GUIZHOU
+                has_cosmetic_tag = PWC_TERRITORY_JILIN
+                has_cosmetic_tag = PWC_TERRITORY_XIZANG
+                has_cosmetic_tag = PWC_TERRITORY_QINGHAI
+                has_cosmetic_tag = PWC_TERRITORY_NINGXIA
+                has_cosmetic_tag = PWC_TERRITORY_HAINAN
+                has_cosmetic_tag = PWC_TERRITORY_SHANGHAI
+            }
         }
         if = {
             limit = {
@@ -1346,5 +1389,26 @@ pwc_se_refresh_regional_identity = {
             } }
             drop_cosmetic_tag = yes
         }
+    }
+    pwc_se_refresh_central_landing_preparation = yes
+}
+pwc_se_refresh_central_landing_preparation = {
+    if = {
+        limit = {
+            exists = yes
+            pwc_st_is_city_country = yes
+            pwc_st_city_alive = yes
+            has_cosmetic_tag = PWC_TERRITORY_CENTRAL
+        }
+        if = {
+            limit = {
+                NOT = { has_dynamic_modifier = { modifier = pwc_dm_central_landing_preparation } }
+            }
+            add_dynamic_modifier = { modifier = pwc_dm_central_landing_preparation }
+        }
+    }
+    else_if = {
+        limit = { has_dynamic_modifier = { modifier = pwc_dm_central_landing_preparation } }
+        remove_dynamic_modifier = { modifier = pwc_dm_central_landing_preparation }
     }
 }
