@@ -15,12 +15,11 @@ PWC_war_category = {
 		target_trigger = {
 			FROM = {
 				exists = yes
-				hidden_trigger = { pwc_st_is_city_country = yes }
-				pwc_st_city_alive = yes
 				NOT = { tag = ROOT }
 				NOT = { has_war_with = ROOT }
 			}
 			pwc_st_target_reachable = yes
+			FROM = { pwc_st_live_city_country = yes }
 		}
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -139,12 +138,11 @@ PWC_war_category = {
 		target_trigger = {
 			FROM = {
 				exists = yes
-				hidden_trigger = { pwc_st_is_city_country = yes }
-				pwc_st_city_alive = yes
 				NOT = { tag = ROOT }
 				NOT = { has_war_with = ROOT }
 			}
 			pwc_st_target_reachable = yes
+			FROM = { pwc_st_live_city_country = yes }
 		}
 		on_map_mode = map_and_decisions_view
 		highlight_states = {

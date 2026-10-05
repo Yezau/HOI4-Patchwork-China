@@ -491,9 +491,25 @@ pwc_se_refresh_setup_country = {
         pwc_se_update_administration = yes
         pwc_se_update_unit_limit = yes
         pwc_se_update_demobilization = yes
+        pwc_se_apply_player_faction_rules = yes
         pwc_se_monthly_gate_latch = yes
         pwc_se_arm_war_phase = yes
         pwc_se_refresh_regional_identity = yes
+    }
+}
+pwc_se_apply_player_faction_rules = {
+    if = {
+        limit = { pwc_st_player_factions_allowed = yes }
+        set_rule = {
+            can_create_factions = yes
+            can_join_factions = yes
+        }
+    }
+    else = {
+        set_rule = {
+            can_create_factions = no
+            can_join_factions = no
+        }
     }
 }
 pwc_se_update_administration = {

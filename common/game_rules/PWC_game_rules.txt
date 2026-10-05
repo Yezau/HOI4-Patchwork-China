@@ -76,6 +76,22 @@ pwc_protection_period = {
         allow_achievements = no
     }
 }
+pwc_player_factions = {
+    name = "PWC_RULE_PLAYER_FACTIONS"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "OFF"
+        text = "PWC_RULE_PLAYER_FACTIONS_OFF"
+        desc = "PWC_RULE_PLAYER_FACTIONS_OFF_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "ON"
+        text = "PWC_RULE_PLAYER_FACTIONS_ON"
+        desc = "PWC_RULE_PLAYER_FACTIONS_ON_DESC"
+        allow_achievements = no
+    }
+}
 pwc_war_warning = {
     name = "PWC_RULE_WAR_WARNING"
     group = "PWC_RULE_GROUP_WAR"

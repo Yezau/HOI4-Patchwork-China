@@ -24,10 +24,8 @@ pwc_st_coalition_scale = {
     }
 }
 pwc_st_coalition_player = {
-    exists = yes
     is_ai = no
-    pwc_st_is_city_country = yes
-    pwc_st_city_alive = yes
+    pwc_st_live_city_country = yes
     is_subject = no
     has_capitulated = no
     NOT = { is_in_peace_conference = yes }
@@ -36,10 +34,8 @@ pwc_st_coalition_player = {
 
 
 pwc_st_coalition_partner = {
-    exists = yes
     is_ai = yes
-    pwc_st_is_city_country = yes
-    pwc_st_city_alive = yes
+    pwc_st_live_city_country = yes
     is_subject = no
     is_in_faction = no
     has_capitulated = no
@@ -83,26 +79,29 @@ pwc_st_coalition_size_ready = {
 }
 
 pwc_st_coalition_candidate = {
-    pwc_st_coalition_partner = yes
     has_war = no
     pwc_st_ai_war_pacing_ready = yes
     NOT = { has_country_flag = pwc_flag_warning_active }
     NOT = { has_country_flag = pwc_flag_coalition_reserved }
     NOT = { has_variable = pwc_coalition_target }
+    pwc_st_coalition_partner = yes
 }
 
 pwc_st_ai_only_war = {
-    exists = yes
     is_ai = yes
-    pwc_st_is_city_country = yes
-    pwc_st_city_alive = yes
-    has_capitulated = no
     has_war = yes
+    pwc_st_live_city_country = yes
+    has_capitulated = no
     NOT = { any_enemy_country = { is_ai = no } }
 }
 
 pwc_st_ai_finish_war = {
     pwc_st_ai_only_war = yes
+    pwc_st_ai_finish_war_ready = yes
+}
+
+
+pwc_st_ai_finish_war_ready = {
     has_country_flag = pwc_flag_ai_war_tracked
     NOT = { has_country_flag = pwc_flag_ai_war_grace }
     enemies_strength_ratio < 0.8

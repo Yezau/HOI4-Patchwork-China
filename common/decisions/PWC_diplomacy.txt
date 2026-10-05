@@ -7,10 +7,8 @@ PWC_diplomacy_category = {
 		fire_only_once = no
 		target_root_trigger = {
 			hidden_trigger = {
-				exists = yes
-				pwc_st_is_city_country = yes
-				pwc_st_city_alive = yes
 				has_country_flag = pwc_flag_diplomatic_corps
+				pwc_st_live_city_country = yes
 				NOT = { pwc_st_protection_active = yes }
 			}
 		}
@@ -19,28 +17,24 @@ PWC_diplomacy_category = {
 			hidden_trigger = {
 				FROM = {
 					exists = yes
-					pwc_st_is_city_country = yes
-					pwc_st_city_alive = yes
 					is_neighbor_of = ROOT
 					NOT = { tag = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
 				}
 				NOT = { has_war_with = FROM }
 			}
 		}
 		visible = {
 			hidden_trigger = {
-				exists = yes
-				pwc_st_is_city_country = yes
-				pwc_st_city_alive = yes
 				has_country_flag = pwc_flag_diplomatic_corps
+				pwc_st_live_city_country = yes
 				FROM = {
 					exists = yes
-					pwc_st_is_city_country = yes
-					pwc_st_city_alive = yes
 					is_neighbor_of = ROOT
 					NOT = { tag = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
 				}
 				NOT = { pwc_st_protection_active = yes }
 				NOT = { has_war_with = FROM }
@@ -48,17 +42,14 @@ PWC_diplomacy_category = {
 		}
 		available = {
 			hidden_trigger = {
-				exists = yes
-				pwc_st_is_city_country = yes
-				pwc_st_city_alive = yes
 				has_country_flag = pwc_flag_diplomatic_corps
+				pwc_st_live_city_country = yes
 				FROM = {
 					exists = yes
-					pwc_st_is_city_country = yes
-					pwc_st_city_alive = yes
 					is_neighbor_of = ROOT
 					NOT = { tag = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
 				}
 			}
 			custom_trigger_tooltip = {
@@ -71,17 +62,14 @@ PWC_diplomacy_category = {
 			if = {
 				limit = {
 					hidden_trigger = {
-						exists = yes
-						pwc_st_is_city_country = yes
-						pwc_st_city_alive = yes
 						has_country_flag = pwc_flag_diplomatic_corps
+						pwc_st_live_city_country = yes
 						FROM = {
 							exists = yes
-							pwc_st_is_city_country = yes
-							pwc_st_city_alive = yes
 							is_neighbor_of = ROOT
 							NOT = { tag = ROOT }
 							NOT = { has_non_aggression_pact_with = ROOT }
+							pwc_st_live_city_country = yes
 						}
 						NOT = { pwc_st_protection_active = yes }
 						NOT = { has_war_with = FROM }

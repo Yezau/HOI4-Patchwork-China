@@ -24,9 +24,7 @@ pwc_st_peacetime_mobilization_allowed = {
 pwc_st_legal_war_request = {
     
     hidden_trigger = {
-        exists = yes
-        pwc_st_is_city_country = yes
-        pwc_st_city_alive = yes
+        pwc_st_live_city_country = yes
         pwc_st_target_reachable = yes
         OR = {
             is_ai = no
@@ -35,9 +33,7 @@ pwc_st_legal_war_request = {
         }
         NOT = { tag = FROM }
         FROM = {
-            exists = yes
-            pwc_st_is_city_country = yes
-            pwc_st_city_alive = yes
+            pwc_st_live_city_country = yes
         }
     }
     custom_trigger_tooltip = {

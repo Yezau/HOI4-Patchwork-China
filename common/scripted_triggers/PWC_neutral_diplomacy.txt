@@ -6,6 +6,20 @@ pwc_st_neutral_diplomacy_allowed = {
     }
 }
 
+pwc_st_player_factions_allowed = {
+    has_game_rule = { rule = pwc_player_factions option = ON }
+    is_ai = no
+    pwc_st_live_city_country = yes
+}
+
+pwc_st_player_faction_pair_allowed = {
+    pwc_st_player_factions_allowed = yes
+    if = {
+        limit = { country_exists = FROM }
+        FROM = { pwc_st_player_factions_allowed = yes }
+    }
+}
+
 is_diplomatic_action_valid_air_base_access = {
     pwc_st_neutral_diplomacy_allowed = yes
 }
@@ -36,6 +50,7 @@ DIPLOMACY_CANCEL_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 
 DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
     ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+    ROOT = { pwc_st_player_faction_pair_allowed = yes }
 }
 
 DIPLOMACY_EMBARGO_ENABLE_TRIGGER = {

@@ -94,7 +94,7 @@ pwc_se_coalition_aborted = {
 }
 pwc_se_coalition_track_expansion = {
     if = {
-        limit = { is_ai = no pwc_st_city_alive = yes pwc_st_is_city_country = yes }
+        limit = { is_ai = no pwc_st_live_city_country = yes }
         if = {
             limit = { NOT = { has_variable = pwc_coalition_states_5 } }
             set_variable = { pwc_coalition_states_0 = num_owned_states }
@@ -233,7 +233,7 @@ pwc_se_coalition_monthly = {
         
         every_other_country = {
             limit = {
-                is_ai = yes pwc_st_is_city_country = yes pwc_st_city_alive = yes
+                is_ai = yes pwc_st_live_city_country = yes
                 has_capitulated = no
             }
             if = {
@@ -1040,7 +1040,7 @@ pwc_se_ai_finish_war_weekly = {
             }
         }
         if = {
-            limit = { pwc_st_ai_finish_war = yes }
+            limit = { pwc_st_ai_finish_war_ready = yes }
             add_dynamic_modifier = { modifier = pwc_dm_ai_sustained_offensive }
         }
         else = {
