@@ -1,7 +1,7 @@
 pwc_st_coalition_high = {
     OR = {
         has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
-        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
 }
 pwc_st_coalition_scale = {
@@ -17,7 +17,7 @@ pwc_st_coalition_scale = {
             check_variable = { var = num_owned_states value = 4 compare = greater_than_or_equals }
         }
         AND = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
             num_of_factories > 17
             check_variable = { var = num_owned_states value = 3 compare = greater_than_or_equals }
         }

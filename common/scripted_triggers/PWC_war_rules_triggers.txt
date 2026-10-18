@@ -768,6 +768,60 @@ pwc_st_ai_war_ready = {
         }
     }
 }
+
+
+
+pwc_st_ai_war_stalled = {
+    has_offensive_war = yes
+    NOT = { has_country_flag = pwc_flag_war_declare_cooldown }
+    NOT = { has_country_flag = pwc_flag_war_gain }
+    NOT = { has_country_flag = pwc_flag_second_front }
+    NOT = { surrender_progress > 0.2 }
+}
+
+
+pwc_st_ai_war_focus_open = {
+    OR = {
+        is_ai = no
+        has_game_rule = { rule = pwc_ai_war_focus option = OFF }
+        AND = {
+            NOT = { has_country_flag = pwc_flag_war_declare_cooldown }
+            OR = {
+                has_offensive_war = no
+                pwc_st_ai_war_stalled = yes
+            }
+        }
+    }
+}
+
+
+pwc_st_ai_war_front_ready = {
+    OR = {
+        is_ai = no
+        has_game_rule = { rule = pwc_ai_war_focus option = OFF }
+        has_offensive_war = no
+        AND = {
+            pwc_st_ai_war_stalled = yes
+            strength_ratio = {
+                tag = FROM ratio > 2
+            }
+        }
+    }
+}
+
+
+pwc_st_ai_war_rhythm_ready = {
+    OR = {
+        is_ai = no
+        has_game_rule = { rule = pwc_ai_war_focus option = OFF }
+        AND = {
+            NOT = { has_country_flag = pwc_flag_warning_active }
+            NOT = { has_country_flag = pwc_flag_war_declare_cooldown }
+            pwc_st_ai_war_front_ready = yes
+        }
+    }
+}
+
 pwc_st_player_province_war_priority = {
     has_game_rule = { rule = pwc_player_province_war_priority option = ON }
     OR = {

@@ -23,6 +23,7 @@ pwc_st_in_taiwan_region = {
 }
 pwc_st_has_taiwan_port = {
     any_owned_state = {
+        is_coastal = yes
         pwc_st_in_taiwan_region = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
@@ -34,8 +35,8 @@ pwc_st_has_taiwan_port = {
 }
 pwc_st_owns_taiwan_coast = {
     any_owned_state = {
-        pwc_st_in_taiwan_region = yes
         is_coastal = yes
+        pwc_st_in_taiwan_region = yes
     }
 }
 pwc_st_foreign_taiwan_coast = {
@@ -200,6 +201,7 @@ pwc_st_in_mainland_region = {
 }
 pwc_st_has_mainland_port = {
     any_owned_state = {
+        is_coastal = yes
         pwc_st_in_mainland_region = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
@@ -211,8 +213,8 @@ pwc_st_has_mainland_port = {
 }
 pwc_st_owns_mainland_coast = {
     any_owned_state = {
-        pwc_st_in_mainland_region = yes
         is_coastal = yes
+        pwc_st_in_mainland_region = yes
     }
 }
 pwc_st_foreign_mainland_coast = {
@@ -845,6 +847,7 @@ pwc_st_naval_yangtze_external_blocked = {
 }
 pwc_st_naval_port_region_30 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 224
             state = 238
@@ -852,7 +855,6 @@ pwc_st_naval_port_region_30 = {
             state = 244
             state = 275
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -904,6 +906,7 @@ pwc_st_naval_invasion_region_30 = {
 }
 pwc_st_naval_port_region_31 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 224
             state = 244
@@ -913,7 +916,6 @@ pwc_st_naval_port_region_31 = {
             state = 259
             state = 265
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -975,6 +977,7 @@ pwc_st_naval_invasion_region_31 = {
 }
 pwc_st_naval_port_region_32 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 212
             state = 226
@@ -987,7 +990,6 @@ pwc_st_naval_port_region_32 = {
             state = 257
             state = 266
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -1064,6 +1066,7 @@ pwc_st_naval_invasion_region_32 = {
 }
 pwc_st_naval_port_region_33 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 197
             state = 200
@@ -1075,7 +1078,6 @@ pwc_st_naval_port_region_33 = {
             state = 216
             state = 219
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -1147,6 +1149,7 @@ pwc_st_naval_invasion_region_33 = {
 }
 pwc_st_naval_port_region_34 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 353
             state = 355
@@ -1173,7 +1176,6 @@ pwc_st_naval_port_region_34 = {
             state = 391
             state = 513
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -1320,6 +1322,7 @@ pwc_st_naval_invasion_region_34 = {
 }
 pwc_st_naval_port_region_35 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 205
             state = 216
@@ -1357,7 +1360,6 @@ pwc_st_naval_port_region_35 = {
             state = 525
             state = 526
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -1559,6 +1561,7 @@ pwc_st_naval_invasion_region_35 = {
 }
 pwc_st_naval_port_region_36 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 73
             state = 83
@@ -1570,7 +1573,6 @@ pwc_st_naval_port_region_36 = {
             state = 176
             state = 205
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }
@@ -1642,6 +1644,7 @@ pwc_st_naval_invasion_region_36 = {
 }
 pwc_st_naval_port_region_37 = {
     any_owned_state = {
+        is_coastal = yes
         OR = {
             state = 64
             state = 69
@@ -1657,7 +1660,6 @@ pwc_st_naval_port_region_37 = {
             state = 111
             state = 118
         }
-        is_coastal = yes
         is_fully_controlled_by = PREV
         any_province_building_level = {
             province = { all_provinces = yes }

@@ -36,8 +36,8 @@ PWC_amphibious_escorts = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        pwc_st_amphibious_preparation_needed = yes
         has_tech = pwc_tech_navy_t1
+        pwc_st_amphibious_preparation_needed = yes
         pwc_st_amphibious_escort_shortfall = yes
     }
     abort_when_not_enabled = yes
@@ -7361,7 +7361,6 @@ PWC_amphibious_destroyer_reserve_2 = {
         pwc_st_naval_port = yes
         has_tech = pwc_tech_navy_t1
         has_design_based_on = pwc_platform_destroyer
-        num_of_naval_factories > 1
         num_of_naval_factories < 3
         OR = {
             NOT = { has_navy_size = { unit = pwc_unit_destroyer size > 1 } }

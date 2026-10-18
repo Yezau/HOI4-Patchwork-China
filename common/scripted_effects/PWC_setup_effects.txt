@@ -552,6 +552,23 @@ pwc_se_update_administration = {
     }
 }
 pwc_se_update_unit_limit = {
+    set_variable = { pwc_unit_counted_divisions = num_divisions }
+    if = {
+        limit = {
+            is_ai = yes
+            pwc_st_cataclysm_enabled = yes
+        }
+        if = {
+            limit = { has_country_flag = pwc_cataclysm_has_units }
+            pwc_se_cataclysm_recount_units = yes
+        }
+        else = {
+            set_variable = { pwc_cataclysm_regular_divisions = num_divisions }
+        }
+        set_variable = {
+            pwc_unit_counted_divisions = pwc_cataclysm_regular_divisions
+        }
+    }
     set_variable = { pwc_setup_owned_states = num_owned_states }
     set_variable = { pwc_setup_controlled_states = 0 }
     every_owned_state = {
@@ -575,7 +592,7 @@ pwc_se_update_unit_limit = {
         limit = { pwc_st_unit_limit_applies = yes }
         set_variable = {
             pwc_unit_penalty = {
-                value = num_divisions
+                value = pwc_unit_counted_divisions
                 divide = pwc_unit_capacity
                 subtract = 1
                 multiply = 0.25
@@ -587,7 +604,7 @@ pwc_se_update_unit_limit = {
         }
         set_variable = {
             pwc_unit_capacity_bar_offset = {
-                value = num_divisions
+                value = pwc_unit_counted_divisions
                 divide = pwc_unit_capacity
                 multiply = 300
                 subtract = 300
@@ -605,7 +622,7 @@ pwc_se_update_unit_limit = {
         if = {
             limit = {
                 check_variable = {
-                    var = num_divisions
+                    var = pwc_unit_counted_divisions
                     value = pwc_unit_capacity
                     compare = greater_than_or_equals
                 }
@@ -681,12 +698,16 @@ pwc_se_calibrate_starting_industry = {
         }
         clamp_variable = { var = pwc_setup_offsite_civ min = 0 }
         clamp_variable = { var = pwc_setup_offsite_mil min = 0 }
+        pwc_se_cataclysm_initialize_offsite = yes
+        set_variable = { pwc_cataclysm_offsite_civ = pwc_setup_offsite_civ }
+        set_variable = { pwc_cataclysm_offsite_mil = pwc_setup_offsite_mil }
         multiply_variable = { pwc_setup_offsite_civ = -1 }
         multiply_variable = { pwc_setup_offsite_mil = -1 }
-        add_offsite_building = {
-            type = industrial_complex level = var:pwc_setup_offsite_civ
-        }
-        add_offsite_building = { type = arms_factory level = var:pwc_setup_offsite_mil }
+        set_variable = { pwc_cataclysm_offsite_delta = pwc_setup_offsite_civ }
+        pwc_se_cataclysm_change_offsite_civ = yes
+        set_variable = { pwc_cataclysm_offsite_delta = pwc_setup_offsite_mil }
+        pwc_se_cataclysm_change_offsite_mil = yes
+        clear_variable = pwc_cataclysm_offsite_delta
         clear_variable = pwc_setup_offsite_civ
         clear_variable = pwc_setup_offsite_mil
         if = {

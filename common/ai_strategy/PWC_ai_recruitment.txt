@@ -378,7 +378,7 @@ PWC_ai_recruitment_balanced_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -777,7 +777,7 @@ PWC_ai_recruitment_balanced_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -1175,7 +1175,7 @@ PWC_ai_recruitment_balanced_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -1573,7 +1573,7 @@ PWC_ai_recruitment_balanced_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -1970,7 +1970,7 @@ PWC_ai_recruitment_balanced_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -2367,7 +2367,7 @@ PWC_ai_recruitment_balanced_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -2763,7 +2763,7 @@ PWC_ai_recruitment_balanced_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -3159,7 +3159,7 @@ PWC_ai_recruitment_balanced_large_industry_standard = {
         has_country_flag = pwc_ai_balanced
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -3554,7 +3554,7 @@ PWC_ai_recruitment_balanced_mass_industry = {
         has_country_flag = pwc_ai_balanced
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -3949,7 +3949,7 @@ PWC_ai_recruitment_balanced_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_balanced
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -4069,7 +4069,7 @@ PWC_ai_recruitment_industrial_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -4189,7 +4189,7 @@ PWC_ai_recruitment_industrial_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -4308,7 +4308,7 @@ PWC_ai_recruitment_industrial_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -4427,7 +4427,7 @@ PWC_ai_recruitment_industrial_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -4545,7 +4545,7 @@ PWC_ai_recruitment_industrial_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -4663,7 +4663,7 @@ PWC_ai_recruitment_industrial_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -4780,7 +4780,7 @@ PWC_ai_recruitment_industrial_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -4897,7 +4897,7 @@ PWC_ai_recruitment_industrial_large_industry_standard = {
         has_country_flag = pwc_ai_industrial
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -5013,7 +5013,7 @@ PWC_ai_recruitment_industrial_mass_industry = {
         has_country_flag = pwc_ai_industrial
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -5129,7 +5129,7 @@ PWC_ai_recruitment_industrial_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_industrial
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -5528,7 +5528,7 @@ PWC_ai_recruitment_defense_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -5927,7 +5927,7 @@ PWC_ai_recruitment_defense_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -6325,7 +6325,7 @@ PWC_ai_recruitment_defense_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -6723,7 +6723,7 @@ PWC_ai_recruitment_defense_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -7120,7 +7120,7 @@ PWC_ai_recruitment_defense_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -7517,7 +7517,7 @@ PWC_ai_recruitment_defense_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -7913,7 +7913,7 @@ PWC_ai_recruitment_defense_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -8309,7 +8309,7 @@ PWC_ai_recruitment_defense_large_industry_standard = {
         has_country_flag = pwc_ai_defense
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -8704,7 +8704,7 @@ PWC_ai_recruitment_defense_mass_industry = {
         has_country_flag = pwc_ai_defense
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -9099,7 +9099,7 @@ PWC_ai_recruitment_defense_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_defense
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -9493,7 +9493,7 @@ PWC_ai_recruitment_mobility_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -9887,7 +9887,7 @@ PWC_ai_recruitment_mobility_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -10280,7 +10280,7 @@ PWC_ai_recruitment_mobility_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -10673,7 +10673,7 @@ PWC_ai_recruitment_mobility_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -11065,7 +11065,7 @@ PWC_ai_recruitment_mobility_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -11457,7 +11457,7 @@ PWC_ai_recruitment_mobility_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -11848,7 +11848,7 @@ PWC_ai_recruitment_mobility_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -12239,7 +12239,7 @@ PWC_ai_recruitment_mobility_large_industry_standard = {
         has_country_flag = pwc_ai_mobility
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -12629,7 +12629,7 @@ PWC_ai_recruitment_mobility_mass_industry = {
         has_country_flag = pwc_ai_mobility
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -13019,7 +13019,7 @@ PWC_ai_recruitment_mobility_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_mobility
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -13152,7 +13152,7 @@ PWC_ai_recruitment_coastal_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -13285,7 +13285,7 @@ PWC_ai_recruitment_coastal_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -13417,7 +13417,7 @@ PWC_ai_recruitment_coastal_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -13549,7 +13549,7 @@ PWC_ai_recruitment_coastal_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -13680,7 +13680,7 @@ PWC_ai_recruitment_coastal_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -13811,7 +13811,7 @@ PWC_ai_recruitment_coastal_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -13941,7 +13941,7 @@ PWC_ai_recruitment_coastal_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -14071,7 +14071,7 @@ PWC_ai_recruitment_coastal_large_industry_standard = {
         has_country_flag = pwc_ai_coastal
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -14200,7 +14200,7 @@ PWC_ai_recruitment_coastal_mass_industry = {
         has_country_flag = pwc_ai_coastal
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -14329,7 +14329,7 @@ PWC_ai_recruitment_coastal_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_coastal
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -14428,7 +14428,7 @@ PWC_ai_recruitment_air_power_motorization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -14527,7 +14527,7 @@ PWC_ai_recruitment_air_power_motorization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -14625,7 +14625,7 @@ PWC_ai_recruitment_air_power_mechanization = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -14723,7 +14723,7 @@ PWC_ai_recruitment_air_power_mechanization_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = no
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -14820,7 +14820,7 @@ PWC_ai_recruitment_air_power_combined_arms = {
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -14917,7 +14917,7 @@ PWC_ai_recruitment_air_power_combined_arms_standard = {
         pwc_st_ai_recruitment_stage_combined_arms = yes
         pwc_st_ai_recruitment_stage_large_industry = no
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -15013,7 +15013,7 @@ PWC_ai_recruitment_air_power_large_industry = {
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -15109,7 +15109,7 @@ PWC_ai_recruitment_air_power_large_industry_standard = {
         has_country_flag = pwc_ai_air_power
         pwc_st_ai_recruitment_stage_large_industry = yes
         pwc_st_ai_recruitment_stage_mass_industry = no
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {
@@ -15204,7 +15204,7 @@ PWC_ai_recruitment_air_power_mass_industry = {
         has_country_flag = pwc_ai_air_power
         pwc_st_ai_recruitment_stage_mass_industry = yes
         NOT = {
-            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
     }
     abort_when_not_enabled = yes
@@ -15299,7 +15299,7 @@ PWC_ai_recruitment_air_power_mass_industry_standard = {
         is_ai = yes
         has_country_flag = pwc_ai_air_power
         pwc_st_ai_recruitment_stage_mass_industry = yes
-        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     abort_when_not_enabled = yes
     ai_strategy = {

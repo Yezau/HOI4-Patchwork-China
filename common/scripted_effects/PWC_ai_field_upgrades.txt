@@ -15,6 +15,14 @@ pwc_se_ai_refit_count = {
                 division_has_majority_template = pwc_unit_tank
                 division_has_majority_template = pwc_unit_tank_destroyer
             }
+            NOT = {
+                OR = {
+                    division_has_majority_template = pwc_unit_cataclysm_assault
+                    division_has_majority_template = pwc_unit_cataclysm_heavy
+                    division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                    division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                }
+            }
         }
         PREV = {
             add_to_variable = { pwc_ai_refit_total = 1 }
@@ -75,7 +83,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 13 }
@@ -105,7 +113,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 13 }
@@ -135,7 +143,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 13 }
@@ -165,7 +173,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 13 }
@@ -195,7 +203,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 7 }
@@ -241,7 +249,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 39 }
@@ -271,7 +279,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 39 }
@@ -301,7 +309,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 39 }
@@ -331,7 +339,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 39 }
@@ -361,7 +369,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 7 }
@@ -407,7 +415,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 3 }
@@ -437,7 +445,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 3 }
@@ -467,7 +475,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 3 }
@@ -497,7 +505,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 3 }
@@ -527,7 +535,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 88 }
@@ -573,7 +581,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 49 }
@@ -603,7 +611,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 49 }
@@ -633,7 +641,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 49 }
@@ -663,7 +671,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 49 }
@@ -693,7 +701,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 26 }
@@ -739,7 +747,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 9 }
@@ -769,7 +777,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 9 }
@@ -799,7 +807,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 9 }
@@ -829,7 +837,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 9 }
@@ -859,7 +867,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 77 }
@@ -905,7 +913,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 65 }
@@ -935,7 +943,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 65 }
@@ -965,7 +973,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 65 }
@@ -995,7 +1003,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 65 }
@@ -1025,7 +1033,7 @@ pwc_se_ai_refit_goals = {
             }
             if = {
                 limit = {
-                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+                    OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                 }
                 set_variable = { pwc_ai_refit_infantry_goal = pwc_ai_refit_total }
                 multiply_variable = { pwc_ai_refit_infantry_goal = 70 }
@@ -1147,6 +1155,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -1225,6 +1241,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -1303,6 +1327,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -1381,6 +1413,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -1464,6 +1504,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -1547,6 +1595,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -1630,6 +1686,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -1713,6 +1777,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -1796,6 +1868,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -1879,6 +1959,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -1962,6 +2050,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -2045,6 +2141,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -2133,6 +2237,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -2221,6 +2333,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -2309,6 +2429,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -2397,6 +2525,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -2474,6 +2610,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -2551,6 +2695,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -2628,6 +2780,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -2705,6 +2865,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -2781,6 +2949,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -2857,6 +3033,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -2933,6 +3117,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -3009,6 +3201,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -3091,6 +3291,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -3172,6 +3380,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 4
@@ -3255,6 +3471,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -3336,6 +3560,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 1
@@ -3424,6 +3656,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -3510,6 +3750,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 4
@@ -3598,6 +3846,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -3684,6 +3940,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 1
@@ -3772,6 +4036,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -3858,6 +4130,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 4
@@ -3946,6 +4226,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -4032,6 +4320,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 1
@@ -4125,6 +4421,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -4216,6 +4520,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 4
@@ -4309,6 +4621,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -4401,6 +4721,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -4481,6 +4809,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 8
@@ -4563,6 +4899,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -4643,6 +4987,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 2
@@ -4725,6 +5077,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -4804,6 +5164,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 8
@@ -4885,6 +5253,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -4964,6 +5340,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                 }
                 random_select_amount = 2
@@ -5045,6 +5429,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -5104,6 +5496,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5166,6 +5566,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5230,6 +5638,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5292,6 +5708,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5360,6 +5784,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5426,6 +5858,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5494,6 +5934,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5560,6 +6008,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5629,6 +6085,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5696,6 +6160,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5765,6 +6237,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5832,6 +6312,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -5905,6 +6393,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -5976,6 +6472,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -6049,6 +6553,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
                     }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_artillery
@@ -6120,6 +6632,14 @@ pwc_se_ai_refit_tick = {
                         division_has_majority_template = pwc_unit_motorized
                         division_has_majority_template = pwc_unit_mechanized
                         division_has_majority_template = pwc_unit_artillery
+                    }
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
                     }
                     OR = {
                         division_has_majority_template = pwc_unit_motorized
@@ -6190,6 +6710,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -6255,6 +6783,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -6320,6 +6856,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -6385,6 +6929,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -6454,6 +7006,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -6523,6 +7083,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -6592,6 +7160,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -6661,6 +7237,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -6731,6 +7315,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -6801,6 +7393,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -6871,6 +7471,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -6941,6 +7549,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -7015,6 +7631,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -7089,6 +7713,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -7163,6 +7795,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -7237,6 +7877,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -7302,6 +7950,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -7367,6 +8023,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -7432,6 +8096,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -7497,6 +8169,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -7566,6 +8246,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -7635,6 +8323,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -7704,6 +8400,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -7773,6 +8477,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -7843,6 +8555,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -7913,6 +8633,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -7983,6 +8711,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -8053,6 +8789,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {
@@ -8127,6 +8871,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 8
                 change_division_template = {
@@ -8201,6 +8953,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 4
                 change_division_template = {
@@ -8275,6 +9035,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 2
                 change_division_template = {
@@ -8349,6 +9117,14 @@ pwc_se_ai_refit_tick = {
             every_country_division = {
                 limit = {
                     division_has_majority_template = pwc_unit_infantry
+                    NOT = {
+                        OR = {
+                            division_has_majority_template = pwc_unit_cataclysm_assault
+                            division_has_majority_template = pwc_unit_cataclysm_heavy
+                            division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                        }
+                    }
                 }
                 random_select_amount = 1
                 change_division_template = {

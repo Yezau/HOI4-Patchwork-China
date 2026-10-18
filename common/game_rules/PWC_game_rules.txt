@@ -31,6 +31,12 @@ pwc_ai_difficulty = {
         desc = "PWC_RULE_AI_DIFFICULTY_T30_DESC"
         allow_achievements = no
     }
+    option = {
+        name = "TIER_CATACLYSM"
+        text = "PWC_RULE_AI_DIFFICULTY_TCATACLYSM"
+        desc = "PWC_RULE_AI_DIFFICULTY_TCATACLYSM_DESC"
+        allow_achievements = no
+    }
 }
 pwc_integration_speed = {
     name = "PWC_RULE_INTEGRATION_SPEED"
@@ -89,6 +95,22 @@ pwc_player_factions = {
         name = "ON"
         text = "PWC_RULE_PLAYER_FACTIONS_ON"
         desc = "PWC_RULE_PLAYER_FACTIONS_ON_DESC"
+        allow_achievements = no
+    }
+}
+pwc_core_integration = {
+    name = "PWC_RULE_CORE_INTEGRATION"
+    group = "PWC_RULE_GROUP_COMMON"
+    default = {
+        name = "AUTOMATIC"
+        text = "PWC_RULE_CORE_INTEGRATION_AUTOMATIC"
+        desc = "PWC_RULE_CORE_INTEGRATION_AUTOMATIC_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "REGIONAL"
+        text = "PWC_RULE_CORE_INTEGRATION_REGIONAL"
+        desc = "PWC_RULE_CORE_INTEGRATION_REGIONAL_DESC"
         allow_achievements = no
     }
 }
@@ -181,6 +203,22 @@ pwc_ai_war_pacing = {
         name = "SLOW"
         text = "PWC_RULE_AI_WAR_PACING_SLOW"
         desc = "PWC_RULE_AI_WAR_PACING_SLOW_DESC"
+        allow_achievements = no
+    }
+}
+pwc_ai_war_focus = {
+    name = "PWC_RULE_AI_WAR_FOCUS"
+    group = "PWC_RULE_GROUP_WAR"
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_AI_WAR_FOCUS_OFF"
+        desc = "PWC_RULE_AI_WAR_FOCUS_OFF_DESC"
+        allow_achievements = no
+    }
+    default = {
+        name = "FOCUSED"
+        text = "PWC_RULE_AI_WAR_FOCUS_FOCUSED"
+        desc = "PWC_RULE_AI_WAR_FOCUS_FOCUSED_DESC"
         allow_achievements = no
     }
 }

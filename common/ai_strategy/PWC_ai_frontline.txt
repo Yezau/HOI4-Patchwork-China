@@ -3,12 +3,7 @@ PWC_ai_funded_infantry_expansion = {
     enable = {
         is_ai = yes
         pwc_st_is_city_country = yes
-        OR = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD }
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 }
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
-        }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_STANDARD } has_game_rule = { rule = pwc_ai_difficulty option = TIER_10 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         has_war = yes
         has_capitulated = no
         OR = {
@@ -195,10 +190,26 @@ PWC_ai_funded_infantry_expansion = {
             pwc_st_unit_limit_applies = no
             AND = {
                 has_variable = pwc_unit_capacity
-                check_variable = {
-                    var = num_divisions
-                    value = pwc_unit_capacity
-                    compare = less_than
+                OR = {
+                    AND = {
+                        pwc_st_cataclysm_enabled = yes
+                        set_temp_variable = { pwc_front_regular = num_divisions }
+                        subtract_from_temp_variable = { pwc_front_regular = pwc_cataclysm_live }
+                        clamp_temp_variable = { var = pwc_front_regular min = 0 }
+                        check_variable = {
+                            var = pwc_front_regular
+                            value = pwc_unit_capacity
+                            compare = less_than
+                        }
+                    }
+                    AND = {
+                        pwc_st_cataclysm_enabled = no
+                        check_variable = {
+                            var = num_divisions
+                            value = pwc_unit_capacity
+                            compare = less_than
+                        }
+                    }
                 }
             }
         }

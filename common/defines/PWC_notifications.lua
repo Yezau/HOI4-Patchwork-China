@@ -1,0 +1,1 @@
+NDefines.NGame.INFO_MESSAGE_TIMEOUT_DAYS = 1

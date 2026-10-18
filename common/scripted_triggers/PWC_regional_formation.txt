@@ -1,0 +1,1974 @@
+pwc_st_regional_formation_enabled = {
+    has_game_rule = { rule = pwc_core_integration option = REGIONAL }
+    pwc_st_city_alive = yes
+}
+pwc_st_form_region_anhui = {
+    pwc_st_regional_formation_enabled = yes
+    172 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    173 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    185 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    186 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    193 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    196 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    199 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    203 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    207 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    212 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    230 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    231 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    232 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    233 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    242 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    249 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        172 = { NOT = { is_core_of = PREV } }
+        173 = { NOT = { is_core_of = PREV } }
+        185 = { NOT = { is_core_of = PREV } }
+        186 = { NOT = { is_core_of = PREV } }
+        193 = { NOT = { is_core_of = PREV } }
+        196 = { NOT = { is_core_of = PREV } }
+        199 = { NOT = { is_core_of = PREV } }
+        203 = { NOT = { is_core_of = PREV } }
+        207 = { NOT = { is_core_of = PREV } }
+        212 = { NOT = { is_core_of = PREV } }
+        230 = { NOT = { is_core_of = PREV } }
+        231 = { NOT = { is_core_of = PREV } }
+        232 = { NOT = { is_core_of = PREV } }
+        233 = { NOT = { is_core_of = PREV } }
+        242 = { NOT = { is_core_of = PREV } }
+        249 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_fujian = {
+    pwc_st_regional_formation_enabled = yes
+    293 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    306 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    313 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    319 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    327 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    328 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    330 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    336 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    343 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    525 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    526 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        293 = { NOT = { is_core_of = PREV } }
+        306 = { NOT = { is_core_of = PREV } }
+        313 = { NOT = { is_core_of = PREV } }
+        319 = { NOT = { is_core_of = PREV } }
+        327 = { NOT = { is_core_of = PREV } }
+        328 = { NOT = { is_core_of = PREV } }
+        330 = { NOT = { is_core_of = PREV } }
+        336 = { NOT = { is_core_of = PREV } }
+        343 = { NOT = { is_core_of = PREV } }
+        525 = { NOT = { is_core_of = PREV } }
+        526 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_gansu = {
+    pwc_st_regional_formation_enabled = yes
+    31 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    55 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    86 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    91 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    95 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    114 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    122 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    129 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    140 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    141 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    149 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    155 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    161 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    174 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        31 = { NOT = { is_core_of = PREV } }
+        55 = { NOT = { is_core_of = PREV } }
+        86 = { NOT = { is_core_of = PREV } }
+        91 = { NOT = { is_core_of = PREV } }
+        95 = { NOT = { is_core_of = PREV } }
+        114 = { NOT = { is_core_of = PREV } }
+        122 = { NOT = { is_core_of = PREV } }
+        129 = { NOT = { is_core_of = PREV } }
+        140 = { NOT = { is_core_of = PREV } }
+        141 = { NOT = { is_core_of = PREV } }
+        149 = { NOT = { is_core_of = PREV } }
+        155 = { NOT = { is_core_of = PREV } }
+        161 = { NOT = { is_core_of = PREV } }
+        174 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_guangdong = {
+    pwc_st_regional_formation_enabled = yes
+    332 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    335 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    342 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    345 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    351 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    353 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    355 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    357 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    359 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    360 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    363 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    364 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    367 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    369 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    370 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    371 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    372 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    374 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    375 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    377 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    379 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    381 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    384 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        332 = { NOT = { is_core_of = PREV } }
+        335 = { NOT = { is_core_of = PREV } }
+        342 = { NOT = { is_core_of = PREV } }
+        345 = { NOT = { is_core_of = PREV } }
+        351 = { NOT = { is_core_of = PREV } }
+        353 = { NOT = { is_core_of = PREV } }
+        355 = { NOT = { is_core_of = PREV } }
+        357 = { NOT = { is_core_of = PREV } }
+        359 = { NOT = { is_core_of = PREV } }
+        360 = { NOT = { is_core_of = PREV } }
+        363 = { NOT = { is_core_of = PREV } }
+        364 = { NOT = { is_core_of = PREV } }
+        367 = { NOT = { is_core_of = PREV } }
+        369 = { NOT = { is_core_of = PREV } }
+        370 = { NOT = { is_core_of = PREV } }
+        371 = { NOT = { is_core_of = PREV } }
+        372 = { NOT = { is_core_of = PREV } }
+        374 = { NOT = { is_core_of = PREV } }
+        375 = { NOT = { is_core_of = PREV } }
+        377 = { NOT = { is_core_of = PREV } }
+        379 = { NOT = { is_core_of = PREV } }
+        381 = { NOT = { is_core_of = PREV } }
+        384 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_guangxi = {
+    pwc_st_regional_formation_enabled = yes
+    324 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    326 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    331 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    337 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    339 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    349 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    350 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    354 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    356 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    366 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    368 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    373 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    380 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    383 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        324 = { NOT = { is_core_of = PREV } }
+        326 = { NOT = { is_core_of = PREV } }
+        331 = { NOT = { is_core_of = PREV } }
+        337 = { NOT = { is_core_of = PREV } }
+        339 = { NOT = { is_core_of = PREV } }
+        349 = { NOT = { is_core_of = PREV } }
+        350 = { NOT = { is_core_of = PREV } }
+        354 = { NOT = { is_core_of = PREV } }
+        356 = { NOT = { is_core_of = PREV } }
+        366 = { NOT = { is_core_of = PREV } }
+        368 = { NOT = { is_core_of = PREV } }
+        373 = { NOT = { is_core_of = PREV } }
+        380 = { NOT = { is_core_of = PREV } }
+        383 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_guizhou = {
+    pwc_st_regional_formation_enabled = yes
+    280 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    283 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    304 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    307 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    309 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    311 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    317 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    320 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    325 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        280 = { NOT = { is_core_of = PREV } }
+        283 = { NOT = { is_core_of = PREV } }
+        304 = { NOT = { is_core_of = PREV } }
+        307 = { NOT = { is_core_of = PREV } }
+        309 = { NOT = { is_core_of = PREV } }
+        311 = { NOT = { is_core_of = PREV } }
+        317 = { NOT = { is_core_of = PREV } }
+        320 = { NOT = { is_core_of = PREV } }
+        325 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_hainan = {
+    pwc_st_regional_formation_enabled = yes
+    385 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    387 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    388 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    391 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        385 = { NOT = { is_core_of = PREV } }
+        387 = { NOT = { is_core_of = PREV } }
+        388 = { NOT = { is_core_of = PREV } }
+        391 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_hebei = {
+    pwc_st_regional_formation_enabled = yes
+    59 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    63 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    74 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    78 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    79 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    82 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    85 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    90 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    96 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    98 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    103 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    113 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    128 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        59 = { NOT = { is_core_of = PREV } }
+        63 = { NOT = { is_core_of = PREV } }
+        74 = { NOT = { is_core_of = PREV } }
+        78 = { NOT = { is_core_of = PREV } }
+        79 = { NOT = { is_core_of = PREV } }
+        82 = { NOT = { is_core_of = PREV } }
+        85 = { NOT = { is_core_of = PREV } }
+        90 = { NOT = { is_core_of = PREV } }
+        96 = { NOT = { is_core_of = PREV } }
+        98 = { NOT = { is_core_of = PREV } }
+        103 = { NOT = { is_core_of = PREV } }
+        113 = { NOT = { is_core_of = PREV } }
+        128 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_heilongjiang = {
+    pwc_st_regional_formation_enabled = yes
+    8 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    12 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    13 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    15 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    16 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    17 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    18 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    20 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    21 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    24 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    25 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    27 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    29 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        8 = { NOT = { is_core_of = PREV } }
+        12 = { NOT = { is_core_of = PREV } }
+        13 = { NOT = { is_core_of = PREV } }
+        15 = { NOT = { is_core_of = PREV } }
+        16 = { NOT = { is_core_of = PREV } }
+        17 = { NOT = { is_core_of = PREV } }
+        18 = { NOT = { is_core_of = PREV } }
+        20 = { NOT = { is_core_of = PREV } }
+        21 = { NOT = { is_core_of = PREV } }
+        24 = { NOT = { is_core_of = PREV } }
+        25 = { NOT = { is_core_of = PREV } }
+        27 = { NOT = { is_core_of = PREV } }
+        29 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_henan = {
+    pwc_st_regional_formation_enabled = yes
+    135 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    137 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    146 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    159 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    160 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    164 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    165 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    166 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    167 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    169 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    177 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    178 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    179 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    180 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    184 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    192 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    194 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    206 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        135 = { NOT = { is_core_of = PREV } }
+        137 = { NOT = { is_core_of = PREV } }
+        146 = { NOT = { is_core_of = PREV } }
+        159 = { NOT = { is_core_of = PREV } }
+        160 = { NOT = { is_core_of = PREV } }
+        164 = { NOT = { is_core_of = PREV } }
+        165 = { NOT = { is_core_of = PREV } }
+        166 = { NOT = { is_core_of = PREV } }
+        167 = { NOT = { is_core_of = PREV } }
+        169 = { NOT = { is_core_of = PREV } }
+        177 = { NOT = { is_core_of = PREV } }
+        178 = { NOT = { is_core_of = PREV } }
+        179 = { NOT = { is_core_of = PREV } }
+        180 = { NOT = { is_core_of = PREV } }
+        184 = { NOT = { is_core_of = PREV } }
+        192 = { NOT = { is_core_of = PREV } }
+        194 = { NOT = { is_core_of = PREV } }
+        206 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_hubei = {
+    pwc_st_regional_formation_enabled = yes
+    198 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    208 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    210 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    218 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    220 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    224 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    225 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    226 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    240 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    244 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    246 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    247 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    250 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    251 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    254 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    257 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    259 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        198 = { NOT = { is_core_of = PREV } }
+        208 = { NOT = { is_core_of = PREV } }
+        210 = { NOT = { is_core_of = PREV } }
+        218 = { NOT = { is_core_of = PREV } }
+        220 = { NOT = { is_core_of = PREV } }
+        224 = { NOT = { is_core_of = PREV } }
+        225 = { NOT = { is_core_of = PREV } }
+        226 = { NOT = { is_core_of = PREV } }
+        240 = { NOT = { is_core_of = PREV } }
+        244 = { NOT = { is_core_of = PREV } }
+        246 = { NOT = { is_core_of = PREV } }
+        247 = { NOT = { is_core_of = PREV } }
+        250 = { NOT = { is_core_of = PREV } }
+        251 = { NOT = { is_core_of = PREV } }
+        254 = { NOT = { is_core_of = PREV } }
+        257 = { NOT = { is_core_of = PREV } }
+        259 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_hunan = {
+    pwc_st_regional_formation_enabled = yes
+    260 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    264 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    265 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    271 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    272 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    284 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    287 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    296 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    299 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    300 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    305 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    308 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    315 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    316 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        260 = { NOT = { is_core_of = PREV } }
+        264 = { NOT = { is_core_of = PREV } }
+        265 = { NOT = { is_core_of = PREV } }
+        271 = { NOT = { is_core_of = PREV } }
+        272 = { NOT = { is_core_of = PREV } }
+        284 = { NOT = { is_core_of = PREV } }
+        287 = { NOT = { is_core_of = PREV } }
+        296 = { NOT = { is_core_of = PREV } }
+        299 = { NOT = { is_core_of = PREV } }
+        300 = { NOT = { is_core_of = PREV } }
+        305 = { NOT = { is_core_of = PREV } }
+        308 = { NOT = { is_core_of = PREV } }
+        315 = { NOT = { is_core_of = PREV } }
+        316 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_inner_mongolia = {
+    pwc_st_regional_formation_enabled = yes
+    9 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    19 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    23 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    30 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    37 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    43 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    49 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    56 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    57 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    61 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    71 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    76 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        9 = { NOT = { is_core_of = PREV } }
+        19 = { NOT = { is_core_of = PREV } }
+        23 = { NOT = { is_core_of = PREV } }
+        30 = { NOT = { is_core_of = PREV } }
+        37 = { NOT = { is_core_of = PREV } }
+        43 = { NOT = { is_core_of = PREV } }
+        49 = { NOT = { is_core_of = PREV } }
+        56 = { NOT = { is_core_of = PREV } }
+        57 = { NOT = { is_core_of = PREV } }
+        61 = { NOT = { is_core_of = PREV } }
+        71 = { NOT = { is_core_of = PREV } }
+        76 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_jiangsu = {
+    pwc_st_regional_formation_enabled = yes
+    163 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    168 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    176 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    181 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    187 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    197 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    200 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    205 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    213 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    214 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    215 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    216 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    219 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    221 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    228 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        163 = { NOT = { is_core_of = PREV } }
+        168 = { NOT = { is_core_of = PREV } }
+        176 = { NOT = { is_core_of = PREV } }
+        181 = { NOT = { is_core_of = PREV } }
+        187 = { NOT = { is_core_of = PREV } }
+        197 = { NOT = { is_core_of = PREV } }
+        200 = { NOT = { is_core_of = PREV } }
+        205 = { NOT = { is_core_of = PREV } }
+        213 = { NOT = { is_core_of = PREV } }
+        214 = { NOT = { is_core_of = PREV } }
+        215 = { NOT = { is_core_of = PREV } }
+        216 = { NOT = { is_core_of = PREV } }
+        219 = { NOT = { is_core_of = PREV } }
+        221 = { NOT = { is_core_of = PREV } }
+        228 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_jiangxi = {
+    pwc_st_regional_formation_enabled = yes
+    262 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    266 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    269 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    281 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    282 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    288 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    292 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    298 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    301 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    302 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    312 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        262 = { NOT = { is_core_of = PREV } }
+        266 = { NOT = { is_core_of = PREV } }
+        269 = { NOT = { is_core_of = PREV } }
+        281 = { NOT = { is_core_of = PREV } }
+        282 = { NOT = { is_core_of = PREV } }
+        288 = { NOT = { is_core_of = PREV } }
+        292 = { NOT = { is_core_of = PREV } }
+        298 = { NOT = { is_core_of = PREV } }
+        301 = { NOT = { is_core_of = PREV } }
+        302 = { NOT = { is_core_of = PREV } }
+        312 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_jilin = {
+    pwc_st_regional_formation_enabled = yes
+    26 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    34 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    36 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    40 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    41 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    42 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    44 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    51 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    54 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        26 = { NOT = { is_core_of = PREV } }
+        34 = { NOT = { is_core_of = PREV } }
+        36 = { NOT = { is_core_of = PREV } }
+        40 = { NOT = { is_core_of = PREV } }
+        41 = { NOT = { is_core_of = PREV } }
+        42 = { NOT = { is_core_of = PREV } }
+        44 = { NOT = { is_core_of = PREV } }
+        51 = { NOT = { is_core_of = PREV } }
+        54 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_liaoning = {
+    pwc_st_regional_formation_enabled = yes
+    48 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    50 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    53 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    60 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    62 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    64 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    65 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    66 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    67 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    69 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    72 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    73 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    75 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    83 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        48 = { NOT = { is_core_of = PREV } }
+        50 = { NOT = { is_core_of = PREV } }
+        53 = { NOT = { is_core_of = PREV } }
+        60 = { NOT = { is_core_of = PREV } }
+        62 = { NOT = { is_core_of = PREV } }
+        64 = { NOT = { is_core_of = PREV } }
+        65 = { NOT = { is_core_of = PREV } }
+        66 = { NOT = { is_core_of = PREV } }
+        67 = { NOT = { is_core_of = PREV } }
+        69 = { NOT = { is_core_of = PREV } }
+        72 = { NOT = { is_core_of = PREV } }
+        73 = { NOT = { is_core_of = PREV } }
+        75 = { NOT = { is_core_of = PREV } }
+        83 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_ningxia = {
+    pwc_st_regional_formation_enabled = yes
+    97 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    105 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    107 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    112 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    132 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        97 = { NOT = { is_core_of = PREV } }
+        105 = { NOT = { is_core_of = PREV } }
+        107 = { NOT = { is_core_of = PREV } }
+        112 = { NOT = { is_core_of = PREV } }
+        132 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_qinghai = {
+    pwc_st_regional_formation_enabled = yes
+    92 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    93 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    117 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    120 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    124 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    136 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    139 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    152 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        92 = { NOT = { is_core_of = PREV } }
+        93 = { NOT = { is_core_of = PREV } }
+        117 = { NOT = { is_core_of = PREV } }
+        120 = { NOT = { is_core_of = PREV } }
+        124 = { NOT = { is_core_of = PREV } }
+        136 = { NOT = { is_core_of = PREV } }
+        139 = { NOT = { is_core_of = PREV } }
+        152 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_shaanxi = {
+    pwc_st_regional_formation_enabled = yes
+    89 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    116 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    147 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    154 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    157 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    162 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    170 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    175 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    190 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    191 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        89 = { NOT = { is_core_of = PREV } }
+        116 = { NOT = { is_core_of = PREV } }
+        147 = { NOT = { is_core_of = PREV } }
+        154 = { NOT = { is_core_of = PREV } }
+        157 = { NOT = { is_core_of = PREV } }
+        162 = { NOT = { is_core_of = PREV } }
+        170 = { NOT = { is_core_of = PREV } }
+        175 = { NOT = { is_core_of = PREV } }
+        190 = { NOT = { is_core_of = PREV } }
+        191 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_shandong = {
+    pwc_st_regional_formation_enabled = yes
+    106 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    108 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    110 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    111 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    115 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    118 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    119 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    123 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    126 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    130 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    134 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    138 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    143 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    144 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    145 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    158 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        106 = { NOT = { is_core_of = PREV } }
+        108 = { NOT = { is_core_of = PREV } }
+        110 = { NOT = { is_core_of = PREV } }
+        111 = { NOT = { is_core_of = PREV } }
+        115 = { NOT = { is_core_of = PREV } }
+        118 = { NOT = { is_core_of = PREV } }
+        119 = { NOT = { is_core_of = PREV } }
+        123 = { NOT = { is_core_of = PREV } }
+        126 = { NOT = { is_core_of = PREV } }
+        130 = { NOT = { is_core_of = PREV } }
+        134 = { NOT = { is_core_of = PREV } }
+        138 = { NOT = { is_core_of = PREV } }
+        143 = { NOT = { is_core_of = PREV } }
+        144 = { NOT = { is_core_of = PREV } }
+        145 = { NOT = { is_core_of = PREV } }
+        158 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_shanxi = {
+    pwc_st_regional_formation_enabled = yes
+    77 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    80 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    87 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    94 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    99 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    104 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    109 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    125 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    131 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    142 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    148 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        77 = { NOT = { is_core_of = PREV } }
+        80 = { NOT = { is_core_of = PREV } }
+        87 = { NOT = { is_core_of = PREV } }
+        94 = { NOT = { is_core_of = PREV } }
+        99 = { NOT = { is_core_of = PREV } }
+        104 = { NOT = { is_core_of = PREV } }
+        109 = { NOT = { is_core_of = PREV } }
+        125 = { NOT = { is_core_of = PREV } }
+        131 = { NOT = { is_core_of = PREV } }
+        142 = { NOT = { is_core_of = PREV } }
+        148 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_sichuan = {
+    pwc_st_regional_formation_enabled = yes
+    183 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    188 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    201 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    202 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    204 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    211 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    217 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    223 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    229 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    234 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    238 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    239 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    241 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    243 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    253 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    261 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    263 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    270 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    275 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    277 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    278 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    310 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        183 = { NOT = { is_core_of = PREV } }
+        188 = { NOT = { is_core_of = PREV } }
+        201 = { NOT = { is_core_of = PREV } }
+        202 = { NOT = { is_core_of = PREV } }
+        204 = { NOT = { is_core_of = PREV } }
+        211 = { NOT = { is_core_of = PREV } }
+        217 = { NOT = { is_core_of = PREV } }
+        223 = { NOT = { is_core_of = PREV } }
+        229 = { NOT = { is_core_of = PREV } }
+        234 = { NOT = { is_core_of = PREV } }
+        238 = { NOT = { is_core_of = PREV } }
+        239 = { NOT = { is_core_of = PREV } }
+        241 = { NOT = { is_core_of = PREV } }
+        243 = { NOT = { is_core_of = PREV } }
+        253 = { NOT = { is_core_of = PREV } }
+        261 = { NOT = { is_core_of = PREV } }
+        263 = { NOT = { is_core_of = PREV } }
+        270 = { NOT = { is_core_of = PREV } }
+        275 = { NOT = { is_core_of = PREV } }
+        277 = { NOT = { is_core_of = PREV } }
+        278 = { NOT = { is_core_of = PREV } }
+        310 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_taiwan = {
+    pwc_st_regional_formation_enabled = yes
+    334 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    338 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    348 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    352 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    358 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    361 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    362 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    505 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    506 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    507 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    508 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    509 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    510 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    511 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    512 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    513 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    524 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        334 = { NOT = { is_core_of = PREV } }
+        338 = { NOT = { is_core_of = PREV } }
+        348 = { NOT = { is_core_of = PREV } }
+        352 = { NOT = { is_core_of = PREV } }
+        358 = { NOT = { is_core_of = PREV } }
+        361 = { NOT = { is_core_of = PREV } }
+        362 = { NOT = { is_core_of = PREV } }
+        505 = { NOT = { is_core_of = PREV } }
+        506 = { NOT = { is_core_of = PREV } }
+        507 = { NOT = { is_core_of = PREV } }
+        508 = { NOT = { is_core_of = PREV } }
+        509 = { NOT = { is_core_of = PREV } }
+        510 = { NOT = { is_core_of = PREV } }
+        511 = { NOT = { is_core_of = PREV } }
+        512 = { NOT = { is_core_of = PREV } }
+        513 = { NOT = { is_core_of = PREV } }
+        524 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_xinjiang = {
+    pwc_st_regional_formation_enabled = yes
+    14 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    22 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    32 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    35 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    38 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    39 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    45 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    46 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    47 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    58 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    70 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    81 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    84 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    88 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        14 = { NOT = { is_core_of = PREV } }
+        22 = { NOT = { is_core_of = PREV } }
+        32 = { NOT = { is_core_of = PREV } }
+        35 = { NOT = { is_core_of = PREV } }
+        38 = { NOT = { is_core_of = PREV } }
+        39 = { NOT = { is_core_of = PREV } }
+        45 = { NOT = { is_core_of = PREV } }
+        46 = { NOT = { is_core_of = PREV } }
+        47 = { NOT = { is_core_of = PREV } }
+        58 = { NOT = { is_core_of = PREV } }
+        70 = { NOT = { is_core_of = PREV } }
+        81 = { NOT = { is_core_of = PREV } }
+        84 = { NOT = { is_core_of = PREV } }
+        88 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_xizang = {
+    pwc_st_regional_formation_enabled = yes
+    133 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    151 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    209 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    222 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    236 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    245 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    267 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    434 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    435 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        133 = { NOT = { is_core_of = PREV } }
+        151 = { NOT = { is_core_of = PREV } }
+        209 = { NOT = { is_core_of = PREV } }
+        222 = { NOT = { is_core_of = PREV } }
+        236 = { NOT = { is_core_of = PREV } }
+        245 = { NOT = { is_core_of = PREV } }
+        267 = { NOT = { is_core_of = PREV } }
+        434 = { NOT = { is_core_of = PREV } }
+        435 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_yunnan = {
+    pwc_st_regional_formation_enabled = yes
+    279 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    286 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    295 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    303 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    314 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    318 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    321 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    323 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    329 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    333 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    340 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    341 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    344 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    346 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    347 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    376 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        279 = { NOT = { is_core_of = PREV } }
+        286 = { NOT = { is_core_of = PREV } }
+        295 = { NOT = { is_core_of = PREV } }
+        303 = { NOT = { is_core_of = PREV } }
+        314 = { NOT = { is_core_of = PREV } }
+        318 = { NOT = { is_core_of = PREV } }
+        321 = { NOT = { is_core_of = PREV } }
+        323 = { NOT = { is_core_of = PREV } }
+        329 = { NOT = { is_core_of = PREV } }
+        333 = { NOT = { is_core_of = PREV } }
+        340 = { NOT = { is_core_of = PREV } }
+        341 = { NOT = { is_core_of = PREV } }
+        344 = { NOT = { is_core_of = PREV } }
+        346 = { NOT = { is_core_of = PREV } }
+        347 = { NOT = { is_core_of = PREV } }
+        376 = { NOT = { is_core_of = PREV } }
+    }
+}
+pwc_st_form_region_zhejiang = {
+    pwc_st_regional_formation_enabled = yes
+    235 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    237 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    248 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    255 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    256 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    258 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    268 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    273 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    276 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    285 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    289 = {
+        is_owned_by = PREV is_fully_controlled_by = PREV
+        OR = { is_core_of = PREV NOT = { compliance < 90 } }
+    }
+    OR = {
+        235 = { NOT = { is_core_of = PREV } }
+        237 = { NOT = { is_core_of = PREV } }
+        248 = { NOT = { is_core_of = PREV } }
+        255 = { NOT = { is_core_of = PREV } }
+        256 = { NOT = { is_core_of = PREV } }
+        258 = { NOT = { is_core_of = PREV } }
+        268 = { NOT = { is_core_of = PREV } }
+        273 = { NOT = { is_core_of = PREV } }
+        276 = { NOT = { is_core_of = PREV } }
+        285 = { NOT = { is_core_of = PREV } }
+        289 = { NOT = { is_core_of = PREV } }
+    }
+}

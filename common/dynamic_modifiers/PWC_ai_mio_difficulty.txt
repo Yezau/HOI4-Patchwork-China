@@ -23,7 +23,7 @@ pwc_dm_ai_mio_30 = {
         is_ai = yes
         pwc_st_live_city_country = yes
         has_dlc = "Arms Against Tyranny"
-        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
     }
     remove_trigger = {
         NOT = {
@@ -31,7 +31,7 @@ pwc_dm_ai_mio_30 = {
                 is_ai = yes
                 pwc_st_live_city_country = yes
                 has_dlc = "Arms Against Tyranny"
-                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
             }
         }
     }

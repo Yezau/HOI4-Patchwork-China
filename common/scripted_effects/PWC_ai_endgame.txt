@@ -8,7 +8,7 @@ pwc_se_coalition_parameters = {
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
         set_variable = { pwc_coalition_dominance = 1.25 }
         set_variable = { pwc_coalition_max_members = 8 }
@@ -28,7 +28,7 @@ pwc_se_coalition_reserve = {
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
         set_country_flag = { flag = pwc_flag_coalition_reserved days = 45 value = 1 }
         add_dynamic_modifier = { modifier = pwc_dm_coalition_muster days = 30 }
@@ -48,7 +48,7 @@ pwc_se_coalition_warn = {
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
         set_country_flag = { flag = pwc_flag_coalition_warning days = 30 value = 1 }
         add_dynamic_modifier = { modifier = pwc_dm_coalition_warning days = 30 }
@@ -67,7 +67,7 @@ pwc_se_coalition_cooldown = {
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
         set_country_flag = { flag = pwc_flag_coalition_cooldown days = 240 value = 1 }
     }
@@ -84,7 +84,7 @@ pwc_se_coalition_aborted = {
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         }
         set_country_flag = { flag = pwc_flag_coalition_cooldown days = 60 value = 1 }
     }

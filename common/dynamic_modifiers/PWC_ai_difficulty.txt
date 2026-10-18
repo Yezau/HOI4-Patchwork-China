@@ -3,12 +3,13 @@ pwc_dm_ai_difficulty = {
 	production_speed_buildings_factor = pwc_ai_diff_v_production_speed_buildings_factor
 	industrial_capacity_factory = pwc_ai_diff_v_industrial_capacity_factory
 	supply_factor = pwc_ai_diff_v_supply_factor
+	compliance_gain = pwc_ai_diff_v_compliance_gain
 }
 
 pwc_dm_ai_league = {
     enable = {
         is_ai = yes
-        has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+        OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
         pwc_st_is_city_country = yes
         exists = yes
         has_country_flag = pwc_flag_city_alive

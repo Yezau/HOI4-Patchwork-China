@@ -1,0 +1,147 @@
+pwc_st_cataclysm_enabled = {
+    always = yes
+    has_game_rule = { rule = pwc_ai_difficulty option = TIER_CATACLYSM }
+}
+pwc_st_cataclysm_human = {
+    exists = yes
+    is_ai = no
+    pwc_st_is_city_country = yes
+    has_capitulated = no
+    NOT = { is_in_peace_conference = yes }
+}
+pwc_st_cataclysm_history_ready = {
+    check_variable = { pwc_cataclysm_samples > 2 }
+    check_variable = { var = pwc_cataclysm_f0 value = 40 compare = greater_than_or_equals }
+    check_variable = { var = pwc_cataclysm_m0 value = 8 compare = greater_than_or_equals }
+    check_variable = { var = pwc_cataclysm_f1 value = 40 compare = greater_than_or_equals }
+    check_variable = { var = pwc_cataclysm_m1 value = 8 compare = greater_than_or_equals }
+    check_variable = { var = pwc_cataclysm_f2 value = 40 compare = greater_than_or_equals }
+    check_variable = { var = pwc_cataclysm_m2 value = 8 compare = greater_than_or_equals }
+}
+pwc_st_cataclysm_pool_active = {
+    pwc_st_cataclysm_human = yes
+    has_country_flag = pwc_cataclysm_active
+    NOT = { has_country_flag = pwc_cataclysm_paused }
+    pwc_st_protection_active = no
+    check_variable = {
+        var = pwc_cataclysm_topology_cycle
+        value = global.pwc_cataclysm_cycle
+        compare = less_than
+    }
+    has_variable = pwc_cataclysm_pool
+    var:pwc_cataclysm_pool = { tag = PREV }
+}
+
+pwc_st_cataclysm_qualified_war = {
+    exists = yes
+    is_ai = yes
+    pwc_st_is_city_country = yes
+    has_capitulated = no
+    NOT = { is_in_peace_conference = yes }
+    pwc_st_protection_active = no
+    has_war_with = event_target:pwc_cataclysm_human
+    is_neighbor_of = event_target:pwc_cataclysm_human
+    NOT = { has_country_flag = pwc_cataclysm_human_related }
+    OR = {
+        NOT = { has_variable = pwc_cataclysm_owner }
+        is_in_array = {
+            array = pwc_cataclysm_war_humans
+            value = event_target:pwc_cataclysm_human
+        }
+        var:pwc_cataclysm_owner = { tag = event_target:pwc_cataclysm_pool }
+        var:pwc_cataclysm_owner = {
+            has_variable = pwc_cataclysm_budget_pool
+            var:pwc_cataclysm_budget_pool = { tag = event_target:pwc_cataclysm_pool }
+        }
+        var:pwc_cataclysm_owner = {
+            is_in_array = {
+                array = pwc_cataclysm_continuing_pools
+                value = event_target:pwc_cataclysm_pool
+            }
+        }
+    }
+}
+pwc_st_cataclysm_recipient = {
+    pwc_st_cataclysm_qualified_war = yes
+    NOT = {
+        any_enemy_country = {
+            is_ai = no
+            OR = {
+                NOT = { has_variable = pwc_cataclysm_pool }
+                var:pwc_cataclysm_pool = { pwc_st_cataclysm_pool_active = no }
+            }
+        }
+    }
+}
+
+pwc_st_cataclysm_transport_ready = {
+    get_supply_vehicles_temp = { var = pwc_rear_trains type = train need = no }
+    get_supply_vehicles_temp = { var = pwc_rear_train_need type = train need = yes }
+    get_supply_vehicles_temp = { var = pwc_rear_trucks type = truck need = no }
+    get_supply_vehicles_temp = { var = pwc_rear_truck_need type = truck need = yes }
+    check_variable = {
+        var = pwc_rear_trains value = pwc_rear_train_need compare = greater_than_or_equals
+    }
+    check_variable = {
+        var = pwc_rear_trucks value = pwc_rear_truck_need compare = greater_than_or_equals
+    }
+}
+pwc_st_cataclysm_rear = {
+    is_owned_by = event_target:pwc_cataclysm_recipient
+    is_fully_controlled_by = event_target:pwc_cataclysm_recipient
+    is_in_home_area = yes
+    infrastructure > 2
+    
+    is_capital = yes
+    NOT = {
+        any_neighbor_state = {
+            controller = { has_war_with = event_target:pwc_cataclysm_recipient }
+        }
+    }
+    
+    
+    any_neighbor_state = {
+        is_owned_by = event_target:pwc_cataclysm_recipient
+        is_fully_controlled_by = event_target:pwc_cataclysm_recipient
+        is_in_home_area = yes
+        any_neighbor_state = {
+            controller = {
+                pwc_st_cataclysm_human = yes
+                has_war_with = event_target:pwc_cataclysm_recipient
+                event_target:pwc_cataclysm_recipient = {
+                    is_in_array = {
+                        array = pwc_cataclysm_front_pools
+                        value = PREV.pwc_cataclysm_pool
+                    }
+                }
+            }
+        }
+        event_target:pwc_cataclysm_recipient = {
+            has_railway_connection = {
+                start_state = PREV.PREV target_state = PREV
+                build_only_on_allied = yes
+                controller_priority = {
+                    base = -1
+                    modifier = { tag = event_target:pwc_cataclysm_recipient add = 2 }
+                }
+            }
+        }
+    }
+}
+pwc_st_cataclysm_budget_available = {
+    pwc_st_cataclysm_pool_active = yes
+    NOT = { has_global_flag = pwc_cataclysm_identity_fault }
+    NOT = { has_global_flag = pwc_cataclysm_transaction_fault }
+    check_variable = {
+        var = pwc_cataclysm_used value = pwc_cataclysm_budget compare = less_than
+    }
+    check_variable = {
+        var = pwc_cataclysm_live_pool value = pwc_cataclysm_cap compare = less_than
+    }
+    check_variable = {
+        var = global.pwc_cataclysm_used value = 60 compare = less_than
+    }
+    check_variable = {
+        var = global.pwc_cataclysm_live value = 480 compare = less_than
+    }
+}

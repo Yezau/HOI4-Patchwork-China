@@ -1,0 +1,637 @@
+pwc_se_cataclysm_recount_units = {
+    set_variable = { pwc_cataclysm_live = 0 }
+    every_country_division = {
+        limit = {
+            OR = {
+                division_has_majority_template = pwc_unit_cataclysm_assault
+                division_has_majority_template = pwc_unit_cataclysm_heavy
+            }
+        }
+        PREV = {
+            add_to_variable = { pwc_cataclysm_live = 1 }
+        }
+    }
+    set_variable = { pwc_cataclysm_regular_divisions = num_divisions }
+    subtract_from_variable = { pwc_cataclysm_regular_divisions = pwc_cataclysm_live }
+    clamp_variable = { var = pwc_cataclysm_regular_divisions min = 0 }
+    if = {
+        limit = { check_variable = { var = pwc_cataclysm_live value = 1 compare = greater_than_or_equals } }
+        set_country_flag = pwc_cataclysm_has_units
+    }
+    else = {
+        clr_country_flag = pwc_cataclysm_has_units
+    }
+}
+pwc_se_cataclysm_ensure_templates = {
+    if = {
+        limit = {
+            NOT = {
+                has_template = "虚空突击师"
+            }
+        }
+        division_template = {
+            name = "虚空突击师"
+            is_locked = yes
+            priority = 2
+            regiments = {
+                pwc_unit_cataclysm_assault = { x = 0 y = 0 }
+                pwc_unit_cataclysm_assault = { x = 0 y = 1 }
+                pwc_unit_cataclysm_assault = { x = 0 y = 2 }
+                pwc_unit_cataclysm_assault = { x = 0 y = 3 }
+                pwc_unit_cataclysm_assault = { x = 1 y = 0 }
+                pwc_unit_cataclysm_assault = { x = 1 y = 1 }
+                pwc_unit_cataclysm_assault = { x = 1 y = 2 }
+                pwc_unit_cataclysm_assault = { x = 1 y = 3 }
+                pwc_unit_cataclysm_assault = { x = 2 y = 0 }
+                pwc_unit_cataclysm_assault = { x = 2 y = 1 }
+                pwc_unit_cataclysm_assault = { x = 2 y = 2 }
+                pwc_unit_cataclysm_assault = { x = 2 y = 3 }
+            }
+            support = {
+                pwc_unit_engineer = { x = 0 y = 0 }
+                pwc_unit_recon = { x = 0 y = 1 }
+                pwc_unit_support_artillery = { x = 0 y = 2 }
+                pwc_unit_support_anti_tank = { x = 0 y = 3 }
+                pwc_unit_support_anti_air = { x = 0 y = 4 }
+                pwc_unit_logistics = { x = 1 y = 0 }
+            }
+            regimental_support = {
+            }
+        }
+    }
+    set_division_template_lock = {
+        division_template = "虚空突击师"
+        is_locked = yes
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_template = "虚空重装师"
+            }
+        }
+        division_template = {
+            name = "虚空重装师"
+            is_locked = yes
+            priority = 2
+            regiments = {
+                pwc_unit_cataclysm_heavy = { x = 0 y = 0 }
+                pwc_unit_cataclysm_heavy = { x = 0 y = 1 }
+                pwc_unit_cataclysm_heavy = { x = 0 y = 2 }
+                pwc_unit_cataclysm_heavy = { x = 0 y = 3 }
+                pwc_unit_cataclysm_heavy = { x = 1 y = 0 }
+                pwc_unit_cataclysm_heavy = { x = 1 y = 1 }
+                pwc_unit_cataclysm_heavy = { x = 1 y = 2 }
+                pwc_unit_cataclysm_heavy = { x = 1 y = 3 }
+                pwc_unit_cataclysm_heavy = { x = 2 y = 0 }
+                pwc_unit_cataclysm_heavy = { x = 2 y = 1 }
+                pwc_unit_cataclysm_heavy = { x = 2 y = 2 }
+                pwc_unit_cataclysm_heavy = { x = 2 y = 3 }
+                pwc_unit_mechanized = { x = 3 y = 0 }
+                pwc_unit_mechanized = { x = 3 y = 1 }
+                pwc_unit_mechanized = { x = 3 y = 2 }
+                pwc_unit_mechanized = { x = 4 y = 0 }
+                pwc_unit_mechanized = { x = 4 y = 1 }
+                pwc_unit_mechanized = { x = 4 y = 2 }
+            }
+            support = {
+                pwc_unit_engineer = { x = 0 y = 0 }
+                pwc_unit_recon = { x = 0 y = 1 }
+                pwc_unit_support_artillery = { x = 0 y = 2 }
+                pwc_unit_support_anti_tank = { x = 0 y = 3 }
+                pwc_unit_support_anti_air = { x = 0 y = 4 }
+                pwc_unit_logistics = { x = 1 y = 0 }
+            }
+            regimental_support = {
+            }
+        }
+    }
+    set_division_template_lock = {
+        division_template = "虚空重装师"
+        is_locked = yes
+    }
+}
+pwc_se_cataclysm_ensure_staging_templates = {
+    if = {
+        limit = {
+            NOT = {
+                has_template = "PWC Cataclysm Staging Assault"
+            }
+        }
+        division_template = {
+            name = "PWC Cataclysm Staging Assault"
+            is_locked = yes
+            priority = 2
+            regiments = {
+                pwc_unit_cataclysm_assault_staging = { x = 0 y = 0 }
+                pwc_unit_cataclysm_assault_staging = { x = 0 y = 1 }
+                pwc_unit_cataclysm_assault_staging = { x = 0 y = 2 }
+                pwc_unit_cataclysm_assault_staging = { x = 0 y = 3 }
+                pwc_unit_cataclysm_assault_staging = { x = 1 y = 0 }
+                pwc_unit_cataclysm_assault_staging = { x = 1 y = 1 }
+                pwc_unit_cataclysm_assault_staging = { x = 1 y = 2 }
+                pwc_unit_cataclysm_assault_staging = { x = 1 y = 3 }
+                pwc_unit_cataclysm_assault_staging = { x = 2 y = 0 }
+                pwc_unit_cataclysm_assault_staging = { x = 2 y = 1 }
+                pwc_unit_cataclysm_assault_staging = { x = 2 y = 2 }
+                pwc_unit_cataclysm_assault_staging = { x = 2 y = 3 }
+            }
+            support = {
+                pwc_unit_engineer = { x = 0 y = 0 }
+                pwc_unit_recon = { x = 0 y = 1 }
+                pwc_unit_support_artillery = { x = 0 y = 2 }
+                pwc_unit_support_anti_tank = { x = 0 y = 3 }
+                pwc_unit_support_anti_air = { x = 0 y = 4 }
+                pwc_unit_logistics = { x = 1 y = 0 }
+            }
+            regimental_support = {
+            }
+        }
+    }
+    set_division_template_lock = {
+        division_template = "PWC Cataclysm Staging Assault"
+        is_locked = yes
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_template = "PWC Cataclysm Staging Heavy"
+            }
+        }
+        division_template = {
+            name = "PWC Cataclysm Staging Heavy"
+            is_locked = yes
+            priority = 2
+            regiments = {
+                pwc_unit_cataclysm_heavy_staging = { x = 0 y = 0 }
+                pwc_unit_cataclysm_heavy_staging = { x = 0 y = 1 }
+                pwc_unit_cataclysm_heavy_staging = { x = 0 y = 2 }
+                pwc_unit_cataclysm_heavy_staging = { x = 0 y = 3 }
+                pwc_unit_cataclysm_heavy_staging = { x = 1 y = 0 }
+                pwc_unit_cataclysm_heavy_staging = { x = 1 y = 1 }
+                pwc_unit_cataclysm_heavy_staging = { x = 1 y = 2 }
+                pwc_unit_cataclysm_heavy_staging = { x = 1 y = 3 }
+                pwc_unit_cataclysm_heavy_staging = { x = 2 y = 0 }
+                pwc_unit_cataclysm_heavy_staging = { x = 2 y = 1 }
+                pwc_unit_cataclysm_heavy_staging = { x = 2 y = 2 }
+                pwc_unit_cataclysm_heavy_staging = { x = 2 y = 3 }
+                pwc_unit_mechanized = { x = 3 y = 0 }
+                pwc_unit_mechanized = { x = 3 y = 1 }
+                pwc_unit_mechanized = { x = 3 y = 2 }
+                pwc_unit_mechanized = { x = 4 y = 0 }
+                pwc_unit_mechanized = { x = 4 y = 1 }
+                pwc_unit_mechanized = { x = 4 y = 2 }
+            }
+            support = {
+                pwc_unit_engineer = { x = 0 y = 0 }
+                pwc_unit_recon = { x = 0 y = 1 }
+                pwc_unit_support_artillery = { x = 0 y = 2 }
+                pwc_unit_support_anti_tank = { x = 0 y = 3 }
+                pwc_unit_support_anti_air = { x = 0 y = 4 }
+                pwc_unit_logistics = { x = 1 y = 0 }
+            }
+            regimental_support = {
+            }
+        }
+    }
+    set_division_template_lock = {
+        division_template = "PWC Cataclysm Staging Heavy"
+        is_locked = yes
+    }
+}
+pwc_se_cataclysm_count_staging = {
+    set_variable = { pwc_cataclysm_staging_count = 0 }
+    every_country_division = {
+        limit = {
+            OR = {
+                division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+            }
+        }
+        PREV = {
+            add_to_variable = { pwc_cataclysm_staging_count = 1 }
+        }
+    }
+}
+pwc_se_cataclysm_capture_staging = {
+    set_variable = { pwc_cataclysm_staging_count = 0 }
+    every_country_division = {
+        limit = {
+            OR = {
+                division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+            }
+        }
+        PREV = {
+            add_to_variable = { pwc_cataclysm_staging_count = 1 }
+        }
+        save_global_event_target_as = pwc_cataclysm_candidate
+    }
+}
+pwc_se_cataclysm_ensure_variants = {
+    NTR = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_anti_air_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_anti_air G2"
+                type = pwc_equipment_anti_air_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_anti_air_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_anti_tank_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_anti_tank G2"
+                type = pwc_equipment_anti_tank_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_anti_tank_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_artillery_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_artillery G2"
+                type = pwc_equipment_artillery_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_artillery_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_infantry_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_infantry G2"
+                type = pwc_equipment_infantry_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_infantry_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_mechanized_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_mechanized G2"
+                type = pwc_equipment_mechanized_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_mechanized_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_motorized_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_motorized G2"
+                type = pwc_equipment_motorized_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_motorized_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_equipment_support_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 equipment_support G2"
+                type = pwc_equipment_support_gen2
+                allow_without_tech = yes
+                obsolete = yes
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_equipment_support_g2
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = pwc_cataclysm_variant_v1_platform_medium_tank_g2 }
+            }
+            create_equipment_variant = {
+                name = "PWC Cataclysm v1 platform_medium_tank G2"
+                type = pwc_platform_medium_tank_gen2
+                allow_without_tech = yes
+                obsolete = yes
+                modules = {
+                    pwc_medium_tank_turret_0 = pwc_module_tank_turret_auto_t2
+                    pwc_medium_tank_gun_1 = pwc_module_tank_main_gun_t2
+                    pwc_medium_tank_suspension_2 = pwc_module_tank_suspension_t2
+                    pwc_medium_tank_armor_3 = pwc_module_tank_composite_armor_t2
+                    pwc_medium_tank_engine_4 = pwc_module_tank_heavy_economy_t2
+                    pwc_medium_tank_special_5 = pwc_module_tank_fcs_t2
+                    pwc_medium_tank_special_6 = pwc_module_tank_radio_t2
+                    pwc_medium_tank_special_7 = pwc_module_tank_maintenance_t2
+                }
+            }
+            set_country_flag = pwc_cataclysm_variant_v1_platform_medium_tank_g2
+        }
+    }
+}
+pwc_se_cataclysm_remove_equipment = {
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_anti_air_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_anti_air value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_anti_air }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_anti_air_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_anti_air G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_anti_tank_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_anti_tank value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_anti_tank }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_anti_tank_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_anti_tank G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_artillery_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_artillery value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_artillery }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_artillery_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_artillery G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_infantry_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_infantry value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_infantry }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_infantry_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_infantry G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_mechanized_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_mechanized value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_mechanized }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_mechanized_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_mechanized G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_motorized_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_motorized value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_motorized }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_motorized_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_motorized G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_equipment_support_g2 }
+            check_variable = { var = num_equipment@pwc_equipment_support value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_equipment_support }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_equipment_support_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 equipment_support G2"
+        }
+    }
+    if = {
+        limit = {
+            NTR = { has_country_flag = pwc_cataclysm_variant_v1_platform_medium_tank_g2 }
+            check_variable = { var = num_equipment@pwc_platform_medium_tank value = 0 compare = greater_than }
+        }
+        set_variable = { pwc_cataclysm_remove_amount = num_equipment@pwc_platform_medium_tank }
+        multiply_variable = { pwc_cataclysm_remove_amount = -1 }
+        add_equipment_to_stockpile = {
+            type = pwc_platform_medium_tank_gen2
+            amount = pwc_cataclysm_remove_amount
+            producer = NTR
+            variant_name = "PWC Cataclysm v1 platform_medium_tank G2"
+        }
+    }
+    clear_variable = pwc_cataclysm_remove_amount
+}
+pwc_se_cataclysm_spawn_one = {
+    clr_country_flag = pwc_cataclysm_spawn_success
+    clr_country_flag = pwc_cataclysm_identity_registered
+    set_variable = { pwc_cataclysm_created = 0 }
+    if = {
+        limit = {
+            is_ai = yes
+            pwc_st_cataclysm_enabled = yes
+            has_event_target = pwc_cataclysm_spawn_state
+            has_variable = pwc_cataclysm_owner
+            NOT = { has_event_target = pwc_cataclysm_candidate }
+            NOT = { has_global_flag = pwc_cataclysm_transaction_fault }
+        }
+        clear_global_event_target = pwc_cataclysm_candidate
+        pwc_se_cataclysm_count_staging = yes
+        pwc_se_cataclysm_select_slot = yes
+        if = {
+            limit = {
+                check_variable = { var = pwc_cataclysm_staging_count value = 0 compare = equals }
+                check_variable = { var = pwc_cataclysm_free_slot value = 0 compare = greater_than }
+            }
+            pwc_se_cataclysm_ensure_templates = yes
+            pwc_se_cataclysm_ensure_staging_templates = yes
+            pwc_se_cataclysm_ensure_variants = yes
+            save_event_target_as = pwc_cataclysm_spawn_owner
+            event_target:pwc_cataclysm_spawn_state = {
+                if = {
+                    limit = {
+                        is_owned_by = event_target:pwc_cataclysm_spawn_owner
+                        is_fully_controlled_by = event_target:pwc_cataclysm_spawn_owner
+                    }
+                    if = {
+                        limit = {
+                            event_target:pwc_cataclysm_spawn_owner = {
+                                check_variable = { var = pwc_cataclysm_next_heavy value = 1 compare = greater_than_or_equals }
+                            }
+                        }
+                        create_unit = {
+                            division = "division_template = \"PWC Cataclysm Staging Heavy\" start_experience_factor = 0.3 start_equipment_factor = 1.0 start_manpower_factor = 1.0 force_equipment_variants = {     pwc_equipment_anti_air_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_anti_air G2\"     }     pwc_equipment_anti_tank_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_anti_tank G2\"     }     pwc_equipment_artillery_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_artillery G2\"     }     pwc_equipment_infantry_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_infantry G2\"     }     pwc_equipment_mechanized_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_mechanized G2\"     }     pwc_equipment_motorized_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_motorized G2\"     }     pwc_equipment_support_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_support G2\"     }     pwc_platform_medium_tank_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 platform_medium_tank G2\"     } }"
+                            owner = event_target:pwc_cataclysm_spawn_owner
+                            allow_spawning_on_enemy_provs = no
+                            count = 1
+                            id = 910360
+                        }
+                    }
+                    else = {
+                        create_unit = {
+                            division = "division_template = \"PWC Cataclysm Staging Assault\" start_experience_factor = 0.3 start_equipment_factor = 1.0 start_manpower_factor = 1.0 force_equipment_variants = {     pwc_equipment_anti_air_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_anti_air G2\"     }     pwc_equipment_anti_tank_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_anti_tank G2\"     }     pwc_equipment_artillery_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_artillery G2\"     }     pwc_equipment_infantry_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_infantry G2\"     }     pwc_equipment_motorized_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_motorized G2\"     }     pwc_equipment_support_gen2 = {         owner = \"NTR\"         version_name = \"PWC Cataclysm v1 equipment_support G2\"     } }"
+                            owner = event_target:pwc_cataclysm_spawn_owner
+                            allow_spawning_on_enemy_provs = no
+                            count = 1
+                            id = 910240
+                        }
+                    }
+                }
+            }
+            pwc_se_cataclysm_capture_staging = yes
+            if = {
+                limit = { check_variable = { var = pwc_cataclysm_staging_count value = 1 compare = equals } }
+                if = {
+                    limit = { check_variable = { var = pwc_cataclysm_next_heavy value = 1 compare = greater_than_or_equals } }
+                    if = {
+                        limit = {
+                            has_event_target = pwc_cataclysm_candidate
+                            event_target:pwc_cataclysm_candidate = {
+                                division_has_majority_template = pwc_unit_cataclysm_heavy_staging
+                            }
+                        }
+                        event_target:pwc_cataclysm_candidate = {
+                            change_division_template = {
+                                division_template = "虚空重装师"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                event_target:pwc_cataclysm_candidate = {
+                                    division_has_majority_template = pwc_unit_cataclysm_heavy
+                                    NOT = { division_has_majority_template = pwc_unit_cataclysm_heavy_staging }
+                                }
+                            }
+                            pwc_se_cataclysm_register_slot = yes
+                        }
+                    }
+                }
+                else = {
+                    if = {
+                        limit = {
+                            has_event_target = pwc_cataclysm_candidate
+                            event_target:pwc_cataclysm_candidate = {
+                                division_has_majority_template = pwc_unit_cataclysm_assault_staging
+                            }
+                        }
+                        event_target:pwc_cataclysm_candidate = {
+                            change_division_template = {
+                                division_template = "虚空突击师"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                event_target:pwc_cataclysm_candidate = {
+                                    division_has_majority_template = pwc_unit_cataclysm_assault
+                                    NOT = { division_has_majority_template = pwc_unit_cataclysm_assault_staging }
+                                }
+                            }
+                            pwc_se_cataclysm_register_slot = yes
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = { has_country_flag = pwc_cataclysm_identity_registered }
+                set_variable = { pwc_cataclysm_created = 1 }
+                set_country_flag = pwc_cataclysm_spawn_success
+                set_country_flag = pwc_cataclysm_equipment_received
+                set_variable = { pwc_cataclysm_staging_count = 0 }
+            }
+            else = {
+                if = {
+                    limit = { has_event_target = pwc_cataclysm_candidate }
+                    event_target:pwc_cataclysm_candidate = {
+                        destroy_unit = yes
+                    }
+                }
+                delete_unit = {
+                    division_template = "PWC Cataclysm Staging Assault"
+                    id = 910240
+                    disband = no
+                }
+                delete_unit = {
+                    division_template = "PWC Cataclysm Staging Heavy"
+                    id = 910360
+                    disband = no
+                }
+                pwc_se_cataclysm_count_staging = yes
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_flag = pwc_cataclysm_identity_registered }
+                    OR = {
+                        has_event_target = pwc_cataclysm_candidate
+                        check_variable = { var = pwc_cataclysm_staging_count value = 0 compare = greater_than }
+                    }
+                }
+                set_global_flag = pwc_cataclysm_transaction_fault
+            }
+        }
+        pwc_se_cataclysm_recount_units = yes
+    }
+    if = {
+        limit = { has_country_flag = pwc_cataclysm_identity_registered }
+        clear_global_event_target = pwc_cataclysm_candidate
+    }
+    clear_variable = pwc_cataclysm_free_slot
+}
+pwc_se_cataclysm_remove_held_units = {
+    delete_unit = {
+        division_template = "虚空突击师"
+        id = 910240
+        disband = no
+    }
+    delete_unit = {
+        division_template = "虚空重装师"
+        id = 910360
+        disband = no
+    }
+    delete_unit = {
+        division_template = "PWC Cataclysm Staging Assault"
+        id = 910240
+        disband = no
+    }
+    delete_unit = {
+        division_template = "PWC Cataclysm Staging Heavy"
+        id = 910360
+        disband = no
+    }
+    pwc_se_cataclysm_remove_equipment = yes
+    pwc_se_cataclysm_recount_units = yes
+    clr_country_flag = pwc_cataclysm_spawn_success
+}
+pwc_se_cataclysm_remove_units = {
+    pwc_se_cataclysm_remove_origin_units = yes
+    pwc_se_cataclysm_remove_held_units = yes
+}

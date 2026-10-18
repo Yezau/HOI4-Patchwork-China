@@ -14,7 +14,7 @@ pwc_se_focus_ai_equipment = {
             NOT = { has_country_flag = pwc_flag_aid_cooldown }
             OR = {
                 has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 }
-                has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
             }
         }
         if = {
@@ -23,7 +23,7 @@ pwc_se_focus_ai_equipment = {
             set_variable = { pwc_aid_tier = 1 }
         }
         else_if = {
-            limit = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } }
+            limit = { OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes } }
             multiply_variable = { pwc_focus_equipment_scale = 2 }
             set_variable = { pwc_aid_tier = 2 }
         }
@@ -1396,7 +1396,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -1512,7 +1512,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -1628,7 +1628,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -1744,7 +1744,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -1860,7 +1860,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2005,7 +2005,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2121,7 +2121,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2237,7 +2237,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2353,7 +2353,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2469,7 +2469,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2614,7 +2614,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2730,7 +2730,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2846,7 +2846,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -2962,7 +2962,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3078,7 +3078,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3222,7 +3222,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3335,7 +3335,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3448,7 +3448,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3561,7 +3561,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3674,7 +3674,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_armor_ai_30
                             has_country_flag = pwc_flag_mio_armor
                         }
@@ -3813,7 +3813,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_air_superiority_ai_30
                             has_country_flag = pwc_flag_mio_air_superiority
                         }
@@ -3918,7 +3918,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_air_superiority_ai_30
                             has_country_flag = pwc_flag_mio_air_superiority
                         }
@@ -4025,7 +4025,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_air_superiority_ai_30
                             has_country_flag = pwc_flag_mio_air_superiority
                         }
@@ -4132,7 +4132,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_air_superiority_ai_30
                             has_country_flag = pwc_flag_mio_air_superiority
                         }
@@ -4239,7 +4239,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_air_superiority_ai_30
                             has_country_flag = pwc_flag_mio_air_superiority
                         }
@@ -4374,7 +4374,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -4479,7 +4479,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -4586,7 +4586,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -4693,7 +4693,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -4800,7 +4800,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -4936,7 +4936,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -5043,7 +5043,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -5150,7 +5150,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -5257,7 +5257,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -5364,7 +5364,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_ground_attack_ai_30
                             has_country_flag = pwc_flag_mio_ground_attack
                         }
@@ -5498,7 +5498,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_unmanned_ai_30
                             has_country_flag = pwc_flag_mio_unmanned
                         }
@@ -5599,7 +5599,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_unmanned_ai_30
                             has_country_flag = pwc_flag_mio_unmanned
                         }
@@ -5700,7 +5700,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_unmanned_ai_30
                             has_country_flag = pwc_flag_mio_unmanned
                         }
@@ -5801,7 +5801,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_unmanned_ai_30
                             has_country_flag = pwc_flag_mio_unmanned
                         }
@@ -5902,7 +5902,7 @@ pwc_se_focus_ai_equipment = {
                             NOT = { tag = NTR }
                             has_capitulated = no
                             has_dlc = "Arms Against Tyranny"
-                            has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 }
+                            OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes }
                             has_military_industrial_organization = pwc_mio_unmanned_ai_30
                             has_country_flag = pwc_flag_mio_unmanned
                         }

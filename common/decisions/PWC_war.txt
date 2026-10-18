@@ -32,6 +32,7 @@ PWC_war_category = {
 		available = {
 			pwc_st_legal_war_request = yes
 			hidden_trigger = { pwc_st_ai_war_ready = yes }
+			hidden_trigger = { pwc_st_ai_war_rhythm_ready = yes }
 			hidden_trigger = { NOT = { pwc_st_warning_in_progress = yes } }
 		}
 		days_remove = 30
@@ -60,6 +61,10 @@ PWC_war_category = {
 			modifier = {
 				factor = 0
 				pwc_st_ai_war_ready = no
+			}
+			modifier = {
+				factor = 0
+				pwc_st_ai_war_rhythm_ready = no
 			}
 			modifier = {
 				factor = 0.5
@@ -155,6 +160,7 @@ PWC_war_category = {
 		available = {
 			pwc_st_legal_war_request = yes
 			hidden_trigger = { pwc_st_ai_war_ready = yes }
+			hidden_trigger = { pwc_st_ai_war_rhythm_ready = yes }
 			hidden_trigger = { NOT = { pwc_st_warning_in_progress = yes } }
 		}
 		complete_effect = {
@@ -171,6 +177,10 @@ PWC_war_category = {
 			modifier = {
 				factor = 0
 				pwc_st_ai_war_ready = no
+			}
+			modifier = {
+				factor = 0
+				pwc_st_ai_war_rhythm_ready = no
 			}
 			modifier = {
 				factor = 0.5

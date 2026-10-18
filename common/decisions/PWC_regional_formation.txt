@@ -1,0 +1,1942 @@
+PWC_regional_formation_category = {
+    pwc_dec_form_region_anhui = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                172 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                173 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                185 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                186 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                193 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                196 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                199 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                203 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                207 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                212 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                230 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                231 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                232 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                233 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                242 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                249 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_anhui = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_anhui = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 172
+                state = 173
+                state = 185
+                state = 186
+                state = 193
+                state = 196
+                state = 199
+                state = 203
+                state = 207
+                state = 212
+                state = 230
+                state = 231
+                state = 232
+                state = 233
+                state = 242
+                state = 249
+            }
+        }
+    }
+    pwc_dec_form_region_fujian = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                293 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                306 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                313 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                319 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                327 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                328 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                330 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                336 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                343 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                525 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                526 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_fujian = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_fujian = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 293
+                state = 306
+                state = 313
+                state = 319
+                state = 327
+                state = 328
+                state = 330
+                state = 336
+                state = 343
+                state = 525
+                state = 526
+            }
+        }
+    }
+    pwc_dec_form_region_gansu = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                31 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                55 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                86 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                91 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                95 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                114 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                122 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                129 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                140 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                141 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                149 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                155 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                161 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                174 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_gansu = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_gansu = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 31
+                state = 55
+                state = 86
+                state = 91
+                state = 95
+                state = 114
+                state = 122
+                state = 129
+                state = 140
+                state = 141
+                state = 149
+                state = 155
+                state = 161
+                state = 174
+            }
+        }
+    }
+    pwc_dec_form_region_guangdong = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                332 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                335 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                342 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                345 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                351 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                353 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                355 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                357 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                359 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                360 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                363 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                364 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                367 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                369 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                370 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                371 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                372 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                374 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                375 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                377 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                379 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                381 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                384 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_guangdong = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_guangdong = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 332
+                state = 335
+                state = 342
+                state = 345
+                state = 351
+                state = 353
+                state = 355
+                state = 357
+                state = 359
+                state = 360
+                state = 363
+                state = 364
+                state = 367
+                state = 369
+                state = 370
+                state = 371
+                state = 372
+                state = 374
+                state = 375
+                state = 377
+                state = 379
+                state = 381
+                state = 384
+            }
+        }
+    }
+    pwc_dec_form_region_guangxi = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                324 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                326 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                331 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                337 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                339 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                349 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                350 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                354 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                356 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                366 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                368 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                373 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                380 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                383 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_guangxi = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_guangxi = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 324
+                state = 326
+                state = 331
+                state = 337
+                state = 339
+                state = 349
+                state = 350
+                state = 354
+                state = 356
+                state = 366
+                state = 368
+                state = 373
+                state = 380
+                state = 383
+            }
+        }
+    }
+    pwc_dec_form_region_guizhou = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                280 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                283 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                304 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                307 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                309 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                311 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                317 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                320 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                325 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_guizhou = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_guizhou = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 280
+                state = 283
+                state = 304
+                state = 307
+                state = 309
+                state = 311
+                state = 317
+                state = 320
+                state = 325
+            }
+        }
+    }
+    pwc_dec_form_region_hainan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                385 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                387 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                388 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                391 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_hainan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_hainan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 385
+                state = 387
+                state = 388
+                state = 391
+            }
+        }
+    }
+    pwc_dec_form_region_hebei = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                59 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                63 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                74 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                78 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                79 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                82 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                85 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                90 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                96 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                98 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                103 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                113 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                128 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_hebei = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_hebei = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 59
+                state = 63
+                state = 74
+                state = 78
+                state = 79
+                state = 82
+                state = 85
+                state = 90
+                state = 96
+                state = 98
+                state = 103
+                state = 113
+                state = 128
+            }
+        }
+    }
+    pwc_dec_form_region_heilongjiang = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                8 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                12 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                13 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                15 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                16 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                17 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                18 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                20 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                21 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                24 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                25 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                27 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                29 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_heilongjiang = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_heilongjiang = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 8
+                state = 12
+                state = 13
+                state = 15
+                state = 16
+                state = 17
+                state = 18
+                state = 20
+                state = 21
+                state = 24
+                state = 25
+                state = 27
+                state = 29
+            }
+        }
+    }
+    pwc_dec_form_region_henan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                135 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                137 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                146 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                159 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                160 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                164 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                165 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                166 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                167 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                169 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                177 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                178 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                179 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                180 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                184 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                192 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                194 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                206 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_henan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_henan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 135
+                state = 137
+                state = 146
+                state = 159
+                state = 160
+                state = 164
+                state = 165
+                state = 166
+                state = 167
+                state = 169
+                state = 177
+                state = 178
+                state = 179
+                state = 180
+                state = 184
+                state = 192
+                state = 194
+                state = 206
+            }
+        }
+    }
+    pwc_dec_form_region_hubei = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                198 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                208 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                210 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                218 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                220 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                224 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                225 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                226 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                240 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                244 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                246 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                247 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                250 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                251 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                254 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                257 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                259 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_hubei = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_hubei = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 198
+                state = 208
+                state = 210
+                state = 218
+                state = 220
+                state = 224
+                state = 225
+                state = 226
+                state = 240
+                state = 244
+                state = 246
+                state = 247
+                state = 250
+                state = 251
+                state = 254
+                state = 257
+                state = 259
+            }
+        }
+    }
+    pwc_dec_form_region_hunan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                260 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                264 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                265 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                271 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                272 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                284 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                287 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                296 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                299 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                300 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                305 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                308 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                315 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                316 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_hunan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_hunan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 260
+                state = 264
+                state = 265
+                state = 271
+                state = 272
+                state = 284
+                state = 287
+                state = 296
+                state = 299
+                state = 300
+                state = 305
+                state = 308
+                state = 315
+                state = 316
+            }
+        }
+    }
+    pwc_dec_form_region_inner_mongolia = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                9 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                19 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                23 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                30 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                37 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                43 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                49 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                56 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                57 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                61 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                71 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                76 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_inner_mongolia = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_inner_mongolia = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 9
+                state = 19
+                state = 23
+                state = 30
+                state = 37
+                state = 43
+                state = 49
+                state = 56
+                state = 57
+                state = 61
+                state = 71
+                state = 76
+            }
+        }
+    }
+    pwc_dec_form_region_jiangsu = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                163 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                168 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                176 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                181 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                187 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                197 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                200 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                205 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                213 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                214 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                215 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                216 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                219 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                221 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                228 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_jiangsu = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_jiangsu = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 163
+                state = 168
+                state = 176
+                state = 181
+                state = 187
+                state = 197
+                state = 200
+                state = 205
+                state = 213
+                state = 214
+                state = 215
+                state = 216
+                state = 219
+                state = 221
+                state = 228
+            }
+        }
+    }
+    pwc_dec_form_region_jiangxi = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                262 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                266 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                269 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                281 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                282 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                288 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                292 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                298 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                301 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                302 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                312 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_jiangxi = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_jiangxi = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 262
+                state = 266
+                state = 269
+                state = 281
+                state = 282
+                state = 288
+                state = 292
+                state = 298
+                state = 301
+                state = 302
+                state = 312
+            }
+        }
+    }
+    pwc_dec_form_region_jilin = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                26 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                34 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                36 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                40 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                41 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                42 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                44 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                51 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                54 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_jilin = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_jilin = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 26
+                state = 34
+                state = 36
+                state = 40
+                state = 41
+                state = 42
+                state = 44
+                state = 51
+                state = 54
+            }
+        }
+    }
+    pwc_dec_form_region_liaoning = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                48 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                50 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                53 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                60 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                62 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                64 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                65 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                66 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                67 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                69 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                72 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                73 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                75 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                83 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_liaoning = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_liaoning = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 48
+                state = 50
+                state = 53
+                state = 60
+                state = 62
+                state = 64
+                state = 65
+                state = 66
+                state = 67
+                state = 69
+                state = 72
+                state = 73
+                state = 75
+                state = 83
+            }
+        }
+    }
+    pwc_dec_form_region_ningxia = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                97 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                105 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                107 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                112 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                132 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_ningxia = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_ningxia = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 97
+                state = 105
+                state = 107
+                state = 112
+                state = 132
+            }
+        }
+    }
+    pwc_dec_form_region_qinghai = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                92 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                93 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                117 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                120 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                124 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                136 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                139 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                152 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_qinghai = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_qinghai = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 92
+                state = 93
+                state = 117
+                state = 120
+                state = 124
+                state = 136
+                state = 139
+                state = 152
+            }
+        }
+    }
+    pwc_dec_form_region_shaanxi = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                89 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                116 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                147 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                154 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                157 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                162 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                170 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                175 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                190 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                191 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_shaanxi = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_shaanxi = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 89
+                state = 116
+                state = 147
+                state = 154
+                state = 157
+                state = 162
+                state = 170
+                state = 175
+                state = 190
+                state = 191
+            }
+        }
+    }
+    pwc_dec_form_region_shandong = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                106 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                108 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                110 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                111 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                115 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                118 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                119 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                123 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                126 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                130 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                134 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                138 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                143 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                144 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                145 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                158 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_shandong = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_shandong = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 106
+                state = 108
+                state = 110
+                state = 111
+                state = 115
+                state = 118
+                state = 119
+                state = 123
+                state = 126
+                state = 130
+                state = 134
+                state = 138
+                state = 143
+                state = 144
+                state = 145
+                state = 158
+            }
+        }
+    }
+    pwc_dec_form_region_shanxi = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                77 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                80 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                87 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                94 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                99 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                104 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                109 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                125 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                131 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                142 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                148 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_shanxi = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_shanxi = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 77
+                state = 80
+                state = 87
+                state = 94
+                state = 99
+                state = 104
+                state = 109
+                state = 125
+                state = 131
+                state = 142
+                state = 148
+            }
+        }
+    }
+    pwc_dec_form_region_sichuan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                183 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                188 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                201 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                202 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                204 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                211 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                217 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                223 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                229 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                234 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                238 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                239 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                241 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                243 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                253 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                261 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                263 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                270 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                275 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                277 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                278 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                310 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_sichuan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_sichuan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 183
+                state = 188
+                state = 201
+                state = 202
+                state = 204
+                state = 211
+                state = 217
+                state = 223
+                state = 229
+                state = 234
+                state = 238
+                state = 239
+                state = 241
+                state = 243
+                state = 253
+                state = 261
+                state = 263
+                state = 270
+                state = 275
+                state = 277
+                state = 278
+                state = 310
+            }
+        }
+    }
+    pwc_dec_form_region_taiwan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                334 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                338 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                348 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                352 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                358 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                361 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                362 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                505 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                506 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                507 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                508 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                509 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                510 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                511 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                512 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                513 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                524 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_taiwan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_taiwan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 334
+                state = 338
+                state = 348
+                state = 352
+                state = 358
+                state = 361
+                state = 362
+                state = 505
+                state = 506
+                state = 507
+                state = 508
+                state = 509
+                state = 510
+                state = 511
+                state = 512
+                state = 513
+                state = 524
+            }
+        }
+    }
+    pwc_dec_form_region_xinjiang = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                14 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                22 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                32 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                35 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                38 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                39 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                45 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                46 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                47 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                58 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                70 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                81 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                84 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                88 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_xinjiang = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_xinjiang = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 14
+                state = 22
+                state = 32
+                state = 35
+                state = 38
+                state = 39
+                state = 45
+                state = 46
+                state = 47
+                state = 58
+                state = 70
+                state = 81
+                state = 84
+                state = 88
+            }
+        }
+    }
+    pwc_dec_form_region_xizang = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                133 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                151 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                209 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                222 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                236 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                245 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                267 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                434 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                435 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_xizang = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_xizang = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 133
+                state = 151
+                state = 209
+                state = 222
+                state = 236
+                state = 245
+                state = 267
+                state = 434
+                state = 435
+            }
+        }
+    }
+    pwc_dec_form_region_yunnan = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                279 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                286 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                295 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                303 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                314 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                318 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                321 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                323 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                329 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                333 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                340 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                341 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                344 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                346 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                347 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                376 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_yunnan = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_yunnan = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 279
+                state = 286
+                state = 295
+                state = 303
+                state = 314
+                state = 318
+                state = 321
+                state = 323
+                state = 329
+                state = 333
+                state = 340
+                state = 341
+                state = 344
+                state = 346
+                state = 347
+                state = 376
+            }
+        }
+    }
+    pwc_dec_form_region_zhejiang = {
+        icon = generic_form_nation
+        allowed = { pwc_st_is_city_country = yes }
+        visible = {
+            pwc_st_regional_formation_enabled = yes
+            OR = {
+                235 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                237 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                248 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                255 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                256 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                258 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                268 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                273 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                276 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                285 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+                289 = {
+                    is_owned_by = PREV NOT = { is_core_of = PREV }
+                }
+            }
+        }
+        available = { pwc_st_form_region_zhejiang = yes }
+        cost = 0
+        complete_effect = { pwc_se_form_region_zhejiang = yes }
+        ai_will_do = { factor = 100 }
+        highlight_states = {
+            highlight_state_targets = {
+                state = 235
+                state = 237
+                state = 248
+                state = 255
+                state = 256
+                state = 258
+                state = 268
+                state = 273
+                state = 276
+                state = 285
+                state = 289
+            }
+        }
+    }
+}

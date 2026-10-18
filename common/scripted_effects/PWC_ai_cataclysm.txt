@@ -1,0 +1,3234 @@
+pwc_se_cataclysm_initialize_offsite = {
+    if = {
+        limit = { NOT = { has_country_flag = pwc_cataclysm_offsite_initialized } }
+        set_country_flag = pwc_cataclysm_offsite_initialized
+        set_variable = { pwc_cataclysm_offsite_civ = 0 }
+        set_variable = { pwc_cataclysm_offsite_mil = 0 }
+        set_variable = { pwc_cataclysm_offsite_dock = 0 }
+    }
+}
+pwc_se_cataclysm_change_offsite_civ = {
+    pwc_se_cataclysm_initialize_offsite = yes
+    set_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_civ }
+    add_to_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_delta }
+    clamp_variable = { var = pwc_cataclysm_offsite_target min = 0 }
+    set_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_target }
+    subtract_from_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_civ }
+    add_offsite_building = { type = industrial_complex level = var:pwc_cataclysm_offsite_applied }
+    set_variable = { pwc_cataclysm_offsite_civ = pwc_cataclysm_offsite_target }
+    clear_variable = pwc_cataclysm_offsite_target
+    clear_variable = pwc_cataclysm_offsite_applied
+}
+pwc_se_cataclysm_change_offsite_mil = {
+    pwc_se_cataclysm_initialize_offsite = yes
+    set_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_mil }
+    add_to_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_delta }
+    clamp_variable = { var = pwc_cataclysm_offsite_target min = 0 }
+    set_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_target }
+    subtract_from_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_mil }
+    add_offsite_building = { type = arms_factory level = var:pwc_cataclysm_offsite_applied }
+    set_variable = { pwc_cataclysm_offsite_mil = pwc_cataclysm_offsite_target }
+    clear_variable = pwc_cataclysm_offsite_target
+    clear_variable = pwc_cataclysm_offsite_applied
+}
+pwc_se_cataclysm_change_offsite_dock = {
+    pwc_se_cataclysm_initialize_offsite = yes
+    set_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_dock }
+    add_to_variable = { pwc_cataclysm_offsite_target = pwc_cataclysm_offsite_delta }
+    clamp_variable = { var = pwc_cataclysm_offsite_target min = 0 }
+    set_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_target }
+    subtract_from_variable = { pwc_cataclysm_offsite_applied = pwc_cataclysm_offsite_dock }
+    add_offsite_building = { type = dockyard level = var:pwc_cataclysm_offsite_applied }
+    set_variable = { pwc_cataclysm_offsite_dock = pwc_cataclysm_offsite_target }
+    clear_variable = pwc_cataclysm_offsite_target
+    clear_variable = pwc_cataclysm_offsite_applied
+}
+pwc_se_cataclysm_initialize = {
+    if = {
+        limit = {
+            pwc_st_cataclysm_enabled = yes
+            NOT = { has_global_flag = pwc_cataclysm_initialized }
+            date > 2025.12.31
+            date < 2026.1.2
+        }
+        clear_array = global.pwc_cataclysm_cities
+        U00 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 1 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U01 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 2 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U02 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 3 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U03 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 4 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U04 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 5 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U05 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 6 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U06 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 7 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U07 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 8 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U08 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 9 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U09 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 10 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U10 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 11 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U11 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 12 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U12 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 13 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U13 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 14 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U14 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 15 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U15 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 16 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U16 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 17 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U17 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 18 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U18 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 19 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U19 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 20 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U20 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 21 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U21 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 22 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U22 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 23 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U23 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 24 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U24 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 25 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U25 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 26 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U26 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 27 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U27 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 28 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U28 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 29 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U29 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 30 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U30 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 31 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U31 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 32 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U32 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 33 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U33 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 34 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U34 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 35 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U35 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 36 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U36 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 37 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U37 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 38 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U38 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 39 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U39 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 40 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U40 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 41 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U41 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 42 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U42 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 43 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U43 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 44 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U44 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 45 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U45 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 46 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U46 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 47 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U47 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 48 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U48 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 49 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U49 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 50 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U50 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 51 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U51 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 52 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U52 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 53 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U53 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 54 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U54 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 55 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U55 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 56 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U56 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 57 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U57 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 58 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U58 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 59 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U59 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 60 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U60 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 61 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U61 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 62 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U62 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 63 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U63 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 64 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U64 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 65 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U65 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 66 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U66 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 67 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U67 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 68 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U68 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 69 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U69 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 70 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U70 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 71 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U71 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 72 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U72 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 73 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U73 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 74 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U74 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 75 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U75 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 76 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U76 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 77 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U77 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 78 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U78 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 79 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U79 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 80 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U80 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 81 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U81 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 82 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U82 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 83 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U83 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 84 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U84 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 85 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U85 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 86 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U86 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 87 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U87 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 88 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U88 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 89 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U89 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 90 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U90 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 91 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U91 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 92 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U92 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 93 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U93 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 94 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U94 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 95 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U95 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 96 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U96 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 97 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U97 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 98 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U98 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 99 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        U99 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 100 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V00 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 101 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V01 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 102 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V02 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 103 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V03 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 104 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V04 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 105 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V05 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 106 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V06 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 107 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V07 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 108 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V08 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 109 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V09 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 110 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V10 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 111 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V11 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 112 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V12 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 113 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V13 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 114 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V14 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 115 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V15 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 116 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V16 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 117 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V17 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 118 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V18 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 119 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V19 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 120 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V20 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 121 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V21 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 122 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V22 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 123 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V23 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 124 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V24 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 125 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V25 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 126 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V26 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 127 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V27 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 128 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V28 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 129 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V29 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 130 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V30 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 131 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V31 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 132 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V32 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 133 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V33 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 134 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V34 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 135 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V35 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 136 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V36 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 137 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V37 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 138 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V38 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 139 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V39 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 140 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V40 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 141 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V41 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 142 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V42 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 143 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V43 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 144 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V44 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 145 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V45 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 146 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V46 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 147 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V47 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 148 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V48 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 149 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V49 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 150 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V50 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 151 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V51 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 152 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V52 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 153 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V53 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 154 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V54 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 155 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V55 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 156 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V56 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 157 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V57 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 158 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V58 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 159 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V59 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 160 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V60 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 161 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V61 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 162 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V62 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 163 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V63 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 164 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V64 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 165 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V65 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 166 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V66 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 167 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V67 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 168 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V68 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 169 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V69 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 170 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V70 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 171 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V71 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 172 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V72 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 173 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V73 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 174 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V74 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 175 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V75 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 176 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V76 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 177 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V77 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 178 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V78 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 179 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V79 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 180 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V80 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 181 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V81 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 182 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V82 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 183 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V83 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 184 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V84 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 185 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V85 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 186 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V86 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 187 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V87 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 188 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V88 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 189 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V89 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 190 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V90 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 191 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V91 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 192 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V92 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 193 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V93 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 194 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V94 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 195 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V95 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 196 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V96 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 197 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V97 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 198 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V98 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 199 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        V99 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 200 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W00 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 201 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W01 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 202 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W02 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 203 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W03 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 204 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W04 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 205 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W05 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 206 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W06 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 207 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W07 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 208 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W08 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 209 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W09 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 210 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W10 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 211 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W11 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 212 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W12 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 213 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W13 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 214 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W14 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 215 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W15 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 216 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W16 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 217 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W17 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 218 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W18 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 219 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W19 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 220 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W20 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 221 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W21 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 222 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W22 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 223 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W23 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 224 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W24 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 225 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W25 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 226 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W26 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 227 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W27 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 228 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W28 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 229 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W29 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 230 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W30 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 231 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W31 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 232 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W32 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 233 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W33 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 234 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W34 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 235 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W35 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 236 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W36 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 237 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W37 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 238 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W38 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 239 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W39 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 240 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W40 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 241 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W41 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 242 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W42 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 243 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W43 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 244 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W44 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 245 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W45 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 246 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W46 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 247 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W47 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 248 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W48 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 249 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W49 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 250 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W50 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 251 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W51 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 252 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W52 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 253 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W53 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 254 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W54 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 255 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W55 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 256 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W56 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 257 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W57 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 258 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W58 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 259 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W59 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 260 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W60 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 261 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W61 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 262 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W62 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 263 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W63 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 264 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W64 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 265 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W65 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 266 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W66 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 267 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W67 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 268 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W68 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 269 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W69 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 270 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W70 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 271 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W71 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 272 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W72 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 273 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W73 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 274 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W74 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 275 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W75 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 276 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W76 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 277 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W77 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 278 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W78 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 279 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W79 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 280 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W80 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 281 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W81 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 282 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W82 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 283 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W83 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 284 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W84 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 285 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W85 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 286 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W86 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 287 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W87 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 288 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W88 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 289 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W89 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 290 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W90 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 291 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W91 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 292 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W92 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 293 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W93 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 294 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W94 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 295 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W95 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 296 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W96 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 297 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W97 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 298 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W98 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 299 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        W99 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 300 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X00 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 301 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X01 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 302 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X02 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 303 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X03 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 304 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X04 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 305 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X05 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 306 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X06 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 307 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X07 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 308 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X08 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 309 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X09 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 310 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X10 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 311 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X11 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 312 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X12 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 313 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X13 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 314 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X14 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 315 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X15 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 316 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X16 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 317 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X17 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 318 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X18 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 319 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X19 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 320 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X20 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 321 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X21 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 322 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X22 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 323 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X23 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 324 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X24 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 325 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X25 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 326 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X26 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 327 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X27 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 328 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X28 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 329 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X29 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 330 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X30 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 331 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X31 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 332 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X32 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 333 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X33 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 334 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X34 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 335 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X35 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 336 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X36 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 337 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X37 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 338 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X38 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 339 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X39 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 340 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X40 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 341 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X41 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 342 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X42 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 343 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X43 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 344 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X44 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 345 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X45 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 346 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X46 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 347 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X47 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 348 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X48 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 349 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X49 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 350 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X50 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 351 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X51 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 352 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X52 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 353 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X53 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 354 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X54 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 355 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X55 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 356 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X56 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 357 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X57 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 358 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X58 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 359 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X59 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 360 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X60 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 361 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X61 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 362 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X62 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 363 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X63 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 364 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X64 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 365 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        X65 = {
+            pwc_se_cataclysm_initialize_offsite = yes
+            set_variable = { pwc_cataclysm_rank = 366 }
+            set_variable = { pwc_cataclysm_topology_cycle = -1 }
+            add_to_array = { array = global.pwc_cataclysm_cities value = THIS }
+        }
+        set_variable = { global.pwc_cataclysm_anchor = global.num_days }
+        set_variable = { global.pwc_cataclysm_last_day = -1 }
+        set_variable = { global.pwc_cataclysm_last_month = -1 }
+        set_variable = { global.pwc_cataclysm_cycle = -1 }
+        set_variable = { global.pwc_cataclysm_week = -1 }
+        set_global_flag = pwc_cataclysm_initialized
+    }
+}
+pwc_se_cataclysm_clock = {
+    set_variable = { global.pwc_cataclysm_day = global.num_days }
+    subtract_from_variable = {
+        global.pwc_cataclysm_day = global.pwc_cataclysm_anchor
+    }
+}
+pwc_se_cataclysm_reset_cycle = {
+    set_variable = { global.pwc_cataclysm_remainder = global.pwc_cataclysm_day }
+    modulo_variable = { global.pwc_cataclysm_remainder = 30 }
+    set_variable = { global.pwc_cataclysm_boundary = global.pwc_cataclysm_day }
+    subtract_from_variable = {
+        global.pwc_cataclysm_boundary = global.pwc_cataclysm_remainder
+    }
+    if = {
+        limit = {
+            check_variable = { var = global.pwc_cataclysm_cycle value = global.pwc_cataclysm_boundary compare = not_equals }
+        }
+        set_variable = { global.pwc_cataclysm_cycle = global.pwc_cataclysm_boundary }
+        set_variable = { global.pwc_cataclysm_used = 0 }
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_cities
+            set_variable = { pwc_cataclysm_used = 0 }
+            set_variable = { pwc_cataclysm_source_used = 0 }
+        }
+    }
+}
+pwc_se_cataclysm_reset_week = {
+    set_variable = { global.pwc_cataclysm_remainder = global.pwc_cataclysm_day }
+    modulo_variable = { global.pwc_cataclysm_remainder = 7 }
+    set_variable = { global.pwc_cataclysm_boundary = global.pwc_cataclysm_day }
+    subtract_from_variable = {
+        global.pwc_cataclysm_boundary = global.pwc_cataclysm_remainder
+    }
+    if = {
+        limit = {
+            check_variable = { var = global.pwc_cataclysm_week value = global.pwc_cataclysm_boundary compare = not_equals }
+        }
+        set_variable = { global.pwc_cataclysm_week = global.pwc_cataclysm_boundary }
+        set_variable = { global.pwc_cataclysm_weekly_used = 0 }
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_cities
+            set_variable = { pwc_cataclysm_weekly_used = 0 }
+            set_variable = { pwc_cataclysm_source_weekly_used = 0 }
+        }
+    }
+}
+
+
+pwc_se_cataclysm_invalidate_pool = {
+    set_variable = { pwc_cataclysm_samples = 0 }
+    set_variable = { pwc_cataclysm_decline_samples = 0 }
+    set_variable = { pwc_cataclysm_topology_cycle = global.pwc_cataclysm_cycle }
+    set_country_flag = pwc_cataclysm_paused
+}
+pwc_se_cataclysm_refresh_membership = {
+    clear_array = global.pwc_cataclysm_humans
+    clear_array = global.pwc_cataclysm_protected_humans
+    clear_array = global.pwc_cataclysm_pools
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_cities
+        clear_array = pwc_cataclysm_members
+        
+        if = {
+            limit = { exists = yes is_ai = no }
+            add_to_array = { array = global.pwc_cataclysm_protected_humans value = THIS }
+        }
+        if = {
+            limit = { pwc_st_cataclysm_human = yes }
+            add_to_array = { array = global.pwc_cataclysm_humans value = THIS }
+        }
+        else_if = {
+            limit = { has_variable = pwc_cataclysm_pool }
+            var:pwc_cataclysm_pool = { pwc_se_cataclysm_invalidate_pool = yes }
+            clear_variable = pwc_cataclysm_pool
+        }
+    }
+    
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_humans
+        save_event_target_as = pwc_cataclysm_human
+        set_variable = { pwc_cataclysm_proposed_pool = THIS }
+        clr_country_flag = pwc_cataclysm_pool_selected
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_humans
+            if = {
+                limit = {
+                    is_in_faction_with = event_target:pwc_cataclysm_human
+                    event_target:pwc_cataclysm_human = {
+                        NOT = { has_country_flag = pwc_cataclysm_pool_selected }
+                    }
+                    check_variable = {
+                        var = pwc_cataclysm_rank
+                        value = PREV.pwc_cataclysm_rank
+                        compare = less_than
+                    }
+                }
+                event_target:pwc_cataclysm_human = {
+                    set_variable = { pwc_cataclysm_proposed_pool = PREV }
+                    set_country_flag = pwc_cataclysm_pool_selected
+                }
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    NOT = { has_variable = pwc_cataclysm_pool }
+                    NOT = {
+                        check_variable = {
+                            pwc_cataclysm_pool = pwc_cataclysm_proposed_pool
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = { has_variable = pwc_cataclysm_pool }
+                var:pwc_cataclysm_pool = { pwc_se_cataclysm_invalidate_pool = yes }
+            }
+            set_variable = { pwc_cataclysm_pool = pwc_cataclysm_proposed_pool }
+            var:pwc_cataclysm_pool = { pwc_se_cataclysm_invalidate_pool = yes }
+        }
+        var:pwc_cataclysm_pool = {
+            add_to_array = { array = pwc_cataclysm_members value = PREV }
+            if = {
+                limit = { PREV = { has_country_flag = pwc_cataclysm_arrival_sent } }
+                set_country_flag = pwc_cataclysm_arrival_sent
+            }
+        }
+        if = {
+            limit = { check_variable = { pwc_cataclysm_pool = THIS } }
+            add_to_array = { array = global.pwc_cataclysm_pools value = THIS }
+        }
+    }
+    
+    
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_humans
+        if = {
+            limit = {
+                var:pwc_cataclysm_pool = {
+                    has_country_flag = pwc_cataclysm_arrival_sent
+                }
+            }
+            set_country_flag = pwc_cataclysm_arrival_sent
+        }
+    }
+    pwc_se_cataclysm_resolve_budget_pools = yes
+}
+pwc_se_cataclysm_mark_human_relations = {
+    save_event_target_as = pwc_cataclysm_recipient
+    if = {
+        limit = {
+            OR = {
+                NOT = { has_global_flag = pwc_cataclysm_relation_batch }
+                NOT = { has_country_flag = pwc_cataclysm_relation_checked }
+            }
+        }
+        clr_country_flag = pwc_cataclysm_human_related
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_protected_humans
+            event_target:pwc_cataclysm_recipient = {
+                if = {
+                    limit = {
+                        OR = { is_ally_with = PREV is_subject_of = PREV }
+                    }
+                    set_country_flag = pwc_cataclysm_human_related
+                }
+            }
+        }
+        if = {
+            limit = { has_global_flag = pwc_cataclysm_relation_batch }
+            set_country_flag = pwc_cataclysm_relation_checked
+            add_to_array = { array = global.pwc_cataclysm_relation_touched value = THIS }
+        }
+    }
+}
+pwc_se_cataclysm_resolve_budget_pools = {
+    clear_array = global.pwc_cataclysm_budget_sources
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_cities
+        clear_variable = pwc_cataclysm_budget_pool
+        clear_array = pwc_cataclysm_continuing_pools
+        set_variable = { pwc_cataclysm_resolved_used = 0 }
+        set_variable = { pwc_cataclysm_resolved_weekly_used = 0 }
+        if = {
+            limit = { pwc_st_cataclysm_human = yes }
+            set_variable = { pwc_cataclysm_budget_pool = pwc_cataclysm_pool }
+            add_to_array = {
+                array = pwc_cataclysm_continuing_pools value = pwc_cataclysm_pool
+            }
+            clear_array = pwc_cataclysm_last_members
+            save_event_target_as = pwc_cataclysm_origin
+            var:pwc_cataclysm_pool = {
+                for_each_scope_loop = {
+                    array = pwc_cataclysm_members
+                    event_target:pwc_cataclysm_origin = {
+                        add_to_array = { array = pwc_cataclysm_last_members value = PREV }
+                    }
+                }
+            }
+        }
+        else = {
+            save_event_target_as = pwc_cataclysm_origin
+            
+            
+            for_each_scope_loop = {
+                array = pwc_cataclysm_last_members
+                if = {
+                    limit = {
+                        pwc_st_cataclysm_human = yes
+                        has_variable = pwc_cataclysm_pool
+                    }
+                    event_target:pwc_cataclysm_origin = {
+                        if = {
+                            limit = { NOT = { has_variable = pwc_cataclysm_budget_pool } }
+                            set_variable = {
+                                pwc_cataclysm_budget_pool = PREV.pwc_cataclysm_pool
+                            }
+                        }
+                        if = {
+                            limit = {
+                                NOT = {
+                                    is_in_array = {
+                                        array = pwc_cataclysm_continuing_pools
+                                        value = PREV.pwc_cataclysm_pool
+                                    }
+                                }
+                            }
+                            add_to_array = {
+                                array = pwc_cataclysm_continuing_pools
+                                value = PREV.pwc_cataclysm_pool
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = { has_variable = pwc_cataclysm_budget_pool }
+            add_to_array = { array = global.pwc_cataclysm_budget_sources value = THIS }
+        }
+    }
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_budget_sources
+        if = {
+            limit = { has_variable = pwc_cataclysm_budget_pool }
+            var:pwc_cataclysm_budget_pool = {
+                add_to_variable = {
+                    pwc_cataclysm_resolved_used = PREV.pwc_cataclysm_source_used
+                }
+                add_to_variable = {
+                    pwc_cataclysm_resolved_weekly_used = PREV.pwc_cataclysm_source_weekly_used
+                }
+            }
+            for_each_scope_loop = {
+                array = pwc_cataclysm_continuing_pools
+                if = {
+                    limit = {
+                        PREV = { has_country_flag = pwc_cataclysm_arrival_sent }
+                    }
+                    set_country_flag = pwc_cataclysm_arrival_sent
+                }
+                if = {
+                    limit = {
+                        PREV = { has_country_flag = pwc_cataclysm_active }
+                        NOT = { has_country_flag = pwc_cataclysm_active }
+                    }
+                    set_country_flag = pwc_cataclysm_active
+                    set_variable = { pwc_cataclysm_stage = PREV.pwc_cataclysm_stage }
+                    set_variable = { pwc_cataclysm_stage_day = global.num_days }
+                    pwc_se_cataclysm_invalidate_pool = yes
+                    pwc_se_cataclysm_set_limits = yes
+                }
+            }
+        }
+    }
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_pools
+        if = {
+            limit = {
+                check_variable = { var = pwc_cataclysm_resolved_used value = pwc_cataclysm_used compare = greater_than }
+            }
+            set_variable = { pwc_cataclysm_used = pwc_cataclysm_resolved_used }
+        }
+        if = {
+            limit = {
+                check_variable = { var = pwc_cataclysm_resolved_weekly_used value = pwc_cataclysm_weekly_used compare = greater_than }
+            }
+            set_variable = { pwc_cataclysm_weekly_used = pwc_cataclysm_resolved_weekly_used }
+        }
+    }
+    clear_array = global.pwc_cataclysm_budget_sources
+}
+pwc_se_cataclysm_sample_industry = {
+    
+    
+    set_variable = { pwc_cataclysm_raw_civ = pwc_cataclysm_offsite_civ }
+    set_variable = { pwc_cataclysm_raw_mil = pwc_cataclysm_offsite_mil }
+    every_controlled_state = {
+        PREV = {
+            add_to_variable = {
+                pwc_cataclysm_raw_civ = PREV.building_level@industrial_complex
+            }
+            add_to_variable = {
+                pwc_cataclysm_raw_mil = PREV.building_level@arms_factory
+            }
+        }
+    }
+}
+pwc_se_cataclysm_sample_pool = {
+    set_variable = { pwc_cataclysm_f2 = pwc_cataclysm_f1 }
+    set_variable = { pwc_cataclysm_f1 = pwc_cataclysm_f0 }
+    set_variable = { pwc_cataclysm_m2 = pwc_cataclysm_m1 }
+    set_variable = { pwc_cataclysm_m1 = pwc_cataclysm_m0 }
+    set_variable = { pwc_cataclysm_f0 = 0 }
+    set_variable = { pwc_cataclysm_m0 = 0 }
+    save_event_target_as = pwc_cataclysm_pool
+    for_each_scope_loop = {
+        array = pwc_cataclysm_members
+        pwc_se_cataclysm_sample_industry = yes
+        event_target:pwc_cataclysm_pool = {
+            add_to_variable = { pwc_cataclysm_f0 = PREV.pwc_cataclysm_raw_civ }
+            add_to_variable = { pwc_cataclysm_f0 = PREV.pwc_cataclysm_raw_mil }
+            add_to_variable = { pwc_cataclysm_m0 = PREV.pwc_cataclysm_raw_mil }
+        }
+    }
+    add_to_variable = { pwc_cataclysm_samples = 1 }
+    clamp_variable = { var = pwc_cataclysm_samples min = 0 max = 3 }
+    set_variable = { pwc_cataclysm_average = pwc_cataclysm_f0 }
+    add_to_variable = { pwc_cataclysm_average = pwc_cataclysm_f1 }
+    add_to_variable = { pwc_cataclysm_average = pwc_cataclysm_f2 }
+    divide_variable = { pwc_cataclysm_average = 3 }
+    if = {
+        limit = {
+            OR = {
+                check_variable = { pwc_cataclysm_samples < 3 }
+                check_variable = { pwc_cataclysm_f0 < 40 }
+                check_variable = { pwc_cataclysm_m0 < 8 }
+            }
+        }
+        set_country_flag = pwc_cataclysm_paused
+    }
+    else = { clr_country_flag = pwc_cataclysm_paused }
+    pwc_se_cataclysm_set_limits = yes
+    if = {
+        limit = {
+            check_variable = { pwc_cataclysm_samples > 2 }
+            check_variable = { pwc_cataclysm_stage > 1 }
+            check_variable = {
+                var = pwc_cataclysm_average
+                value = pwc_cataclysm_decline_threshold
+                compare = less_than
+            }
+        }
+        add_to_variable = { pwc_cataclysm_decline_samples = 1 }
+    }
+    else = { set_variable = { pwc_cataclysm_decline_samples = 0 } }
+    if = {
+        limit = { check_variable = { pwc_cataclysm_decline_samples > 1 } }
+        subtract_from_variable = { pwc_cataclysm_stage = 1 }
+        set_variable = { pwc_cataclysm_decline_samples = 0 }
+        set_variable = { pwc_cataclysm_stage_day = global.num_days }
+        pwc_se_cataclysm_set_limits = yes
+    }
+}
+pwc_se_cataclysm_set_limits = {
+    if = {
+        limit = { check_variable = { pwc_cataclysm_stage = 1 } }
+        set_variable = { pwc_cataclysm_cap = 48 }
+        set_variable = { pwc_cataclysm_budget = 8 }
+        set_variable = { pwc_cataclysm_weekly_budget = 2 }
+        set_variable = { pwc_cataclysm_arrival_budget = 4 }
+        set_variable = { pwc_cataclysm_decline_threshold = 34.00 }
+    }
+    if = {
+        limit = { check_variable = { pwc_cataclysm_stage = 2 } }
+        set_variable = { pwc_cataclysm_cap = 96 }
+        set_variable = { pwc_cataclysm_budget = 16 }
+        set_variable = { pwc_cataclysm_weekly_budget = 4 }
+        set_variable = { pwc_cataclysm_arrival_budget = 8 }
+        set_variable = { pwc_cataclysm_decline_threshold = 68.00 }
+    }
+    if = {
+        limit = { check_variable = { pwc_cataclysm_stage = 3 } }
+        set_variable = { pwc_cataclysm_cap = 160 }
+        set_variable = { pwc_cataclysm_budget = 24 }
+        set_variable = { pwc_cataclysm_weekly_budget = 6 }
+        set_variable = { pwc_cataclysm_arrival_budget = 12 }
+        set_variable = { pwc_cataclysm_decline_threshold = 127.50 }
+    }
+    if = {
+        limit = { check_variable = { pwc_cataclysm_stage = 4 } }
+        set_variable = { pwc_cataclysm_cap = 240 }
+        set_variable = { pwc_cataclysm_budget = 32 }
+        set_variable = { pwc_cataclysm_weekly_budget = 8 }
+        set_variable = { pwc_cataclysm_arrival_budget = 16 }
+        set_variable = { pwc_cataclysm_decline_threshold = 212.50 }
+    }
+    if = {
+        limit = { check_variable = { pwc_cataclysm_stage = 5 } }
+        set_variable = { pwc_cataclysm_cap = 320 }
+        set_variable = { pwc_cataclysm_budget = 40 }
+        set_variable = { pwc_cataclysm_weekly_budget = 10 }
+        set_variable = { pwc_cataclysm_arrival_budget = 20 }
+        set_variable = { pwc_cataclysm_decline_threshold = 340.00 }
+    }
+}
+pwc_se_cataclysm_progress_pool = {
+    if = {
+        limit = {
+            date > 2027.12.31
+            pwc_st_protection_active = no
+            pwc_st_cataclysm_history_ready = yes
+            NOT = { has_country_flag = pwc_cataclysm_warning }
+            NOT = { has_country_flag = pwc_cataclysm_active }
+        }
+        set_country_flag = pwc_cataclysm_warning
+        for_each_scope_loop = {
+            array = pwc_cataclysm_members
+            country_event = { id = pwc_cataclysm.1 }
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = { flag = pwc_cataclysm_warning days > 59 }
+            NOT = { has_country_flag = pwc_cataclysm_active }
+            pwc_st_cataclysm_history_ready = yes
+            pwc_st_protection_active = no
+        }
+        set_country_flag = pwc_cataclysm_active
+        set_variable = { pwc_cataclysm_stage = 1 }
+        set_variable = { pwc_cataclysm_stage_day = global.num_days }
+        pwc_se_cataclysm_set_limits = yes
+    }
+    set_variable = { pwc_cataclysm_stage_age = global.num_days }
+    subtract_from_variable = { pwc_cataclysm_stage_age = pwc_cataclysm_stage_day }
+    if = {
+        limit = {
+            pwc_st_cataclysm_pool_active = yes
+            check_variable = { pwc_cataclysm_stage_age > 89 }
+        }
+        if = {
+            limit = {
+                check_variable = { pwc_cataclysm_stage = 4 }
+                check_variable = { var = pwc_cataclysm_average value = 400 compare = greater_than_or_equals }
+            }
+            add_to_variable = { pwc_cataclysm_stage = 1 }
+            set_variable = { pwc_cataclysm_stage_day = global.num_days }
+            pwc_se_cataclysm_set_limits = yes
+            country_event = { id = pwc_cataclysm.2 }
+        }
+        else_if = {
+            limit = {
+                check_variable = { pwc_cataclysm_stage = 3 }
+                check_variable = { var = pwc_cataclysm_average value = 250 compare = greater_than_or_equals }
+            }
+            add_to_variable = { pwc_cataclysm_stage = 1 }
+            set_variable = { pwc_cataclysm_stage_day = global.num_days }
+            pwc_se_cataclysm_set_limits = yes
+            country_event = { id = pwc_cataclysm.2 }
+        }
+        else_if = {
+            limit = {
+                check_variable = { pwc_cataclysm_stage = 2 }
+                check_variable = { var = pwc_cataclysm_average value = 150 compare = greater_than_or_equals }
+            }
+            add_to_variable = { pwc_cataclysm_stage = 1 }
+            set_variable = { pwc_cataclysm_stage_day = global.num_days }
+            pwc_se_cataclysm_set_limits = yes
+            country_event = { id = pwc_cataclysm.2 }
+        }
+        else_if = {
+            limit = {
+                check_variable = { pwc_cataclysm_stage = 1 }
+                check_variable = { var = pwc_cataclysm_average value = 80 compare = greater_than_or_equals }
+            }
+            add_to_variable = { pwc_cataclysm_stage = 1 }
+            set_variable = { pwc_cataclysm_stage_day = global.num_days }
+            pwc_se_cataclysm_set_limits = yes
+            country_event = { id = pwc_cataclysm.2 }
+        }
+    }
+}
+pwc_se_cataclysm_country_exit = {
+    pwc_se_cataclysm_remove_units = yes
+    pwc_se_cataclysm_recount_units = yes
+    if = {
+        limit = {
+            check_variable = { pwc_cataclysm_live = 0 }
+            check_variable = { pwc_cataclysm_origin_live = 0 }
+        }
+        clear_variable = pwc_cataclysm_owner
+        clear_array = pwc_cataclysm_war_humans
+        clear_array = pwc_cataclysm_front_pools
+        clr_country_flag = pwc_cataclysm_qualified
+        clr_country_flag = pwc_cataclysm_candidate
+        clr_country_flag = pwc_cataclysm_peace
+    }
+}
+pwc_se_cataclysm_collect_candidates = {
+    save_event_target_as = pwc_cataclysm_pool
+    for_each_scope_loop = {
+        array = pwc_cataclysm_members
+        save_event_target_as = pwc_cataclysm_human
+        for_each_scope_loop = {
+            array = enemies
+            pwc_se_cataclysm_mark_human_relations = yes
+            if = {
+                limit = {
+                    pwc_st_cataclysm_qualified_war = yes
+                    OR = {
+                        has_variable = pwc_cataclysm_owner
+                        event_target:pwc_cataclysm_pool = {
+                            pwc_st_cataclysm_pool_active = yes
+                        }
+                    }
+                }
+                if = {
+                    limit = { NOT = { has_variable = pwc_cataclysm_owner } }
+                    set_variable = {
+                        pwc_cataclysm_owner = event_target:pwc_cataclysm_pool
+                    }
+                    clear_array = pwc_cataclysm_war_humans
+                    save_event_target_as = pwc_cataclysm_recipient
+                    event_target:pwc_cataclysm_pool = {
+                        for_each_scope_loop = {
+                            array = pwc_cataclysm_members
+                            event_target:pwc_cataclysm_recipient = {
+                                add_to_array = {
+                                    array = pwc_cataclysm_war_humans value = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                if = {
+                    limit = {
+                        NOT = {
+                            is_in_array = {
+                                array = pwc_cataclysm_war_humans
+                                value = event_target:pwc_cataclysm_human
+                            }
+                        }
+                    }
+                    add_to_array = {
+                        array = pwc_cataclysm_war_humans
+                        value = event_target:pwc_cataclysm_human
+                    }
+                }
+                set_country_flag = pwc_cataclysm_qualified
+                if = {
+                    limit = {
+                        NOT = {
+                            is_in_array = {
+                                array = pwc_cataclysm_front_pools
+                                value = event_target:pwc_cataclysm_pool
+                            }
+                        }
+                    }
+                    add_to_array = {
+                        array = pwc_cataclysm_front_pools
+                        value = event_target:pwc_cataclysm_pool
+                    }
+                }
+                clr_country_flag = pwc_cataclysm_peace
+                if = {
+                    limit = { NOT = { has_country_flag = pwc_cataclysm_registered } }
+                    set_country_flag = pwc_cataclysm_registered
+                    add_to_array = { array = global.pwc_cataclysm_recipients value = THIS }
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwc_cataclysm_candidate } }
+                    if = {
+                        limit = {
+                            pwc_st_cataclysm_recipient = yes
+                            var:pwc_cataclysm_owner = {
+                                has_variable = pwc_cataclysm_budget_pool
+                            }
+                            event_target:pwc_cataclysm_pool = {
+                                pwc_st_cataclysm_pool_active = yes
+                            }
+                        }
+                        set_country_flag = pwc_cataclysm_candidate
+                        save_event_target_as = pwc_cataclysm_recipient
+                        var:pwc_cataclysm_owner = {
+                            var:pwc_cataclysm_budget_pool = {
+                                add_to_array = {
+                                    array = pwc_cataclysm_candidates
+                                    value = event_target:pwc_cataclysm_recipient
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+pwc_se_cataclysm_recipient_cleanup = {
+    pwc_se_cataclysm_mark_human_relations = yes
+    if = {
+        limit = {
+            OR = {
+                is_ai = no
+                has_capitulated = yes
+                exists = no
+                has_country_flag = pwc_cataclysm_human_related
+            }
+        }
+        pwc_se_cataclysm_country_exit = yes
+    }
+    else_if = {
+        limit = { NOT = { has_country_flag = pwc_cataclysm_qualified } }
+        if = {
+            limit = { NOT = { has_country_flag = pwc_cataclysm_peace } }
+            set_country_flag = pwc_cataclysm_peace
+        }
+        if = {
+            limit = {
+                has_country_flag = { flag = pwc_cataclysm_peace days > 89 }
+            }
+            pwc_se_cataclysm_country_exit = yes
+        }
+    }
+}
+pwc_se_cataclysm_cleanup_holders = {
+    
+    
+    if = {
+        limit = {
+            OR = {
+                check_variable = { global.pwc_cataclysm_live > 0 }
+                has_global_flag = pwc_cataclysm_holder_cache
+            }
+        }
+        clr_global_flag = pwc_cataclysm_holder_cache
+        every_country = {
+            limit = {
+                OR = {
+                    has_country_flag = pwc_cataclysm_has_units
+                    AND = {
+                        num_divisions > 0
+                        any_country_division = { pwc_st_cataclysm_division = yes }
+                    }
+                }
+            }
+            
+            
+            pwc_se_cataclysm_recount_units = yes
+            if = {
+                limit = { check_variable = { pwc_cataclysm_live > 0 } }
+                set_global_flag = pwc_cataclysm_holder_cache
+            }
+            set_country_flag = pwc_cataclysm_equipment_received
+            pwc_se_cataclysm_mark_human_relations = yes
+            if = {
+                limit = {
+                    OR = {
+                        is_ai = no
+                        has_capitulated = yes
+                        pwc_st_is_city_country = no
+                        has_country_flag = pwc_cataclysm_human_related
+                    }
+                }
+                pwc_se_cataclysm_remove_held_units = yes
+            }
+        }
+    }
+}
+pwc_se_cataclysm_recount_all = {
+    pwc_se_cataclysm_recount_slots = yes
+    for_each_scope_loop = {
+        array = global.pwc_cataclysm_recipients
+        pwc_se_cataclysm_recount_units = yes
+    }
+}
+pwc_se_cataclysm_set_recipient_cap = {
+    save_event_target_as = pwc_cataclysm_recipient
+    set_variable = { pwc_cataclysm_recipient_cap = 4 }
+    every_owned_state = {
+        limit = { is_fully_controlled_by = event_target:pwc_cataclysm_recipient }
+        event_target:pwc_cataclysm_recipient = {
+            add_to_variable = { pwc_cataclysm_recipient_cap = 4 }
+        }
+    }
+}
+
+pwc_se_cataclysm_select_recipient = {
+    clr_country_flag = pwc_cataclysm_found_recipient
+    set_variable = { pwc_cataclysm_best_rank = 100000 }
+    save_event_target_as = pwc_cataclysm_pool
+    for_each_scope_loop = {
+        array = pwc_cataclysm_candidates
+        if = {
+            limit = {
+                check_variable = {
+                    var = pwc_cataclysm_rank
+                    value = PREV.pwc_cataclysm_cursor
+                    compare = greater_than
+                }
+                check_variable = {
+                    var = pwc_cataclysm_rank
+                    value = PREV.pwc_cataclysm_best_rank
+                    compare = less_than
+                }
+                check_variable = {
+                    var = pwc_cataclysm_live
+                    value = pwc_cataclysm_recipient_cap
+                    compare = less_than
+                }
+            }
+            save_event_target_as = pwc_cataclysm_selected
+            event_target:pwc_cataclysm_pool = {
+                set_variable = { pwc_cataclysm_best_rank = PREV.pwc_cataclysm_rank }
+                set_country_flag = pwc_cataclysm_found_recipient
+            }
+        }
+    }
+    if = {
+        limit = { NOT = { has_country_flag = pwc_cataclysm_found_recipient } }
+        for_each_scope_loop = {
+            array = pwc_cataclysm_candidates
+            if = {
+                limit = {
+                    check_variable = {
+                        var = pwc_cataclysm_rank
+                        value = PREV.pwc_cataclysm_best_rank
+                        compare = less_than
+                    }
+                    check_variable = {
+                        var = pwc_cataclysm_live
+                        value = pwc_cataclysm_recipient_cap
+                        compare = less_than
+                    }
+                }
+                save_event_target_as = pwc_cataclysm_selected
+                event_target:pwc_cataclysm_pool = {
+                    set_variable = { pwc_cataclysm_best_rank = PREV.pwc_cataclysm_rank }
+                    set_country_flag = pwc_cataclysm_found_recipient
+                }
+            }
+        }
+    }
+}
+pwc_se_cataclysm_attempt_one = {
+    if = {
+        limit = { pwc_st_cataclysm_budget_available = yes }
+        pwc_se_cataclysm_select_recipient = yes
+        if = {
+            limit = { has_country_flag = pwc_cataclysm_found_recipient }
+            set_variable = { pwc_cataclysm_cursor = pwc_cataclysm_best_rank }
+            event_target:pwc_cataclysm_selected = {
+                save_event_target_as = pwc_cataclysm_recipient
+                clr_country_flag = pwc_cataclysm_found_rear
+                clr_country_flag = pwc_cataclysm_transport_ready
+                if = {
+                    limit = { pwc_st_cataclysm_transport_ready = yes }
+                    set_country_flag = pwc_cataclysm_transport_ready
+                }
+                for_each_scope_loop = {
+                    array = owned_states
+                    if = {
+                        limit = {
+                            event_target:pwc_cataclysm_recipient = {
+                                NOT = { has_country_flag = pwc_cataclysm_found_rear }
+                                has_country_flag = pwc_cataclysm_transport_ready
+                            }
+                        }
+                        if = {
+                            limit = { pwc_st_cataclysm_rear = yes }
+                            save_event_target_as = pwc_cataclysm_spawn_state
+                            event_target:pwc_cataclysm_recipient = {
+                                set_country_flag = pwc_cataclysm_found_rear
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = { has_country_flag = pwc_cataclysm_found_rear }
+                    set_variable = {
+                        pwc_cataclysm_next_heavy =
+                        PREV.pwc_cataclysm_composition
+                    }
+                    modulo_variable = { pwc_cataclysm_next_heavy = 4 }
+                    if = {
+                        limit = { check_variable = { pwc_cataclysm_next_heavy = 3 } }
+                        set_variable = { pwc_cataclysm_next_heavy = 1 }
+                    }
+                    else = { set_variable = { pwc_cataclysm_next_heavy = 0 } }
+                    pwc_se_cataclysm_spawn_one = yes
+                    if = {
+                        limit = { has_country_flag = pwc_cataclysm_spawn_success }
+                        add_to_variable = { global.pwc_cataclysm_used = 1 }
+                        add_to_variable = { global.pwc_cataclysm_live = 1 }
+                        var:pwc_cataclysm_owner = {
+                            add_to_variable = { pwc_cataclysm_source_used = 1 }
+                            add_to_variable = { pwc_cataclysm_source_weekly_used = 1 }
+                        }
+                        
+                        if = {
+                            limit = {
+                                var:pwc_cataclysm_owner = {
+                                    NOT = { tag = event_target:pwc_cataclysm_pool }
+                                }
+                            }
+                            var:pwc_cataclysm_owner = {
+                                add_to_variable = { pwc_cataclysm_used = 1 }
+                                add_to_variable = { pwc_cataclysm_live_pool = 1 }
+                            }
+                        }
+                        event_target:pwc_cataclysm_pool = {
+                            add_to_variable = { pwc_cataclysm_used = 1 }
+                            add_to_variable = { pwc_cataclysm_live_pool = 1 }
+                            add_to_variable = { pwc_cataclysm_composition = 1 }
+                            add_to_variable = { pwc_cataclysm_dispatch_success = 1 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+pwc_se_cataclysm_dispatch_pool = {
+    set_variable = { pwc_cataclysm_dispatch_success = 0 }
+    if = {
+        limit = {
+            NOT = { has_country_flag = pwc_cataclysm_arrival_sent }
+            check_variable = { pwc_cataclysm_candidates^num > 0 }
+            pwc_st_cataclysm_budget_available = yes
+        }
+        
+        set_country_flag = pwc_cataclysm_arrival_sent
+        for_each_scope_loop = {
+            array = pwc_cataclysm_members
+            set_country_flag = pwc_cataclysm_arrival_sent
+        }
+        for_loop_effect = {
+            start = 0 end = pwc_cataclysm_arrival_budget
+            pwc_se_cataclysm_attempt_one = yes
+        }
+        add_to_variable = { pwc_cataclysm_weekly_used = pwc_cataclysm_dispatch_success }
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                var = pwc_cataclysm_weekly_used
+                value = pwc_cataclysm_weekly_budget
+                compare = less_than
+            }
+            check_variable = { global.pwc_cataclysm_week_remainder = 0 }
+        }
+        set_variable = { pwc_cataclysm_dispatch_allowance = pwc_cataclysm_weekly_budget }
+        subtract_from_variable = {
+            pwc_cataclysm_dispatch_allowance = pwc_cataclysm_weekly_used
+        }
+        for_loop_effect = {
+            start = 0 end = pwc_cataclysm_dispatch_allowance
+            pwc_se_cataclysm_attempt_one = yes
+        }
+        add_to_variable = { pwc_cataclysm_weekly_used = pwc_cataclysm_dispatch_success }
+    }
+}
+pwc_se_cataclysm_global_daily = {
+    if = {
+        limit = {
+            pwc_st_cataclysm_enabled = yes
+            has_global_flag = pwc_cataclysm_initialized
+            NOT = {
+                check_variable = { global.pwc_cataclysm_last_day = global.num_days }
+            }
+        }
+        set_variable = { global.pwc_cataclysm_last_day = global.num_days }
+        pwc_se_cataclysm_clock = yes
+        pwc_se_cataclysm_reset_cycle = yes
+        pwc_se_cataclysm_reset_week = yes
+        set_variable = { global.pwc_cataclysm_week_remainder = global.pwc_cataclysm_day }
+        modulo_variable = { global.pwc_cataclysm_week_remainder = 7 }
+        pwc_se_cataclysm_refresh_membership = yes
+        
+        set_global_flag = pwc_cataclysm_relation_batch
+        pwc_se_cataclysm_cleanup_holders = yes
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_recipients
+            clr_country_flag = pwc_cataclysm_qualified
+            clr_country_flag = pwc_cataclysm_candidate
+            clear_array = pwc_cataclysm_front_pools
+        }
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_pools
+            clear_array = pwc_cataclysm_candidates
+            pwc_se_cataclysm_progress_pool = yes
+        }
+        
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_pools
+            if = {
+                limit = { has_country_flag = pwc_cataclysm_active }
+                pwc_se_cataclysm_collect_candidates = yes
+            }
+            else = { clear_array = pwc_cataclysm_candidates }
+        }
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_recipients
+            if = {
+                limit = { has_variable = pwc_cataclysm_owner }
+                pwc_se_cataclysm_recipient_cleanup = yes
+            }
+        }
+        clr_global_flag = pwc_cataclysm_dispatch_due
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_pools
+            if = {
+                limit = {
+                    pwc_st_cataclysm_pool_active = yes
+                    check_variable = { pwc_cataclysm_candidates^num > 0 }
+                    OR = {
+                        NOT = { has_country_flag = pwc_cataclysm_arrival_sent }
+                        check_variable = { global.pwc_cataclysm_week_remainder = 0 }
+                    }
+                }
+                set_global_flag = pwc_cataclysm_dispatch_due
+            }
+        }
+        if = {
+            limit = { has_global_flag = pwc_cataclysm_dispatch_due }
+            
+            pwc_se_cataclysm_recount_all = yes
+            for_each_scope_loop = {
+                array = global.pwc_cataclysm_recipients
+                if = {
+                    limit = { has_country_flag = pwc_cataclysm_qualified }
+                    pwc_se_cataclysm_set_recipient_cap = yes
+                }
+            }
+            for_each_scope_loop = {
+                array = global.pwc_cataclysm_pools
+                if = {
+                    limit = { pwc_st_cataclysm_pool_active = yes }
+                    pwc_se_cataclysm_dispatch_pool = yes
+                }
+            }
+        }
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_relation_touched
+            clr_country_flag = pwc_cataclysm_relation_checked
+        }
+        clear_array = global.pwc_cataclysm_relation_touched
+        clr_global_flag = pwc_cataclysm_relation_batch
+    }
+}
+pwc_se_cataclysm_global_monthly = {
+    if = {
+        limit = {
+            pwc_st_cataclysm_enabled = yes
+            has_global_flag = pwc_cataclysm_initialized
+            date > 2026.1.1
+            NOT = {
+                check_variable = { global.pwc_cataclysm_last_month = global.num_days }
+            }
+        }
+        set_variable = { global.pwc_cataclysm_last_month = global.num_days }
+        pwc_se_cataclysm_clock = yes
+        pwc_se_cataclysm_reset_cycle = yes
+        pwc_se_cataclysm_refresh_membership = yes
+        for_each_scope_loop = {
+            array = global.pwc_cataclysm_pools
+            pwc_se_cataclysm_sample_pool = yes
+        }
+        
+        
+        if = {
+            limit = { check_variable = { global.pwc_cataclysm_recipients^num > 0 } }
+            pwc_se_cataclysm_recount_all = yes
+        }
+    }
+}

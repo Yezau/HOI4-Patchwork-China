@@ -1,0 +1,4954 @@
+pwc_se_form_region_anhui = {
+    if = {
+        limit = { pwc_st_form_region_anhui = yes }
+        172 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        173 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        185 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        186 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        193 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        196 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        199 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        203 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        207 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        212 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        230 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        231 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        232 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        233 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        242 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        249 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_fujian = {
+    if = {
+        limit = { pwc_st_form_region_fujian = yes }
+        293 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        306 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        313 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        319 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        327 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        328 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        330 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        336 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        343 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        525 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        526 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_gansu = {
+    if = {
+        limit = { pwc_st_form_region_gansu = yes }
+        31 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        55 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        86 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        91 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        95 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        114 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        122 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        129 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        140 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        141 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        149 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        155 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        161 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        174 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_guangdong = {
+    if = {
+        limit = { pwc_st_form_region_guangdong = yes }
+        332 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        335 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        342 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        345 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        351 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        353 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        355 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        357 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        359 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        360 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        363 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        364 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        367 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        369 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        370 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        371 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        372 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        374 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        375 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        377 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        379 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        381 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        384 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_guangxi = {
+    if = {
+        limit = { pwc_st_form_region_guangxi = yes }
+        324 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        326 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        331 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        337 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        339 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        349 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        350 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        354 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        356 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        366 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        368 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        373 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        380 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        383 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_guizhou = {
+    if = {
+        limit = { pwc_st_form_region_guizhou = yes }
+        280 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        283 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        304 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        307 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        309 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        311 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        317 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        320 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        325 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_hainan = {
+    if = {
+        limit = { pwc_st_form_region_hainan = yes }
+        385 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        387 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        388 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        391 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_hebei = {
+    if = {
+        limit = { pwc_st_form_region_hebei = yes }
+        59 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        63 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        74 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        78 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        79 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        82 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        85 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        90 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        96 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        98 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        103 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        113 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        128 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_heilongjiang = {
+    if = {
+        limit = { pwc_st_form_region_heilongjiang = yes }
+        8 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        12 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        13 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        15 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        16 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        17 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        18 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        20 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        21 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        24 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        25 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        27 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        29 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_henan = {
+    if = {
+        limit = { pwc_st_form_region_henan = yes }
+        135 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        137 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        146 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        159 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        160 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        164 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        165 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        166 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        167 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        169 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        177 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        178 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        179 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        180 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        184 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        192 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        194 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        206 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_hubei = {
+    if = {
+        limit = { pwc_st_form_region_hubei = yes }
+        198 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        208 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        210 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        218 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        220 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        224 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        225 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        226 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        240 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        244 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        246 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        247 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        250 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        251 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        254 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        257 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        259 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_hunan = {
+    if = {
+        limit = { pwc_st_form_region_hunan = yes }
+        260 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        264 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        265 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        271 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        272 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        284 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        287 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        296 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        299 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        300 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        305 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        308 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        315 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        316 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_inner_mongolia = {
+    if = {
+        limit = { pwc_st_form_region_inner_mongolia = yes }
+        9 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        19 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        23 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        30 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        37 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        43 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        49 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        56 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        57 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        61 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        71 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        76 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_jiangsu = {
+    if = {
+        limit = { pwc_st_form_region_jiangsu = yes }
+        163 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        168 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        176 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        181 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        187 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        197 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        200 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        205 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        213 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        214 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        215 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        216 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        219 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        221 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        228 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_jiangxi = {
+    if = {
+        limit = { pwc_st_form_region_jiangxi = yes }
+        262 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        266 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        269 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        281 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        282 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        288 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        292 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        298 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        301 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        302 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        312 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_jilin = {
+    if = {
+        limit = { pwc_st_form_region_jilin = yes }
+        26 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        34 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        36 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        40 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        41 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        42 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        44 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        51 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        54 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_liaoning = {
+    if = {
+        limit = { pwc_st_form_region_liaoning = yes }
+        48 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        50 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        53 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        60 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        62 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        64 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        65 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        66 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        67 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        69 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        72 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        73 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        75 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        83 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_ningxia = {
+    if = {
+        limit = { pwc_st_form_region_ningxia = yes }
+        97 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        105 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        107 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        112 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        132 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_qinghai = {
+    if = {
+        limit = { pwc_st_form_region_qinghai = yes }
+        92 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        93 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        117 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        120 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        124 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        136 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        139 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        152 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_shaanxi = {
+    if = {
+        limit = { pwc_st_form_region_shaanxi = yes }
+        89 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        116 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        147 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        154 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        157 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        162 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        170 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        175 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        190 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        191 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_shandong = {
+    if = {
+        limit = { pwc_st_form_region_shandong = yes }
+        106 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        108 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        110 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        111 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        115 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        118 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        119 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        123 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        126 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        130 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        134 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        138 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        143 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        144 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        145 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        158 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_shanxi = {
+    if = {
+        limit = { pwc_st_form_region_shanxi = yes }
+        77 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        80 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        87 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        94 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        99 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        104 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        109 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        125 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        131 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        142 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        148 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_sichuan = {
+    if = {
+        limit = { pwc_st_form_region_sichuan = yes }
+        183 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        188 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        201 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        202 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        204 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        211 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        217 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        223 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        229 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        234 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        238 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        239 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        241 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        243 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        253 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        261 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        263 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        270 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        275 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        277 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        278 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        310 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_taiwan = {
+    if = {
+        limit = { pwc_st_form_region_taiwan = yes }
+        334 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        338 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        348 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        352 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        358 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        361 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        362 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        505 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        506 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        507 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        508 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        509 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        510 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        511 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        512 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        513 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        524 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_xinjiang = {
+    if = {
+        limit = { pwc_st_form_region_xinjiang = yes }
+        14 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        22 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        32 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        35 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        38 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        39 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        45 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        46 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        47 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        58 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        70 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        81 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        84 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        88 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_xizang = {
+    if = {
+        limit = { pwc_st_form_region_xizang = yes }
+        133 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        151 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        209 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        222 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        236 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        245 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        267 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        434 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        435 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_yunnan = {
+    if = {
+        limit = { pwc_st_form_region_yunnan = yes }
+        279 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        286 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        295 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        303 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        314 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        318 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        321 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        323 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        329 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        333 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        340 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        341 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        344 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        346 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        347 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        376 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}
+pwc_se_form_region_zhejiang = {
+    if = {
+        limit = { pwc_st_form_region_zhejiang = yes }
+        235 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        237 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        248 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        255 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        256 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        258 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        268 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        273 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        276 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        285 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        289 = {
+            if = {
+                limit = { NOT = { is_core_of = PREV } }
+                add_core_of = PREV
+                save_event_target_as = pwc_cored_state
+                PREV = {
+                    if = {
+                        limit = { is_ai = no }
+                        pwc_se_push_integration_alert = yes
+                    }
+                }
+            }
+        }
+        pwc_se_refresh_setup_country = yes
+        force_update_map_mode = { mapmode = cores_claims_map_mode }
+    }
+}

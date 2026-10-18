@@ -1,0 +1,17 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            NTR = { pwc_se_cataclysm_initialize = yes }
+        }
+    }
+    on_daily_NTR = {
+        effect = {
+            pwc_se_cataclysm_global_daily = yes
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            pwc_se_cataclysm_global_monthly = yes
+        }
+    }
+}

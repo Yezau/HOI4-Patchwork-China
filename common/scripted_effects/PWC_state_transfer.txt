@@ -115,6 +115,15 @@ pwc_se_confirm_state_transfer = {
                 }
             }
             var:pwc_transfer_source = {
+                if = {
+                    limit = {
+                        OR = {
+                            has_country_flag = pwc_cataclysm_has_units
+                            has_country_flag = pwc_cataclysm_equipment_received
+                        }
+                    }
+                    pwc_se_cataclysm_remove_units = yes
+                }
                 pwc_se_mark_city_eliminated = yes
                 log = "PWC TRANSFER source left landless, eliminated"
                 
