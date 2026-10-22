@@ -1,0 +1,181 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } NOT = { has_global_flag = pwcb_started } }
+                pwcb_init = yes
+            }
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started NOT = { has_global_flag = pwcb_war_roster_v1 } }
+                pwcb_init_war_foes = yes
+            }
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                pwcb_daily = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                pwcb_monthly = yes
+            }
+        }
+    }
+    on_weekly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                pwcb_weekly = yes
+            }
+        }
+    }
+    on_war = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                ROOT = {
+                    set_country_flag = pwcb_in_war
+                    set_variable = { pwcb_war_weeks = 0 }
+                    pwcb_reset_endurance = yes
+                    pwcb_sync_war_foes = yes
+                }
+            }
+        }
+    }
+    on_peaceconference_ended = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                every_country = {
+                    limit = { has_country_flag = pwcb_in_war }
+                    pwcb_sync_war_foes = yes
+                }
+            }
+        }
+    }
+    on_declare_war = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                ROOT = {
+                    if = {
+                        limit = { check_variable = { var = num_divisions value = FROM.num_divisions compare = greater_than_or_equals } }
+                        pwcb_learn_shiji = yes
+                    }
+                    if = {
+                        limit = { FROM = { any_enemy_country = { NOT = { tag = ROOT } } } }
+                        pwcb_learn_xushi = yes
+                    }
+                }
+            }
+        }
+    }
+    on_war_relation_added = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                ROOT = {
+                    if = {
+                        limit = { NOT = { has_country_flag = pwcb_in_war } }
+                        set_country_flag = pwcb_in_war
+                        set_variable = { pwcb_war_weeks = 0 }
+                    }
+                    if = {
+                        limit = { NOT = { is_in_array = { array = pwcb_foes value = FROM } } }
+                        add_to_array = { array = pwcb_foes value = FROM }
+                    }
+                    if = {
+                        limit = { NOT = { is_in_array = { array = pwcb_war_foes value = FROM } } }
+                        add_to_array = { array = pwcb_war_foes value = FROM }
+                    }
+                    if = {
+                        limit = { check_variable = { pwcb_foes^num > 4 } }
+                        pwcb_learn_yongjian = yes
+                    }
+                    if = {
+                        limit = { check_variable = { enemies^num > 2 } }
+                        pwcb_learn_jiubian = yes
+                    }
+                }
+                FROM = {
+                    if = {
+                        limit = { NOT = { has_country_flag = pwcb_in_war } }
+                        set_country_flag = pwcb_in_war
+                        set_variable = { pwcb_war_weeks = 0 }
+                    }
+                    if = {
+                        limit = { NOT = { is_in_array = { array = pwcb_foes value = ROOT } } }
+                        add_to_array = { array = pwcb_foes value = ROOT }
+                    }
+                    if = {
+                        limit = { NOT = { is_in_array = { array = pwcb_war_foes value = ROOT } } }
+                        add_to_array = { array = pwcb_war_foes value = ROOT }
+                    }
+                    if = {
+                        limit = { check_variable = { pwcb_foes^num > 4 } }
+                        pwcb_learn_yongjian = yes
+                    }
+                    if = {
+                        limit = { check_variable = { enemies^num > 2 } }
+                        pwcb_learn_jiubian = yes
+                    }
+                }
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started ROOT = { has_war_with = FROM } }
+                ROOT = {
+                    if = {
+                        limit = { NOT = { is_in_array = { array = pwcb_taken_states value = FROM.FROM } } }
+                        add_to_array = { array = pwcb_taken_states value = FROM.FROM }
+                        add_to_variable = { pwcb_month_taken = 1 }
+                        if = {
+                            limit = { check_variable = { pwcb_month_taken > 2 } }
+                            pwcb_learn_bingshi = yes
+                        }
+                    }
+                }
+                FROM = {
+                    clr_country_flag = pwcb_holding
+                    set_variable = { pwcb_hold = 0 }
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started FROM = { pwc_st_is_city_country = yes } ROOT = { NOT = { is_in_array = { array = pwcb_war_foes value = FROM } } } }
+                ROOT = {
+                    set_variable = { pwcb_previous_controller = FROM }
+                    if = {
+                        limit = { FROM.FROM = { is_owned_by = ROOT is_core_of = var:ROOT.pwcb_previous_controller } }
+                        pwcb_learn_mougong = yes
+                    }
+                    clear_variable = pwcb_previous_controller
+                }
+            }
+        }
+    }
+    on_annex = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started FROM = { has_country_flag = { flag = pwcb_in_war days < 42 } is_in_array = { array = pwcb_war_foes value = ROOT } } }
+                ROOT = {
+                    pwcb_learn_zuozhan = yes
+                }
+            }
+        }
+    }
+    on_naval_invasion = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcb_bingshu option = ON } has_global_flag = pwcb_started }
+                ROOT = {
+                    pwcb_learn_junzheng = yes
+                }
+            }
+        }
+    }
+}

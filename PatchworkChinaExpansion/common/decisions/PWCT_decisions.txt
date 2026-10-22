@@ -1,0 +1,138 @@
+pwct_stratagem_category = {
+    pwct_use_14 = {
+        visible = { check_variable = { pwct_hand_14 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_14 = yes
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                has_war = yes
+            }
+        }
+    }
+    pwct_use_38 = {
+        target_array = enemies
+        target_root_trigger = { check_variable = { pwct_hand_38 > 0 } }
+        target_trigger = { FROM = { exists = yes } }
+        visible = { check_variable = { pwct_hand_38 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_38 = yes
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                factor = 0
+                FROM = { surrender_progress > 0.5 }
+            }
+        }
+    }
+    pwct_use_39 = {
+        target_array = enemies
+        target_root_trigger = { check_variable = { pwct_hand_39 > 0 } }
+        target_trigger = { FROM = { exists = yes } }
+        visible = { check_variable = { pwct_hand_39 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_39 = yes
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                factor = 0
+                FROM = { surrender_progress > 0.5 }
+            }
+        }
+    }
+    pwct_use_40 = {
+        target_array = enemies
+        target_root_trigger = { check_variable = { pwct_hand_40 > 0 } }
+        target_trigger = { FROM = { exists = yes } }
+        visible = { check_variable = { pwct_hand_40 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_40 = yes
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                factor = 0
+                FROM = { surrender_progress > 0.5 }
+            }
+        }
+    }
+    pwct_use_41 = {
+        visible = { check_variable = { pwct_hand_41 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_41 = yes
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                has_war = yes
+            }
+        }
+    }
+    pwct_use_42 = {
+        visible = { check_variable = { pwct_hand_42 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_42 = yes
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                has_war = yes
+            }
+        }
+    }
+    pwct_use_43 = {
+        visible = { check_variable = { pwct_hand_43 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_43 = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    pwct_use_44 = {
+        visible = { check_variable = { pwct_hand_44 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_44 = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    pwct_use_45 = {
+        visible = { check_variable = { pwct_hand_45 > 0 } }
+        cost = 0
+        fire_only_once = no
+        complete_effect = {
+            pwct_play_45 = yes
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                has_war = yes
+            }
+        }
+    }
+}

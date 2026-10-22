@@ -26,6 +26,12 @@ scripted_gui = {
 			pwc_state_integration_alerts_scroll_visible = {
 				check_variable = { pwc_state_integration_alerts^num > 0 }
 			}
+			pwc_war_warning_icon_visible = {
+				pwc_st_war_warning_alert_shown = yes
+			}
+			pwc_war_warning_red_glow_visible = {
+				pwc_st_war_warning_alert_shown = yes
+			}
 		}
 		effects = {
 			pwc_state_integration_bg_click = {

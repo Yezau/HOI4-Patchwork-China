@@ -14,6 +14,9 @@ pwc_st_demobilization_applies = {
         is_ai = yes
     }
 }
+pwc_st_war_warning_alert_shown = {
+    NOT = { has_game_rule = { rule = pwc_war_warning_alert option = OFF } }
+}
 pwc_st_peacetime_mobilization_allowed = {
     OR = {
         pwc_st_demobilization_applies = no

@@ -1,0 +1,42 @@
+scripted_gui = {
+    pwcd_topbar = {
+        context_type = player_context
+        window_name = pwcd_topbar_window
+        ai_enabled = { always = no }
+        visible = { OR = { has_global_flag = pwcz_started has_global_flag = pwcb_started } }
+        triggers = {
+            pwcd_topbar_news_visible = {
+                has_country_flag = pwcd_news
+            }
+        }
+        effects = {
+            pwcd_topbar_toggle_click = {
+                if = {
+                    limit = { check_variable = { pwcd_page > 0 } }
+                    set_variable = { pwcd_page = 0 }
+                }
+                else = {
+                    clr_country_flag = pwcd_news
+                    clr_country_flag = pwct_panel_open
+                    clr_country_flag = pwct_collection_open
+                    if = {
+                        limit = { check_variable = { pwcd_last = 1 } has_global_flag = pwcz_started }
+                        set_variable = { pwcd_page = 1 }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcd_last = 2 } has_global_flag = pwcb_started }
+                        set_variable = { pwcd_page = 2 }
+                    }
+                    else_if = {
+                        limit = { has_global_flag = pwcz_started }
+                        set_variable = { pwcd_page = 1 }
+                    }
+                    else_if = {
+                        limit = { has_global_flag = pwcb_started }
+                        set_variable = { pwcd_page = 2 }
+                    }
+                }
+            }
+        }
+    }
+}

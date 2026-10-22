@@ -1,0 +1,490 @@
+scripted_gui = {
+    pwcb_page_gui = {
+        context_type = player_context
+        window_name = pwcb_page
+        ai_enabled = { always = no }
+        visible = { check_variable = { pwcd_page = 2 } has_global_flag = pwcb_started }
+        triggers = {
+            pwcb_tab_1_visible = {
+                has_global_flag = pwcz_started has_global_flag = pwcb_started
+            }
+            pwcb_tab_1_text_visible = {
+                has_global_flag = pwcz_started has_global_flag = pwcb_started
+            }
+            pwcb_tab_2_visible = {
+                has_global_flag = pwcz_started has_global_flag = pwcb_started
+            }
+            pwcb_tab_2_text_visible = {
+                has_global_flag = pwcz_started has_global_flag = pwcb_started
+            }
+            pwcb_s1_pick_visible = {
+                check_variable = { pwcb_pick < 2 }
+            }
+            pwcb_s1_on_visible = {
+                has_country_flag = pwcb_ch_shiji
+            }
+            pwcb_s1_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_shiji }
+            }
+            pwcb_s1_done_visible = {
+                has_country_flag = pwcb_ch_shiji
+            }
+            pwcb_s1_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_shiji }
+            }
+            pwcb_d1_title_visible = {
+                check_variable = { pwcb_pick < 2 }
+            }
+            pwcb_d1_quote_visible = {
+                check_variable = { pwcb_pick < 2 }
+            }
+            pwcb_d1_body_done_visible = {
+                check_variable = { pwcb_pick < 2 } has_country_flag = pwcb_ch_shiji
+            }
+            pwcb_d1_body_todo_visible = {
+                check_variable = { pwcb_pick < 2 } NOT = { has_country_flag = pwcb_ch_shiji }
+            }
+            pwcb_s2_pick_visible = {
+                check_variable = { pwcb_pick = 2 }
+            }
+            pwcb_s2_on_visible = {
+                has_country_flag = pwcb_ch_zuozhan
+            }
+            pwcb_s2_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_zuozhan }
+            }
+            pwcb_s2_done_visible = {
+                has_country_flag = pwcb_ch_zuozhan
+            }
+            pwcb_s2_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_zuozhan }
+            }
+            pwcb_d2_title_visible = {
+                check_variable = { pwcb_pick = 2 }
+            }
+            pwcb_d2_quote_visible = {
+                check_variable = { pwcb_pick = 2 }
+            }
+            pwcb_d2_body_done_visible = {
+                check_variable = { pwcb_pick = 2 } has_country_flag = pwcb_ch_zuozhan
+            }
+            pwcb_d2_body_todo_visible = {
+                check_variable = { pwcb_pick = 2 } NOT = { has_country_flag = pwcb_ch_zuozhan }
+            }
+            pwcb_s3_pick_visible = {
+                check_variable = { pwcb_pick = 3 }
+            }
+            pwcb_s3_on_visible = {
+                has_country_flag = pwcb_ch_mougong
+            }
+            pwcb_s3_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_mougong }
+            }
+            pwcb_s3_done_visible = {
+                has_country_flag = pwcb_ch_mougong
+            }
+            pwcb_s3_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_mougong }
+            }
+            pwcb_d3_title_visible = {
+                check_variable = { pwcb_pick = 3 }
+            }
+            pwcb_d3_quote_visible = {
+                check_variable = { pwcb_pick = 3 }
+            }
+            pwcb_d3_body_done_visible = {
+                check_variable = { pwcb_pick = 3 } has_country_flag = pwcb_ch_mougong
+            }
+            pwcb_d3_body_todo_visible = {
+                check_variable = { pwcb_pick = 3 } NOT = { has_country_flag = pwcb_ch_mougong }
+            }
+            pwcb_s4_pick_visible = {
+                check_variable = { pwcb_pick = 4 }
+            }
+            pwcb_s4_on_visible = {
+                has_country_flag = pwcb_ch_junxing
+            }
+            pwcb_s4_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_junxing }
+            }
+            pwcb_s4_done_visible = {
+                has_country_flag = pwcb_ch_junxing
+            }
+            pwcb_s4_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_junxing }
+            }
+            pwcb_d4_title_visible = {
+                check_variable = { pwcb_pick = 4 }
+            }
+            pwcb_d4_quote_visible = {
+                check_variable = { pwcb_pick = 4 }
+            }
+            pwcb_d4_body_done_visible = {
+                check_variable = { pwcb_pick = 4 } has_country_flag = pwcb_ch_junxing
+            }
+            pwcb_d4_body_todo_visible = {
+                check_variable = { pwcb_pick = 4 } NOT = { has_country_flag = pwcb_ch_junxing }
+            }
+            pwcb_s5_pick_visible = {
+                check_variable = { pwcb_pick = 5 }
+            }
+            pwcb_s5_on_visible = {
+                has_country_flag = pwcb_ch_bingshi
+            }
+            pwcb_s5_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_bingshi }
+            }
+            pwcb_s5_done_visible = {
+                has_country_flag = pwcb_ch_bingshi
+            }
+            pwcb_s5_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_bingshi }
+            }
+            pwcb_d5_title_visible = {
+                check_variable = { pwcb_pick = 5 }
+            }
+            pwcb_d5_quote_visible = {
+                check_variable = { pwcb_pick = 5 }
+            }
+            pwcb_d5_body_done_visible = {
+                check_variable = { pwcb_pick = 5 } has_country_flag = pwcb_ch_bingshi
+            }
+            pwcb_d5_body_todo_visible = {
+                check_variable = { pwcb_pick = 5 } NOT = { has_country_flag = pwcb_ch_bingshi }
+            }
+            pwcb_s6_pick_visible = {
+                check_variable = { pwcb_pick = 6 }
+            }
+            pwcb_s6_on_visible = {
+                has_country_flag = pwcb_ch_xushi
+            }
+            pwcb_s6_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_xushi }
+            }
+            pwcb_s6_done_visible = {
+                has_country_flag = pwcb_ch_xushi
+            }
+            pwcb_s6_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_xushi }
+            }
+            pwcb_d6_title_visible = {
+                check_variable = { pwcb_pick = 6 }
+            }
+            pwcb_d6_quote_visible = {
+                check_variable = { pwcb_pick = 6 }
+            }
+            pwcb_d6_body_done_visible = {
+                check_variable = { pwcb_pick = 6 } has_country_flag = pwcb_ch_xushi
+            }
+            pwcb_d6_body_todo_visible = {
+                check_variable = { pwcb_pick = 6 } NOT = { has_country_flag = pwcb_ch_xushi }
+            }
+            pwcb_s7_pick_visible = {
+                check_variable = { pwcb_pick = 7 }
+            }
+            pwcb_s7_on_visible = {
+                has_country_flag = pwcb_ch_junzheng
+            }
+            pwcb_s7_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_junzheng }
+            }
+            pwcb_s7_done_visible = {
+                has_country_flag = pwcb_ch_junzheng
+            }
+            pwcb_s7_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_junzheng }
+            }
+            pwcb_d7_title_visible = {
+                check_variable = { pwcb_pick = 7 }
+            }
+            pwcb_d7_quote_visible = {
+                check_variable = { pwcb_pick = 7 }
+            }
+            pwcb_d7_body_done_visible = {
+                check_variable = { pwcb_pick = 7 } has_country_flag = pwcb_ch_junzheng
+            }
+            pwcb_d7_body_todo_visible = {
+                check_variable = { pwcb_pick = 7 } NOT = { has_country_flag = pwcb_ch_junzheng }
+            }
+            pwcb_s8_pick_visible = {
+                check_variable = { pwcb_pick = 8 }
+            }
+            pwcb_s8_on_visible = {
+                has_country_flag = pwcb_ch_jiubian
+            }
+            pwcb_s8_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_jiubian }
+            }
+            pwcb_s8_done_visible = {
+                has_country_flag = pwcb_ch_jiubian
+            }
+            pwcb_s8_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_jiubian }
+            }
+            pwcb_d8_title_visible = {
+                check_variable = { pwcb_pick = 8 }
+            }
+            pwcb_d8_quote_visible = {
+                check_variable = { pwcb_pick = 8 }
+            }
+            pwcb_d8_body_done_visible = {
+                check_variable = { pwcb_pick = 8 } has_country_flag = pwcb_ch_jiubian
+            }
+            pwcb_d8_body_todo_visible = {
+                check_variable = { pwcb_pick = 8 } NOT = { has_country_flag = pwcb_ch_jiubian }
+            }
+            pwcb_s9_pick_visible = {
+                check_variable = { pwcb_pick = 9 }
+            }
+            pwcb_s9_on_visible = {
+                has_country_flag = pwcb_ch_xingjun
+            }
+            pwcb_s9_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_xingjun }
+            }
+            pwcb_s9_done_visible = {
+                has_country_flag = pwcb_ch_xingjun
+            }
+            pwcb_s9_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_xingjun }
+            }
+            pwcb_d9_title_visible = {
+                check_variable = { pwcb_pick = 9 }
+            }
+            pwcb_d9_quote_visible = {
+                check_variable = { pwcb_pick = 9 }
+            }
+            pwcb_d9_body_done_visible = {
+                check_variable = { pwcb_pick = 9 } has_country_flag = pwcb_ch_xingjun
+            }
+            pwcb_d9_body_todo_visible = {
+                check_variable = { pwcb_pick = 9 } NOT = { has_country_flag = pwcb_ch_xingjun }
+            }
+            pwcb_s10_pick_visible = {
+                check_variable = { pwcb_pick = 10 }
+            }
+            pwcb_s10_on_visible = {
+                has_country_flag = pwcb_ch_dixing
+            }
+            pwcb_s10_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_dixing }
+            }
+            pwcb_s10_done_visible = {
+                has_country_flag = pwcb_ch_dixing
+            }
+            pwcb_s10_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_dixing }
+            }
+            pwcb_d10_title_visible = {
+                check_variable = { pwcb_pick = 10 }
+            }
+            pwcb_d10_quote_visible = {
+                check_variable = { pwcb_pick = 10 }
+            }
+            pwcb_d10_body_done_visible = {
+                check_variable = { pwcb_pick = 10 } has_country_flag = pwcb_ch_dixing
+            }
+            pwcb_d10_body_todo_visible = {
+                check_variable = { pwcb_pick = 10 } NOT = { has_country_flag = pwcb_ch_dixing }
+            }
+            pwcb_s11_pick_visible = {
+                check_variable = { pwcb_pick = 11 }
+            }
+            pwcb_s11_on_visible = {
+                has_country_flag = pwcb_ch_jiudi
+            }
+            pwcb_s11_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_jiudi }
+            }
+            pwcb_s11_done_visible = {
+                has_country_flag = pwcb_ch_jiudi
+            }
+            pwcb_s11_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_jiudi }
+            }
+            pwcb_d11_title_visible = {
+                check_variable = { pwcb_pick = 11 }
+            }
+            pwcb_d11_quote_visible = {
+                check_variable = { pwcb_pick = 11 }
+            }
+            pwcb_d11_body_done_visible = {
+                check_variable = { pwcb_pick = 11 } has_country_flag = pwcb_ch_jiudi
+            }
+            pwcb_d11_body_todo_visible = {
+                check_variable = { pwcb_pick = 11 } NOT = { has_country_flag = pwcb_ch_jiudi }
+            }
+            pwcb_s12_pick_visible = {
+                check_variable = { pwcb_pick = 12 }
+            }
+            pwcb_s12_on_visible = {
+                has_country_flag = pwcb_ch_huogong
+            }
+            pwcb_s12_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_huogong }
+            }
+            pwcb_s12_done_visible = {
+                has_country_flag = pwcb_ch_huogong
+            }
+            pwcb_s12_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_huogong }
+            }
+            pwcb_d12_title_visible = {
+                check_variable = { pwcb_pick = 12 }
+            }
+            pwcb_d12_quote_visible = {
+                check_variable = { pwcb_pick = 12 }
+            }
+            pwcb_d12_body_done_visible = {
+                check_variable = { pwcb_pick = 12 } has_country_flag = pwcb_ch_huogong
+            }
+            pwcb_d12_body_todo_visible = {
+                check_variable = { pwcb_pick = 12 } NOT = { has_country_flag = pwcb_ch_huogong }
+            }
+            pwcb_s13_pick_visible = {
+                check_variable = { pwcb_pick = 13 }
+            }
+            pwcb_s13_on_visible = {
+                has_country_flag = pwcb_ch_yongjian
+            }
+            pwcb_s13_off_visible = {
+                NOT = { has_country_flag = pwcb_ch_yongjian }
+            }
+            pwcb_s13_done_visible = {
+                has_country_flag = pwcb_ch_yongjian
+            }
+            pwcb_s13_todo_visible = {
+                NOT = { has_country_flag = pwcb_ch_yongjian }
+            }
+            pwcb_d13_title_visible = {
+                check_variable = { pwcb_pick = 13 }
+            }
+            pwcb_d13_quote_visible = {
+                check_variable = { pwcb_pick = 13 }
+            }
+            pwcb_d13_body_done_visible = {
+                check_variable = { pwcb_pick = 13 } has_country_flag = pwcb_ch_yongjian
+            }
+            pwcb_d13_body_todo_visible = {
+                check_variable = { pwcb_pick = 13 } NOT = { has_country_flag = pwcb_ch_yongjian }
+            }
+            pwcb_s14_on_visible = {
+                has_country_flag = pwcb_sage
+            }
+            pwcb_s14_off_visible = {
+                NOT = { has_country_flag = pwcb_sage }
+            }
+            pwcb_s14_done_visible = {
+                has_country_flag = pwcb_sage
+            }
+            pwcb_s14_todo_visible = {
+                NOT = { has_country_flag = pwcb_sage }
+            }
+            pwcb_d14_title_visible = {
+                check_variable = { pwcb_pick = 14 }
+            }
+            pwcb_d14_quote_visible = {
+                check_variable = { pwcb_pick = 14 }
+            }
+            pwcb_d14_body_done_visible = {
+                check_variable = { pwcb_pick = 14 } has_country_flag = pwcb_sage
+            }
+            pwcb_d14_body_todo_visible = {
+                check_variable = { pwcb_pick = 14 } NOT = { has_country_flag = pwcb_sage }
+            }
+        }
+        effects = {
+            pwcb_tab_1_click = {
+                set_variable = { pwcd_page = 1 }
+                set_variable = { pwcd_last = 1 }
+            }
+            pwcb_close_click = {
+                set_variable = { pwcd_page = 0 }
+            }
+            pwcb_s1_on_click = {
+                set_variable = { pwcb_pick = 1 }
+            }
+            pwcb_s1_off_click = {
+                set_variable = { pwcb_pick = 1 }
+            }
+            pwcb_s2_on_click = {
+                set_variable = { pwcb_pick = 2 }
+            }
+            pwcb_s2_off_click = {
+                set_variable = { pwcb_pick = 2 }
+            }
+            pwcb_s3_on_click = {
+                set_variable = { pwcb_pick = 3 }
+            }
+            pwcb_s3_off_click = {
+                set_variable = { pwcb_pick = 3 }
+            }
+            pwcb_s4_on_click = {
+                set_variable = { pwcb_pick = 4 }
+            }
+            pwcb_s4_off_click = {
+                set_variable = { pwcb_pick = 4 }
+            }
+            pwcb_s5_on_click = {
+                set_variable = { pwcb_pick = 5 }
+            }
+            pwcb_s5_off_click = {
+                set_variable = { pwcb_pick = 5 }
+            }
+            pwcb_s6_on_click = {
+                set_variable = { pwcb_pick = 6 }
+            }
+            pwcb_s6_off_click = {
+                set_variable = { pwcb_pick = 6 }
+            }
+            pwcb_s7_on_click = {
+                set_variable = { pwcb_pick = 7 }
+            }
+            pwcb_s7_off_click = {
+                set_variable = { pwcb_pick = 7 }
+            }
+            pwcb_s8_on_click = {
+                set_variable = { pwcb_pick = 8 }
+            }
+            pwcb_s8_off_click = {
+                set_variable = { pwcb_pick = 8 }
+            }
+            pwcb_s9_on_click = {
+                set_variable = { pwcb_pick = 9 }
+            }
+            pwcb_s9_off_click = {
+                set_variable = { pwcb_pick = 9 }
+            }
+            pwcb_s10_on_click = {
+                set_variable = { pwcb_pick = 10 }
+            }
+            pwcb_s10_off_click = {
+                set_variable = { pwcb_pick = 10 }
+            }
+            pwcb_s11_on_click = {
+                set_variable = { pwcb_pick = 11 }
+            }
+            pwcb_s11_off_click = {
+                set_variable = { pwcb_pick = 11 }
+            }
+            pwcb_s12_on_click = {
+                set_variable = { pwcb_pick = 12 }
+            }
+            pwcb_s12_off_click = {
+                set_variable = { pwcb_pick = 12 }
+            }
+            pwcb_s13_on_click = {
+                set_variable = { pwcb_pick = 13 }
+            }
+            pwcb_s13_off_click = {
+                set_variable = { pwcb_pick = 13 }
+            }
+            pwcb_s14_on_click = {
+                set_variable = { pwcb_pick = 14 }
+            }
+            pwcb_s14_off_click = {
+                set_variable = { pwcb_pick = 14 }
+            }
+        }
+    }
+}

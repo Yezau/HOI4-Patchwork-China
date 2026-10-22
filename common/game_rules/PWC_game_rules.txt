@@ -130,6 +130,22 @@ pwc_war_warning = {
         allow_achievements = no
     }
 }
+pwc_war_warning_alert = {
+    name = "PWC_RULE_WAR_WARNING_ALERT"
+    group = "PWC_RULE_GROUP_WAR"
+    default = {
+        name = "ON"
+        text = "PWC_RULE_WAR_WARNING_ALERT_ON"
+        desc = "PWC_RULE_WAR_WARNING_ALERT_ON_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "OFF"
+        text = "PWC_RULE_WAR_WARNING_ALERT_OFF"
+        desc = "PWC_RULE_WAR_WARNING_ALERT_OFF_DESC"
+        allow_achievements = no
+    }
+}
 pwc_ai_adjacent_player_war = {
     name = "PWC_RULE_AI_ADJACENT_PLAYER_WAR"
     group = "PWC_RULE_GROUP_WAR"

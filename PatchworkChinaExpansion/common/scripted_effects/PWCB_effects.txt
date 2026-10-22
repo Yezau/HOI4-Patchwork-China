@@ -1,0 +1,397 @@
+pwcb_init = {
+    set_global_flag = pwcb_started
+    23 = { set_state_flag = pwcb_mountain }
+    63 = { set_state_flag = pwcb_mountain }
+    71 = { set_state_flag = pwcb_mountain }
+    80 = { set_state_flag = pwcb_mountain }
+    89 = { set_state_flag = pwcb_mountain }
+    93 = { set_state_flag = pwcb_mountain }
+    94 = { set_state_flag = pwcb_mountain }
+    97 = { set_state_flag = pwcb_mountain }
+    99 = { set_state_flag = pwcb_mountain }
+    104 = { set_state_flag = pwcb_mountain }
+    109 = { set_state_flag = pwcb_mountain }
+    116 = { set_state_flag = pwcb_mountain }
+    120 = { set_state_flag = pwcb_mountain }
+    125 = { set_state_flag = pwcb_mountain }
+    131 = { set_state_flag = pwcb_mountain }
+    133 = { set_state_flag = pwcb_mountain }
+    136 = { set_state_flag = pwcb_mountain }
+    139 = { set_state_flag = pwcb_mountain }
+    142 = { set_state_flag = pwcb_mountain }
+    152 = { set_state_flag = pwcb_mountain }
+    154 = { set_state_flag = pwcb_mountain }
+    155 = { set_state_flag = pwcb_mountain }
+    157 = { set_state_flag = pwcb_mountain }
+    164 = { set_state_flag = pwcb_mountain }
+    175 = { set_state_flag = pwcb_mountain }
+    183 = { set_state_flag = pwcb_mountain }
+    188 = { set_state_flag = pwcb_mountain }
+    190 = { set_state_flag = pwcb_mountain }
+    204 = { set_state_flag = pwcb_mountain }
+    209 = { set_state_flag = pwcb_mountain }
+    222 = { set_state_flag = pwcb_mountain }
+    236 = { set_state_flag = pwcb_mountain }
+    240 = { set_state_flag = pwcb_mountain }
+    245 = { set_state_flag = pwcb_mountain }
+    267 = { set_state_flag = pwcb_mountain }
+    275 = { set_state_flag = pwcb_mountain }
+    279 = { set_state_flag = pwcb_mountain }
+    280 = { set_state_flag = pwcb_mountain }
+    309 = { set_state_flag = pwcb_mountain }
+    311 = { set_state_flag = pwcb_mountain }
+    434 = { set_state_flag = pwcb_mountain }
+}
+pwcb_reset_endurance = {
+    set_variable = { pwcb_hold = 0 }
+    set_variable = { pwcb_last_stand = 0 }
+    clr_country_flag = pwcb_holding
+    clr_country_flag = pwcb_last_standing
+}
+pwcb_sync_war_foes = {
+    clear_array = pwcb_war_foes
+    if = {
+        limit = { has_war = no }
+        pwcb_reset_endurance = yes
+    }
+    every_enemy_country = {
+        add_to_array = { array = PREV.pwcb_war_foes value = THIS }
+    }
+}
+pwcb_init_war_foes = {
+    set_global_flag = pwcb_war_roster_v1
+    every_country = {
+        limit = { pwc_st_live_city_country = yes has_war = yes }
+        if = {
+            limit = { NOT = { has_country_flag = pwcb_in_war } }
+            set_country_flag = pwcb_in_war
+        }
+        pwcb_sync_war_foes = yes
+    }
+}
+pwcb_refresh = {
+    if = {
+        limit = { NOT = { has_dynamic_modifier = { modifier = pwcb_art_of_war } } }
+        add_dynamic_modifier = { modifier = pwcb_art_of_war }
+    }
+    force_update_dynamic_modifier = yes
+}
+pwcb_learn_shiji = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_shiji } }
+        set_country_flag = pwcb_ch_shiji
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_planning_speed = 0.1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_zuozhan = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_zuozhan } }
+        set_country_flag = pwcb_ch_zuozhan
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_equipment_capture_factor = 0.1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_mougong = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_mougong } }
+        set_country_flag = pwcb_ch_mougong
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_compliance_growth = 0.1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_junxing = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_junxing } }
+        set_country_flag = pwcb_ch_junxing
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_army_defence_factor = 0.05 }
+        add_to_variable = { pwcb_s_max_dig_in = 1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_bingshi = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_bingshi } }
+        set_country_flag = pwcb_ch_bingshi
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_breakthrough_factor = 0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_xushi = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_xushi } }
+        set_country_flag = pwcb_ch_xushi
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_army_speed_factor = 0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_junzheng = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_junzheng } }
+        set_country_flag = pwcb_ch_junzheng
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_naval_invasion_prep_speed = 0.2 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_jiubian = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_jiubian } }
+        set_country_flag = pwcb_ch_jiubian
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_command_power_gain_mult = 0.1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_xingjun = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_xingjun } }
+        set_country_flag = pwcb_ch_xingjun
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_supply_consumption_factor = -0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_dixing = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_dixing } }
+        set_country_flag = pwcb_ch_dixing
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_terrain_penalty_reduction = 0.1 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_jiudi = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_jiudi } }
+        set_country_flag = pwcb_ch_jiudi
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_huogong = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_huogong } }
+        set_country_flag = pwcb_ch_huogong
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_air_mission_efficiency = 0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_learn_yongjian = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_yongjian } }
+        set_country_flag = pwcb_ch_yongjian
+        add_to_variable = { pwcb_learnt = 1 }
+        add_to_variable = { pwcb_s_max_planning = 0.05 }
+        set_country_flag = pwcd_news
+        if = {
+            limit = { check_variable = { pwcb_learnt > 12 } }
+            set_country_flag = pwcb_sage
+            add_to_variable = { pwcb_s_experience_gain_army_factor = 0.1 }
+            add_to_variable = { pwcb_s_army_org_factor = 0.05 }
+        }
+        pwcb_refresh = yes
+    }
+}
+pwcb_check_endurance = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_junxing } }
+        if = {
+            limit = { has_war = yes enemies_strength_ratio > 1 }
+            if = {
+                limit = { NOT = { has_country_flag = pwcb_holding } }
+                set_country_flag = pwcb_holding
+                set_variable = { pwcb_hold = 0 }
+            }
+            if = {
+                limit = { has_country_flag = { flag = pwcb_holding days > 29 } }
+                set_variable = { pwcb_hold = 1 }
+            }
+            if = {
+                limit = { has_country_flag = { flag = pwcb_holding days > 59 } }
+                set_variable = { pwcb_hold = 2 }
+            }
+            if = {
+                limit = { has_country_flag = { flag = pwcb_holding days > 89 } }
+                set_variable = { pwcb_hold = 3 }
+            }
+            if = {
+                limit = { check_variable = { pwcb_hold > 2 } }
+                pwcb_learn_junxing = yes
+            }
+        }
+        else = {
+            clr_country_flag = pwcb_holding
+            set_variable = { pwcb_hold = 0 }
+        }
+    }
+    if = {
+        limit = { NOT = { has_country_flag = pwcb_ch_jiudi } }
+        if = {
+            limit = { has_war = yes check_variable = { var = enemies_strength_ratio value = 3 compare = greater_than_or_equals } }
+            if = {
+                limit = { NOT = { has_country_flag = pwcb_last_standing } }
+                set_country_flag = pwcb_last_standing
+                set_variable = { pwcb_last_stand = 0 }
+            }
+            if = {
+                limit = { has_country_flag = { flag = pwcb_last_standing days > 29 } }
+                set_variable = { pwcb_last_stand = 1 }
+            }
+            if = {
+                limit = { has_country_flag = { flag = pwcb_last_standing days > 59 } }
+                set_variable = { pwcb_last_stand = 2 }
+            }
+            if = {
+                limit = { check_variable = { pwcb_last_stand > 1 } }
+                pwcb_learn_jiudi = yes
+            }
+        }
+        else = {
+            clr_country_flag = pwcb_last_standing
+            set_variable = { pwcb_last_stand = 0 }
+        }
+    }
+}
+pwcb_daily = {
+    every_country = {
+        limit = { pwc_st_live_city_country = yes OR = { has_war = yes has_country_flag = pwcb_holding has_country_flag = pwcb_last_standing } OR = { NOT = { has_country_flag = pwcb_ch_junxing } NOT = { has_country_flag = pwcb_ch_jiudi } } }
+        pwcb_check_endurance = yes
+    }
+}
+pwcb_monthly = {
+    every_country = {
+        limit = { pwc_st_live_city_country = yes }
+        set_variable = { pwcb_mountains = 0 }
+        every_controlled_state = {
+            limit = { has_state_flag = pwcb_mountain }
+            PREV = { add_to_variable = { pwcb_mountains = 1 } }
+        }
+        if = {
+            limit = { check_variable = { pwcb_mountains > 2 } }
+            pwcb_learn_dixing = yes
+        }
+        pwcb_check_endurance = yes
+        if = {
+            limit = { num_of_controlled_states > 9 }
+            pwcb_learn_xingjun = yes
+        }
+        if = {
+            limit = { check_variable = { num_deployed_planes > 49 } }
+            pwcb_learn_huogong = yes
+        }
+        if = {
+            limit = { check_variable = { enemies^num > 2 } }
+            pwcb_learn_jiubian = yes
+        }
+        set_variable = { pwcb_month_taken = 0 }
+        clear_array = pwcb_taken_states
+    }
+}
+pwcb_weekly = {
+    every_country = {
+        limit = { pwc_st_live_city_country = yes }
+        if = {
+            limit = { has_war = yes }
+            add_to_variable = { pwcb_war_weeks = 1 }
+        }
+        else = {
+            clr_country_flag = pwcb_in_war
+            clear_array = pwcb_war_foes
+            pwcb_reset_endurance = yes
+            set_variable = { pwcb_war_weeks = 0 }
+        }
+    }
+}

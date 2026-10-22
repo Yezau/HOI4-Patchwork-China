@@ -201,7 +201,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "mainmenu_dlc_ownership"
 		position = { x=5 y =0 }
-		size = { width = 370 height = 684}
+		size = { width = 100%% height = 684 }
 		Orientation = lower_left
 		origo = lower_left
 		
@@ -213,6 +213,33 @@ guiTypes = {
 			slotsize = {width=50 height=51 }
 			max_slots_vertical = 1
 			format = "RIGHT"
+		}
+		containerWindowType = {
+			name = "pwc_expansion_badge"
+			position = { x = -74 y = 118 }
+			orientation = upper_right
+			size = { width = 64 height = 64 }
+			iconType = {
+				name = "pwc_expansion_badge_glow"
+				spriteType = "PWC_GFX_expansion_badge_glow"
+				position = { x = -64 y = -27 }
+				scale = 1.024
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "pwc_expansion_badge_button"
+				spriteType = "PWC_GFX_expansion_badge"
+				position = { x = 0 y = 0 }
+				pdx_tooltip = "PWC_EXPANSION_BADGE_TT"
+				web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3824467491"
+			}
+			iconType = {
+				name = "pwc_expansion_badge_tick"
+				spriteType = "PWC_GFX_expansion_badge_tick"
+				position = { x = 45 y = 31 }
+				orientation = center_left
+				alwaystransparent = yes
+			}
 		}
 	}
 	

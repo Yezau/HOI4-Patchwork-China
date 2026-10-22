@@ -1,0 +1,1609 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwcb_page"
+        orientation = upper_right
+        position = { x = -720 y = 125 }
+        size = { width = 642 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCD_GFX_panel"
+        }
+        iconType = {
+            name = "pwcb_detail"
+            spriteType = "PWCB_GFX_detail"
+            position = { x = 20 y = 236 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCD_TITLE"
+            maxWidth = 76
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_tab_1"
+            position = { x = 104 y = 13 }
+            spriteType = "PWCD_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_tab_1_text"
+            position = { x = 104 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCD_TAB_1"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_tab_2"
+            spriteType = "PWCD_GFX_tab_on"
+            position = { x = 190 y = 13 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_tab_2_text"
+            position = { x = 190 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCD_TAB_2_ON"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_subtitle"
+            position = { x = 276 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_SUBTITLE"
+            maxWidth = 320
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_close"
+            position = { x = 604 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        iconType = {
+            name = "pwcb_s1_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 17 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s1_on"
+            position = { x = 20 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s1_off"
+            position = { x = 20 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s1_name"
+            position = { x = 20 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S1"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s1_done"
+            position = { x = 18 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S1_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s1_todo"
+            position = { x = 18 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S1_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d1_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D1_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d1_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D1_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d1_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D1_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d1_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D1_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s2_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 60 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s2_on"
+            position = { x = 63 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s2_off"
+            position = { x = 63 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s2_name"
+            position = { x = 63 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S2"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s2_done"
+            position = { x = 61 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S2_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s2_todo"
+            position = { x = 61 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S2_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d2_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D2_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d2_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D2_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d2_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D2_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d2_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D2_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s3_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 103 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s3_on"
+            position = { x = 106 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s3_off"
+            position = { x = 106 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s3_name"
+            position = { x = 106 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S3"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s3_done"
+            position = { x = 104 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S3_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s3_todo"
+            position = { x = 104 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S3_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d3_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D3_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d3_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D3_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d3_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D3_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d3_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D3_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s4_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 146 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s4_on"
+            position = { x = 149 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s4_off"
+            position = { x = 149 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s4_name"
+            position = { x = 149 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S4"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s4_done"
+            position = { x = 147 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S4_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s4_todo"
+            position = { x = 147 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S4_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d4_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D4_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d4_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D4_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d4_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D4_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d4_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D4_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s5_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 189 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s5_on"
+            position = { x = 192 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s5_off"
+            position = { x = 192 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s5_name"
+            position = { x = 192 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S5"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s5_done"
+            position = { x = 190 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S5_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s5_todo"
+            position = { x = 190 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S5_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d5_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D5_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d5_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D5_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d5_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D5_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d5_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D5_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s6_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 232 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s6_on"
+            position = { x = 235 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s6_off"
+            position = { x = 235 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s6_name"
+            position = { x = 235 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S6"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s6_done"
+            position = { x = 233 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S6_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s6_todo"
+            position = { x = 233 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S6_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d6_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D6_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d6_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D6_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d6_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D6_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d6_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D6_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s7_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 275 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s7_on"
+            position = { x = 278 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s7_off"
+            position = { x = 278 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s7_name"
+            position = { x = 278 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S7"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s7_done"
+            position = { x = 276 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S7_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s7_todo"
+            position = { x = 276 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S7_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d7_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D7_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d7_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D7_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d7_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D7_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d7_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D7_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s8_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 318 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s8_on"
+            position = { x = 321 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s8_off"
+            position = { x = 321 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s8_name"
+            position = { x = 321 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S8"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s8_done"
+            position = { x = 319 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S8_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s8_todo"
+            position = { x = 319 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S8_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d8_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D8_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d8_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D8_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d8_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D8_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d8_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D8_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s9_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 361 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s9_on"
+            position = { x = 364 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s9_off"
+            position = { x = 364 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s9_name"
+            position = { x = 364 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S9"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s9_done"
+            position = { x = 362 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S9_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s9_todo"
+            position = { x = 362 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S9_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d9_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D9_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d9_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D9_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d9_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D9_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d9_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D9_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s10_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 404 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s10_on"
+            position = { x = 407 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s10_off"
+            position = { x = 407 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s10_name"
+            position = { x = 407 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S10"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s10_done"
+            position = { x = 405 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S10_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s10_todo"
+            position = { x = 405 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S10_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d10_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D10_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d10_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D10_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d10_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D10_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d10_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D10_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s11_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 447 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s11_on"
+            position = { x = 450 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s11_off"
+            position = { x = 450 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s11_name"
+            position = { x = 450 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S11"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s11_done"
+            position = { x = 448 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S11_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s11_todo"
+            position = { x = 448 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S11_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d11_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D11_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d11_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D11_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d11_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D11_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d11_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D11_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s12_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 490 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s12_on"
+            position = { x = 493 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s12_off"
+            position = { x = 493 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s12_name"
+            position = { x = 493 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S12"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s12_done"
+            position = { x = 491 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S12_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s12_todo"
+            position = { x = 491 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S12_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d12_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D12_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d12_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D12_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d12_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D12_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d12_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D12_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcb_s13_pick"
+            spriteType = "PWCB_GFX_pick"
+            position = { x = 533 y = 51 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s13_on"
+            position = { x = 536 y = 54 }
+            spriteType = "PWCB_GFX_slip_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s13_off"
+            position = { x = 536 y = 54 }
+            spriteType = "PWCB_GFX_slip_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s13_name"
+            position = { x = 536 y = 84 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_S13"
+            maxWidth = 38
+            maxHeight = 62
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s13_done"
+            position = { x = 534 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S13_DONE"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s13_todo"
+            position = { x = 534 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S13_TODO"
+            maxWidth = 42
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d13_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D13_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d13_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D13_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d13_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D13_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d13_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D13_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcb_s14_on"
+            position = { x = 581 y = 108 }
+            spriteType = "PWCB_GFX_sage_on"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "pwcb_s14_off"
+            position = { x = 581 y = 108 }
+            spriteType = "PWCB_GFX_sage_off"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcb_s14_name"
+            position = { x = 581 y = 114 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCB_S14"
+            maxWidth = 40
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s14_done"
+            position = { x = 577 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S14_DONE"
+            maxWidth = 48
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_s14_todo"
+            position = { x = 577 y = 186 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_S14_TODO"
+            maxWidth = 48
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d14_title"
+            position = { x = 38 y = 242 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCB_D14_TITLE"
+            maxWidth = 262
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d14_quote"
+            position = { x = 304 y = 244 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D14_QUOTE"
+            maxWidth = 282
+            maxHeight = 36
+            fixedsize = yes
+            multiline = yes
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d14_body_done"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D14_BODY_DONE"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcb_d14_body_todo"
+            position = { x = 38 y = 288 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCB_D14_BODY_TODO"
+            maxWidth = 566
+            maxHeight = 60
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

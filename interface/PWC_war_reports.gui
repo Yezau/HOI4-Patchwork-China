@@ -7,36 +7,23 @@ guiTypes = {
         moveable = no
         buttonType = {
             name = "pwc_war_reports_toggle"
-            position = { x = -515 y = 3 }
+            position = { x = -451 y = 4 }
             orientation = upper_right
             spriteType = "PWC_GFX_war_reports_toggle"
             pdx_tooltip = "PWC_WAR_REPORTS_TOGGLE_TT"
             clicksound = click_default
         }
         instantTextBoxType = {
-            name = "pwc_war_reports_label"
-            position = { x = -505 y = 10 }
-            orientation = upper_right
-            font = "hoi_18mbs"
-            text = "PWC_WAR_REPORTS_TOGGLE"
-            maxWidth = 68
-            maxHeight = 24
-            fixedsize = yes
-            multiline = no
-            format = left
-            alwaystransparent = yes
-        }
-        instantTextBoxType = {
             name = "pwc_war_reports_unread"
-            position = { x = -435 y = 10 }
+            position = { x = -427 y = 4 }
             orientation = upper_right
             font = "hoi_18mbs"
             text = "PWC_WAR_REPORTS_UNREAD"
-            maxWidth = 20
-            maxHeight = 24
+            maxWidth = 12
+            maxHeight = 18
             fixedsize = yes
             multiline = no
-            format = left
+            format = center
             alwaystransparent = yes
         }
     }

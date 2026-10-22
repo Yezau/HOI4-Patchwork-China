@@ -1,0 +1,41 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwct_tianming option = ON } NOT = { has_global_flag = pwct_started } }
+                set_global_flag = pwct_started
+                pwct_reset_months = yes
+                pwct_draw_all = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwct_tianming option = ON } has_global_flag = pwct_started }
+                subtract_from_variable = { global.pwct_months_left = 1 }
+                if = {
+                    limit = { check_variable = { global.pwct_months_left < 1 } }
+                    pwct_reset_months = yes
+                    pwct_draw_all = yes
+                }
+                else = {
+                    pwct_expire_pending = yes
+                }
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwct_tianming option = ON } has_game_rule = { rule = pwct_catch_up option = ON } }
+                FROM = {
+                    if = {
+                        limit = { has_country_flag = pwct_enabled }
+                        set_country_flag = pwct_lost_state
+                    }
+                }
+            }
+        }
+    }
+}

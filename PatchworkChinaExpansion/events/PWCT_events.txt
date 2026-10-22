@@ -1,0 +1,57 @@
+add_namespace = pwct
+country_event = {
+    id = pwct.1
+    title = pwct.1.t
+    desc = pwct.1.d
+    picture = PWC_GFX_event_report_civic
+    is_triggered_only = yes
+    option = {
+        name = pwct.1.a
+        set_country_flag = pwct_panel_open
+        clr_country_flag = pwct_collection_open
+    }
+    option = {
+        name = pwct.1.b
+    }
+}
+country_event = {
+    id = pwct.2
+    title = pwct.2.t
+    desc = pwct.2.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwct.2.a
+    }
+}
+country_event = {
+    id = pwct.3
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = { has_country_flag = pwct_pending }
+            pwct_auto_pick = yes
+        }
+    }
+}
+country_event = {
+    id = pwct.4
+    title = pwct.4.t
+    desc = pwct.4.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwct.4.a
+    }
+}
+country_event = {
+    id = pwct.5
+    title = pwct.5.t
+    desc = pwct.5.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwct.5.a
+    }
+}

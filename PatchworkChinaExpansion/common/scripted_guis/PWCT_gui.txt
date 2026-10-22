@@ -1,0 +1,721 @@
+scripted_gui = {
+    pwct_topbar = {
+        context_type = player_context
+        window_name = pwct_topbar_window
+        ai_enabled = { always = no }
+        visible = { has_country_flag = pwct_enabled }
+        triggers = {
+            pwct_topbar_pending_visible = {
+                has_country_flag = pwct_pending
+            }
+        }
+        effects = {
+            pwct_topbar_toggle_click = {
+                if = {
+                    limit = { OR = { has_country_flag = pwct_panel_open has_country_flag = pwct_collection_open } }
+                    clr_country_flag = pwct_panel_open
+                    clr_country_flag = pwct_collection_open
+                }
+                else = {
+                    set_country_flag = pwct_panel_open
+                    set_variable = { pwcd_page = 0 }
+                }
+            }
+        }
+    }
+    pwct_panel_gui = {
+        context_type = player_context
+        window_name = pwct_panel
+        ai_enabled = { always = no }
+        visible = { has_country_flag = pwct_enabled has_country_flag = pwct_panel_open has_country_flag = pwc_flag_welcome_dismissed NOT = { check_variable = { pwct_slots = 4 } } }
+        properties = {
+            pwct_card_1_frame = {
+                frame = pwct_offer_1_frame
+            }
+            pwct_card_1_art = {
+                image = "[PWCT_Slot1Art]"
+            }
+            pwct_card_2_frame = {
+                frame = pwct_offer_2_frame
+            }
+            pwct_card_2_art = {
+                image = "[PWCT_Slot2Art]"
+            }
+            pwct_card_3_frame = {
+                frame = pwct_offer_3_frame
+            }
+            pwct_card_3_art = {
+                image = "[PWCT_Slot3Art]"
+            }
+        }
+        triggers = {
+            pwct_card_1_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 } OR = { NOT = { check_variable = { pwct_offer_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_card_2_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 } OR = { NOT = { check_variable = { pwct_offer_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_card_3_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 } OR = { NOT = { check_variable = { pwct_offer_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_reroll_visible = {
+                has_country_flag = pwct_pending
+            }
+            pwct_reroll_text_visible = {
+                has_country_flag = pwct_pending
+            }
+            pwct_reroll_click_enabled = {
+                has_country_flag = pwct_pending OR = { AND = { check_variable = { pwct_reroll_used = 0 } OR = { AND = { check_variable = { pwct_alt1_1 > 0 } OR = { NOT = { check_variable = { pwct_alt1_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_2 > 0 } OR = { NOT = { check_variable = { pwct_alt1_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_3 > 0 } OR = { NOT = { check_variable = { pwct_alt1_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_4 > 0 } OR = { NOT = { check_variable = { pwct_alt1_4 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } } has_political_power > 29 } AND = { check_variable = { pwct_reroll_used = 1 } OR = { AND = { check_variable = { pwct_alt2_1 > 0 } OR = { NOT = { check_variable = { pwct_alt2_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_2 > 0 } OR = { NOT = { check_variable = { pwct_alt2_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_3 > 0 } OR = { NOT = { check_variable = { pwct_alt2_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_4 > 0 } OR = { NOT = { check_variable = { pwct_alt2_4 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } } has_political_power > 59 } }
+            }
+            pwct_done_text_visible = {
+                NOT = { has_country_flag = pwct_pending }
+            }
+        }
+        effects = {
+            pwct_card_1_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_1 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_card_2_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_2 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_card_3_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_3 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_reroll_click = {
+                pwct_reroll = yes
+            }
+            pwct_close_click = {
+                clr_country_flag = pwct_panel_open
+            }
+            pwct_collection_click = {
+                clr_country_flag = pwct_panel_open
+                set_country_flag = pwct_collection_open
+            }
+        }
+    }
+    pwct_panel_wide_gui = {
+        context_type = player_context
+        window_name = pwct_panel_wide
+        ai_enabled = { always = no }
+        visible = { has_country_flag = pwct_enabled has_country_flag = pwct_panel_open has_country_flag = pwc_flag_welcome_dismissed check_variable = { pwct_slots = 4 } }
+        properties = {
+            pwct_card_1_frame = {
+                frame = pwct_offer_1_frame
+            }
+            pwct_card_1_art = {
+                image = "[PWCT_Slot1Art]"
+            }
+            pwct_card_2_frame = {
+                frame = pwct_offer_2_frame
+            }
+            pwct_card_2_art = {
+                image = "[PWCT_Slot2Art]"
+            }
+            pwct_card_3_frame = {
+                frame = pwct_offer_3_frame
+            }
+            pwct_card_3_art = {
+                image = "[PWCT_Slot3Art]"
+            }
+            pwct_card_4_frame = {
+                frame = pwct_offer_4_frame
+            }
+            pwct_card_4_art = {
+                image = "[PWCT_Slot4Art]"
+            }
+        }
+        triggers = {
+            pwct_card_1_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 }
+            }
+            pwct_card_1_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_1 > 0 } OR = { NOT = { check_variable = { pwct_offer_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_card_2_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 }
+            }
+            pwct_card_2_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_2 > 0 } OR = { NOT = { check_variable = { pwct_offer_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_card_3_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 }
+            }
+            pwct_card_3_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_3 > 0 } OR = { NOT = { check_variable = { pwct_offer_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_card_4_frame_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_art_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_meta_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_seal_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_name_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_level_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_desc_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_choose_visible = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 }
+            }
+            pwct_card_4_choose_click_enabled = {
+                has_country_flag = pwct_pending check_variable = { pwct_offer_4 > 0 } OR = { NOT = { check_variable = { pwct_offer_4 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } }
+            }
+            pwct_reroll_visible = {
+                has_country_flag = pwct_pending
+            }
+            pwct_reroll_text_visible = {
+                has_country_flag = pwct_pending
+            }
+            pwct_reroll_click_enabled = {
+                has_country_flag = pwct_pending OR = { AND = { check_variable = { pwct_reroll_used = 0 } OR = { AND = { check_variable = { pwct_alt1_1 > 0 } OR = { NOT = { check_variable = { pwct_alt1_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_2 > 0 } OR = { NOT = { check_variable = { pwct_alt1_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_3 > 0 } OR = { NOT = { check_variable = { pwct_alt1_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt1_4 > 0 } OR = { NOT = { check_variable = { pwct_alt1_4 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } } has_political_power > 29 } AND = { check_variable = { pwct_reroll_used = 1 } OR = { AND = { check_variable = { pwct_alt2_1 > 0 } OR = { NOT = { check_variable = { pwct_alt2_1 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_2 > 0 } OR = { NOT = { check_variable = { pwct_alt2_2 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_3 > 0 } OR = { NOT = { check_variable = { pwct_alt2_3 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } AND = { check_variable = { pwct_alt2_4 > 0 } OR = { NOT = { check_variable = { pwct_alt2_4 = 36 } } capital_scope = { free_building_slots = { building = industrial_complex size > 0 include_locked = no } } } } } has_political_power > 59 } }
+            }
+            pwct_done_text_visible = {
+                NOT = { has_country_flag = pwct_pending }
+            }
+        }
+        effects = {
+            pwct_card_1_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_1 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_card_2_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_2 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_card_3_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_3 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_card_4_choose_click = {
+                if = {
+                    limit = { has_country_flag = pwct_pending }
+                    pwct_pick_slot_4 = yes
+                }
+                if = {
+                    limit = { NOT = { has_country_flag = pwct_pending } }
+                    clr_country_flag = pwct_panel_open
+                }
+            }
+            pwct_reroll_click = {
+                pwct_reroll = yes
+            }
+            pwct_close_click = {
+                clr_country_flag = pwct_panel_open
+            }
+            pwct_collection_click = {
+                clr_country_flag = pwct_panel_open
+                set_country_flag = pwct_collection_open
+            }
+        }
+    }
+    pwct_collection_gui = {
+        context_type = player_context
+        window_name = pwct_collection
+        ai_enabled = { always = no }
+        visible = { has_country_flag = pwct_enabled has_country_flag = pwct_collection_open has_country_flag = pwc_flag_welcome_dismissed }
+        triggers = {
+            pwct_coll_1_dim_visible = {
+                NOT = { check_variable = { pwct_lv_1 > 0 } }
+            }
+            pwct_coll_1_lv_visible = {
+                check_variable = { pwct_lv_1 > 0 }
+            }
+            pwct_coll_2_dim_visible = {
+                NOT = { check_variable = { pwct_lv_2 > 0 } }
+            }
+            pwct_coll_2_lv_visible = {
+                check_variable = { pwct_lv_2 > 0 }
+            }
+            pwct_coll_3_dim_visible = {
+                NOT = { check_variable = { pwct_lv_3 > 0 } }
+            }
+            pwct_coll_3_lv_visible = {
+                check_variable = { pwct_lv_3 > 0 }
+            }
+            pwct_coll_15_dim_visible = {
+                NOT = { check_variable = { pwct_lv_15 > 0 } }
+            }
+            pwct_coll_15_lv_visible = {
+                check_variable = { pwct_lv_15 > 0 }
+            }
+            pwct_coll_16_dim_visible = {
+                NOT = { check_variable = { pwct_lv_16 > 0 } }
+            }
+            pwct_coll_16_lv_visible = {
+                check_variable = { pwct_lv_16 > 0 }
+            }
+            pwct_coll_4_dim_visible = {
+                NOT = { check_variable = { pwct_lv_4 > 0 } }
+            }
+            pwct_coll_4_lv_visible = {
+                check_variable = { pwct_lv_4 > 0 }
+            }
+            pwct_coll_5_dim_visible = {
+                NOT = { check_variable = { pwct_lv_5 > 0 } }
+            }
+            pwct_coll_5_lv_visible = {
+                check_variable = { pwct_lv_5 > 0 }
+            }
+            pwct_coll_17_dim_visible = {
+                NOT = { check_variable = { pwct_lv_17 > 0 } }
+            }
+            pwct_coll_17_lv_visible = {
+                check_variable = { pwct_lv_17 > 0 }
+            }
+            pwct_coll_18_dim_visible = {
+                NOT = { check_variable = { pwct_lv_18 > 0 } }
+            }
+            pwct_coll_18_lv_visible = {
+                check_variable = { pwct_lv_18 > 0 }
+            }
+            pwct_coll_19_dim_visible = {
+                NOT = { check_variable = { pwct_lv_19 > 0 } }
+            }
+            pwct_coll_19_lv_visible = {
+                check_variable = { pwct_lv_19 > 0 }
+            }
+            pwct_coll_20_dim_visible = {
+                NOT = { check_variable = { pwct_lv_20 > 0 } }
+            }
+            pwct_coll_20_lv_visible = {
+                check_variable = { pwct_lv_20 > 0 }
+            }
+            pwct_coll_21_dim_visible = {
+                NOT = { check_variable = { pwct_lv_21 > 0 } }
+            }
+            pwct_coll_21_lv_visible = {
+                check_variable = { pwct_lv_21 > 0 }
+            }
+            pwct_coll_22_dim_visible = {
+                NOT = { check_variable = { pwct_lv_22 > 0 } }
+            }
+            pwct_coll_22_lv_visible = {
+                check_variable = { pwct_lv_22 > 0 }
+            }
+            pwct_coll_6_dim_visible = {
+                NOT = { check_variable = { pwct_lv_6 > 0 } }
+            }
+            pwct_coll_6_lv_visible = {
+                check_variable = { pwct_lv_6 > 0 }
+            }
+            pwct_coll_48_dim_visible = {
+                NOT = { check_variable = { pwct_lv_48 > 0 } }
+            }
+            pwct_coll_48_lv_visible = {
+                check_variable = { pwct_lv_48 > 0 }
+            }
+            pwct_coll_7_dim_visible = {
+                NOT = { check_variable = { pwct_lv_7 > 0 } }
+            }
+            pwct_coll_7_lv_visible = {
+                check_variable = { pwct_lv_7 > 0 }
+            }
+            pwct_coll_23_dim_visible = {
+                NOT = { check_variable = { pwct_lv_23 > 0 } }
+            }
+            pwct_coll_23_lv_visible = {
+                check_variable = { pwct_lv_23 > 0 }
+            }
+            pwct_coll_8_dim_visible = {
+                NOT = { check_variable = { pwct_lv_8 > 0 } }
+            }
+            pwct_coll_8_lv_visible = {
+                check_variable = { pwct_lv_8 > 0 }
+            }
+            pwct_coll_9_dim_visible = {
+                NOT = { check_variable = { pwct_lv_9 > 0 } }
+            }
+            pwct_coll_9_lv_visible = {
+                check_variable = { pwct_lv_9 > 0 }
+            }
+            pwct_coll_24_dim_visible = {
+                NOT = { check_variable = { pwct_lv_24 > 0 } }
+            }
+            pwct_coll_24_lv_visible = {
+                check_variable = { pwct_lv_24 > 0 }
+            }
+            pwct_coll_25_dim_visible = {
+                NOT = { check_variable = { pwct_lv_25 > 0 } }
+            }
+            pwct_coll_25_lv_visible = {
+                check_variable = { pwct_lv_25 > 0 }
+            }
+            pwct_coll_10_dim_visible = {
+                NOT = { check_variable = { pwct_lv_10 > 0 } }
+            }
+            pwct_coll_10_lv_visible = {
+                check_variable = { pwct_lv_10 > 0 }
+            }
+            pwct_coll_26_dim_visible = {
+                NOT = { check_variable = { pwct_lv_26 > 0 } }
+            }
+            pwct_coll_26_lv_visible = {
+                check_variable = { pwct_lv_26 > 0 }
+            }
+            pwct_coll_27_dim_visible = {
+                NOT = { check_variable = { pwct_lv_27 > 0 } }
+            }
+            pwct_coll_27_lv_visible = {
+                check_variable = { pwct_lv_27 > 0 }
+            }
+            pwct_coll_28_dim_visible = {
+                NOT = { check_variable = { pwct_lv_28 > 0 } }
+            }
+            pwct_coll_28_lv_visible = {
+                check_variable = { pwct_lv_28 > 0 }
+            }
+            pwct_coll_29_dim_visible = {
+                NOT = { check_variable = { pwct_lv_29 > 0 } }
+            }
+            pwct_coll_29_lv_visible = {
+                check_variable = { pwct_lv_29 > 0 }
+            }
+            pwct_coll_46_dim_visible = {
+                NOT = { check_variable = { pwct_lv_46 > 0 } }
+            }
+            pwct_coll_46_lv_visible = {
+                check_variable = { pwct_lv_46 > 0 }
+            }
+            pwct_coll_49_dim_visible = {
+                NOT = { check_variable = { pwct_lv_49 > 0 } }
+            }
+            pwct_coll_49_lv_visible = {
+                check_variable = { pwct_lv_49 > 0 }
+            }
+            pwct_coll_30_dim_visible = {
+                NOT = { check_variable = { pwct_lv_30 > 0 } }
+            }
+            pwct_coll_30_lv_visible = {
+                check_variable = { pwct_lv_30 > 0 }
+            }
+            pwct_coll_11_dim_visible = {
+                NOT = { check_variable = { pwct_lv_11 > 0 } }
+            }
+            pwct_coll_11_lv_visible = {
+                check_variable = { pwct_lv_11 > 0 }
+            }
+            pwct_coll_12_dim_visible = {
+                NOT = { check_variable = { pwct_lv_12 > 0 } }
+            }
+            pwct_coll_12_lv_visible = {
+                check_variable = { pwct_lv_12 > 0 }
+            }
+            pwct_coll_31_dim_visible = {
+                NOT = { check_variable = { pwct_lv_31 > 0 } }
+            }
+            pwct_coll_31_lv_visible = {
+                check_variable = { pwct_lv_31 > 0 }
+            }
+            pwct_coll_35_dim_visible = {
+                NOT = { check_variable = { pwct_lv_35 > 0 } }
+            }
+            pwct_coll_35_lv_visible = {
+                check_variable = { pwct_lv_35 > 0 }
+            }
+            pwct_coll_37_dim_visible = {
+                NOT = { check_variable = { pwct_lv_37 > 0 } }
+            }
+            pwct_coll_37_lv_visible = {
+                check_variable = { pwct_lv_37 > 0 }
+            }
+            pwct_coll_32_dim_visible = {
+                NOT = { check_variable = { pwct_lv_32 > 0 } }
+            }
+            pwct_coll_32_lv_visible = {
+                check_variable = { pwct_lv_32 > 0 }
+            }
+            pwct_coll_33_dim_visible = {
+                NOT = { check_variable = { pwct_lv_33 > 0 } }
+            }
+            pwct_coll_33_lv_visible = {
+                check_variable = { pwct_lv_33 > 0 }
+            }
+            pwct_coll_34_dim_visible = {
+                NOT = { check_variable = { pwct_lv_34 > 0 } }
+            }
+            pwct_coll_34_lv_visible = {
+                check_variable = { pwct_lv_34 > 0 }
+            }
+            pwct_coll_36_dim_visible = {
+                NOT = { check_variable = { pwct_lv_36 > 0 } }
+            }
+            pwct_coll_36_lv_visible = {
+                check_variable = { pwct_lv_36 > 0 }
+            }
+            pwct_coll_47_dim_visible = {
+                NOT = { check_variable = { pwct_lv_47 > 0 } }
+            }
+            pwct_coll_47_lv_visible = {
+                check_variable = { pwct_lv_47 > 0 }
+            }
+            pwct_coll_13_dim_visible = {
+                NOT = { check_variable = { pwct_lv_13 > 0 } }
+            }
+            pwct_coll_13_lv_visible = {
+                check_variable = { pwct_lv_13 > 0 }
+            }
+            pwct_coll_14_dim_visible = {
+                NOT = { check_variable = { pwct_hand_14 > 0 } }
+            }
+            pwct_coll_14_lv_visible = {
+                check_variable = { pwct_hand_14 > 0 }
+            }
+            pwct_coll_43_dim_visible = {
+                NOT = { check_variable = { pwct_hand_43 > 0 } }
+            }
+            pwct_coll_43_lv_visible = {
+                check_variable = { pwct_hand_43 > 0 }
+            }
+            pwct_coll_44_dim_visible = {
+                NOT = { check_variable = { pwct_hand_44 > 0 } }
+            }
+            pwct_coll_44_lv_visible = {
+                check_variable = { pwct_hand_44 > 0 }
+            }
+            pwct_coll_38_dim_visible = {
+                NOT = { check_variable = { pwct_hand_38 > 0 } }
+            }
+            pwct_coll_38_lv_visible = {
+                check_variable = { pwct_hand_38 > 0 }
+            }
+            pwct_coll_39_dim_visible = {
+                NOT = { check_variable = { pwct_hand_39 > 0 } }
+            }
+            pwct_coll_39_lv_visible = {
+                check_variable = { pwct_hand_39 > 0 }
+            }
+            pwct_coll_41_dim_visible = {
+                NOT = { check_variable = { pwct_hand_41 > 0 } }
+            }
+            pwct_coll_41_lv_visible = {
+                check_variable = { pwct_hand_41 > 0 }
+            }
+            pwct_coll_42_dim_visible = {
+                NOT = { check_variable = { pwct_hand_42 > 0 } }
+            }
+            pwct_coll_42_lv_visible = {
+                check_variable = { pwct_hand_42 > 0 }
+            }
+            pwct_coll_45_dim_visible = {
+                NOT = { check_variable = { pwct_hand_45 > 0 } }
+            }
+            pwct_coll_45_lv_visible = {
+                check_variable = { pwct_hand_45 > 0 }
+            }
+            pwct_coll_50_dim_visible = {
+                NOT = { check_variable = { pwct_hand_50 > 0 } }
+            }
+            pwct_coll_50_lv_visible = {
+                check_variable = { pwct_hand_50 > 0 }
+            }
+            pwct_coll_40_dim_visible = {
+                NOT = { check_variable = { pwct_hand_40 > 0 } }
+            }
+            pwct_coll_40_lv_visible = {
+                check_variable = { pwct_hand_40 > 0 }
+            }
+            pwct_coll_omen_head_visible = {
+                check_variable = { global.pwct_omen > 0 }
+            }
+            pwct_coll_omen_visible = {
+                check_variable = { global.pwct_omen > 0 }
+            }
+            pwct_coll_omen_text_visible = {
+                check_variable = { global.pwct_omen > 0 }
+            }
+        }
+        effects = {
+            pwct_coll_close_click = {
+                clr_country_flag = pwct_collection_open
+            }
+            pwct_coll_draw_click = {
+                clr_country_flag = pwct_collection_open
+                set_country_flag = pwct_panel_open
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwcd_topbar_window"
+        position = { x = 0 y = 0 }
+        size = { width = 100%% height = 100%% }
+        orientation = upper_left
+        moveable = no
+        buttonType = {
+            name = "pwcd_topbar_toggle"
+            position = { x = -527 y = 4 }
+            orientation = upper_right
+            spriteType = "PWCD_GFX_topbar"
+            pdx_tooltip = "PWCD_TOPBAR_TT"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcd_topbar_news"
+            position = { x = -503 y = 4 }
+            orientation = upper_right
+            font = "hoi_18mbs"
+            text = "PWCD_TOPBAR_NEWS"
+            maxWidth = 12
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+}

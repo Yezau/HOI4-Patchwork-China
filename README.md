@@ -18,11 +18,24 @@
 ## 游玩说明
 
 - **适配游戏版本：** `1.19.*`
-- **当前 MOD 版本：** `0.1.13`
+- **当前 MOD 版本：** `0.2.0`
 
 本次更新内容见[更新日志](CHANGELOG.md)。
 
 内容与平衡仍在完善中，欢迎反馈问题和建议。
+
+## 玩法拓展
+
+可选的玩法拓展「中国每人一小块地•玩法拓展」（启动器中名为
+Patchwork China Gameplay Expansion），需与本体一同启用：
+
+- **天命**：开局与之后默认每 6 个月从 3 张天命卡中选择 1 张，
+    卡牌可升级、凑成套装与组合，另有奇谋卡与天象。
+- **风物**：拥有并控制地方风物所在的州即可获得加成，十处天下名胜各带单独加成。
+- **兵书**：按战绩自动领悟《孙子兵法》十三篇，每篇各带加成。
+
+每项玩法都可在开局规则的“玩法拓展”分组中单独关闭。
+[点击订阅玩法拓展](https://steamcommunity.com/sharedfiles/filedetails/?id=3824467491)
 
 ## 地图来源
 
@@ -49,6 +62,8 @@
 解压后，将 `PatchworkChina` 文件夹和 `PatchworkChina.mod` 放入 Windows“文档”下的
 `Paradox Interactive/Hearts of Iron IV/mod/`，再在启动器播放集中启用。
 详细步骤见包内 `INSTALL.txt`。
+玩法拓展安装包同理：将 `PatchworkChinaExpansion` 文件夹和
+`PatchworkChinaExpansion.mod` 放入同一目录，并与本体一同启用。
 
 ## 素材署名
 

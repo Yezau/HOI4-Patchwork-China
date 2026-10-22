@@ -1,0 +1,2494 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwct_topbar_window"
+        position = { x = 0 y = 0 }
+        size = { width = 100%% height = 100%% }
+        orientation = upper_left
+        moveable = no
+        buttonType = {
+            name = "pwct_topbar_toggle"
+            position = { x = -489 y = 4 }
+            orientation = upper_right
+            spriteType = "PWCT_GFX_topbar"
+            pdx_tooltip = "PWCT_TOPBAR_TT"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwct_topbar_pending"
+            position = { x = -465 y = 4 }
+            orientation = upper_right
+            font = "hoi_18mbs"
+            text = "PWCT_TOPBAR_PENDING"
+            maxWidth = 12
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwct_panel"
+        orientation = upper_right
+        position = { x = -720 y = 125 }
+        size = { width = 642 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCT_GFX_panel"
+        }
+        instantTextBoxType = {
+            name = "pwct_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCT_TITLE"
+            maxWidth = 90
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_subtitle"
+            position = { x = 116 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_SUBTITLE"
+            maxWidth = 238
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_collection"
+            position = { x = 360 y = 13 }
+            quadTextureSprite = "PWCT_GFX_button_small"
+            buttonFont = "hoi_16mbs"
+            buttonText = "PWCT_COLLECTION"
+            clicksound = click_default
+            pdx_tooltip = "PWCT_COLLECTION_TT"
+        }
+        buttonType = {
+            name = "pwct_reroll"
+            position = { x = 446 y = 13 }
+            quadTextureSprite = "PWCT_GFX_button"
+            clicksound = click_default
+            pdx_tooltip = "PWCT_REROLL_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_reroll_text"
+            position = { x = 446 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_REROLL"
+            maxWidth = 150
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_close"
+            position = { x = 604 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        containerWindowType = {
+            name = "pwct_card_1"
+            position = { x = 24 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_1_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_1_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT1_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_1_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT1_CHOOSE_TT"
+            }
+        }
+        containerWindowType = {
+            name = "pwct_card_2"
+            position = { x = 226 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_2_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_2_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT2_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_2_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT2_CHOOSE_TT"
+            }
+        }
+        containerWindowType = {
+            name = "pwct_card_3"
+            position = { x = 428 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_3_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_3_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT3_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_3_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT3_CHOOSE_TT"
+            }
+        }
+        instantTextBoxType = {
+            name = "pwct_done_text"
+            position = { x = 0 y = 178 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCT_DONE_TEXT"
+            maxWidth = 642
+            maxHeight = 64
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwct_panel_wide"
+        orientation = upper_right
+        position = { x = -922 y = 125 }
+        size = { width = 844 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCT_GFX_panel_wide"
+        }
+        instantTextBoxType = {
+            name = "pwct_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCT_TITLE"
+            maxWidth = 90
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_subtitle"
+            position = { x = 116 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_SUBTITLE"
+            maxWidth = 440
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_collection"
+            position = { x = 562 y = 13 }
+            quadTextureSprite = "PWCT_GFX_button_small"
+            buttonFont = "hoi_16mbs"
+            buttonText = "PWCT_COLLECTION"
+            clicksound = click_default
+            pdx_tooltip = "PWCT_COLLECTION_TT"
+        }
+        buttonType = {
+            name = "pwct_reroll"
+            position = { x = 648 y = 13 }
+            quadTextureSprite = "PWCT_GFX_button"
+            clicksound = click_default
+            pdx_tooltip = "PWCT_REROLL_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_reroll_text"
+            position = { x = 648 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_REROLL"
+            maxWidth = 150
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_close"
+            position = { x = 806 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        containerWindowType = {
+            name = "pwct_card_1"
+            position = { x = 24 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_1_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_1_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT1_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_1_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT1_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_1_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT1_CHOOSE_TT"
+            }
+        }
+        containerWindowType = {
+            name = "pwct_card_2"
+            position = { x = 226 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_2_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_2_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT2_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_2_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT2_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_2_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT2_CHOOSE_TT"
+            }
+        }
+        containerWindowType = {
+            name = "pwct_card_3"
+            position = { x = 428 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_3_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_3_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT3_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_3_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT3_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_3_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT3_CHOOSE_TT"
+            }
+        }
+        containerWindowType = {
+            name = "pwct_card_4"
+            position = { x = 630 y = 60 }
+            size = { width = 190 height = 296 }
+            iconType = {
+                name = "pwct_card_4_frame"
+                spriteType = "PWCT_GFX_card_frames"
+                position = { x = 0 y = 0 }
+                alwaystransparent = yes
+            }
+            iconType = {
+                name = "pwct_card_4_art"
+                spriteType = "PWCT_GFX_card_art_1"
+                position = { x = 45 y = 32 }
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_4_meta"
+                position = { x = 9 y = 5 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT4_META"
+                maxWidth = 140
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_4_seal"
+                position = { x = 162 y = 4 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT4_SEAL"
+                maxWidth = 20
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_4_name"
+                position = { x = 0 y = 124 }
+                orientation = upper_left
+                font = "PWC_focus_heading26"
+                text = "PWCT_SLOT4_NAME"
+                maxWidth = 190
+                maxHeight = 30
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_4_level"
+                position = { x = 0 y = 154 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT4_LEVEL"
+                maxWidth = 190
+                maxHeight = 18
+                fixedsize = yes
+                multiline = no
+                format = centre
+                alwaystransparent = yes
+            }
+            instantTextBoxType = {
+                name = "pwct_card_4_desc"
+                position = { x = 10 y = 178 }
+                orientation = upper_left
+                font = "hoi_16mbs"
+                text = "PWCT_SLOT4_DESC"
+                maxWidth = 170
+                maxHeight = 80
+                fixedsize = yes
+                multiline = yes
+                format = left
+                alwaystransparent = yes
+            }
+            buttonType = {
+                name = "pwct_card_4_choose"
+                position = { x = 20 y = 260 }
+                quadTextureSprite = "PWCT_GFX_button"
+                buttonFont = "hoi_16mbs"
+                buttonText = "PWCT_CHOOSE"
+                clicksound = click_default
+                pdx_tooltip = "PWCT_SLOT4_CHOOSE_TT"
+            }
+        }
+        instantTextBoxType = {
+            name = "pwct_done_text"
+            position = { x = 0 y = 178 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCT_DONE_TEXT"
+            maxWidth = 844
+            maxHeight = 64
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+    containerWindowType = {
+        name = "pwct_collection"
+        orientation = upper_right
+        position = { x = -840 y = 125 }
+        size = { width = 762 height = 362 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCT_GFX_collection_panel"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCT_TITLE"
+            maxWidth = 90
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_subtitle"
+            position = { x = 116 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_SUB_COLLECTION"
+            maxWidth = 506
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_draw"
+            position = { x = 636 y = 13 }
+            quadTextureSprite = "PWCT_GFX_button_small"
+            buttonFont = "hoi_16mbs"
+            buttonText = "PWCT_DRAW_VIEW"
+            clicksound = click_default
+            pdx_tooltip = "PWCT_DRAW_VIEW_TT"
+        }
+        buttonType = {
+            name = "pwct_coll_close"
+            position = { x = 724 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        buttonType = {
+            name = "pwct_coll_label_mil"
+            position = { x = 22 y = 62 }
+            spriteType = "PWCT_GFX_coll_label"
+            pdx_tooltip = "PWCT_SET_MIL_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_label_mil_text"
+            position = { x = 24 y = 64 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_LABEL_MIL"
+            maxWidth = 66
+            maxHeight = 44
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_1"
+            position = { x = 96 y = 62 }
+            spriteType = "PWCT_GFX_card_art_1"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_1_TT"
+        }
+        iconType = {
+            name = "pwct_coll_1_dim"
+            position = { x = 96 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_1_lv"
+            position = { x = 94 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_1_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_2"
+            position = { x = 134 y = 62 }
+            spriteType = "PWCT_GFX_card_art_2"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_2_TT"
+        }
+        iconType = {
+            name = "pwct_coll_2_dim"
+            position = { x = 134 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_2_lv"
+            position = { x = 132 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_2_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_3"
+            position = { x = 172 y = 62 }
+            spriteType = "PWCT_GFX_card_art_3"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_3_TT"
+        }
+        iconType = {
+            name = "pwct_coll_3_dim"
+            position = { x = 172 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_3_lv"
+            position = { x = 170 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_3_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_15"
+            position = { x = 210 y = 62 }
+            spriteType = "PWCT_GFX_card_art_15"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_15_TT"
+        }
+        iconType = {
+            name = "pwct_coll_15_dim"
+            position = { x = 210 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_15_lv"
+            position = { x = 208 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_15_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_16"
+            position = { x = 248 y = 62 }
+            spriteType = "PWCT_GFX_card_art_16"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_16_TT"
+        }
+        iconType = {
+            name = "pwct_coll_16_dim"
+            position = { x = 248 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_16_lv"
+            position = { x = 246 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_16_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_4"
+            position = { x = 286 y = 62 }
+            spriteType = "PWCT_GFX_card_art_4"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_4_TT"
+        }
+        iconType = {
+            name = "pwct_coll_4_dim"
+            position = { x = 286 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_4_lv"
+            position = { x = 284 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_4_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_5"
+            position = { x = 324 y = 62 }
+            spriteType = "PWCT_GFX_card_art_5"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_5_TT"
+        }
+        iconType = {
+            name = "pwct_coll_5_dim"
+            position = { x = 324 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_5_lv"
+            position = { x = 322 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_5_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_17"
+            position = { x = 362 y = 62 }
+            spriteType = "PWCT_GFX_card_art_17"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_17_TT"
+        }
+        iconType = {
+            name = "pwct_coll_17_dim"
+            position = { x = 362 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_17_lv"
+            position = { x = 360 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_17_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_18"
+            position = { x = 400 y = 62 }
+            spriteType = "PWCT_GFX_card_art_18"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_18_TT"
+        }
+        iconType = {
+            name = "pwct_coll_18_dim"
+            position = { x = 400 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_18_lv"
+            position = { x = 398 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_18_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_19"
+            position = { x = 438 y = 62 }
+            spriteType = "PWCT_GFX_card_art_19"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_19_TT"
+        }
+        iconType = {
+            name = "pwct_coll_19_dim"
+            position = { x = 438 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_19_lv"
+            position = { x = 436 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_19_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_20"
+            position = { x = 476 y = 62 }
+            spriteType = "PWCT_GFX_card_art_20"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_20_TT"
+        }
+        iconType = {
+            name = "pwct_coll_20_dim"
+            position = { x = 476 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_20_lv"
+            position = { x = 474 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_20_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_21"
+            position = { x = 514 y = 62 }
+            spriteType = "PWCT_GFX_card_art_21"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_21_TT"
+        }
+        iconType = {
+            name = "pwct_coll_21_dim"
+            position = { x = 514 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_21_lv"
+            position = { x = 512 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_21_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_22"
+            position = { x = 552 y = 62 }
+            spriteType = "PWCT_GFX_card_art_22"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_22_TT"
+        }
+        iconType = {
+            name = "pwct_coll_22_dim"
+            position = { x = 552 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_22_lv"
+            position = { x = 550 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_22_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_6"
+            position = { x = 590 y = 62 }
+            spriteType = "PWCT_GFX_card_art_6"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_6_TT"
+        }
+        iconType = {
+            name = "pwct_coll_6_dim"
+            position = { x = 590 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_6_lv"
+            position = { x = 588 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_6_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_48"
+            position = { x = 628 y = 62 }
+            spriteType = "PWCT_GFX_card_art_48"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_48_TT"
+        }
+        iconType = {
+            name = "pwct_coll_48_dim"
+            position = { x = 628 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_48_lv"
+            position = { x = 626 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_48_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_7"
+            position = { x = 666 y = 62 }
+            spriteType = "PWCT_GFX_card_art_7"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_7_TT"
+        }
+        iconType = {
+            name = "pwct_coll_7_dim"
+            position = { x = 666 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_7_lv"
+            position = { x = 664 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_7_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_23"
+            position = { x = 704 y = 62 }
+            spriteType = "PWCT_GFX_card_art_23"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_23_TT"
+        }
+        iconType = {
+            name = "pwct_coll_23_dim"
+            position = { x = 704 y = 62 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_23_lv"
+            position = { x = 702 y = 95 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_23_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_label_pol"
+            position = { x = 22 y = 116 }
+            spriteType = "PWCT_GFX_coll_label"
+            pdx_tooltip = "PWCT_SET_POL_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_label_pol_text"
+            position = { x = 24 y = 118 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_LABEL_POL"
+            maxWidth = 66
+            maxHeight = 44
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_8"
+            position = { x = 96 y = 116 }
+            spriteType = "PWCT_GFX_card_art_8"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_8_TT"
+        }
+        iconType = {
+            name = "pwct_coll_8_dim"
+            position = { x = 96 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_8_lv"
+            position = { x = 94 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_8_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_9"
+            position = { x = 134 y = 116 }
+            spriteType = "PWCT_GFX_card_art_9"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_9_TT"
+        }
+        iconType = {
+            name = "pwct_coll_9_dim"
+            position = { x = 134 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_9_lv"
+            position = { x = 132 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_9_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_24"
+            position = { x = 172 y = 116 }
+            spriteType = "PWCT_GFX_card_art_24"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_24_TT"
+        }
+        iconType = {
+            name = "pwct_coll_24_dim"
+            position = { x = 172 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_24_lv"
+            position = { x = 170 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_24_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_25"
+            position = { x = 210 y = 116 }
+            spriteType = "PWCT_GFX_card_art_25"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_25_TT"
+        }
+        iconType = {
+            name = "pwct_coll_25_dim"
+            position = { x = 210 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_25_lv"
+            position = { x = 208 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_25_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_10"
+            position = { x = 248 y = 116 }
+            spriteType = "PWCT_GFX_card_art_10"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_10_TT"
+        }
+        iconType = {
+            name = "pwct_coll_10_dim"
+            position = { x = 248 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_10_lv"
+            position = { x = 246 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_10_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_26"
+            position = { x = 286 y = 116 }
+            spriteType = "PWCT_GFX_card_art_26"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_26_TT"
+        }
+        iconType = {
+            name = "pwct_coll_26_dim"
+            position = { x = 286 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_26_lv"
+            position = { x = 284 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_26_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_27"
+            position = { x = 324 y = 116 }
+            spriteType = "PWCT_GFX_card_art_27"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_27_TT"
+        }
+        iconType = {
+            name = "pwct_coll_27_dim"
+            position = { x = 324 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_27_lv"
+            position = { x = 322 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_27_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_28"
+            position = { x = 362 y = 116 }
+            spriteType = "PWCT_GFX_card_art_28"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_28_TT"
+        }
+        iconType = {
+            name = "pwct_coll_28_dim"
+            position = { x = 362 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_28_lv"
+            position = { x = 360 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_28_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_29"
+            position = { x = 400 y = 116 }
+            spriteType = "PWCT_GFX_card_art_29"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_29_TT"
+        }
+        iconType = {
+            name = "pwct_coll_29_dim"
+            position = { x = 400 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_29_lv"
+            position = { x = 398 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_29_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_46"
+            position = { x = 438 y = 116 }
+            spriteType = "PWCT_GFX_card_art_46"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_46_TT"
+        }
+        iconType = {
+            name = "pwct_coll_46_dim"
+            position = { x = 438 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_46_lv"
+            position = { x = 436 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_46_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_49"
+            position = { x = 476 y = 116 }
+            spriteType = "PWCT_GFX_card_art_49"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_49_TT"
+        }
+        iconType = {
+            name = "pwct_coll_49_dim"
+            position = { x = 476 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_49_lv"
+            position = { x = 474 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_49_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_30"
+            position = { x = 514 y = 116 }
+            spriteType = "PWCT_GFX_card_art_30"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_30_TT"
+        }
+        iconType = {
+            name = "pwct_coll_30_dim"
+            position = { x = 514 y = 116 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_30_lv"
+            position = { x = 512 y = 149 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_30_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_label_eco"
+            position = { x = 22 y = 170 }
+            spriteType = "PWCT_GFX_coll_label"
+            pdx_tooltip = "PWCT_SET_ECO_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_label_eco_text"
+            position = { x = 24 y = 172 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_LABEL_ECO"
+            maxWidth = 66
+            maxHeight = 44
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_11"
+            position = { x = 96 y = 170 }
+            spriteType = "PWCT_GFX_card_art_11"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_11_TT"
+        }
+        iconType = {
+            name = "pwct_coll_11_dim"
+            position = { x = 96 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_11_lv"
+            position = { x = 94 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_11_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_12"
+            position = { x = 134 y = 170 }
+            spriteType = "PWCT_GFX_card_art_12"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_12_TT"
+        }
+        iconType = {
+            name = "pwct_coll_12_dim"
+            position = { x = 134 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_12_lv"
+            position = { x = 132 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_12_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_31"
+            position = { x = 172 y = 170 }
+            spriteType = "PWCT_GFX_card_art_31"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_31_TT"
+        }
+        iconType = {
+            name = "pwct_coll_31_dim"
+            position = { x = 172 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_31_lv"
+            position = { x = 170 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_31_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_35"
+            position = { x = 210 y = 170 }
+            spriteType = "PWCT_GFX_card_art_35"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_35_TT"
+        }
+        iconType = {
+            name = "pwct_coll_35_dim"
+            position = { x = 210 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_35_lv"
+            position = { x = 208 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_35_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_37"
+            position = { x = 248 y = 170 }
+            spriteType = "PWCT_GFX_card_art_37"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_37_TT"
+        }
+        iconType = {
+            name = "pwct_coll_37_dim"
+            position = { x = 248 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_37_lv"
+            position = { x = 246 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_37_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_32"
+            position = { x = 286 y = 170 }
+            spriteType = "PWCT_GFX_card_art_32"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_32_TT"
+        }
+        iconType = {
+            name = "pwct_coll_32_dim"
+            position = { x = 286 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_32_lv"
+            position = { x = 284 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_32_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_33"
+            position = { x = 324 y = 170 }
+            spriteType = "PWCT_GFX_card_art_33"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_33_TT"
+        }
+        iconType = {
+            name = "pwct_coll_33_dim"
+            position = { x = 324 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_33_lv"
+            position = { x = 322 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_33_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_34"
+            position = { x = 362 y = 170 }
+            spriteType = "PWCT_GFX_card_art_34"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_34_TT"
+        }
+        iconType = {
+            name = "pwct_coll_34_dim"
+            position = { x = 362 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_34_lv"
+            position = { x = 360 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_34_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_36"
+            position = { x = 400 y = 170 }
+            spriteType = "PWCT_GFX_card_art_36"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_36_TT"
+        }
+        iconType = {
+            name = "pwct_coll_36_dim"
+            position = { x = 400 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_36_lv"
+            position = { x = 398 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_36_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_47"
+            position = { x = 438 y = 170 }
+            spriteType = "PWCT_GFX_card_art_47"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_47_TT"
+        }
+        iconType = {
+            name = "pwct_coll_47_dim"
+            position = { x = 438 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_47_lv"
+            position = { x = 436 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_47_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_13"
+            position = { x = 476 y = 170 }
+            spriteType = "PWCT_GFX_card_art_13"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_13_TT"
+        }
+        iconType = {
+            name = "pwct_coll_13_dim"
+            position = { x = 476 y = 170 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_13_lv"
+            position = { x = 474 y = 203 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_13_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_label_strat"
+            position = { x = 22 y = 224 }
+            spriteType = "PWCT_GFX_coll_label"
+            pdx_tooltip = "PWCT_SET_STRAT_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_label_strat_text"
+            position = { x = 24 y = 226 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_LABEL_STRAT"
+            maxWidth = 66
+            maxHeight = 44
+            fixedsize = yes
+            multiline = yes
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_14"
+            position = { x = 96 y = 224 }
+            spriteType = "PWCT_GFX_card_art_14"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_14_TT"
+        }
+        iconType = {
+            name = "pwct_coll_14_dim"
+            position = { x = 96 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_14_lv"
+            position = { x = 94 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_14_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_43"
+            position = { x = 134 y = 224 }
+            spriteType = "PWCT_GFX_card_art_43"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_43_TT"
+        }
+        iconType = {
+            name = "pwct_coll_43_dim"
+            position = { x = 134 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_43_lv"
+            position = { x = 132 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_43_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_44"
+            position = { x = 172 y = 224 }
+            spriteType = "PWCT_GFX_card_art_44"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_44_TT"
+        }
+        iconType = {
+            name = "pwct_coll_44_dim"
+            position = { x = 172 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_44_lv"
+            position = { x = 170 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_44_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_38"
+            position = { x = 210 y = 224 }
+            spriteType = "PWCT_GFX_card_art_38"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_38_TT"
+        }
+        iconType = {
+            name = "pwct_coll_38_dim"
+            position = { x = 210 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_38_lv"
+            position = { x = 208 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_38_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_39"
+            position = { x = 248 y = 224 }
+            spriteType = "PWCT_GFX_card_art_39"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_39_TT"
+        }
+        iconType = {
+            name = "pwct_coll_39_dim"
+            position = { x = 248 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_39_lv"
+            position = { x = 246 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_39_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_41"
+            position = { x = 286 y = 224 }
+            spriteType = "PWCT_GFX_card_art_41"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_41_TT"
+        }
+        iconType = {
+            name = "pwct_coll_41_dim"
+            position = { x = 286 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_41_lv"
+            position = { x = 284 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_41_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_42"
+            position = { x = 324 y = 224 }
+            spriteType = "PWCT_GFX_card_art_42"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_42_TT"
+        }
+        iconType = {
+            name = "pwct_coll_42_dim"
+            position = { x = 324 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_42_lv"
+            position = { x = 322 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_42_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_45"
+            position = { x = 362 y = 224 }
+            spriteType = "PWCT_GFX_card_art_45"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_45_TT"
+        }
+        iconType = {
+            name = "pwct_coll_45_dim"
+            position = { x = 362 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_45_lv"
+            position = { x = 360 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_45_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_50"
+            position = { x = 400 y = 224 }
+            spriteType = "PWCT_GFX_card_art_50"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_50_TT"
+        }
+        iconType = {
+            name = "pwct_coll_50_dim"
+            position = { x = 400 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_50_lv"
+            position = { x = 398 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_50_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_40"
+            position = { x = 438 y = 224 }
+            spriteType = "PWCT_GFX_card_art_40"
+            scale = 0.36
+            pdx_tooltip = "PWCT_CARD_40_TT"
+        }
+        iconType = {
+            name = "pwct_coll_40_dim"
+            position = { x = 438 y = 224 }
+            spriteType = "PWCT_GFX_coll_dim"
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_40_lv"
+            position = { x = 436 y = 257 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COLL_40_LV"
+            maxWidth = 40
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combos"
+            position = { x = 24 y = 286 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBOS_HEAD"
+            maxWidth = 66
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_shanji"
+            position = { x = 96 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_SHANJI_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_shanji_text"
+            position = { x = 96 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_SHANJI"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_tiebi"
+            position = { x = 196 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_TIEBI_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_tiebi_text"
+            position = { x = 196 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_TIEBI"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_kuahai"
+            position = { x = 296 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_KUAHAI_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_kuahai_text"
+            position = { x = 296 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_KUAHAI"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_xingbang"
+            position = { x = 396 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_XINGBANG_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_xingbang_text"
+            position = { x = 396 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_XINGBANG"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_minben"
+            position = { x = 496 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_MINBEN_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_minben_text"
+            position = { x = 496 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_MINBEN"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_combo_quanmin"
+            position = { x = 596 y = 284 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_COMBO_QUANMIN_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_combo_quanmin_text"
+            position = { x = 596 y = 287 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_COMBO_QUANMIN"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_titles"
+            position = { x = 24 y = 314 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_TITLES_HEAD"
+            maxWidth = 66
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_title_bingjia"
+            position = { x = 96 y = 312 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_TITLE_BINGJIA_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_title_bingjia_text"
+            position = { x = 96 y = 315 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_TITLE_BINGJIA"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_title_fajia"
+            position = { x = 196 y = 312 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_TITLE_FAJIA_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_title_fajia_text"
+            position = { x = 196 y = 315 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_TITLE_FAJIA"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_title_shangjia"
+            position = { x = 296 y = 312 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_TITLE_SHANGJIA_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_title_shangjia_text"
+            position = { x = 296 y = 315 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_TITLE_SHANGJIA"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_omen_head"
+            position = { x = 408 y = 314 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_OMEN_HEAD"
+            maxWidth = 66
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwct_coll_omen"
+            position = { x = 480 y = 312 }
+            quadTextureSprite = "PWCT_GFX_combo_chip"
+            pdx_tooltip = "PWCT_OMEN_TT"
+        }
+        instantTextBoxType = {
+            name = "pwct_coll_omen_text"
+            position = { x = 480 y = 315 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCT_OMEN"
+            maxWidth = 96
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+}

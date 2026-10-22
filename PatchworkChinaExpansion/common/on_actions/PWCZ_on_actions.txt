@@ -1,0 +1,47 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } NOT = { has_global_flag = pwcz_started } }
+                pwcz_init = yes
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } has_global_flag = pwcz_started has_global_flag = pwcz_dirty }
+                clr_global_flag = pwcz_dirty
+                pwcz_recount = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } has_global_flag = pwcz_started }
+                pwcz_recount = yes
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } has_global_flag = pwcz_started FROM.FROM = { has_state_flag = pwcz_site } }
+                set_global_flag = pwcz_dirty
+            }
+        }
+    }
+    on_annex = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } has_global_flag = pwcz_started }
+                set_global_flag = pwcz_dirty
+            }
+        }
+    }
+    on_peaceconference_ended = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcz_cangzhen option = ON } has_global_flag = pwcz_started }
+                set_global_flag = pwcz_dirty
+            }
+        }
+    }
+}

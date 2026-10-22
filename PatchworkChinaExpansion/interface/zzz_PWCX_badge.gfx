@@ -1,0 +1,21 @@
+spriteTypes = {
+    spriteType = {
+        name = "PWC_GFX_expansion_badge"
+        texturefile = "gfx/interface/pwcx/expansion_badge.dds"
+    }
+    frameAnimatedSpriteType = {
+        name = "PWC_GFX_expansion_badge_glow"
+        texturefile = "gfx/interface/officer_corp/spirit_glow.dds"
+        noOfFrames = 3
+        animation_rate_fps = 1
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0.0
+        alwaystransparent = yes
+        effectFile = "gfx/FX/buttonstate_blendframes.lua"
+    }
+    spriteType = {
+        name = "PWC_GFX_expansion_badge_tick"
+        texturefile = "gfx/interface/check.dds"
+    }
+}
