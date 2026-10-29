@@ -1,0 +1,38 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcn_fengchao option = ON } NOT = { has_global_flag = pwcn_started } }
+                pwcn_init = yes
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = pwcn_fengchao option = ON } has_global_flag = pwcn_started }
+                pwcn_daily = yes
+            }
+        }
+    }
+    on_weekly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcn_fengchao option = ON } has_global_flag = pwcn_started }
+                pwcn_weekly = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcn_fengchao option = ON } has_global_flag = pwcn_started }
+                pwcn_monthly = yes
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcn_fengchao option = ON } has_global_flag = pwcn_started FROM.FROM = { has_state_flag = pwcn_hive } }
+                FROM.FROM = { pwcn_on_lost = yes }
+            }
+        }
+    }
+}

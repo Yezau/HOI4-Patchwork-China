@@ -1,0 +1,59 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { OR = { has_global_flag = pwcq_started has_global_flag = pwcn_started has_global_flag = pwco_started } NOT = { has_global_flag = pwch_counted } }
+                pwch_count_all = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { OR = { has_global_flag = pwcq_started has_global_flag = pwcn_started has_global_flag = pwco_started } }
+                pwch_count_all = yes
+            }
+        }
+    }
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = { OR = { has_global_flag = pwcq_started has_global_flag = pwcn_started has_global_flag = pwco_started } }
+                ROOT = {
+                    if = {
+                        limit = { pwc_st_live_city_country = yes }
+                        pwch_count = yes
+                    }
+                }
+                FROM = {
+                    if = {
+                        limit = { pwc_st_live_city_country = yes }
+                        pwch_count = yes
+                    }
+                }
+            }
+        }
+    }
+    on_annex = {
+        effect = {
+            if = {
+                limit = { OR = { has_global_flag = pwcq_started has_global_flag = pwcn_started has_global_flag = pwco_started } }
+                pwch_count_all = yes
+            }
+        }
+    }
+    on_peaceconference_ended = {
+        effect = {
+            if = {
+                limit = {
+                    OR = {
+                        has_global_flag = pwcq_started
+                        has_global_flag = pwcn_started
+                        has_global_flag = pwco_started
+                    }
+                }
+                pwch_count_all = yes
+            }
+        }
+    }
+}

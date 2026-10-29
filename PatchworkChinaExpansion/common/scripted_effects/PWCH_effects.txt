@@ -1,0 +1,32 @@
+pwch_count = {
+    set_variable = { pwch_states = 0 }
+    every_owned_state = {
+        limit = { is_controlled_by = PREV }
+        PREV = { add_to_variable = { pwch_states = 1 } }
+    }
+    if = {
+        limit = { has_global_flag = pwcq_started }
+        pwcq_on_count = yes
+    }
+    if = {
+        limit = { has_global_flag = pwcn_started }
+        pwcn_on_count = yes
+    }
+    if = {
+        limit = { has_global_flag = pwco_started }
+        pwco_on_count = yes
+    }
+}
+pwch_count_all = {
+    set_global_flag = pwch_counted
+    every_country = {
+        limit = { pwc_st_live_city_country = yes }
+        pwch_count = yes
+    }
+}
+pwch_ensure_counted = {
+    if = {
+        limit = { NOT = { has_global_flag = pwch_counted } }
+        pwch_count_all = yes
+    }
+}

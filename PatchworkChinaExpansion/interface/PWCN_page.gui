@@ -1,0 +1,935 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwcn_page"
+        orientation = upper_right
+        position = { x = -720 y = 125 }
+        size = { width = 642 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCH_GFX_panel"
+        }
+        instantTextBoxType = {
+            name = "pwcn_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCH_TITLE"
+            maxWidth = 76
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_tab_1"
+            position = { x = 104 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_1_open"
+            position = { x = 104 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_1_locked"
+            position = { x = 96 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_tab_1_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 162 y = 21 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_tab_2"
+            spriteType = "PWCH_GFX_tab_on"
+            position = { x = 190 y = 13 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_2_open"
+            position = { x = 190 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2_ON"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_2_locked"
+            position = { x = 182 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_tab_2_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 248 y = 21 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_tab_3"
+            position = { x = 276 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_3_open"
+            position = { x = 276 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_tab_3_locked"
+            position = { x = 268 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_tab_3_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 334 y = 21 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_subtitle"
+            position = { x = 362 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_STATES"
+            maxWidth = 234
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_close"
+            position = { x = 604 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        instantTextBoxType = {
+            name = "pwcn_intro"
+            position = { x = 20 y = 58 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_INTRO"
+            maxWidth = 602
+            maxHeight = 40
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card1"
+            spriteType = "PWCN_GFX_card"
+            position = { x = 20 y = 100 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card1_hive"
+            spriteType = "PWCN_GFX_hive"
+            position = { x = 28 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card1_dim"
+            spriteType = "PWCN_GFX_hive_dim"
+            position = { x = 28 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card1_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 38 y = 118 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_name_busy"
+            position = { x = 84 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD1_NAME_BUSY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_name_empty"
+            position = { x = 84 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD1_NAME_EMPTY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_name_locked"
+            position = { x = 84 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD1_NAME_LOCKED"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_status_busy"
+            position = { x = 84 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_STATUS_BUSY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_status_empty"
+            position = { x = 84 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_STATUS_EMPTY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_status_locked"
+            position = { x = 84 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_STATUS_LOCKED"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_detail_busy"
+            position = { x = 28 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_DETAIL_BUSY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_detail_empty"
+            position = { x = 28 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_DETAIL_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card1_detail_locked"
+            position = { x = 28 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD1_DETAIL_LOCKED"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_withdraw1"
+            position = { x = 28 y = 178 }
+            spriteType = "PWCH_GFX_button178"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_withdraw1_text"
+            position = { x = 28 y = 180 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_WITHDRAW"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card2"
+            spriteType = "PWCN_GFX_card"
+            position = { x = 224 y = 100 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card2_hive"
+            spriteType = "PWCN_GFX_hive"
+            position = { x = 232 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card2_dim"
+            spriteType = "PWCN_GFX_hive_dim"
+            position = { x = 232 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card2_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 242 y = 118 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_name_busy"
+            position = { x = 288 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD2_NAME_BUSY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_name_empty"
+            position = { x = 288 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD2_NAME_EMPTY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_name_locked"
+            position = { x = 288 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD2_NAME_LOCKED"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_status_busy"
+            position = { x = 288 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_STATUS_BUSY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_status_empty"
+            position = { x = 288 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_STATUS_EMPTY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_status_locked"
+            position = { x = 288 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_STATUS_LOCKED"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_detail_busy"
+            position = { x = 232 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_DETAIL_BUSY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_detail_empty"
+            position = { x = 232 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_DETAIL_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card2_detail_locked"
+            position = { x = 232 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD2_DETAIL_LOCKED"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_withdraw2"
+            position = { x = 232 y = 178 }
+            spriteType = "PWCH_GFX_button178"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_withdraw2_text"
+            position = { x = 232 y = 180 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_WITHDRAW"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card3"
+            spriteType = "PWCN_GFX_card"
+            position = { x = 428 y = 100 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card3_hive"
+            spriteType = "PWCN_GFX_hive"
+            position = { x = 436 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card3_dim"
+            spriteType = "PWCN_GFX_hive_dim"
+            position = { x = 436 y = 108 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_card3_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 446 y = 118 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_name_busy"
+            position = { x = 492 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD3_NAME_BUSY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_name_empty"
+            position = { x = 492 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD3_NAME_EMPTY"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_name_locked"
+            position = { x = 492 y = 110 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCN_CARD3_NAME_LOCKED"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_status_busy"
+            position = { x = 492 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_STATUS_BUSY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_status_empty"
+            position = { x = 492 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_STATUS_EMPTY"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_status_locked"
+            position = { x = 492 y = 136 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_STATUS_LOCKED"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_detail_busy"
+            position = { x = 436 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_DETAIL_BUSY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_detail_empty"
+            position = { x = 436 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_DETAIL_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_card3_detail_locked"
+            position = { x = 436 y = 160 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_CARD3_DETAIL_LOCKED"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_withdraw3"
+            position = { x = 436 y = 178 }
+            spriteType = "PWCH_GFX_button178"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_withdraw3_text"
+            position = { x = 436 y = 180 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_WITHDRAW"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_suggest_head"
+            position = { x = 20 y = 214 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_SUGGEST_HEAD"
+            maxWidth = 602
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_row1"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 238 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row1_text1"
+            position = { x = 28 y = 241 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW1_1"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row1_text0"
+            position = { x = 28 y = 241 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW1_0"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_deploy1"
+            position = { x = 472 y = 239 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_deploy1_text"
+            position = { x = 472 y = 241 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_DEPLOY"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row1_full"
+            position = { x = 472 y = 241 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_FULL"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row1_poor"
+            position = { x = 472 y = 241 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_row2"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 266 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row2_text1"
+            position = { x = 28 y = 269 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW2_1"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row2_text0"
+            position = { x = 28 y = 269 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW2_0"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_deploy2"
+            position = { x = 472 y = 267 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_deploy2_text"
+            position = { x = 472 y = 269 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_DEPLOY"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row2_full"
+            position = { x = 472 y = 269 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_FULL"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row2_poor"
+            position = { x = 472 y = 269 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcn_row3"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 294 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row3_text1"
+            position = { x = 28 y = 297 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW3_1"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row3_text0"
+            position = { x = 28 y = 297 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_ROW3_0"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_deploy3"
+            position = { x = 472 y = 295 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_deploy3_text"
+            position = { x = 472 y = 297 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_DEPLOY"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row3_full"
+            position = { x = 472 y = 297 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_FULL"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_row3_poor"
+            position = { x = 472 y = 297 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_none"
+            position = { x = 20 y = 242 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_NONE"
+            maxWidth = 602
+            maxHeight = 40
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_unlock_hint"
+            position = { x = 20 y = 214 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_UNLOCK_HINT"
+            maxWidth = 602
+            maxHeight = 40
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_footer"
+            position = { x = 20 y = 330 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_FOOTER"
+            maxWidth = 602
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

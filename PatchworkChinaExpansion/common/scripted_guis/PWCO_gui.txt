@@ -1,0 +1,585 @@
+scripted_gui = {
+    pwco_page_gui = {
+        context_type = player_context
+        window_name = pwco_page
+        ai_enabled = { always = no }
+        visible = { check_variable = { pwch_page = 3 } has_global_flag = pwco_started }
+        properties = {
+            pwco_card1_sat = {
+                frame = pwco_ty1
+            }
+            pwco_card1_launching_bar = {
+                frame = pwco_pb1
+            }
+            pwco_card1_orbit_bar = {
+                frame = pwco_lb1
+            }
+            pwco_card2_sat = {
+                frame = pwco_ty2
+            }
+            pwco_card2_launching_bar = {
+                frame = pwco_pb2
+            }
+            pwco_card2_orbit_bar = {
+                frame = pwco_lb2
+            }
+            pwco_card3_sat = {
+                frame = pwco_ty3
+            }
+            pwco_card3_launching_bar = {
+                frame = pwco_pb3
+            }
+            pwco_card3_orbit_bar = {
+                frame = pwco_lb3
+            }
+            pwco_gauge = {
+                frame = pwco_gauge
+            }
+        }
+        triggers = {
+            pwco_tab_1_open_visible = {
+                has_global_flag = pwcq_started always = yes
+            }
+            pwco_tab_1_locked_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwco_tab_1_lock_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwco_tab_1_visible = {
+                has_global_flag = pwcq_started
+            }
+            pwco_tab_2_open_visible = {
+                has_global_flag = pwcn_started pwcn_unlocked = yes
+            }
+            pwco_tab_2_locked_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwco_tab_2_lock_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwco_tab_2_visible = {
+                has_global_flag = pwcn_started
+            }
+            pwco_tab_3_open_visible = {
+                has_global_flag = pwco_started pwco_unlocked = yes
+            }
+            pwco_tab_3_locked_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwco_tab_3_lock_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwco_tab_3_visible = {
+                has_global_flag = pwco_started
+            }
+            pwco_status0_visible = {
+                pwco_unlocked = yes check_variable = { pwco_access = 0 }
+            }
+            pwco_status1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_access = 1 }
+            }
+            pwco_status2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_access = 2 }
+            }
+            pwco_card1_visible = {
+                pwco_unlocked = yes OR = { check_variable = { pwco_slots > 0 } NOT = { check_variable = { pwco_st1 = 0 } } }
+            }
+            pwco_card1_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } NOT = { check_variable = { pwco_slots > 0 } }
+            }
+            pwco_card1_sat_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } NOT = { check_variable = { pwco_slots > 0 } }
+            }
+            pwco_card1_slot_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } NOT = { check_variable = { pwco_slots > 0 } }
+            }
+            pwco_card1_lock_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } NOT = { check_variable = { pwco_slots > 0 } }
+            }
+            pwco_card1_need_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } NOT = { check_variable = { pwco_slots > 0 } }
+            }
+            pwco_card1_free_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_1_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_1_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch1_2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_2_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_2_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch1_3_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_3_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_launch1_3_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_card1_cost_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 }
+            }
+            pwco_card1_sat_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st1 = 0 } }
+            }
+            pwco_card1_name_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st1 = 0 } }
+            }
+            pwco_card1_launching_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 1 }
+            }
+            pwco_card1_launching_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 1 }
+            }
+            pwco_card1_launching_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 1 }
+            }
+            pwco_card1_launching_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 1 }
+            }
+            pwco_card1_orbit_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 2 }
+            }
+            pwco_card1_orbit_bonus_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 2 }
+            }
+            pwco_card1_orbit_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 2 }
+            }
+            pwco_card1_orbit_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 2 }
+            }
+            pwco_card1_orbit_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st1 = 2 }
+            }
+            pwco_card2_visible = {
+                pwco_unlocked = yes OR = { check_variable = { pwco_slots > 1 } NOT = { check_variable = { pwco_st2 = 0 } } }
+            }
+            pwco_card2_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } NOT = { check_variable = { pwco_slots > 1 } }
+            }
+            pwco_card2_sat_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } NOT = { check_variable = { pwco_slots > 1 } }
+            }
+            pwco_card2_slot_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } NOT = { check_variable = { pwco_slots > 1 } }
+            }
+            pwco_card2_lock_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } NOT = { check_variable = { pwco_slots > 1 } }
+            }
+            pwco_card2_need_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } NOT = { check_variable = { pwco_slots > 1 } }
+            }
+            pwco_card2_free_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_1_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_1_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch2_2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_2_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_2_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch2_3_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_3_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_launch2_3_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_card2_cost_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 }
+            }
+            pwco_card2_sat_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st2 = 0 } }
+            }
+            pwco_card2_name_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st2 = 0 } }
+            }
+            pwco_card2_launching_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 1 }
+            }
+            pwco_card2_launching_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 1 }
+            }
+            pwco_card2_launching_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 1 }
+            }
+            pwco_card2_launching_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 1 }
+            }
+            pwco_card2_orbit_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 2 }
+            }
+            pwco_card2_orbit_bonus_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 2 }
+            }
+            pwco_card2_orbit_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 2 }
+            }
+            pwco_card2_orbit_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 2 }
+            }
+            pwco_card2_orbit_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st2 = 2 }
+            }
+            pwco_card3_visible = {
+                pwco_unlocked = yes OR = { check_variable = { pwco_slots > 2 } NOT = { check_variable = { pwco_st3 = 0 } } }
+            }
+            pwco_card3_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } NOT = { check_variable = { pwco_slots > 2 } }
+            }
+            pwco_card3_sat_dim_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } NOT = { check_variable = { pwco_slots > 2 } }
+            }
+            pwco_card3_slot_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } NOT = { check_variable = { pwco_slots > 2 } }
+            }
+            pwco_card3_lock_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } NOT = { check_variable = { pwco_slots > 2 } }
+            }
+            pwco_card3_need_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } NOT = { check_variable = { pwco_slots > 2 } }
+            }
+            pwco_card3_free_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_1_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_1_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch3_2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_2_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_2_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_launch3_3_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_3_label_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_launch3_3_click_enabled = {
+                has_political_power > 49
+            }
+            pwco_card3_cost_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 }
+            }
+            pwco_card3_sat_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st3 = 0 } }
+            }
+            pwco_card3_name_visible = {
+                pwco_unlocked = yes NOT = { check_variable = { pwco_st3 = 0 } }
+            }
+            pwco_card3_launching_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 1 }
+            }
+            pwco_card3_launching_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 1 }
+            }
+            pwco_card3_launching_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 1 }
+            }
+            pwco_card3_launching_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 1 }
+            }
+            pwco_card3_orbit_line_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 2 }
+            }
+            pwco_card3_orbit_bonus_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 2 }
+            }
+            pwco_card3_orbit_time_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 2 }
+            }
+            pwco_card3_orbit_bar_bg_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 2 }
+            }
+            pwco_card3_orbit_bar_visible = {
+                pwco_unlocked = yes check_variable = { pwco_st3 = 2 }
+            }
+            pwco_debris_label_visible = {
+                pwco_unlocked = yes
+            }
+            pwco_gauge_visible = {
+                pwco_unlocked = yes
+            }
+            pwco_debris_value_visible = {
+                pwco_unlocked = yes
+            }
+            pwco_debris_note_visible = {
+                pwco_unlocked = yes
+            }
+            pwco_enemies_visible = {
+                pwco_unlocked = yes
+            }
+            pwco_enemy_none_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows = 0 }
+            }
+            pwco_row1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 }
+            }
+            pwco_row1_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 }
+            }
+            pwco_asat1_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 } pwco_can_asat = yes
+            }
+            pwco_asat1_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 } pwco_can_asat = yes
+            }
+            pwco_row1_wait_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 } check_variable = { pwco_asat_days > 0 }
+            }
+            pwco_row1_poor_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 0 } check_variable = { pwco_asat_days = 0 } NOT = { has_political_power > 24 }
+            }
+            pwco_row2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 }
+            }
+            pwco_row2_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 }
+            }
+            pwco_asat2_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 } pwco_can_asat = yes
+            }
+            pwco_asat2_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 } pwco_can_asat = yes
+            }
+            pwco_row2_wait_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 } check_variable = { pwco_asat_days > 0 }
+            }
+            pwco_row2_poor_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 1 } check_variable = { pwco_asat_days = 0 } NOT = { has_political_power > 24 }
+            }
+            pwco_row3_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 }
+            }
+            pwco_row3_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 }
+            }
+            pwco_asat3_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 } pwco_can_asat = yes
+            }
+            pwco_asat3_text_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 } pwco_can_asat = yes
+            }
+            pwco_row3_wait_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 } check_variable = { pwco_asat_days > 0 }
+            }
+            pwco_row3_poor_visible = {
+                pwco_unlocked = yes check_variable = { pwco_erows > 2 } check_variable = { pwco_asat_days = 0 } NOT = { has_political_power > 24 }
+            }
+            pwco_locked_lock_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_locked_title_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_locked_conditions_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_locked_note_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard1_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard1_sat_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard1_slot_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard1_lock_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard1_need_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard2_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard2_sat_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard2_slot_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard2_lock_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard2_need_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard3_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard3_sat_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard3_slot_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard3_lock_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+            pwco_lcard3_need_visible = {
+                NOT = { pwco_unlocked = yes }
+            }
+        }
+        effects = {
+            pwco_tab_1_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 1 }
+                set_variable = { pwch_last = 1 }
+                pwcq_refresh_capital = yes
+            }
+            pwco_tab_2_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 2 }
+                set_variable = { pwch_last = 2 }
+                pwcn_refresh = yes
+            }
+            pwco_close_click = {
+                set_variable = { pwch_page = 0 }
+            }
+            pwco_launch1_1_click = {
+                if = {
+                    limit = { check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 1 }
+                    set_variable = { pwco_type = 1 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch1_2_click = {
+                if = {
+                    limit = { check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 1 }
+                    set_variable = { pwco_type = 2 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch1_3_click = {
+                if = {
+                    limit = { check_variable = { pwco_st1 = 0 } check_variable = { pwco_slots > 0 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 1 }
+                    set_variable = { pwco_type = 3 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch2_1_click = {
+                if = {
+                    limit = { check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 2 }
+                    set_variable = { pwco_type = 1 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch2_2_click = {
+                if = {
+                    limit = { check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 2 }
+                    set_variable = { pwco_type = 2 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch2_3_click = {
+                if = {
+                    limit = { check_variable = { pwco_st2 = 0 } check_variable = { pwco_slots > 1 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 2 }
+                    set_variable = { pwco_type = 3 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch3_1_click = {
+                if = {
+                    limit = { check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 3 }
+                    set_variable = { pwco_type = 1 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch3_2_click = {
+                if = {
+                    limit = { check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 3 }
+                    set_variable = { pwco_type = 2 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_launch3_3_click = {
+                if = {
+                    limit = { check_variable = { pwco_st3 = 0 } check_variable = { pwco_slots > 2 } has_political_power > 49 }
+                    set_variable = { pwco_pick = 3 }
+                    set_variable = { pwco_type = 3 }
+                    pwco_launch = yes
+                }
+            }
+            pwco_asat1_click = {
+                if = {
+                    limit = { pwco_can_asat = yes }
+                    var:pwco_e1 = { save_event_target_as = pwco_target }
+                    pwco_asat = yes
+                    pwco_refresh = yes
+                }
+            }
+            pwco_asat2_click = {
+                if = {
+                    limit = { pwco_can_asat = yes }
+                    var:pwco_e2 = { save_event_target_as = pwco_target }
+                    pwco_asat = yes
+                    pwco_refresh = yes
+                }
+            }
+            pwco_asat3_click = {
+                if = {
+                    limit = { pwco_can_asat = yes }
+                    var:pwco_e3 = { save_event_target_as = pwco_target }
+                    pwco_asat = yes
+                    pwco_refresh = yes
+                }
+            }
+        }
+    }
+}

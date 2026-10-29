@@ -1,0 +1,372 @@
+scripted_gui = {
+    pwcn_page_gui = {
+        context_type = player_context
+        window_name = pwcn_page
+        ai_enabled = { always = no }
+        visible = { check_variable = { pwch_page = 2 } has_global_flag = pwcn_started }
+        triggers = {
+            pwcn_tab_1_open_visible = {
+                has_global_flag = pwcq_started always = yes
+            }
+            pwcn_tab_1_locked_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwcn_tab_1_lock_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwcn_tab_1_visible = {
+                has_global_flag = pwcq_started
+            }
+            pwcn_tab_2_open_visible = {
+                has_global_flag = pwcn_started pwcn_unlocked = yes
+            }
+            pwcn_tab_2_locked_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwcn_tab_2_lock_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwcn_tab_2_visible = {
+                has_global_flag = pwcn_started
+            }
+            pwcn_tab_3_open_visible = {
+                has_global_flag = pwco_started pwco_unlocked = yes
+            }
+            pwcn_tab_3_locked_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwcn_tab_3_lock_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwcn_tab_3_visible = {
+                has_global_flag = pwco_started
+            }
+            pwcn_card1_hive_visible = {
+                NOT = { check_variable = { pwcn_st1 = 0 } }
+            }
+            pwcn_card1_dim_visible = {
+                check_variable = { pwcn_st1 = 0 }
+            }
+            pwcn_card1_lock_visible = {
+                check_variable = { pwcn_st1 = 0 } NOT = { check_variable = { pwcn_slots > 0 } }
+            }
+            pwcn_card1_name_busy_visible = {
+                NOT = { check_variable = { pwcn_st1 = 0 } }
+            }
+            pwcn_card1_name_empty_visible = {
+                check_variable = { pwcn_st1 = 0 } check_variable = { pwcn_slots > 0 }
+            }
+            pwcn_card1_name_locked_visible = {
+                check_variable = { pwcn_st1 = 0 } NOT = { check_variable = { pwcn_slots > 0 } }
+            }
+            pwcn_card1_status_busy_visible = {
+                NOT = { check_variable = { pwcn_st1 = 0 } }
+            }
+            pwcn_card1_status_empty_visible = {
+                check_variable = { pwcn_st1 = 0 } check_variable = { pwcn_slots > 0 }
+            }
+            pwcn_card1_status_locked_visible = {
+                check_variable = { pwcn_st1 = 0 } NOT = { check_variable = { pwcn_slots > 0 } }
+            }
+            pwcn_card1_detail_busy_visible = {
+                NOT = { check_variable = { pwcn_st1 = 0 } }
+            }
+            pwcn_card1_detail_empty_visible = {
+                check_variable = { pwcn_st1 = 0 } check_variable = { pwcn_slots > 0 }
+            }
+            pwcn_card1_detail_locked_visible = {
+                check_variable = { pwcn_st1 = 0 } NOT = { check_variable = { pwcn_slots > 0 } }
+            }
+            pwcn_withdraw1_visible = {
+                OR = { check_variable = { pwcn_st1 = 1 } check_variable = { pwcn_st1 = 2 } }
+            }
+            pwcn_withdraw1_text_visible = {
+                OR = { check_variable = { pwcn_st1 = 1 } check_variable = { pwcn_st1 = 2 } }
+            }
+            pwcn_card2_hive_visible = {
+                NOT = { check_variable = { pwcn_st2 = 0 } }
+            }
+            pwcn_card2_dim_visible = {
+                check_variable = { pwcn_st2 = 0 }
+            }
+            pwcn_card2_lock_visible = {
+                check_variable = { pwcn_st2 = 0 } NOT = { check_variable = { pwcn_slots > 1 } }
+            }
+            pwcn_card2_name_busy_visible = {
+                NOT = { check_variable = { pwcn_st2 = 0 } }
+            }
+            pwcn_card2_name_empty_visible = {
+                check_variable = { pwcn_st2 = 0 } check_variable = { pwcn_slots > 1 }
+            }
+            pwcn_card2_name_locked_visible = {
+                check_variable = { pwcn_st2 = 0 } NOT = { check_variable = { pwcn_slots > 1 } }
+            }
+            pwcn_card2_status_busy_visible = {
+                NOT = { check_variable = { pwcn_st2 = 0 } }
+            }
+            pwcn_card2_status_empty_visible = {
+                check_variable = { pwcn_st2 = 0 } check_variable = { pwcn_slots > 1 }
+            }
+            pwcn_card2_status_locked_visible = {
+                check_variable = { pwcn_st2 = 0 } NOT = { check_variable = { pwcn_slots > 1 } }
+            }
+            pwcn_card2_detail_busy_visible = {
+                NOT = { check_variable = { pwcn_st2 = 0 } }
+            }
+            pwcn_card2_detail_empty_visible = {
+                check_variable = { pwcn_st2 = 0 } check_variable = { pwcn_slots > 1 }
+            }
+            pwcn_card2_detail_locked_visible = {
+                check_variable = { pwcn_st2 = 0 } NOT = { check_variable = { pwcn_slots > 1 } }
+            }
+            pwcn_withdraw2_visible = {
+                OR = { check_variable = { pwcn_st2 = 1 } check_variable = { pwcn_st2 = 2 } }
+            }
+            pwcn_withdraw2_text_visible = {
+                OR = { check_variable = { pwcn_st2 = 1 } check_variable = { pwcn_st2 = 2 } }
+            }
+            pwcn_card3_hive_visible = {
+                NOT = { check_variable = { pwcn_st3 = 0 } }
+            }
+            pwcn_card3_dim_visible = {
+                check_variable = { pwcn_st3 = 0 }
+            }
+            pwcn_card3_lock_visible = {
+                check_variable = { pwcn_st3 = 0 } NOT = { check_variable = { pwcn_slots > 2 } }
+            }
+            pwcn_card3_name_busy_visible = {
+                NOT = { check_variable = { pwcn_st3 = 0 } }
+            }
+            pwcn_card3_name_empty_visible = {
+                check_variable = { pwcn_st3 = 0 } check_variable = { pwcn_slots > 2 }
+            }
+            pwcn_card3_name_locked_visible = {
+                check_variable = { pwcn_st3 = 0 } NOT = { check_variable = { pwcn_slots > 2 } }
+            }
+            pwcn_card3_status_busy_visible = {
+                NOT = { check_variable = { pwcn_st3 = 0 } }
+            }
+            pwcn_card3_status_empty_visible = {
+                check_variable = { pwcn_st3 = 0 } check_variable = { pwcn_slots > 2 }
+            }
+            pwcn_card3_status_locked_visible = {
+                check_variable = { pwcn_st3 = 0 } NOT = { check_variable = { pwcn_slots > 2 } }
+            }
+            pwcn_card3_detail_busy_visible = {
+                NOT = { check_variable = { pwcn_st3 = 0 } }
+            }
+            pwcn_card3_detail_empty_visible = {
+                check_variable = { pwcn_st3 = 0 } check_variable = { pwcn_slots > 2 }
+            }
+            pwcn_card3_detail_locked_visible = {
+                check_variable = { pwcn_st3 = 0 } NOT = { check_variable = { pwcn_slots > 2 } }
+            }
+            pwcn_withdraw3_visible = {
+                OR = { check_variable = { pwcn_st3 = 1 } check_variable = { pwcn_st3 = 2 } }
+            }
+            pwcn_withdraw3_text_visible = {
+                OR = { check_variable = { pwcn_st3 = 1 } check_variable = { pwcn_st3 = 2 } }
+            }
+            pwcn_suggest_head_visible = {
+                pwcn_unlocked = yes
+            }
+            pwcn_row1_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 }
+            }
+            pwcn_row1_text1_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } check_variable = { pwcn_gw1 = 1 }
+            }
+            pwcn_row1_text0_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } check_variable = { pwcn_gw1 = 0 }
+            }
+            pwcn_deploy1_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_deploy1_text_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_row1_full_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } NOT = { pwcn_free_slot = yes }
+            }
+            pwcn_row1_poor_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 0 } pwcn_free_slot = yes NOT = { has_political_power > 24 }
+            }
+            pwcn_row2_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 }
+            }
+            pwcn_row2_text1_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } check_variable = { pwcn_gw2 = 1 }
+            }
+            pwcn_row2_text0_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } check_variable = { pwcn_gw2 = 0 }
+            }
+            pwcn_deploy2_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_deploy2_text_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_row2_full_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } NOT = { pwcn_free_slot = yes }
+            }
+            pwcn_row2_poor_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 1 } pwcn_free_slot = yes NOT = { has_political_power > 24 }
+            }
+            pwcn_row3_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 }
+            }
+            pwcn_row3_text1_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } check_variable = { pwcn_gw3 = 1 }
+            }
+            pwcn_row3_text0_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } check_variable = { pwcn_gw3 = 0 }
+            }
+            pwcn_deploy3_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_deploy3_text_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } pwcn_free_slot = yes has_political_power > 24
+            }
+            pwcn_row3_full_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } NOT = { pwcn_free_slot = yes }
+            }
+            pwcn_row3_poor_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows > 2 } pwcn_free_slot = yes NOT = { has_political_power > 24 }
+            }
+            pwcn_none_visible = {
+                pwcn_unlocked = yes check_variable = { pwcn_rows = 0 }
+            }
+            pwcn_unlock_hint_visible = {
+                NOT = { pwcn_unlocked = yes }
+            }
+            pwcn_footer_visible = {
+                pwcn_unlocked = yes
+            }
+        }
+        effects = {
+            pwcn_tab_1_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 1 }
+                set_variable = { pwch_last = 1 }
+                pwcq_refresh_capital = yes
+            }
+            pwcn_tab_3_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 3 }
+                set_variable = { pwch_last = 3 }
+                pwco_refresh = yes
+            }
+            pwcn_close_click = {
+                set_variable = { pwch_page = 0 }
+            }
+            pwcn_withdraw1_click = {
+                if = {
+                    limit = { OR = { check_variable = { pwcn_st1 = 1 } check_variable = { pwcn_st1 = 2 } } }
+                    set_variable = { pwcn_pick = 1 }
+                    pwcn_withdraw = yes
+                    pwcn_refresh = yes
+                }
+            }
+            pwcn_withdraw2_click = {
+                if = {
+                    limit = { OR = { check_variable = { pwcn_st2 = 1 } check_variable = { pwcn_st2 = 2 } } }
+                    set_variable = { pwcn_pick = 2 }
+                    pwcn_withdraw = yes
+                    pwcn_refresh = yes
+                }
+            }
+            pwcn_withdraw3_click = {
+                if = {
+                    limit = { OR = { check_variable = { pwcn_st3 = 1 } check_variable = { pwcn_st3 = 2 } } }
+                    set_variable = { pwcn_pick = 3 }
+                    pwcn_withdraw = yes
+                    pwcn_refresh = yes
+                }
+            }
+            pwcn_deploy1_click = {
+                save_event_target_as = pwcn_me
+                if = {
+                    limit = { pwcn_free_slot = yes has_political_power > 24 var:pwcn_g1 = { pwcn_candidate = yes } }
+                    var:pwcn_g1 = { pwcn_deploy = yes }
+                }
+                pwcn_refresh = yes
+            }
+            pwcn_deploy2_click = {
+                save_event_target_as = pwcn_me
+                if = {
+                    limit = { pwcn_free_slot = yes has_political_power > 24 var:pwcn_g2 = { pwcn_candidate = yes } }
+                    var:pwcn_g2 = { pwcn_deploy = yes }
+                }
+                pwcn_refresh = yes
+            }
+            pwcn_deploy3_click = {
+                save_event_target_as = pwcn_me
+                if = {
+                    limit = { pwcn_free_slot = yes has_political_power > 24 var:pwcn_g3 = { pwcn_candidate = yes } }
+                    var:pwcn_g3 = { pwcn_deploy = yes }
+                }
+                pwcn_refresh = yes
+            }
+        }
+    }
+    pwcn_state_strip_gui = {
+        context_type = selected_state_context
+        window_name = pwcn_state_strip
+        parent_window_token = selected_state_view
+        ai_enabled = { always = no }
+        visible = {
+            has_global_flag = pwcn_started
+            is_owned_and_controlled_by = ROOT
+            NOT = { is_capital = yes }
+            ROOT = { pwcn_unlocked = yes }
+        }
+        triggers = {
+            pwcn_strip_idle_visible = {
+                NOT = { has_state_flag = pwcn_hive }
+            }
+            pwcn_strip_deploying_visible = {
+                has_state_flag = pwcn_hive NOT = { has_state_flag = pwcn_armed }
+            }
+            pwcn_strip_ready_visible = {
+                has_state_flag = pwcn_armed
+            }
+            pwcn_strip_deploy_visible = {
+                NOT = { has_state_flag = pwcn_hive } ROOT = { pwcn_free_slot = yes has_political_power > 24 }
+            }
+            pwcn_strip_deploy_text_visible = {
+                NOT = { has_state_flag = pwcn_hive } ROOT = { pwcn_free_slot = yes has_political_power > 24 }
+            }
+            pwcn_strip_withdraw_visible = {
+                has_state_flag = pwcn_hive
+            }
+            pwcn_strip_withdraw_text_visible = {
+                has_state_flag = pwcn_hive
+            }
+        }
+        effects = {
+            pwcn_strip_deploy_click = {
+                if = {
+                    limit = { is_owned_and_controlled_by = ROOT NOT = { is_capital = yes } NOT = { has_state_flag = pwcn_hive } ROOT = { pwcn_free_slot = yes has_political_power > 24 } }
+                    ROOT = { pwcn_pick_slot = yes }
+                    pwcn_deploy = yes
+                    ROOT = { pwcn_refresh = yes }
+                }
+            }
+            pwcn_strip_withdraw_click = {
+                if = {
+                    limit = { has_state_flag = pwcn_hive }
+                    set_variable = { global.pwcn_k = pwcn_k }
+                    ROOT = {
+                        set_variable = { pwcn_pick = global.pwcn_k }
+                        pwcn_withdraw = yes
+                    }
+                    ROOT = { pwcn_refresh = yes }
+                }
+            }
+        }
+    }
+}

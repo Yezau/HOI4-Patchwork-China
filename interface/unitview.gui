@@ -914,7 +914,7 @@ guiTypes = {
                 position = {x=300 y=0}
                 spriteType = "GFX_select_half"
                 clicksound = click_default
-                shortcut = "s"
+                keybind = "divisions_select_half"
             }
 
             buttonType = {
@@ -1592,6 +1592,14 @@ guiTypes = {
         }
 
         iconType = {
+            name = "recall_volunteers_indicator"
+            spriteType = "GFX_decision_timer_icon_strip"
+            position = {x = 415 y = -5}
+            scale = 1
+            frame = 1
+        }
+
+        iconType = {
             name = "bar_org"
             spriteType = "GFX_navieslist_bar_org"
             position = { x=11 y=24 }
@@ -1922,7 +1930,6 @@ guiTypes = {
             name = "role_icon"
             position = { x=-150 y=60 }
             spriteType = "GFX_naval_equipment_role_icons"
-            alwaystransparent = yes
             frame = 1
         }
 

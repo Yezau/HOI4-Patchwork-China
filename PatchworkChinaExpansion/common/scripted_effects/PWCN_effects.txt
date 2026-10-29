@@ -1,0 +1,462 @@
+pwcn_init = {
+    set_global_flag = pwcn_started
+    pwch_ensure_counted = yes
+    every_country = {
+        limit = { pwc_st_live_city_country = yes }
+        pwcn_on_count = yes
+    }
+}
+pwcn_queue_report = {
+    add_to_array = { array = pwcn_reports_kind value = pwcn_hit_kind }
+    add_to_array = { array = pwcn_reports_state value = pwcn_hit_state }
+    add_to_array = { array = pwcn_reports_count value = pwcn_hit_count }
+    add_to_array = { array = pwcn_reports_enemy value = pwcn_hit_enemy }
+    pwcn_show_report = yes
+}
+pwcn_show_report = {
+    if = {
+        limit = { NOT = { has_country_flag = pwcn_report_open } NOT = { has_country_flag = pwcn_report_wait } check_variable = { pwcn_reports_kind^num > 0 } }
+        set_variable = { pwcn_report_kind = pwcn_reports_kind^0 }
+        set_variable = { pwcn_report_state = pwcn_reports_state^0 }
+        set_variable = { pwcn_report_count = pwcn_reports_count^0 }
+        set_variable = { pwcn_report_enemy = pwcn_reports_enemy^0 }
+        remove_from_array = { array = pwcn_reports_kind index = 0 }
+        remove_from_array = { array = pwcn_reports_state index = 0 }
+        remove_from_array = { array = pwcn_reports_count index = 0 }
+        remove_from_array = { array = pwcn_reports_enemy index = 0 }
+        set_country_flag = pwcn_report_open
+        if = {
+            limit = { check_variable = { pwcn_report_kind = 1 } }
+            country_event = { id = pwcn.1 }
+        }
+        else_if = {
+            limit = { check_variable = { pwcn_report_kind = 2 } }
+            country_event = { id = pwcn.2 }
+        }
+        else_if = {
+            limit = { check_variable = { pwcn_report_kind = 3 } }
+            country_event = { id = pwcn.3 }
+        }
+    }
+}
+pwcn_close_report = {
+    clr_country_flag = pwcn_report_open
+    set_country_flag = pwcn_report_wait
+    country_event = { id = pwcn.5 hours = 1 }
+}
+pwcn_on_count = {
+    set_variable = { pwcn_slots = 0 }
+    if = {
+        limit = { check_variable = { pwch_states > 1 } }
+        set_variable = { pwcn_slots = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwch_states > 14 } }
+        set_variable = { pwcn_slots = 2 }
+    }
+    if = {
+        limit = { check_variable = { pwch_states > 29 } }
+        set_variable = { pwcn_slots = 3 }
+    }
+    if = {
+        limit = { check_variable = { pwcn_slots > 0 } NOT = { has_country_flag = pwcn_told } }
+        set_country_flag = pwcn_told
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwcn.4 }
+            set_country_flag = pwch_news
+        }
+    }
+}
+pwcn_pick_slot = {
+    set_variable = { pwcn_pick = 0 }
+    if = {
+        limit = { check_variable = { pwcn_slots > 2 } check_variable = { pwcn_st3 = 0 } }
+        set_variable = { pwcn_pick = 3 }
+    }
+    if = {
+        limit = { check_variable = { pwcn_slots > 1 } check_variable = { pwcn_st2 = 0 } }
+        set_variable = { pwcn_pick = 2 }
+    }
+    if = {
+        limit = { check_variable = { pwcn_slots > 0 } check_variable = { pwcn_st1 = 0 } }
+        set_variable = { pwcn_pick = 1 }
+    }
+}
+pwcn_deploy = {
+    OWNER = { save_event_target_as = pwcn_me }
+    if = {
+        limit = { pwcn_deployable = yes OWNER = { pwcn_free_slot = yes has_political_power > 24 } }
+        set_variable = { global.pwcn_state = THIS }
+        OWNER = { set_variable = { global.pwcn_owner = THIS } save_event_target_as = pwcn_me }
+        set_state_flag = pwcn_hive
+        set_variable = { pwcn_by = global.pwcn_owner }
+        event_target:pwcn_me = {
+            pwcn_pick_slot = yes
+            add_political_power = -25
+            set_country_flag = pwcn_timer
+            set_variable = { global.pwcn_k = pwcn_pick }
+            if = {
+                limit = { check_variable = { pwcn_pick = 1 } }
+                set_variable = { pwcn_s1 = global.pwcn_state }
+                set_variable = { pwcn_st1 = 1 }
+                set_variable = { pwcn_t1 = 14 }
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_pick = 2 } }
+                set_variable = { pwcn_s2 = global.pwcn_state }
+                set_variable = { pwcn_st2 = 1 }
+                set_variable = { pwcn_t2 = 14 }
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_pick = 3 } }
+                set_variable = { pwcn_s3 = global.pwcn_state }
+                set_variable = { pwcn_st3 = 1 }
+                set_variable = { pwcn_t3 = 14 }
+            }
+        }
+        set_variable = { pwcn_k = global.pwcn_k }
+    }
+}
+pwcn_clear_state = {
+    clr_state_flag = pwcn_hive
+    clr_state_flag = pwcn_armed
+    clear_variable = pwcn_by
+    clear_variable = pwcn_k
+}
+pwcn_withdraw = {
+    if = {
+        limit = { check_variable = { pwcn_pick = 1 } }
+        if = {
+            limit = { OR = { check_variable = { pwcn_st1 = 1 } check_variable = { pwcn_st1 = 2 } } }
+            add_political_power = 12
+            var:pwcn_s1 = {
+                pwcn_clear_state = yes
+            }
+            set_variable = { pwcn_st1 = 0 }
+            set_variable = { pwcn_t1 = 0 }
+            clear_variable = pwcn_s1
+        }
+    }
+    else_if = {
+        limit = { check_variable = { pwcn_pick = 2 } }
+        if = {
+            limit = { OR = { check_variable = { pwcn_st2 = 1 } check_variable = { pwcn_st2 = 2 } } }
+            add_political_power = 12
+            var:pwcn_s2 = {
+                pwcn_clear_state = yes
+            }
+            set_variable = { pwcn_st2 = 0 }
+            set_variable = { pwcn_t2 = 0 }
+            clear_variable = pwcn_s2
+        }
+    }
+    else_if = {
+        limit = { check_variable = { pwcn_pick = 3 } }
+        if = {
+            limit = { OR = { check_variable = { pwcn_st3 = 1 } check_variable = { pwcn_st3 = 2 } } }
+            add_political_power = 12
+            var:pwcn_s3 = {
+                pwcn_clear_state = yes
+            }
+            set_variable = { pwcn_st3 = 0 }
+            set_variable = { pwcn_t3 = 0 }
+            clear_variable = pwcn_s3
+        }
+    }
+}
+pwcn_spring = {
+    set_variable = { global.pwcn_state = THIS }
+    set_variable = { global.pwcn_n = 0 }
+    clear_array = global.pwcn_victims
+    set_variable = { global.pwcn_k = pwcn_k }
+    event_target:pwcn_me = { set_variable = { global.pwcn_owner = THIS } }
+    every_state_division = {
+        limit = { OWNER = { has_war_with = event_target:pwcn_me } }
+        set_unit_organization = 0.5
+        add_to_variable = { global.pwcn_n = 1 }
+        OWNER = {
+            if = {
+                limit = { NOT = { is_in_array = { array = global.pwcn_victims value = THIS } } }
+                add_to_array = { array = global.pwcn_victims value = THIS }
+                set_variable = { pwcn_hit_count = 0 }
+            }
+            add_to_variable = { pwcn_hit_count = 1 }
+            set_variable = { global.pwcn_victim = THIS }
+        }
+    }
+    for_each_scope_loop = {
+        array = global.pwcn_victims
+        set_variable = { pwcn_hit_state = global.pwcn_state }
+        set_variable = { pwcn_hit_enemy = global.pwcn_owner }
+        if = {
+            limit = { is_ai = no }
+            set_variable = { pwcn_hit_kind = 2 }
+            pwcn_queue_report = yes
+        }
+    }
+    clear_array = global.pwcn_victims
+    event_target:pwcn_me = {
+        set_variable = { pwcn_hit_state = global.pwcn_state }
+        set_variable = { pwcn_hit_count = global.pwcn_n }
+        set_variable = { pwcn_hit_enemy = global.pwcn_victim }
+        if = {
+            limit = { is_ai = no }
+            set_variable = { pwcn_hit_kind = 1 }
+            pwcn_queue_report = yes
+            set_country_flag = pwch_news
+        }
+        set_variable = { pwcn_pick = global.pwcn_k }
+        set_country_flag = pwcn_timer
+        if = {
+            limit = { check_variable = { pwcn_pick = 1 } }
+            set_variable = { pwcn_st1 = 3 }
+            set_variable = { pwcn_t1 = 180 }
+        }
+        else_if = {
+            limit = { check_variable = { pwcn_pick = 2 } }
+            set_variable = { pwcn_st2 = 3 }
+            set_variable = { pwcn_t2 = 180 }
+        }
+        else_if = {
+            limit = { check_variable = { pwcn_pick = 3 } }
+            set_variable = { pwcn_st3 = 3 }
+            set_variable = { pwcn_t3 = 180 }
+        }
+    }
+    pwcn_clear_state = yes
+}
+pwcn_on_lost = {
+    var:pwcn_by = { save_event_target_as = pwcn_me }
+    if = {
+        limit = { NOT = { is_capital = yes } has_state_flag = pwcn_armed ROOT = { has_war_with = event_target:pwcn_me } any_state_division = { OWNER = { has_war_with = event_target:pwcn_me } } }
+        pwcn_spring = yes
+    }
+    else = {
+        set_variable = { global.pwcn_state = THIS }
+        set_variable = { global.pwcn_k = pwcn_k }
+        event_target:pwcn_me = {
+            set_variable = { pwcn_pick = global.pwcn_k }
+            set_variable = { pwcn_hit_state = global.pwcn_state }
+            if = {
+                limit = { is_ai = no }
+                set_variable = { pwcn_hit_kind = 3 }
+                set_variable = { pwcn_hit_count = 0 }
+                set_variable = { pwcn_hit_enemy = 0 }
+                pwcn_queue_report = yes
+            }
+            if = {
+                limit = { check_variable = { pwcn_pick = 1 } }
+                set_variable = { pwcn_st1 = 0 }
+                set_variable = { pwcn_t1 = 0 }
+                clear_variable = pwcn_s1
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_pick = 2 } }
+                set_variable = { pwcn_st2 = 0 }
+                set_variable = { pwcn_t2 = 0 }
+                clear_variable = pwcn_s2
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_pick = 3 } }
+                set_variable = { pwcn_st3 = 0 }
+                set_variable = { pwcn_t3 = 0 }
+                clear_variable = pwcn_s3
+            }
+        }
+        pwcn_clear_state = yes
+    }
+}
+pwcn_daily = {
+    every_country = {
+        limit = { pwc_st_live_city_country = yes capital_scope = { has_state_flag = pwcn_hive is_owned_and_controlled_by = PREV } }
+        every_owned_state = {
+            limit = { is_capital = yes }
+            set_variable = { global.pwcn_k = pwcn_k }
+        }
+        set_variable = { pwcn_pick = global.pwcn_k }
+        pwcn_withdraw = yes
+    }
+    every_country = {
+        limit = { has_country_flag = pwcn_timer }
+        clr_country_flag = pwcn_timer
+        if = {
+            limit = { OR = { check_variable = { pwcn_st1 = 1 } check_variable = { pwcn_st1 = 3 } } }
+            set_country_flag = pwcn_timer
+            subtract_from_variable = { pwcn_t1 = 1 }
+            if = {
+                limit = { check_variable = { pwcn_t1 < 1 } check_variable = { pwcn_st1 = 1 } }
+                set_variable = { pwcn_st1 = 2 }
+                var:pwcn_s1 = { set_state_flag = pwcn_armed }
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_t1 < 1 } check_variable = { pwcn_st1 = 3 } }
+                set_variable = { pwcn_st1 = 0 }
+                clear_variable = pwcn_s1
+            }
+        }
+        if = {
+            limit = { OR = { check_variable = { pwcn_st2 = 1 } check_variable = { pwcn_st2 = 3 } } }
+            set_country_flag = pwcn_timer
+            subtract_from_variable = { pwcn_t2 = 1 }
+            if = {
+                limit = { check_variable = { pwcn_t2 < 1 } check_variable = { pwcn_st2 = 1 } }
+                set_variable = { pwcn_st2 = 2 }
+                var:pwcn_s2 = { set_state_flag = pwcn_armed }
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_t2 < 1 } check_variable = { pwcn_st2 = 3 } }
+                set_variable = { pwcn_st2 = 0 }
+                clear_variable = pwcn_s2
+            }
+        }
+        if = {
+            limit = { OR = { check_variable = { pwcn_st3 = 1 } check_variable = { pwcn_st3 = 3 } } }
+            set_country_flag = pwcn_timer
+            subtract_from_variable = { pwcn_t3 = 1 }
+            if = {
+                limit = { check_variable = { pwcn_t3 < 1 } check_variable = { pwcn_st3 = 1 } }
+                set_variable = { pwcn_st3 = 2 }
+                var:pwcn_s3 = { set_state_flag = pwcn_armed }
+            }
+            else_if = {
+                limit = { check_variable = { pwcn_t3 < 1 } check_variable = { pwcn_st3 = 3 } }
+                set_variable = { pwcn_st3 = 0 }
+                clear_variable = pwcn_s3
+            }
+        }
+    }
+}
+pwcn_weekly = {
+    every_state = {
+        limit = { has_state_flag = pwcn_armed NOT = { is_capital = yes } }
+        var:pwcn_by = { save_event_target_as = pwcn_me }
+        if = {
+            limit = { any_state_division = { OWNER = { has_war_with = event_target:pwcn_me } } }
+            pwcn_spring = yes
+        }
+    }
+}
+pwcn_monthly = {
+    every_state = {
+        limit = { has_state_flag = pwcn_hive }
+        var:pwcn_by = { save_event_target_as = pwcn_me }
+        if = {
+            limit = { NOT = { is_owned_and_controlled_by = event_target:pwcn_me } }
+            set_variable = { global.pwcn_k = pwcn_k }
+            event_target:pwcn_me = {
+                set_variable = { pwcn_pick = global.pwcn_k }
+                if = {
+                    limit = { check_variable = { pwcn_pick = 1 } }
+                    set_variable = { pwcn_st1 = 0 }
+                    set_variable = { pwcn_t1 = 0 }
+                    clear_variable = pwcn_s1
+                }
+                else_if = {
+                    limit = { check_variable = { pwcn_pick = 2 } }
+                    set_variable = { pwcn_st2 = 0 }
+                    set_variable = { pwcn_t2 = 0 }
+                    clear_variable = pwcn_s2
+                }
+                else_if = {
+                    limit = { check_variable = { pwcn_pick = 3 } }
+                    set_variable = { pwcn_st3 = 0 }
+                    set_variable = { pwcn_t3 = 0 }
+                    clear_variable = pwcn_s3
+                }
+            }
+            pwcn_clear_state = yes
+        }
+    }
+    every_country = {
+        limit = { is_ai = yes pwc_st_live_city_country = yes pwcn_free_slot = yes has_political_power > 49 OR = { has_war = yes check_variable = { pwc_war_warning_attackers^num > 0 } } }
+        save_event_target_as = pwcn_me
+        pwcn_pick_slot = yes
+        random_owned_state = {
+            limit = { pwcn_candidate = yes }
+            pwcn_deploy = yes
+        }
+    }
+}
+pwcn_refresh = {
+    save_event_target_as = pwcn_me
+    set_variable = { pwcn_g1 = 0 }
+    set_variable = { pwcn_g2 = 0 }
+    set_variable = { pwcn_g3 = 0 }
+    set_variable = { pwcn_rows = 0 }
+    every_owned_state = {
+        limit = { pwcn_candidate = yes }
+        if = {
+            limit = { check_variable = { ROOT.pwcn_rows = 0 } }
+            set_variable = { global.pwcn_state = THIS }
+            ROOT = {
+                set_variable = { pwcn_g1 = global.pwcn_state }
+                add_to_variable = { pwcn_rows = 1 }
+            }
+            random_neighbor_state = {
+                limit = { CONTROLLER = { OR = { has_war_with = ROOT ROOT = { is_in_array = { array = pwc_war_warning_attackers value = PREV } } } } }
+                CONTROLLER = {
+                    set_variable = { global.pwcn_enemy = THIS }
+                    ROOT = {
+                        set_variable = { pwcn_ge1 = global.pwcn_enemy }
+                    }
+                    if = {
+                        limit = { has_war_with = ROOT }
+                        ROOT = { set_variable = { pwcn_gw1 = 1 } }
+                    }
+                    else = {
+                        ROOT = { set_variable = { pwcn_gw1 = 0 } }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { ROOT.pwcn_rows = 1 } }
+            set_variable = { global.pwcn_state = THIS }
+            ROOT = {
+                set_variable = { pwcn_g2 = global.pwcn_state }
+                add_to_variable = { pwcn_rows = 1 }
+            }
+            random_neighbor_state = {
+                limit = { CONTROLLER = { OR = { has_war_with = ROOT ROOT = { is_in_array = { array = pwc_war_warning_attackers value = PREV } } } } }
+                CONTROLLER = {
+                    set_variable = { global.pwcn_enemy = THIS }
+                    ROOT = {
+                        set_variable = { pwcn_ge2 = global.pwcn_enemy }
+                    }
+                    if = {
+                        limit = { has_war_with = ROOT }
+                        ROOT = { set_variable = { pwcn_gw2 = 1 } }
+                    }
+                    else = {
+                        ROOT = { set_variable = { pwcn_gw2 = 0 } }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { ROOT.pwcn_rows = 2 } }
+            set_variable = { global.pwcn_state = THIS }
+            ROOT = {
+                set_variable = { pwcn_g3 = global.pwcn_state }
+                add_to_variable = { pwcn_rows = 1 }
+            }
+            random_neighbor_state = {
+                limit = { CONTROLLER = { OR = { has_war_with = ROOT ROOT = { is_in_array = { array = pwc_war_warning_attackers value = PREV } } } } }
+                CONTROLLER = {
+                    set_variable = { global.pwcn_enemy = THIS }
+                    ROOT = {
+                        set_variable = { pwcn_ge3 = global.pwcn_enemy }
+                    }
+                    if = {
+                        limit = { has_war_with = ROOT }
+                        ROOT = { set_variable = { pwcn_gw3 = 1 } }
+                    }
+                    else = {
+                        ROOT = { set_variable = { pwcn_gw3 = 0 } }
+                    }
+                }
+            }
+        }
+    }
+}

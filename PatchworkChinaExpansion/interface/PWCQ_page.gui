@@ -1,0 +1,1715 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwcq_page"
+        orientation = upper_right
+        position = { x = -720 y = 125 }
+        size = { width = 642 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCH_GFX_panel"
+        }
+        instantTextBoxType = {
+            name = "pwcq_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCH_TITLE"
+            maxWidth = 76
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_tab_1"
+            spriteType = "PWCH_GFX_tab_on"
+            position = { x = 104 y = 13 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_1_open"
+            position = { x = 104 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1_ON"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_1_locked"
+            position = { x = 96 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_tab_1_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 162 y = 21 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_tab_2"
+            position = { x = 190 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_2_open"
+            position = { x = 190 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_2_locked"
+            position = { x = 182 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_tab_2_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 248 y = 21 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_tab_3"
+            position = { x = 276 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_3_open"
+            position = { x = 276 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_tab_3_locked"
+            position = { x = 268 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_tab_3_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 334 y = 21 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_subtitle"
+            position = { x = 362 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_STATES"
+            maxWidth = 234
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_close"
+            position = { x = 604 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        instantTextBoxType = {
+            name = "pwcq_presets"
+            position = { x = 20 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESETS"
+            maxWidth = 78
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_preset1"
+            position = { x = 100 y = 57 }
+            spriteType = "PWCQ_GFX_preset"
+            clicksound = click_default
+            pdx_tooltip = "PWCQ_PRESET1_TT"
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset1_on"
+            position = { x = 100 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET1_ON"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset1_off"
+            position = { x = 100 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET1_OFF"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_preset2"
+            position = { x = 178 y = 57 }
+            spriteType = "PWCQ_GFX_preset"
+            clicksound = click_default
+            pdx_tooltip = "PWCQ_PRESET2_TT"
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset2_on"
+            position = { x = 178 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET2_ON"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset2_off"
+            position = { x = 178 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET2_OFF"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_preset3"
+            position = { x = 256 y = 57 }
+            spriteType = "PWCQ_GFX_preset"
+            clicksound = click_default
+            pdx_tooltip = "PWCQ_PRESET3_TT"
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset3_on"
+            position = { x = 256 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET3_ON"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset3_off"
+            position = { x = 256 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET3_OFF"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_preset4"
+            position = { x = 334 y = 57 }
+            spriteType = "PWCQ_GFX_preset"
+            clicksound = click_default
+            pdx_tooltip = "PWCQ_PRESET4_TT"
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset4_on"
+            position = { x = 334 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET4_ON"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_preset4_off"
+            position = { x = 334 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_PRESET4_OFF"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cost_free"
+            position = { x = 412 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_COST_FREE"
+            maxWidth = 210
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cost_later"
+            position = { x = 412 y = 60 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_COST_LATER"
+            maxWidth = 210
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge1_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 92 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge1_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 92 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge1_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 92 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge2_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 182 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge2_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 182 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge2_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 182 y = 123 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge3_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 92 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge3_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 92 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge3_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 92 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge4_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 182 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge4_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 182 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge4_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 182 y = 213 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge5_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 92 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge5_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 92 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge5_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 92 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge6_good"
+            spriteType = "PWCQ_GFX_link_h_good"
+            position = { x = 182 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge6_bad"
+            spriteType = "PWCQ_GFX_link_h_bad"
+            position = { x = 182 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge6_none"
+            spriteType = "PWCQ_GFX_link_h_none"
+            position = { x = 182 y = 303 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge7_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 51 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge7_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 51 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge7_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 51 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge8_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 141 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge8_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 141 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge8_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 141 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge9_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 231 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge9_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 231 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge9_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 231 y = 164 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge10_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 51 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge10_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 51 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge10_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 51 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge11_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 141 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge11_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 141 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge11_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 141 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge12_good"
+            spriteType = "PWCQ_GFX_link_v_good"
+            position = { x = 231 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge12_bad"
+            spriteType = "PWCQ_GFX_link_v_bad"
+            position = { x = 231 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_edge12_none"
+            spriteType = "PWCQ_GFX_link_v_none"
+            position = { x = 231 y = 254 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell1_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 20 y = 92 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell1_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 42 y = 102 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell1_need"
+            position = { x = 20 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK1"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell1"
+            position = { x = 20 y = 92 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell1_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 33 y = 96 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell1_name"
+            position = { x = 20 y = 144 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL1"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell1_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 16 y = 88 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell1_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 66 y = 84 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell1_up"
+            position = { x = 66 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA1_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell1_down"
+            position = { x = 66 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA1_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell1_same"
+            position = { x = 66 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA1_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell2_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 110 y = 92 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell2_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 132 y = 102 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell2_need"
+            position = { x = 110 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK2"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell2"
+            position = { x = 110 y = 92 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell2_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 123 y = 96 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell2_name"
+            position = { x = 110 y = 144 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL2"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell2_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 106 y = 88 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell2_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 156 y = 84 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell2_up"
+            position = { x = 156 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA2_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell2_down"
+            position = { x = 156 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA2_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell2_same"
+            position = { x = 156 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA2_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell3_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 200 y = 92 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell3_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 222 y = 102 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell3_need"
+            position = { x = 200 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK3"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell3"
+            position = { x = 200 y = 92 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell3_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 213 y = 96 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell3_name"
+            position = { x = 200 y = 144 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL3"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell3_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 196 y = 88 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell3_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 246 y = 84 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell3_up"
+            position = { x = 246 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA3_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell3_down"
+            position = { x = 246 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA3_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell3_same"
+            position = { x = 246 y = 85 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA3_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell4_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 20 y = 182 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell4_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 42 y = 192 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell4_need"
+            position = { x = 20 y = 228 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK4"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell4"
+            position = { x = 20 y = 182 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell4_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 33 y = 186 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell4_name"
+            position = { x = 20 y = 234 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL4"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell4_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 16 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell4_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 66 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell4_up"
+            position = { x = 66 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA4_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell4_down"
+            position = { x = 66 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA4_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell4_same"
+            position = { x = 66 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA4_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell5_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 110 y = 182 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell5_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 132 y = 192 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell5_need"
+            position = { x = 110 y = 228 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK5"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell5"
+            position = { x = 110 y = 182 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell5_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 123 y = 186 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell5_name"
+            position = { x = 110 y = 234 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL5"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell5_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 106 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell5_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 156 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell5_up"
+            position = { x = 156 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA5_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell5_down"
+            position = { x = 156 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA5_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell5_same"
+            position = { x = 156 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA5_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell6_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 200 y = 182 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell6_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 222 y = 192 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell6_need"
+            position = { x = 200 y = 228 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK6"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell6"
+            position = { x = 200 y = 182 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell6_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 213 y = 186 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell6_name"
+            position = { x = 200 y = 234 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL6"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell6_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 196 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell6_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 246 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell6_up"
+            position = { x = 246 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA6_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell6_down"
+            position = { x = 246 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA6_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell6_same"
+            position = { x = 246 y = 175 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA6_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell7_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 20 y = 272 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell7_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 42 y = 282 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell7_need"
+            position = { x = 20 y = 318 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK7"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell7"
+            position = { x = 20 y = 272 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell7_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 33 y = 276 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell7_name"
+            position = { x = 20 y = 324 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL7"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell7_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 16 y = 268 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell7_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 66 y = 264 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell7_up"
+            position = { x = 66 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA7_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell7_down"
+            position = { x = 66 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA7_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell7_same"
+            position = { x = 66 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA7_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell8_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 110 y = 272 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell8_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 132 y = 282 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell8_need"
+            position = { x = 110 y = 318 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK8"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell8"
+            position = { x = 110 y = 272 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell8_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 123 y = 276 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell8_name"
+            position = { x = 110 y = 324 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL8"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell8_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 106 y = 268 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell8_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 156 y = 264 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell8_up"
+            position = { x = 156 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA8_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell8_down"
+            position = { x = 156 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA8_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell8_same"
+            position = { x = 156 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA8_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell9_locked"
+            spriteType = "PWCQ_GFX_cell_locked"
+            position = { x = 200 y = 272 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell9_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 222 y = 282 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell9_need"
+            position = { x = 200 y = 318 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_LOCK9"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcq_cell9"
+            position = { x = 200 y = 272 }
+            spriteType = "PWCQ_GFX_cell"
+            clicksound = click_default
+        }
+        iconType = {
+            name = "pwcq_cell9_icon"
+            spriteType = "PWCQ_GFX_districts"
+            position = { x = 213 y = 276 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell9_name"
+            position = { x = 200 y = 324 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_CELL9"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell9_sel"
+            spriteType = "PWCQ_GFX_selected"
+            position = { x = 196 y = 268 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwcq_cell9_pill"
+            spriteType = "PWCQ_GFX_pill"
+            position = { x = 246 y = 264 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell9_up"
+            position = { x = 246 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA9_UP"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell9_down"
+            position = { x = 246 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA9_DOWN"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_cell9_same"
+            position = { x = 246 y = 265 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_DELTA9_SAME"
+            maxWidth = 30
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_header"
+            position = { x = 286 y = 92 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_HEADER"
+            maxWidth = 336
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row1"
+            position = { x = 286 y = 114 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW1"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row2"
+            position = { x = 286 y = 130 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW2"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row3"
+            position = { x = 286 y = 146 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW3"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row4"
+            position = { x = 286 y = 162 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW4"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row5"
+            position = { x = 286 y = 178 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW5"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row6"
+            position = { x = 286 y = 194 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW6"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row7"
+            position = { x = 286 y = 210 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW7"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row8"
+            position = { x = 286 y = 226 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW8"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row9"
+            position = { x = 286 y = 242 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW9"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row10"
+            position = { x = 286 y = 258 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW10"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row11"
+            position = { x = 286 y = 274 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW11"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_row12"
+            position = { x = 286 y = 290 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_ROW12"
+            maxWidth = 336
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_selected"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_SELECTED"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_building"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_BUILDING"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_idle1c"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_IDLE1C"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_idle1i"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_IDLE1I"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_idle2c"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_IDLE2C"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_idle2i"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_IDLE2I"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcq_info_idle3"
+            position = { x = 286 y = 308 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCQ_INFO_IDLE3"
+            maxWidth = 336
+            maxHeight = 48
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

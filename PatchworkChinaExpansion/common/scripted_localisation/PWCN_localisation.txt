@@ -1,0 +1,90 @@
+defined_text = {
+    name = PWCN_Slot1Status
+    text = {
+        trigger = { check_variable = { pwcn_st1 = 1 } }
+        localization_key = PWCN_DEPLOYING
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st1 = 2 } }
+        localization_key = PWCN_READY
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN
+    }
+}
+defined_text = {
+    name = PWCN_Slot1Detail
+    text = {
+        trigger = { check_variable = { pwcn_st1 = 1 } }
+        localization_key = PWCN_DEPLOYING_DAYS_1
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st1 = 2 } }
+        localization_key = PWCN_READY_HINT
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN_DAYS_1
+    }
+}
+defined_text = {
+    name = PWCN_Slot2Status
+    text = {
+        trigger = { check_variable = { pwcn_st2 = 1 } }
+        localization_key = PWCN_DEPLOYING
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st2 = 2 } }
+        localization_key = PWCN_READY
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN
+    }
+}
+defined_text = {
+    name = PWCN_Slot2Detail
+    text = {
+        trigger = { check_variable = { pwcn_st2 = 1 } }
+        localization_key = PWCN_DEPLOYING_DAYS_2
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st2 = 2 } }
+        localization_key = PWCN_READY_HINT
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN_DAYS_2
+    }
+}
+defined_text = {
+    name = PWCN_Slot3Status
+    text = {
+        trigger = { check_variable = { pwcn_st3 = 1 } }
+        localization_key = PWCN_DEPLOYING
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st3 = 2 } }
+        localization_key = PWCN_READY
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN
+    }
+}
+defined_text = {
+    name = PWCN_Slot3Detail
+    text = {
+        trigger = { check_variable = { pwcn_st3 = 1 } }
+        localization_key = PWCN_DEPLOYING_DAYS_3
+    }
+    text = {
+        trigger = { check_variable = { pwcn_st3 = 2 } }
+        localization_key = PWCN_READY_HINT
+    }
+    text = {
+        trigger = { always = yes }
+        localization_key = PWCN_COOLDOWN_DAYS_3
+    }
+}

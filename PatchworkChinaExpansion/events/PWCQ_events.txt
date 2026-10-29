@@ -1,0 +1,20 @@
+add_namespace = pwcq
+country_event = {
+    id = pwcq.1
+    title = pwcq.1.t
+    desc = pwcq.1.d
+    picture = PWC_GFX_event_report_civic
+    is_triggered_only = yes
+    option = {
+        name = pwcq.1.a
+        clr_country_flag = pwct_panel_open
+        clr_country_flag = pwct_collection_open
+        set_variable = { pwcd_page = 0 }
+        set_variable = { pwch_page = 1 }
+        set_variable = { pwch_last = 1 }
+        pwcq_refresh_capital = yes
+    }
+    option = {
+        name = pwcq.1.b
+    }
+}

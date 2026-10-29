@@ -1,0 +1,78 @@
+scripted_gui = {
+    pwch_topbar = {
+        context_type = player_context
+        window_name = pwch_topbar_window
+        ai_enabled = { always = no }
+        visible = { OR = { has_global_flag = pwcq_started has_global_flag = pwcn_started has_global_flag = pwco_started } }
+        triggers = {
+            pwch_topbar_news_visible = {
+                has_country_flag = pwch_news
+            }
+        }
+        effects = {
+            pwch_topbar_toggle_click = {
+                if = {
+                    limit = { check_variable = { pwch_page > 0 } }
+                    set_variable = { pwch_page = 0 }
+                }
+                else = {
+                    clr_country_flag = pwch_news
+                    if = {
+                        limit = { check_variable = { pwch_last = 1 } has_global_flag = pwcq_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 1 }
+                        set_variable = { pwch_last = 1 }
+                        pwcq_refresh_capital = yes
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwch_last = 2 } has_global_flag = pwcn_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 2 }
+                        set_variable = { pwch_last = 2 }
+                        pwcn_refresh = yes
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwch_last = 3 } has_global_flag = pwco_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 3 }
+                        set_variable = { pwch_last = 3 }
+                        pwco_refresh = yes
+                    }
+                    else_if = {
+                        limit = { has_global_flag = pwcq_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 1 }
+                        set_variable = { pwch_last = 1 }
+                        pwcq_refresh_capital = yes
+                    }
+                    else_if = {
+                        limit = { has_global_flag = pwcn_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 2 }
+                        set_variable = { pwch_last = 2 }
+                        pwcn_refresh = yes
+                    }
+                    else_if = {
+                        limit = { has_global_flag = pwco_started }
+                        clr_country_flag = pwct_panel_open
+                        clr_country_flag = pwct_collection_open
+                        set_variable = { pwcd_page = 0 }
+                        set_variable = { pwch_page = 3 }
+                        set_variable = { pwch_last = 3 }
+                        pwco_refresh = yes
+                    }
+                }
+            }
+        }
+    }
+}

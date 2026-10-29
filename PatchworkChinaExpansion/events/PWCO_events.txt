@@ -1,0 +1,73 @@
+add_namespace = pwco
+country_event = {
+    id = pwco.1
+    title = pwco.1.t
+    desc = pwco.1.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwco.1.a
+        pwco_close_report = yes
+    }
+}
+country_event = {
+    id = pwco.2
+    title = pwco.2.t
+    desc = pwco.2.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwco.2.a
+        pwco_close_report = yes
+    }
+}
+country_event = {
+    id = pwco.3
+    title = pwco.3.t
+    desc = pwco.3.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwco.3.a
+        pwco_close_report = yes
+    }
+}
+news_event = {
+    id = pwco.4
+    title = pwco.4.t
+    desc = pwco.4.d
+    picture = PWC_GFX_news_showdown
+    is_triggered_only = yes
+    major = yes
+    option = {
+        name = pwco.4.a
+    }
+}
+country_event = {
+    id = pwco.5
+    title = pwco.5.t
+    desc = pwco.5.d
+    picture = PWC_GFX_event_report_recon
+    is_triggered_only = yes
+    option = {
+        name = pwco.5.a
+        clr_country_flag = pwct_panel_open
+        clr_country_flag = pwct_collection_open
+        set_variable = { pwcd_page = 0 }
+        set_variable = { pwch_page = 3 }
+        set_variable = { pwch_last = 3 }
+        pwco_refresh = yes
+    }
+    option = {
+        name = pwco.5.b
+    }
+}
+country_event = {
+    id = pwco.6
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+        clr_country_flag = pwco_report_wait
+        pwco_show_report = yes
+    }
+}

@@ -1,0 +1,744 @@
+pwco_init = {
+    set_global_flag = pwco_started
+    set_variable = { global.pwco_debris = 0 }
+    pwch_ensure_counted = yes
+    every_country = {
+        limit = { pwc_st_live_city_country = yes }
+        pwco_on_count = yes
+    }
+}
+pwco_show_report = {
+    if = {
+        limit = {
+            NOT = { has_country_flag = pwco_report_open }
+            NOT = { has_country_flag = pwco_report_wait }
+            check_variable = { pwco_reports_kind^num > 0 }
+        }
+        set_variable = { pwco_report_kind = pwco_reports_kind^0 }
+        set_variable = { pwco_report_by = pwco_reports_by^0 }
+        remove_from_array = { array = pwco_reports_kind index = 0 }
+        remove_from_array = { array = pwco_reports_by index = 0 }
+        set_country_flag = pwco_report_open
+        if = {
+            limit = { check_variable = { pwco_report_kind = 1 } }
+            country_event = { id = pwco.1 }
+        }
+        else_if = {
+            limit = { check_variable = { pwco_report_kind = 2 } }
+            country_event = { id = pwco.2 }
+        }
+        else_if = {
+            limit = { check_variable = { pwco_report_kind = 3 } }
+            country_event = { id = pwco.3 }
+        }
+    }
+}
+pwco_close_report = {
+    clr_country_flag = pwco_report_open
+    set_country_flag = pwco_report_wait
+    country_event = { id = pwco.6 hours = 1 }
+}
+pwco_on_count = {
+    set_variable = { pwco_site = 0 }
+    if = {
+        limit = { owns_state = 387 controls_state = 387 }
+        set_variable = { pwco_site = 4 }
+    }
+    if = {
+        limit = { owns_state = 277 controls_state = 277 }
+        set_variable = { pwco_site = 3 }
+    }
+    if = {
+        limit = { owns_state = 87 controls_state = 87 }
+        set_variable = { pwco_site = 2 }
+    }
+    if = {
+        limit = { owns_state = 56 controls_state = 56 }
+        set_variable = { pwco_site = 1 }
+    }
+    set_variable = { pwco_access = 0 }
+    if = {
+        limit = { check_variable = { pwch_states > 29 } }
+        set_variable = { pwco_access = 2 }
+    }
+    else_if = {
+        limit = { check_variable = { pwch_states > 14 } check_variable = { pwco_site > 0 } }
+        set_variable = { pwco_access = 1 }
+    }
+    set_variable = { pwco_slots = 0 }
+    if = {
+        limit = { check_variable = { pwco_access > 0 } }
+        set_variable = { pwco_slots = 1 }
+        if = {
+            limit = { check_variable = { pwch_states > 29 } }
+            set_variable = { pwco_slots = 2 }
+        }
+        if = {
+            limit = { check_variable = { pwch_states > 49 } }
+            set_variable = { pwco_slots = 3 }
+        }
+    }
+    if = {
+        limit = { check_variable = { pwco_access > 0 } NOT = { has_country_flag = pwco_told } }
+        set_country_flag = pwco_told
+        if = {
+            limit = { is_ai = no }
+            country_event = { id = pwco.5 }
+            set_country_flag = pwch_news
+        }
+    }
+}
+pwco_recount = {
+    set_variable = { pwco_n1 = 0 }
+    set_variable = { pwco_n2 = 0 }
+    set_variable = { pwco_n3 = 0 }
+    set_variable = { pwco_total = 0 }
+    if = {
+        limit = { check_variable = { pwco_st1 = 2 } check_variable = { pwco_ty1 = 1 } }
+        add_to_variable = { pwco_n1 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st1 = 2 } check_variable = { pwco_ty1 = 2 } }
+        add_to_variable = { pwco_n2 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st1 = 2 } check_variable = { pwco_ty1 = 3 } }
+        add_to_variable = { pwco_n3 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st2 = 2 } check_variable = { pwco_ty2 = 1 } }
+        add_to_variable = { pwco_n1 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st2 = 2 } check_variable = { pwco_ty2 = 2 } }
+        add_to_variable = { pwco_n2 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st2 = 2 } check_variable = { pwco_ty2 = 3 } }
+        add_to_variable = { pwco_n3 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st3 = 2 } check_variable = { pwco_ty3 = 1 } }
+        add_to_variable = { pwco_n1 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st3 = 2 } check_variable = { pwco_ty3 = 2 } }
+        add_to_variable = { pwco_n2 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    if = {
+        limit = { check_variable = { pwco_st3 = 2 } check_variable = { pwco_ty3 = 3 } }
+        add_to_variable = { pwco_n3 = 1 }
+        add_to_variable = { pwco_total = 1 }
+    }
+    set_variable = { pwco_s_army_speed_factor = 0 }
+    set_variable = { pwco_s_command_power_gain_mult = 0 }
+    set_variable = { pwco_s_planning_speed = 0 }
+    set_temp_variable = { pwco_x = pwco_n1 }
+    multiply_temp_variable = { pwco_x = 0.1 }
+    add_to_variable = { pwco_s_planning_speed = pwco_x }
+    set_temp_variable = { pwco_x = pwco_n2 }
+    multiply_temp_variable = { pwco_x = 0.1 }
+    add_to_variable = { pwco_s_command_power_gain_mult = pwco_x }
+    set_temp_variable = { pwco_x = pwco_n3 }
+    multiply_temp_variable = { pwco_x = 0.05 }
+    add_to_variable = { pwco_s_army_speed_factor = pwco_x }
+    if = {
+        limit = { check_variable = { pwco_total > 0 } }
+        set_country_flag = pwco_orbiting
+        if = {
+            limit = { NOT = { has_dynamic_modifier = { modifier = pwco_orbit } } }
+            add_dynamic_modifier = { modifier = pwco_orbit }
+        }
+        force_update_dynamic_modifier = yes
+    }
+    else = {
+        clr_country_flag = pwco_orbiting
+        remove_dynamic_modifier = { modifier = pwco_orbit }
+    }
+}
+pwco_pick_slot = {
+    set_variable = { pwco_pick = 0 }
+    if = {
+        limit = { check_variable = { pwco_slots > 2 } check_variable = { pwco_st3 = 0 } }
+        set_variable = { pwco_pick = 3 }
+    }
+    if = {
+        limit = { check_variable = { pwco_slots > 1 } check_variable = { pwco_st2 = 0 } }
+        set_variable = { pwco_pick = 2 }
+    }
+    if = {
+        limit = { check_variable = { pwco_slots > 0 } check_variable = { pwco_st1 = 0 } }
+        set_variable = { pwco_pick = 1 }
+    }
+}
+pwco_launch = {
+    add_political_power = -50
+    set_country_flag = pwco_timer
+    if = {
+        limit = { check_variable = { pwco_pick = 1 } }
+        set_variable = { pwco_st1 = 1 }
+        set_variable = { pwco_ty1 = pwco_type }
+        set_variable = { pwco_t1 = 30 }
+        set_variable = { pwco_pb1 = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { pwco_pick = 2 } }
+        set_variable = { pwco_st2 = 1 }
+        set_variable = { pwco_ty2 = pwco_type }
+        set_variable = { pwco_t2 = 30 }
+        set_variable = { pwco_pb2 = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { pwco_pick = 3 } }
+        set_variable = { pwco_st3 = 1 }
+        set_variable = { pwco_ty3 = pwco_type }
+        set_variable = { pwco_t3 = 30 }
+        set_variable = { pwco_pb3 = 1 }
+    }
+}
+pwco_daily = {
+    every_country = {
+        limit = { has_country_flag = pwco_timer }
+        clr_country_flag = pwco_timer
+        if = {
+            limit = { check_variable = { pwco_st1 = 1 } }
+            set_country_flag = pwco_timer
+            subtract_from_variable = { pwco_t1 = 1 }
+            set_variable = { pwco_pb1 = pwco_t1 }
+            multiply_variable = { pwco_pb1 = -1 }
+            add_to_variable = { pwco_pb1 = 30 }
+            multiply_variable = { pwco_pb1 = 10 }
+            divide_variable = { pwco_pb1 = 30 }
+            round_variable = pwco_pb1
+            add_to_variable = { pwco_pb1 = 1 }
+            clamp_variable = { var = pwco_pb1 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_t1 < 1 } }
+                if = {
+                    limit = { check_variable = { global.pwco_debris > 79 } }
+                    random_list = {
+                        30 = {
+                            set_variable = { pwco_st1 = 0 }
+                            set_variable = { pwco_ty1 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        70 = {
+                            set_variable = { pwco_st1 = 2 }
+                            set_variable = { pwco_m1 = 48 }
+                            set_variable = { pwco_lb1 = 11 }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { check_variable = { global.pwco_debris > 59 } }
+                    random_list = {
+                        15 = {
+                            set_variable = { pwco_st1 = 0 }
+                            set_variable = { pwco_ty1 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        85 = {
+                            set_variable = { pwco_st1 = 2 }
+                            set_variable = { pwco_m1 = 48 }
+                            set_variable = { pwco_lb1 = 11 }
+                        }
+                    }
+                }
+                else = {
+                    set_variable = { pwco_st1 = 2 }
+                    set_variable = { pwco_m1 = 48 }
+                    set_variable = { pwco_lb1 = 11 }
+                }
+                pwco_recount = yes
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_st2 = 1 } }
+            set_country_flag = pwco_timer
+            subtract_from_variable = { pwco_t2 = 1 }
+            set_variable = { pwco_pb2 = pwco_t2 }
+            multiply_variable = { pwco_pb2 = -1 }
+            add_to_variable = { pwco_pb2 = 30 }
+            multiply_variable = { pwco_pb2 = 10 }
+            divide_variable = { pwco_pb2 = 30 }
+            round_variable = pwco_pb2
+            add_to_variable = { pwco_pb2 = 1 }
+            clamp_variable = { var = pwco_pb2 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_t2 < 1 } }
+                if = {
+                    limit = { check_variable = { global.pwco_debris > 79 } }
+                    random_list = {
+                        30 = {
+                            set_variable = { pwco_st2 = 0 }
+                            set_variable = { pwco_ty2 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        70 = {
+                            set_variable = { pwco_st2 = 2 }
+                            set_variable = { pwco_m2 = 48 }
+                            set_variable = { pwco_lb2 = 11 }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { check_variable = { global.pwco_debris > 59 } }
+                    random_list = {
+                        15 = {
+                            set_variable = { pwco_st2 = 0 }
+                            set_variable = { pwco_ty2 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        85 = {
+                            set_variable = { pwco_st2 = 2 }
+                            set_variable = { pwco_m2 = 48 }
+                            set_variable = { pwco_lb2 = 11 }
+                        }
+                    }
+                }
+                else = {
+                    set_variable = { pwco_st2 = 2 }
+                    set_variable = { pwco_m2 = 48 }
+                    set_variable = { pwco_lb2 = 11 }
+                }
+                pwco_recount = yes
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_st3 = 1 } }
+            set_country_flag = pwco_timer
+            subtract_from_variable = { pwco_t3 = 1 }
+            set_variable = { pwco_pb3 = pwco_t3 }
+            multiply_variable = { pwco_pb3 = -1 }
+            add_to_variable = { pwco_pb3 = 30 }
+            multiply_variable = { pwco_pb3 = 10 }
+            divide_variable = { pwco_pb3 = 30 }
+            round_variable = pwco_pb3
+            add_to_variable = { pwco_pb3 = 1 }
+            clamp_variable = { var = pwco_pb3 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_t3 < 1 } }
+                if = {
+                    limit = { check_variable = { global.pwco_debris > 79 } }
+                    random_list = {
+                        30 = {
+                            set_variable = { pwco_st3 = 0 }
+                            set_variable = { pwco_ty3 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        70 = {
+                            set_variable = { pwco_st3 = 2 }
+                            set_variable = { pwco_m3 = 48 }
+                            set_variable = { pwco_lb3 = 11 }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { check_variable = { global.pwco_debris > 59 } }
+                    random_list = {
+                        15 = {
+                            set_variable = { pwco_st3 = 0 }
+                            set_variable = { pwco_ty3 = 0 }
+                            if = {
+                                limit = { is_ai = no }
+                                add_to_array = { array = pwco_reports_kind value = 3 }
+                                add_to_array = { array = pwco_reports_by value = 0 }
+                                pwco_show_report = yes
+                            }
+                        }
+                        85 = {
+                            set_variable = { pwco_st3 = 2 }
+                            set_variable = { pwco_m3 = 48 }
+                            set_variable = { pwco_lb3 = 11 }
+                        }
+                    }
+                }
+                else = {
+                    set_variable = { pwco_st3 = 2 }
+                    set_variable = { pwco_m3 = 48 }
+                    set_variable = { pwco_lb3 = 11 }
+                }
+                pwco_recount = yes
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_asat_days > 0 } }
+            set_country_flag = pwco_timer
+            subtract_from_variable = { pwco_asat_days = 1 }
+        }
+    }
+}
+pwco_monthly = {
+    if = {
+        limit = { check_variable = { global.pwco_debris > 0 } }
+        subtract_from_variable = { global.pwco_debris = 1 }
+    }
+    every_country = {
+        limit = { has_country_flag = pwco_orbiting }
+        set_variable = { pwco_risk = global.pwco_debris }
+        set_variable = { pwco_safe = 1000 }
+        subtract_from_variable = { pwco_safe = global.pwco_debris }
+        if = {
+            limit = { check_variable = { pwco_st1 = 2 } }
+            subtract_from_variable = { pwco_m1 = 1 }
+            set_variable = { pwco_lb1 = pwco_m1 }
+            multiply_variable = { pwco_lb1 = 10 }
+            divide_variable = { pwco_lb1 = 48 }
+            round_variable = pwco_lb1
+            add_to_variable = { pwco_lb1 = 1 }
+            clamp_variable = { var = pwco_lb1 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_m1 < 1 } }
+                set_variable = { pwco_st1 = 0 }
+                set_variable = { pwco_ty1 = 0 }
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+            else = {
+                if = {
+                    limit = { check_variable = { pwco_m1 = 3 } is_ai = no }
+                    set_country_flag = pwch_news
+                }
+                random_list = {
+                    pwco_risk = {
+                        set_variable = { pwco_st1 = 0 }
+                        set_variable = { pwco_ty1 = 0 }
+                        if = {
+                            limit = { is_ai = no }
+                            add_to_array = { array = pwco_reports_kind value = 2 }
+                            add_to_array = { array = pwco_reports_by value = 0 }
+                            pwco_show_report = yes
+                        }
+                    }
+                    pwco_safe = {
+                        set_variable = { pwco_kept = 1 }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_st2 = 2 } }
+            subtract_from_variable = { pwco_m2 = 1 }
+            set_variable = { pwco_lb2 = pwco_m2 }
+            multiply_variable = { pwco_lb2 = 10 }
+            divide_variable = { pwco_lb2 = 48 }
+            round_variable = pwco_lb2
+            add_to_variable = { pwco_lb2 = 1 }
+            clamp_variable = { var = pwco_lb2 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_m2 < 1 } }
+                set_variable = { pwco_st2 = 0 }
+                set_variable = { pwco_ty2 = 0 }
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+            else = {
+                if = {
+                    limit = { check_variable = { pwco_m2 = 3 } is_ai = no }
+                    set_country_flag = pwch_news
+                }
+                random_list = {
+                    pwco_risk = {
+                        set_variable = { pwco_st2 = 0 }
+                        set_variable = { pwco_ty2 = 0 }
+                        if = {
+                            limit = { is_ai = no }
+                            add_to_array = { array = pwco_reports_kind value = 2 }
+                            add_to_array = { array = pwco_reports_by value = 0 }
+                            pwco_show_report = yes
+                        }
+                    }
+                    pwco_safe = {
+                        set_variable = { pwco_kept = 1 }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_st3 = 2 } }
+            subtract_from_variable = { pwco_m3 = 1 }
+            set_variable = { pwco_lb3 = pwco_m3 }
+            multiply_variable = { pwco_lb3 = 10 }
+            divide_variable = { pwco_lb3 = 48 }
+            round_variable = pwco_lb3
+            add_to_variable = { pwco_lb3 = 1 }
+            clamp_variable = { var = pwco_lb3 min = 1 max = 11 }
+            if = {
+                limit = { check_variable = { pwco_m3 < 1 } }
+                set_variable = { pwco_st3 = 0 }
+                set_variable = { pwco_ty3 = 0 }
+                if = {
+                    limit = { is_ai = no }
+                    set_country_flag = pwch_news
+                }
+            }
+            else = {
+                if = {
+                    limit = { check_variable = { pwco_m3 = 3 } is_ai = no }
+                    set_country_flag = pwch_news
+                }
+                random_list = {
+                    pwco_risk = {
+                        set_variable = { pwco_st3 = 0 }
+                        set_variable = { pwco_ty3 = 0 }
+                        if = {
+                            limit = { is_ai = no }
+                            add_to_array = { array = pwco_reports_kind value = 2 }
+                            add_to_array = { array = pwco_reports_by value = 0 }
+                            pwco_show_report = yes
+                        }
+                    }
+                    pwco_safe = {
+                        set_variable = { pwco_kept = 1 }
+                    }
+                }
+            }
+        }
+        pwco_recount = yes
+    }
+    every_country = {
+        limit = { is_ai = yes pwc_st_live_city_country = yes pwco_free_slot = yes has_political_power > 99 }
+        pwco_pick_slot = yes
+        set_variable = { pwco_type = 2 }
+        if = {
+            limit = { has_country_flag = pwc_ai_mobility }
+            set_variable = { pwco_type = 3 }
+        }
+        if = {
+            limit = { has_country_flag = pwc_ai_coastal }
+            set_variable = { pwco_type = 3 }
+        }
+        if = {
+            limit = { has_country_flag = pwc_ai_industrial }
+            set_variable = { pwco_type = 2 }
+        }
+        if = {
+            limit = { has_country_flag = pwc_ai_balanced }
+            set_variable = { pwco_type = 2 }
+        }
+        if = {
+            limit = { has_country_flag = pwc_ai_defense }
+            set_variable = { pwco_type = 1 }
+        }
+        if = {
+            limit = { has_country_flag = pwc_ai_air_power }
+            set_variable = { pwco_type = 1 }
+        }
+        pwco_launch = yes
+    }
+    every_country = {
+        limit = { is_ai = yes has_war = yes pwco_can_asat = yes has_political_power > 49 check_variable = { global.pwco_debris < 60 } enemies_strength_ratio < 1 any_enemy_country = { check_variable = { pwco_total > 0 } } }
+        random_enemy_country = {
+            limit = { check_variable = { pwco_total > 0 } }
+            save_event_target_as = pwco_target
+        }
+        pwco_asat = yes
+    }
+    every_country = {
+        limit = { is_ai = no check_variable = { pwch_page > 0 } }
+        pwco_refresh = yes
+    }
+}
+pwco_asat = {
+    if = {
+        limit = { pwco_can_asat = yes event_target:pwco_target = { check_variable = { pwco_total > 0 } has_war_with = PREV } }
+        add_political_power = -25
+        set_variable = { global.pwco_attacker = THIS }
+        set_variable = { pwco_asat_days = 90 }
+        set_country_flag = pwco_timer
+        set_temp_variable = { pwco_before = global.pwco_debris }
+        add_to_variable = { global.pwco_debris = 10 }
+        clamp_variable = { var = global.pwco_debris min = 0 max = 100 }
+        event_target:pwco_target = {
+            set_variable = { pwco_w1 = 0 }
+            if = {
+                limit = { check_variable = { pwco_st1 = 2 } }
+                set_variable = { pwco_w1 = 1 }
+            }
+            set_variable = { pwco_w2 = 0 }
+            if = {
+                limit = { check_variable = { pwco_st2 = 2 } }
+                set_variable = { pwco_w2 = 1 }
+            }
+            set_variable = { pwco_w3 = 0 }
+            if = {
+                limit = { check_variable = { pwco_st3 = 2 } }
+                set_variable = { pwco_w3 = 1 }
+            }
+            random_list = {
+                pwco_w1 = {
+                    set_variable = { pwco_st1 = 0 }
+                    set_variable = { pwco_ty1 = 0 }
+                }
+                pwco_w2 = {
+                    set_variable = { pwco_st2 = 0 }
+                    set_variable = { pwco_ty2 = 0 }
+                }
+                pwco_w3 = {
+                    set_variable = { pwco_st3 = 0 }
+                    set_variable = { pwco_ty3 = 0 }
+                }
+            }
+            pwco_recount = yes
+            set_variable = { pwco_hit_by = global.pwco_attacker }
+            if = {
+                limit = { is_ai = no }
+                add_to_array = { array = pwco_reports_kind value = 1 }
+                add_to_array = { array = pwco_reports_by value = pwco_hit_by }
+                pwco_show_report = yes
+                set_country_flag = pwch_news
+            }
+        }
+        if = {
+            limit = { check_variable = { pwco_before < 30 } check_variable = { global.pwco_debris > 29 } }
+            news_event = { id = pwco.4 }
+        }
+        if = {
+            limit = { check_variable = { pwco_before < 60 } check_variable = { global.pwco_debris > 59 } }
+            news_event = { id = pwco.4 }
+        }
+        every_country = {
+            limit = { is_ai = no check_variable = { pwch_page > 0 } }
+            pwco_refresh = yes
+        }
+    }
+}
+pwco_refresh = {
+    set_variable = { pwco_erows = 0 }
+    every_enemy_country = {
+        limit = { check_variable = { pwco_total = 3 } check_variable = { PREV.pwco_erows < 3 } }
+        if = {
+            limit = { check_variable = { PREV.pwco_erows = 0 } }
+            PREV = {
+                set_variable = { pwco_e1 = PREV }
+                set_variable = { pwco_ec1 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 1 } }
+            PREV = {
+                set_variable = { pwco_e2 = PREV }
+                set_variable = { pwco_ec2 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 2 } }
+            PREV = {
+                set_variable = { pwco_e3 = PREV }
+                set_variable = { pwco_ec3 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+    }
+    every_enemy_country = {
+        limit = { check_variable = { pwco_total = 2 } check_variable = { PREV.pwco_erows < 3 } }
+        if = {
+            limit = { check_variable = { PREV.pwco_erows = 0 } }
+            PREV = {
+                set_variable = { pwco_e1 = PREV }
+                set_variable = { pwco_ec1 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 1 } }
+            PREV = {
+                set_variable = { pwco_e2 = PREV }
+                set_variable = { pwco_ec2 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 2 } }
+            PREV = {
+                set_variable = { pwco_e3 = PREV }
+                set_variable = { pwco_ec3 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+    }
+    every_enemy_country = {
+        limit = { check_variable = { pwco_total = 1 } check_variable = { PREV.pwco_erows < 3 } }
+        if = {
+            limit = { check_variable = { PREV.pwco_erows = 0 } }
+            PREV = {
+                set_variable = { pwco_e1 = PREV }
+                set_variable = { pwco_ec1 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 1 } }
+            PREV = {
+                set_variable = { pwco_e2 = PREV }
+                set_variable = { pwco_ec2 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { PREV.pwco_erows = 2 } }
+            PREV = {
+                set_variable = { pwco_e3 = PREV }
+                set_variable = { pwco_ec3 = PREV.pwco_total }
+                add_to_variable = { pwco_erows = 1 }
+            }
+        }
+    }
+    set_variable = { pwco_gauge = global.pwco_debris }
+    multiply_variable = { pwco_gauge = 10 }
+    divide_variable = { pwco_gauge = 100 }
+    round_variable = pwco_gauge
+    add_to_variable = { pwco_gauge = 1 }
+    clamp_variable = { var = pwco_gauge min = 1 max = 11 }
+}

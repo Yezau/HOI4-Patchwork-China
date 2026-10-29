@@ -1,0 +1,22 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwcq_chengqu option = ON } NOT = { has_global_flag = pwcq_started } }
+                pwcq_init = yes
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = pwcq_chengqu option = ON } has_global_flag = pwcq_started }
+                every_country = {
+                    limit = { has_country_flag = pwcq_building }
+                    subtract_from_variable = { pwcq_build = 1 }
+                    if = {
+                        limit = { check_variable = { pwcq_build < 1 } }
+                        clr_country_flag = pwcq_building
+                        pwcq_recount = yes
+                    }
+                }
+            }
+        }
+    }
+}

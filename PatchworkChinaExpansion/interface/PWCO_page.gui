@@ -1,0 +1,1370 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwco_page"
+        orientation = upper_right
+        position = { x = -720 y = 125 }
+        size = { width = 642 height = 372 }
+        moveable = yes
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCH_GFX_panel"
+        }
+        instantTextBoxType = {
+            name = "pwco_title"
+            position = { x = 24 y = 12 }
+            orientation = upper_left
+            font = "PWC_focus_heading26"
+            text = "PWCH_TITLE"
+            maxWidth = 76
+            maxHeight = 32
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_tab_1"
+            position = { x = 104 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_1_open"
+            position = { x = 104 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_1_locked"
+            position = { x = 96 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_1_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_tab_1_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 162 y = 21 }
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_tab_2"
+            position = { x = 190 y = 13 }
+            spriteType = "PWCH_GFX_tab"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_2_open"
+            position = { x = 190 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_2_locked"
+            position = { x = 182 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_2_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_tab_2_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 248 y = 21 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_tab_3"
+            spriteType = "PWCH_GFX_tab_on"
+            position = { x = 276 y = 13 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_3_open"
+            position = { x = 276 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3_ON"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_tab_3_locked"
+            position = { x = 268 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_TAB_3_LOCKED"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_tab_3_lock"
+            spriteType = "PWCH_GFX_lock14"
+            position = { x = 334 y = 21 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_subtitle"
+            position = { x = 362 y = 19 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCH_STATES"
+            maxWidth = 234
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_close"
+            position = { x = 604 y = 12 }
+            quadTextureSprite = "GFX_closebutton"
+            clicksound = click_close
+        }
+        instantTextBoxType = {
+            name = "pwco_status0"
+            position = { x = 20 y = 58 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_STATUS0"
+            maxWidth = 602
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_status1"
+            position = { x = 20 y = 58 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_STATUS1"
+            maxWidth = 602
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_status2"
+            position = { x = 20 y = 58 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_STATUS2"
+            maxWidth = 602
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1"
+            spriteType = "PWCH_GFX_card"
+            position = { x = 20 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_dim"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 20 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_sat_dim"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 28 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_slot"
+            position = { x = 84 y = 96 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT1"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 28 y = 154 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_need"
+            position = { x = 62 y = 158 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_NEED1"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_free"
+            position = { x = 28 y = 90 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_SLOT_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch1_1"
+            position = { x = 28 y = 112 }
+            spriteType = "PWCO_GFX_launch_scout"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_1_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch1_1_label"
+            position = { x = 28 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_1"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch1_2"
+            position = { x = 90 y = 112 }
+            spriteType = "PWCO_GFX_launch_comm"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_2_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch1_2_label"
+            position = { x = 90 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_2"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch1_3"
+            position = { x = 152 y = 112 }
+            spriteType = "PWCO_GFX_launch_nav"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_3_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch1_3_label"
+            position = { x = 152 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_3"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_cost"
+            position = { x = 28 y = 184 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_COST"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_sat"
+            spriteType = "PWCO_GFX_sat"
+            position = { x = 28 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_name"
+            position = { x = 84 y = 94 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_NAME1"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_launching_line"
+            position = { x = 84 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_LINE1"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_launching_time"
+            position = { x = 28 y = 154 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_TIME1"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_launching_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 28 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_launching_bar"
+            spriteType = "PWCO_GFX_bar_launching"
+            position = { x = 28 y = 178 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_orbit_line"
+            position = { x = 84 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_LINE1"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_orbit_bonus"
+            position = { x = 28 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_BONUS1"
+            maxWidth = 178
+            maxHeight = 32
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card1_orbit_time"
+            position = { x = 28 y = 172 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_TIME1"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_orbit_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 28 y = 192 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card1_orbit_bar"
+            spriteType = "PWCO_GFX_bar_orbit"
+            position = { x = 28 y = 192 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2"
+            spriteType = "PWCH_GFX_card"
+            position = { x = 224 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_dim"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 224 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_sat_dim"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 232 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_slot"
+            position = { x = 288 y = 96 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT2"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 232 y = 154 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_need"
+            position = { x = 266 y = 158 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_NEED2"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_free"
+            position = { x = 232 y = 90 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_SLOT_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch2_1"
+            position = { x = 232 y = 112 }
+            spriteType = "PWCO_GFX_launch_scout"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_1_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch2_1_label"
+            position = { x = 232 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_1"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch2_2"
+            position = { x = 294 y = 112 }
+            spriteType = "PWCO_GFX_launch_comm"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_2_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch2_2_label"
+            position = { x = 294 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_2"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch2_3"
+            position = { x = 356 y = 112 }
+            spriteType = "PWCO_GFX_launch_nav"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_3_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch2_3_label"
+            position = { x = 356 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_3"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_cost"
+            position = { x = 232 y = 184 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_COST"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_sat"
+            spriteType = "PWCO_GFX_sat"
+            position = { x = 232 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_name"
+            position = { x = 288 y = 94 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_NAME2"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_launching_line"
+            position = { x = 288 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_LINE2"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_launching_time"
+            position = { x = 232 y = 154 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_TIME2"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_launching_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 232 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_launching_bar"
+            spriteType = "PWCO_GFX_bar_launching"
+            position = { x = 232 y = 178 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_orbit_line"
+            position = { x = 288 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_LINE2"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_orbit_bonus"
+            position = { x = 232 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_BONUS2"
+            maxWidth = 178
+            maxHeight = 32
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card2_orbit_time"
+            position = { x = 232 y = 172 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_TIME2"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_orbit_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 232 y = 192 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card2_orbit_bar"
+            spriteType = "PWCO_GFX_bar_orbit"
+            position = { x = 232 y = 192 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3"
+            spriteType = "PWCH_GFX_card"
+            position = { x = 428 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_dim"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 428 y = 84 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_sat_dim"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 436 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_slot"
+            position = { x = 492 y = 96 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT3"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 436 y = 154 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_need"
+            position = { x = 470 y = 158 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_NEED3"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_free"
+            position = { x = 436 y = 90 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_SLOT_EMPTY"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch3_1"
+            position = { x = 436 y = 112 }
+            spriteType = "PWCO_GFX_launch_scout"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_1_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch3_1_label"
+            position = { x = 436 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_1"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch3_2"
+            position = { x = 498 y = 112 }
+            spriteType = "PWCO_GFX_launch_comm"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_2_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch3_2_label"
+            position = { x = 498 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_2"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_launch3_3"
+            position = { x = 560 y = 112 }
+            spriteType = "PWCO_GFX_launch_nav"
+            clicksound = click_default
+            pdx_tooltip = "PWCO_LAUNCH_3_TT"
+        }
+        instantTextBoxType = {
+            name = "pwco_launch3_3_label"
+            position = { x = 560 y = 168 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_BUTTON_3"
+            maxWidth = 54
+            maxHeight = 16
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_cost"
+            position = { x = 436 y = 184 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_COST"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_sat"
+            spriteType = "PWCO_GFX_sat"
+            position = { x = 436 y = 92 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_name"
+            position = { x = 492 y = 94 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_NAME3"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_launching_line"
+            position = { x = 492 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_LINE3"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_launching_time"
+            position = { x = 436 y = 154 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LAUNCHING_TIME3"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_launching_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 436 y = 178 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_launching_bar"
+            spriteType = "PWCO_GFX_bar_launching"
+            position = { x = 436 y = 178 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_orbit_line"
+            position = { x = 492 y = 120 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_LINE3"
+            maxWidth = 124
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_orbit_bonus"
+            position = { x = 436 y = 138 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_BONUS3"
+            maxWidth = 178
+            maxHeight = 32
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_card3_orbit_time"
+            position = { x = 436 y = 172 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ORBIT_TIME3"
+            maxWidth = 178
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_orbit_bar_bg"
+            spriteType = "PWCO_GFX_bar_bg"
+            position = { x = 436 y = 192 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_card3_orbit_bar"
+            spriteType = "PWCO_GFX_bar_orbit"
+            position = { x = 436 y = 192 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_debris_label"
+            position = { x = 20 y = 212 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_DEBRIS"
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_gauge"
+            spriteType = "PWCO_GFX_gauge"
+            position = { x = 104 y = 215 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_debris_value"
+            position = { x = 512 y = 212 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_DEBRIS_VALUE"
+            maxWidth = 110
+            maxHeight = 20
+            fixedsize = yes
+            multiline = no
+            format = right
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_debris_note"
+            position = { x = 20 y = 234 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_DEBRIS_NOTE"
+            maxWidth = 602
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_enemies"
+            position = { x = 20 y = 258 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ENEMIES"
+            maxWidth = 602
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_enemy_none"
+            position = { x = 20 y = 284 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ENEMY_NONE"
+            maxWidth = 602
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_row1"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 280 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row1_text"
+            position = { x = 28 y = 283 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ROW1"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_asat1"
+            position = { x = 472 y = 281 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwco_asat1_text"
+            position = { x = 472 y = 283 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row1_wait"
+            position = { x = 472 y = 283 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_WAIT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row1_poor"
+            position = { x = 472 y = 283 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_row2"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 306 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row2_text"
+            position = { x = 28 y = 309 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ROW2"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_asat2"
+            position = { x = 472 y = 307 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwco_asat2_text"
+            position = { x = 472 y = 309 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row2_wait"
+            position = { x = 472 y = 309 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_WAIT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row2_poor"
+            position = { x = 472 y = 309 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_row3"
+            spriteType = "PWCH_GFX_row"
+            position = { x = 20 y = 332 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row3_text"
+            position = { x = 28 y = 335 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ROW3"
+            maxWidth = 436
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwco_asat3"
+            position = { x = 472 y = 333 }
+            spriteType = "PWCH_GFX_button146"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwco_asat3_text"
+            position = { x = 472 y = 335 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row3_wait"
+            position = { x = 472 y = 335 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_WAIT"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_row3_poor"
+            position = { x = 472 y = 335 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_ASAT_POOR"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_locked_lock"
+            spriteType = "PWCH_GFX_lock48"
+            position = { x = 20 y = 62 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_locked_title"
+            position = { x = 80 y = 64 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_LOCKED_TITLE"
+            maxWidth = 540
+            maxHeight = 24
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_locked_conditions"
+            position = { x = 80 y = 92 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LOCKED_CONDITIONS"
+            maxWidth = 542
+            maxHeight = 58
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_locked_note"
+            position = { x = 20 y = 300 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LOCKED_NOTE"
+            maxWidth = 602
+            maxHeight = 44
+            fixedsize = yes
+            multiline = yes
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard1"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 20 y = 166 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard1_sat"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 28 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard1_slot"
+            position = { x = 84 y = 178 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT1"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard1_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 28 y = 236 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard1_need"
+            position = { x = 62 y = 240 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LNEED1"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard2"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 224 y = 166 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard2_sat"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 232 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard2_slot"
+            position = { x = 288 y = 178 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT2"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard2_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 232 y = 236 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard2_need"
+            position = { x = 266 y = 240 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LNEED2"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard3"
+            spriteType = "PWCH_GFX_card_dim"
+            position = { x = 428 y = 166 }
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard3_sat"
+            spriteType = "PWCO_GFX_sat_dim"
+            position = { x = 436 y = 174 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard3_slot"
+            position = { x = 492 y = 178 }
+            orientation = upper_left
+            font = "hoi_20bs"
+            text = "PWCO_SLOT3"
+            maxWidth = 124
+            maxHeight = 22
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        iconType = {
+            name = "pwco_lcard3_lock"
+            spriteType = "PWCH_GFX_lock28"
+            position = { x = 436 y = 236 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwco_lcard3_need"
+            position = { x = 470 y = 240 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCO_LNEED3"
+            maxWidth = 146
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+    }
+}

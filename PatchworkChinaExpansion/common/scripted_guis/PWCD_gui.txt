@@ -19,6 +19,7 @@ scripted_gui = {
                     clr_country_flag = pwcd_news
                     clr_country_flag = pwct_panel_open
                     clr_country_flag = pwct_collection_open
+                    set_variable = { pwch_page = 0 }
                     if = {
                         limit = { check_variable = { pwcd_last = 1 } has_global_flag = pwcz_started }
                         set_variable = { pwcd_page = 1 }

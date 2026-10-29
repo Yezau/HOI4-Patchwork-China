@@ -1,0 +1,27 @@
+pwcn_unlocked = {
+    check_variable = { pwch_states > 1 }
+}
+pwcn_threatened = {
+    any_neighbor_state = {
+        CONTROLLER = {
+            OR = {
+                has_war_with = event_target:pwcn_me
+                event_target:pwcn_me = {
+                    is_in_array = { array = pwc_war_warning_attackers value = PREV }
+                }
+            }
+        }
+    }
+}
+pwcn_deployable = {
+    is_owned_and_controlled_by = event_target:pwcn_me
+    NOT = { is_capital = yes }
+    NOT = { has_state_flag = pwcn_hive }
+}
+pwcn_candidate = {
+    pwcn_deployable = yes
+    pwcn_threatened = yes
+}
+pwcn_free_slot = {
+    OR = { AND = { check_variable = { pwcn_slots > 0 } check_variable = { pwcn_st1 = 0 } } AND = { check_variable = { pwcn_slots > 1 } check_variable = { pwcn_st2 = 0 } } AND = { check_variable = { pwcn_slots > 2 } check_variable = { pwcn_st3 = 0 } } }
+}

@@ -1,0 +1,12 @@
+pwco_unlocked = {
+    OR = { check_variable = { pwco_access > 0 } NOT = { check_variable = { pwco_st1 = 0 } } NOT = { check_variable = { pwco_st2 = 0 } } NOT = { check_variable = { pwco_st3 = 0 } } }
+}
+pwco_free_slot = {
+    OR = { AND = { check_variable = { pwco_slots > 0 } check_variable = { pwco_st1 = 0 } } AND = { check_variable = { pwco_slots > 1 } check_variable = { pwco_st2 = 0 } } AND = { check_variable = { pwco_slots > 2 } check_variable = { pwco_st3 = 0 } } }
+}
+pwco_can_asat = {
+    pwc_st_live_city_country = yes
+    pwco_unlocked = yes
+    check_variable = { pwco_asat_days = 0 }
+    has_political_power > 24
+}

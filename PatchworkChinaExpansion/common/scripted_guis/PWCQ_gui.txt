@@ -1,0 +1,1200 @@
+scripted_gui = {
+    pwcq_page_gui = {
+        context_type = player_context
+        window_name = pwcq_page
+        ai_enabled = { always = no }
+        visible = { check_variable = { pwch_page = 1 } has_global_flag = pwcq_started }
+        properties = {
+            pwcq_cell1_icon = {
+                frame = pwcq_c1
+            }
+            pwcq_cell2_icon = {
+                frame = pwcq_c2
+            }
+            pwcq_cell3_icon = {
+                frame = pwcq_c3
+            }
+            pwcq_cell4_icon = {
+                frame = pwcq_c4
+            }
+            pwcq_cell5_icon = {
+                frame = pwcq_c5
+            }
+            pwcq_cell6_icon = {
+                frame = pwcq_c6
+            }
+            pwcq_cell7_icon = {
+                frame = pwcq_c7
+            }
+            pwcq_cell8_icon = {
+                frame = pwcq_c8
+            }
+            pwcq_cell9_icon = {
+                frame = pwcq_c9
+            }
+        }
+        triggers = {
+            pwcq_tab_1_open_visible = {
+                has_global_flag = pwcq_started always = yes
+            }
+            pwcq_tab_1_locked_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwcq_tab_1_lock_visible = {
+                has_global_flag = pwcq_started NOT = { always = yes }
+            }
+            pwcq_tab_1_visible = {
+                has_global_flag = pwcq_started
+            }
+            pwcq_tab_2_open_visible = {
+                has_global_flag = pwcn_started pwcn_unlocked = yes
+            }
+            pwcq_tab_2_locked_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwcq_tab_2_lock_visible = {
+                has_global_flag = pwcn_started NOT = { pwcn_unlocked = yes }
+            }
+            pwcq_tab_2_visible = {
+                has_global_flag = pwcn_started
+            }
+            pwcq_tab_3_open_visible = {
+                has_global_flag = pwco_started pwco_unlocked = yes
+            }
+            pwcq_tab_3_locked_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwcq_tab_3_lock_visible = {
+                has_global_flag = pwco_started NOT = { pwco_unlocked = yes }
+            }
+            pwcq_tab_3_visible = {
+                has_global_flag = pwco_started
+            }
+            pwcq_preset1_on_visible = {
+                check_variable = { pwcq_preset = 1 }
+            }
+            pwcq_preset1_off_visible = {
+                NOT = { check_variable = { pwcq_preset = 1 } }
+            }
+            pwcq_preset2_on_visible = {
+                check_variable = { pwcq_preset = 2 }
+            }
+            pwcq_preset2_off_visible = {
+                NOT = { check_variable = { pwcq_preset = 2 } }
+            }
+            pwcq_preset3_on_visible = {
+                check_variable = { pwcq_preset = 3 }
+            }
+            pwcq_preset3_off_visible = {
+                NOT = { check_variable = { pwcq_preset = 3 } }
+            }
+            pwcq_preset4_on_visible = {
+                check_variable = { pwcq_preset = 4 }
+            }
+            pwcq_preset4_off_visible = {
+                NOT = { check_variable = { pwcq_preset = 4 } }
+            }
+            pwcq_cost_free_visible = {
+                NOT = { has_country_flag = pwcq_free_used }
+            }
+            pwcq_cost_later_visible = {
+                has_country_flag = pwcq_free_used
+            }
+            pwcq_edge1_good_visible = {
+                check_variable = { pwcq_e1 = 1 }
+            }
+            pwcq_edge1_bad_visible = {
+                check_variable = { pwcq_e1 = 2 }
+            }
+            pwcq_edge1_none_visible = {
+                check_variable = { pwcq_e1 = 0 } check_variable = { pwcq_c1 > 0 } check_variable = { pwcq_c2 > 0 }
+            }
+            pwcq_edge2_good_visible = {
+                check_variable = { pwcq_e2 = 1 }
+            }
+            pwcq_edge2_bad_visible = {
+                check_variable = { pwcq_e2 = 2 }
+            }
+            pwcq_edge2_none_visible = {
+                check_variable = { pwcq_e2 = 0 } check_variable = { pwcq_c2 > 0 } check_variable = { pwcq_c3 > 0 }
+            }
+            pwcq_edge3_good_visible = {
+                check_variable = { pwcq_e3 = 1 }
+            }
+            pwcq_edge3_bad_visible = {
+                check_variable = { pwcq_e3 = 2 }
+            }
+            pwcq_edge3_none_visible = {
+                check_variable = { pwcq_e3 = 0 } check_variable = { pwcq_c4 > 0 } check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_edge4_good_visible = {
+                check_variable = { pwcq_e4 = 1 }
+            }
+            pwcq_edge4_bad_visible = {
+                check_variable = { pwcq_e4 = 2 }
+            }
+            pwcq_edge4_none_visible = {
+                check_variable = { pwcq_e4 = 0 } check_variable = { pwcq_c5 > 0 } check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_edge5_good_visible = {
+                check_variable = { pwcq_e5 = 1 }
+            }
+            pwcq_edge5_bad_visible = {
+                check_variable = { pwcq_e5 = 2 }
+            }
+            pwcq_edge5_none_visible = {
+                check_variable = { pwcq_e5 = 0 } check_variable = { pwcq_c7 > 0 } check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_edge6_good_visible = {
+                check_variable = { pwcq_e6 = 1 }
+            }
+            pwcq_edge6_bad_visible = {
+                check_variable = { pwcq_e6 = 2 }
+            }
+            pwcq_edge6_none_visible = {
+                check_variable = { pwcq_e6 = 0 } check_variable = { pwcq_c8 > 0 } check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_edge7_good_visible = {
+                check_variable = { pwcq_e7 = 1 }
+            }
+            pwcq_edge7_bad_visible = {
+                check_variable = { pwcq_e7 = 2 }
+            }
+            pwcq_edge7_none_visible = {
+                check_variable = { pwcq_e7 = 0 } check_variable = { pwcq_c1 > 0 } check_variable = { pwcq_c4 > 0 }
+            }
+            pwcq_edge8_good_visible = {
+                check_variable = { pwcq_e8 = 1 }
+            }
+            pwcq_edge8_bad_visible = {
+                check_variable = { pwcq_e8 = 2 }
+            }
+            pwcq_edge8_none_visible = {
+                check_variable = { pwcq_e8 = 0 } check_variable = { pwcq_c2 > 0 } check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_edge9_good_visible = {
+                check_variable = { pwcq_e9 = 1 }
+            }
+            pwcq_edge9_bad_visible = {
+                check_variable = { pwcq_e9 = 2 }
+            }
+            pwcq_edge9_none_visible = {
+                check_variable = { pwcq_e9 = 0 } check_variable = { pwcq_c3 > 0 } check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_edge10_good_visible = {
+                check_variable = { pwcq_e10 = 1 }
+            }
+            pwcq_edge10_bad_visible = {
+                check_variable = { pwcq_e10 = 2 }
+            }
+            pwcq_edge10_none_visible = {
+                check_variable = { pwcq_e10 = 0 } check_variable = { pwcq_c4 > 0 } check_variable = { pwcq_c7 > 0 }
+            }
+            pwcq_edge11_good_visible = {
+                check_variable = { pwcq_e11 = 1 }
+            }
+            pwcq_edge11_bad_visible = {
+                check_variable = { pwcq_e11 = 2 }
+            }
+            pwcq_edge11_none_visible = {
+                check_variable = { pwcq_e11 = 0 } check_variable = { pwcq_c5 > 0 } check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_edge12_good_visible = {
+                check_variable = { pwcq_e12 = 1 }
+            }
+            pwcq_edge12_bad_visible = {
+                check_variable = { pwcq_e12 = 2 }
+            }
+            pwcq_edge12_none_visible = {
+                check_variable = { pwcq_e12 = 0 } check_variable = { pwcq_c6 > 0 } check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_cell1_locked_visible = {
+                NOT = { check_variable = { pwcq_c1 > 0 } }
+            }
+            pwcq_cell1_lock_visible = {
+                NOT = { check_variable = { pwcq_c1 > 0 } }
+            }
+            pwcq_cell1_need_visible = {
+                NOT = { check_variable = { pwcq_c1 > 0 } }
+            }
+            pwcq_cell1_visible = {
+                check_variable = { pwcq_c1 > 0 }
+            }
+            pwcq_cell1_icon_visible = {
+                check_variable = { pwcq_c1 > 0 }
+            }
+            pwcq_cell1_name_visible = {
+                check_variable = { pwcq_c1 > 0 }
+            }
+            pwcq_cell1_sel_visible = {
+                check_variable = { pwcq_sel = 1 }
+            }
+            pwcq_cell1_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 1 } } check_variable = { pwcq_c1 > 0 }
+            }
+            pwcq_cell1_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 1 } } check_variable = { pwcq_c1 > 0 } check_variable = { pwcq_d1 > 0 }
+            }
+            pwcq_cell1_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 1 } } check_variable = { pwcq_c1 > 0 } check_variable = { pwcq_d1 < 0 }
+            }
+            pwcq_cell1_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 1 } } check_variable = { pwcq_c1 > 0 } check_variable = { pwcq_d1 = 0 }
+            }
+            pwcq_cell2_locked_visible = {
+                NOT = { check_variable = { pwcq_c2 > 0 } }
+            }
+            pwcq_cell2_lock_visible = {
+                NOT = { check_variable = { pwcq_c2 > 0 } }
+            }
+            pwcq_cell2_need_visible = {
+                NOT = { check_variable = { pwcq_c2 > 0 } }
+            }
+            pwcq_cell2_visible = {
+                check_variable = { pwcq_c2 > 0 }
+            }
+            pwcq_cell2_icon_visible = {
+                check_variable = { pwcq_c2 > 0 }
+            }
+            pwcq_cell2_name_visible = {
+                check_variable = { pwcq_c2 > 0 }
+            }
+            pwcq_cell2_sel_visible = {
+                check_variable = { pwcq_sel = 2 }
+            }
+            pwcq_cell2_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 2 } } check_variable = { pwcq_c2 > 0 }
+            }
+            pwcq_cell2_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 2 } } check_variable = { pwcq_c2 > 0 } check_variable = { pwcq_d2 > 0 }
+            }
+            pwcq_cell2_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 2 } } check_variable = { pwcq_c2 > 0 } check_variable = { pwcq_d2 < 0 }
+            }
+            pwcq_cell2_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 2 } } check_variable = { pwcq_c2 > 0 } check_variable = { pwcq_d2 = 0 }
+            }
+            pwcq_cell3_locked_visible = {
+                NOT = { check_variable = { pwcq_c3 > 0 } }
+            }
+            pwcq_cell3_lock_visible = {
+                NOT = { check_variable = { pwcq_c3 > 0 } }
+            }
+            pwcq_cell3_need_visible = {
+                NOT = { check_variable = { pwcq_c3 > 0 } }
+            }
+            pwcq_cell3_visible = {
+                check_variable = { pwcq_c3 > 0 }
+            }
+            pwcq_cell3_icon_visible = {
+                check_variable = { pwcq_c3 > 0 }
+            }
+            pwcq_cell3_name_visible = {
+                check_variable = { pwcq_c3 > 0 }
+            }
+            pwcq_cell3_sel_visible = {
+                check_variable = { pwcq_sel = 3 }
+            }
+            pwcq_cell3_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 3 } } check_variable = { pwcq_c3 > 0 }
+            }
+            pwcq_cell3_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 3 } } check_variable = { pwcq_c3 > 0 } check_variable = { pwcq_d3 > 0 }
+            }
+            pwcq_cell3_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 3 } } check_variable = { pwcq_c3 > 0 } check_variable = { pwcq_d3 < 0 }
+            }
+            pwcq_cell3_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 3 } } check_variable = { pwcq_c3 > 0 } check_variable = { pwcq_d3 = 0 }
+            }
+            pwcq_cell4_locked_visible = {
+                NOT = { check_variable = { pwcq_c4 > 0 } }
+            }
+            pwcq_cell4_lock_visible = {
+                NOT = { check_variable = { pwcq_c4 > 0 } }
+            }
+            pwcq_cell4_need_visible = {
+                NOT = { check_variable = { pwcq_c4 > 0 } }
+            }
+            pwcq_cell4_visible = {
+                check_variable = { pwcq_c4 > 0 }
+            }
+            pwcq_cell4_icon_visible = {
+                check_variable = { pwcq_c4 > 0 }
+            }
+            pwcq_cell4_name_visible = {
+                check_variable = { pwcq_c4 > 0 }
+            }
+            pwcq_cell4_sel_visible = {
+                check_variable = { pwcq_sel = 4 }
+            }
+            pwcq_cell4_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 4 } } check_variable = { pwcq_c4 > 0 }
+            }
+            pwcq_cell4_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 4 } } check_variable = { pwcq_c4 > 0 } check_variable = { pwcq_d4 > 0 }
+            }
+            pwcq_cell4_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 4 } } check_variable = { pwcq_c4 > 0 } check_variable = { pwcq_d4 < 0 }
+            }
+            pwcq_cell4_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 4 } } check_variable = { pwcq_c4 > 0 } check_variable = { pwcq_d4 = 0 }
+            }
+            pwcq_cell5_locked_visible = {
+                NOT = { check_variable = { pwcq_c5 > 0 } }
+            }
+            pwcq_cell5_lock_visible = {
+                NOT = { check_variable = { pwcq_c5 > 0 } }
+            }
+            pwcq_cell5_need_visible = {
+                NOT = { check_variable = { pwcq_c5 > 0 } }
+            }
+            pwcq_cell5_visible = {
+                check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_cell5_icon_visible = {
+                check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_cell5_name_visible = {
+                check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_cell5_sel_visible = {
+                check_variable = { pwcq_sel = 5 }
+            }
+            pwcq_cell5_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 5 } } check_variable = { pwcq_c5 > 0 }
+            }
+            pwcq_cell5_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 5 } } check_variable = { pwcq_c5 > 0 } check_variable = { pwcq_d5 > 0 }
+            }
+            pwcq_cell5_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 5 } } check_variable = { pwcq_c5 > 0 } check_variable = { pwcq_d5 < 0 }
+            }
+            pwcq_cell5_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 5 } } check_variable = { pwcq_c5 > 0 } check_variable = { pwcq_d5 = 0 }
+            }
+            pwcq_cell6_locked_visible = {
+                NOT = { check_variable = { pwcq_c6 > 0 } }
+            }
+            pwcq_cell6_lock_visible = {
+                NOT = { check_variable = { pwcq_c6 > 0 } }
+            }
+            pwcq_cell6_need_visible = {
+                NOT = { check_variable = { pwcq_c6 > 0 } }
+            }
+            pwcq_cell6_visible = {
+                check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_cell6_icon_visible = {
+                check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_cell6_name_visible = {
+                check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_cell6_sel_visible = {
+                check_variable = { pwcq_sel = 6 }
+            }
+            pwcq_cell6_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 6 } } check_variable = { pwcq_c6 > 0 }
+            }
+            pwcq_cell6_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 6 } } check_variable = { pwcq_c6 > 0 } check_variable = { pwcq_d6 > 0 }
+            }
+            pwcq_cell6_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 6 } } check_variable = { pwcq_c6 > 0 } check_variable = { pwcq_d6 < 0 }
+            }
+            pwcq_cell6_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 6 } } check_variable = { pwcq_c6 > 0 } check_variable = { pwcq_d6 = 0 }
+            }
+            pwcq_cell7_locked_visible = {
+                NOT = { check_variable = { pwcq_c7 > 0 } }
+            }
+            pwcq_cell7_lock_visible = {
+                NOT = { check_variable = { pwcq_c7 > 0 } }
+            }
+            pwcq_cell7_need_visible = {
+                NOT = { check_variable = { pwcq_c7 > 0 } }
+            }
+            pwcq_cell7_visible = {
+                check_variable = { pwcq_c7 > 0 }
+            }
+            pwcq_cell7_icon_visible = {
+                check_variable = { pwcq_c7 > 0 }
+            }
+            pwcq_cell7_name_visible = {
+                check_variable = { pwcq_c7 > 0 }
+            }
+            pwcq_cell7_sel_visible = {
+                check_variable = { pwcq_sel = 7 }
+            }
+            pwcq_cell7_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 7 } } check_variable = { pwcq_c7 > 0 }
+            }
+            pwcq_cell7_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 7 } } check_variable = { pwcq_c7 > 0 } check_variable = { pwcq_d7 > 0 }
+            }
+            pwcq_cell7_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 7 } } check_variable = { pwcq_c7 > 0 } check_variable = { pwcq_d7 < 0 }
+            }
+            pwcq_cell7_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 7 } } check_variable = { pwcq_c7 > 0 } check_variable = { pwcq_d7 = 0 }
+            }
+            pwcq_cell8_locked_visible = {
+                NOT = { check_variable = { pwcq_c8 > 0 } }
+            }
+            pwcq_cell8_lock_visible = {
+                NOT = { check_variable = { pwcq_c8 > 0 } }
+            }
+            pwcq_cell8_need_visible = {
+                NOT = { check_variable = { pwcq_c8 > 0 } }
+            }
+            pwcq_cell8_visible = {
+                check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_cell8_icon_visible = {
+                check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_cell8_name_visible = {
+                check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_cell8_sel_visible = {
+                check_variable = { pwcq_sel = 8 }
+            }
+            pwcq_cell8_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 8 } } check_variable = { pwcq_c8 > 0 }
+            }
+            pwcq_cell8_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 8 } } check_variable = { pwcq_c8 > 0 } check_variable = { pwcq_d8 > 0 }
+            }
+            pwcq_cell8_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 8 } } check_variable = { pwcq_c8 > 0 } check_variable = { pwcq_d8 < 0 }
+            }
+            pwcq_cell8_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 8 } } check_variable = { pwcq_c8 > 0 } check_variable = { pwcq_d8 = 0 }
+            }
+            pwcq_cell9_locked_visible = {
+                NOT = { check_variable = { pwcq_c9 > 0 } }
+            }
+            pwcq_cell9_lock_visible = {
+                NOT = { check_variable = { pwcq_c9 > 0 } }
+            }
+            pwcq_cell9_need_visible = {
+                NOT = { check_variable = { pwcq_c9 > 0 } }
+            }
+            pwcq_cell9_visible = {
+                check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_cell9_icon_visible = {
+                check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_cell9_name_visible = {
+                check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_cell9_sel_visible = {
+                check_variable = { pwcq_sel = 9 }
+            }
+            pwcq_cell9_pill_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 9 } } check_variable = { pwcq_c9 > 0 }
+            }
+            pwcq_cell9_up_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 9 } } check_variable = { pwcq_c9 > 0 } check_variable = { pwcq_d9 > 0 }
+            }
+            pwcq_cell9_down_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 9 } } check_variable = { pwcq_c9 > 0 } check_variable = { pwcq_d9 < 0 }
+            }
+            pwcq_cell9_same_visible = {
+                check_variable = { pwcq_sel > 0 } NOT = { check_variable = { pwcq_sel = 9 } } check_variable = { pwcq_c9 > 0 } check_variable = { pwcq_d9 = 0 }
+            }
+            pwcq_row1_visible = {
+                check_variable = { pwcq_r1 > 0 }
+            }
+            pwcq_row2_visible = {
+                check_variable = { pwcq_r2 > 0 }
+            }
+            pwcq_row3_visible = {
+                check_variable = { pwcq_r3 > 0 }
+            }
+            pwcq_row4_visible = {
+                check_variable = { pwcq_r4 > 0 }
+            }
+            pwcq_row5_visible = {
+                check_variable = { pwcq_r5 > 0 }
+            }
+            pwcq_row6_visible = {
+                check_variable = { pwcq_r6 > 0 }
+            }
+            pwcq_row7_visible = {
+                check_variable = { pwcq_r7 > 0 }
+            }
+            pwcq_row8_visible = {
+                check_variable = { pwcq_r8 > 0 }
+            }
+            pwcq_row9_visible = {
+                check_variable = { pwcq_r9 > 0 }
+            }
+            pwcq_row10_visible = {
+                check_variable = { pwcq_r10 > 0 }
+            }
+            pwcq_row11_visible = {
+                check_variable = { pwcq_r11 > 0 }
+            }
+            pwcq_row12_visible = {
+                check_variable = { pwcq_r12 > 0 }
+            }
+            pwcq_info_selected_visible = {
+                check_variable = { pwcq_sel > 0 }
+            }
+            pwcq_info_building_visible = {
+                check_variable = { pwcq_sel = 0 } has_country_flag = pwcq_building
+            }
+            pwcq_info_idle1c_visible = {
+                check_variable = { pwcq_sel = 0 } NOT = { has_country_flag = pwcq_building } check_variable = { pwcq_stage = 1 } has_country_flag = pwcq_coastal
+            }
+            pwcq_info_idle1i_visible = {
+                check_variable = { pwcq_sel = 0 } NOT = { has_country_flag = pwcq_building } check_variable = { pwcq_stage = 1 } NOT = { has_country_flag = pwcq_coastal }
+            }
+            pwcq_info_idle2c_visible = {
+                check_variable = { pwcq_sel = 0 } NOT = { has_country_flag = pwcq_building } check_variable = { pwcq_stage = 2 } has_country_flag = pwcq_coastal
+            }
+            pwcq_info_idle2i_visible = {
+                check_variable = { pwcq_sel = 0 } NOT = { has_country_flag = pwcq_building } check_variable = { pwcq_stage = 2 } NOT = { has_country_flag = pwcq_coastal }
+            }
+            pwcq_info_idle3_visible = {
+                check_variable = { pwcq_sel = 0 } NOT = { has_country_flag = pwcq_building } check_variable = { pwcq_stage = 3 }
+            }
+        }
+        effects = {
+            pwcq_tab_2_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 2 }
+                set_variable = { pwch_last = 2 }
+                pwcn_refresh = yes
+            }
+            pwcq_tab_3_click = {
+                clr_country_flag = pwct_panel_open
+                clr_country_flag = pwct_collection_open
+                set_variable = { pwcd_page = 0 }
+                set_variable = { pwch_page = 3 }
+                set_variable = { pwch_last = 3 }
+                pwco_refresh = yes
+            }
+            pwcq_close_click = {
+                set_variable = { pwch_page = 0 }
+            }
+            pwcq_preset1_click = {
+                if = {
+                    limit = { NOT = { check_variable = { pwcq_preset = 1 } } }
+                    set_variable = { pwcq_preset = 1 }
+                    set_variable = { pwcq_sel = 0 }
+                    pwcq_apply_preset = yes
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_preset2_click = {
+                if = {
+                    limit = { NOT = { check_variable = { pwcq_preset = 2 } } }
+                    set_variable = { pwcq_preset = 2 }
+                    set_variable = { pwcq_sel = 0 }
+                    pwcq_apply_preset = yes
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_preset3_click = {
+                if = {
+                    limit = { NOT = { check_variable = { pwcq_preset = 3 } } }
+                    set_variable = { pwcq_preset = 3 }
+                    set_variable = { pwcq_sel = 0 }
+                    pwcq_apply_preset = yes
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_preset4_click = {
+                if = {
+                    limit = { NOT = { check_variable = { pwcq_preset = 4 } } }
+                    set_variable = { pwcq_preset = 4 }
+                    set_variable = { pwcq_sel = 0 }
+                    pwcq_apply_preset = yes
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell1_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 1 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 1 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell2_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 2 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 2 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell3_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 3 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 3 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell4_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 4 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 4 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell5_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 5 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 5 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell6_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 6 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 6 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell7_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 7 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 7 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell8_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 8 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 8 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 9 } }
+                        set_temp_variable = { pwcq_t = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+            pwcq_cell9_click = {
+                if = {
+                    limit = { check_variable = { pwcq_sel = 0 } }
+                    set_variable = { pwcq_sel = 9 }
+                    pwcq_preview = yes
+                }
+                else_if = {
+                    limit = { check_variable = { pwcq_sel = 9 } }
+                    set_variable = { pwcq_sel = 0 }
+                }
+                else = {
+                    if = {
+                        limit = { check_variable = { pwcq_sel = 1 } }
+                        set_temp_variable = { pwcq_t = pwcq_c1 }
+                        set_variable = { pwcq_c1 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 2 } }
+                        set_temp_variable = { pwcq_t = pwcq_c2 }
+                        set_variable = { pwcq_c2 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 3 } }
+                        set_temp_variable = { pwcq_t = pwcq_c3 }
+                        set_variable = { pwcq_c3 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 4 } }
+                        set_temp_variable = { pwcq_t = pwcq_c4 }
+                        set_variable = { pwcq_c4 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 5 } }
+                        set_temp_variable = { pwcq_t = pwcq_c5 }
+                        set_variable = { pwcq_c5 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 6 } }
+                        set_temp_variable = { pwcq_t = pwcq_c6 }
+                        set_variable = { pwcq_c6 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 7 } }
+                        set_temp_variable = { pwcq_t = pwcq_c7 }
+                        set_variable = { pwcq_c7 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    else_if = {
+                        limit = { check_variable = { pwcq_sel = 8 } }
+                        set_temp_variable = { pwcq_t = pwcq_c8 }
+                        set_variable = { pwcq_c8 = pwcq_c9 }
+                        set_variable = { pwcq_c9 = pwcq_t }
+                    }
+                    set_variable = { pwcq_sel = 0 }
+                    set_variable = { pwcq_preset = 0 }
+                    pwcq_rebuild = yes
+                }
+            }
+        }
+    }
+}

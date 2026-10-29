@@ -1,0 +1,95 @@
+guiTypes = {
+    containerWindowType = {
+        name = "pwcn_state_strip"
+        position = { x = 244 y = 518 }
+        size = { width = 200 height = 24 }
+        orientation = upper_left
+        background = {
+            name = "background"
+            quadTextureSprite = "PWCN_GFX_strip"
+        }
+        iconType = {
+            name = "pwcn_strip_hive"
+            spriteType = "PWCN_GFX_hive20"
+            position = { x = 4 y = 2 }
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_strip_idle"
+            position = { x = 28 y = 4 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_STRIP_IDLE"
+            maxWidth = 92
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_strip_deploying"
+            position = { x = 28 y = 4 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_DEPLOYING"
+            maxWidth = 92
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "pwcn_strip_ready"
+            position = { x = 28 y = 4 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_READY"
+            maxWidth = 92
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_strip_deploy"
+            position = { x = 124 y = 1 }
+            spriteType = "PWCN_GFX_strip_button"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_strip_deploy_text"
+            position = { x = 124 y = 3 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_STRIP_DEPLOY"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "pwcn_strip_withdraw"
+            position = { x = 124 y = 1 }
+            spriteType = "PWCN_GFX_strip_button"
+            clicksound = click_default
+        }
+        instantTextBoxType = {
+            name = "pwcn_strip_withdraw_text"
+            position = { x = 124 y = 3 }
+            orientation = upper_left
+            font = "hoi_16mbs"
+            text = "PWCN_STRIP_WITHDRAW"
+            maxWidth = 72
+            maxHeight = 18
+            fixedsize = yes
+            multiline = no
+            format = centre
+            alwaystransparent = yes
+        }
+    }
+}

@@ -1,0 +1,22 @@
+on_actions = {
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwco_guidao option = ON } NOT = { has_global_flag = pwco_started } }
+                pwco_init = yes
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = pwco_guidao option = ON } has_global_flag = pwco_started }
+                pwco_daily = yes
+            }
+        }
+    }
+    on_monthly_NTR = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwco_guidao option = ON } has_global_flag = pwco_started }
+                pwco_monthly = yes
+            }
+        }
+    }
+}
