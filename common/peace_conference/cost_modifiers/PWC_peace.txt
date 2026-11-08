@@ -1,0 +1,9 @@
+peace_action_modifiers = {
+    pwc_eliminated_cities_stay_eliminated = {
+        peace_action_type = liberate
+        enable = {
+            has_game_rule = { rule = allow_release_nations option = BLOCKED }
+        }
+        cost_multiplier = 1000
+    }
+}

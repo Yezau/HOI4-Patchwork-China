@@ -311,6 +311,7 @@ PWC_war_category = {
 		}
 		complete_effect = {
 			set_capital = { state = FROM }
+			set_variable = { pwc_home_capital = FROM }
 			set_country_flag = { flag = pwc_flag_capital_move_cooldown days = 180 value = 1 }
 		}
 		ai_will_do = { factor = 0 }

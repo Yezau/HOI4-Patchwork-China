@@ -81,7 +81,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_east_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_east_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_east_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_east_china = yes
             }
             if = {
@@ -91,7 +104,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_southwest_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_southwest_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_southwest_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_southwest_china = yes
             }
             if = {
@@ -101,7 +127,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_northwest_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_northwest_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_northwest_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_northwest_china = yes
             }
             if = {
@@ -111,7 +150,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_central_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_central_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_central_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_central_china = yes
             }
             if = {
@@ -121,7 +173,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_south_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_south_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_south_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_south_china = yes
             }
             if = {
@@ -131,7 +196,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_north_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_north_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_north_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_north_china = yes
             }
             if = {
@@ -141,7 +219,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_northeast_china = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_northeast_china = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_northeast_china = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_northeast_china = yes
             }
             if = {
@@ -354,18 +445,42 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { OR = {
-                    pwc_st_regional_state_guangdong = yes
+                OR = {
                     AND = {
-                        NOT = { has_game_rule = {
-                            rule = pwc_province_priority option = ON
-                        } }
-                        OR = {
-                            state = 377
-                            state = 381
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            OR = {
+                                pwc_st_regional_state_guangdong = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 377
+                                        state = 381
+                                    }
+                                }
+                            }
                         }
                     }
-                } }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            OR = {
+                                pwc_st_regional_state_guangdong = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 377
+                                        state = 381
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 pwc_st_regional_identity_guangdong = yes
             }
             if = {
@@ -375,17 +490,40 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { OR = {
-                    pwc_st_regional_state_sichuan = yes
+                OR = {
                     AND = {
-                        NOT = { has_game_rule = {
-                            rule = pwc_province_priority option = ON
-                        } }
-                        OR = {
-                            state = 238
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            OR = {
+                                pwc_st_regional_state_sichuan = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 238
+                                    }
+                                }
+                            }
                         }
                     }
-                } }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            OR = {
+                                pwc_st_regional_state_sichuan = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 238
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 pwc_st_regional_identity_sichuan = yes
             }
             if = {
@@ -395,7 +533,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_henan = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_henan = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_henan = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_henan = yes
             }
             if = {
@@ -405,7 +556,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_hubei = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_hubei = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_hubei = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_hubei = yes
             }
             if = {
@@ -415,7 +579,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_taiwan = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_taiwan = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_taiwan = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_taiwan = yes
             }
             if = {
@@ -425,7 +602,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_anhui = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_anhui = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_anhui = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_anhui = yes
             }
             if = {
@@ -435,7 +625,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_shandong = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_shandong = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_shandong = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_shandong = yes
             }
             if = {
@@ -445,7 +648,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_yunnan = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_yunnan = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_yunnan = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_yunnan = yes
             }
             if = {
@@ -455,7 +671,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_gansu = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_gansu = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_gansu = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_gansu = yes
             }
             if = {
@@ -465,7 +694,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_guangxi = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_guangxi = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_guangxi = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_guangxi = yes
             }
             if = {
@@ -475,7 +717,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_hunan = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_hunan = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_hunan = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_hunan = yes
             }
             if = {
@@ -485,7 +740,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_liaoning = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_liaoning = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_liaoning = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_liaoning = yes
             }
             if = {
@@ -495,7 +763,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_xinjiang = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_xinjiang = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_xinjiang = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_xinjiang = yes
             }
             if = {
@@ -505,7 +786,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_heilongjiang = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_heilongjiang = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_heilongjiang = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_heilongjiang = yes
             }
             if = {
@@ -515,18 +809,42 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { OR = {
-                    pwc_st_regional_state_jiangsu = yes
+                OR = {
                     AND = {
-                        NOT = { has_game_rule = {
-                            rule = pwc_province_priority option = ON
-                        } }
-                        OR = {
-                            state = 221
-                            state = 228
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            OR = {
+                                pwc_st_regional_state_jiangsu = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 221
+                                        state = 228
+                                    }
+                                }
+                            }
                         }
                     }
-                } }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            OR = {
+                                pwc_st_regional_state_jiangsu = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 221
+                                        state = 228
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 pwc_st_regional_identity_jiangsu = yes
             }
             if = {
@@ -536,7 +854,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_inner_mongolia = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_inner_mongolia = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_inner_mongolia = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_inner_mongolia = yes
             }
             if = {
@@ -546,7 +877,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_fujian = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_fujian = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_fujian = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_fujian = yes
             }
             if = {
@@ -556,18 +900,42 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { OR = {
-                    pwc_st_regional_state_hebei = yes
+                OR = {
                     AND = {
-                        NOT = { has_game_rule = {
-                            rule = pwc_province_priority option = ON
-                        } }
-                        OR = {
-                            state = 74
-                            state = 82
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            OR = {
+                                pwc_st_regional_state_hebei = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 74
+                                        state = 82
+                                    }
+                                }
+                            }
                         }
                     }
-                } }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            OR = {
+                                pwc_st_regional_state_hebei = yes
+                                AND = {
+                                    NOT = { has_game_rule = {
+                                        rule = pwc_province_priority option = ON
+                                    } }
+                                    OR = {
+                                        state = 74
+                                        state = 82
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 pwc_st_regional_identity_hebei = yes
             }
             if = {
@@ -577,7 +945,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_jiangxi = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_jiangxi = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_jiangxi = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_jiangxi = yes
             }
             if = {
@@ -587,7 +968,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_shanxi = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_shanxi = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_shanxi = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_shanxi = yes
             }
             if = {
@@ -597,7 +991,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_zhejiang = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_zhejiang = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_zhejiang = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_zhejiang = yes
             }
             if = {
@@ -607,7 +1014,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_shaanxi = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_shaanxi = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_shaanxi = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_shaanxi = yes
             }
             if = {
@@ -617,7 +1037,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_guizhou = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_guizhou = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_guizhou = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_guizhou = yes
             }
             if = {
@@ -627,7 +1060,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_jilin = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_jilin = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_jilin = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_jilin = yes
             }
             if = {
@@ -637,7 +1083,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_xizang = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_xizang = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_xizang = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_xizang = yes
             }
             if = {
@@ -647,7 +1106,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_qinghai = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_qinghai = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_qinghai = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_qinghai = yes
             }
             if = {
@@ -657,7 +1129,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_ningxia = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_ningxia = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_ningxia = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_ningxia = yes
             }
             if = {
@@ -667,7 +1152,20 @@ pwc_se_refresh_regional_identity = {
         }
         else_if = {
             limit = {
-                capital_scope = { pwc_st_regional_state_hainan = yes }
+                OR = {
+                    AND = {
+                        has_variable = pwc_home_capital
+                        var:pwc_home_capital = {
+                            pwc_st_regional_state_hainan = yes
+                        }
+                    }
+                    AND = {
+                        NOT = { has_variable = pwc_home_capital }
+                        capital_scope = {
+                            pwc_st_regional_state_hainan = yes
+                        }
+                    }
+                }
                 pwc_st_regional_identity_hainan = yes
             }
             if = {

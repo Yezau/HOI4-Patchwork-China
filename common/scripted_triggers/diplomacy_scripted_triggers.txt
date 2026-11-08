@@ -71,6 +71,10 @@ DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
 
 DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
     ROOT = { pwc_st_neutral_diplomacy_allowed = yes }
+    custom_trigger_tooltip = {
+        tooltip = PWC_RULE_ALLOW_RELEASE_NATIONS_DESC
+        NOT = { has_game_rule = { rule = allow_release_nations option = BLOCKED } }
+    }
 	if = {
 		limit = {
 			has_game_rule = {

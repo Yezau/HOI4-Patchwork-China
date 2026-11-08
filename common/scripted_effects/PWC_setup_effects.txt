@@ -477,6 +477,7 @@ pwc_se_init_setup_country = {
         set_country_flag = pwc_flag_setup_country_applied
         pwc_se_assign_setup_archetypes = yes
         pwc_se_calibrate_starting_industry = yes
+        pwc_se_calibrate_starting_manpower = yes
         pwc_se_apply_integration_speed = yes
         pwc_se_refresh_setup_country = yes
     }
@@ -488,6 +489,7 @@ pwc_se_refresh_setup_country = {
             pwc_st_city_alive = yes
             exists = yes
         }
+        pwc_se_sync_home_capital = yes
         pwc_se_update_administration = yes
         pwc_se_update_unit_limit = yes
         pwc_se_update_demobilization = yes
@@ -714,10 +716,2594 @@ pwc_se_calibrate_starting_industry = {
             limit = {
                 has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
             }
+            
+            
+            
             every_owned_state = {
-                set_building_level = { type = industrial_complex level = 2 }
-                set_building_level = { type = arms_factory level = 1 }
+                set_temp_variable = { pwc_setup_building_gap = industrial_complex_level }
+                subtract_from_temp_variable = { pwc_setup_building_gap = 2 }
+                if = {
+                    limit = { check_variable = { pwc_setup_building_gap > 0 } }
+                    remove_building = {
+                        type = industrial_complex
+                        level = var:pwc_setup_building_gap
+                    }
+                }
+                set_temp_variable = { pwc_setup_building_gap = arms_factory_level }
+                subtract_from_temp_variable = { pwc_setup_building_gap = 1 }
+                if = {
+                    limit = { check_variable = { pwc_setup_building_gap > 0 } }
+                    remove_building = {
+                        type = arms_factory
+                        level = var:pwc_setup_building_gap
+                    }
+                }
+                if = {
+                    limit = { check_variable = { industrial_complex_level < 2 } }
+                    set_building_level = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                if = {
+                    limit = { check_variable = { arms_factory_level < 1 } }
+                    set_building_level = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
             }
+        }
+    }
+}
+pwc_se_calibrate_starting_manpower = {
+    if = {
+        limit = {
+            pwc_st_is_city_country = yes
+            NOT = { has_country_flag = pwc_flag_setup_manpower_applied }
+            has_game_rule = { rule = pwc_manpower_calibration option = BALANCE }
+        }
+        set_country_flag = pwc_flag_setup_manpower_applied
+        
+        
+        set_variable = { pwc_setup_recruitable_k = manpower_k }
+        add_to_variable = { pwc_setup_recruitable_k = deployed_total_manpower_k }
+        set_variable = { pwc_setup_population_before_k = 0 }
+        every_owned_state = {
+            PREV = {
+                add_to_variable = {
+                    pwc_setup_population_before_k = PREV.state_population_k
+                }
+            }
+        }
+        every_owned_state = {
+            set_temp_variable = { pwc_setup_population_gap = 3000 }
+            subtract_from_temp_variable = {
+                pwc_setup_population_gap = state_population_k
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = 1000
+                        compare = greater_than_or_equals
+                    }
+                }
+                add_manpower = 1000000
+                subtract_from_temp_variable = { pwc_setup_population_gap = 1000 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = -1000
+                        compare = less_than_or_equals
+                    }
+                }
+                add_manpower = -1000000
+                add_to_temp_variable = { pwc_setup_population_gap = 1000 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = 100
+                        compare = greater_than_or_equals
+                    }
+                }
+                add_manpower = 100000
+                subtract_from_temp_variable = { pwc_setup_population_gap = 100 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = -100
+                        compare = less_than_or_equals
+                    }
+                }
+                add_manpower = -100000
+                add_to_temp_variable = { pwc_setup_population_gap = 100 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = 10
+                        compare = greater_than_or_equals
+                    }
+                }
+                add_manpower = 10000
+                subtract_from_temp_variable = { pwc_setup_population_gap = 10 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = -10
+                        compare = less_than_or_equals
+                    }
+                }
+                add_manpower = -10000
+                add_to_temp_variable = { pwc_setup_population_gap = 10 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = 1
+                        compare = greater_than_or_equals
+                    }
+                }
+                add_manpower = 1000
+                subtract_from_temp_variable = { pwc_setup_population_gap = 1 }
+            }
+            while_loop_effect = {
+                limit = {
+                    check_variable = {
+                        var = pwc_setup_population_gap
+                        value = -1
+                        compare = less_than_or_equals
+                    }
+                }
+                add_manpower = -1000
+                add_to_temp_variable = { pwc_setup_population_gap = 1 }
+            }
+        }
+        set_variable = { pwc_setup_population_after_k = 0 }
+        every_owned_state = {
+            PREV = {
+                add_to_variable = {
+                    pwc_setup_population_after_k = PREV.state_population_k
+                }
+            }
+        }
+        
+        
+        if = {
+            limit = {
+                check_variable = {
+                    pwc_setup_population_after_k < pwc_setup_population_before_k
+                }
+            }
+            set_variable = { pwc_setup_recruitable_target_k = pwc_setup_population_after_k }
+            divide_variable = {
+                pwc_setup_recruitable_target_k = pwc_setup_population_before_k
+            }
+            multiply_variable = { pwc_setup_recruitable_target_k = pwc_setup_recruitable_k }
+            set_global_flag = pwc_flag_setup_manpower_pending
+        }
+        clear_variable = pwc_setup_recruitable_k
+        clear_variable = pwc_setup_population_before_k
+        clear_variable = pwc_setup_population_after_k
+    }
+}
+pwc_se_settle_starting_manpower = {
+    if = {
+        limit = { has_variable = pwc_setup_recruitable_target_k }
+        
+        set_temp_variable = { pwc_setup_manpower_excess = manpower_k }
+        add_to_temp_variable = {
+            pwc_setup_manpower_excess = deployed_total_manpower_k
+        }
+        subtract_from_temp_variable = {
+            pwc_setup_manpower_excess = pwc_setup_recruitable_target_k
+        }
+        while_loop_effect = {
+            limit = {
+                check_variable = {
+                    var = pwc_setup_manpower_excess
+                    value = 1000
+                    compare = greater_than_or_equals
+                }
+            }
+            add_manpower = -1000000
+            subtract_from_temp_variable = { pwc_setup_manpower_excess = 1000 }
+        }
+        while_loop_effect = {
+            limit = {
+                check_variable = {
+                    var = pwc_setup_manpower_excess
+                    value = 100
+                    compare = greater_than_or_equals
+                }
+            }
+            add_manpower = -100000
+            subtract_from_temp_variable = { pwc_setup_manpower_excess = 100 }
+        }
+        while_loop_effect = {
+            limit = {
+                check_variable = {
+                    var = pwc_setup_manpower_excess
+                    value = 10
+                    compare = greater_than_or_equals
+                }
+            }
+            add_manpower = -10000
+            subtract_from_temp_variable = { pwc_setup_manpower_excess = 10 }
+        }
+        while_loop_effect = {
+            limit = {
+                check_variable = {
+                    var = pwc_setup_manpower_excess
+                    value = 1
+                    compare = greater_than_or_equals
+                }
+            }
+            add_manpower = -1000
+            subtract_from_temp_variable = { pwc_setup_manpower_excess = 1 }
+        }
+        clear_variable = pwc_setup_recruitable_target_k
+    }
+}
+
+
+
+pwc_se_sync_home_capital = {
+    if = {
+        limit = { NOT = { has_variable = pwc_home_capital } }
+        capital_scope = { PREV = { set_variable = { pwc_home_capital = PREV } } }
+    }
+    else_if = {
+        limit = { var:pwc_home_capital = { NOT = { is_owned_by = PREV } } }
+        capital_scope = { PREV = { set_variable = { pwc_home_capital = PREV } } }
+    }
+    else_if = {
+        limit = {
+            var:pwc_home_capital = {
+                is_fully_controlled_by = PREV
+                is_capital = no
+            }
+        }
+        if = {
+            limit = { check_variable = { pwc_home_capital = 1 } }
+            set_capital = { state = 1 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 2 } }
+            set_capital = { state = 2 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 3 } }
+            set_capital = { state = 3 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 4 } }
+            set_capital = { state = 4 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 5 } }
+            set_capital = { state = 5 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 6 } }
+            set_capital = { state = 6 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 7 } }
+            set_capital = { state = 7 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 8 } }
+            set_capital = { state = 8 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 9 } }
+            set_capital = { state = 9 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 10 } }
+            set_capital = { state = 10 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 11 } }
+            set_capital = { state = 11 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 12 } }
+            set_capital = { state = 12 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 13 } }
+            set_capital = { state = 13 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 14 } }
+            set_capital = { state = 14 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 15 } }
+            set_capital = { state = 15 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 16 } }
+            set_capital = { state = 16 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 17 } }
+            set_capital = { state = 17 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 18 } }
+            set_capital = { state = 18 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 19 } }
+            set_capital = { state = 19 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 20 } }
+            set_capital = { state = 20 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 21 } }
+            set_capital = { state = 21 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 22 } }
+            set_capital = { state = 22 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 23 } }
+            set_capital = { state = 23 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 24 } }
+            set_capital = { state = 24 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 25 } }
+            set_capital = { state = 25 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 26 } }
+            set_capital = { state = 26 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 27 } }
+            set_capital = { state = 27 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 28 } }
+            set_capital = { state = 28 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 29 } }
+            set_capital = { state = 29 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 30 } }
+            set_capital = { state = 30 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 31 } }
+            set_capital = { state = 31 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 32 } }
+            set_capital = { state = 32 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 33 } }
+            set_capital = { state = 33 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 34 } }
+            set_capital = { state = 34 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 35 } }
+            set_capital = { state = 35 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 36 } }
+            set_capital = { state = 36 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 37 } }
+            set_capital = { state = 37 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 38 } }
+            set_capital = { state = 38 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 39 } }
+            set_capital = { state = 39 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 40 } }
+            set_capital = { state = 40 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 41 } }
+            set_capital = { state = 41 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 42 } }
+            set_capital = { state = 42 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 43 } }
+            set_capital = { state = 43 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 44 } }
+            set_capital = { state = 44 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 45 } }
+            set_capital = { state = 45 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 46 } }
+            set_capital = { state = 46 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 47 } }
+            set_capital = { state = 47 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 48 } }
+            set_capital = { state = 48 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 49 } }
+            set_capital = { state = 49 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 50 } }
+            set_capital = { state = 50 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 51 } }
+            set_capital = { state = 51 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 52 } }
+            set_capital = { state = 52 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 53 } }
+            set_capital = { state = 53 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 54 } }
+            set_capital = { state = 54 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 55 } }
+            set_capital = { state = 55 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 56 } }
+            set_capital = { state = 56 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 57 } }
+            set_capital = { state = 57 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 58 } }
+            set_capital = { state = 58 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 59 } }
+            set_capital = { state = 59 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 60 } }
+            set_capital = { state = 60 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 61 } }
+            set_capital = { state = 61 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 62 } }
+            set_capital = { state = 62 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 63 } }
+            set_capital = { state = 63 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 64 } }
+            set_capital = { state = 64 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 65 } }
+            set_capital = { state = 65 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 66 } }
+            set_capital = { state = 66 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 67 } }
+            set_capital = { state = 67 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 68 } }
+            set_capital = { state = 68 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 69 } }
+            set_capital = { state = 69 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 70 } }
+            set_capital = { state = 70 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 71 } }
+            set_capital = { state = 71 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 72 } }
+            set_capital = { state = 72 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 73 } }
+            set_capital = { state = 73 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 74 } }
+            set_capital = { state = 74 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 75 } }
+            set_capital = { state = 75 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 76 } }
+            set_capital = { state = 76 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 77 } }
+            set_capital = { state = 77 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 78 } }
+            set_capital = { state = 78 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 79 } }
+            set_capital = { state = 79 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 80 } }
+            set_capital = { state = 80 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 81 } }
+            set_capital = { state = 81 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 82 } }
+            set_capital = { state = 82 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 83 } }
+            set_capital = { state = 83 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 84 } }
+            set_capital = { state = 84 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 85 } }
+            set_capital = { state = 85 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 86 } }
+            set_capital = { state = 86 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 87 } }
+            set_capital = { state = 87 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 88 } }
+            set_capital = { state = 88 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 89 } }
+            set_capital = { state = 89 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 90 } }
+            set_capital = { state = 90 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 91 } }
+            set_capital = { state = 91 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 92 } }
+            set_capital = { state = 92 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 93 } }
+            set_capital = { state = 93 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 94 } }
+            set_capital = { state = 94 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 95 } }
+            set_capital = { state = 95 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 96 } }
+            set_capital = { state = 96 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 97 } }
+            set_capital = { state = 97 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 98 } }
+            set_capital = { state = 98 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 99 } }
+            set_capital = { state = 99 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 100 } }
+            set_capital = { state = 100 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 101 } }
+            set_capital = { state = 101 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 102 } }
+            set_capital = { state = 102 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 103 } }
+            set_capital = { state = 103 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 104 } }
+            set_capital = { state = 104 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 105 } }
+            set_capital = { state = 105 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 106 } }
+            set_capital = { state = 106 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 107 } }
+            set_capital = { state = 107 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 108 } }
+            set_capital = { state = 108 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 109 } }
+            set_capital = { state = 109 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 110 } }
+            set_capital = { state = 110 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 111 } }
+            set_capital = { state = 111 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 112 } }
+            set_capital = { state = 112 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 113 } }
+            set_capital = { state = 113 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 114 } }
+            set_capital = { state = 114 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 115 } }
+            set_capital = { state = 115 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 116 } }
+            set_capital = { state = 116 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 117 } }
+            set_capital = { state = 117 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 118 } }
+            set_capital = { state = 118 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 119 } }
+            set_capital = { state = 119 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 120 } }
+            set_capital = { state = 120 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 121 } }
+            set_capital = { state = 121 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 122 } }
+            set_capital = { state = 122 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 123 } }
+            set_capital = { state = 123 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 124 } }
+            set_capital = { state = 124 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 125 } }
+            set_capital = { state = 125 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 126 } }
+            set_capital = { state = 126 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 127 } }
+            set_capital = { state = 127 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 128 } }
+            set_capital = { state = 128 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 129 } }
+            set_capital = { state = 129 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 130 } }
+            set_capital = { state = 130 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 131 } }
+            set_capital = { state = 131 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 132 } }
+            set_capital = { state = 132 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 133 } }
+            set_capital = { state = 133 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 134 } }
+            set_capital = { state = 134 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 135 } }
+            set_capital = { state = 135 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 136 } }
+            set_capital = { state = 136 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 137 } }
+            set_capital = { state = 137 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 138 } }
+            set_capital = { state = 138 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 139 } }
+            set_capital = { state = 139 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 140 } }
+            set_capital = { state = 140 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 141 } }
+            set_capital = { state = 141 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 142 } }
+            set_capital = { state = 142 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 143 } }
+            set_capital = { state = 143 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 144 } }
+            set_capital = { state = 144 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 145 } }
+            set_capital = { state = 145 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 146 } }
+            set_capital = { state = 146 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 147 } }
+            set_capital = { state = 147 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 148 } }
+            set_capital = { state = 148 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 149 } }
+            set_capital = { state = 149 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 150 } }
+            set_capital = { state = 150 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 151 } }
+            set_capital = { state = 151 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 152 } }
+            set_capital = { state = 152 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 153 } }
+            set_capital = { state = 153 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 154 } }
+            set_capital = { state = 154 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 155 } }
+            set_capital = { state = 155 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 156 } }
+            set_capital = { state = 156 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 157 } }
+            set_capital = { state = 157 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 158 } }
+            set_capital = { state = 158 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 159 } }
+            set_capital = { state = 159 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 160 } }
+            set_capital = { state = 160 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 161 } }
+            set_capital = { state = 161 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 162 } }
+            set_capital = { state = 162 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 163 } }
+            set_capital = { state = 163 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 164 } }
+            set_capital = { state = 164 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 165 } }
+            set_capital = { state = 165 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 166 } }
+            set_capital = { state = 166 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 167 } }
+            set_capital = { state = 167 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 168 } }
+            set_capital = { state = 168 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 169 } }
+            set_capital = { state = 169 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 170 } }
+            set_capital = { state = 170 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 171 } }
+            set_capital = { state = 171 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 172 } }
+            set_capital = { state = 172 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 173 } }
+            set_capital = { state = 173 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 174 } }
+            set_capital = { state = 174 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 175 } }
+            set_capital = { state = 175 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 176 } }
+            set_capital = { state = 176 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 177 } }
+            set_capital = { state = 177 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 178 } }
+            set_capital = { state = 178 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 179 } }
+            set_capital = { state = 179 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 180 } }
+            set_capital = { state = 180 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 181 } }
+            set_capital = { state = 181 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 182 } }
+            set_capital = { state = 182 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 183 } }
+            set_capital = { state = 183 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 184 } }
+            set_capital = { state = 184 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 185 } }
+            set_capital = { state = 185 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 186 } }
+            set_capital = { state = 186 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 187 } }
+            set_capital = { state = 187 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 188 } }
+            set_capital = { state = 188 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 189 } }
+            set_capital = { state = 189 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 190 } }
+            set_capital = { state = 190 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 191 } }
+            set_capital = { state = 191 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 192 } }
+            set_capital = { state = 192 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 193 } }
+            set_capital = { state = 193 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 194 } }
+            set_capital = { state = 194 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 195 } }
+            set_capital = { state = 195 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 196 } }
+            set_capital = { state = 196 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 197 } }
+            set_capital = { state = 197 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 198 } }
+            set_capital = { state = 198 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 199 } }
+            set_capital = { state = 199 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 200 } }
+            set_capital = { state = 200 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 201 } }
+            set_capital = { state = 201 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 202 } }
+            set_capital = { state = 202 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 203 } }
+            set_capital = { state = 203 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 204 } }
+            set_capital = { state = 204 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 205 } }
+            set_capital = { state = 205 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 206 } }
+            set_capital = { state = 206 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 207 } }
+            set_capital = { state = 207 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 208 } }
+            set_capital = { state = 208 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 209 } }
+            set_capital = { state = 209 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 210 } }
+            set_capital = { state = 210 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 211 } }
+            set_capital = { state = 211 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 212 } }
+            set_capital = { state = 212 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 213 } }
+            set_capital = { state = 213 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 214 } }
+            set_capital = { state = 214 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 215 } }
+            set_capital = { state = 215 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 216 } }
+            set_capital = { state = 216 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 217 } }
+            set_capital = { state = 217 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 218 } }
+            set_capital = { state = 218 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 219 } }
+            set_capital = { state = 219 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 220 } }
+            set_capital = { state = 220 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 221 } }
+            set_capital = { state = 221 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 222 } }
+            set_capital = { state = 222 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 223 } }
+            set_capital = { state = 223 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 224 } }
+            set_capital = { state = 224 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 225 } }
+            set_capital = { state = 225 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 226 } }
+            set_capital = { state = 226 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 227 } }
+            set_capital = { state = 227 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 228 } }
+            set_capital = { state = 228 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 229 } }
+            set_capital = { state = 229 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 230 } }
+            set_capital = { state = 230 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 231 } }
+            set_capital = { state = 231 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 232 } }
+            set_capital = { state = 232 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 233 } }
+            set_capital = { state = 233 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 234 } }
+            set_capital = { state = 234 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 235 } }
+            set_capital = { state = 235 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 236 } }
+            set_capital = { state = 236 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 237 } }
+            set_capital = { state = 237 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 238 } }
+            set_capital = { state = 238 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 239 } }
+            set_capital = { state = 239 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 240 } }
+            set_capital = { state = 240 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 241 } }
+            set_capital = { state = 241 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 242 } }
+            set_capital = { state = 242 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 243 } }
+            set_capital = { state = 243 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 244 } }
+            set_capital = { state = 244 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 245 } }
+            set_capital = { state = 245 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 246 } }
+            set_capital = { state = 246 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 247 } }
+            set_capital = { state = 247 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 248 } }
+            set_capital = { state = 248 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 249 } }
+            set_capital = { state = 249 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 250 } }
+            set_capital = { state = 250 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 251 } }
+            set_capital = { state = 251 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 252 } }
+            set_capital = { state = 252 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 253 } }
+            set_capital = { state = 253 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 254 } }
+            set_capital = { state = 254 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 255 } }
+            set_capital = { state = 255 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 256 } }
+            set_capital = { state = 256 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 257 } }
+            set_capital = { state = 257 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 258 } }
+            set_capital = { state = 258 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 259 } }
+            set_capital = { state = 259 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 260 } }
+            set_capital = { state = 260 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 261 } }
+            set_capital = { state = 261 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 262 } }
+            set_capital = { state = 262 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 263 } }
+            set_capital = { state = 263 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 264 } }
+            set_capital = { state = 264 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 265 } }
+            set_capital = { state = 265 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 266 } }
+            set_capital = { state = 266 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 267 } }
+            set_capital = { state = 267 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 268 } }
+            set_capital = { state = 268 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 269 } }
+            set_capital = { state = 269 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 270 } }
+            set_capital = { state = 270 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 271 } }
+            set_capital = { state = 271 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 272 } }
+            set_capital = { state = 272 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 273 } }
+            set_capital = { state = 273 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 274 } }
+            set_capital = { state = 274 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 275 } }
+            set_capital = { state = 275 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 276 } }
+            set_capital = { state = 276 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 277 } }
+            set_capital = { state = 277 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 278 } }
+            set_capital = { state = 278 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 279 } }
+            set_capital = { state = 279 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 280 } }
+            set_capital = { state = 280 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 281 } }
+            set_capital = { state = 281 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 282 } }
+            set_capital = { state = 282 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 283 } }
+            set_capital = { state = 283 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 284 } }
+            set_capital = { state = 284 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 285 } }
+            set_capital = { state = 285 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 286 } }
+            set_capital = { state = 286 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 287 } }
+            set_capital = { state = 287 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 288 } }
+            set_capital = { state = 288 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 289 } }
+            set_capital = { state = 289 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 290 } }
+            set_capital = { state = 290 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 291 } }
+            set_capital = { state = 291 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 292 } }
+            set_capital = { state = 292 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 293 } }
+            set_capital = { state = 293 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 294 } }
+            set_capital = { state = 294 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 295 } }
+            set_capital = { state = 295 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 296 } }
+            set_capital = { state = 296 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 297 } }
+            set_capital = { state = 297 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 298 } }
+            set_capital = { state = 298 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 299 } }
+            set_capital = { state = 299 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 300 } }
+            set_capital = { state = 300 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 301 } }
+            set_capital = { state = 301 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 302 } }
+            set_capital = { state = 302 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 303 } }
+            set_capital = { state = 303 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 304 } }
+            set_capital = { state = 304 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 305 } }
+            set_capital = { state = 305 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 306 } }
+            set_capital = { state = 306 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 307 } }
+            set_capital = { state = 307 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 308 } }
+            set_capital = { state = 308 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 309 } }
+            set_capital = { state = 309 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 310 } }
+            set_capital = { state = 310 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 311 } }
+            set_capital = { state = 311 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 312 } }
+            set_capital = { state = 312 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 313 } }
+            set_capital = { state = 313 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 314 } }
+            set_capital = { state = 314 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 315 } }
+            set_capital = { state = 315 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 316 } }
+            set_capital = { state = 316 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 317 } }
+            set_capital = { state = 317 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 318 } }
+            set_capital = { state = 318 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 319 } }
+            set_capital = { state = 319 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 320 } }
+            set_capital = { state = 320 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 321 } }
+            set_capital = { state = 321 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 322 } }
+            set_capital = { state = 322 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 323 } }
+            set_capital = { state = 323 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 324 } }
+            set_capital = { state = 324 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 325 } }
+            set_capital = { state = 325 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 326 } }
+            set_capital = { state = 326 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 327 } }
+            set_capital = { state = 327 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 328 } }
+            set_capital = { state = 328 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 329 } }
+            set_capital = { state = 329 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 330 } }
+            set_capital = { state = 330 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 331 } }
+            set_capital = { state = 331 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 332 } }
+            set_capital = { state = 332 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 333 } }
+            set_capital = { state = 333 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 334 } }
+            set_capital = { state = 334 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 335 } }
+            set_capital = { state = 335 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 336 } }
+            set_capital = { state = 336 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 337 } }
+            set_capital = { state = 337 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 338 } }
+            set_capital = { state = 338 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 339 } }
+            set_capital = { state = 339 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 340 } }
+            set_capital = { state = 340 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 341 } }
+            set_capital = { state = 341 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 342 } }
+            set_capital = { state = 342 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 343 } }
+            set_capital = { state = 343 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 344 } }
+            set_capital = { state = 344 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 345 } }
+            set_capital = { state = 345 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 346 } }
+            set_capital = { state = 346 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 347 } }
+            set_capital = { state = 347 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 348 } }
+            set_capital = { state = 348 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 349 } }
+            set_capital = { state = 349 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 350 } }
+            set_capital = { state = 350 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 351 } }
+            set_capital = { state = 351 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 352 } }
+            set_capital = { state = 352 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 353 } }
+            set_capital = { state = 353 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 354 } }
+            set_capital = { state = 354 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 355 } }
+            set_capital = { state = 355 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 356 } }
+            set_capital = { state = 356 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 357 } }
+            set_capital = { state = 357 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 358 } }
+            set_capital = { state = 358 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 359 } }
+            set_capital = { state = 359 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 360 } }
+            set_capital = { state = 360 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 361 } }
+            set_capital = { state = 361 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 362 } }
+            set_capital = { state = 362 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 363 } }
+            set_capital = { state = 363 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 364 } }
+            set_capital = { state = 364 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 365 } }
+            set_capital = { state = 365 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 366 } }
+            set_capital = { state = 366 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 367 } }
+            set_capital = { state = 367 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 368 } }
+            set_capital = { state = 368 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 369 } }
+            set_capital = { state = 369 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 370 } }
+            set_capital = { state = 370 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 371 } }
+            set_capital = { state = 371 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 372 } }
+            set_capital = { state = 372 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 373 } }
+            set_capital = { state = 373 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 374 } }
+            set_capital = { state = 374 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 375 } }
+            set_capital = { state = 375 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 376 } }
+            set_capital = { state = 376 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 377 } }
+            set_capital = { state = 377 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 378 } }
+            set_capital = { state = 378 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 379 } }
+            set_capital = { state = 379 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 380 } }
+            set_capital = { state = 380 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 381 } }
+            set_capital = { state = 381 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 382 } }
+            set_capital = { state = 382 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 383 } }
+            set_capital = { state = 383 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 384 } }
+            set_capital = { state = 384 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 385 } }
+            set_capital = { state = 385 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 386 } }
+            set_capital = { state = 386 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 387 } }
+            set_capital = { state = 387 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 388 } }
+            set_capital = { state = 388 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 389 } }
+            set_capital = { state = 389 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 390 } }
+            set_capital = { state = 390 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 391 } }
+            set_capital = { state = 391 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 392 } }
+            set_capital = { state = 392 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 393 } }
+            set_capital = { state = 393 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 394 } }
+            set_capital = { state = 394 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 395 } }
+            set_capital = { state = 395 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 396 } }
+            set_capital = { state = 396 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 397 } }
+            set_capital = { state = 397 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 398 } }
+            set_capital = { state = 398 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 399 } }
+            set_capital = { state = 399 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 400 } }
+            set_capital = { state = 400 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 401 } }
+            set_capital = { state = 401 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 402 } }
+            set_capital = { state = 402 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 403 } }
+            set_capital = { state = 403 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 404 } }
+            set_capital = { state = 404 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 405 } }
+            set_capital = { state = 405 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 406 } }
+            set_capital = { state = 406 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 407 } }
+            set_capital = { state = 407 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 408 } }
+            set_capital = { state = 408 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 409 } }
+            set_capital = { state = 409 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 410 } }
+            set_capital = { state = 410 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 411 } }
+            set_capital = { state = 411 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 412 } }
+            set_capital = { state = 412 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 413 } }
+            set_capital = { state = 413 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 414 } }
+            set_capital = { state = 414 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 415 } }
+            set_capital = { state = 415 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 416 } }
+            set_capital = { state = 416 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 417 } }
+            set_capital = { state = 417 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 418 } }
+            set_capital = { state = 418 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 419 } }
+            set_capital = { state = 419 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 420 } }
+            set_capital = { state = 420 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 421 } }
+            set_capital = { state = 421 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 422 } }
+            set_capital = { state = 422 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 423 } }
+            set_capital = { state = 423 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 424 } }
+            set_capital = { state = 424 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 425 } }
+            set_capital = { state = 425 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 426 } }
+            set_capital = { state = 426 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 427 } }
+            set_capital = { state = 427 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 428 } }
+            set_capital = { state = 428 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 429 } }
+            set_capital = { state = 429 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 430 } }
+            set_capital = { state = 430 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 431 } }
+            set_capital = { state = 431 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 432 } }
+            set_capital = { state = 432 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 433 } }
+            set_capital = { state = 433 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 434 } }
+            set_capital = { state = 434 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 435 } }
+            set_capital = { state = 435 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 436 } }
+            set_capital = { state = 436 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 437 } }
+            set_capital = { state = 437 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 438 } }
+            set_capital = { state = 438 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 439 } }
+            set_capital = { state = 439 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 440 } }
+            set_capital = { state = 440 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 441 } }
+            set_capital = { state = 441 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 442 } }
+            set_capital = { state = 442 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 443 } }
+            set_capital = { state = 443 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 444 } }
+            set_capital = { state = 444 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 445 } }
+            set_capital = { state = 445 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 446 } }
+            set_capital = { state = 446 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 447 } }
+            set_capital = { state = 447 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 448 } }
+            set_capital = { state = 448 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 449 } }
+            set_capital = { state = 449 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 450 } }
+            set_capital = { state = 450 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 451 } }
+            set_capital = { state = 451 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 452 } }
+            set_capital = { state = 452 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 453 } }
+            set_capital = { state = 453 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 454 } }
+            set_capital = { state = 454 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 455 } }
+            set_capital = { state = 455 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 456 } }
+            set_capital = { state = 456 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 457 } }
+            set_capital = { state = 457 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 458 } }
+            set_capital = { state = 458 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 459 } }
+            set_capital = { state = 459 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 460 } }
+            set_capital = { state = 460 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 461 } }
+            set_capital = { state = 461 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 462 } }
+            set_capital = { state = 462 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 463 } }
+            set_capital = { state = 463 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 464 } }
+            set_capital = { state = 464 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 465 } }
+            set_capital = { state = 465 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 466 } }
+            set_capital = { state = 466 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 467 } }
+            set_capital = { state = 467 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 468 } }
+            set_capital = { state = 468 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 469 } }
+            set_capital = { state = 469 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 470 } }
+            set_capital = { state = 470 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 471 } }
+            set_capital = { state = 471 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 472 } }
+            set_capital = { state = 472 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 473 } }
+            set_capital = { state = 473 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 474 } }
+            set_capital = { state = 474 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 475 } }
+            set_capital = { state = 475 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 476 } }
+            set_capital = { state = 476 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 477 } }
+            set_capital = { state = 477 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 478 } }
+            set_capital = { state = 478 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 479 } }
+            set_capital = { state = 479 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 480 } }
+            set_capital = { state = 480 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 481 } }
+            set_capital = { state = 481 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 482 } }
+            set_capital = { state = 482 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 483 } }
+            set_capital = { state = 483 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 484 } }
+            set_capital = { state = 484 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 485 } }
+            set_capital = { state = 485 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 486 } }
+            set_capital = { state = 486 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 487 } }
+            set_capital = { state = 487 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 488 } }
+            set_capital = { state = 488 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 489 } }
+            set_capital = { state = 489 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 490 } }
+            set_capital = { state = 490 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 491 } }
+            set_capital = { state = 491 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 492 } }
+            set_capital = { state = 492 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 493 } }
+            set_capital = { state = 493 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 494 } }
+            set_capital = { state = 494 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 495 } }
+            set_capital = { state = 495 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 496 } }
+            set_capital = { state = 496 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 497 } }
+            set_capital = { state = 497 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 498 } }
+            set_capital = { state = 498 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 499 } }
+            set_capital = { state = 499 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 500 } }
+            set_capital = { state = 500 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 501 } }
+            set_capital = { state = 501 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 502 } }
+            set_capital = { state = 502 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 503 } }
+            set_capital = { state = 503 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 504 } }
+            set_capital = { state = 504 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 505 } }
+            set_capital = { state = 505 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 506 } }
+            set_capital = { state = 506 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 507 } }
+            set_capital = { state = 507 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 508 } }
+            set_capital = { state = 508 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 509 } }
+            set_capital = { state = 509 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 510 } }
+            set_capital = { state = 510 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 511 } }
+            set_capital = { state = 511 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 512 } }
+            set_capital = { state = 512 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 513 } }
+            set_capital = { state = 513 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 514 } }
+            set_capital = { state = 514 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 515 } }
+            set_capital = { state = 515 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 516 } }
+            set_capital = { state = 516 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 517 } }
+            set_capital = { state = 517 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 518 } }
+            set_capital = { state = 518 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 519 } }
+            set_capital = { state = 519 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 520 } }
+            set_capital = { state = 520 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 521 } }
+            set_capital = { state = 521 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 522 } }
+            set_capital = { state = 522 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 523 } }
+            set_capital = { state = 523 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 524 } }
+            set_capital = { state = 524 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 525 } }
+            set_capital = { state = 525 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 526 } }
+            set_capital = { state = 526 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 527 } }
+            set_capital = { state = 527 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 528 } }
+            set_capital = { state = 528 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 529 } }
+            set_capital = { state = 529 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 530 } }
+            set_capital = { state = 530 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 531 } }
+            set_capital = { state = 531 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 532 } }
+            set_capital = { state = 532 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 533 } }
+            set_capital = { state = 533 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 534 } }
+            set_capital = { state = 534 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 535 } }
+            set_capital = { state = 535 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 536 } }
+            set_capital = { state = 536 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 537 } }
+            set_capital = { state = 537 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 538 } }
+            set_capital = { state = 538 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 539 } }
+            set_capital = { state = 539 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 540 } }
+            set_capital = { state = 540 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 541 } }
+            set_capital = { state = 541 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 542 } }
+            set_capital = { state = 542 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 543 } }
+            set_capital = { state = 543 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 544 } }
+            set_capital = { state = 544 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 545 } }
+            set_capital = { state = 545 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 546 } }
+            set_capital = { state = 546 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 547 } }
+            set_capital = { state = 547 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 548 } }
+            set_capital = { state = 548 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 549 } }
+            set_capital = { state = 549 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 550 } }
+            set_capital = { state = 550 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 551 } }
+            set_capital = { state = 551 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 552 } }
+            set_capital = { state = 552 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 553 } }
+            set_capital = { state = 553 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 554 } }
+            set_capital = { state = 554 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 555 } }
+            set_capital = { state = 555 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 556 } }
+            set_capital = { state = 556 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 557 } }
+            set_capital = { state = 557 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 558 } }
+            set_capital = { state = 558 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 559 } }
+            set_capital = { state = 559 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 560 } }
+            set_capital = { state = 560 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 561 } }
+            set_capital = { state = 561 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 562 } }
+            set_capital = { state = 562 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 563 } }
+            set_capital = { state = 563 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 564 } }
+            set_capital = { state = 564 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 565 } }
+            set_capital = { state = 565 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 566 } }
+            set_capital = { state = 566 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 567 } }
+            set_capital = { state = 567 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 568 } }
+            set_capital = { state = 568 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 569 } }
+            set_capital = { state = 569 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 570 } }
+            set_capital = { state = 570 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 571 } }
+            set_capital = { state = 571 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 572 } }
+            set_capital = { state = 572 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 573 } }
+            set_capital = { state = 573 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 574 } }
+            set_capital = { state = 574 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 575 } }
+            set_capital = { state = 575 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 576 } }
+            set_capital = { state = 576 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 577 } }
+            set_capital = { state = 577 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 578 } }
+            set_capital = { state = 578 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 579 } }
+            set_capital = { state = 579 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 580 } }
+            set_capital = { state = 580 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 581 } }
+            set_capital = { state = 581 remember_old_capital = no }
+        }
+        else_if = {
+            limit = { check_variable = { pwc_home_capital = 582 } }
+            set_capital = { state = 582 remember_old_capital = no }
         }
     }
 }

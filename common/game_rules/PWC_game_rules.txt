@@ -298,6 +298,22 @@ pwc_demobilization = {
         allow_achievements = no
     }
 }
+pwc_manpower_calibration = {
+    name = "PWC_RULE_MANPOWER_CALIBRATION"
+    group = "PWC_RULE_GROUP_MILITARY"
+    default = {
+        name = "KEEP"
+        text = "PWC_RULE_MANPOWER_CALIBRATION_KEEP"
+        desc = "PWC_RULE_MANPOWER_CALIBRATION_KEEP_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "BALANCE"
+        text = "PWC_RULE_MANPOWER_CALIBRATION_BALANCE"
+        desc = "PWC_RULE_MANPOWER_CALIBRATION_BALANCE_DESC"
+        allow_achievements = no
+    }
+}
 pwc_administrative_pressure = {
     name = "PWC_RULE_ADMINISTRATIVE_PRESSURE"
     group = "PWC_RULE_GROUP_GEOGRAPHY"

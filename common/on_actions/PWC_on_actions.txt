@@ -7,6 +7,18 @@ on_actions = {
             }
         }
     }
+    on_daily_NTR = {
+        effect = {
+            if = {
+                limit = { has_global_flag = pwc_flag_setup_manpower_pending }
+                clr_global_flag = pwc_flag_setup_manpower_pending
+                every_country = {
+                    limit = { has_variable = pwc_setup_recruitable_target_k }
+                    pwc_se_settle_starting_manpower = yes
+                }
+            }
+        }
+    }
 	on_startup = {
 		effect = {
 			NTR = {
