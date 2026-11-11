@@ -527,6 +527,36 @@ pwc_st_max_tech_center_level_2 = {
 }
 
 
+pwc_st_endgame_route_open = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_ST_ENDGAME_ROUTE_OPEN_TT
+        OR = {
+            has_country_flag = pwc_flag_regional_title_earned
+            check_variable = {
+                var = global.pwc_alive_count value = 150
+                compare = less_than_or_equals
+            }
+        }
+    }
+}
+pwc_st_endgame_stage_two_open = {
+    custom_trigger_tooltip = {
+        tooltip = PWC_ST_ENDGAME_STAGE_TWO_OPEN_TT
+        OR = {
+            has_country_flag = pwc_flag_endgame_scale_reached
+            check_variable = {
+                var = num_owned_states value = 24
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = global.pwc_alive_count value = 50
+                compare = less_than_or_equals
+            }
+        }
+    }
+}
+
+
 
 pwc_st_ai_war_ready = {
     OR = {

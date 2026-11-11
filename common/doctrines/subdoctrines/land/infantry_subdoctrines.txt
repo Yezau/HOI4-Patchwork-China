@@ -150,7 +150,7 @@ defensive_postures = {
 			}
         }
         field_construction_training = {
-            dig_in_speed_factor = 0.15
+            dig_in_speed_factor = 0.2
         }
 
     }
@@ -200,12 +200,12 @@ large_unit_tactics = {
 
     rewards = {
         wide_trench_networks = {
-            dig_in_speed_factor = 0.10
+            dig_in_speed_factor = 0.15
         }
         flexible_division_structures = {
         
            pwc_unit_infantry = {
-                combat_width = -0.3
+                combat_width = -0.2
             }
         }
         unit_knowledge_sharing = {
@@ -530,7 +530,7 @@ commandos = {
             pwc_unit_logistics = {
                 battalion_mult = {
                  category = category_vehicle_infantry
-                 max_strength = 5
+                 max_strength = 2.5
                  add = yes
                 }
             }

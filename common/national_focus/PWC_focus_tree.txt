@@ -698,9 +698,9 @@ focus = {
 focus = {
 	id = eco_arms_industry
 	icon = PWC_GFX_focus_eco_arms_industry
-	prerequisite = { focus = eco_construction_bureau }
-	x = 25
-	y = 3
+	prerequisite = { focus = mil_defense_corps }
+	x = 38
+	y = 2
 	cost = 5
 	ai_will_do = {
 		factor = 6
@@ -717,7 +717,7 @@ focus = {
 			has_country_flag = pwc_ai_mobility
 		}
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
 		capital_scope = {
 		    add_extra_state_shared_building_slots = 1
@@ -726,6 +726,25 @@ focus = {
 				level = 1
 				instant_build = yes
 			}
+		}
+		if = {
+			limit = { has_country_flag = pwc_flag_mio_infantry has_dlc = "Arms Against Tyranny" }
+			if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } }
+				mio:pwc_mio_infantry_ai_20 = { add_mio_size = 1 }
+			}
+			else_if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes } }
+				mio:pwc_mio_infantry_ai_30 = { add_mio_size = 1 }
+			}
+			else = {
+				mio:pwc_mio_infantry = { add_mio_size = 1 }
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = pwc_flag_mio_infantry } }
+			set_country_flag = pwc_flag_mio_infantry
+			unlock_military_industrial_organization_tooltip = mio:pwc_mio_infantry
 		}
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
@@ -776,9 +795,9 @@ focus = {
 focus = {
 	id = eco_industrial_expansion
 	icon = PWC_GFX_focus_eco_industrial_expansion
-	prerequisite = { focus = eco_urban_industry }
-	x = 27
-	y = 4
+	prerequisite = { focus = eco_construction_bureau }
+	x = 25
+	y = 3
 	cost = 5
 	ai_will_do = {
 		factor = 6
@@ -801,6 +820,25 @@ focus = {
 				instant_build = yes
 			}
 		}
+		if = {
+			limit = { has_country_flag = pwc_flag_mio_firepower has_dlc = "Arms Against Tyranny" }
+			if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } }
+				mio:pwc_mio_firepower_ai_20 = { add_mio_size = 1 }
+			}
+			else_if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes } }
+				mio:pwc_mio_firepower_ai_30 = { add_mio_size = 1 }
+			}
+			else = {
+				mio:pwc_mio_firepower = { add_mio_size = 1 }
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = pwc_flag_mio_firepower } }
+			set_country_flag = pwc_flag_mio_firepower
+			unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
+		}
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -814,7 +852,7 @@ focus = {
 focus = {
 	id = eco_municipal_energy
 	icon = PWC_GFX_focus_eco_municipal_energy
-	prerequisite = { focus = eco_arms_industry }
+	prerequisite = { focus = eco_industrial_expansion }
 	x = 25
 	y = 4
 	cost = 5
@@ -933,9 +971,9 @@ focus = {
 focus = {
 	id = eco_metropolitan_economy
 	icon = PWC_GFX_focus_eco_metropolitan_economy
-	prerequisite = { focus = eco_industrial_expansion }
-	x = 26
-	y = 5
+	prerequisite = { focus = eco_urban_industry }
+	x = 27
+	y = 4
 	cost = 5
 	ai_will_do = {
 		factor = 6
@@ -966,7 +1004,7 @@ focus = {
 	id = eco_fourth_research_slot
 	icon = PWC_GFX_focus_eco_fourth_research_slot
 	prerequisite = { focus = eco_research_institute }
-	x = 24
+	x = 25
 	y = 5
 	cost = 10
 	available = {
@@ -1005,7 +1043,7 @@ focus = {
 	id = eco_commerce_district
 	icon = PWC_GFX_focus_eco_commerce_district
 	prerequisite = { focus = eco_trade_hub }
-	x = 22
+	x = 23
 	y = 5
 	cost = 5
 	ai_will_do = {
@@ -1126,7 +1164,7 @@ focus = {
 	id = mil_infantry_doctrine
 	icon = PWC_GFX_focus_mil_infantry_doctrine
 	prerequisite = { focus = mil_defense_corps }
-	x = 32
+	x = 40
 	y = 2
 	cost = 5
 	ai_will_do = {
@@ -1143,8 +1181,25 @@ focus = {
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
 		army_experience = 20
-		set_country_flag = pwc_flag_mio_infantry
-		unlock_military_industrial_organization_tooltip = mio:pwc_mio_infantry
+		if = {
+			limit = { has_country_flag = pwc_flag_mio_infantry has_dlc = "Arms Against Tyranny" }
+			if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } }
+				mio:pwc_mio_infantry_ai_20 = { add_mio_size = 1 }
+			}
+			else_if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes } }
+				mio:pwc_mio_infantry_ai_30 = { add_mio_size = 1 }
+			}
+			else = {
+				mio:pwc_mio_infantry = { add_mio_size = 1 }
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = pwc_flag_mio_infantry } }
+			set_country_flag = pwc_flag_mio_infantry
+			unlock_military_industrial_organization_tooltip = mio:pwc_mio_infantry
+		}
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -1295,7 +1350,7 @@ focus = {
 	id = mil_officer_academy
 	icon = PWC_GFX_focus_mil_officer_academy
 	prerequisite = { focus = mil_infantry_doctrine focus = mil_naval_program focus = mil_air_wing }
-	x = 32
+	x = 40
 	y = 3
 	cost = 5
 	ai_will_do = {
@@ -1341,7 +1396,7 @@ focus = {
 	id = mil_mechanized_initiative
 	icon = PWC_GFX_focus_mil_mechanized_initiative
 	prerequisite = { focus = mil_infantry_doctrine }
-	x = 30
+	x = 36
 	y = 3
 	cost = 5
 	ai_will_do = {
@@ -1384,7 +1439,7 @@ focus = {
 	icon = PWC_GFX_focus_mil_combined_arms
 	prerequisite = { focus = mil_officer_academy }
 	prerequisite = { focus = mil_mechanized_initiative }
-	x = 38
+	x = 36
 	y = 4
 	cost = 5
 	ai_will_do = {
@@ -1408,8 +1463,25 @@ focus = {
 		hidden_effect = {
 		    pwc_se_officer_grant_focus_mil_combined_arms_1 = yes
 		}
-		set_country_flag = pwc_flag_mio_firepower
-		unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
+		if = {
+			limit = { has_country_flag = pwc_flag_mio_firepower has_dlc = "Arms Against Tyranny" }
+			if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes has_game_rule = { rule = pwc_ai_difficulty option = TIER_20 } }
+				mio:pwc_mio_firepower_ai_20 = { add_mio_size = 1 }
+			}
+			else_if = {
+				limit = { is_ai = yes pwc_st_is_city_country = yes OR = { has_game_rule = { rule = pwc_ai_difficulty option = TIER_30 } pwc_st_cataclysm_enabled = yes } }
+				mio:pwc_mio_firepower_ai_30 = { add_mio_size = 1 }
+			}
+			else = {
+				mio:pwc_mio_firepower = { add_mio_size = 1 }
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = pwc_flag_mio_firepower } }
+			set_country_flag = pwc_flag_mio_firepower
+			unlock_military_industrial_organization_tooltip = mio:pwc_mio_firepower
+		}
 		effect_tooltip = {
 			add_ideas = pwc_idea_mil_combined_arms
 		}
@@ -1429,9 +1501,9 @@ focus = {
 focus = {
 	id = mil_logistics_command
 	icon = PWC_GFX_focus_mil_logistics_command
-	prerequisite = { focus = mil_officer_academy }
-	x = 40
-	y = 4
+	prerequisite = { focus = mil_defense_corps }
+	x = 30
+	y = 2
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -1693,12 +1765,8 @@ focus = {
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	completion_reward = {
 		add_political_power = 25
-		effect_tooltip = {
-			add_ideas = pwc_idea_war_foreign_office
-		}
-		hidden_effect = {
-			pwc_se_grant_focus_spirit_war_foreign_office = yes
-		}
+		custom_effect_tooltip = PWC_FOCUS_UNLOCK_WAR_FOREIGN_OFFICE
+		set_country_flag = pwc_flag_foreign_office
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -1745,7 +1813,7 @@ focus = {
 	id = war_nap_framework
 	icon = PWC_GFX_focus_war_nap_framework
 	prerequisite = { focus = war_diplomatic_corps }
-	x = 59
+	x = 57
 	y = 3
 	cost = 5
 	ai_will_do = {
@@ -1772,6 +1840,8 @@ focus = {
 			pwc_se_grant_focus_spirit_war_nap_framework = yes
 		}
 		set_country_flag = pwc_flag_nap_framework
+		custom_effect_tooltip = PWC_FOCUS_RULE_WAR_NAP_FRAMEWORK
+		custom_effect_tooltip = PWC_FOCUS_RULE_WAR_NAP_FRAMEWORK_2
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -1785,9 +1855,9 @@ focus = {
 focus = {
 	id = war_access_agreements
 	icon = PWC_GFX_focus_war_access_agreements
-	prerequisite = { focus = war_diplomatic_corps }
+	prerequisite = { focus = war_nap_framework }
 	x = 57
-	y = 3
+	y = 4
 	cost = 5
 	ai_will_do = {
 		factor = 4
@@ -1808,6 +1878,8 @@ focus = {
 		hidden_effect = {
 			pwc_se_grant_focus_spirit_war_access_agreements = yes
 		}
+		set_country_flag = pwc_flag_access_agreements
+		custom_effect_tooltip = PWC_FOCUS_RULE_WAR_ACCESS_AGREEMENTS
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -1862,8 +1934,8 @@ focus = {
 	id = war_establish_agency
 	icon = PWC_GFX_focus_war_establish_agency
 	prerequisite = { focus = war_diplomatic_corps }
-	x = 55
-	y = 4
+	x = 59
+	y = 3
 	cost = 5
 	available = {
         has_dlc = "La Resistance"
@@ -1936,7 +2008,7 @@ focus = {
 	id = war_propaganda_office
 	icon = PWC_GFX_focus_war_propaganda_office
 	prerequisite = { focus = war_war_room }
-	x = 57
+	x = 55
 	y = 4
 	cost = 5
 	ai_will_do = {
@@ -1958,6 +2030,8 @@ focus = {
 		hidden_effect = {
 			pwc_se_grant_focus_spirit_war_propaganda_office = yes
 		}
+		set_country_flag = pwc_flag_propaganda_office
+		custom_effect_tooltip = PWC_FOCUS_RULE_WAR_PROPAGANDA_OFFICE
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -1972,7 +2046,7 @@ focus = {
 	id = war_occupation_authority
 	icon = PWC_GFX_focus_war_occupation_authority
 	prerequisite = { focus = war_propaganda_office }
-	x = 57
+	x = 55
 	y = 5
 	cost = 5
 	ai_will_do = {
@@ -1998,6 +2072,9 @@ focus = {
 		hidden_effect = {
 			pwc_se_grant_focus_spirit_war_occupation_authority = yes
 		}
+		set_country_flag = pwc_flag_occupation_authority
+		custom_effect_tooltip = PWC_FOCUS_RULE_WAR_OCCUPATION_AUTHORITY
+		hidden_effect = { pwc_se_update_administration = yes }
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 5 }
@@ -2017,6 +2094,9 @@ focus = {
 	x = 43
 	y = 9
 	cost = 10
+	available = {
+		pwc_st_endgame_route_open = yes
+	}
 	ai_will_do = {
 		factor = 6
 		modifier = {
@@ -2036,6 +2116,9 @@ focus = {
 	completion_reward = {
 		add_ideas = pwc_idea_endgame_offensive_doctrine
 		army_experience = 25
+		set_country_flag = pwc_flag_endgame_offensive
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_OFFENSIVE_DOCTRINE
+		hidden_effect = { pwc_se_update_unit_limit = yes }
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 10 }
@@ -2055,6 +2138,9 @@ focus = {
 	x = 35
 	y = 9
 	cost = 10
+	available = {
+		pwc_st_endgame_route_open = yes
+	}
 	ai_will_do = {
 		factor = 6
 		modifier = {
@@ -2070,6 +2156,9 @@ focus = {
 	completion_reward = {
 		add_ideas = pwc_idea_endgame_defensive_doctrine
 		army_experience = 25
+		set_country_flag = pwc_flag_endgame_defensive
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_DEFENSIVE_DOCTRINE
+		hidden_effect = { pwc_se_update_unit_limit = yes }
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 10 }
@@ -2089,6 +2178,9 @@ focus = {
 	x = 39
 	y = 9
 	cost = 10
+	available = {
+		pwc_st_endgame_route_open = yes
+	}
 	ai_will_do = {
 		factor = 6
 		modifier = {
@@ -2107,6 +2199,8 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		add_ideas = pwc_idea_endgame_technological_supremacy
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_TECHNOLOGICAL_SUPREMACY
+		hidden_effect = { pwc_se_endgame_tech_center_upgrade = yes }
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 10 }
@@ -2126,6 +2220,9 @@ focus = {
 	x = 47
 	y = 9
 	cost = 10
+	available = {
+		pwc_st_endgame_route_open = yes
+	}
 	ai_will_do = {
 		factor = 6
 		modifier = {
@@ -2145,6 +2242,212 @@ focus = {
 	completion_reward = {
 		add_ideas = pwc_idea_endgame_integration_charter
 		add_political_power = 100
+		set_country_flag = pwc_flag_integration_charter
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_INTEGRATION_CHARTER
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = endgame_offensive_initiative
+	icon = PWC_GFX_focus_endgame_offensive_initiative
+	prerequisite = { focus = endgame_offensive_doctrine }
+	x = 43
+	y = 10
+	cost = 10
+	available = {
+		pwc_st_endgame_stage_two_open = yes
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		custom_effect_tooltip = PWC_MIL_UNLOCK_ENDGAME_OFFENSIVE_INITIATIVE
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = endgame_defensive_readiness
+	icon = PWC_GFX_focus_endgame_defensive_readiness
+	prerequisite = { focus = endgame_defensive_doctrine }
+	x = 35
+	y = 10
+	cost = 10
+	available = {
+		pwc_st_endgame_stage_two_open = yes
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.6
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = pwc_ai_mobility
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		capital_scope = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_victory_point = yes
+				}
+			}
+		}
+		set_country_flag = pwc_flag_endgame_defensive_readiness
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_DEFENSIVE_READINESS
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = endgame_technological_lead
+	icon = PWC_GFX_focus_endgame_technological_lead
+	prerequisite = { focus = endgame_technological_supremacy }
+	x = 39
+	y = 10
+	cost = 10
+	available = {
+		pwc_st_endgame_stage_two_open = yes
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.5
+			has_country_flag = pwc_ai_air_power
+		}
+		modifier = {
+			factor = 0.8
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		generate_scientist_character = {
+			skills = {
+				specialization_land = 3
+				specialization_air = 3
+				specialization_naval = 3
+			}
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_industry
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_industry
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_army
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_army
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_armor
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_armor
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_air
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_air
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_navy
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_navy
+		}
+		add_tech_bonus = {
+			name = pwc_bonus_endgame_technological_lead_electronics
+			bonus = 0.5
+			uses = 1
+			category = pwc_tech_electronics
+		}
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 10 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = endgame_integration_provinces
+	icon = PWC_GFX_focus_endgame_integration_provinces
+	prerequisite = { focus = endgame_integration_charter }
+	x = 47
+	y = 10
+	cost = 10
+	available = {
+		pwc_st_endgame_stage_two_open = yes
+	}
+	ai_will_do = {
+		factor = 6
+		modifier = {
+			factor = 1.3
+			has_country_flag = pwc_ai_balanced
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = pwc_ai_defense
+		}
+		modifier = {
+			factor = 1.4
+			has_country_flag = pwc_ai_industrial
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		set_country_flag = pwc_flag_integration_provinces
+		custom_effect_tooltip = PWC_FOCUS_RULE_ENDGAME_INTEGRATION_PROVINCES
+		hidden_effect = { pwc_se_update_administration = yes }
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
             set_variable = { pwc_focus_equipment_scale = 10 }
@@ -2159,7 +2462,7 @@ focus = {
 	id = mil_staff_wargames
 	icon = PWC_GFX_focus_mil_staff_wargames
 	prerequisite = { focus = mil_officer_academy }
-	x = 36
+	x = 40
 	y = 4
 	cost = 5
 	ai_will_do = {
@@ -2192,9 +2495,9 @@ focus = {
 focus = {
 	id = mil_operational_intelligence
 	icon = PWC_GFX_focus_mil_operational_intelligence
-	prerequisite = { focus = mil_staff_wargames }
-	x = 36
-	y = 5
+	prerequisite = { focus = mil_officer_academy }
+	x = 38
+	y = 4
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -2227,7 +2530,7 @@ focus = {
 	id = mil_reserve_system
 	icon = PWC_GFX_focus_mil_reserve_system
 	prerequisite = { focus = mil_defense_corps }
-	x = 30
+	x = 36
 	y = 2
 	cost = 5
 	ai_will_do = {
@@ -2261,8 +2564,8 @@ focus = {
 	id = mil_armaments_standardization
 	icon = PWC_GFX_focus_mil_armaments_standardization
 	prerequisite = { focus = mil_logistics_command }
-	x = 38
-	y = 5
+	x = 32
+	y = 3
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -2295,7 +2598,7 @@ focus = {
 	id = mil_joint_operations
 	icon = PWC_GFX_focus_mil_joint_operations
 	prerequisite = { focus = mil_apex_city_marshal }
-	prerequisite = { focus = mil_deep_exploitation focus = mil_deliberate_breakthrough focus = mil_counterstroke }
+	prerequisite = { focus = mil_deep_exploitation focus = mil_deliberate_breakthrough focus = mil_counterstroke focus = mil_sustained_offensive }
 	prerequisite = { focus = mil_interception_network focus = mil_battlefield_interdiction focus = mil_ambush_flotillas focus = mil_expeditionary_support }
 	x = 41
 	y = 8
@@ -2331,9 +2634,9 @@ focus = {
 	id = mil_mobile_operations
 	icon = PWC_GFX_focus_mil_mobile_operations
 	prerequisite = { focus = mil_officer_academy }
-	mutually_exclusive = { focus = mil_firepower_operations focus = mil_elastic_operations }
-	x = 30
-	y = 4
+	mutually_exclusive = { focus = mil_firepower_operations focus = mil_elastic_operations focus = mil_sustainment_operations }
+	x = 36
+	y = 5
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -2367,7 +2670,7 @@ focus = {
 	icon = PWC_GFX_focus_mil_mobile_reserves
 	prerequisite = { focus = mil_mobile_operations }
 	prerequisite = { focus = mil_reserve_system }
-	x = 30
+	x = 36
 	y = 6
 	cost = 5
 	ai_will_do = {
@@ -2402,7 +2705,7 @@ focus = {
 	icon = PWC_GFX_focus_mil_deep_exploitation
 	prerequisite = { focus = mil_mobile_reserves }
 	prerequisite = { focus = mil_combined_arms }
-	x = 30
+	x = 36
 	y = 7
 	cost = 5
 	ai_will_do = {
@@ -2436,9 +2739,9 @@ focus = {
 	id = mil_firepower_operations
 	icon = PWC_GFX_focus_mil_firepower_operations
 	prerequisite = { focus = mil_officer_academy }
-	mutually_exclusive = { focus = mil_mobile_operations focus = mil_elastic_operations }
-	x = 32
-	y = 4
+	mutually_exclusive = { focus = mil_mobile_operations focus = mil_elastic_operations focus = mil_sustainment_operations }
+	x = 38
+	y = 5
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -2472,7 +2775,7 @@ focus = {
 	icon = PWC_GFX_focus_mil_sensor_shooter_network
 	prerequisite = { focus = mil_firepower_operations }
 	prerequisite = { focus = mil_operational_intelligence }
-	x = 32
+	x = 38
 	y = 6
 	cost = 5
 	ai_will_do = {
@@ -2507,7 +2810,7 @@ focus = {
 	icon = PWC_GFX_focus_mil_deliberate_breakthrough
 	prerequisite = { focus = mil_sensor_shooter_network }
 	prerequisite = { focus = mil_combined_arms }
-	x = 32
+	x = 38
 	y = 7
 	cost = 5
 	ai_will_do = {
@@ -2541,9 +2844,9 @@ focus = {
 	id = mil_elastic_operations
 	icon = PWC_GFX_focus_mil_elastic_operations
 	prerequisite = { focus = mil_officer_academy }
-	mutually_exclusive = { focus = mil_mobile_operations focus = mil_firepower_operations }
+	mutually_exclusive = { focus = mil_mobile_operations focus = mil_firepower_operations focus = mil_sustainment_operations }
 	x = 34
-	y = 4
+	y = 5
 	cost = 5
 	ai_will_do = {
 		factor = 50
@@ -2631,6 +2934,111 @@ focus = {
 		}
 		hidden_effect = {
 			pwc_se_grant_focus_spirit_mil_counterstroke = yes
+		}
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = mil_sustainment_operations
+	icon = PWC_GFX_focus_mil_sustainment_operations
+	prerequisite = { focus = mil_officer_academy }
+	mutually_exclusive = { focus = mil_mobile_operations focus = mil_firepower_operations focus = mil_elastic_operations }
+	x = 32
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_SUSTAINMENT_OPERATIONS
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_sustainment_operations
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_sustainment_operations = yes
+		}
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = mil_forward_support_nodes
+	icon = PWC_GFX_focus_mil_forward_support_nodes
+	prerequisite = { focus = mil_sustainment_operations }
+	prerequisite = { focus = mil_logistics_command }
+	x = 32
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_FORWARD_SUPPORT_NODES
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_forward_support_nodes
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_forward_support_nodes = yes
+		}
+		pwc_se_focus_progress_tick = yes
+        hidden_effect = {
+            set_variable = { pwc_focus_equipment_scale = 5 }
+            pwc_se_focus_ai_equipment = yes
+            clear_variable = pwc_focus_equipment_scale
+        }
+	}
+}
+
+
+focus = {
+	id = mil_sustained_offensive
+	icon = PWC_GFX_focus_mil_sustained_offensive
+	prerequisite = { focus = mil_forward_support_nodes }
+	prerequisite = { focus = mil_combined_arms }
+	x = 32
+	y = 7
+	cost = 5
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.8
+			has_country_flag = pwc_ai_balanced
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		army_experience = 10
+		custom_effect_tooltip = PWC_MIL_UNLOCK_MIL_SUSTAINED_OFFENSIVE
+		effect_tooltip = {
+			add_ideas = pwc_idea_mil_sustained_offensive
+		}
+		hidden_effect = {
+			pwc_se_grant_focus_spirit_mil_sustained_offensive = yes
 		}
 		pwc_se_focus_progress_tick = yes
         hidden_effect = {
@@ -3066,8 +3474,8 @@ focus = {
 	id = mil_field_workshops
 	icon = PWC_GFX_focus_mil_field_workshops
 	prerequisite = { focus = mil_logistics_command }
-	x = 40
-	y = 5
+	x = 30
+	y = 3
 	cost = 5
 	ai_will_do = {
 		factor = 5
@@ -3100,8 +3508,8 @@ focus = {
 	id = mil_medical_evacuation
 	icon = PWC_GFX_focus_mil_medical_evacuation
 	prerequisite = { focus = mil_field_workshops }
-	x = 40
-	y = 6
+	x = 30
+	y = 4
 	cost = 5
 	ai_will_do = {
 		factor = 5

@@ -147,3 +147,49 @@ pwc_doctrine_elastic = {
     }
 }
 
+pwc_doctrine_sustainment = {
+    track = operations
+    name = pwc_doctrine_sustainment
+    description = pwc_doctrine_sustainment_desc
+    icon = GFX_PWC_subdoctrine_sustainment
+    xp_cost = 100
+    xp_type = army
+    available = {
+        has_completed_focus = mil_sustainment_operations
+    }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            factor = 2
+            has_country_flag = pwc_ai_balanced
+        }
+    }
+    category_all_infantry = {
+        max_organisation = 5
+    }
+    breakthrough_factor = -0.03
+    rewards = {
+        forwarding = {
+            supply_consumption_factor = -0.05
+        }
+        resilience = {
+            out_of_supply_factor = -0.1
+        }
+        replacement = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            land_reinforce_rate = 0.03
+        }
+        fuel = {
+            army_fuel_consumption_factor = -0.1
+        }
+        endurance = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            army_org_regain = 0.1
+        }
+    }
+}
+

@@ -21,6 +21,7 @@ pwc_se_check_adjacent_player_wars = {
                 }
             }
             declare_war_on = { target = PREV type = annex_everything }
+            PREV = { pwc_se_grant_endgame_readiness = yes }
         }
     }
 }

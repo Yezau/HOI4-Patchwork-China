@@ -39,7 +39,14 @@ country_event = {
         if = {
             limit = { pwc_st_support_accept = yes }
             event_target:pwc_support_host = {
-                set_country_flag = pwc_support_used
+                if = {
+                    limit = {
+                        has_country_flag = pwc_flag_access_agreements
+                        NOT = { has_country_flag = pwc_support_first }
+                    }
+                    set_country_flag = pwc_support_first
+                }
+                else = { set_country_flag = pwc_support_used }
                 clr_country_flag = pwc_support_pending
                 clear_variable = pwc_support_invitee
             }

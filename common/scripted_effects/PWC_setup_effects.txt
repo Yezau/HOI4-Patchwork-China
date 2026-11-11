@@ -523,22 +523,44 @@ pwc_se_update_administration = {
                 has_game_rule = { rule = pwc_administrative_pressure option = REMOVE }
             }
         }
+        
+        set_temp_variable = { pwc_admin_non_core_weight = 0.005 }
+        if = {
+            limit = { has_country_flag = pwc_flag_occupation_authority }
+            set_temp_variable = { pwc_admin_non_core_weight = 0.003 }
+        }
+        
+        set_temp_variable = { pwc_admin_core_weight = 0.002 }
+        if = {
+            limit = { has_country_flag = pwc_flag_integration_provinces }
+            set_temp_variable = { pwc_admin_core_weight = 0 }
+        }
         every_owned_state = {
             limit = { is_capital = no }
             if = {
                 limit = { is_core_of = PREV }
                 PREV = {
-                    add_to_variable = { pwc_administrative_pressure = 0.002 }
+                    add_to_variable = {
+                        pwc_administrative_pressure = pwc_admin_core_weight
+                    }
                 }
             }
             else = {
                 PREV = {
-                    add_to_variable = { pwc_administrative_pressure = 0.005 }
+                    add_to_variable = {
+                        pwc_administrative_pressure = pwc_admin_non_core_weight
+                    }
                 }
             }
         }
         clamp_variable = {
             var = pwc_administrative_pressure min = 0 max = 0.1
+        }
+        if = {
+            limit = { has_country_flag = pwc_flag_integration_provinces }
+            clamp_variable = {
+                var = pwc_administrative_pressure min = 0 max = 0.05
+            }
         }
         if = {
             limit = {
@@ -577,11 +599,22 @@ pwc_se_update_unit_limit = {
         limit = { is_fully_controlled_by = PREV }
         PREV = { add_to_variable = { pwc_setup_controlled_states = 1 } }
     }
+    
+    set_variable = { pwc_unit_capacity_base = 8 }
+    set_variable = { pwc_unit_capacity_per_state = 4 }
+    if = {
+        limit = { has_country_flag = pwc_flag_endgame_defensive }
+        set_variable = { pwc_unit_capacity_base = 16 }
+    }
+    if = {
+        limit = { has_country_flag = pwc_flag_endgame_offensive }
+        set_variable = { pwc_unit_capacity_per_state = 5 }
+    }
     set_variable = {
         pwc_unit_capacity = {
             value = pwc_setup_controlled_states
-            multiply = 4
-            add = 8
+            multiply = pwc_unit_capacity_per_state
+            add = pwc_unit_capacity_base
             clamp = { min = 8 max = 500 }
         }
     }

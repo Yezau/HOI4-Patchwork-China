@@ -160,15 +160,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_operational_intelligence
-                                has_completed_focus = mil_sensor_shooter_network
-                            }
+                            has_completed_focus = mil_operational_intelligence
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -179,16 +184,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_fire_coordination
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_sensor_shooter_network
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_fire_coordination
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_fire_coordination
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -226,8 +264,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -238,10 +284,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -277,15 +342,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_mobile_reserves
-                                has_completed_focus = mil_deep_exploitation
-                            }
+                            has_completed_focus = mil_mobile_reserves
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -296,16 +366,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_deep_thrust
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_deep_exploitation
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_deep_thrust
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_deep_thrust
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -338,15 +441,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_defense_in_depth
-                                has_completed_focus = mil_urban_fortification
-                            }
+                            has_completed_focus = mil_urban_fortification
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -357,16 +465,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_elastic_counterattack
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_defense_in_depth
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_elastic_counterattack
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_elastic_counterattack
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -396,15 +537,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_operational_intelligence
-                        has_completed_focus = mil_sensor_shooter_network
-                    }
+                    has_completed_focus = mil_operational_intelligence
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -446,8 +592,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -481,15 +635,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_mobile_reserves
-                        has_completed_focus = mil_deep_exploitation
-                    }
+                    has_completed_focus = mil_mobile_reserves
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -526,15 +685,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_defense_in_depth
-                        has_completed_focus = mil_urban_fortification
-                    }
+                    has_completed_focus = mil_urban_fortification
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -614,8 +778,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -626,10 +798,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -672,8 +863,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -684,10 +883,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -733,8 +951,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -745,10 +971,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -791,8 +1036,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -833,8 +1086,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -878,8 +1139,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1048,15 +1317,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_operational_intelligence
-                                has_completed_focus = mil_sensor_shooter_network
-                            }
+                            has_completed_focus = mil_operational_intelligence
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1067,16 +1341,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_fire_coordination
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_sensor_shooter_network
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_fire_coordination
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_fire_coordination
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -1114,8 +1421,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1126,10 +1441,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -1165,15 +1499,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_mobile_reserves
-                                has_completed_focus = mil_deep_exploitation
-                            }
+                            has_completed_focus = mil_mobile_reserves
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1184,16 +1523,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_deep_thrust
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_deep_exploitation
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_deep_thrust
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_deep_thrust
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -1226,15 +1598,20 @@ scripted_gui = {
                             }
                         }
                         ROOT = {
-                            OR = {
-                                has_completed_focus = mil_defense_in_depth
-                                has_completed_focus = mil_urban_fortification
-                            }
+                            has_completed_focus = mil_urban_fortification
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 20
+                            OR = {
+                                NOT = {
+                                    command_power < 20
+                                }
+                                AND = {
+                                    has_completed_focus = endgame_offensive_initiative
+                                    NOT = {
+                                        command_power < 15
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1245,16 +1622,49 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -20
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_operations
-                            days = 21
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            add_command_power = -15
+                        }
+                        else = {
+                            add_command_power = -20
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = endgame_offensive_initiative
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 17
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_operations
+                                days = 21
+                            }
                         }
                     }
-                    add_dynamic_modifier = {
-                        modifier = pwc_state_operation_elastic_counterattack
-                        scope = ROOT
-                        days = 7
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_completed_focus = mil_defense_in_depth
+                            }
+                        }
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_elastic_counterattack
+                            scope = ROOT
+                            days = 10
+                        }
+                    }
+                    else = {
+                        add_dynamic_modifier = {
+                            modifier = pwc_state_operation_elastic_counterattack
+                            scope = ROOT
+                            days = 7
+                        }
                     }
                 }
             }
@@ -1284,15 +1694,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_operational_intelligence
-                        has_completed_focus = mil_sensor_shooter_network
-                    }
+                    has_completed_focus = mil_operational_intelligence
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1334,8 +1749,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1369,15 +1792,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_mobile_reserves
-                        has_completed_focus = mil_deep_exploitation
-                    }
+                    has_completed_focus = mil_mobile_reserves
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1414,15 +1842,20 @@ scripted_gui = {
                     }
                 }
                 ROOT = {
-                    OR = {
-                        has_completed_focus = mil_defense_in_depth
-                        has_completed_focus = mil_urban_fortification
-                    }
+                    has_completed_focus = mil_urban_fortification
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 20
+                    OR = {
+                        NOT = {
+                            command_power < 20
+                        }
+                        AND = {
+                            has_completed_focus = endgame_offensive_initiative
+                            NOT = {
+                                command_power < 15
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1500,8 +1933,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1512,10 +1953,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -1558,8 +2018,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1570,10 +2038,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -1619,8 +2106,16 @@ scripted_gui = {
                             has_army_size = {
                                 size > 0
                             }
-                            NOT = {
-                                command_power < 15
+                            OR = {
+                                NOT = {
+                                    command_power < 15
+                                }
+                                AND = {
+                                    has_completed_focus = mil_forward_support_nodes
+                                    NOT = {
+                                        command_power < 10
+                                    }
+                                }
                             }
                         }
                         NOT = {
@@ -1631,10 +2126,29 @@ scripted_gui = {
                         }
                     }
                     ROOT = {
-                        add_command_power = -15
-                        set_country_flag = {
-                            flag = pwc_state_operations_cooldown_support
-                            days = 30
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_forward_support_nodes
+                            }
+                            add_command_power = -10
+                        }
+                        else = {
+                            add_command_power = -15
+                        }
+                        if = {
+                            limit = {
+                                has_completed_focus = mil_sustained_offensive
+                            }
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 23
+                            }
+                        }
+                        else = {
+                            set_country_flag = {
+                                flag = pwc_state_operations_cooldown_support
+                                days = 30
+                            }
                         }
                     }
                     add_dynamic_modifier = {
@@ -1677,8 +2191,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1719,8 +2241,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {
@@ -1764,8 +2294,16 @@ scripted_gui = {
                     has_army_size = {
                         size > 0
                     }
-                    NOT = {
-                        command_power < 15
+                    OR = {
+                        NOT = {
+                            command_power < 15
+                        }
+                        AND = {
+                            has_completed_focus = mil_forward_support_nodes
+                            NOT = {
+                                command_power < 10
+                            }
+                        }
                     }
                 }
                 NOT = {

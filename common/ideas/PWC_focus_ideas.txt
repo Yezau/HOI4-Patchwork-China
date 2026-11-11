@@ -221,22 +221,11 @@ ideas = {
 		}
 
 		
-		pwc_idea_war_foreign_office = {
-			removal_cost = -1
-			picture = generic_war_preparation
-			modifier = {
-				improve_relations_maintain_cost_factor = -0.1
-				opinion_gain_monthly_factor = 0.1
-			}
-		}
-
-		
 		pwc_idea_war_nap_framework = {
 			removal_cost = -1
 			picture = generic_war_preparation
 			modifier = {
 				stability_factor = 0.03
-				enemy_justify_war_goal_time = 0.1
 			}
 		}
 
@@ -285,8 +274,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_war_preparation
 			modifier = {
-				compliance_growth = 0.03
-				required_garrison_factor = -0.05
+				compliance_gain = 0.05
 			}
 		}
 
@@ -328,7 +316,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_intel_bonus
 			modifier = {
-				compliance_growth = 0.06
+				compliance_gain = 0.05
 				resistance_growth = -0.09
 				non_core_manpower = 0.1
 			}
@@ -471,6 +459,36 @@ ideas = {
 			modifier = {
 				breakthrough_factor = 0.05
 				army_org_regain = 0.1
+			}
+		}
+
+		
+		pwc_idea_mil_sustainment_operations = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				command_power_gain = 0.05
+				out_of_supply_factor = -0.05
+			}
+		}
+
+		
+		pwc_idea_mil_forward_support_nodes = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				supply_consumption_factor = -0.05
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		
+		pwc_idea_mil_sustained_offensive = {
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				breakthrough_factor = 0.05
+				attrition = -0.05
 			}
 		}
 
@@ -909,6 +927,16 @@ ideas = {
 			modifier = {
 				industry_repair_factor = 0.05
 				political_power_gain = 0.01
+			}
+		}
+
+		
+		pwc_idea_endgame_war_readiness = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_org_regain = 0.1
 			}
 		}
 	}

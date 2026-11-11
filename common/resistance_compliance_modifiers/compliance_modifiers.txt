@@ -64,7 +64,10 @@ compliance_80 = {
 	}
 	on_enable = {
 		if = {
-			limit = { arms_factory > 0 }
+			limit = {
+				arms_factory > 0
+				NOT = { FROM = { has_country_flag = pwc_flag_integration_charter } }
+			}
 			remove_building = {
 				type = arms_factory
 				level = 1

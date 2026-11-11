@@ -1005,6 +1005,10 @@ pwc_se_coalition_weekly = {
                         }
                     }
                 }
+                
+                event_target:pwc_coalition_player = {
+                    pwc_se_grant_endgame_readiness = yes
+                }
             }
             else = {
                 pwc_se_coalition_aborted = yes

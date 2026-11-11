@@ -26,7 +26,7 @@ PWC_diplomacy_category = {
 	allowed = { pwc_st_is_city_country = yes }
 	visible = {
 		pwc_st_is_city_country = yes
-		has_country_flag = pwc_flag_diplomatic_corps
+		OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
 	}
 	visible_when_empty = no
 	priority = 400

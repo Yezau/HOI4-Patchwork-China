@@ -105,6 +105,15 @@ on_annex = {
             limit = { FROM = { pwc_st_is_city_country = yes } }
             FROM = { pwc_se_clear_eliminated_war_warnings = yes }
         }
+        
+        
+        if = {
+            limit = {
+                has_country_flag = pwc_flag_propaganda_office
+                FROM = { pwc_st_is_city_country = yes }
+            }
+            add_war_support = 0.03
+        }
         if = {
             limit = {
                 has_game_rule = { rule = pwc_peace_conference option = ON }

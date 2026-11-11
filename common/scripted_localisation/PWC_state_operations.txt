@@ -29,10 +29,7 @@ defined_text = {
         trigger = {
             ROOT = {
                 NOT = {
-                    OR = {
-                        has_completed_focus = mil_operational_intelligence
-                        has_completed_focus = mil_sensor_shooter_network
-                    }
+                    has_completed_focus = mil_operational_intelligence
                 }
             }
         }
@@ -73,7 +70,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 20
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = endgame_offensive_initiative
+                        }
+                        command_power < 20
+                    }
+                    command_power < 15
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -103,15 +108,20 @@ defined_text = {
                 }
             }
             ROOT = {
-                OR = {
-                    has_completed_focus = mil_operational_intelligence
-                    has_completed_focus = mil_sensor_shooter_network
-                }
+                has_completed_focus = mil_operational_intelligence
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 20
+                OR = {
+                    NOT = {
+                        command_power < 20
+                    }
+                    AND = {
+                        has_completed_focus = endgame_offensive_initiative
+                        NOT = {
+                            command_power < 15
+                        }
+                    }
                 }
             }
             NOT = {
@@ -125,6 +135,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_FIRE_COORDINATION_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = endgame_offensive_initiative
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_FIRE_COORDINATION_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_FIRE_COORDINATION_COST
     }
 }
 defined_text = {
@@ -203,7 +227,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 20
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = endgame_offensive_initiative
+                        }
+                        command_power < 20
+                    }
+                    command_power < 15
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -241,8 +273,16 @@ defined_text = {
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 20
+                OR = {
+                    NOT = {
+                        command_power < 20
+                    }
+                    AND = {
+                        has_completed_focus = endgame_offensive_initiative
+                        NOT = {
+                            command_power < 15
+                        }
+                    }
                 }
             }
             NOT = {
@@ -256,6 +296,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = endgame_offensive_initiative
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_DELIBERATE_ASSAULT_COST
     }
 }
 defined_text = {
@@ -289,10 +343,7 @@ defined_text = {
         trigger = {
             ROOT = {
                 NOT = {
-                    OR = {
-                        has_completed_focus = mil_mobile_reserves
-                        has_completed_focus = mil_deep_exploitation
-                    }
+                    has_completed_focus = mil_mobile_reserves
                 }
             }
         }
@@ -333,7 +384,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 20
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = endgame_offensive_initiative
+                        }
+                        command_power < 20
+                    }
+                    command_power < 15
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -363,15 +422,20 @@ defined_text = {
                 }
             }
             ROOT = {
-                OR = {
-                    has_completed_focus = mil_mobile_reserves
-                    has_completed_focus = mil_deep_exploitation
-                }
+                has_completed_focus = mil_mobile_reserves
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 20
+                OR = {
+                    NOT = {
+                        command_power < 20
+                    }
+                    AND = {
+                        has_completed_focus = endgame_offensive_initiative
+                        NOT = {
+                            command_power < 15
+                        }
+                    }
                 }
             }
             NOT = {
@@ -385,6 +449,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_DEEP_THRUST_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = endgame_offensive_initiative
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_DEEP_THRUST_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_DEEP_THRUST_COST
     }
 }
 defined_text = {
@@ -418,10 +496,7 @@ defined_text = {
         trigger = {
             ROOT = {
                 NOT = {
-                    OR = {
-                        has_completed_focus = mil_defense_in_depth
-                        has_completed_focus = mil_urban_fortification
-                    }
+                    has_completed_focus = mil_urban_fortification
                 }
             }
         }
@@ -465,7 +540,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 20
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = endgame_offensive_initiative
+                        }
+                        command_power < 20
+                    }
+                    command_power < 15
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -498,15 +581,20 @@ defined_text = {
                 }
             }
             ROOT = {
-                OR = {
-                    has_completed_focus = mil_defense_in_depth
-                    has_completed_focus = mil_urban_fortification
-                }
+                has_completed_focus = mil_urban_fortification
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 20
+                OR = {
+                    NOT = {
+                        command_power < 20
+                    }
+                    AND = {
+                        has_completed_focus = endgame_offensive_initiative
+                        NOT = {
+                            command_power < 15
+                        }
+                    }
                 }
             }
             NOT = {
@@ -520,6 +608,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = endgame_offensive_initiative
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_ELASTIC_COUNTERATTACK_COST
     }
 }
 defined_text = {
@@ -597,7 +699,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 15
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = mil_forward_support_nodes
+                        }
+                        command_power < 15
+                    }
+                    command_power < 10
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -634,8 +744,16 @@ defined_text = {
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 15
+                OR = {
+                    NOT = {
+                        command_power < 15
+                    }
+                    AND = {
+                        has_completed_focus = mil_forward_support_nodes
+                        NOT = {
+                            command_power < 10
+                        }
+                    }
                 }
             }
             NOT = {
@@ -649,6 +767,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_SUPPLY_STAGING_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = mil_forward_support_nodes
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_SUPPLY_STAGING_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_SUPPLY_STAGING_COST
     }
 }
 defined_text = {
@@ -726,7 +858,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 15
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = mil_forward_support_nodes
+                        }
+                        command_power < 15
+                    }
+                    command_power < 10
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -763,8 +903,16 @@ defined_text = {
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 15
+                OR = {
+                    NOT = {
+                        command_power < 15
+                    }
+                    AND = {
+                        has_completed_focus = mil_forward_support_nodes
+                        NOT = {
+                            command_power < 10
+                        }
+                    }
                 }
             }
             NOT = {
@@ -778,6 +926,20 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = mil_forward_support_nodes
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_MOBILE_WORKSHOPS_COST
     }
 }
 defined_text = {
@@ -858,7 +1020,15 @@ defined_text = {
     text = {
         trigger = {
             ROOT = {
-                command_power < 15
+                OR = {
+                    AND = {
+                        NOT = {
+                            has_completed_focus = mil_forward_support_nodes
+                        }
+                        command_power < 15
+                    }
+                    command_power < 10
+                }
             }
         }
         localization_key = PWC_STATE_OPERATIONS_COST_BLOCKED
@@ -898,8 +1068,16 @@ defined_text = {
                 has_army_size = {
                     size > 0
                 }
-                NOT = {
-                    command_power < 15
+                OR = {
+                    NOT = {
+                        command_power < 15
+                    }
+                    AND = {
+                        has_completed_focus = mil_forward_support_nodes
+                        NOT = {
+                            command_power < 10
+                        }
+                    }
                 }
             }
             NOT = {
@@ -913,5 +1091,19 @@ defined_text = {
     }
     text = {
         localization_key = PWC_STATE_OPERATIONS_UNAVAILABLE
+    }
+}
+defined_text = {
+    name = PWC_STATE_OPERATIONS_EVACUATION_POSTS_COST_TEXT
+    text = {
+        trigger = {
+            ROOT = {
+                has_completed_focus = mil_forward_support_nodes
+            }
+        }
+        localization_key = PWC_STATE_OPERATIONS_EVACUATION_POSTS_COST_UPGRADED
+    }
+    text = {
+        localization_key = PWC_STATE_OPERATIONS_EVACUATION_POSTS_COST
     }
 }

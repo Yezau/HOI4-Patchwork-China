@@ -7,7 +7,8 @@ PWC_diplomacy_category = {
 		fire_only_once = no
 		target_root_trigger = {
 			hidden_trigger = {
-				has_country_flag = pwc_flag_diplomatic_corps
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				OR = { is_ai = yes NOT = { has_country_flag = pwc_flag_nap_framework } }
 				pwc_st_live_city_country = yes
 				NOT = { pwc_st_protection_active = yes }
 			}
@@ -27,7 +28,8 @@ PWC_diplomacy_category = {
 		}
 		visible = {
 			hidden_trigger = {
-				has_country_flag = pwc_flag_diplomatic_corps
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				OR = { is_ai = yes NOT = { has_country_flag = pwc_flag_nap_framework } }
 				pwc_st_live_city_country = yes
 				FROM = {
 					exists = yes
@@ -42,7 +44,8 @@ PWC_diplomacy_category = {
 		}
 		available = {
 			hidden_trigger = {
-				has_country_flag = pwc_flag_diplomatic_corps
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				OR = { is_ai = yes NOT = { has_country_flag = pwc_flag_nap_framework } }
 				pwc_st_live_city_country = yes
 				FROM = {
 					exists = yes
@@ -62,7 +65,8 @@ PWC_diplomacy_category = {
 			if = {
 				limit = {
 					hidden_trigger = {
-						has_country_flag = pwc_flag_diplomatic_corps
+						OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+						OR = { is_ai = yes NOT = { has_country_flag = pwc_flag_nap_framework } }
 						pwc_st_live_city_country = yes
 						FROM = {
 							exists = yes
@@ -83,6 +87,102 @@ PWC_diplomacy_category = {
 			}
 			else = {
 				hidden_effect = { add_political_power = 25 }
+			}
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	pwc_dec_send_envoys_framework = {
+		icon = GFX_decision_PWC_envoys
+		cost = 15
+		allowed = { pwc_st_is_city_country = yes }
+		fire_only_once = no
+		target_root_trigger = {
+			hidden_trigger = {
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				is_ai = no
+				has_country_flag = pwc_flag_nap_framework
+				pwc_st_live_city_country = yes
+				NOT = { pwc_st_protection_active = yes }
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = {
+			hidden_trigger = {
+				FROM = {
+					exists = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
+				}
+				NOT = { has_war_with = FROM }
+			}
+		}
+		visible = {
+			hidden_trigger = {
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				is_ai = no
+				has_country_flag = pwc_flag_nap_framework
+				pwc_st_live_city_country = yes
+				FROM = {
+					exists = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
+				}
+				NOT = { pwc_st_protection_active = yes }
+				NOT = { has_war_with = FROM }
+			}
+		}
+		available = {
+			hidden_trigger = {
+				OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+				is_ai = no
+				has_country_flag = pwc_flag_nap_framework
+				pwc_st_live_city_country = yes
+				FROM = {
+					exists = yes
+					is_neighbor_of = ROOT
+					NOT = { tag = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+					pwc_st_live_city_country = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PWC_WAR_PROTECTION_READY_TT
+				NOT = { pwc_st_protection_active = yes }
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					hidden_trigger = {
+						OR = { has_country_flag = pwc_flag_diplomatic_corps AND = { is_ai = no has_country_flag = pwc_flag_foreign_office } }
+						is_ai = no
+						has_country_flag = pwc_flag_nap_framework
+						pwc_st_live_city_country = yes
+						FROM = {
+							exists = yes
+							is_neighbor_of = ROOT
+							NOT = { tag = ROOT }
+							NOT = { has_non_aggression_pact_with = ROOT }
+							pwc_st_live_city_country = yes
+						}
+						NOT = { pwc_st_protection_active = yes }
+						NOT = { has_war_with = FROM }
+					}
+				}
+				diplomatic_relation = {
+					country = FROM
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			else = {
+				hidden_effect = { add_political_power = 15 }
 			}
 		}
 		ai_will_do = { factor = 2 }

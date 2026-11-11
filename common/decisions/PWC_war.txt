@@ -79,6 +79,12 @@ PWC_war_category = {
 				factor = 1.25
 				pwc_st_target_is_human = yes
 			}
+			
+			modifier = {
+				factor = 0.5
+				FROM = { has_country_flag = pwc_flag_nap_framework is_ai = no }
+				has_non_aggression_pact_with = FROM
+			}
 			modifier = {
 				factor = 2
 				strength_ratio = { tag = FROM ratio > 2 }
@@ -194,6 +200,12 @@ PWC_war_category = {
 			modifier = {
 				factor = 1.25
 				pwc_st_target_is_human = yes
+			}
+			
+			modifier = {
+				factor = 0.5
+				FROM = { has_country_flag = pwc_flag_nap_framework is_ai = no }
+				has_non_aggression_pact_with = FROM
 			}
 			modifier = {
 				factor = 2

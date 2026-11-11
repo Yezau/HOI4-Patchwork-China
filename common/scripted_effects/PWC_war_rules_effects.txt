@@ -18,6 +18,7 @@ pwc_se_start_war_warning = {
 		}
 		else = {
 			pwc_se_add_war_warning_alert = yes
+			FROM = { pwc_se_grant_endgame_readiness = yes }
 			log = "PWC WARNING start initiator=[ROOT.GetName] target=[FROM.GetName]"
 		}
 	}
@@ -393,6 +394,10 @@ pwc_se_on_warning_expiry = {
 				has_war_with = FROM
 			}
 			log = "PWC WAR declared on warning expiry initiator=[ROOT.GetName] target=[FROM.GetName]"
+			if = {
+				limit = { has_game_rule = { rule = pwc_war_warning option = OFF } }
+				FROM = { pwc_se_grant_endgame_readiness = yes }
+			}
 		}
 		else = {
 			log = "PWC WARNING expired without war initiator=[ROOT.GetName]"
@@ -589,8 +594,13 @@ pwc_se_restore_victory_presentation = {
 
 
 
+
 pwc_se_monthly_gate_latch = {
 	pwc_se_reconcile_research_infrastructure = yes
+	if = {
+		limit = { NOT = { has_country_flag = pwc_flag_endgame_scale_reached } check_variable = { var = num_owned_states value = 24 compare = greater_than_or_equals } }
+		set_country_flag = pwc_flag_endgame_scale_reached
+	}
 }
 
 
@@ -4520,4 +4530,88 @@ pwc_se_apply_war_cooldown = {
 			set_country_flag = { flag = pwc_flag_war_cooldown days = 150 value = 1 }
 		}
 	}
+}
+
+
+pwc_se_endgame_tech_center_upgrade = {
+	if = {
+		limit = { NOT = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 9 } } } }
+		if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 8 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 8 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 7 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 7 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 6 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 6 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 5 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 5 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 4 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 4 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 3 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 3 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 2 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 2 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 1 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 1 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else_if = {
+			limit = { any_owned_state = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 0 } } }
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT non_damaged_building_level = { building = pwc_building_tech_center level > 0 } }
+				add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes }
+			}
+		}
+		else = { capital_scope = { add_building_construction = { type = pwc_building_tech_center level = 1 instant_build = yes } } }
+		pwc_se_reconcile_research_infrastructure = yes
+	}
+}
+
+
+pwc_se_grant_endgame_readiness = {
+    if = {
+        limit = { has_country_flag = pwc_flag_endgame_defensive_readiness }
+        if = {
+            limit = { has_idea = pwc_idea_endgame_war_readiness }
+            remove_ideas = pwc_idea_endgame_war_readiness
+        }
+        add_timed_idea = { idea = pwc_idea_endgame_war_readiness days = 60 }
+    }
 }
