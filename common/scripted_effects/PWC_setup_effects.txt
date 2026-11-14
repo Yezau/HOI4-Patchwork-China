@@ -714,6 +714,9 @@ pwc_se_calibrate_starting_industry = {
             OR = {
                 has_game_rule = { rule = pwc_industry_calibration option = NORMALIZE }
                 has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
+                has_game_rule = {
+                    rule = pwc_industry_calibration option = BALANCE_OFFSITE
+                }
             }
         }
         set_country_flag = pwc_flag_setup_industry_applied
@@ -747,7 +750,12 @@ pwc_se_calibrate_starting_industry = {
         clear_variable = pwc_setup_offsite_mil
         if = {
             limit = {
-                has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
+                OR = {
+                    has_game_rule = { rule = pwc_industry_calibration option = BALANCE }
+                    has_game_rule = {
+                        rule = pwc_industry_calibration option = BALANCE_OFFSITE
+                    }
+                }
             }
             
             
@@ -788,6 +796,19 @@ pwc_se_calibrate_starting_industry = {
                     }
                 }
             }
+        }
+        if = {
+            limit = {
+                has_game_rule = {
+                    rule = pwc_industry_calibration option = BALANCE_OFFSITE
+                }
+            }
+            
+            set_variable = { pwc_cataclysm_offsite_delta = 3 }
+            pwc_se_cataclysm_change_offsite_civ = yes
+            set_variable = { pwc_cataclysm_offsite_delta = 2 }
+            pwc_se_cataclysm_change_offsite_mil = yes
+            clear_variable = pwc_cataclysm_offsite_delta
         }
     }
 }

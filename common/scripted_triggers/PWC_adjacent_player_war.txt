@@ -20,4 +20,9 @@ pwc_st_adjacent_player_war_attacker = {
     NOT = { has_war_with = PREV }
     NOT = { has_truce_with = PREV }
     NOT = { is_in_faction_with = PREV }
+    OR = {
+        NOT = { has_game_rule = { rule = pwc_ai_player_war_strength option = NO_DECLARATION } }
+        PREV = { is_ai = yes }
+        NOT = { strength_ratio = { tag = PREV ratio < 1 } }
+    }
 }

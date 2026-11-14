@@ -56,12 +56,28 @@ pwc_st_coalition_partner = {
         NOT = { has_guaranteed = PREV }
         NOT = { has_military_access_to = PREV }
         NOT = { is_in_faction_with = PREV }
+        
+        
+        PREV = {
+            OR = {
+                NOT = { has_game_rule = { rule = pwc_ai_player_war_strength option = NO_DECLARATION } }
+                PREV = { is_ai = yes }
+                NOT = { strength_ratio = { tag = PREV ratio < 1 } }
+            }
+        }
     }
     
     
     NOT = { any_enemy_country = {
         NOT = { tag = event_target:pwc_coalition_player }
     } }
+}
+
+
+pwc_st_coalition_member_ready = {
+    has_variable = pwc_coalition_target
+    var:pwc_coalition_target = { tag = event_target:pwc_coalition_player }
+    pwc_st_coalition_partner = yes
 }
 
 pwc_st_coalition_size_ready = {

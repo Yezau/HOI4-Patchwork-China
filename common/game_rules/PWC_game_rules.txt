@@ -200,6 +200,22 @@ pwc_ai_war_tendency = {
         allow_achievements = no
     }
 }
+pwc_ai_player_war_strength = {
+    name = "PWC_RULE_AI_PLAYER_WAR_STRENGTH"
+    group = "PWC_RULE_GROUP_WAR"
+    default = {
+        name = "STANDARD"
+        text = "PWC_RULE_AI_PLAYER_WAR_STRENGTH_STANDARD"
+        desc = "PWC_RULE_AI_PLAYER_WAR_STRENGTH_STANDARD_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "NO_DECLARATION"
+        text = "PWC_RULE_AI_PLAYER_WAR_STRENGTH_NO_DECLARATION"
+        desc = "PWC_RULE_AI_PLAYER_WAR_STRENGTH_NO_DECLARATION_DESC"
+        allow_achievements = no
+    }
+}
 pwc_ai_war_pacing = {
     name = "PWC_RULE_AI_WAR_PACING"
     group = "PWC_RULE_GROUP_WAR"
@@ -349,6 +365,12 @@ pwc_industry_calibration = {
         name = "BALANCE"
         text = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE"
         desc = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE_DESC"
+        allow_achievements = no
+    }
+    option = {
+        name = "BALANCE_OFFSITE"
+        text = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE_OFFSITE"
+        desc = "PWC_RULE_INDUSTRY_CALIBRATION_BALANCE_OFFSITE_DESC"
         allow_achievements = no
     }
 }

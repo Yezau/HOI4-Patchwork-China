@@ -171,6 +171,34 @@ pwc_se_coalition_count_member = {
 pwc_se_coalition_prepare_member = {
     pwc_se_coalition_reserve = yes
     set_variable = { pwc_coalition_target = event_target:pwc_coalition_player }
+    pwc_se_coalition_show_alert = yes
+}
+
+
+pwc_se_coalition_show_alert = {
+    event_target:pwc_coalition_player = {
+        if = {
+            limit = {
+                NOT = { is_in_array = { array = pwc_war_warning_attackers value = PREV } }
+            }
+            add_to_array = { array = pwc_war_warning_attackers value = PREV }
+            add_to_variable = { global.pwc_alerts_dirty = 1 }
+        }
+    }
+}
+
+
+pwc_se_coalition_hide_alert = {
+    event_target:pwc_coalition_player = {
+        if = {
+            limit = {
+                is_in_array = { array = pwc_war_warning_attackers value = PREV }
+                NOT = { has_country_flag = pwc_flag_warning_from_@PREV }
+            }
+            remove_from_array = { array = pwc_war_warning_attackers value = PREV }
+            add_to_variable = { global.pwc_alerts_dirty = 1 }
+        }
+    }
 }
 
 
@@ -201,6 +229,7 @@ pwc_se_coalition_cleanup = {
     save_event_target_as = pwc_coalition_player
     for_each_scope_loop = {
         array = pwc_coalition_members
+        pwc_se_coalition_hide_alert = yes
         if = {
             limit = {
                 has_variable = pwc_coalition_target
@@ -977,13 +1006,7 @@ pwc_se_coalition_weekly = {
             for_each_scope_loop = {
                 array = pwc_coalition_members
                 if = {
-                    limit = {
-                        has_variable = pwc_coalition_target
-                        var:pwc_coalition_target = {
-                            tag = event_target:pwc_coalition_player
-                        }
-                        pwc_st_coalition_partner = yes
-                    }
+                    limit = { pwc_st_coalition_member_ready = yes }
                     pwc_se_coalition_count_member = yes
                     event_target:pwc_coalition_player = {
                         add_to_array = { array = pwc_coalition_valid_members value = PREV }
@@ -1015,6 +1038,17 @@ pwc_se_coalition_weekly = {
             }
             clear_array = pwc_coalition_valid_members
             pwc_se_coalition_cleanup = yes
+        }
+        else = {
+            
+            for_each_scope_loop = {
+                array = pwc_coalition_members
+                if = {
+                    limit = { pwc_st_coalition_member_ready = yes }
+                    pwc_se_coalition_show_alert = yes
+                }
+                else = { pwc_se_coalition_hide_alert = yes }
+            }
         }
     }
     

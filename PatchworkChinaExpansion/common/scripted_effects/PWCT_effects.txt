@@ -254,10 +254,6 @@ pwct_reset_weights = {
         set_variable = { pwct_w_36 = 0 }
     }
     set_variable = { pwct_w_37 = 24 }
-    if = {
-        limit = { OR = {  } }
-        set_variable = { pwct_w_37 = 0 }
-    }
     set_variable = { pwct_w_38 = 12 }
     if = {
         limit = { OR = { NOT = { has_game_rule = { rule = pwct_stratagems option = ON } } check_variable = { pwct_hand_38 > 0 } check_variable = { pwct_hand_total > 1 } } }

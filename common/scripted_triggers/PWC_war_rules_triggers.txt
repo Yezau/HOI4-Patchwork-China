@@ -565,6 +565,11 @@ pwc_st_ai_war_ready = {
             NOT = { num_divisions < 5 }
             pwc_st_ai_war_pacing_ready = yes
             OR = {
+                NOT = { has_game_rule = { rule = pwc_ai_player_war_strength option = NO_DECLARATION } }
+                FROM = { is_ai = yes }
+                NOT = { strength_ratio = { tag = FROM ratio < 1 } }
+            }
+            OR = {
                 NOT = { has_country_flag = pwc_ai_balanced }
                 OR = {
                     AND = {
