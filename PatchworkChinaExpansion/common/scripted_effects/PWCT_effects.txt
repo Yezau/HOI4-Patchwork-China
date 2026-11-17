@@ -5791,6 +5791,8 @@ pwct_draw = {
 }
 pwct_draw_all = {
     set_variable = { global.pwct_omen = 0 }
+    set_variable = { global.pwct_fp = 0 }
+    set_variable = { global.pwct_fp_n = 0 }
     if = {
         limit = { has_game_rule = { rule = pwct_omens option = ON } }
         random_list = {
@@ -5830,7 +5832,16 @@ pwct_draw_all = {
         pwct_auto_upgrade = yes
         pwct_recompute = yes
         pwct_draw = yes
+        add_to_variable = { global.pwct_fp_n = 1 }
+        add_to_variable = { global.pwct_fp = pwct_last_pick }
+        add_to_variable = { global.pwct_fp = pwct_owned_count }
+        add_to_variable = { global.pwct_fp = pwct_hand_total }
+        add_to_variable = { global.pwct_fp = pwct_offer_1 }
+        add_to_variable = { global.pwct_fp = pwct_offer_2 }
+        add_to_variable = { global.pwct_fp = pwct_offer_3 }
+        add_to_variable = { global.pwct_fp = pwct_offer_4 }
     }
+    log = "PWCT draw omen [?global.pwct_omen] countries [?global.pwct_fp_n] fingerprint [?global.pwct_fp]"
 }
 pwct_auto_upgrade = {
     set_variable = { pwct_auto_up = 0 }
@@ -5973,6 +5984,7 @@ pwct_auto_upgrade = {
                     set_variable = { pwct_auto_up_lv = pwct_lv_31 }
                 }
             }
+            log = "PWCT upgrade [THIS.GetTag] card [?pwct_auto_up] level [?pwct_auto_up_lv]"
         }
     }
 }
@@ -6830,6 +6842,7 @@ pwct_reroll = {
             set_variable = { pwct_offer_4 = pwct_alt1_4 }
             add_political_power = -30
             set_variable = { pwct_reroll_used = 1 }
+            log = "PWCT reroll [THIS.GetTag] 1"
             pwct_describe_offers = yes
             if = {
                 limit = { OR = { check_variable = { pwct_offer_1_rar > 1 } check_variable = { pwct_offer_2_rar > 1 } check_variable = { pwct_offer_3_rar > 1 } check_variable = { pwct_offer_4_rar > 1 } } }
@@ -6861,6 +6874,7 @@ pwct_reroll = {
             set_variable = { pwct_offer_4 = pwct_alt2_4 }
             add_political_power = -60
             set_variable = { pwct_reroll_used = 2 }
+            log = "PWCT reroll [THIS.GetTag] 2"
             pwct_describe_offers = yes
             if = {
                 limit = { OR = { check_variable = { pwct_offer_1_rar > 1 } check_variable = { pwct_offer_2_rar > 1 } check_variable = { pwct_offer_3_rar > 1 } check_variable = { pwct_offer_4_rar > 1 } } }
@@ -7173,6 +7187,7 @@ pwct_pick_slot_1 = {
         set_temp_variable = { pwct_pick = pwct_offer_1 }
         pwct_apply_pick = yes
         set_variable = { pwct_last_pick = pwct_offer_1 }
+        log = "PWCT pick [THIS.GetTag] card [?pwct_last_pick]"
         pwct_close_offers = yes
         pwct_describe_offers = yes
         pwct_recompute = yes
@@ -7184,6 +7199,7 @@ pwct_pick_slot_2 = {
         set_temp_variable = { pwct_pick = pwct_offer_2 }
         pwct_apply_pick = yes
         set_variable = { pwct_last_pick = pwct_offer_2 }
+        log = "PWCT pick [THIS.GetTag] card [?pwct_last_pick]"
         pwct_close_offers = yes
         pwct_describe_offers = yes
         pwct_recompute = yes
@@ -7195,6 +7211,7 @@ pwct_pick_slot_3 = {
         set_temp_variable = { pwct_pick = pwct_offer_3 }
         pwct_apply_pick = yes
         set_variable = { pwct_last_pick = pwct_offer_3 }
+        log = "PWCT pick [THIS.GetTag] card [?pwct_last_pick]"
         pwct_close_offers = yes
         pwct_describe_offers = yes
         pwct_recompute = yes
@@ -7206,6 +7223,7 @@ pwct_pick_slot_4 = {
         set_temp_variable = { pwct_pick = pwct_offer_4 }
         pwct_apply_pick = yes
         set_variable = { pwct_last_pick = pwct_offer_4 }
+        log = "PWCT pick [THIS.GetTag] card [?pwct_last_pick]"
         pwct_close_offers = yes
         pwct_describe_offers = yes
         pwct_recompute = yes
@@ -8281,5 +8299,145 @@ pwct_play_45 = {
         subtract_from_variable = { pwct_hand_45 = 1 }
         subtract_from_variable = { pwct_hand_total = 1 }
         add_dynamic_modifier = { modifier = pwct_dm_strat_45 days = 90 }
+    }
+}
+pwct_ai_use_hand = {
+    if = {
+        limit = { check_variable = { pwct_hand_14 > 0 } has_war = yes NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_14 } } }
+        log = "PWCT AI play [ROOT.GetTag] card 14"
+        pwct_play_14 = yes
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_38 > 0 } any_enemy_country = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_38 } } } }
+        random_enemy_country = {
+            limit = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_38 } } }
+            log = "PWCT AI play [ROOT.GetTag] card 38 on [THIS.GetTag]"
+            ROOT = {
+                subtract_from_variable = { pwct_hand_38 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+            }
+            if = {
+                limit = { check_variable = { pwct_hand_50 > 0 } }
+                subtract_from_variable = { pwct_hand_50 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+                set_variable = { pwct_hit_card = 38 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.4 }
+                }
+                ROOT = {
+                    set_variable = { pwct_hit_card = 38 }
+                    if = {
+                        limit = { is_ai = no }
+                        country_event = { id = pwct.5 }
+                    }
+                }
+            }
+            else = {
+                add_dynamic_modifier = { modifier = pwct_dm_strat_38 days = 60 }
+                set_variable = { pwct_hit_card = 38 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.2 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_39 > 0 } any_enemy_country = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_39 } } } }
+        random_enemy_country = {
+            limit = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_39 } } }
+            log = "PWCT AI play [ROOT.GetTag] card 39 on [THIS.GetTag]"
+            ROOT = {
+                subtract_from_variable = { pwct_hand_39 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+            }
+            if = {
+                limit = { check_variable = { pwct_hand_50 > 0 } }
+                subtract_from_variable = { pwct_hand_50 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+                set_variable = { pwct_hit_card = 39 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.4 }
+                }
+                ROOT = {
+                    set_variable = { pwct_hit_card = 39 }
+                    if = {
+                        limit = { is_ai = no }
+                        country_event = { id = pwct.5 }
+                    }
+                }
+            }
+            else = {
+                add_dynamic_modifier = { modifier = pwct_dm_strat_39 days = 90 }
+                set_variable = { pwct_hit_card = 39 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.2 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_40 > 0 } any_enemy_country = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_40 } } } }
+        random_enemy_country = {
+            limit = { NOT = { surrender_progress > 0.5 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_40 } } }
+            log = "PWCT AI play [ROOT.GetTag] card 40 on [THIS.GetTag]"
+            ROOT = {
+                subtract_from_variable = { pwct_hand_40 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+            }
+            if = {
+                limit = { check_variable = { pwct_hand_50 > 0 } }
+                subtract_from_variable = { pwct_hand_50 = 1 }
+                subtract_from_variable = { pwct_hand_total = 1 }
+                set_variable = { pwct_hit_card = 40 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.4 }
+                }
+                ROOT = {
+                    set_variable = { pwct_hit_card = 40 }
+                    if = {
+                        limit = { is_ai = no }
+                        country_event = { id = pwct.5 }
+                    }
+                }
+            }
+            else = {
+                add_dynamic_modifier = { modifier = pwct_dm_strat_40 days = 60 }
+                set_variable = { pwct_hit_card = 40 }
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pwct.2 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_41 > 0 } has_war = yes NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_41 } } }
+        log = "PWCT AI play [ROOT.GetTag] card 41"
+        pwct_play_41 = yes
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_42 > 0 } has_war = yes NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_42 } } }
+        log = "PWCT AI play [ROOT.GetTag] card 42"
+        pwct_play_42 = yes
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_43 > 0 } NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_43 } } }
+        log = "PWCT AI play [ROOT.GetTag] card 43"
+        pwct_play_43 = yes
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_44 > 0 } }
+        log = "PWCT AI play [ROOT.GetTag] card 44"
+        pwct_play_44 = yes
+    }
+    if = {
+        limit = { check_variable = { pwct_hand_45 > 0 } has_war = yes NOT = { has_dynamic_modifier = { modifier = pwct_dm_strat_45 } } }
+        log = "PWCT AI play [ROOT.GetTag] card 45"
+        pwct_play_45 = yes
     }
 }

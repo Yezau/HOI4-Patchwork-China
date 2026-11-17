@@ -25,6 +25,14 @@ on_actions = {
             }
         }
     }
+    on_weekly = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = pwct_tianming option = ON } is_ai = yes check_variable = { pwct_hand_total > 0 } }
+                pwct_ai_use_hand = yes
+            }
+        }
+    }
     on_state_control_changed = {
         effect = {
             if = {

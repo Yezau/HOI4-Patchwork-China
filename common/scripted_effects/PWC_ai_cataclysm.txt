@@ -2665,7 +2665,7 @@ pwc_se_cataclysm_set_limits = {
 pwc_se_cataclysm_progress_pool = {
     if = {
         limit = {
-            date > 2027.12.31
+            date > 2028.6.30
             pwc_st_protection_active = no
             pwc_st_cataclysm_history_ready = yes
             NOT = { has_country_flag = pwc_cataclysm_warning }
