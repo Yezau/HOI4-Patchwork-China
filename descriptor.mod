@@ -1,4 +1,4 @@
-version="0.2.5"
+version="0.2.6"
 tags={
 	"Gameplay"
 	"Alternative History"
@@ -9,6 +9,6 @@ replace_path="history/countries"
 replace_path="history/states"
 replace_path="history/units"
 replace_path="map/strategicregions"
-supported_version="1.19.*"
+supported_version="1.20.*"
 picture="thumbnail.png"
 remote_file_id="3801585499"
